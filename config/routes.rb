@@ -37,7 +37,6 @@ Rails.application.routes.draw do
   resources :receipts
 
   get 'receipts/crear'
-  get 'credits/nuevo'
 
   get 'receipts/baja'
   get '/pdf/:id', to: 'credits#pdf', as: 'pdf'
@@ -65,6 +64,8 @@ Rails.application.routes.draw do
   get 'credits/:id/editpdf', to:'credits#editpdf',as:'editpdf'
   get 'view_credits/:id/pagos', to:'view_credits#pagos',as:'creditpagos'
   resources :credits
+   get 'credits/nuevo'
+  
   resources :payouts
   resources :loans
   resources :products
