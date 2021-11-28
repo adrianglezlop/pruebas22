@@ -1,0 +1,694 @@
+<!--
+<style type="text/css"> 
+    .polig{ 
+      border: 1px solid black;
+      width:1300px; 
+      height:2210px; 
+      font-family:arial; 
+    font-weight:normal; 
+    color:#000000; 
+    } 
+
+  </style> 
+  
+  <style type="text/css"> 
+    .cuadro{ 
+      border: 1px solid black;
+      width:1200px; 
+      height:25px; 
+      background: #DF3A01;
+      font-family:arial; 
+    font-weight:normal; 
+    color:#DF3A01; 
+    } 
+
+  </style>
+
+<div class="polig"> 
+
+ 
+    
+    
+
+<p style="color:red; font-size: 36px; font-weight: bold">FINANCIERA MARJO</p> -->
+
+<div ng-controller="solicitud" >
+  <div id="errores" style="background-color:#f0f0ff;border-size:2px;border-style:solid;z-index:99;overflow-y: scroll;">
+    <div>
+      
+      <%= form_for @credit,class:"father" do |f| %>
+      
+    <% if @credit.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@credit.errors.count, "error") %> prohibited this credit from being saved:</h2>
+  
+        <ul>
+        <% @credit.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+      <input type="button" onclick="$('#errores').hide()" value="Cerrar">
+    </div>
+  </div>
+  
+  
+
+  
+<div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
+  background-size: 1300px 1900px; 
+  background-repeat: no-repeat;
+  margin-left: 0px;
+  '>
+  
+  
+  
+  <input type="hidden" value = "<%= @credit.to_json%>" ng-model="credito" ng-init="credito  = <%= @credit.to_json%>">
+      
+     
+  
+<div style = "position:relative; margin-left:45px; margin-top:0px; ">
+      <div style="top:0px;left:925px;position:absolute;">
+        <p>
+          <%= f.radio_button  :agente_empresa,1,checked:true,"value":true,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_true", "Agente" %>
+          <%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_false", "Empresa" %>
+        </p>
+      </div>
+       
+      
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br>
+      
+     
+      
+      
+    <div class ="row">
+      <div class="input-field col s12 m3 l3">
+        <select id="credit_referencia_agente_empresa" name="credit[referencia_agente_empresa]"class="browser-default" ng-model="credito.referencia_agente_empresa" ng-disabled="block" style="left:1000px;top:63px;position:absolute;",ng-disabled="block">
+            <option value="" disabled selected>{{tipo}}</option>
+            <option ng-repeat="option in agentEmp" value="{{option.id}}">{{option.nombre}}</option>
+        </select>
+      </div>
+     
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m3 l3 offset-s0 offset-m9 offset-l9">
+        <%= f.text_field :fecha, class:"datepicker", class:"cerrar_bloquear",type:"date", autocomplete: "off",:style=>"left:960px;top:115px;position:absolute;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div style="position:absolute;top:127px;left:360px;">
+        <p>
+          <%= f.radio_button  :es_cliente,1,"ng-model":"credito.es_cliente","ng-change":"focus_curp()","ng-disabled":"block"%> 
+          <%= f.radio_button  :es_cliente,0,checked:true,:style=>"left:77px;top:16px;position:absolute;","ng-model":"credito.es_cliente","ng-change":"focus_curp()","ng-disabled":"block"%>
+        </p>
+      </div>
+      <div>
+        <%= f.text_field :como_se_entero,:style=>"left:705px;top:146px;width:350px;position:absolute;","ng-model":"credito.como_se_entero","ng-disabled":"block"%>
+      </div>
+    </div>
+      <div  style="position:absolute;top:157px;left:654px;">
+        <p>
+          <%= f.radio_button  :familiar_con_prestamo,1,checked:true,"ng-model":"credito.familiar_con_prestamo","ng-disabled":"block"%> 
+          <%= f.radio_button  :familiar_con_prestamo,0,:style=>"position:absolute;top:17px;left:90px;","ng-model":"credito.familiar_con_prestamo" ,"ng-disabled":"block"%> 
+        </p>
+      </div>
+      
+     
+    <div class="row">
+      <div>
+        <%= f.text_field :nombre_completo_familiar_1,:style=>"position:absolute;top:224px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_familiar_1" ,"ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :parentesco_1,:style=>"position:absolute;top:224px;left:815px;width:300px;height:22px;","ng-model":"credito.parentesco_1" ,"ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :nombre_completo_familiar_2,:style=>"position:absolute;top:253px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_familiar_2","ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :parentesco_2,:style=>"position:absolute;top:253px;left:815px;width:300px;height:22px;","ng-model":"credito.parentesco_2","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :nombre_completo_familiar_3,:style=>"position:absolute;top:282px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_familiar_3","ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :parentesco_3,:style=>"position:absolute;top:282px;left:815px;width:300px;height:22px;","ng-model":"credito.parentesco_3","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :nombre_completo_familiar_4,:style=>"position:absolute;top:311px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_familiar_4","ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :parentesco_4,:style=>"position:absolute;top:311px;left:815px;width:300px;height:22px;","ng-model":"credito.parentesco_4","ng-disabled":"block"%>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="row">
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :apellido_paterno,:style=>"position:absolute;top:422px;left:70px;width:150px;height:18px;","ng-model":"credito.apellido_paterno","ng-change":"buscarCliente()" ,"ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :apellido_materno,:style=>"position:absolute;top:422px;left:250px;width:180px;height:18px;" ,"ng-model":"credito.apellido_materno","ng-change":"buscarCliente()","ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :nombre_1,:style=>"position:absolute;top:422px;left:465px;width:150px;height:18px;","ng-model":"credito.nombre_1","ng-change":"buscarCliente()" ,"ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :nombre_2,:style=>"position:absolute;top:422px;left:650px;width:200px;height:18px;","ng-model":"credito.nombre_2","ng-change":"buscarCliente()","ng-disabled":"block" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :RFC,:style=>"position:absolute;top:422px;left:870px;width:250px;height:18px;","ng-model":"credito.RFC" ,"ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :CURP,:style=>"position:absolute;top:474px;left:70px;width:300px;height:18px;","ng-model":"credito.CURP","ng-change":"buscarCliente()","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :seguro,:style=>"position:absolute;top:474px;left:400px;width:220px;height:18px;","ng-model":"credito.seguro","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :INE,:style=>"position:absolute;top:474px;left:650px;width:180px;height:18px;","ng-model":"credito.INE" ,"ng-disabled":"block"%>
+      </div>
+      
+      <div style="position:absolute;top:525px;left:950px;">
+          <%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:-46px;left:-36px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%>
+          <%= f.radio_button  :fiel,0,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.fiel","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :fecha_de_nacimiento, class:"datepicker",type:"date", autocomplete: "off",:style=>"position:absolute;top:550px;left:70px;width:150px;height:22px;","ng-model":"credito.fecha_de_nacimiento" ,"ng-disabled":"block"%>
+      </div>
+      <div>
+        <label style="position:absolute;top:532px;left:250px;width:200px;height:22px;background-color: white;font-weight: bold;font-family:'Calibri';">PAIS DE NACIMIENTO<span style="color:red;">*</span></label>
+        <div>
+          <select  class="browser-default" ng-model="paices.selected" ng-change="getEstados()" style="position:absolute;top:550px;left:250px;width:200px;height:22px;",ng-disabled="block">
+            <option value="" disabled selected>Pais</option>
+            <option ng-repeat="option in paices" value="{{option}}">{{option.nombre}}</option>
+        </select>
+        <input type="text" name="credit[country]" ng-model="paices.text"style="visibility: hidden;">
+        </div>
+      </div>
+      <div>
+        <div>
+          <select class="browser-default" ng-model="estados.selected" ng-change="getCiudades()" style="position:absolute;top:550px;left:470px;width:285px;height:22px;;",ng-disabled="block">
+            <option value="" disabled selected>Estado</option>
+            <option ng-repeat="option in estados" value="{{option}}">{{option.nombre}}</option>
+        </select>
+        <input type="text" name="credit[estado_de_nacimiento]" ng-model="estados.text" style="visibility: hidden;">
+        </div>
+      </div>
+      <div>
+        <label style="position:absolute;top:532px;left:792px;width:135px;height:22px;background-color: white;font-weight: bold;font-family: 'Calibri';">CIUDAD<span style="color:red;">*</span></label>
+        
+        <select  class="browser-default" ng-model="ciudades.selected" ng-change="ciudadesChange()" style="position:absolute;top:550px;left:777px;width:150px;height:22px;",ng-disabled="block">
+            <option value="" disabled selected>Ciudad</option>
+            <option ng-repeat="option in ciudades" value="{{option}}">{{option.nombre}}</option>
+        </select>
+        <input id ="try" type="text" name="credit[ciudad_de_nacimiento]" ng-model="ciudades.text" style="visibility: hidden;">
+      </div>
+      <div style="position:absolute;top:525px;left:950px;">
+          <%= f.radio_button  :sexo,0,checked:true,:style=>"position:absolute;top:-46px;left:87px;","ng-model":"credito.sexo" ,"ng-disabled":"block"%>
+          <%= f.radio_button  :sexo,1,:style=>"position:absolute;top:-46px;left:148px;","ng-model":"credito.sexo","ng-disabled":"block"%>
+      </div>
+     
+      
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :telefono_de_casa,:style=>"position:absolute;top:630px;left:70px;width:150px;height:18px;","ng-model":"credito.telefono_de_casa" ,"ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :telefono_celular, :style=>"position:absolute;top:630px;left:245px;width:200px;height:18px;","ng-model":"credito.telefono_celular","ng-disabled":"block"%>
+      </div>
+      <div class="row col s12 m8 l8">
+        <div class="input-field col s12">
+          <%= f.text_field :email_1,:style=>"position:absolute;top:603px;left:500px;width:600px;height:18px;","ng-model":"credito.email_1" ,"ng-disabled":"block"%>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :email_2,:style=>"position:absolute;top:630px;left:500px;width:600px;height:18px;","ng-model":"credito.email_2" ,"ng-disabled":"block"%>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p>
+          <%= f.radio_button  :escolaridad,0,:style=>"position:absolute;top:656px;left:218px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
+          <%= f.radio_button  :escolaridad,1,:style=>"position:absolute;top:656px;left:344px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
+          <%= f.radio_button  :escolaridad,2,:style=>"position:absolute;top:656px;left:463px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
+          <%= f.radio_button  :escolaridad,3,:style=>"position:absolute;top:656px;left:595px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
+          <%= f.radio_button  :escolaridad,4,:style=>"position:absolute;top:656px;left:731px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
+          <%= f.radio_button  :escolaridad,5,:style=>"position:absolute;top:656px;left:866px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
+          <%= f.radio_button  :escolaridad,6,:style=>"position:absolute;top:656px;left:990px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="field">
+          <%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block",:style=>"position:absolute;top:685px;left:250px;width:400px;height:22px;"})%>
+        </div>
+      </div>
+    <input type="text" style ="position:absolute;top:685px;left:720px;width:250;height:22px;" placeholder="Escribe tu profecion">
+    
+    </input>
+    <div class="row">
+      <div class="field">
+        <%=f.collection_select(:economical_activity_id,EconomicalActivity.all.order(:descripcion),:id,:descripcion,{:prompt => 'Actividad economica:'},{"ng-model":"credito.economical_activity_id","ng-disabled":"block",:style=>"position:absolute;top:718px;left:250px;width:800px;height:22px;"})%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m3 l3">
+        <%= f.number_field :numero_de_dependientes_economicos,:style=>"position:absolute;top:771px;left:70px;width:200px;height:18px;","ng-model":"credito.numero_de_dependientes_economicos","ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <%= f.text_field :gasto_promedio_mensual,:style=>"position:absolute;top:771px;left:300px;width:200px;height:18px;","ng-model":"credito.gasto_promedio_mensual","ng-disabled":"block" %>
+      </div>
+      <div class="col s12 m6 l6">
+        <p>
+          <%= f.radio_button  :estado_civil,0,:style=>"position:absolute;top:775px;left:536px;","ng-model":"credito.estado_civil","ng-disabled":"block"%>
+          <%= f.radio_button  :estado_civil,1,:style=>"position:absolute;top:775px;left:649px;","ng-model":"credito.estado_civil","ng-disabled":"block"%>
+          <%= f.radio_button  :estado_civil,2,:style=>"position:absolute;top:775px;left:772px;","ng-model":"credito.estado_civil","ng-disabled":"block"%>
+          <%= f.radio_button  :estado_civil,3,:style=>"position:absolute;top:775px;left:876px;","ng-model":"credito.estado_civil","ng-disabled":"block"%>
+          <%= f.radio_button  :estado_civil,4,:style=>"position:absolute;top:775px;left:1030px;","ng-model":"credito.estado_civil","ng-disabled":"block"%>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :apellido_paterno_del_conyuge,:style=>"position:absolute;top:1215px;left:70px;width:150px;height:18px;","ng-model":"credito.apellido_paterno_del_conyuge","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :apellido_materno_del_conyuge,:style=>"position:absolute;top:1215px;left:250px;width:180px;height:18px;" ,"ng-model":"credito.apellido_materno_del_conyuge","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :nombre_1_del_conyuge,:style=>"position:absolute;top:1215px;left:460px;width:150px;height:18px;" ,"ng-model":"credito.nombre_1_del_conyuge","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :nombre_2_del_conyuge,:style=>"position:absolute;top:1215px;left:614px;width:150px;height:18px;" ,"ng-model":"credito.nombre_2_del_conyuge","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :telefono_celular_del_conyuge, :style=>"position:absolute;top:1215px;left:778px;width:150px;height:18px;" ,"ng-model":"credito.telefono_celular_del_conyuge","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :telefono_de_oficina_del_conyuge , :style=>"position:absolute;top:1215px;left:950px;width:170px;height:18px;","ng-model":"credito.telefono_de_oficina_del_conyuge","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <%= f.text_field :fecha_de_nacimiento_conyuge, class:"datepicker",type:"date", autocomplete: "off",:style=>"position:absolute;top:1242px;left:215px;width:170px;height:22px;","ng-model":"credito.fecha_de_nacimiento_conyuge" ,"ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <%= f.text_field :ocupacion_del_conyuge, :style=>"position:absolute;top:1242px;left:600px;width:170px;height:18px;","ng-model":"credito.ocupacion_del_conyuge","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <%= f.text_field :empresa_donde_labora_el_conyuge, :style=>"position:absolute;top:1273px;left:399px;width:170px;height:18px;","ng-model":"credito.empresa_donde_labora_el_conyuge","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :nombre_completo_1, :style=>"position:absolute;top:1350px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_1" ,"ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.number_field :edad_1, :style=>"position:absolute;top:1350px;left:810px;width:80px;height:22px;","ng-model":"credito.edad_1","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :parentesco_del_dependiente_1, :style=>"position:absolute;top:1350px;left:940px;width:170px;height:22px;","ng-model":"credito.parentesco_del_dependiente_1","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :nombre_completo_2, :style=>"position:absolute;top:1380px;left:70px;width:700px;height:22px;" ,"ng-model":"credito.nombre_completo_2","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.number_field :edad_2, :style=>"position:absolute;top:1380px;left:810px;width:80px;height:22px;" ,"ng-model":"credito.edad_2","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :parentesco_del_dependiente_2, :style=>"position:absolute;top:1380px;left:940px;width:170px;height:22px;" ,"ng-model":"credito.parentesco_del_dependiente_2","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :nombre_completo_3, :style=>"position:absolute;top:1410px;left:70px;width:700px;height:22px;" ,"ng-model":"credito.nombre_completo_3","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.number_field :edad_3, :style=>"position:absolute;top:1410px;left:810px;width:80px;height:22px;" ,"ng-model":"credito.edad_3","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :parentesco_del_dependiente_3, :style=>"position:absolute;top:1410px;left:940px;width:170px;height:22px;" ,"ng-model":"credito.parentesco_del_dependiente_3","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :nombre_completo_4, :style=>"position:absolute;top:1440px;left:70px;width:700px;height:22px;" ,"ng-model":"credito.nombre_completo_4","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.number_field :edad_4, :style=>"position:absolute;top:1440px;left:810px;width:80px;height:22px;" ,"ng-model":"credito.edad_4","ng-disabled":"block"%>
+      </div>
+      <div>
+        <%= f.text_field :parentesco_del_dependiente_4, :style=>"position:absolute;top:1440px;left:940px;width:170px;height:22px;","ng-model":"credito.parentesco_del_dependiente_4","ng-disabled":"block" %>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :calle, :style=>"position:absolute;top:850px;left:80px;width:700px;height:18px;","ng-model":"credito.calle","ng-disabled":"block" %>
+      </div>
+     
+      <div>
+        <%= f.number_field :numero_exterior, :style=>"position:absolute;top:850px;left:834px;width:140px;height:18px;","ng-model":"credito.numero_exterior","ng-disabled":"block" %>
+      </div>
+       <div>
+        <%= f.text_field :numero_interior, :style=>"position:absolute;top:850px;left:996px;width:140px;height:18px;" ,"ng-model":"credito.numero_interior","ng-disabled":"block"%>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <p>
+          <%= f.radio_button  :tipo_de_domicilio,0, :style=>"position:absolute;top:906px;left:53px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
+          <%= f.radio_button  :tipo_de_domicilio,1, :style=>"position:absolute;top:906px;left:121px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
+          <%= f.radio_button  :tipo_de_domicilio,2, :style=>"position:absolute;top:906px;left:197px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
+          <%= f.radio_button  :tipo_de_domicilio,3, :style=>"position:absolute;top:906px;left:280px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
+        </p>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <%= f.text_field :codigo_postal, :style=>"position:absolute;top:902px;left:390px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:906px;left:500px;width:340px;height:18px;",ng-disabled="block">
+             <option value="" disabled selected>Colonia</option>
+            <option ng-repeat="option in data.zip_codes" value="{{option.d_asenta}}">{{option.d_asenta}}</option>
+        </select>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:906px;left:875px;width:250px;height:18px;",ng-disabled="block">
+            <option value="" disabled selected>Localidad</option>
+             <option ng-repeat="option in data.zip_codes" value="{{option.d_mnpio}}">{{option.d_mnpio}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m3 l3">
+        <%= f.text_field :municipio,:style=>"position:absolute;top:953px;left:70px;width:290px;height:18px;","ng-model":"data.zip_codes[0].d_mnpio","ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m3 l3">
+         <%=f.text_field :estado_actual, :style=>"position:absolute;top:953px;left:390px;width:200px;height:18px;","ng-model":"data.zip_codes[0].d_estado","ng-disabled":"block"%>
+      </div>
+      
+      <div class="input-field col s12 m3 l3">
+        <!--<%= f.text_field :antiguedad_en_el_domicilio_actual,:style=>"position:absolute;top:953px;left:600px;width:250px;height:18px;","ng-disabled":"block" %>-->
+       <%= f.select :antiguedad_en_el_domicilio_actual_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:953px;left:600px;width:125px;height:18px;","ng-model":"credito.antiguedad_en_el_domicilio_actual_anos","ng-disabled":"block"  %>
+        <%= f.select :antiguedad_en_el_domicilio_actual_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:953px;left:725px;width:125px;height:18px;","ng-model":"credito.antiguedad_en_el_domicilio_actual_meses","ng-disabled":"block"  %>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <!--<%= f.text_field :antiguedad_en_el_domicilio_actual_meses,:style=>"position:absolute;top:953px;left:870px;width:260px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_actual_meses","ng-disabled":"block"%>-->
+        <%= f.select :antiguedad_en_el_domicilio_anterior_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:953px;left:870px;width:130px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_anterior_anos","ng-disabled":"block" %>
+        <%= f.select :antiguedad_en_el_domicilio_anterior_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:953px;left:1000px;width:130px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_anterior_meses","ng-disabled":"block" %>
+      </div>
+      
+        <div class="row">
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :empresa_donde_labora,:style=>"position:absolute;top:1033px;left:70px;width:370px;height:18px;","ng-model":"credito.empresa_donde_labora" ,"ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :giro_de_la_empresa,:style=>"position:absolute;top:1033px;left:470px;width:300px;height:18px;","ng-model":"credito.giro_de_la_empresa" ,"ng-disabled":"block"%>
+      </div>
+      <div class="row">
+      <div class="field">
+        <%=f.collection_select(:ocupation_id,Ocupation.all.order(:descripcion),:id,:descripcion,{:prompt => 'Ocupaciòn:'},{"ng-model":"credito.ocupation_id","ng-disabled":"block",:style=>"position:absolute;top:1033px;left:810px;width:300px;height:18px;"})%>
+      </div>
+    </div>
+    </div>
+    
+     <!--
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :puesto,:style=>"position:absolute;top:1374px;left:810px;width:300px;height:18px;","ng-model":"credito.puesto","ng-disabled":"block" %>
+      </div>
+      -->
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :telefono_empresa,:style=>"position:absolute;top:1083px;left:70px;width:370px;height:18px;" ,"ng-model":"credito.telefono_empresa","ng-disabled":"block"%>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.select :antiguedad_laboral_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:1083px;left:470px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_anos","ng-disabled":"block"  %>
+        <%= f.select :antiguedad_laboral_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:1083px;left:620px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_meses","ng-disabled":"block"  %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :sueldo_mensual_neto,:style=>"position:absolute;top:1083px;left:810px;width:300px;height:18px;","ng-model":"credito.sueldo_mensual_neto","ng-disabled":"block" %>
+      </div>
+    </div>
+     <div class="row">
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :dirreccion_empresa,:style=>"position:absolute;top:1133px;left:70px;width:370px;height:18px;","ng-model":"credito.dirreccion_empresa","ng-disabled":"block" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :colonia_empresa,:style=>"position:absolute;top:1133px;left:470px;width:300px;height:18px;","ng-model":"credito.colonia_empresa","ng-disabled":"block" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :municipio_empresa,:style=>"position:absolute;top:1133px;left:810px;width:300px;height:18px;","ng-model":"credito.municipio_empresa","ng-disabled":"block" %>
+      </div>
+    </div>
+    
+  
+     
+   
+    <div class="row">
+      <div class="input-field col s12 m3 l3">
+        <%= f.text_field :monto_solicitud,:style=>"position:absolute;top:1590px;left:100px;width:150px;height:25px;","ng-model":"credito.monto_solicitud","ng-disabled":"block"%>
+      </div>
+      <div class="col s12 m3 l3">
+        <p>
+          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,0,:style=>"position:absolute;top:1610px;left:280px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
+          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,1,:style=>"position:absolute;top:1610px;left:380px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
+          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,2,:style=>"position:absolute;top:1610px;left:459px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
+        </p>
+      </div>
+      <div class="col s12 m6 l6">
+        <p>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,0,:style=>"position:absolute;top:1610px;left:562px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,1,:style=>"position:absolute;top:1610px;left:645px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,2,:style=>"position:absolute;top:1610px;left:730px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,3,:style=>"position:absolute;top:1610px;left:880px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,4,:style=>"position:absolute;top:1610px;left:996px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row col s12 m8 l8">
+        <div>
+          <%= f.text_field :nombre_referencia_1,:style=>"position:absolute;top:1658px;left:150px;width:600px;height:25px;","ng-model":"credito.nombre_referencia_1" ,"ng-disabled":"block"%>
+        </div>
+        <div>
+          <%= f.text_field :domicilio_referencia_1,:style=>"position:absolute;top:1690px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_1","ng-disabled":"block"%>
+        </div>
+      </div>
+      <div class="row col s12 m4 l4">
+        <div>
+          <%= f.text_field :telefono_fijo_referencia_1,:style=>"position:absolute;top:1690px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_1","ng-disabled":"block"%>
+        </div>
+        <div>
+          <%= f.text_field :telefono_celular_referencia_1,:style=>"position:absolute;top:1690px;left:987px;width:110px;height:22px;" ,"ng-model":"credito.telefono_celular_referencia_1","ng-disabled":"block"%>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row col s12 m8 l8">
+        <div class="input-field col s12">
+          <%= f.text_field :nombre_referencia_2,:style=>"position:absolute;top:1728px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.nombre_referencia_2","ng-disabled":"block"%>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :domicilio_referencia_2,:style=>"position:absolute;top:1763px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_2","ng-disabled":"block"%>
+        </div>
+      </div>
+      <div class="row col s12 m4 l4">
+        <div class="input-field col s12">
+          <%= f.text_field :telefono_fijo_referencia_2,:style=>"position:absolute;top:1763px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_2","ng-disabled":"block"%>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :telefono_celular_referencia_2,:style=>"position:absolute;top:1763px;left:987px;width:110px;height:22px;" ,"ng-model":"credito.telefono_celular_referencia_2","ng-disabled":"block"%>
+        </div>
+      </div>
+    </div>
+     <div class="row">
+      <div class="row col s12 m8 l8">
+        <div class="input-field col s12">
+          <%= f.text_field :nombre_referencia_familiar,:style=>"position:absolute;top:1820px;left:150px;width:600px;height:25px;","ng-model":"credito.nombre_referencia_familiar" ,"ng-disabled":"block"%>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :domicilio_referencia_familiar,:style=>"position:absolute;top:1854px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_familiar","ng-disabled":"block"%>
+        </div>
+      </div>
+      <div class="row col s12 m4 l4">
+        <div class="input-field col s12">
+          <%= f.text_field :telefono_fijo_referencia_familiar,:style=>"position:absolute;top:1854px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_familiar","ng-disabled":"block"%>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :telefono_celular_referencia_familiar,:style=>"position:absolute;top:1854px;left:987px;width:110px;height:22px;","ng-model":"credito.telefono_celular_referencia_familiar","ng-disabled":"block"%>
+        </div>
+        <div class="input-field col s12">
+          <%= f.label :casa_color ,:style=>"position:absolute;top:1900px;left:90px;width:110px;height:22px;"%>
+          <%= f.text_field :casa_color,:style=>"position:absolute;top:1920px;left:60px;width:110px;height:22px;","ng-model":"credito.casa_color","ng-disabled":"block"%>
+        </div>
+        <div class="input-field col s12">
+          <%= f.label :cancel_o_porton ,:style=>"position:absolute;top:1900px;left:290px;width:110px;height:22px;"%>
+          <label style="position:absolute;top:1920px;left:300px;">si</label>
+          <label style="position:absolute;top:1920px;left:400px;">no</label>
+          <%= f.radio_button  :cancel_o_porton,1,:style=>"position:absolute;top:1920px;left:260px;","ng-model":"credito.cancel_o_porton"%>
+          <%= f.radio_button  :cancel_o_porton,0,:style=>"position:absolute;top:1920px;left:360px;","ng-model":"credito.cancel_o_porton"%>
+          
+        </div>
+        <div class="input-field col s12">
+          <%= f.label :color_de_cancel ,:style=>"position:absolute;top:1900px;left:490px;width:110px;height:22px;"%>
+          <%= f.text_field :color_de_cancel,:style=>"position:absolute;top:1920px;left:490px;width:110px;height:22px;","ng-model":"credito.color_de_cancel","ng-disabled":"block"%>
+        </div>
+        <div class="input-field col s12">
+          <%= f.label :caracteristicas_especiales ,:style=>"position:absolute;top:1900px;left:700px;width:110px;height:22px;"%>
+          <%= f.text_field :caracteristicas_especiales,:style=>"position:absolute;top:1940px;left:660px;width:310px;height:100px;","ng-model":"credito.caracteristicas_especiales","ng-disabled":"block"%>
+        </div>
+
+        <div class="input-field col s12">
+          <br><br>
+          
+          
+        
+          <%=f.label :observaciones%>: <br>
+          
+          <%= f.text_area(:observaciones, size: '80x5' ,"ng-model":"credito.observaciones") %>
+          
+          <!--%= f.text_area(:observaciones, size: '80x5')%-->
+          
+          <!--%= f.text_field :observaciones,:style=>"width:600px;height:100px;","ng-model":"credito.observaciones"%-->
+        </div>
+        <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"})%>
+        <%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:prompt => 'Destino del credito:'},{"ng-disabled":"block"})%>
+        <br>
+        <br>
+        <a href="{{credito.pdfs}}" target="_blank" , style="boder-radius:20px;padding:20px 10px;background-color:orange;color:white" id="pdfs">mostrar pdfs</a>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="actions" id="solo_en_new">
+      <div class="input-field col s12">
+         <div class="field">
+            <%= f.label :pdf64,"cargar PDF" %><br>
+            <input type="file" id="filePicker" onchange="previewFile()" accept=".pdf" max-size="2024">
+            <input id="base64textarea" type='hidden' name="credit[pdf64]" cols="50" rows="15">
+          </div>
+          <script>
+          
+          var uploadField = document.getElementById("filePicker");
+
+          uploadField.onchange = function() {
+              if(this.files[0].size > 3000000){
+                 alert("El pdf es muy grande favor de reducir la resolucion del escaner");
+                 this.value = "";
+                 preview.src = "";
+              }else{
+                previewFile();
+              }
+              console.log(this.value);
+              
+          };
+            var cacas = "";
+             function previewFile() {
+             $("#submitid").prop('disabled', true);
+            var preview = $('#base64textarea');
+            var file    = document.querySelector('input[type=file]').files[0];
+            var reader  = new FileReader();
+            
+            reader.onloadend = function () {
+              $("#submitid").prop('disabled', true);
+              preview.val(reader.result);
+              $("#submitid").prop('disabled', false);
+            }
+          
+            if (file) {
+              reader.readAsDataURL(file);
+              alert("El archivo pdf se ha procesado correctamente");
+            } else {
+              preview.src = "";
+              uploadField = "";
+              alert("Error al procesar pdf, intente cargarlo nuevamente");
+            }
+          }
+        </script>
+      </div>
+      <%= f.submit "Guardar",id:"submitid" %>
+    </div>
+  <% end %>
+  <div id="autorelleno" style="background-color:#f0f0ff;width:700px;position:fixed;top:100px;left:100px;border-size:2px;border-style:solid">
+        <div>
+          Ingrese curp: <input type="text" ng-model="credit.CURP" ng-change="buscarCliente(false)" id="curp_buscador">
+          <table border="1">
+            <input type="button" value="Cerrar" ng-click="ocultar()">
+            <tr>
+              <th>Apellido Paterno</th>
+              <th>Apellido Materno</th>
+              <th>Nombre 1</th>
+              <th>Nombre 2</th>
+              <th>Curp</th>
+              <th>Selecionar</th>
+            </tr>
+            <tbody>
+              <tr ng-repeat="cliente_a in clientes">
+                <td>
+                  {{cliente_a.apellido_paterno}}
+                </td>
+                <td>
+                  {{cliente_a.apellido_materno}}
+                </td>
+                <td>
+                  {{cliente_a.nombre_1}}
+                </td>
+                <td>
+                  {{cliente_a.nombre_2}}
+                </td>
+                <td>
+                  {{cliente_a.CURP}}
+                </td>
+                <td>
+                  <input type="button" value="Rellenar" ng-click="rellenar(cliente_a)">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <%if @retorno == "2"%>
+          <%= link_to 'ATRAS', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn" %>
+      <%else%>
+          <a href="/view_credits">Atras</a>
+      <%end%>
+
+
+</div>  
+</div> 
+
