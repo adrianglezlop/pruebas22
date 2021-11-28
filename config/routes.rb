@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   resources :receipts
 
   get 'receipts/crear'
-  get 'credits/nuevo/formvale'
+  get 'credits/nuevo', to:'credits.new'
 
   get 'receipts/baja'
   get '/pdf/:id', to: 'credits#pdf', as: 'pdf'
