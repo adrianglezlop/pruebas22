@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'ver_video/index'
 
   get 'codigo_postal/:cp', to: 'codigo_postal#index'
+  get 'credits/nuevo'
 
   get 'combos/pais'
 
@@ -64,7 +65,7 @@ Rails.application.routes.draw do
   get 'credits/:id/editpdf', to:'credits#editpdf',as:'editpdf'
   get 'view_credits/:id/pagos', to:'view_credits#pagos',as:'creditpagos'
   resources :credits
-  get 'credits/nuevo'
+ 
   
   resources :payouts
   resources :loans
