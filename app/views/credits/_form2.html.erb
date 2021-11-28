@@ -641,6 +641,9 @@
               alert("Error al procesar pdf, intente cargarlo nuevamente");
             }
           }
+          
+          new ProductsView();
+          
         </script>
       </div>
       <%= f.submit "Guardar",id:"submitid" %>
@@ -691,11 +694,7 @@
           <a href="/view_credits">Atras</a>
       <%end%>
 
-    <script>
-      $('.show-btn').on('click', function() {
-        alert("Esta es una prueba");
-      });
-    </script>
+    
 </div>  
 </div> 
 
