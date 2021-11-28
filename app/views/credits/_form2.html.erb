@@ -31,8 +31,6 @@
     
 
 <p style="color:red; font-size: 36px; font-weight: bold">FINANCIERA MARJO</p> -->
-<button class="show-btn">Mostrar alerta</button>
-
 
 
 <div ng-controller="solicitud" >
@@ -692,9 +690,13 @@
           <a href="/view_credits">Atras</a>
       <%end%>
 
-    <script>
-      new ProductsView();
-    </script>
+ <button class="show-btn">Mostrar alerta</button>
+
+  <script>
+    $('.show-btn').on('click', function() {
+      alert("Esta es una prueba");
+    });
+  </script>
 </div>  
 </div> 
 
