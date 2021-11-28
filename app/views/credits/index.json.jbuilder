@@ -1,5 +1,5 @@
 json.array!(@credits) do |credit|
-  json.extract! credit, :id,:fecha,:apellido_paterno,:apellido_materno,:nombre_1,:nombre_2,:RFC,:fecha_de_contrato,:monto_solicitud,:agente_empresa,:referencia_agente_empresa
+  json.extract! credit, :id, product_id,:fecha,:apellido_paterno,:apellido_materno,:nombre_1,:nombre_2,:RFC,:fecha_de_contrato,:monto_solicitud,:agente_empresa,:referencia_agente_empresa
   json.monto_solicitud_formato Dinero.to_money credit.monto_solicitud
   json.nombre_completo_deudor credit.nombre_completo_deudor
   json.url credit_url(credit, format: :json)
