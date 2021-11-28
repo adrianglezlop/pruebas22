@@ -9,6 +9,7 @@
 <table style="font-size:12px;">
   <thead>
     <tr>
+      <th>PRODUCTO</th>
       <th>AGENTE/EMPRESA</th>
       <th>SUCURSAL</th>
       <th>FECHA</th>
@@ -24,6 +25,29 @@
   <tbody>
     <% @credits.each do |credit| %>
       <tr>
+        <% case credit.product_id %>
+            <% when 1 %>
+                <td><%= "MIPYMARJOQ" %></td>
+            <% when 2 %>
+                <td><%="MARJO26" %></td>
+            <% when 3 %>
+                <td><%="MARJO26" %></td>
+            <% when 4 %>
+                <td><%="MARJO5" %></td>
+            <% when 5 %>
+                <td><%="MIPYMARJOS" %></td>
+            <% when 6 %> 
+                <td><%="ANGMPO" %></td>
+            <% when 7 %>
+                <td><%="CDMXQ" %></td>
+            <% when 8 %>
+                <td><%="CDMXS" %></td>
+            <% when 9 %>
+                <td><%="MPO12" %></td>
+            <% when 10 %>
+                <td><%="MARJOV" %></td>
+        <% end %>
+        
         <%if credit.agente_empresa %>
           <td><%= credit.padre.nombre_completo%></td>
         <%else%>
