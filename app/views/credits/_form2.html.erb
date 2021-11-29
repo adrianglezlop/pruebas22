@@ -194,6 +194,14 @@
           <%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:-46px;left:-36px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%>
           <%= f.radio_button  :fiel,0,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.fiel","ng-disabled":"block"%>
       </div>
+      
+      
+       <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
+          <%= f.radio_button  :vale,0,checked:true,"value":true%> 
+          <%= f.label "#{:vale}_true", "Credito"%>
+      </div>
+      
+      
       <div>
         <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
       </div>
