@@ -104,19 +104,7 @@
         <%= f.text_field :fecha, class:"datepicker", class:"cerrar_bloquear",type:"date", autocomplete: "off",:style=>"left:960px;top:115px;position:absolute;" %>
       </div>
     </div>
-    <div class="row">
-      <div style="position:absolute;top:127px;left:360px;">
-        <p>
-          <%= f.radio_button  :es_cliente,1,"ng-model":"credito.es_cliente","ng-change":"focus_curp()","ng-disabled":"block"%> 
-          <%= f.radio_button  :es_cliente,0,checked:true,:style=>"left:77px;top:16px;position:absolute;","ng-model":"credito.es_cliente","ng-change":"focus_curp()","ng-disabled":"block"%>
-        </p>
-      </div>
-
-    </div>
-  
-     
-   
-    
+ 
     <div class="row">
       <div class="input-field col s12 m2 l2">
         <%= f.text_field :apellido_paterno,:style=>"position:absolute;top:422px;left:70px;width:150px;height:18px;","ng-model":"credito.apellido_paterno","ng-change":"buscarCliente()" ,"ng-disabled":"block"%>
