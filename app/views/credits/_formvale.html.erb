@@ -111,53 +111,11 @@
           <%= f.radio_button  :es_cliente,0,checked:true,:style=>"left:77px;top:16px;position:absolute;","ng-model":"credito.es_cliente","ng-change":"focus_curp()","ng-disabled":"block"%>
         </p>
       </div>
-    
+
     </div>
-      <div  style="position:absolute;top:157px;left:654px;">
-        <p>
-          <%= f.radio_button  :familiar_con_prestamo,1,checked:true,"ng-model":"credito.familiar_con_prestamo","ng-disabled":"block"%> 
-          <%= f.radio_button  :familiar_con_prestamo,0,:style=>"position:absolute;top:17px;left:90px;","ng-model":"credito.familiar_con_prestamo" ,"ng-disabled":"block"%> 
-        </p>
-      </div>
-      
+  
      
-    <div class="row">
-      <div>
-        <%= f.text_field :nombre_completo_familiar_1,:style=>"position:absolute;top:224px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_familiar_1" ,"ng-disabled":"block"%>
-      </div>
-      <div class="input-field col s12 m6 l6">
-        <%= f.text_field :parentesco_1,:style=>"position:absolute;top:224px;left:815px;width:300px;height:22px;","ng-model":"credito.parentesco_1" ,"ng-disabled":"block"%>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12 m6 l6">
-        <%= f.text_field :nombre_completo_familiar_2,:style=>"position:absolute;top:253px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_familiar_2","ng-disabled":"block"%>
-      </div>
-      <div class="input-field col s12 m6 l6">
-        <%= f.text_field :parentesco_2,:style=>"position:absolute;top:253px;left:815px;width:300px;height:22px;","ng-model":"credito.parentesco_2","ng-disabled":"block"%>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12 m6 l6">
-        <%= f.text_field :nombre_completo_familiar_3,:style=>"position:absolute;top:282px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_familiar_3","ng-disabled":"block"%>
-      </div>
-      <div class="input-field col s12 m6 l6">
-        <%= f.text_field :parentesco_3,:style=>"position:absolute;top:282px;left:815px;width:300px;height:22px;","ng-model":"credito.parentesco_3","ng-disabled":"block"%>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12 m6 l6">
-        <%= f.text_field :nombre_completo_familiar_4,:style=>"position:absolute;top:311px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_familiar_4","ng-disabled":"block"%>
-      </div>
-      <div class="input-field col s12 m6 l6">
-        <%= f.text_field :parentesco_4,:style=>"position:absolute;top:311px;left:815px;width:300px;height:22px;","ng-model":"credito.parentesco_4","ng-disabled":"block"%>
-      </div>
-    </div>
-    
-    
-    
-    
-    
+   
     
     <div class="row">
       <div class="input-field col s12 m2 l2">
