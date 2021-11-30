@@ -46,20 +46,5 @@ class Customer < ActiveRecord::Base
     cad = cad + " #{numero_interior} " unless numero_interior.nil?
     cad =cad +"#{colonia}, #{codigo_postal}"
   end
-   def estado_civil_cadena
-        return case self.estado_civil
-            when 0 
-                "Soltero"
-            when 1
-                "Casado"
-            when 2
-                "Divorciado"
-            when 3
-                "Union libre"
-            else
-                "Viudo"
-                
-        end
-                
-    end
+   
 end
