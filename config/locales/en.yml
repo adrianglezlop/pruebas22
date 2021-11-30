@@ -91,16 +91,6 @@ en:
               blank: "es requerido"
             nombre_2:
               blank: "es requerido"
-            RFC:
-              blank: "es requerido"
-            CURP:
-              blank: "es requerido"
-            seguro:
-              blank: "es requerido"
-            INE:
-              blank: "es requerido"
-            nacionalidad:
-              blank: "es requerido"
             fecha_de_nacimiento:
               blank: "es requerido"
             ciudad_de_nacimiento:
