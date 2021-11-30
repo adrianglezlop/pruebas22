@@ -90,28 +90,7 @@ class Credit < ActiveRecord::Base
     # 1 agent
     validates :agente_empresa,
     :presence => { :if => 'agente_empresa.nil?' }
-    #   estado civil 
-    # 0  ---  soltero   
-    # 1 ----- casado
-    # 2...... divorciado
-    # 3-.-.-.-union libre
-    # 4,-,--,-,viudo
-    def estado_civil_cadena
-        return case self.estado_civil
-            when 0 
-                "Soltero"
-            when 1
-                "Casado"
-            when 2
-                "Divorciado"
-            when 3
-                "Union libre"
-            else
-                "Viudo"
-                
-        end
-                
-    end
+
     def fecha_en_español
         fecha_aux = fecha_de_contrato
         cad ="#{fecha_aux.day} de "

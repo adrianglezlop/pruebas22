@@ -1,36 +1,4 @@
-<!--
-<style type="text/css"> 
-    .polig{ 
-      border: 1px solid black;
-      width:1300px; 
-      height:2210px; 
-      font-family:arial; 
-    font-weight:normal; 
-    color:#000000; 
-    } 
 
-  </style> 
-  
-  <style type="text/css"> 
-    .cuadro{ 
-      border: 1px solid black;
-      width:1200px; 
-      height:25px; 
-      background: #DF3A01;
-      font-family:arial; 
-    font-weight:normal; 
-    color:#DF3A01; 
-    } 
-
-  </style>
-
-<div class="polig"> 
-
- 
-    
-    
-
-<p style="color:red; font-size: 36px; font-weight: bold">FINANCIERA MARJO</p> -->
 
 <div ng-controller="solicitud" >
   <div id="errores" style="background-color:#f0f0ff;border-size:2px;border-style:solid;z-index:99;overflow-y: scroll;">
@@ -121,29 +89,11 @@
 
     </div>
     <div class="row">
-      <div>
-        <%= f.text_field :CURP,:style=>"position:absolute;top:474px;left:70px;width:300px;height:18px;","ng-model":"credito.CURP","ng-change":"buscarCliente()","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.text_field :seguro,:style=>"position:absolute;top:474px;left:400px;width:220px;height:18px;","ng-model":"credito.seguro","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.text_field :INE,:style=>"position:absolute;top:474px;left:650px;width:180px;height:18px;","ng-model":"credito.INE" ,"ng-disabled":"block"%>
-      </div>
-      
-      <div style="position:absolute;top:525px;left:950px;">
-          <%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:-46px;left:-36px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%>
-          <%= f.radio_button  :fiel,0,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.fiel","ng-disabled":"block"%>
-      </div>
-      
-      <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
+          <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
           <%= f.radio_button  :vale,1,checked:true,"value":true%> 
           <%= f.label "#{:vale}_true", "Vale"%>
       </div>
-      
-      <div>
-        <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
-      </div>
+
     </div>
     <div class="row">
       <div>
@@ -177,10 +127,7 @@
         </select>
         <input id ="try" type="text" name="credit[ciudad_de_nacimiento]" ng-model="ciudades.text" style="visibility: hidden;">
       </div>
-      <div style="position:absolute;top:525px;left:950px;">
-          <%= f.radio_button  :sexo,0,checked:true,:style=>"position:absolute;top:-46px;left:87px;","ng-model":"credito.sexo" ,"ng-disabled":"block"%>
-          <%= f.radio_button  :sexo,1,:style=>"position:absolute;top:-46px;left:148px;","ng-model":"credito.sexo","ng-disabled":"block"%>
-      </div>
+
      
       
     </div>
@@ -200,19 +147,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col s12">
-        <p>
-          <%= f.radio_button  :escolaridad,0,:style=>"position:absolute;top:656px;left:218px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,1,:style=>"position:absolute;top:656px;left:344px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,2,:style=>"position:absolute;top:656px;left:463px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,3,:style=>"position:absolute;top:656px;left:595px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,4,:style=>"position:absolute;top:656px;left:731px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,5,:style=>"position:absolute;top:656px;left:866px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,6,:style=>"position:absolute;top:656px;left:990px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-        </p>
-      </div>
-    </div>
+    
     <div class="row">
         <div class="field">
           <%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block",:style=>"position:absolute;top:685px;left:250px;width:400px;height:22px;"})%>
