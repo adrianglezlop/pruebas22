@@ -630,7 +630,7 @@
             var reader  = new FileReader();
             
             reader.onloadend = function () {
-              $("#submitid").prop('disabled', true);
+              $("#submitid").prop('disabled', false);
               preview.val(reader.result);
               $("#submitid").prop('disabled', false);
             }
