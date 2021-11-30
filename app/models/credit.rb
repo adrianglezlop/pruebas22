@@ -75,22 +75,64 @@ class Credit < ActiveRecord::Base
     # 1 aceptado
     # 2 rechazada
     # 3 finalizada
+    validates :sexo,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :sexo,
+    :presence => { :if => 'sexo.nil?' }
 
-
+    validates :fiel,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :fiel,
+    :presence => { :if => 'fiel.nil?' }
     
     validates :vale,
     :inclusion => { :in => [nil,1, 0] }
     validates :vale,
     :presence => { :if => 'vale.nil?' }
     
+    validates :es_cliente,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :es_cliente,
+    :presence => { :if => 'es_cliente.nil?' }
+    
+    validates :familiar_con_prestamo,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :familiar_con_prestamo,
+    :presence => { :if => 'familiar_con_prestamo.nil?' }
+    validates_format_of :RFC, :with => /([A-Z][A-Z]|[A-Z])[A-Z][A-Z]\d\d\d\d\d\d(\w\w\w|)/
+    #eee555555eee
+     validates_format_of :CURP, :with => /[A-Z][A-Z][A-Z][A-Z]\d\d\d\d\d\d[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]\w\w/
+     #BEML920313HCMLNS09.
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
+     validates :monto_solicitud, numericality: { less_than: 3001 }
      validates :agente_empresa,
     :inclusion => { :in => [nil,1, 0] }
     # 0 company 
     # 1 agent
     validates :agente_empresa,
     :presence => { :if => 'agente_empresa.nil?' }
-
+    #   estado civil 
+    # 0  ---  soltero   
+    # 1 ----- casado
+    # 2...... divorciado
+    # 3-.-.-.-union libre
+    # 4,-,--,-,viudo
+    def estado_civil_cadena
+        return case self.estado_civil
+            when 0 
+                "Soltero"
+            when 1
+                "Casado"
+            when 2
+                "Divorciado"
+            when 3
+                "Union libre"
+            else
+                "Viudo"
+                
+        end
+                
+    end
     def fecha_en_español
         fecha_aux = fecha_de_contrato
         cad ="#{fecha_aux.day} de "
@@ -132,6 +174,12 @@ class Credit < ActiveRecord::Base
           return  Company.find(self.referencia_agente_empresa)
         end
     end
+    
+    def nombre_producto
+        xprod= (self.product_id)
+       return  Product.find(xprod).nombre_del_producto
+    end
+    
     def tipo_padre
         if agente_empresa==1
             "Agente"
@@ -353,6 +401,7 @@ class Credit < ActiveRecord::Base
         return acu.to_f
     end
     def create_customer
+       customer=Customer.find_by(CURP:self.CURP)
         if customer.nil?
           customer=Customer.create(self.as_json(:except => [:pdf64,:destination_id,:casa_color,:cancel_o_porton,:color_de_cancel,:caracteristicas_especiales,:antiguedad_laboral_meses,:antiguedad_laboral_anos,:product_id,:antiguedad_en_el_domicilio_anterior_anos,:antiguedad_en_el_domicilio_anterior_meses,:antiguedad_en_el_domicilio_actual_meses,:antiguedad_en_el_domicilio_actual,:antiguedad_en_el_domicilio_anterior,:antiguedad_en_el_domicilio_actual_anos,:fecha,:es_cliente,:monto_solicitud,:cada_cuanto_se_realizara_el_pago,:lugar_donde_se_realizara_el_pago,:customer_id,:numero_de_cheque,:fecha_de_contrato,:updated_at,:id]))
         else

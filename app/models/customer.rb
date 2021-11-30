@@ -3,11 +3,17 @@ class Customer < ActiveRecord::Base
   belongs_to :ocupation
   belongs_to :profecion
   has_many :credits
+  validates :RFC, uniqueness: true
+  validates :CURP, uniqueness: true
   validates :referencia_agente_empresa, presence:true
   def nombres 
     self.nombre_1 + " " + self.nombre_2
   end
   
+   validates_format_of :RFC, :with => /([A-Z][A-Z]|[A-Z])[A-Z][A-Z]\d\d\d\d\d\d(\w\w\w|)/
+    #eee555555eee
+     validates_format_of :CURP, :with => /[A-Z][A-Z][A-Z][A-Z]\d\d\d\d\d\d[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]\w\w/
+     #BEML920313HCMLNS09.
     
     def padre 
         if self.referencia_agente_empresa.nil?
@@ -46,5 +52,20 @@ class Customer < ActiveRecord::Base
     cad = cad + " #{numero_interior} " unless numero_interior.nil?
     cad =cad +"#{colonia}, #{codigo_postal}"
   end
-   
+   def estado_civil_cadena
+        return case self.estado_civil
+            when 0 
+                "Soltero"
+            when 1
+                "Casado"
+            when 2
+                "Divorciado"
+            when 3
+                "Union libre"
+            else
+                "Viudo"
+                
+        end
+                
+    end
 end
