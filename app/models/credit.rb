@@ -75,34 +75,14 @@ class Credit < ActiveRecord::Base
     # 1 aceptado
     # 2 rechazada
     # 3 finalizada
-    validates :sexo,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :sexo,
-    :presence => { :if => 'sexo.nil?' }
 
-    validates :fiel,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :fiel,
-    :presence => { :if => 'fiel.nil?' }
+
     
     validates :vale,
     :inclusion => { :in => [nil,1, 0] }
     validates :vale,
     :presence => { :if => 'vale.nil?' }
     
-    validates :es_cliente,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :es_cliente,
-    :presence => { :if => 'es_cliente.nil?' }
-    
-    validates :familiar_con_prestamo,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :familiar_con_prestamo,
-    :presence => { :if => 'familiar_con_prestamo.nil?' }
-    validates_format_of :RFC, :with => /([A-Z][A-Z]|[A-Z])[A-Z][A-Z]\d\d\d\d\d\d(\w\w\w|)/
-    #eee555555eee
-     validates_format_of :CURP, :with => /[A-Z][A-Z][A-Z][A-Z]\d\d\d\d\d\d[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]\w\w/
-     #BEML920313HCMLNS09.
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
      validates :agente_empresa,
     :inclusion => { :in => [nil,1, 0] }
