@@ -25,9 +25,9 @@ class Credit < ActiveRecord::Base
     #:telefono_de_casa,
     #:telefono_celular,
     #:email_1,
-    :numero_de_dependientes_economicos,
-    :gasto_promedio_mensual,
-    :estado_civil,
+    #:numero_de_dependientes_economicos,
+    #:gasto_promedio_mensual,
+    #:estado_civil,
     :calle,
     :numero_exterior,
     :tipo_de_domicilio,
@@ -94,22 +94,7 @@ class Credit < ActiveRecord::Base
     # 2...... divorciado
     # 3-.-.-.-union libre
     # 4,-,--,-,viudo
-    def estado_civil_cadena
-        return case self.estado_civil
-            when 0 
-                "Soltero"
-            when 1
-                "Casado"
-            when 2
-                "Divorciado"
-            when 3
-                "Union libre"
-            else
-                "Viudo"
-                
-        end
-                
-    end
+
     def fecha_en_español
         fecha_aux = fecha_de_contrato
         cad ="#{fecha_aux.day} de "
