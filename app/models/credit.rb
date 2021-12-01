@@ -19,7 +19,7 @@ class Credit < ActiveRecord::Base
     #:CURP,
     #:INE,
     #:nacionalidad,
-    :fecha_de_nacimiento,
+    #:fecha_de_nacimiento,
     :ciudad_de_nacimiento,
     :estado_de_nacimiento,
     :telefono_de_casa,

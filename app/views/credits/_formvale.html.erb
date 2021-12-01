@@ -99,9 +99,6 @@
     </div>
     <div class="row">
       <div>
-        <%= f.text_field :fecha_de_nacimiento, class:"datepicker",type:"date", autocomplete: "off",:style=>"position:absolute;top:550px;left:70px;width:150px;height:22px;","ng-model":"credito.fecha_de_nacimiento" ,"ng-disabled":"block"%>
-      </div>
-      <div>
         <label style="position:absolute;top:532px;left:250px;width:200px;height:22px;background-color: white;font-weight: bold;font-family:'Calibri';">PAIS DE NACIMIENTO<span style="color:red;">*</span></label>
         <div>
           <select  class="browser-default" ng-model="paices.selected" ng-change="getEstados()" style="position:absolute;top:550px;left:250px;width:200px;height:22px;",ng-disabled="block">
