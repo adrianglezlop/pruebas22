@@ -259,14 +259,14 @@
     </div>
     <div class="row">
       <div>
-        <%= f.text_field :calle, :style=>"position:absolute;top:850px;left:80px;width:700px;height:18px;","ng-model":"credito.calle","ng-disabled":"block" %>
+        <%= f.text_field :calle, :style=>"position:absolute;top:250px;left:80px;width:700px;height:18px;","ng-model":"credito.calle","ng-disabled":"block" %>
       </div>
      
       <div>
-        <%= f.number_field :numero_exterior, :style=>"position:absolute;top:850px;left:834px;width:140px;height:18px;","ng-model":"credito.numero_exterior","ng-disabled":"block" %>
+        <%= f.number_field :numero_exterior, :style=>"position:absolute;top:250px;left:834px;width:140px;height:18px;","ng-model":"credito.numero_exterior","ng-disabled":"block" %>
       </div>
        <div>
-        <%= f.text_field :numero_interior, :style=>"position:absolute;top:850px;left:996px;width:140px;height:18px;" ,"ng-model":"credito.numero_interior","ng-disabled":"block"%>
+        <%= f.text_field :numero_interior, :style=>"position:absolute;top:250px;left:996px;width:140px;height:18px;" ,"ng-model":"credito.numero_interior","ng-disabled":"block"%>
       </div>
     </div>
     <div class="row">
@@ -279,16 +279,16 @@
         </p>
       </div>
       <div class="input-field col s12 m3 l3">
-        <%= f.text_field :codigo_postal, :style=>"position:absolute;top:902px;left:390px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block"%>
+        <%= f.text_field :codigo_postal, :style=>"position:absolute;top:280px;left:390px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block"%>
       </div>
       <div class="input-field col s12 m3 l3">
-        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:906px;left:500px;width:340px;height:18px;",ng-disabled="block">
+        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:280px;left:500px;width:340px;height:18px;",ng-disabled="block">
              <option value="" disabled selected>Colonia</option>
             <option ng-repeat="option in data.zip_codes" value="{{option.d_asenta}}">{{option.d_asenta}}</option>
         </select>
       </div>
       <div class="input-field col s12 m3 l3">
-        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:906px;left:875px;width:250px;height:18px;",ng-disabled="block">
+        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:280px;left:875px;width:250px;height:18px;",ng-disabled="block">
             <option value="" disabled selected>Localidad</option>
              <option ng-repeat="option in data.zip_codes" value="{{option.d_mnpio}}">{{option.d_mnpio}}</option>
         </select>
