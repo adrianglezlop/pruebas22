@@ -8,7 +8,7 @@ class Credit < ActiveRecord::Base
     has_many :seguimientos
     #belongs_to :destination
     belongs_to :profecion
-    #belongs_to :ocupation
+    belongs_to :ocupation
     validates :referencia_agente_empresa,
     :fecha,
     :apellido_paterno,
@@ -44,16 +44,16 @@ class Credit < ActiveRecord::Base
     :monto_solicitud,
     #:cada_cuanto_se_realizara_el_pago,
     #:lugar_donde_se_realizara_el_pago,
-    #:nombre_referencia_1,
-    #:domicilio_referencia_1,
-    #:antiguedad_laboral_anos,
-    #:antiguedad_laboral_meses,
-    #:nombre_referencia_2,
-    #:domicilio_referencia_2,
+    :nombre_referencia_1,
+    :domicilio_referencia_1,
+    :antiguedad_laboral_anos,
+    :antiguedad_laboral_meses,
+    :nombre_referencia_2,
+    :domicilio_referencia_2,
     #:country,
-    #:nombre_referencia_familiar,
-    #:domicilio_referencia_familiar,
-    #:economical_activity_id,
+    :nombre_referencia_familiar,
+    :domicilio_referencia_familiar,
+    :economical_activity_id,
     #:estado_actual,
     #:localidad,
     :product_id,
