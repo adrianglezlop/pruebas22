@@ -37,7 +37,7 @@
      
   
 <div style = "position:relative; margin-left:45px; margin-top:0px; ">
-      <div style="top:0px;left:925px;position:absolute;">
+      <div style="top:10px;left:825px;position:absolute;">
         <p>
           <%= f.radio_button  :agente_empresa,1,checked:true,"value":true,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_true", "Agente" %>
           <%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_false", "Empresa" %>
