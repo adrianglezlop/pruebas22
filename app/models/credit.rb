@@ -1,14 +1,14 @@
 class Credit < ActiveRecord::Base
-    belongs_to :economical_activity
+    #belongs_to :economical_activity
     belongs_to :customer
     belongs_to :product
-    belongs_to :ocupation
+    #belongs_to :ocupation
     has_many :pdfs
     has_many :payments
     has_many :seguimientos
     #belongs_to :destination
     belongs_to :profecion
-    belongs_to :ocupation
+    #belongs_to :ocupation
     validates :referencia_agente_empresa,
     :fecha,
     :apellido_paterno,
@@ -42,8 +42,8 @@ class Credit < ActiveRecord::Base
     :colonia_empresa,
     :municipio_empresa,
     :monto_solicitud,
-    :cada_cuanto_se_realizara_el_pago,
-    :lugar_donde_se_realizara_el_pago,
+    #:cada_cuanto_se_realizara_el_pago,
+    #:lugar_donde_se_realizara_el_pago,
     :nombre_referencia_1,
     :domicilio_referencia_1,
     :antiguedad_laboral_anos,
@@ -53,13 +53,13 @@ class Credit < ActiveRecord::Base
     #:country,
     :nombre_referencia_familiar,
     :domicilio_referencia_familiar,
-    :economical_activity_id,
+    #:economical_activity_id,
     #:estado_actual,
     #:localidad,
     :product_id,
     #:destination_id,
     :customer_id,
-    :profecion_id,
+    #:profecion_id,
     presence: true
     before_save :default_values
     after_save :pdf_trans

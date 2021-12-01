@@ -100,19 +100,8 @@
    
 
     
-    <div class="row">
-        <div class="field">
-          <%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block",:style=>"position:absolute;top:685px;left:250px;width:400px;height:22px;"})%>
-        </div>
-      </div>
-    <input type="text" style ="position:absolute;top:685px;left:720px;width:250;height:22px;" placeholder="Escribe tu profecion">
-    
-    </input>
-    <div class="row">
-      <div class="field">
-        <%=f.collection_select(:economical_activity_id,EconomicalActivity.all.order(:descripcion),:id,:descripcion,{:prompt => 'Actividad economica:'},{"ng-model":"credito.economical_activity_id","ng-disabled":"block",:style=>"position:absolute;top:718px;left:250px;width:800px;height:22px;"})%>
-      </div>
-    </div>
+  
+   
     <div class="row">
       <div class="input-field col s12 m3 l3">
         <%= f.number_field :numero_de_dependientes_economicos,:style=>"position:absolute;top:771px;left:70px;width:200px;height:18px;","ng-model":"credito.numero_de_dependientes_economicos","ng-disabled":"block"%>
@@ -274,16 +263,16 @@
       </div>
       <div class="row">
       <div class="field">
-        <%=f.collection_select(:ocupation_id,Ocupation.all.order(:descripcion),:id,:descripcion,{:prompt => 'Ocupaciòn:'},{"ng-model":"credito.ocupation_id","ng-disabled":"block",:style=>"position:absolute;top:1033px;left:810px;width:300px;height:18px;"})%>
+        <!--%=f.collection_select(:ocupation_id,Ocupation.all.order(:descripcion),:id,:descripcion,{:prompt => 'Ocupaciòn:'},{"ng-model":"credito.ocupation_id","ng-disabled":"block",:style=>"position:absolute;top:1033px;left:810px;width:300px;height:18px;"})%-->
       </div>
     </div>
     </div>
     
-     <!--
+
       <div class="input-field col s12 m4 l4">
         <%= f.text_field :puesto,:style=>"position:absolute;top:1374px;left:810px;width:300px;height:18px;","ng-model":"credito.puesto","ng-disabled":"block" %>
       </div>
-      -->
+
     </div>
     <div class="row">
       <div class="input-field col s12 m4 l4">
@@ -316,22 +305,7 @@
       <div class="input-field col s12 m3 l3">
         <%= f.text_field :monto_solicitud,:style=>"position:absolute;top:420px;left:15px;width:150px;height:25px;","ng-model":"credito.monto_solicitud","ng-disabled":"block"%>
       </div>
-      <div class="col s12 m3 l3">
-        <p>
-          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,0,:style=>"position:absolute;top:1610px;left:280px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
-          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,1,:style=>"position:absolute;top:1610px;left:380px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
-          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,2,:style=>"position:absolute;top:1610px;left:459px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
-        </p>
-      </div>
-      <div class="col s12 m6 l6">
-        <p>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,0,:style=>"position:absolute;top:1610px;left:562px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,1,:style=>"position:absolute;top:1610px;left:645px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,2,:style=>"position:absolute;top:1610px;left:730px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,3,:style=>"position:absolute;top:1610px;left:880px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,4,:style=>"position:absolute;top:1610px;left:996px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-        </p>
-      </div>
+      
     </div>
     <div class="row">
       <div class="row col s12 m8 l8">
