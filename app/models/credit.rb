@@ -53,7 +53,7 @@ class Credit < ActiveRecord::Base
     #:country,
     :nombre_referencia_familiar,
     :domicilio_referencia_familiar,
-    :economical_activity_id,
+    #:economical_activity_id,
     #:estado_actual,
     #:localidad,
     :product_id,
