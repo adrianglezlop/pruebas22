@@ -18,7 +18,7 @@ class Credit < ActiveRecord::Base
     #:RFC,
     #:CURP,
     #:INE,
-    :nacionalidad,
+    #:nacionalidad,
     :fecha_de_nacimiento,
     :ciudad_de_nacimiento,
     :estado_de_nacimiento,
@@ -75,15 +75,6 @@ class Credit < ActiveRecord::Base
     # 1 aceptado
     # 2 rechazada
     # 3 finalizada
-    validates :sexo,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :sexo,
-    :presence => { :if => 'sexo.nil?' }
-
-    validates :fiel,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :fiel,
-    :presence => { :if => 'fiel.nil?' }
     
     validates :vale,
     :inclusion => { :in => [nil,1, 0] }
