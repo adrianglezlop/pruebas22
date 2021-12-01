@@ -6,7 +6,7 @@ class Credit < ActiveRecord::Base
     has_many :pdfs
     has_many :payments
     has_many :seguimientos
-    belongs_to :destination
+    #belongs_to :destination
     belongs_to :profecion
     belongs_to :ocupation
     validates :referencia_agente_empresa,
@@ -57,7 +57,7 @@ class Credit < ActiveRecord::Base
     #:estado_actual,
     #:localidad,
     :product_id,
-    :destination_id,
+    #:destination_id,
     :customer_id,
     :profecion_id,
     presence: true
