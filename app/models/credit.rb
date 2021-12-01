@@ -50,7 +50,7 @@ class Credit < ActiveRecord::Base
     :antiguedad_laboral_meses,
     :nombre_referencia_2,
     :domicilio_referencia_2,
-    :country,
+    #:country,
     :nombre_referencia_familiar,
     :domicilio_referencia_familiar,
     :economical_activity_id,

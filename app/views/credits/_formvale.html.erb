@@ -435,7 +435,7 @@
           <!--%= f.text_field :observaciones,:style=>"width:600px;height:100px;","ng-model":"credito.observaciones"%-->
         </div>
         <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"})%>
-        <%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:prompt => 'Destino del credito:'},{"ng-disabled":"block"})%>
+        <!--%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:prompt => 'Destino del credito:'},{"ng-disabled":"block"})%-->
         <br>
         <br>
         <a href="{{credito.pdfs}}" target="_blank" , style="boder-radius:20px;padding:20px 10px;background-color:orange;color:white" id="pdfs">mostrar pdfs</a>
