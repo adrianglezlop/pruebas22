@@ -60,7 +60,7 @@
       
     <div class ="row">
       <div class="input-field col s12 m3 l3">
-        <select id="credit_referencia_agente_empresa" name="credit[referencia_agente_empresa]"class="browser-default" ng-model="credito.referencia_agente_empresa" ng-disabled="block" style="left:1000px;top:63px;position:absolute;",ng-disabled="block">
+        <select id="credit_referencia_agente_empresa" name="credit[referencia_agente_empresa]"class="browser-default" ng-model="credito.referencia_agente_empresa" ng-disabled="block" style="left:1000px;top:58px;position:absolute;",ng-disabled="block">
             <option value="" disabled selected>{{tipo}}</option>
             <option ng-repeat="option in agentEmp" value="{{option.id}}">{{option.nombre}}</option>
         </select>
@@ -69,7 +69,7 @@
     </div>
     <div class="row">
       <div class="input-field col s12 m3 l3 offset-s0 offset-m9 offset-l9">
-        <%= f.text_field :fecha, class:"datepicker", class:"cerrar_bloquear",type:"date", autocomplete: "off",:style=>"left:960px;top:115px;position:absolute;" %>
+        <%= f.text_field :fecha, class:"datepicker", class:"cerrar_bloquear",type:"date", autocomplete: "off",:style=>"left:1010px;top:110px;position:absolute;" %>
       </div>
     </div>
  
