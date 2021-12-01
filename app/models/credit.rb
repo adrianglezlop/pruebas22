@@ -20,8 +20,8 @@ class Credit < ActiveRecord::Base
     #:INE,
     #:nacionalidad,
     #:fecha_de_nacimiento,
-    #:ciudad_de_nacimiento,
-    #:estado_de_nacimiento,
+    :ciudad_de_nacimiento,
+    :estado_de_nacimiento,
     :telefono_de_casa,
     :telefono_celular,
     :email_1,
@@ -30,39 +30,39 @@ class Credit < ActiveRecord::Base
     :estado_civil,
     :calle,
     :numero_exterior,
-    #:tipo_de_domicilio,
+    :tipo_de_domicilio,
     #:codigo_postal,
     #:colonia,
     #:municipio,
-    #:empresa_donde_labora,
-    #:giro_de_la_empresa,
-    #:telefono_empresa,
-    #:sueldo_mensual_neto,
-    #:dirreccion_empresa,
-    #:colonia_empresa,
-    #:municipio_empresa,
+    :empresa_donde_labora,
+    :giro_de_la_empresa,
+    :telefono_empresa,
+    :sueldo_mensual_neto,
+    :dirreccion_empresa,
+    :colonia_empresa,
+    :municipio_empresa,
     :monto_solicitud,
-    #:cada_cuanto_se_realizara_el_pago,
-    #:lugar_donde_se_realizara_el_pago,
-    #:nombre_referencia_1,
-    #:domicilio_referencia_1,
-    #:antiguedad_laboral_anos,
-    #:antiguedad_laboral_meses,
-    #:nombre_referencia_2,
-    #:domicilio_referencia_2,
-    #:country,
-    #:nombre_referencia_familiar,
-    #:domicilio_referencia_familiar,
-    #:economical_activity_id,
+    :cada_cuanto_se_realizara_el_pago,
+    :lugar_donde_se_realizara_el_pago,
+    :nombre_referencia_1,
+    :domicilio_referencia_1,
+    :antiguedad_laboral_anos,
+    :antiguedad_laboral_meses,
+    :nombre_referencia_2,
+    :domicilio_referencia_2,
+    :country,
+    :nombre_referencia_familiar,
+    :domicilio_referencia_familiar,
+    :economical_activity_id,
     #:estado_actual,
     #:localidad,
     :product_id,
-    #:destination_id,
+    :destination_id,
     :customer_id,
-    #:profecion_id,
-    #presence: true
-    #before_save :default_values
-    #after_save :pdf_trans
+    :profecion_id,
+    presence: true
+    before_save :default_values
+    after_save :pdf_trans
     def pdf_trans
         Pdf.migrate_from_credits
     end
@@ -94,20 +94,20 @@ class Credit < ActiveRecord::Base
     # 2...... divorciado
     # 3-.-.-.-union libre
     # 4,-,--,-,viudo
-    #def estado_civil_cadena
-    #    return case self.estado_civil
-    #        when 0 
-    #            "Soltero"
-    #        when 1
-    #            "Casado"
-    #        when 2
-    #            "Divorciado"
-    #        when 3
-     #           "Union libre"
-     #       else
-     #           "Viudo"
-     #           
-     #   end
+    def estado_civil_cadena
+        return case self.estado_civil
+            when 0 
+                "Soltero"
+            when 1
+                "Casado"
+            when 2
+                "Divorciado"
+            when 3
+                "Union libre"
+            else
+                "Viudo"
+                
+        end
                 
     end
     def fecha_en_español
