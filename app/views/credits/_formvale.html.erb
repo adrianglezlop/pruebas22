@@ -263,10 +263,10 @@
       </div>
      
       <div>
-        <%= f.number_field :numero_exterior, :style=>"position:absolute;top:292px;left:1000px;width:100px;height:18px;","ng-model":"credito.numero_exterior","ng-disabled":"block" %>
+        <%= f.number_field :numero_exterior, :style=>"position:absolute;top:292px;left:920px;width:100px;height:18px;","ng-model":"credito.numero_exterior","ng-disabled":"block" %>
       </div>
        <div>
-        <%= f.text_field :numero_interior, :style=>"position:absolute;top:292px;left:1130px;width:100px;height:18px;" ,"ng-model":"credito.numero_interior","ng-disabled":"block"%>
+        <%= f.text_field :numero_interior, :style=>"position:absolute;top:292px;left:1100px;width:100px;height:18px;" ,"ng-model":"credito.numero_interior","ng-disabled":"block"%>
       </div>
     </div>
     <div class="row">
@@ -288,7 +288,7 @@
         </select>
       </div>
       <div class="input-field col s12 m3 l3">
-        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:775px;width:250px;height:18px;",ng-disabled="block">
+        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:700px;width:250px;height:18px;",ng-disabled="block">
             <option value="" disabled selected>Localidad</option>
              <option ng-repeat="option in data.zip_codes" value="{{option.d_mnpio}}">{{option.d_mnpio}}</option>
         </select>
