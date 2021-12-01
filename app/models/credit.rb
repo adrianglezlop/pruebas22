@@ -25,7 +25,6 @@ class Credit < ActiveRecord::Base
     :telefono_de_casa,
     :telefono_celular,
     :email_1,
-    :escolaridad,
     :numero_de_dependientes_economicos,
     :gasto_promedio_mensual,
     :estado_civil,
@@ -80,18 +79,7 @@ class Credit < ActiveRecord::Base
     :inclusion => { :in => [nil,1, 0] }
     validates :vale,
     :presence => { :if => 'vale.nil?' }
-    
-    validates :es_cliente,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :es_cliente,
-    :presence => { :if => 'es_cliente.nil?' }
-    
-    validates :familiar_con_prestamo,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :familiar_con_prestamo,
-    :presence => { :if => 'familiar_con_prestamo.nil?' }
-     validates_format_of :CURP, :with => /[A-Z][A-Z][A-Z][A-Z]\d\d\d\d\d\d[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]\w\w/
-     #BEML920313HCMLNS09.
+
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
      validates :monto_solicitud, numericality: { less_than: 3001 }
      validates :agente_empresa,
