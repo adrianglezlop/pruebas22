@@ -30,7 +30,7 @@ class Credit < ActiveRecord::Base
     #:estado_civil,
     :calle,
     :numero_exterior,
-    :tipo_de_domicilio,
+    #:tipo_de_domicilio,
     #:codigo_postal,
     #:colonia,
     #:municipio,
