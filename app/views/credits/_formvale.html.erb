@@ -98,52 +98,6 @@
 
     </div>
    
-
-
-    <div class="row">
-      <div class="input-field col s12 m6 l6">
-        <%= f.text_field :nombre_completo_1, :style=>"position:absolute;top:1350px;left:70px;width:700px;height:22px;","ng-model":"credito.nombre_completo_1" ,"ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.number_field :edad_1, :style=>"position:absolute;top:1350px;left:810px;width:80px;height:22px;","ng-model":"credito.edad_1","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.text_field :parentesco_del_dependiente_1, :style=>"position:absolute;top:1350px;left:940px;width:170px;height:22px;","ng-model":"credito.parentesco_del_dependiente_1","ng-disabled":"block"%>
-      </div>
-    </div>
-    <div class="row">
-      <div>
-        <%= f.text_field :nombre_completo_2, :style=>"position:absolute;top:1380px;left:70px;width:700px;height:22px;" ,"ng-model":"credito.nombre_completo_2","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.number_field :edad_2, :style=>"position:absolute;top:1380px;left:810px;width:80px;height:22px;" ,"ng-model":"credito.edad_2","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.text_field :parentesco_del_dependiente_2, :style=>"position:absolute;top:1380px;left:940px;width:170px;height:22px;" ,"ng-model":"credito.parentesco_del_dependiente_2","ng-disabled":"block"%>
-      </div>
-    </div>
-    <div class="row">
-      <div>
-        <%= f.text_field :nombre_completo_3, :style=>"position:absolute;top:1410px;left:70px;width:700px;height:22px;" ,"ng-model":"credito.nombre_completo_3","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.number_field :edad_3, :style=>"position:absolute;top:1410px;left:810px;width:80px;height:22px;" ,"ng-model":"credito.edad_3","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.text_field :parentesco_del_dependiente_3, :style=>"position:absolute;top:1410px;left:940px;width:170px;height:22px;" ,"ng-model":"credito.parentesco_del_dependiente_3","ng-disabled":"block"%>
-      </div>
-    </div>
-    <div class="row">
-      <div>
-        <%= f.text_field :nombre_completo_4, :style=>"position:absolute;top:1440px;left:70px;width:700px;height:22px;" ,"ng-model":"credito.nombre_completo_4","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.number_field :edad_4, :style=>"position:absolute;top:1440px;left:810px;width:80px;height:22px;" ,"ng-model":"credito.edad_4","ng-disabled":"block"%>
-      </div>
-      <div>
-        <%= f.text_field :parentesco_del_dependiente_4, :style=>"position:absolute;top:1440px;left:940px;width:170px;height:22px;","ng-model":"credito.parentesco_del_dependiente_4","ng-disabled":"block" %>
-      </div>
-    </div>
     <div class="row">
       <div>
         <%= f.text_field :calle, :style=>"position:absolute;top:292px;left:60px;width:700px;height:18px;","ng-model":"credito.calle","ng-disabled":"block" %>
@@ -156,15 +110,7 @@
         <%= f.text_field :numero_interior, :style=>"position:absolute;top:292px;left:1120px;width:100px;height:18px;" ,"ng-model":"credito.numero_interior","ng-disabled":"block"%>
       </div>
     </div>
-    <div class="row">
-      <div>
-        <p>
-          <%= f.radio_button  :tipo_de_domicilio,0, :style=>"position:absolute;top:906px;left:53px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
-          <%= f.radio_button  :tipo_de_domicilio,1, :style=>"position:absolute;top:906px;left:121px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
-          <%= f.radio_button  :tipo_de_domicilio,2, :style=>"position:absolute;top:906px;left:197px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
-          <%= f.radio_button  :tipo_de_domicilio,3, :style=>"position:absolute;top:906px;left:280px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
-        </p>
-      </div>
+   
       <div class="input-field col s12 m3 l3">
         <%= f.text_field :codigo_postal, :style=>"position:absolute;top:340px;left:35px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block"%>
       </div>
