@@ -97,22 +97,7 @@
       </div>
 
     </div>
-   
 
-  
-    <div class="row">
-
-    </div>
-    <div class="row">
-
-    </div>
-    <div class="row">
-
-    </div>
-    <div class="row">
-      
-      
-    </div>
     <div class="row">
       <div>
         <%= f.text_field :calle, :style=>"position:absolute;top:292px;left:60px;width:700px;height:18px;","ng-model":"credito.calle","ng-disabled":"block" %>
@@ -160,29 +145,7 @@
      <div class="row">
       
       <div class="row col s12 m4 l4">
-        
-        <div class="input-field col s12">
-          <%= f.label :color_de_cancel ,:style=>"position:absolute;top:1900px;left:490px;width:110px;height:22px;"%>
-          <%= f.text_field :color_de_cancel,:style=>"position:absolute;top:1920px;left:490px;width:110px;height:22px;","ng-model":"credito.color_de_cancel","ng-disabled":"block"%>
-        </div>
-        <div class="input-field col s12">
-          <%= f.label :caracteristicas_especiales ,:style=>"position:absolute;top:1900px;left:700px;width:110px;height:22px;"%>
-          <%= f.text_field :caracteristicas_especiales,:style=>"position:absolute;top:1940px;left:660px;width:310px;height:100px;","ng-model":"credito.caracteristicas_especiales","ng-disabled":"block"%>
-        </div>
-
-        <div class="input-field col s12">
-          <br><br>
-          
-          
-        
-          <%=f.label :observaciones%>: <br>
-          
-          <%= f.text_area(:observaciones, size: '80x5' ,"ng-model":"credito.observaciones") %>
-          
-          <!--%= f.text_area(:observaciones, size: '80x5')%-->
-          
-          <!--%= f.text_field :observaciones,:style=>"width:600px;height:100px;","ng-model":"credito.observaciones"%-->
-        </div>
+ 
         <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"})%>
         <!--%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:prompt => 'Destino del credito:'},{"ng-disabled":"block"})%-->
         <br>
