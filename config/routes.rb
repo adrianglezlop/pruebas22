@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   get 'combos/ciudad'
   get 'customers/:id/historial',to:'customers#historial',as:'customer_historial'
-  get 'credits/:id/formvale',to:'credits#formvale',as:'credit_formvale'  
   get 'reports/seguimiento'
   get 'reports/clientes'
   get 'reports/historial_de_recibos'
