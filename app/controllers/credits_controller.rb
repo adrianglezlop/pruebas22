@@ -81,7 +81,7 @@ class CreditsController < ApplicationController
     create_customer
     respond_to do |format|
       if @credit.save
-        if @credit.vale == 1
+        if @credit.product_id == 10
           format.html { redirect_to "/view_credits", notice: 'Credit was successfully updated.' }
         else
           format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
@@ -94,6 +94,7 @@ class CreditsController < ApplicationController
       end
     end
   end
+  
   def aprobar
      @credit.update(status:1)
   end
