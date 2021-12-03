@@ -77,14 +77,14 @@ class CreditsController < ApplicationController
   # POST /credits
   # POST /credits.json
  def create
-    @credit = Credit.nuevo(credit_params)
+    @credit = Credit.new(credit_params)
     create_customer
     respond_to do |format|
       if @credit.save
         format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
         format.json { render :show, status: :created, location: @credit }
       else
-        format.html { render :nuevo
+        format.html { render :new
          }
         format.json { render json: @credit.errors, status: :unprocessable_entity }
       end
