@@ -82,8 +82,8 @@ class CreditsController < ApplicationController
     respond_to do |format|
       if @credit.save
         if @credit.vale ==1
-          format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
-          #format.json { render :show, status: :created, location: @credit }
+          #format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
+          format.json { render :show, status: :created, location: @credit }
         else
           format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
           format.json { render :show, status: :created, location: @credit }
