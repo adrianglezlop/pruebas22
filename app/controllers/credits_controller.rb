@@ -81,8 +81,12 @@ class CreditsController < ApplicationController
     create_customer
     respond_to do |format|
       if @credit.save
-        format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
-        format.json { render :show, status: :created, location: @credit }
+        if @credit.vale == 1
+          
+        else
+          format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
+          format.json { render :show, status: :created, location: @credit }  
+        end
       else
         format.html { render :new
          }
