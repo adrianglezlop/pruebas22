@@ -81,7 +81,7 @@ class CreditsController < ApplicationController
     create_customer
     respond_to do |format|
       if @credit.save
-        format.html { redirect_to customer_historial_path(@credit.customer), notice: 'Credit was successfully created.' }
+        format.html { redirect_to , notice: 'Credit was successfully created.' }
         format.json { render :show, status: :created, location: @credit }
       else
         format.html { render :new }
