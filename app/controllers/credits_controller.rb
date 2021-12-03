@@ -84,7 +84,8 @@ class CreditsController < ApplicationController
         format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
         format.json { render :show, status: :created, location: @credit }
       else
-        format.html { render :new }
+        format.html { render :nuevo
+         }
         format.json { render json: @credit.errors, status: :unprocessable_entity }
       end
     end
