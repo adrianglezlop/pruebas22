@@ -81,8 +81,14 @@ class CreditsController < ApplicationController
     create_customer
     respond_to do |format|
       if @credit.save
-        format.html { redirect_to customer_historial_path(@credit.customer), notice: 'Credit was successfully created.' }
-        format.json { render :show, status: :created, location: @credit }
+        if @credit.vale ==1
+          format.html { redirect_to credit_formvale_path(@credit.id), notice: 'Credit was successfully created.' }
+          format.json { render :show, status: :created, location: @credit }
+        else
+          format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
+          format.json { render :show, status: :created, location: @credit }
+        end
+        
       else
         format.html { render :new }
         format.json { render json: @credit.errors, status: :unprocessable_entity }
