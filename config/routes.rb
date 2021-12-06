@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   get 'view_credits/caratula',to:'view_credits#caratula'
   get 'view_credits/caratulamun',to:'view_credits#caratulamun'
   get 'view_credits/corrida',to:'view_credits#corrida'
+  get 'view_credits/corridavale',to:'view_credits#corrida'
   get 'view_credits/corridamun',to:'view_credits#corridamun'
   get 'view_credits/contrato',to:'view_credits#contrato'
   get 'view_credits/contratomunicipal',to:'view_credits#contratomunicipal'
