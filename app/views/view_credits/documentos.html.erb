@@ -13,10 +13,12 @@
 
 <div class="row">
     <% if @credit.product_id ==6 || @credit.product_id ==9 %>
-      <a href=<%="/view_credits/contratomunicipal?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Contrato</span></a>
-      <a href=<%="/view_credits/corridamun?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
-      <a href=<%="/view_credits/caratulamun?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Carátula</span></a>
-      <a href=<%="/view_credits/polizamun?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Póliza</span></a>
+        <a href=<%="/view_credits/contratomunicipal?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Contrato</span></a>
+        <a href=<%="/view_credits/corridamun?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
+        <a href=<%="/view_credits/caratulamun?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Carátula</span></a>
+        <a href=<%="/view_credits/polizamun?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Póliza</span></a>
+        <a href=<%="/view_credits/entrevista?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Entrevista</span></a>
+        <a href=<%="/view_credits/autorizacion?clave=#{@credit.id}"%>  target = "_blank"><span class="waves-effect waves-light btn">Reporte de Crédito</span></a>
     <%else%> 
       <% if @credit.product_id ==10%>
         <a href=<%="/view_credits/corrida?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
@@ -25,11 +27,12 @@
         <a href=<%="/view_credits/corrida?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
         <a href=<%="/view_credits/caratula?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Carátula</span></a>
         <a href=<%="/view_credits/poliza?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Póliza</span></a>
+        <a href=<%="/view_credits/entrevista?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Entrevista</span></a>
+        <a href=<%="/view_credits/autorizacion?clave=#{@credit.id}"%>  target = "_blank"><span class="waves-effect waves-light btn">Reporte de Crédito</span></a>
       <%end%> 
     <%end%>
 
-    <a href=<%="/view_credits/entrevista?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Entrevista</span></a>
-    <a href=<%="/view_credits/autorizacion?clave=#{@credit.id}"%>  target = "_blank"><span class="waves-effect waves-light btn">Reporte de Crédito</span></a>
+    
 
 </div>
 <%end%>
