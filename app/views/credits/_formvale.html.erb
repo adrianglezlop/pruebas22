@@ -170,7 +170,7 @@
       
       <div class="row col s12 m4 l4">
  
-        <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"})%>
+        <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"}), :style=>"position:absolute;top:520px;left:15px;width:150px;height:25px;"%>
         <!--%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:prompt => 'Destino del credito:'},{"ng-disabled":"block"})%-->
         <br>
         <br>
@@ -271,7 +271,7 @@
       <%if @retorno == "2"%>
           <%= link_to 'ATRAAS', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn" %>
       <%else%>
-          <a href="/view_credits" style:"position:absolute;top:510px;left:350px;width:200px;height:30px">Atras</a>
+          <a href="/view_credits">Atras</a>
       <%end%>
 
 
