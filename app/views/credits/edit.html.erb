@@ -1,10 +1,10 @@
 <h1 align="center">Editar Credito</h1>
 
-<%= if @credit.product_id == 10 %>
-    <%= render 'formvale' %>
-<%= else %>
-    <%= render 'form2' %>
-<%= end %>
+<% if @credit.product_id == 10 %>
+   
+<% else %>
+    <% render 'form2' %>
+<% end %>
 
 
 
