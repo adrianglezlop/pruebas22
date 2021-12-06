@@ -62,7 +62,7 @@ class CreditsController < ApplicationController
   # GET /credits/1/edit
   def edit
     if @credit.product_id == 10
-      format.html { redirect_to "/view_credits", notice: 'Credit was successfully updated.' }
+      format.html { redirect_to "/view_credits", notice: 'Credit was successfully updatedd.' }
     else
         
     end
