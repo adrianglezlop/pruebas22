@@ -269,7 +269,7 @@
         </div>
       </div>
       <%if @retorno == "2"%>
-          <%= link_to 'ATRAS', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn" %>
+          <%= link_to 'ATRAS', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn", :style=>"position:absolute;top:510px;left:350px;width:200px;height:30px" %>
       <%else%>
           <a href="/view_credits">Atras</a>
       <%end%>
