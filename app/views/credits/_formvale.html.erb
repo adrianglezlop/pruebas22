@@ -170,7 +170,7 @@
       
       <div class="row col s12 m4 l4">
  
-        <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"}),:style=>"position:absolute;top:490px;left:200px;width:60px;height:30px"%>
+        <%=f.collection_select(:product_id,:style=>"position:absolute;top:490px;left:200px;width:60px;height:30px",Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"})%>
         <!--%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:prompt => 'Destino del credito:'},{"ng-disabled":"block"})%-->
         <br>
         <br>
