@@ -78,14 +78,7 @@ class ViewCreditsController < ApplicationController
         payment_v.delay(run_at:d[8]).cargar_interes
       end
     end
-      
-    if @credit.product_id == 10
-      
-    else
-      pdf = ContratoPdf.new(@credit)
-      send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
-    end 
-    
+ 
   end
   def entrevista
     pdf = EntrevistaPdf.new(@credit)
