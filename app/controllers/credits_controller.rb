@@ -82,7 +82,7 @@ class CreditsController < ApplicationController
     respond_to do |format|
       if @credit.save
         if @credit.product_id == 10
-          format.html { redirect_to "/view_credits/index", notice: 'Credit was successfully updated.' }
+          format.html { redirect_to "/view_credits/index", notice: 'Credit was successfully updatedd.' }
         else
           format.html { redirect_to @credit, notice: 'Credit was successfully created.' }
           format.json { render :show, status: :created, location: @credit }  
