@@ -79,7 +79,13 @@ class ViewCreditsController < ApplicationController
       end
     end
       
-
+    if @credit.product_id == 10
+      pdf = CorridaPdf.new(@credit)
+      send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
+    else
+      pdf = ContratoPdf.new(@credit)
+      send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
+    end 
     
   end
   def entrevista
