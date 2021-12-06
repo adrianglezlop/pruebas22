@@ -22,7 +22,7 @@
     <%else%> 
       <% if @credit.product_id ==10%>
         <a href=<%="/view_credits/contratomunicipal?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Contrato</span></a>
-        <a href=<%="/view_credits/corridavale?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
+        <a href=<%="/view_credits/corrida?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
       <%else%> 
         <a href=<%="/view_credits/contrato?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Contrato</span></a>
         <a href=<%="/view_credits/corrida?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>

@@ -107,25 +107,7 @@ class ViewCreditsController < ApplicationController
     send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
   end
   
-  def corridavale
-    if (@credit.fecha_de_contrato.nil?)
-      @credit.update(fecha_de_contrato:Time.now)
-    end
-    if @credit.payments.count==0
-      getArreglo()
-      n = 0
-      @datos.each do |d|
-        n += 1
-        payment_v = Payment.create(fecha_de_pago:d[1],recibo:"#{n}/#{@datos.count}",estatus:0,importe:d[6],credit:@credit, pago:0, interes:0,fecha_de_corte:d[8],fecha_de_impresion:d[9])
-        payment_v.delay(run_at:d[8]).cargar_interes
-      end
-    end
-    
-    getArreglo()
-    pdf = CorridaPdf.new(@credit,@arreglo)
-    send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
-  end
-  
+
   def corridamun
     getArreglomun()
     pdf = CorridamunPdf.new(@credit,@arreglomun)
