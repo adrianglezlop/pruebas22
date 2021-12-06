@@ -83,8 +83,9 @@ class ViewCreditsController < ApplicationController
       
     else
       pdf = ContratoPdf.new(@credit)
+      send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
     end 
-    send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
+    
   end
   def entrevista
     pdf = EntrevistaPdf.new(@credit)
