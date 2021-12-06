@@ -108,6 +108,7 @@ class ViewCreditsController < ApplicationController
   end
   
 
+  
   def corridamun
     getArreglomun()
     pdf = CorridamunPdf.new(@credit,@arreglomun)
