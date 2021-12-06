@@ -182,14 +182,10 @@
     
     <!--div class="actions" id="solo_en_new"-->
       <div class="input-field col s12">
-         <div class="field">
-            <%= f.label :pdf64,"cargar PDF" %><br>
-            <input type="file" id="filePicker" onchange="previewFile()" accept=".pdf" max-size="2024">
-            <input id="base64textarea" type='hidden' name="credit[pdf64]" cols="50" rows="15">
-          </div>
+        
           <script>
           
-          //var uploadField = document.getElementById("filePicker");
+          var uploadField = document.getElementById("filePicker");
 
           uploadField.onchange = function() {
               if(this.files[0].size > 3000000){
