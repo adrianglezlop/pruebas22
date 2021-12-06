@@ -103,6 +103,12 @@ class ViewCreditsController < ApplicationController
     send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
   end
   
+  def corridavale
+    getArreglo()
+    pdf = CorridaPdf.new(@credit,@arreglo)
+    send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
+  end
+  
   def corridamun
     getArreglomun()
     pdf = CorridamunPdf.new(@credit,@arreglomun)
