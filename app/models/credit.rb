@@ -84,28 +84,28 @@ class Credit < ActiveRecord::Base
     
 
     validates :fecha_de_nacimiento,
-    :presence => { :if => 'fecha_de_nacimiento.nil?' }
+    :presence => { :if => 'vale.nil?' }
     
     validates :ciudad_de_nacimiento,
-    :presence => { :if => 'ciudad_de_nacimiento.nil?' }
+    :presence => { :if => 'vale.nil?' }
     
     validates :estado_de_nacimiento,
-    :presence => { :if => 'estado_de_nacimiento.nil?' }
+    :presence => { :if => 'vale.nil?' }
     
     validates :cada_cuanto_se_realizara_el_pago,
-    :presence => { :if => 'cada_cuanto_se_realizara_el_pago.nil?' }
+    :presence => { :if => 'vale.nil?' }
     
     validates :lugar_donde_se_realizara_el_pago,
-    :presence => { :if => 'lugar_donde_se_realizara_el_pago.nil?' }
+    :presence => { :if => 'vale.nil?' }
     
     validates :antiguedad_laboral_anos,
-    :presence => { :if => 'antiguedad_laboral_anos.nil?' }
+    :presence => { :if => 'vale.nil?' }
     
     validates :antiguedad_laboral_meses,
-    :presence => { :if => 'antiguedad_laboral_meses.nil?' }
+    :presence => { :if => 'vale.nil?' }
     
     validates :pais,
-    :presence => { :if => 'pais.nil?' }
+    :presence => { :if => 'vale.nil?' }
 
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
      validates :monto_solicitud, numericality: { less_than: 3001 }
