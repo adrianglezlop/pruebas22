@@ -126,8 +126,10 @@
       </div>
       
       <div style="position:absolute;top:600px;left:950px;">
-          <%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:0px;left:0px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%>
-          <%= f.radio_button  :fiel,0,:style=>"position:absolute;top:0px;left:80px;","ng-model":"credito.fiel","ng-disabled":"block"%>
+          <!--%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:0px;left:0px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%-->
+          <!--%= f.radio_button  :fiel,0,:style=>"position:absolute;top:0px;left:80px;","ng-model":"credito.fiel","ng-disabled":"block"%-->
+          <%= f.radio_button  :fiel,1,checked:true,"value":true%> 
+          <%= f.radio_button  :fiel,0,checked:true,"value":true%> 
       </div>
       
       <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
