@@ -28,8 +28,9 @@ en:
   activerecord:
     attributes:
       credit:
-        RFC: "XAXX010101000"
-        CURP: "XEXX010101HNEXXXA4"
+        RFC: "RFC"
+        CURP: "CURP"
+        Fecha_de_nacimiento: "Fecha"
         country: "Pais"
         economical_activity_id: "Actividad Economica"
         product_id: "Producto"
