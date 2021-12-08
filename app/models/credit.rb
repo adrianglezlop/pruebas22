@@ -1,12 +1,12 @@
 class Credit < ActiveRecord::Base
-    #belongs_to :economical_activity
+    belongs_to :economical_activity
     belongs_to :customer
     belongs_to :product
-    #belongs_to :ocupation
+    belongs_to :ocupation
     has_many :pdfs
     has_many :payments
     has_many :seguimientos
-    #belongs_to :destination
+    belongs_to :destination
     belongs_to :profecion
     belongs_to :ocupation
     validates :referencia_agente_empresa,
@@ -19,7 +19,7 @@ class Credit < ActiveRecord::Base
     :CURP,
     :INE,
     :nacionalidad,
-    :fecha_de_nacimiento,
+    #:fecha_de_nacimiento,
     :ciudad_de_nacimiento,
     :estado_de_nacimiento,
     :telefono_de_casa,
@@ -31,9 +31,9 @@ class Credit < ActiveRecord::Base
     :calle,
     :numero_exterior,
     :tipo_de_domicilio,
-    :codigo_postal,
-    :colonia,
-    :municipio,
+    #:codigo_postal,
+    #:colonia,
+    #:municipio,
     :empresa_donde_labora,
     :giro_de_la_empresa,
     :telefono_empresa,
@@ -75,9 +75,18 @@ class Credit < ActiveRecord::Base
     # 2 rechazada
     # 3 finalizada
     
+     validates :fiel,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :fiel,
+    :presence => { :if => 'fiel.nil?' }
+    
     validates :vale,
     :inclusion => { :in => [nil,1, 0] }
     validates :vale,
+    :presence => { :if => 'vale.nil?' }
+    
+
+    validates :fecha_de_nacimiento,
     :presence => { :if => 'vale.nil?' }
 
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
