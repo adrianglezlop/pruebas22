@@ -28,6 +28,8 @@ en:
   activerecord:
     attributes:
       credit:
+        RFC: "XAXX010101000"
+        CURP: "XEXX010101HNEXXXA4"
         country: "Pais"
         economical_activity_id: "Actividad Economica"
         product_id: "Producto"
