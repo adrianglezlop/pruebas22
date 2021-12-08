@@ -16,9 +16,9 @@ class Credit < ActiveRecord::Base
     :nombre_1,
     :nombre_2,
     :RFC,
-    #:CURP,
-    #:INE,
-    #:nacionalidad,
+    :CURP,
+    :INE,
+    :nacionalidad,
     #:fecha_de_nacimiento,
     #:ciudad_de_nacimiento,
     #:estado_de_nacimiento,
@@ -363,7 +363,7 @@ class Credit < ActiveRecord::Base
         return acu.to_f
     end
     def create_customer
-       #customer=Customer.find_by(CURP:self.CURP)
+       customer=Customer.find_by(CURP:self.CURP)
         if customer.nil?
           customer=Customer.create(self.as_json(:except => [:pdf64,:destination_id,:casa_color,:cancel_o_porton,:color_de_cancel,:caracteristicas_especiales,:antiguedad_laboral_meses,:antiguedad_laboral_anos,:product_id,:antiguedad_en_el_domicilio_anterior_anos,:antiguedad_en_el_domicilio_anterior_meses,:antiguedad_en_el_domicilio_actual_meses,:antiguedad_en_el_domicilio_actual,:antiguedad_en_el_domicilio_anterior,:antiguedad_en_el_domicilio_actual_anos,:fecha,:es_cliente,:monto_solicitud,:cada_cuanto_se_realizara_el_pago,:lugar_donde_se_realizara_el_pago,:customer_id,:numero_de_cheque,:fecha_de_contrato,:updated_at,:id]))
         else
