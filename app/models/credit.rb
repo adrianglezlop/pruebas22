@@ -15,7 +15,7 @@ class Credit < ActiveRecord::Base
     :apellido_materno,
     :nombre_1,
     :nombre_2,
-    #:RFC,
+    :RFC,
     #:CURP,
     #:INE,
     #:nacionalidad,
