@@ -110,15 +110,20 @@
         <%= f.text_field :nombre_2,:style=>"position:absolute;top:205px;left:960px;width:200px;height:18px;","ng-model":"credito.nombre_2","ng-change":"buscarCliente()","ng-disabled":"block" %>
       </div>
       <div class="input-field col s12 m4 l4">
-        <%= f.label :rfc, "RFC", :style=>"position:absolute;top:480px;left:6400px;width:200px;height:30px"%><br>
-        <%= f.text_field :RFC,:style=>"position:absolute;top:480px;left:670px;width:250px;height:18px;","ng-model":"credito.RFC" ,"ng-disabled":"block"%>
+        <div style="top:480px;left:670px;position:absolute;">
+           RFC:
+        </div>
+        <%= f.text_field :RFC,:style=>"position:absolute;top:480px;left:700px;width:250px;height:18px;","ng-model":"credito.RFC" ,"ng-disabled":"block"%>
         
         <!--%= form.hidden_field :RFC, :style=>"position:absolute;top:600px;left:870px;width:250px;height:18px;","ng-model":"credito.RFC" ,"ng-disabled":"block"%-->        
       </div>
     </div>
     <div class="row">
+      <div style="top:510px;left:670px;position:absolute;">
+           CURP:
+        </div>
       <div>
-        <%= f.text_field :CURP,:style=>"position:absolute;top:550px;left:70px;width:300px;height:18px;","ng-model":"credito.CURP","ng-change":"buscarCliente()","ng-disabled":"block"%>
+        <%= f.text_field :CURP,:style=>"position:absolute;top:510px;left:700px;width:300px;height:18px;","ng-model":"credito.CURP","ng-change":"buscarCliente()","ng-disabled":"block"%>
       </div>
       <div>
         <%= f.text_field :seguro,:style=>"position:absolute;top:600px;left:400px;width:220px;height:18px;","ng-model":"credito.seguro","ng-disabled":"block"%>
