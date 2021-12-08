@@ -18,7 +18,7 @@ class Credit < ActiveRecord::Base
     :RFC,
     :CURP,
     :INE,
-    :FIEL,
+    :fiel,
     :nacionalidad,
     #:fecha_de_nacimiento,
     :ciudad_de_nacimiento,
