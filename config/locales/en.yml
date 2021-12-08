@@ -271,8 +271,8 @@ en:
               blank: "es requerido"
             country:
               blank: "es requerido"
-            customer_id:
-              blank: "no se ha podido crear o vincular, por favor verifique que el RFC y el CURP esten correctos si desea cambiar estos datos de algun cliente existente hagalo desde el formulario de editar cliente"
+            #customer_id:
+            #  blank: "no se ha podido crear o vincular, por favor verifique que el RFC y el CURP esten correctos si desea cambiar estos datos de algun cliente existente hagalo desde el formulario de editar cliente"
             antiguedad_laboral_anos:
               blank: "es requerido"
             antiguedad_laboral_meses:
