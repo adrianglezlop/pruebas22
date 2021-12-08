@@ -21,8 +21,8 @@ class Credit < ActiveRecord::Base
     :fiel,
     :nacionalidad,
     #:fecha_de_nacimiento,
-    :ciudad_de_nacimiento,
-    :estado_de_nacimiento,
+    #:ciudad_de_nacimiento,
+    #:estado_de_nacimiento,
     :telefono_de_casa,
     :telefono_celular,
     :email_1,
@@ -84,6 +84,12 @@ class Credit < ActiveRecord::Base
     
 
     validates :fecha_de_nacimiento,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :ciudad_de_nacimiento,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :estado_de_nacimiento,
     :presence => { :if => 'vale.nil?' }
 
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
