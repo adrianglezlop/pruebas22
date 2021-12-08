@@ -132,7 +132,7 @@
         <%= f.text_field :INE,:style=>"position:absolute;top:650px;left:650px;width:180px;height:18px;","ng-model":"credito.INE" ,"ng-disabled":"block"%>
       </div>
       
-      <div style="position:absolute;top:600px;left:950px;">
+      <div style="position:absolute;top:650px;left:950px;">
           <!--%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:0px;left:0px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%-->
           <!--%= f.radio_button  :fiel,0,:style=>"position:absolute;top:0px;left:80px;","ng-model":"credito.fiel","ng-disabled":"block"%-->
           <%= f.radio_button  :fiel,1,checked:true,"value":true%> 
@@ -186,8 +186,8 @@
       </div>
       
       <div style="position:absolute;top:675px;left:950px;">
-          <%= f.radio_button  :sexo,0,checked:true,:style=>"position:absolute;top:-46px;left:87px;","ng-model":"credito.sexo" ,"ng-disabled":"block"%>
-          <%= f.radio_button  :sexo,1,:style=>"position:absolute;top:-46px;left:148px;","ng-model":"credito.sexo","ng-disabled":"block"%>
+          <%= f.radio_button  :sexo,0,checked:true,"ng-model":"credito.sexo" ,"ng-disabled":"block"%>
+          <%= f.radio_button  :sexo,1,"ng-model":"credito.sexo","ng-disabled":"block"%>
       </div>
     </div>
     
