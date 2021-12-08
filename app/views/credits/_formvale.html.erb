@@ -110,7 +110,7 @@
         <%= f.text_field :nombre_2,:style=>"position:absolute;top:205px;left:960px;width:200px;height:18px;","ng-model":"credito.nombre_2","ng-change":"buscarCliente()","ng-disabled":"block" %>
       </div>
       <div class="input-field col s12 m4 l4">
-        <%= f.hidden_field :RFC,:style=>"position:absolute;top:600px;left:870px;width:250px;height:18px;","ng-model":"credito.RFC" ,"ng-disabled":"block"%>
+        <%= f.text_field :RFC,:style=>"position:absolute;top:600px;left:870px;width:250px;height:18px;","ng-model":"credito.RFC" ,"ng-disabled":"block"%>
         <!--%= form.hidden_field :RFC, :style=>"position:absolute;top:600px;left:870px;width:250px;height:18px;","ng-model":"credito.RFC" ,"ng-disabled":"block"%-->        
       </div>
     </div>
@@ -228,7 +228,7 @@
           }
         </script>
       <!--/div-->
-      <%= f.submit "Guardar",id:"submitid",:style=>"position:absolute;top:500px;left:350px;width:60px;height:30px"%>
+      <%= f.submit "Guardar",id:"submitid",:style=>"position:absolute;top:510px;left:350px;width:60px;height:30px"%>
     </div>
   <% end %>
   <div id="autorelleno" style="background-color:#f0f0ff;width:700px;position:fixed;top:100px;left:100px;border-size:2px;border-style:solid">
