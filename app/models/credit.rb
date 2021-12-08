@@ -76,8 +76,6 @@ class Credit < ActiveRecord::Base
     # 3 finalizada
     
      validates :fiel,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :fiel,
     :presence => { :if => 'fiel.nil?' }
     
     validates :vale,
