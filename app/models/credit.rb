@@ -43,8 +43,8 @@ class Credit < ActiveRecord::Base
     :colonia_empresa,
     :municipio_empresa,
     :monto_solicitud,
-    :cada_cuanto_se_realizara_el_pago,
-    :lugar_donde_se_realizara_el_pago,
+    #:cada_cuanto_se_realizara_el_pago,
+    #:lugar_donde_se_realizara_el_pago,
     :nombre_referencia_1,
     :domicilio_referencia_1,
     :antiguedad_laboral_anos,
@@ -90,6 +90,12 @@ class Credit < ActiveRecord::Base
     :presence => { :if => 'vale.nil?' }
     
     validates :estado_de_nacimiento,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :cada_cuanto_se_realizara_el_pago,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :lugar_donde_se_realizara_el_pago,
     :presence => { :if => 'vale.nil?' }
 
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
