@@ -84,7 +84,7 @@ class Credit < ActiveRecord::Base
     
 
     validates :fecha_de_nacimiento,
-    :presence => { :if => 'vale.nil?' }
+    :presence => { :if => 'fecha_de_nacimiento.nil?' }
     
     validates :ciudad_de_nacimiento,
     :presence => { :if => 'vale.nil?' }
