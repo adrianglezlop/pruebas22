@@ -493,7 +493,7 @@
     
       <div class="row">
         <div class="row col s12 m4 l4">
-         <div style="top:430px;left:300px;position:absolute;">
+         <div style="top:550px;left:300px;position:absolute;">
            Producto:
             <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Producto:'},{"ng-disabled":"block"})%>
             <!--%= f.collection_select :produc_id, Product.all, :id, :nombre_del_producto, {:prompt => 'Productos:'}, {:selected => 10}, {:disabled => true}%-->
@@ -510,9 +510,9 @@
     <!--div class="actions" id="solo_en_new"-->
       <div class="input-field col s12">
          <div class="field">
-            <%= f.label :pdf64,"Cargar PDF", :style=>"position:absolute;top:550px;left:350px;width:200px;height:30px"%><br>
-            <input type="file" id="filePicker" onchange="previewFile()" accept=".pdf" max-size="2024" style="position:absolute;top:580px;left:350px;width:300px;height:30px">
-            <input id="base64textarea" type='hidden' name="credit[pdf64]" cols="50" rows="15" style="position:absolute;top:580px;left:350px;width:200px;height:30px">
+            <%= f.label :pdf64,"Cargar PDF", :style=>"position:absolute;top:580px;left:350px;width:200px;height:30px"%><br>
+            <input type="file" id="filePicker" onchange="previewFile()" accept=".pdf" max-size="2024" style="position:absolute;top:620px;left:350px;width:300px;height:30px">
+            <input id="base64textarea" type='hidden' name="credit[pdf64]" cols="50" rows="15" style="position:absolute;top:620px;left:350px;width:200px;height:30px">
           </div>
           
           <script>
@@ -554,7 +554,7 @@
           }
         </script>
       <!--/div-->
-      <%= f.submit "Guardar",id:"submitid",:style=>"position:absolute;top:600px;left:350px;width:60px;height:30px"%>
+      <%= f.submit "Guardar",id:"submitid",:style=>"position:absolute;top:620px;left:350px;width:60px;height:30px"%>
     </div>
     
     <% end %>
