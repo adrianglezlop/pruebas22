@@ -170,8 +170,8 @@
       
       <div class="row col s12 m4 l4">
        <div style="top:430px;left:350px;position:absolute;">
-          <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"})%>
-          <%= f.collection_select :produc_id, roles, :id, :nombre_del_producto, :prompt => true, :selected => 2 %>
+          <!--%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Productos:'},{"ng-disabled":"block"})%-->
+          <%= f.collection_select :produc_id, Product.all, :id, :nombre_del_producto, :prompt => 'Productos:', :selected => 2 %>
         <!--%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:prompt => 'Destino del credito:'},{"ng-disabled":"block"})%-->
         </div>
         <br>
