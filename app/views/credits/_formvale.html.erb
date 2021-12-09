@@ -601,16 +601,9 @@
         </div>
          <div style="top:430px;left:300px;position:absolute;">
            Producto:
-            <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Producto:'},{"ng-disabled":"block"}, :selected => 10)%>
+            <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Producto:'},{"ng-disabled":"block"})%>
             <%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:prompt => 'Destino del credito:'},{"ng-disabled":"block"})%>
             <!--%= f.collection_select :produc_id, Product.all, :id, :nombre_del_producto, :prompt => 'Productos:', :selected => 10%-->
-          </div>
-          
-          <div class="input-field col s12 m3 l3">
-            <select id="credit_referencia_agente_empresa" name="credit[referencia_agente_empresa]"class="browser-default" ng-model="credito.referencia_agente_empresa" ng-disabled="block" style="left:1000px;top:58px;position:absolute;",ng-disabled="block">
-              <option value="" disabled selected>{{tipo}}</option>
-              <option ng-repeat="option in agentEmp" value="{{option.id}}">{{option.nombre}}</option>
-            </select>
           </div>
           
           <br>
