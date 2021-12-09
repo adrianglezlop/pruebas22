@@ -1,12 +1,6 @@
 <h1 align="center">Editar Credito</h1>
 
-<%= if @credit.product_id ==10 %>
-    <%= render 'formvale' %>
-<%= else %>
-    <%= render 'form2' %>
-<%= end %>
-
+<%= render 'form2' %>
 
 <%= link_to 'Show', @credit %> |
 <%= link_to 'Atras', credits_path %>
-
