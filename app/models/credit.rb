@@ -58,7 +58,7 @@ class Credit < ActiveRecord::Base
     :estado_actual,
     :localidad,
     #:product_id,
-    :destination_id,
+    #:destination_id,
     :customer_id,
     #:profecion_id,
     presence: true
