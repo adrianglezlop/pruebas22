@@ -262,8 +262,8 @@ en:
               blank: "es requerido"
             antiguedad_en_el_domicilio_actual_anos:
               blank: "es requerido"
-            product_id:
-              blank: "es requerido"
+            #product_id:
+            #  blank: "es requerido"
             antiguedad_en_el_domicilio_anterior_anos:
               blank: "es requerido"
             antiguedad_en_el_domicilio_anterior_meses:
