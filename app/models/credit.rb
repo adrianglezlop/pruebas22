@@ -57,8 +57,8 @@ class Credit < ActiveRecord::Base
     #:economical_activity_id,
     :estado_actual,
     :localidad,
-    :product_id,
-    #:destination_id,
+    #:product_id,
+    :destination_id,
     :customer_id,
     #:profecion_id,
     presence: true
