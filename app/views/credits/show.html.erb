@@ -383,5 +383,9 @@
 <%= link_to 'Edit', edit_credit_path(@credit) %> |
 <%= link_to 'Back', credits_path %>
 -->
-<%= render 'form2'%> 
+<% if @credit.product_id == 10 %>
+  <%= render 'formvale' %>
+<% else %>
+  <%= render 'form2'%> 
+<% end %>
         
