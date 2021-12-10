@@ -1,6 +1,26 @@
 
 
 <div ng-controller="solicitud" >
+  <div id="errores" style="background-color:#f0f0ff;border-size:2px;border-style:solid;z-index:99;overflow-y: scroll;">
+    <div>
+      
+      <%= form_for @credit,class:"father" do |f| %>
+      
+      <% if @credit.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@credit.errors.count, "error") %> prohibited this credit from being saved:</h2>
+  
+        <ul>
+          <% @credit.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <input type="button" onclick="$('#errores').hide()" value="Cerrar">
+    </div>
+  </div>
+  
   
 
   
