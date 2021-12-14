@@ -11,6 +11,7 @@
         <table style="font-size:12px;">
               <thead>
                 <tr>
+                  <th>PRODUCTO</th>
                   <th>PAGO</th>
                   <th>FECHA PAGO</th>
                   <th>FECHA CREDITO</th>
@@ -25,6 +26,7 @@
             <tbody>
             <% @credits.each do |credit| %>
               <tr>
+                <td><%= credit.product_id unless credit.product_id.nil? %></td>
                 <td><%= credit.padre.nombre_completo unless credit.padre.nil? %></td>
                 <td><%= credit.fecha_de_contrato.strftime("%d/%m/%Y") unless credit.fecha_de_contrato.nil?  %></td>
                 <td></td>
