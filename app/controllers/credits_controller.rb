@@ -89,8 +89,13 @@ class CreditsController < ApplicationController
           format.json { render :show, status: :created, location: @credit }  
         end
       else
-        format.html { render :new
-         }
+        if @credit.product_id == 10
+          format.html { render :nuevo
+          }
+        else
+          format.html { render :new
+          }
+        end
         format.json { render json: @credit.errors, status: :unprocessable_entity }
       end
     end
