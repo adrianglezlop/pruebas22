@@ -165,11 +165,11 @@
       
       <div>
         <div>
-          <select class="browser-default" ng-model="estados.selected" ng-change="getCiudades()" style="position:absolute;top:700px;left:470px;width:285px;height:22px;;",ng-disabled="block",ng-hide="true">
+          <select class="browser-default" ng-model="estados.selected" ng-change="getCiudades()" ng-hide="true" style="position:absolute;top:700px;left:470px;width:285px;height:22px;;",ng-disabled="block">
             <option value="" disabled selected>Estado</option>
             <option ng-repeat="option in estados" value="{{option}}">{{option.nombre}}</option>
           </select>
-          <input type="text" name="credit[estado_de_nacimiento]" ng-model="estados.text" style="visibility: hidden;",ng-hide="true">
+          <input type="text" name="credit[estado_de_nacimiento]" ng-model="estados.text" ng-hide="true" style="visibility: hidden;">
         </div>
       </div>
       
