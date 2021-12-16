@@ -177,7 +177,7 @@
         <label style="position:absolute;top:682px;left:792px;width:135px;height:22px;background-color: white;font-weight: bold;font-family: 'Calibri';",ng-hide="true">CIUDAD<span style="color:red;">*</span></label>
         
         <select  class="browser-default" ng-model="ciudades.selected" ng-change="ciudadesChange()" ng-hide="true" style="position:absolute;top:700px;left:777px;width:150px;height:22px;",ng-disabled="block">
-            <option value="" disabled selected>Ciudad</option>
+            <option ng-hide="true" value="" disabled selected>Ciudad</option>
             <option ng-repeat="option in ciudades" ng-hide="true" value="{{option}}">{{option.nombre}}</option>
         </select>
         <input id ="try" type="text" name="credit[ciudad_de_nacimiento]" ng-model="ciudades.text" ng-hide="true" style="visibility: hidden;">
