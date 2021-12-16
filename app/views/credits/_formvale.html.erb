@@ -376,26 +376,26 @@
   <div class="row">
        <div>
         <p>
-          <%= f.radio_button  :tipo_de_domicilio,0, :style=>"position:absolute;top:906px;left:53px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
-          <%= f.radio_button  :tipo_de_domicilio,1, :style=>"position:absolute;top:906px;left:121px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
-          <%= f.radio_button  :tipo_de_domicilio,2, :style=>"position:absolute;top:906px;left:197px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
-          <%= f.radio_button  :tipo_de_domicilio,3, :style=>"position:absolute;top:906px;left:280px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block"%>
+          <%= f.radio_button  :tipo_de_domicilio,0, :style=>"position:absolute;top:906px;left:53px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :tipo_de_domicilio,1, :style=>"position:absolute;top:906px;left:121px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :tipo_de_domicilio,2, :style=>"position:absolute;top:906px;left:197px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :tipo_de_domicilio,3, :style=>"position:absolute;top:906px;left:280px;","ng-model":"credito.tipo_de_domicilio","ng-disabled":"block", "ng-hide":"true"%>
         </p>
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <%= f.text_field :codigo_postal, :style=>"position:absolute;top:340px;left:35px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block"%>
+        <%= f.text_field :codigo_postal, :style=>"position:absolute;top:340px;left:35px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block", "ng-hide":"true"%>
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:345px;left:280px;width:340px;height:18px;",ng-disabled="block">
+        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:345px;left:280px;width:340px;height:18px;",ng-disabled="block", ng-hide="true">
              <option value="" disabled selected>Colonia</option>
             <option ng-repeat="option in data.zip_codes" value="{{option.d_asenta}}">{{option.d_asenta}}</option>
         </select>
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:720px;width:250px;height:18px;",ng-disabled="block">
+        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:720px;width:250px;height:18px;",ng-disabled="block",ng-hide="true">
             <option value="" disabled selected>Localidad</option>
              <option ng-repeat="option in data.zip_codes" value="{{option.d_mnpio}}">{{option.d_mnpio}}</option>
         </select>
