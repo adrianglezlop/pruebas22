@@ -153,7 +153,7 @@
       </div>
       
       <div>
-        <label style="position:absolute;top:682px;left:250px;width:200px;height:22px;background-color: white;font-weight: bold;font-family:'Calibri';">PAIS DE NACIMIENTO<span style="color:red;">*</span></label>
+        <label style="position:absolute;top:682px;left:250px;width:200px;height:22px;background-color: white;font-weight: bold;font-family:'Calibri';", ng-hide="true">PAIS DE NACIMIENTO<span style="color:red;">*</span></label>
         <div>
           <select  class="browser-default" ng-model="paices.selected" ng-change="getEstados()" style="position:absolute;top:700px;left:250px;width:200px;height:22px;",ng-disabled="block", ng-hide="true">
             <option value="" disabled selected>Pais</option>
@@ -165,18 +165,18 @@
       
       <div>
         <div>
-          <select class="browser-default" ng-model="estados.selected" ng-change="getCiudades()" style="position:absolute;top:700px;left:470px;width:285px;height:22px;;",ng-disabled="block">
+          <select class="browser-default" ng-model="estados.selected" ng-change="getCiudades()" style="position:absolute;top:700px;left:470px;width:285px;height:22px;;",ng-disabled="block",ng-hide="true">
             <option value="" disabled selected>Estado</option>
             <option ng-repeat="option in estados" value="{{option}}">{{option.nombre}}</option>
           </select>
-          <input type="text" name="credit[estado_de_nacimiento]" ng-model="estados.text" style="visibility: hidden;">
+          <input type="text" name="credit[estado_de_nacimiento]" ng-model="estados.text" style="visibility: hidden;",ng-hide="true">
         </div>
       </div>
       
       <div>
-        <label style="position:absolute;top:682px;left:792px;width:135px;height:22px;background-color: white;font-weight: bold;font-family: 'Calibri';">CIUDAD<span style="color:red;">*</span></label>
+        <label style="position:absolute;top:682px;left:792px;width:135px;height:22px;background-color: white;font-weight: bold;font-family: 'Calibri';",ng-hide="true">CIUDAD<span style="color:red;">*</span></label>
         
-        <select  class="browser-default" ng-model="ciudades.selected" ng-change="ciudadesChange()" style="position:absolute;top:700px;left:777px;width:150px;height:22px;",ng-disabled="block">
+        <select  class="browser-default" ng-model="ciudades.selected" ng-change="ciudadesChange()",ng-hide="true" style="position:absolute;top:700px;left:777px;width:150px;height:22px;",ng-disabled="block">
             <option value="" disabled selected>Ciudad</option>
             <option ng-repeat="option in ciudades" value="{{option}}">{{option.nombre}}</option>
         </select>
