@@ -180,7 +180,7 @@
             <option value="" disabled selected>Ciudad</option>
             <option ng-repeat="option in ciudades" value="{{option}}">{{option.nombre}}</option>
         </select>
-        <input id ="try" type="text" name="credit[ciudad_de_nacimiento]" ng-model="ciudades.text" style="visibility: hidden;">
+        <input id ="try" type="text" name="credit[ciudad_de_nacimiento]" ng-model="ciudades.text" ng-hide="true" style="visibility: hidden;">
       </div>
       
       <div style="position:absolute;top:650px;left:1100px;">
@@ -229,7 +229,7 @@
         </div>
       </div>
       
-      <input type="text" style ="position:absolute;top:835px;left:720px;width:250;height:22px;" placeholder="Escribe tu profecion">
+      <input type="text" ng-hide="true" style ="position:absolute;top:835px;left:720px;width:250;height:22px;" placeholder="Escribe tu profecion">
     
       </input>
       
