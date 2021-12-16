@@ -235,7 +235,7 @@
       
     <div class="row">
       <div class="field">
-        <%=f.collection_select(:economical_activity_id,EconomicalActivity.all.order(:descripcion),:id,:descripcion,{:prompt => 'Actividad economica:'},{"ng-model":"credito.economical_activity_id","ng-disabled":"block",:style=>"position:absolute;top:818px;left:250px;width:800px;height:22px;"})%>
+        <%=f.collection_select(:economical_activity_id,EconomicalActivity.all.order(:descripcion),:id,:descripcion,{:prompt => 'Actividad economica:'},{"ng-model":"credito.economical_activity_id","ng-disabled":"block",:style=>"position:absolute;top:818px;left:250px;width:800px;height:22px;"}), "ng-hide":"true"%>
       </div>
     </div>
     
@@ -388,14 +388,14 @@
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:345px;left:280px;width:340px;height:18px;",ng-disabled="block", ng-hide:"true">
+        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:345px;left:280px;width:340px;height:18px;",ng-disabled="block">
              <option value="" disabled selected>Colonia</option>
             <option ng-repeat="option in data.zip_codes" value="{{option.d_asenta}}">{{option.d_asenta}}</option>
         </select>
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:720px;width:250px;height:18px;",ng-disabled="block", ng-hide"true">
+        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:720px;width:250px;height:18px;",ng-disabled="block">
             <option value="" disabled selected>Localidad</option>
              <option ng-repeat="option in data.zip_codes" value="{{option.d_mnpio}}">{{option.d_mnpio}}</option>
         </select>
@@ -404,79 +404,79 @@
     
     <div class="row">
       <div class="input-field col s12 m3 l3">
-        <%= f.text_field :municipio,:style=>"position:absolute;top:953px;left:70px;width:290px;height:18px;","ng-model":"data.zip_codes[0].d_mnpio","ng-disabled":"block", "ng-hide":"true"%>
+        <%= f.text_field :municipio,:style=>"position:absolute;top:953px;left:70px;width:290px;height:18px;","ng-model":"data.zip_codes[0].d_mnpio","ng-disabled":"block"%>
       </div>
       
       <div class="input-field col s12 m3 l3">
-         <%=f.text_field :estado_actual, :style=>"position:absolute;top:340px;left:1000px;width:200px;height:18px;","ng-model":"data.zip_codes[0].d_estado","ng-disabled":"block", "ng-hide":"true"%>
+         <%=f.text_field :estado_actual, :style=>"position:absolute;top:340px;left:1000px;width:200px;height:18px;","ng-model":"data.zip_codes[0].d_estado","ng-disabled":"block"%>
       </div>
       
       <div class="input-field col s12 m3 l3">
         <!--<%= f.text_field :antiguedad_en_el_domicilio_actual,:style=>"position:absolute;top:953px;left:600px;width:250px;height:18px;","ng-disabled":"block" %>-->
-       <%= f.select :antiguedad_en_el_domicilio_actual_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:953px;left:600px;width:125px;height:18px;","ng-model":"credito.antiguedad_en_el_domicilio_actual_anos","ng-disabled":"block", "ng-hide":"true"  %>
-        <%= f.select :antiguedad_en_el_domicilio_actual_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:953px;left:725px;width:125px;height:18px;","ng-model":"credito.antiguedad_en_el_domicilio_actual_meses","ng-disabled":"block", "ng-hide":"true" %>
+       <%= f.select :antiguedad_en_el_domicilio_actual_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:953px;left:600px;width:125px;height:18px;","ng-model":"credito.antiguedad_en_el_domicilio_actual_anos","ng-disabled":"block"  %>
+        <%= f.select :antiguedad_en_el_domicilio_actual_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:953px;left:725px;width:125px;height:18px;","ng-model":"credito.antiguedad_en_el_domicilio_actual_meses","ng-disabled":"block"  %>
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <!--<%= f.text_field :antiguedad_en_el_domicilio_actual_meses,:style=>"position:absolute;top:953px;left:870px;width:260px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_actual_meses","ng-disabled":"block", "ng-hide":"true"%>-->
-        <%= f.select :antiguedad_en_el_domicilio_anterior_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:953px;left:870px;width:130px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_anterior_anos","ng-disabled":"block", "ng-hide":"true" %>
-        <%= f.select :antiguedad_en_el_domicilio_anterior_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:953px;left:1000px;width:130px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_anterior_meses","ng-disabled":"block", "ng-hide":"true" %>
+        <!--<%= f.text_field :antiguedad_en_el_domicilio_actual_meses,:style=>"position:absolute;top:953px;left:870px;width:260px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_actual_meses","ng-disabled":"block"%>-->
+        <%= f.select :antiguedad_en_el_domicilio_anterior_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:953px;left:870px;width:130px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_anterior_anos","ng-disabled":"block" %>
+        <%= f.select :antiguedad_en_el_domicilio_anterior_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:953px;left:1000px;width:130px;height:18px;" ,"ng-model":"credito.antiguedad_en_el_domicilio_anterior_meses","ng-disabled":"block" %>
       </div>
       
       <div class="row">
         <div class="input-field col s12 m4 l4">
-          <%= f.text_field :empresa_donde_labora,:style=>"position:absolute;top:1033px;left:70px;width:370px;height:18px;","ng-model":"credito.empresa_donde_labora" ,"ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.text_field :empresa_donde_labora,:style=>"position:absolute;top:1033px;left:70px;width:370px;height:18px;","ng-model":"credito.empresa_donde_labora" ,"ng-disabled":"block"%>
         </div>
         
         <div class="input-field col s12 m4 l4">
-          <%= f.text_field :giro_de_la_empresa,:style=>"position:absolute;top:1033px;left:470px;width:300px;height:18px;","ng-model":"credito.giro_de_la_empresa" ,"ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.text_field :giro_de_la_empresa,:style=>"position:absolute;top:1033px;left:470px;width:300px;height:18px;","ng-model":"credito.giro_de_la_empresa" ,"ng-disabled":"block"%>
         </div>
         
         <div class="row">
           <div class="field">
-            <%=f.collection_select(:ocupation_id,Ocupation.all.order(:descripcion),:id,:descripcion,{:prompt => 'Ocupaciòn:'},{"ng-model":"credito.ocupation_id","ng-disabled":"block", "ng-hide":"true",:style=>"position:absolute;top:1033px;left:810px;width:300px;height:18px;"})%>
+            <%=f.collection_select(:ocupation_id,Ocupation.all.order(:descripcion),:id,:descripcion,{:prompt => 'Ocupaciòn:'},{"ng-model":"credito.ocupation_id","ng-disabled":"block",:style=>"position:absolute;top:1033px;left:810px;width:300px;height:18px;"})%>
           </div>
         </div>
       </div>
 
       <div class="input-field col s12 m4 l4">
-        <%= f.text_field :puesto,:style=>"position:absolute;top:1374px;left:810px;width:300px;height:18px;","ng-model":"credito.puesto","ng-disabled":"block", "ng-hide":"true" %>
+        <%= f.text_field :puesto,:style=>"position:absolute;top:1374px;left:810px;width:300px;height:18px;","ng-model":"credito.puesto","ng-disabled":"block" %>
       </div>
     </div>
     
     <div class="row">
       <div class="input-field col s12 m4 l4">
-        <%= f.text_field :telefono_empresa,:style=>"position:absolute;top:1083px;left:70px;width:370px;height:18px;" ,"ng-model":"credito.telefono_empresa","ng-disabled":"block", "ng-hide":"true"%>
+        <%= f.text_field :telefono_empresa,:style=>"position:absolute;top:1083px;left:70px;width:370px;height:18px;" ,"ng-model":"credito.telefono_empresa","ng-disabled":"block"%>
       </div>
       
       <div class="input-field col s12 m4 l4">
-        <%= f.select :antiguedad_laboral_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:1083px;left:470px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_anos","ng-disabled":"block", "ng-hide":"true"%>
-        <%= f.select :antiguedad_laboral_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:1083px;left:620px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_meses","ng-disabled":"block", "ng-hide":"true"  %>
+        <%= f.select :antiguedad_laboral_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:1083px;left:470px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_anos","ng-disabled":"block"  %>
+        <%= f.select :antiguedad_laboral_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:1083px;left:620px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_meses","ng-disabled":"block"  %>
       </div>
       
       <div class="input-field col s12 m4 l4">
-        <%= f.text_field :sueldo_mensual_neto,:style=>"position:absolute;top:1083px;left:810px;width:300px;height:18px;","ng-model":"credito.sueldo_mensual_neto","ng-disabled":"block", "ng-hide":"true" %>
+        <%= f.text_field :sueldo_mensual_neto,:style=>"position:absolute;top:1083px;left:810px;width:300px;height:18px;","ng-model":"credito.sueldo_mensual_neto","ng-disabled":"block" %>
       </div>
     </div>
     
      <div class="row">
       <div class="input-field col s12 m4 l4">
-        <%= f.text_field :dirreccion_empresa,:style=>"position:absolute;top:1133px;left:70px;width:370px;height:18px;","ng-model":"credito.dirreccion_empresa","ng-disabled":"block", "ng-hide":"true" %>
+        <%= f.text_field :dirreccion_empresa,:style=>"position:absolute;top:1133px;left:70px;width:370px;height:18px;","ng-model":"credito.dirreccion_empresa","ng-disabled":"block" %>
       </div>
       
       <div class="input-field col s12 m4 l4">
-        <%= f.text_field :colonia_empresa,:style=>"position:absolute;top:1133px;left:470px;width:300px;height:18px;","ng-model":"credito.colonia_empresa","ng-disabled":"block", "ng-hide":"true" %>
+        <%= f.text_field :colonia_empresa,:style=>"position:absolute;top:1133px;left:470px;width:300px;height:18px;","ng-model":"credito.colonia_empresa","ng-disabled":"block" %>
       </div>
       
       <div class="input-field col s12 m4 l4">
-        <%= f.text_field :municipio_empresa,:style=>"position:absolute;top:1133px;left:810px;width:300px;height:18px;","ng-model":"credito.municipio_empresa","ng-disabled":"block", "ng-hide":"true" %>
+        <%= f.text_field :municipio_empresa,:style=>"position:absolute;top:1133px;left:810px;width:300px;height:18px;","ng-model":"credito.municipio_empresa","ng-disabled":"block" %>
       </div>
     </div>
       
     
     <div class="row">
         <div class="input-field col s12 m3 l3">
-          <%= f.text_field :monto_solicitud,:style=>"position:absolute;top:420px;left:15px;width:150px;height:25px;","ng-model":"credito.monto_solicitud","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.text_field :monto_solicitud,:style=>"position:absolute;top:420px;left:15px;width:150px;height:25px;","ng-model":"credito.monto_solicitud","ng-disabled":"block"%>
         </div>
         
         <div class="col s12 m3 l3">
