@@ -481,19 +481,19 @@
         
         <div class="col s12 m3 l3">
           <p>
-            <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,0,:style=>"position:absolute;top:1610px;left:280px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
-            <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,1,:style=>"position:absolute;top:1610px;left:380px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
-            <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,2,:style=>"position:absolute;top:1610px;left:459px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago"%>
+            <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,0,:style=>"position:absolute;top:1610px;left:280px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago", "ng-hide":"true"%>
+            <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,1,:style=>"position:absolute;top:1610px;left:380px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago", "ng-hide":"true"%>
+            <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,2,:style=>"position:absolute;top:1610px;left:459px;","ng-model":"credito.cada_cuanto_se_realizara_el_pago", "ng-hide":"true"%>
           </p>
         </div>
       
       <div class="col s12 m6 l6">
         <p>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,0,:style=>"position:absolute;top:1610px;left:562px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,1,:style=>"position:absolute;top:1610px;left:645px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,2,:style=>"position:absolute;top:1610px;left:730px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,3,:style=>"position:absolute;top:1610px;left:880px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
-          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,4,:style=>"position:absolute;top:1610px;left:996px;","ng-model":"credito.lugar_donde_se_realizara_el_pago"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,0,:style=>"position:absolute;top:1610px;left:562px;","ng-model":"credito.lugar_donde_se_realizara_el_pago", "ng-hide":"true"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,1,:style=>"position:absolute;top:1610px;left:645px;","ng-model":"credito.lugar_donde_se_realizara_el_pago", "ng-hide":"true"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,2,:style=>"position:absolute;top:1610px;left:730px;","ng-model":"credito.lugar_donde_se_realizara_el_pago", "ng-hide":"true"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,3,:style=>"position:absolute;top:1610px;left:880px;","ng-model":"credito.lugar_donde_se_realizara_el_pago", "ng-hide":"true"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,4,:style=>"position:absolute;top:1610px;left:996px;","ng-model":"credito.lugar_donde_se_realizara_el_pago", "ng-hide":"true"%>
         </p>
       </div>
     </div>
@@ -501,21 +501,21 @@
      <div class="row">
       <div class="row col s12 m8 l8">
         <div>
-          <%= f.text_field :nombre_referencia_1,:style=>"position:absolute;top:1658px;left:150px;width:600px;height:25px;","ng-model":"credito.nombre_referencia_1" ,"ng-disabled":"block"%>
+          <%= f.text_field :nombre_referencia_1,:style=>"position:absolute;top:1658px;left:150px;width:600px;height:25px;","ng-model":"credito.nombre_referencia_1" ,"ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div>
-          <%= f.text_field :domicilio_referencia_1,:style=>"position:absolute;top:1690px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_1","ng-disabled":"block"%>
+          <%= f.text_field :domicilio_referencia_1,:style=>"position:absolute;top:1690px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_1","ng-disabled":"block", "ng-hide":"true"%>
         </div>
       </div>
       
       <div class="row col s12 m4 l4">
         <div>
-          <%= f.text_field :telefono_fijo_referencia_1,:style=>"position:absolute;top:1690px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_1","ng-disabled":"block"%>
+          <%= f.text_field :telefono_fijo_referencia_1,:style=>"position:absolute;top:1690px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_1","ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div>
-          <%= f.text_field :telefono_celular_referencia_1,:style=>"position:absolute;top:1690px;left:987px;width:110px;height:22px;" ,"ng-model":"credito.telefono_celular_referencia_1","ng-disabled":"block"%>
+          <%= f.text_field :telefono_celular_referencia_1,:style=>"position:absolute;top:1690px;left:987px;width:110px;height:22px;" ,"ng-model":"credito.telefono_celular_referencia_1","ng-disabled":"block", "ng-hide":"true"%>
         </div>
       </div>
     </div>
@@ -523,21 +523,21 @@
     <div class="row">
       <div class="row col s12 m8 l8">
         <div class="input-field col s12">
-          <%= f.text_field :nombre_referencia_2,:style=>"position:absolute;top:1728px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.nombre_referencia_2","ng-disabled":"block"%>
+          <%= f.text_field :nombre_referencia_2,:style=>"position:absolute;top:1728px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.nombre_referencia_2","ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div class="input-field col s12">
-          <%= f.text_field :domicilio_referencia_2,:style=>"position:absolute;top:1763px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_2","ng-disabled":"block"%>
+          <%= f.text_field :domicilio_referencia_2,:style=>"position:absolute;top:1763px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_2","ng-disabled":"block", "ng-hide":"true"%>
         </div>
       </div>
       
       <div class="row col s12 m4 l4">
         <div class="input-field col s12">
-          <%= f.text_field :telefono_fijo_referencia_2,:style=>"position:absolute;top:1763px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_2","ng-disabled":"block"%>
+          <%= f.text_field :telefono_fijo_referencia_2,:style=>"position:absolute;top:1763px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_2","ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div class="input-field col s12">
-          <%= f.text_field :telefono_celular_referencia_2,:style=>"position:absolute;top:1763px;left:987px;width:110px;height:22px;" ,"ng-model":"credito.telefono_celular_referencia_2","ng-disabled":"block"%>
+          <%= f.text_field :telefono_celular_referencia_2,:style=>"position:absolute;top:1763px;left:987px;width:110px;height:22px;" ,"ng-model":"credito.telefono_celular_referencia_2","ng-disabled":"block", "ng-hide":"true"%>
         </div>
       </div>
     </div>
@@ -545,27 +545,27 @@
       <div class="row">
       <div class="row col s12 m8 l8">
         <div class="input-field col s12">
-          <%= f.text_field :nombre_referencia_familiar,:style=>"position:absolute;top:1820px;left:150px;width:600px;height:25px;","ng-model":"credito.nombre_referencia_familiar" ,"ng-disabled":"block"%>
+          <%= f.text_field :nombre_referencia_familiar,:style=>"position:absolute;top:1820px;left:150px;width:600px;height:25px;","ng-model":"credito.nombre_referencia_familiar" ,"ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div class="input-field col s12">
-          <%= f.text_field :domicilio_referencia_familiar,:style=>"position:absolute;top:1854px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_familiar","ng-disabled":"block"%>
+          <%= f.text_field :domicilio_referencia_familiar,:style=>"position:absolute;top:1854px;left:150px;width:600px;height:25px;" ,"ng-model":"credito.domicilio_referencia_familiar","ng-disabled":"block", "ng-hide":"true"%>
         </div>
         </div>
     
       <div class="row">
         <div class="row col s12 m4 l4">
           <div class="input-field col s12">
-          <%= f.text_field :telefono_fijo_referencia_familiar,:style=>"position:absolute;top:1854px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_familiar","ng-disabled":"block"%>
+          <%= f.text_field :telefono_fijo_referencia_familiar,:style=>"position:absolute;top:1854px;left:835px;width:110px;height:22px;" ,"ng-model":"credito.telefono_fijo_referencia_familiar","ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div class="input-field col s12">
-          <%= f.text_field :telefono_celular_referencia_familiar,:style=>"position:absolute;top:1854px;left:987px;width:110px;height:22px;","ng-model":"credito.telefono_celular_referencia_familiar","ng-disabled":"block"%>
+          <%= f.text_field :telefono_celular_referencia_familiar,:style=>"position:absolute;top:1854px;left:987px;width:110px;height:22px;","ng-model":"credito.telefono_celular_referencia_familiar","ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div class="input-field col s12">
           <%= f.label :casa_color ,:style=>"position:absolute;top:1900px;left:90px;width:110px;height:22px;"%>
-          <%= f.text_field :casa_color,:style=>"position:absolute;top:1920px;left:60px;width:110px;height:22px;","ng-model":"credito.casa_color","ng-disabled":"block"%>
+          <%= f.text_field :casa_color,:style=>"position:absolute;top:1920px;left:60px;width:110px;height:22px;","ng-model":"credito.casa_color","ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div class="input-field col s12">
