@@ -124,22 +124,22 @@
         <%= f.text_field :CURP,:style=>"position:absolute;top:510px;left:700px;width:300px;height:18px;","ng-model":"credito.CURP","ng-change":"buscarCliente()","ng-disabled":"block"%>
       </div>
       <div>
-        <%= f.text_field :seguro,:style=>"position:absolute;top:650px;left:400px;width:220px;height:18px;","ng-model":"credito.seguro","ng-disabled":"block"%>
+        <%= f.text_field :seguro,:style=>"position:absolute;top:650px;left:400px;width:220px;height:18px;","ng-model":"credito.seguro","ng-disabled":"block", "ng-hide":"true"%>
       </div>
       <div>
-        <%= f.text_field :INE,:style=>"position:absolute;top:650px;left:650px;width:180px;height:18px;","ng-model":"credito.INE" ,"ng-disabled":"block"%>
+        <%= f.text_field :INE,:style=>"position:absolute;top:650px;left:650px;width:180px;height:18px;","ng-model":"credito.INE" ,"ng-disabled":"block", "ng-hide":"true"%>
       </div>
       
       <div style="position:absolute;top:650px;left:950px;">
           <!--%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:0px;left:0px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%-->
           <!--%= f.radio_button  :fiel,0,:style=>"position:absolute;top:0px;left:80px;","ng-model":"credito.fiel","ng-disabled":"block"%-->
-          <%= f.radio_button  :fiel,1,checked:true,"value":true%> 
-          <%= f.radio_button  :fiel,0,checked:true,"value":true%> 
+          <%= f.radio_button  :fiel,1,checked:true,"value":true, "ng-hide":"true"%> 
+          <%= f.radio_button  :fiel,0,checked:true,"value":true, "ng-hide":"true"%> 
       </div>
       
       <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
-          <%= f.radio_button  :vale,1,checked:true,"value":true%> 
-          <%= f.label "#{:vale}_true", "Vale"%>
+          <%= f.radio_button  :vale,1,checked:true,"value":true, "ng-hide":"true"%> 
+          <%= f.label "#{:vale}_true", "Vale", "ng-hide":"true"%>
       </div>
 
       <div>
@@ -149,7 +149,7 @@
     
     <div class="row">
       <div>
-        <%= f.text_field :fecha_de_nacimiento, class:"datepicker",type:"date", autocomplete: "off",:style=>"position:absolute;top:700px;left:70px;width:150px;height:22px;","ng-model":"credito.fecha_de_nacimiento" ,"ng-disabled":"block"%>
+        <%= f.text_field :fecha_de_nacimiento, class:"datepicker",type:"date", autocomplete: "off",:style=>"position:absolute;top:700px;left:70px;width:150px;height:22px;","ng-model":"credito.fecha_de_nacimiento" ,"ng-disabled":"block", "ng-hide":"true"%>
       </div>
       
       <div>
