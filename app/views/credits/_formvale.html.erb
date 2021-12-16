@@ -155,7 +155,7 @@
       <div>
         <label style="position:absolute;top:682px;left:250px;width:200px;height:22px;background-color: white;font-weight: bold;font-family:'Calibri';">PAIS DE NACIMIENTO<span style="color:red;">*</span></label>
         <div>
-          <select  class="browser-default" ng-model="paices.selected" ng-change="getEstados()" style="position:absolute;top:700px;left:250px;width:200px;height:22px;",ng-disabled="block">
+          <select  class="browser-default" ng-model="paices.selected" ng-change="getEstados()" style="position:absolute;top:700px;left:250px;width:200px;height:22px;",ng-disabled="block", ng-hide="true">
             <option value="" disabled selected>Pais</option>
             <option ng-repeat="option in paices" value="{{option}}">{{option.nombre}}</option>
         </select>
