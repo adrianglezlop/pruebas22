@@ -235,7 +235,7 @@
       
     <div class="row">
       <div class="field">
-        <%=f.collection_select(:economical_activity_id,EconomicalActivity.all.order(:descripcion),:id,:descripcion,{:prompt => 'Actividad economica:'},{"ng-model":"credito.economical_activity_id","ng-disabled":"block",:style=>"position:absolute;top:818px;left:250px;width:800px;height:22px;"}), "ng-hide":"true"%>
+        <%=f.collection_select(:economical_activity_id,EconomicalActivity.all.order(:descripcion),:id,:descripcion,{:prompt => 'Actividad economica:'},{"ng-model":"credito.economical_activity_id","ng-disabled":"block",:style=>"position:absolute;top:818px;left:250px;width:800px;height:22px;"})%>
       </div>
     </div>
     
@@ -450,7 +450,7 @@
       </div>
       
       <div class="input-field col s12 m4 l4">
-        <%= f.select :antiguedad_laboral_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:1083px;left:470px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_anos","ng-disabled":"block", "ng-hide":"true"  %>
+        <%= f.select :antiguedad_laboral_anos, ((0..80).map {|i| ["#{i} años",i] }),{prompt:"años"},:style=>"position:absolute;top:1083px;left:470px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_anos","ng-disabled":"block", "ng-hide":"true"%>
         <%= f.select :antiguedad_laboral_meses, ((0..11).map {|i| ["#{i} meses",i] }),{prompt:"meses"},:style=>"position:absolute;top:1083px;left:620px;width:150px;height:18px;","ng-model":"credito.antiguedad_laboral_meses","ng-disabled":"block", "ng-hide":"true"  %>
       </div>
       
