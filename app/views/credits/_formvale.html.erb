@@ -395,7 +395,7 @@
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:720px;width:250px;height:18px;",ng-disabled="block", ng-hide="true">
+        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:720px;width:250px;height:18px;",ng-disabled="block">
             <option value="" disabled selected>Localidad</option>
              <option ng-repeat="option in data.zip_codes" value="{{option.d_mnpio}}">{{option.d_mnpio}}</option>
         </select>
@@ -476,7 +476,7 @@
     
     <div class="row">
         <div class="input-field col s12 m3 l3">
-          <%= f.text_field :monto_solicitud,:style=>"position:absolute;top:420px;left:15px;width:150px;height:25px;","ng-model":"credito.monto_solicitud","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.text_field :monto_solicitud,:style=>"position:absolute;top:420px;left:15px;width:150px;height:25px;","ng-model":"credito.monto_solicitud","ng-disabled":"block"%>
         </div>
         
         <div class="col s12 m3 l3">
