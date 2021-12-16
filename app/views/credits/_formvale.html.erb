@@ -143,7 +143,8 @@
       </div>
 
       <div>
-          <%= f.text_field :nacionalidad,:style=>"position:absolute;top:650px;left:70px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block","ng.hide":"true"%>
+          <input type="button" value="Cerrar" ng-click="ocultar()">
+          <%= f.text_field :nacionalidad,:style=>"position:absolute;top:650px;left:70px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
       </div>
     </div>
     
