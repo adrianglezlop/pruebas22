@@ -225,7 +225,7 @@
     
     <div class="row">
         <div class="field">
-          <%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block", "ng-hide":"true",:style=>"position:absolute;top:835px;left:250px;width:400px;height:22px;"})%>
+          <%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block", "ng-hide":"true",:style=>"position:absolute;top:835px;left:250px;width:400px;height:22px;"}), "ng-hide":"true"%>
         </div>
       </div>
       
@@ -564,7 +564,7 @@
         </div>
         
         <div class="input-field col s12">
-          <%= f.label :casa_color ,:style=>"position:absolute;top:1900px;left:90px;width:110px;height:22px;"%>
+          <!--%= f.label :casa_color ,:style=>"position:absolute;top:1900px;left:90px;width:110px;height:22px;"%-->
           <%= f.text_field :casa_color,:style=>"position:absolute;top:1920px;left:60px;width:110px;height:22px;","ng-model":"credito.casa_color","ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
