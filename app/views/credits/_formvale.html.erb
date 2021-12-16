@@ -184,27 +184,27 @@
       </div>
       
       <div style="position:absolute;top:650px;left:1100px;">
-          <%= f.radio_button  :sexo,0,checked:true,"ng-model":"credito.sexo" ,"ng-disabled":"block"%>
-          <%= f.radio_button  :sexo,1,"ng-model":"credito.sexo","ng-disabled":"block"%>
+          <%= f.radio_button  :sexo,0,checked:true,"ng-model":"credito.sexo" ,"ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :sexo,1,"ng-model":"credito.sexo","ng-disabled":"block", "ng-hide":"true"%>
       </div>
     </div>
     
     <div class="row">
       <div class="input-field col s12 m2 l2">
-        <%= f.text_field :telefono_de_casa,:style=>"position:absolute;top:780px;left:70px;width:150px;height:18px;","ng-model":"credito.telefono_de_casa" ,"ng-disabled":"block"%>
+        <%= f.text_field :telefono_de_casa,:style=>"position:absolute;top:780px;left:70px;width:150px;height:18px;","ng-model":"credito.telefono_de_casa" ,"ng-disabled":"block", "ng-hide":"true"%>
       </div>
       
       <div class="input-field col s12 m2 l2">
-        <%= f.text_field :telefono_celular, :style=>"position:absolute;top:780px;left:245px;width:200px;height:18px;","ng-model":"credito.telefono_celular","ng-disabled":"block"%>
+        <%= f.text_field :telefono_celular, :style=>"position:absolute;top:780px;left:245px;width:200px;height:18px;","ng-model":"credito.telefono_celular","ng-disabled":"block", "ng-hide":"true"%>
       </div>
       
       <div class="row col s12 m8 l8">
         <div class="input-field col s12">
-          <%= f.text_field :email_1,:style=>"position:absolute;top:753px;left:500px;width:600px;height:18px;","ng-model":"credito.email_1" ,"ng-disabled":"block"%>
+          <%= f.text_field :email_1,:style=>"position:absolute;top:753px;left:500px;width:600px;height:18px;","ng-model":"credito.email_1" ,"ng-disabled":"block", "ng-hide":"true"%>
         </div>
         
         <div class="input-field col s12">
-          <%= f.text_field :email_2,:style=>"position:absolute;top:780px;left:500px;width:600px;height:18px;","ng-model":"credito.email_2" ,"ng-disabled":"block"%>
+          <%= f.text_field :email_2,:style=>"position:absolute;top:780px;left:500px;width:600px;height:18px;","ng-model":"credito.email_2" ,"ng-disabled":"block", "ng-hide":"true"%>
         </div>
       </div>
     </div>
@@ -212,24 +212,24 @@
     <div class="row">
       <div class="col s12">
         <p>
-          <%= f.radio_button  :escolaridad,0,:style=>"position:absolute;top:806px;left:218px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,1,:style=>"position:absolute;top:806px;left:344px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,2,:style=>"position:absolute;top:806px;left:463px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,3,:style=>"position:absolute;top:806px;left:595px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,4,:style=>"position:absolute;top:806px;left:731px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,5,:style=>"position:absolute;top:806px;left:866px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
-          <%= f.radio_button  :escolaridad,6,:style=>"position:absolute;top:806px;left:990px;","ng-model":"credito.escolaridad","ng-disabled":"block"%>
+          <%= f.radio_button  :escolaridad,0,:style=>"position:absolute;top:806px;left:218px;","ng-model":"credito.escolaridad","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :escolaridad,1,:style=>"position:absolute;top:806px;left:344px;","ng-model":"credito.escolaridad","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :escolaridad,2,:style=>"position:absolute;top:806px;left:463px;","ng-model":"credito.escolaridad","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :escolaridad,3,:style=>"position:absolute;top:806px;left:595px;","ng-model":"credito.escolaridad","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :escolaridad,4,:style=>"position:absolute;top:806px;left:731px;","ng-model":"credito.escolaridad","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :escolaridad,5,:style=>"position:absolute;top:806px;left:866px;","ng-model":"credito.escolaridad","ng-disabled":"block", "ng-hide":"true"%>
+          <%= f.radio_button  :escolaridad,6,:style=>"position:absolute;top:806px;left:990px;","ng-model":"credito.escolaridad","ng-disabled":"block", "ng-hide":"true"%>
         </p>
       </div>
     </div>
     
     <div class="row">
         <div class="field">
-          <%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block",:style=>"position:absolute;top:835px;left:250px;width:400px;height:22px;"})%>
+          <%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block", "ng-hide":"true",:style=>"position:absolute;top:835px;left:250px;width:400px;height:22px;"})%>
         </div>
       </div>
       
-      <input type="text" style ="position:absolute;top:835px;left:720px;width:250;height:22px;" placeholder="Escribe tu profecion">
+      <input type="text" style ="position:absolute;top:835px;left:720px;width:250;height:22px;", "ng-hide":"true" placeholder="Escribe tu profecion">
     
       </input>
       
