@@ -361,15 +361,15 @@
 
   <div class="row">
       <div>
-        <%= f.text_field :calle, :style=>"position:absolute;top:292px;left:60px;width:700px;height:18px;","ng-model":"credito.calle","ng-disabled":"block", "ng-hide":"true" %>
+        <%= f.text_field :calle, :style=>"position:absolute;top:292px;left:60px;width:700px;height:18px;","ng-model":"credito.calle","ng-disabled":"block"%>
       </div>
      
       <div>
-        <%= f.number_field :numero_exterior, :style=>"position:absolute;top:292px;left:990px;width:100px;height:18px;","ng-model":"credito.numero_exterior","ng-disabled":"block", "ng-hide":"true" %>
+        <%= f.number_field :numero_exterior, :style=>"position:absolute;top:292px;left:990px;width:100px;height:18px;","ng-model":"credito.numero_exterior","ng-disabled":"block"%>
       </div>
       
       <div>
-        <%= f.text_field :numero_interior, :style=>"position:absolute;top:292px;left:1120px;width:100px;height:18px;" ,"ng-model":"credito.numero_interior","ng-disabled":"block", "ng-hide":"true"%>
+        <%= f.text_field :numero_interior, :style=>"position:absolute;top:292px;left:1120px;width:100px;height:18px;" ,"ng-model":"credito.numero_interior","ng-disabled":"block"%>
       </div>
   </div>
 
@@ -384,18 +384,18 @@
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <%= f.text_field :codigo_postal, :style=>"position:absolute;top:340px;left:35px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block", "ng-hide":"true"%>
+        <%= f.text_field :codigo_postal, :style=>"position:absolute;top:340px;left:35px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block"%>
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:345px;left:280px;width:340px;height:18px;",ng-disabled="block", ng-hide="true">
+        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="credito.colonia" style="position:absolute;top:345px;left:280px;width:340px;height:18px;",ng-disabled="block">
              <option value="" disabled selected>Colonia</option>
             <option ng-repeat="option in data.zip_codes" value="{{option.d_asenta}}">{{option.d_asenta}}</option>
         </select>
       </div>
       
       <div class="input-field col s12 m3 l3">
-        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:720px;width:250px;height:18px;",ng-disabled="block">
+        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="credito.localidad" style="position:absolute;top:345px;left:720px;width:250px;height:18px;",ng-disabled="block", ng-hide="true">
             <option value="" disabled selected>Localidad</option>
              <option ng-repeat="option in data.zip_codes" value="{{option.d_mnpio}}">{{option.d_mnpio}}</option>
         </select>
@@ -408,7 +408,7 @@
       </div>
       
       <div class="input-field col s12 m3 l3">
-         <%=f.text_field :estado_actual, :style=>"position:absolute;top:340px;left:1000px;width:200px;height:18px;","ng-model":"data.zip_codes[0].d_estado","ng-disabled":"block", "ng-hide":"true"%>
+         <%=f.text_field :estado_actual, :style=>"position:absolute;top:340px;left:1000px;width:200px;height:18px;","ng-model":"data.zip_codes[0].d_estado","ng-disabled":"block"%>
       </div>
       
       <div class="input-field col s12 m3 l3">
@@ -469,7 +469,7 @@
       </div>
       
       <div class="input-field col s12 m4 l4">
-        <%= f.text_field :municipio_empresa,:style=>"position:absolute;top:1133px;left:810px;width:300px;height:18px;","ng-model":"credito.municipio_empresa","ng-disabled":"block" %>
+        <%= f.text_field :municipio_empresa,:style=>"position:absolute;top:1133px;left:810px;width:300px;height:18px;","ng-model":"credito.municipio_empresa","ng-disabled":"block", "ng-hide":"true"  %>
       </div>
     </div>
       
