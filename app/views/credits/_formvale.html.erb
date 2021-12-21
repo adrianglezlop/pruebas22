@@ -620,57 +620,55 @@
     <div class="actions" id="solo_en_new">
       <div class="input-field col s12">
          <div class="field">
-            <!--%= f.label :pdf64,"Cargar PDF", :style=>"position:absolute;top:460px;left:350px;width:200px;height:30px"%><br>
+            <%= f.label :pdf64,"Cargar PDF", :style=>"position:absolute;top:460px;left:350px;width:200px;height:30px"%><br>
             <input type="file" id="filePicker" onchange="previewFile()" accept=".pdf" max-size="2024" style="position:absolute;top:480px;left:350px;width:400px;height:30px">
-            <input id="base64textarea" type='hidden' name="credit[pdf64]" cols="50" rows="15" style="position:absolute;top:480px;left:350px;width:200px;height:30px"-->
-            <%= f.label :pdf64,"cargar PDF" %><br>
+            <input id="base64textarea" type='hidden' name="credit[pdf64]" cols="50" rows="15" style="position:absolute;top:480px;left:350px;width:200px;height:30px">
+            <!--%= f.label :pdf64,"cargar PDF" %><br>
             <input type="file" id="filePicker" onchange="previewFile()" accept=".pdf" max-size="2024">
-            <input id="base64textarea" type='hidden' name="credit[pdf64]" cols="50" rows="15">
-          </div>
+            <input id="base64textarea" type='hidden' name="credit[pdf64]" cols="50" rows="15"-->
+         </div>
           
-          <script>
-          
-          var uploadField = document.getElementById("filePicker");
-
-          uploadField.onchange = function() {
-              if(this.files[0].size > 3000000){
-                 alert("El pdf es muy grande favor de reducir la resolucion del escaner");
-                 this.value = "";
-                 preview.src = "";
-              }else{
-                previewFile();
-              }
-              console.log(this.value);
+        <script>
+            var uploadField = document.getElementById("filePicker");
+  
+            uploadField.onchange = function() {
+                if(this.files[0].size > 3000000){
+                   alert("El pdf es muy grande favor de reducir la resolucion del escaner");
+                   this.value = "";
+                   preview.src = "";
+                }else{
+                  previewFile();
+                }
+                console.log(this.value);
+                
+            };
+              var cacas = "";
+               function previewFile() {
+               $("#submitid").prop('disabled', false);
+              var preview = $('#base64textarea');
+              var file    = document.querySelector('input[type=file]').files[0];
+              var reader  = new FileReader();
               
-          };
-            var cacas = "";
-             function previewFile() {
-             $("#submitid").prop('disabled', false);
-            var preview = $('#base64textarea');
-            var file    = document.querySelector('input[type=file]').files[0];
-            var reader  = new FileReader();
+              reader.onloadend = function () {
+                $("#submitid").prop('disabled', false);
+                preview.val(reader.result);
+                $("#submitid").prop('disabled', false);
+              }
             
-            reader.onloadend = function () {
-              $("#submitid").prop('disabled', false);
-              preview.val(reader.result);
-              $("#submitid").prop('disabled', false);
+              if (file) {
+                reader.readAsDataURL(file);
+                alert("El archivo pdf se ha procesado correctamente");
+              } else {
+                preview.src = "";
+                uploadField = "";
+                alert("Error al procesar pdf, intente cargarlo nuevamente");
+              }
             }
-          
-            if (file) {
-              reader.readAsDataURL(file);
-              alert("El archivo pdf se ha procesado correctamente");
-            } else {
-              preview.src = "";
-              uploadField = "";
-              alert("Error al procesar pdf, intente cargarlo nuevamente");
-            }
-          }
         </script>
       </div>
       <%= f.submit "Guardar",id:"submitid",:style=>"position:absolute;top:510px;left:350px;width:60px;height:30px"%>
     </div>
-    
-    <% end %>
+  <% end %>
     <div id="autorelleno" style="background-color:#f0f0ff;width:700px;position:fixed;top:100px;left:100px;border-size:2px;border-style:solid">
         <div>
           Ingrese curp: <input type="text" ng-model="credit.CURP" ng-change="buscarCliente(false)" id="curp_buscador">
