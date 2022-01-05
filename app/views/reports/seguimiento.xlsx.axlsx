@@ -22,7 +22,8 @@ wb = xlsx_package.workbook
         fila["adelantado"],
         fila["empresa"],
         fila["numero_de_pago"],
-        fila["numero_de_creditos"]]
+        fila["numero_de_creditos"],
+        fila["product_id"]]
       end
       sheet.add_row ['']
       sheet.add_row ['','Total',
