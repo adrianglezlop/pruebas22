@@ -5,7 +5,7 @@ wb = xlsx_package.workbook
     highlight_cell = style.add_style(bg_color: "FFFF00")
     wb.add_worksheet(name: "Seguimiento") do |sheet|
    
-      xprod= Product.find(@producto).select(:nombre_del_producto)
+      @xprod= Product.find(@producto).select("nombre_del_producto")
       sheet.add_row [@resp["nombre_empresa"], "PRODUCTO: #@producto"]
       sheet.add_row ["ABONO A PRESTAMO",@fecha_encabezado]
       sheet.add_row [""]
