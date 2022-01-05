@@ -18,6 +18,7 @@ json.array!(@resp["datos"]) do |fila|
     json.empresa fila["empresa"]
     json.numero_de_pago fila["numero_de_pago"]
     json.numero_de_creditos fila["numero_de_creditos"]
+    json.product_id fila["product_id"]
     json.tipo fila["tipo"]
     
 end
