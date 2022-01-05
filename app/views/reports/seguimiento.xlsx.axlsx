@@ -1,7 +1,7 @@
 wb = xlsx_package.workbook
- @xprod =""
+ @xprod = 0
       if @producto == 10
-        @xprod="MARJOV"
+        @xprod =="MARJOV"
       end
   wb.styles do |style|
     highlight_cell = style.add_style(bg_color: "FFFF00")
