@@ -2,7 +2,7 @@ wb = xlsx_package.workbook
   wb.styles do |style|
     highlight_cell = style.add_style(bg_color: "FFFF00")
     wb.add_worksheet(name: "Seguimiento") do |sheet|
-      sheet.add_row [@resp["nombre_empresa"], resp["nombre_del_producto"]]
+      sheet.add_row [@resp["nombre_empresa"], @resp["nombre_del_producto"]]
       sheet.add_row ["ABONO A PRESTAMO",@fecha_encabezado]
       sheet.add_row [""]
       sheet.add_row ["Nombre","Fecha prestamo","Capital","Monto a cobrar","Adeudo","A pagar #{@fecha_encabezado}" ,"Atrasado" ,"Interes moratorio","Total a cobrar","Cobrado","Diferencia","Adelantado","Empresa","No. pago","No. creditos"],style: [ highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell]
