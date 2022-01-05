@@ -52,9 +52,7 @@
         
                 <tbody>
                   <tr ng-repeat = "ele in creditos">
-                    <% if product_id == 10 %>
-                      <td></td>
-                    <% end %>
+                    <td>{{ele.product_id}}</td>
                     <td>{{ele.sucursal}}</td>
                     <td>{{ele.nombre_agente}}</td>
                     <td>{{ele.nombre_completo_deudor}}</td>
