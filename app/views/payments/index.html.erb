@@ -53,29 +53,7 @@
                 <tbody>
                   <tr ng-repeat = "ele in creditos">
 
-                    <% case {{ele.product_id}} %>
-                        <% when 1 %>
-                            <td>"MIPYMARJOQ"</td>
-                        <% when 2 %>
-                            <td>"MARJO26"</td>
-                        <% when 3 %>
-                            <td>"MARJO26"</td>
-                        <% when 4 %>
-                            <td>"MARJO5"</td>
-                        <% when 5 %>
-                            <td>"MIPYMARJOS"</td>
-                        <% when 6 %> 
-                            <td>"ANGMPO"</td>
-                        <% when 7 %>
-                            <td>"CDMXQ"</td>
-                        <% when 8 %>
-                            <td>"CDMXS"</td>
-                        <% when 9 %>
-                            <td>"MPO12"</td>
-                        <% when 10 %>
-                            <td>"MARJOV"</td>
-                    <% end %>
-                    
+                    <td>{{ele.product_id}}</td>
                     <td>{{ele.sucursal}}</td>
                     <td>{{ele.nombre_agente}}</td>
                     <td>{{ele.nombre_completo_deudor}}</td>
