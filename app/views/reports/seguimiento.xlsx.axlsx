@@ -3,7 +3,7 @@ wb = xlsx_package.workbook
     highlight_cell = style.add_style(bg_color: "FFFF00")
     wb.add_worksheet(name: "Seguimiento") do |sheet|
     @xprod =""
-      if @producto=10
+      if @producto == 10
         @xprod="MARJOV"
       end
       sheet.add_row [@resp["nombre_empresa"], xprod]
