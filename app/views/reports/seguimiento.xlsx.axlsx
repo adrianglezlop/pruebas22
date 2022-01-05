@@ -10,7 +10,7 @@ wb = xlsx_package.workbook
       sheet.add_row [""]
       sheet.add_row ["Nombre","Fecha prestamo","Capital","Monto a cobrar","Adeudo","A pagar #{@fecha_encabezado}" ,"Atrasado" ,"Interes moratorio","Total a cobrar","Cobrado","Diferencia","Adelantado","Empresa","No. pago","No. creditos"],style: [ highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell]
       @resp["datos"].each do |fila|
-        sheet.add_row [s
+        sheet.add_row [
         fila["nombre_completo"],
         fila["fecha"],
         fila["monto_solicitud"],
