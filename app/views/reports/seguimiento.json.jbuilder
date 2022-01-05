@@ -1,5 +1,6 @@
 json.nombre_empresa  @resp["nombre_empresa"]
 json.fecha  @resp["fecha"]
+json.product_id @resp["product_id"]
 json.array!(@resp["datos"]) do |fila|
     json.nombre_completo fila["nombre_completo"]
     json.fecha fila["fecha"]
