@@ -41,7 +41,7 @@
 
 .brand-logo{
   position: absolute;
-  color: #0515FF;
+  color: #fff;
   display: inline-block;
   font-size: 2.1rem;
   font-style: normal;
@@ -112,7 +112,7 @@ xtype
   animation: cd-pulse 1s infinite;
 }
 .cd-headline.type .cd-words-wrapper.selected {
-  background-color: #FFF;
+  background-color: #0515FF;
 }
 .cd-headline.type .cd-words-wrapper.selected::after {
   visibility: hidden;
