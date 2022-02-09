@@ -56,6 +56,6 @@ class Agent < ActiveRecord::Base
   end
 
   def limite_cred
-    limcred = Credit.where("credits.referencia_agente_empresa = ? and credits.status = ? and credits.vale = ?", self.id, 1 ,1).sum("Credit.monto_solicitud").to_f
+    limcred = Credit.where("credits.referencia_agente_empresa = ? and credits.status = ? and credits.vale = ?", self.id, 1 ,1).sum("credits.monto_solicitud").to_f
   end
 end
