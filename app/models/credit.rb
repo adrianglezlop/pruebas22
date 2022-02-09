@@ -402,7 +402,7 @@ class Credit < ActiveRecord::Base
     
     def limite_cred
         a=self.referencia_agente_empresa
-        limcred = a.credits.where("self.status = ? and self.vale = ?", 1 ,1).sum("self.monto_solicitud").to_f
+        limcred = Credit.where("referencia_agente_empresa = ? and status = ? and vale = ?", a.id,1 ,1).sum("monto_solicitud").to_f
     end
 end
 
