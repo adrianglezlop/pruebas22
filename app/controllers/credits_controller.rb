@@ -56,7 +56,9 @@ class CreditsController < ApplicationController
   end
   
   def nuevo
-    @credit = Credit.new
+    if @credit.agent.limite_cred < 50000
+      @credit = Credit.new
+    end
   end
 
   # GET /credits/1/edit

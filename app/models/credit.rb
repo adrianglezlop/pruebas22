@@ -105,6 +105,9 @@ class Credit < ActiveRecord::Base
     :presence => { :if => 'vale.nil?' }
     
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
+     
+     validates :referencia_agente_empresa, numericality: { other_than: 0 }
+     
      validates :monto_solicitud, numericality: { less_than: 3001 }, :if => 'product_id == 10' 
      validates :agente_empresa,
     :inclusion => { :in => [nil,1, 0] }
@@ -395,6 +398,11 @@ class Credit < ActiveRecord::Base
         end
         self.customer_id=customer.id
         self.save()
+    end
+    
+    def limite_cred
+        a=@credit.referencia_agente_empresa
+        limcred = a.credits.where("self.status = ? and self.vale = ?", 1 ,1).sum("self.monto_solicitud").to_f
     end
 end
 
