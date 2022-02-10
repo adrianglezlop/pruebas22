@@ -225,7 +225,8 @@
     
     <div class="row">
         <div class="field">
-          <%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block", "ng-hide":"true",:style=>"position:absolute;top:835px;left:250px;width:400px;height:22px;"})%>
+          <!--%=f.collection_select(:profecion_id,Profecion.all.order(:descripcion),:id,:descripcion,{:prompt => 'Profesiòn:'},{"ng-model":"credito.profecion_id","ng-disabled":"block", "ng-hide":"true",:style=>"position:absolute;top:835px;left:250px;width:400px;height:22px;"})%-->
+          <%=f.collection_select(:profecion_id,Profecion.all,:id,:descripcion,{:selected => 100},{"ng-disabled":"block", "ng-hide":"true"})%>
         </div>
       </div>
       
@@ -235,7 +236,8 @@
       
     <div class="row">
       <div class="field">
-        <%=f.collection_select(:economical_activity_id,EconomicalActivity.all.order(:descripcion),:id,:descripcion,{:prompt => 'Actividad economica:'},{"ng-model":"credito.economical_activity_id","ng-disabled":"block", "ng-hide":"true",:style=>"position:absolute;top:818px;left:250px;width:800px;height:22px;"})%>
+        <!--%=f.collection_select(:economical_activity_id,EconomicalActivity.all.order(:descripcion),:id,:descripcion,{:prompt => 'Actividad economica:'},{"ng-model":"credito.economical_activity_id","ng-disabled":"block", "ng-hide":"true",:style=>"position:absolute;top:818px;left:250px;width:800px;height:22px;"})%-->
+        <%=f.collection_select(:economical_activity_id,Economical_activity_id.all,:id,:descripcion,{:selected => 100},{"ng-disabled":"block", "ng-hide":"true"})%>
       </div>
     </div>
     
