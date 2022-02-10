@@ -435,7 +435,7 @@
         <div class="row">
           <div class="field">
             <!--%=f.collection_select(:ocupation_id,Ocupation.all.order(:descripcion),:id,:descripcion,{:prompt => 'Ocupaciòn:'},{"ng-model":"credito.ocupation_id","ng-disabled":"block", "ng-hide":"false",:style=>"position:absolute;top:1033px;left:810px;width:300px;height:18px;"})%-->
-            <%=f.collection_select(:ocupation_id,Ocupation.all,:id,:descripcion,{:selected => 100},{"ng-disabled":"block"})%>
+            <%=f.collection_select(:ocupation_id,Ocupation.all,:id,:descripcion,{:selected => 100},{"ng-disabled":"block"}, "ng-hide":"true")%>
             <!--%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:selected => 1},{"ng-disabled":"true"})%-->
           </div>
         </div>
