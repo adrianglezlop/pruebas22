@@ -702,7 +702,8 @@
       
       <div id="imprime_cte" style="width:700px;position:fixed;top:130px;left:800px">
         <!--input type="button" value="Imprimir Cliente" ng-click="imprimir_cte(cliente_a)"-->
-        <a href="/customers/327">Imprimir</a>
+        <!--a href="/customers/" + "">Imprimir Caratula de Cliente</a-->
+        <%= link_to 'IMPRIMIR CARATULA CLIENTE', "/customers/#{@credit.customer_id}",class:"waves-effect waves-light btn" %>
       </div>
       
       
