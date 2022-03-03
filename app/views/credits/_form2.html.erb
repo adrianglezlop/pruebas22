@@ -697,6 +697,18 @@
           
         </div>
       </div>
+      
+      
+      
+      <div id="imprime_cte" style="background-color:#f0f0ff;width:700px;position:fixed;top:10px;left:100px;border-size:2px;border-style:solid">
+            <td>
+              <input type="button" value="Imprimir Cliente" ng-click="rellenar(cliente_a)">
+            </td>
+      </div>
+      
+      
+      
+      
       <%if @retorno == "2"%>
           <%= link_to 'ATRAS', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn" %>
       <%else%>
