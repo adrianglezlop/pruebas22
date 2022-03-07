@@ -158,8 +158,8 @@
       console.log($scope.credito.es_cliente);
     }
     
-    $scope.imprimir_cliente = function(){
-    window.open("/customers/1234",'_blank');
+    $scope.imprimir_cliente = function(val){
+    window.open("/customers/"+val);
     }
     
     $scope.agente_o_empresa = function(){
