@@ -700,16 +700,17 @@
       
       
       
-      <div id="imprime_cte" style="width:700px;position:fixed;top:130px;left:800px">
+      <div id="imprime_cte" style="width:700px;position:fixed;top:130px;left:750px">
         <!--input type="button" value="Imprimir Cliente" ng-click="imprimir_cte(cliente_a)"-->
-        <a href="/customers/1600">Imprimir Caratula de Cliente</a>
+        <!--a href="/customers/1600">Imprimir Carátula de Cliente</a-->
+        <%= link_to 'IMPRIMIR', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn" %>
       </div>
       
       
       
       
       <%if @retorno == "2"%>
-          <%= link_to 'ATRAS', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn" %>
+          <%= link_to 'ATRAS', "/customers/#{@credit.customer_id}",class:"waves-effect waves-light btn" %>
       <%else%>
           <a href="/view_credits">Atras</a>
       <%end%>
