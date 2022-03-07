@@ -157,6 +157,11 @@
         $('#autorelleno').hide();
       console.log($scope.credito.es_cliente);
     }
+    
+    $scope.imprimir_cliente = function(){
+    window.open("/multiprint?customers="+1234,'_blank');
+  }
+    
     $scope.agente_o_empresa = function(){
       $scope.tipo="";
       $scope.agentEmp=[];
