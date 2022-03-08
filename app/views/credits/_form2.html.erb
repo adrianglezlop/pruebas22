@@ -200,13 +200,12 @@
       <div>
         <label style="position:absolute;top:532px;left:250px;width:200px;height:22px;background-color: white;font-weight: bold;font-family:'Calibri';">PAIS DE NACIMIENTO<span style="color:red;">*</span></label>
         <div>
-          <!--select  class="browser-default" ng-model="paices.selected" ng-change="getEstados()" style="position:absolute;top:550px;left:250px;width:200px;height:22px;",ng-disabled="block">
+          <select  class="browser-default" ng-model="paices.selected" ng-change="getEstados()" style="position:absolute;top:550px;left:250px;width:200px;height:22px;",ng-disabled="block">
             <option value="" disabled selected>Pais</option>
             <option ng-repeat="option in paices" value="{{option}}">{{option.nombre}}</option>
             
         </select>
-        <input type="text" name="credit[country]" ng-model="paices.text"style="visibility: hidden;"-->
-        <%=f.collection_select(:country,Country.all,:id,:descripcion)%>
+        <input type="text" name="credit[country]" ng-model="paices.text"style="visibility: hidden;">
 
         </div>
       </div>
