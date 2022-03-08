@@ -5,5 +5,6 @@ json.array!(@customers) do |customer|
   json.agente_empresa_nombre (customer.padre.nil?)? "desvinculado" : customer.padre.nombre_completo
   json.url customer_url(customer)
   json.edit  edit_customer_path(customer)
+  json.ult_credito customer.credits.where("credits.status =1 or credits.status =3).last")
 end
 

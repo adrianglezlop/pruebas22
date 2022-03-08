@@ -220,6 +220,38 @@
       
     }
     
+    
+    $scope.buscarUltCredCte=function(val){
+      var query="/customers.json?"
+      if($scope.credito.CURP!=""&&$scope.credito.CURP!=null)
+        query= query+"curp="+$scope.credito.CURP+"&";
+      if($scope.credito.apellido_paterno!=""&&$scope.credito.apellido_paterno!=null)
+        query= query+"paterno="+$scope.credito.apellido_paterno+"&";
+      if($scope.credito.apellido_materno!=""&&$scope.credito.apellido_materno!=null)
+        query= query+"materno="+$scope.credito.apellido_materno+"&";
+      if($scope.credito.nombre_1!=""&&$scope.credito.nombre_1!=null)
+        query= query+"nombre1="+$scope.credito.nombre_1+"&";
+      if($scope.credito.nombre_2!=""&&$scope.credito.nombre_2!=null)
+        query= query+"nombre2="+$scope.credito.nombre_2+"&";
+      console.log(query);
+      $http.get(query)
+      .success(function(data){
+        
+        if (data.length!=0){
+          $scope.clientes=data;
+          $('#autorelleno').show();
+        }else{
+          if(val)
+          $('#autorelleno').hide();
+        }
+        console.log(data);
+      })
+      .error(function(data){
+        console.log(data);
+      });
+      
+    }
+    
         
         $scope.type= function(){
           $scope.colonias=[];
