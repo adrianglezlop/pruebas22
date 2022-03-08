@@ -5,6 +5,6 @@ json.array!(@customers) do |customer|
   json.agente_empresa_nombre (customer.padre.nil?)? "desvinculado" : customer.padre.nombre_completo
   json.url customer_url(customer)
   json.edit  edit_customer_path(customer)
-
+  
 end
 
