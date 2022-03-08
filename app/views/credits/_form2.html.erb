@@ -206,7 +206,7 @@
             
         </select>
         <input type="text" name="credit[country]" ng-model="paices.text"style="visibility: hidden;"-->
-        <%=f.collection_select(:country,Country.all,:id,:descripcion,{:selected => 1},{"ng-disabled":"block"})%>
+        <%=f.collection_select(:country,Country.all,:id,:descripcion)%>
 
         </div>
       </div>
