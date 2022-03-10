@@ -60,6 +60,10 @@ class CreditsController < ApplicationController
       @credit = Credit.new
   end
 
+  def caratula_cte
+      @credit = Credit.new
+  end
+
   # GET /credits/1/edit
   def edit
    
