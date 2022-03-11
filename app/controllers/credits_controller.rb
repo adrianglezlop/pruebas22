@@ -60,7 +60,7 @@ class CreditsController < ApplicationController
       @credit = Credit.new
   end
 
-  def caratula_cte
+  def caratula
       @credit = Credit.new
   end
 
