@@ -17,10 +17,12 @@
       <input type="button" onclick="$('#errores').hide()" value="Cerrar">
     </div>
   </div>
-  
-  <% if :customer_id >0 %>
-  <li><%= link_to 'CARATULA CLIENTE', '/credits/caratula'%></li>
-  <% end %>
+
+      <%if @credit.customers > "0"%>
+          <%= link_to 'CARATULA DE CLIENTE', "/credits/caratula",class:"waves-effect waves-light btn" %>
+      <%else%>
+          
+      <%end%>
 
   
   <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
