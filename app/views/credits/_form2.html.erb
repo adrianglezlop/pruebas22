@@ -18,7 +18,9 @@
     </div>
   </div>
   
-  
+  <% if f.text_field <> '' %>
+  <li><%= link_to 'CARATULA CLIENTE', '/credits/caratula'%></li>
+  <% end %>
 
   
   <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
@@ -668,7 +670,6 @@
                 </td>
                 <td>
                   <input type="button" value="Rellenar" ng-click="rellenar(cliente_a)">
-                   <li><%= link_to 'CARATULA CLIENTE', '/credits/caratula'%></li>
                 </td>
               </tr>
             </tbody>
