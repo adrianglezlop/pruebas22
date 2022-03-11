@@ -91,6 +91,12 @@
         return;
        $scope.credito = data;
     }
+    
+     $scope.validarcte = function(data){
+      if($scope.credito.customer_id!=null)
+       return valido == 1 
+    }
+    
     $scope.getPaices = function(){
       $http.get("/combos/pais.json")
       .success(function(data){
@@ -252,7 +258,8 @@
       
     }
     
-        
+    
+   
         $scope.type= function(){
           $scope.colonias=[];
           $scope.localidades=[];
