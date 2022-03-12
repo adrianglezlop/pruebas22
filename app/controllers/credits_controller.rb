@@ -60,8 +60,8 @@ class CreditsController < ApplicationController
       @credit = Credit.new
   end
 
-  def caratula
-      @credit = Credit.new
+  def caratulacte
+      @credit = Credit.show
   end
 
   # GET /credits/1/edit
