@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'codigo_postal/:cp', to: 'codigo_postal#index'
   get 'credits/nuevo', to:'credits#nuevo' 
-  get 'credits/caratula_cte', to:'credits#caratula_cte' 
+  get 'credits/caratulacte', to:'credits#caratulacte' 
 
   get 'combos/pais'
 
