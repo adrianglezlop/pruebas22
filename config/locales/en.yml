@@ -100,6 +100,8 @@ en:
               blank: "es requerido"
             INE:
               blank: "es requerido"
+            nacionalidad:
+              blank: "es requerido"
             fecha_de_nacimiento:
               blank: "es requerido"
             ciudad_de_nacimiento:
