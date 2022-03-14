@@ -46,7 +46,6 @@ en:
         CURP: "CURP"
         seguro: "Seguro"
         INE: "INE"
-        nacionalidad: " Nacionalidad"
         fecha_nacimiento: "Fecha de nacimiento"
         nac_ciudad: "Ciudad de nacimiento"
         nac_estado: "Estado de nacimiento"
