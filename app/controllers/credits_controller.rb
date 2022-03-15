@@ -1,9 +1,6 @@
 class CreditsController < ApplicationController
+  layout "layouts/credito"
 
-     
-layout :false
-
-  
   before_action :set_credit, only: [:show, :edit, :editpdf, :update, :destroy,:aprobar,:pdf,:text,:cancelar]
 
   # GET /credits
@@ -56,7 +53,7 @@ layout :false
 
   # GET /credits/new
   def new
-    layout "layouts/credito"
+    
     @credit = Credit.new
   end
   
