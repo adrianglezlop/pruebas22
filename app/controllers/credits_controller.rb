@@ -1,7 +1,9 @@
 class CreditsController < ApplicationController
-    layout "layouts/credvale", only: [:nuevo]
-    layout "layouts/credito", only: [:new]
-    
+  if :nuevo
+    layout "layouts/credvale"
+  else
+    layout "layouts/credito"
+  end
 
 
   before_action :set_credit, only: [:show, :edit, :editpdf, :update, :destroy,:aprobar,:pdf,:text,:cancelar]
