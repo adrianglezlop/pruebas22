@@ -1,5 +1,5 @@
 class CreditsController < ApplicationController
-  if credit.vale =1
+  if @credit.vale =1
     layout "layouts/credvale"
   else
     layout "layouts/credito"
