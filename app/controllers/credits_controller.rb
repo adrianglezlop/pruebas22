@@ -1,7 +1,7 @@
 class CreditsController < ApplicationController
 
      
-
+layout :false
 
   
   before_action :set_credit, only: [:show, :edit, :editpdf, :update, :destroy,:aprobar,:pdf,:text,:cancelar]
