@@ -1,8 +1,10 @@
 class CreditsController < ApplicationController
-    layout "layouts/credvale", except: [:new]
-
-    layout "layouts/credito", except: [:nuevo]
-
+  if credit.vale =1
+    layout "layouts/credvale"
+  else
+    layout "layouts/credito"
+  end
+  
   before_action :set_credit, only: [:show, :edit, :editpdf, :update, :destroy,:aprobar,:pdf,:text,:cancelar]
 
   # GET /credits
