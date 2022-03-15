@@ -1,8 +1,7 @@
 class CreditsController < ApplicationController
   if :nuevo
     layout "layouts/credvale"
-  end
-  if :new
+  else
     layout "layouts/credito"
   end
 
