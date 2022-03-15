@@ -1,6 +1,6 @@
 class CreditsController < ApplicationController
 
-      layout "layouts/credito"
+     
 
 
   
@@ -56,10 +56,12 @@ class CreditsController < ApplicationController
 
   # GET /credits/new
   def new
+    layout "layouts/credito"
     @credit = Credit.new
   end
   
   def nuevo
+     layout "layouts/credvale"
       @credit = Credit.new
   end
 
