@@ -1,5 +1,8 @@
 class CreditsController < ApplicationController
-    layout "layouts/credvale"
+    layout "layouts/credvale", only: [:nuevo]
+    layout "layouts/credito", only: [:new]
+    
+
 
   before_action :set_credit, only: [:show, :edit, :editpdf, :update, :destroy,:aprobar,:pdf,:text,:cancelar]
 
