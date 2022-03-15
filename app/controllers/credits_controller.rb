@@ -1,7 +1,7 @@
 class CreditsController < ApplicationController
-    if params[:vale] == 1
-      layout "layouts/credvale"
-    end
+
+      layout "layouts/credito"
+
 
   
   before_action :set_credit, only: [:show, :edit, :editpdf, :update, :destroy,:aprobar,:pdf,:text,:cancelar]
