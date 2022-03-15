@@ -13,7 +13,7 @@
     
     angular.module("app_marjo",[])
     .controller("solicitud",["$scope","$http","$location",function($scope,$http,$location){
-    $scope.credito="";
+    $scope.credvale="";
     $scope.block=false;
     $scope.paices = [];
     $scope.estados =[];
@@ -27,9 +27,9 @@
       console.log($scope.url.split("/",longitud-1).join("/")+".json");
       $http.get($scope.url.split("/",longitud-1).join("/")+".json")
       .success(function(data){
-          $scope.credito=data;
-          ajuste_credito();
-          console.log( $scope.credito);
+          $scope.credvale=data;
+          ajuste_credvale();
+          console.log( $scope.credvale);
       })
       .error(function(data){
           console.log(data);
@@ -49,34 +49,34 @@
       console.log($scope.url.split("/",longitud-1).join("/")+".json");
       $http.get($scope.url.split("/",longitud).join("/")+".json")
       .success(function(data){
-          $scope.credito=data;
-          ajuste_credito();
-          console.log( $scope.credito);
+          $scope.credvale=data;
+          ajuste_credvale();
+          console.log( $scope.credvale);
       })
       .error(function(data){
           console.log(data);
       });
       $scope.block =true;
     }
-    function ajuste_credito(){
-      console.log("cambio"+$scope.credito.fecha_de_nacimiento_conyuge);
-      $scope.credito.fecha_de_nacimiento=$scope.credito.fecha_de_nacimiento+"";
-      $scope.credito.fecha_de_nacimiento_conyuge=$scope.credito.fecha_de_nacimiento_conyuge+"";
-      console.log("cambio"+$scope.credito.fecha_de_nacimiento_conyuge);
-        $scope.credito.fecha_de_nacimiento = new Date($scope.credito.fecha_de_nacimiento.split("-")[0],$scope.credito.fecha_de_nacimiento.split("-")[1]-1,$scope.credito.fecha_de_nacimiento.split("-")[2]);
-          $scope.credito.fecha_de_nacimiento_conyuge = new Date($scope.credito.fecha_de_nacimiento_conyuge.split("-")[0],$scope.credito.fecha_de_nacimiento_conyuge.split("-")[1]-1,$scope.credito.fecha_de_nacimiento_conyuge.split("-")[2]);
-          $scope.credito.referencia_agente_empresa=$scope.credito.referencia_agente_empresa+"";
-          $scope.credito.colonia=$scope.credito.colonia+"";
-          $scope.credito.economical_activity_id=$scope.credito.economical_activity_id+"";
-          $scope.credito.profecion_id=$scope.credito.profecion_id+"";
-          $scope.credito.ocupation_id=$scope.credito.ocupation_id+"";
-          $scope.credito.fiel=$scope.credito.fiel+"";
-           $scope.credito.antiguedad_en_el_domicilio_actual_anos = $scope.credito.antiguedad_en_el_domicilio_actual_anos+"";
-           $scope.credito.antiguedad_en_el_domicilio_actual_meses = $scope.credito.antiguedad_en_el_domicilio_actual_meses+"";
-           $scope.credito.antiguedad_en_el_domicilio_anterior_anos = $scope.credito.antiguedad_en_el_domicilio_anterior_anos+"";
-           $scope.credito.antiguedad_en_el_domicilio_anterior_meses = $scope.credito.antiguedad_en_el_domicilio_anterior_meses+"";
-           $scope.credito.antiguedad_laboral_anos = $scope.credito.antiguedad_laboral_anos+"";
-           $scope.credito.antiguedad_laboral_meses = $scope.credito.antiguedad_laboral_meses+"";
+    function ajuste_credvale(){
+      console.log("cambio"+$scope.credvale.fecha_de_nacimiento_conyuge);
+      $scope.credvale.fecha_de_nacimiento=$scope.credvale.fecha_de_nacimiento+"";
+      $scope.credvale.fecha_de_nacimiento_conyuge=$scope.credvale.fecha_de_nacimiento_conyuge+"";
+      console.log("cambio"+$scope.credvale.fecha_de_nacimiento_conyuge);
+        $scope.credvale.fecha_de_nacimiento = new Date($scope.credvale.fecha_de_nacimiento.split("-")[0],$scope.credvale.fecha_de_nacimiento.split("-")[1]-1,$scope.credvale.fecha_de_nacimiento.split("-")[2]);
+          $scope.credvale.fecha_de_nacimiento_conyuge = new Date($scope.credvale.fecha_de_nacimiento_conyuge.split("-")[0],$scope.credvale.fecha_de_nacimiento_conyuge.split("-")[1]-1,$scope.credvale.fecha_de_nacimiento_conyuge.split("-")[2]);
+          $scope.credvale.referencia_agente_empresa=$scope.credvale.referencia_agente_empresa+"";
+          $scope.credvale.colonia=$scope.credvale.colonia+"";
+          $scope.credvale.economical_activity_id=$scope.credvale.economical_activity_id+"";
+          $scope.credvale.profecion_id=$scope.credvale.profecion_id+"";
+          $scope.credvale.ocupation_id=$scope.credvale.ocupation_id+"";
+          $scope.credvale.fiel=$scope.credvale.fiel+"";
+           $scope.credvale.antiguedad_en_el_domicilio_actual_anos = $scope.credvale.antiguedad_en_el_domicilio_actual_anos+"";
+           $scope.credvale.antiguedad_en_el_domicilio_actual_meses = $scope.credvale.antiguedad_en_el_domicilio_actual_meses+"";
+           $scope.credvale.antiguedad_en_el_domicilio_anterior_anos = $scope.credvale.antiguedad_en_el_domicilio_anterior_anos+"";
+           $scope.credvale.antiguedad_en_el_domicilio_anterior_meses = $scope.credvale.antiguedad_en_el_domicilio_anterior_meses+"";
+           $scope.credvale.antiguedad_laboral_anos = $scope.credvale.antiguedad_laboral_anos+"";
+           $scope.credvale.antiguedad_laboral_meses = $scope.credvale.antiguedad_laboral_meses+"";
            $scope.agente_o_empresa();
           $scope.type();
     }
@@ -86,16 +86,16 @@
         return p.nombre == p2 
       }
     }
-    $scope.setCredito = function(data){
-      if($scope.credito!=null)
+    $scope.setcredvale = function(data){
+      if($scope.credvale!=null)
         return;
-       $scope.credito = data;
+       $scope.credvale = data;
     }
     $scope.getPaices = function(){
       $http.get("/combos/pais.json")
       .success(function(data){
         $scope.paices = data;
-        console.log($scope.credito.contry);
+        console.log($scope.credvale.contry);
         
         console.log(data);
       })
@@ -142,20 +142,20 @@
       //$(".cerrar_bloquear").prop("disabled",true );
       //$('#credit_apellido_paterno').prop('disabled', true);
 
-      $scope.credito= data;
-      ajuste_credito();
+      $scope.credvale= data;
+      ajuste_credvale();
       console.log(data);
     }
     $scope.ocultar=function(){
       $('#autorelleno').hide();
     }
     $scope.focus_curp=function(){
-      if ($scope.credito.es_cliente==1){
+      if ($scope.credvale.es_cliente==1){
         $('#autorelleno').show();
         $('#curp_buscador').focus();
       }else
         $('#autorelleno').hide();
-      console.log($scope.credito.es_cliente);
+      console.log($scope.credvale.es_cliente);
     }
     
 
@@ -163,7 +163,7 @@
     $scope.agente_o_empresa = function(){
       $scope.tipo="";
       $scope.agentEmp=[];
-      if($scope.credito.agente_empresa==1)
+      if($scope.credvale.agente_empresa==1)
       {
         $scope.tipo="Agente";
         $http.get("/agents.json")
@@ -175,7 +175,7 @@
         .error(function(data){
           console.log(data);
         });
-      }else if ($scope.credito.agente_empresa==0){
+      }else if ($scope.credvale.agente_empresa==0){
         $scope.tipo="Empresa";
         $http.get("/companies.json")
         .success(function(data){
@@ -191,16 +191,16 @@
    
     $scope.buscarCliente=function(val){
       var query="/customers.json?"
-      if($scope.credito.CURP!=""&&$scope.credito.CURP!=null)
-        query= query+"curp="+$scope.credito.CURP+"&";
-      if($scope.credito.apellido_paterno!=""&&$scope.credito.apellido_paterno!=null)
-        query= query+"paterno="+$scope.credito.apellido_paterno+"&";
-      if($scope.credito.apellido_materno!=""&&$scope.credito.apellido_materno!=null)
-        query= query+"materno="+$scope.credito.apellido_materno+"&";
-      if($scope.credito.nombre_1!=""&&$scope.credito.nombre_1!=null)
-        query= query+"nombre1="+$scope.credito.nombre_1+"&";
-      if($scope.credito.nombre_2!=""&&$scope.credito.nombre_2!=null)
-        query= query+"nombre2="+$scope.credito.nombre_2+"&";
+      if($scope.credvale.CURP!=""&&$scope.credvale.CURP!=null)
+        query= query+"curp="+$scope.credvale.CURP+"&";
+      if($scope.credvale.apellido_paterno!=""&&$scope.credvale.apellido_paterno!=null)
+        query= query+"paterno="+$scope.credvale.apellido_paterno+"&";
+      if($scope.credvale.apellido_materno!=""&&$scope.credvale.apellido_materno!=null)
+        query= query+"materno="+$scope.credvale.apellido_materno+"&";
+      if($scope.credvale.nombre_1!=""&&$scope.credvale.nombre_1!=null)
+        query= query+"nombre1="+$scope.credvale.nombre_1+"&";
+      if($scope.credvale.nombre_2!=""&&$scope.credvale.nombre_2!=null)
+        query= query+"nombre2="+$scope.credvale.nombre_2+"&";
       console.log(query);
       $http.get(query)
       .success(function(data){
@@ -223,16 +223,16 @@
     
     $scope.buscarUltCredCte=function(val){
       var query="/customers.json?"
-      if($scope.credito.CURP!=""&&$scope.credito.CURP!=null)
-        query= query+"curp="+$scope.credito.CURP+"&";
-      if($scope.credito.apellido_paterno!=""&&$scope.credito.apellido_paterno!=null)
-        query= query+"paterno="+$scope.credito.apellido_paterno+"&";
-      if($scope.credito.apellido_materno!=""&&$scope.credito.apellido_materno!=null)
-        query= query+"materno="+$scope.credito.apellido_materno+"&";
-      if($scope.credito.nombre_1!=""&&$scope.credito.nombre_1!=null)
-        query= query+"nombre1="+$scope.credito.nombre_1+"&";
-      if($scope.credito.nombre_2!=""&&$scope.credito.nombre_2!=null)
-        query= query+"nombre2="+$scope.credito.nombre_2+"&";
+      if($scope.credvale.CURP!=""&&$scope.credvale.CURP!=null)
+        query= query+"curp="+$scope.credvale.CURP+"&";
+      if($scope.credvale.apellido_paterno!=""&&$scope.credvale.apellido_paterno!=null)
+        query= query+"paterno="+$scope.credvale.apellido_paterno+"&";
+      if($scope.credvale.apellido_materno!=""&&$scope.credvale.apellido_materno!=null)
+        query= query+"materno="+$scope.credvale.apellido_materno+"&";
+      if($scope.credvale.nombre_1!=""&&$scope.credvale.nombre_1!=null)
+        query= query+"nombre1="+$scope.credvale.nombre_1+"&";
+      if($scope.credvale.nombre_2!=""&&$scope.credvale.nombre_2!=null)
+        query= query+"nombre2="+$scope.credvale.nombre_2+"&";
       console.log(query);
       $http.get(query)
       .success(function(data){
@@ -257,8 +257,8 @@
           $scope.colonias=[];
           $scope.localidades=[];
 
-          /*$http.get("https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"+ $scope.credito.codigo_postal)*/
-          $http.get("https://sepomex-api.herokuapp.com/api/v1/zip_codes?zip_code="+ $scope.credito.codigo_postal)
+          /*$http.get("https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"+ $scope.credvale.codigo_postal)*/
+          $http.get("https://sepomex-api.herokuapp.com/api/v1/zip_codes?zip_code="+ $scope.credvale.codigo_postal)
     		 .success(function(data){
           console.log(data);
           $scope.data=data;
@@ -293,10 +293,10 @@
         
         
         $scope.type= function(){
-        $http.get("https://sepomex-api.herokuapp.com/api/v1/zip_codes?zip_code="+ $scope.credito.codigo_postal)
+        $http.get("https://sepomex-api.herokuapp.com/api/v1/zip_codes?zip_code="+ $scope.credvale.codigo_postal)
     		.success(function(data){
-    		  $scope.credito.municipio = data.zip_codes[0].d_mnpio;
-    		  $scope.credito.estado = data.zip_codes[0].d_estado;
+    		  $scope.credvale.municipio = data.zip_codes[0].d_mnpio;
+    		  $scope.credvale.estado = data.zip_codes[0].d_estado;
     		  
     		  $scope.colonias=[];
           $scope.localidades=[];
