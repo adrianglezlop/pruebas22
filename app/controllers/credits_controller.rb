@@ -58,7 +58,6 @@ class CreditsController < ApplicationController
   end
   
   def nuevo
-     layout "layouts/credvale"
       @credit = Credit.new
   end
 
