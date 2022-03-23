@@ -59,6 +59,7 @@ class CreditsController < ApplicationController
   
   def nuevo
       @credit = Credit.new
+      render layout: "credvale"
   end
 
   def caratulacte
