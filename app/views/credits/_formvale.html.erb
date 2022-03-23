@@ -30,7 +30,7 @@
   
   
   
-  <input type="hidden" value = "<%= @credit.to_json%>" ng-model="credvale" ng-init="credvale  = <%= @credit.to_json%>">
+  <input type="hidden" value = "<%= @credit.to_json%>" ng-model="credito" ng-init="credito  = <%= @credit.to_json%>">
       
      
   
@@ -611,7 +611,7 @@
             <!--%= f.collection_select :produc_id, Product.all, :id, :nombre_del_producto, :prompt => 'Productos:', :selected => 10%-->
           <br>
           <br>
-          <a href="{{credito.pdfs}}" target="_blank" , style="boder-radius:20px;padding:20px 10px;background-color:orange;color:white" id="pdfs">mostrar pdfs</a>
+          <a href="{{credvale.pdfs}}" target="_blank" , style="boder-radius:20px;padding:20px 10px;background-color:orange;color:white" id="pdfs">mostrar pdfs</a>
           <%if @retorno == "2"%>
               <%= link_to 'ATRAS', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn" %>
           <%else%>
