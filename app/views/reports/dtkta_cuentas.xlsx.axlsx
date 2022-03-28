@@ -8,11 +8,14 @@ wb = xlsx_package.workbook
       sheet.add_row ["ID_CLIENTE","CONTRATO","CONTRATO","NOMBRE","NOMBRE_ADICIONAL","APE_PATERNO","APE_MATERNO","DESCRIPCION"],style: [ 
 
 
-
       highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
         highlight_cell,highlight_cell]
 
-        @credits.each do |credit|
-            sheet.add_row [credit.id,credit.id]
-        end    
+         @customers.each do |customer|
+
+        sheet.add_row [customer.id,customer.id,"",customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno, "CREDITO"
+         
+         ]
+      end
+    end
   end
