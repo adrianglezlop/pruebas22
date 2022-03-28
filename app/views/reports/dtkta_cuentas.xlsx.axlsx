@@ -14,12 +14,11 @@ wb = xlsx_package.workbook
 
 
       @customers.each do |customer|
-        ultimo_credito = customer.credits.select(:id).where("status = 1 or status = 3").last
-        calificaciones = ""
+        #ultimo_credito = customer.credits.select(:id).where("status = 1 or status = 3").last
         customer.credits.select(:id,:fecha_de_contrato).where("status = 1 or status = 3").order(:fecha_de_contrato).each do |credit|
-            calificaciones = calificaciones + "#{credit.fecha_de_contrato.strftime("%m/%d/%Y")}(#{credit.calificacion}), " unless credit.fecha_de_contrato.nil?
+            sheet.add_row [customer.id,credit.id, credit.id,customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno,"CREDITO"    
         end
-        sheet.add_row [customer.id,customer.credit_id, customer.credit_id,customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno,"CREDITO"
+        
          ]
       end
     end
