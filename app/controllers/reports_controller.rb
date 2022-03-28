@@ -228,7 +228,7 @@ class ReportsController < ApplicationController
   end
   
 
-  def dtkta
+  def dtkta_clientes
       respond_to do |format|
         format.html {  }
         format.xlsx { 
