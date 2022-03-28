@@ -268,8 +268,8 @@ class ReportsController < ApplicationController
             end
 
             @credits = Credit.all
-            @credits = @credits.where("credits.referencia_agente_empresa= ?",padre_id) 
-            @credits = @credits.order(:id)  unless @credits == []  
+
+ 
         }
     end
   end
