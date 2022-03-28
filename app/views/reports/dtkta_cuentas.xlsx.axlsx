@@ -5,16 +5,12 @@ wb = xlsx_package.workbook
       sheet.add_row [@branch_office.nombre] unless @branch_office.nil?
       sheet.add_row [@padre.nombre_completo] unless @padre.nil?
       sheet.add_row [""]
-      sheet.add_row ["ID_CLIENTE","CUENTA","ORIGEN","NOMBRE","NOMBRE_ADICIONAL","APE_PATERNO","APE_MATERNO","CTE_RFC", "CTE_CURP","RAZON_SOCIAL","FECHA_NAC","NACIONALIDAD","DOMICILIO","COLONIA","CIUDAD","PAIS", "ESTADO","TELEFONO_PARTICULAR","ACTIVIDAD_ECONOMICA","CALIFICACION","FECHA_ALTA","SUCURSAL","CURP","GENERO","CORREO_ELECTRONICO","FIRMA_ELECTRONICA","PROFESION","OCUPACION","PAIS_NACIMIENTO"],style: [ 
+      sheet.add_row ["ID_CLIENTE","CONTRATO","CONTRATO","NOMBRE","NOMBRE_ADICIONAL","APE_PATERNO","APE_MATERNO","DESCRIPCION"],style: [ 
 
 
 
       highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
-        highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
-        highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
-        highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
-        highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
-        highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell ]
+        highlight_cell,highlight_cell]
 
 
       @customers.each do |customer|
@@ -23,40 +19,7 @@ wb = xlsx_package.workbook
         customer.credits.select(:id,:fecha_de_contrato).where("status = 1 or status = 3").order(:fecha_de_contrato).each do |credit|
             calificaciones = calificaciones + "#{credit.fecha_de_contrato.strftime("%m/%d/%Y")}(#{credit.calificacion}), " unless credit.fecha_de_contrato.nil?
         end
-        sheet.add_row [customer.id,customer.id, "CL",customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno,
-         customer.RFC,
-         customer.CURP,
-         "",
-         customer.fecha_de_nacimiento,
-         (customer.nacionalidad == "MEXICO".to_s)? 1:2,
-         customer.calle.to_s + "#" + customer.numero_exterior.to_s + " C.P." + customer.codigo_postal.to_s,
-         customer.colonia,
-         customer.ciudad_de_nacimiento,
-         (customer.country == "MEXICO".to_s)? 153:153,
-         (customer.estado_actual == "SINALOA".to_s)? 25:25,
-         customer.telefono_celular,
-         customer.economical_activity_id,
-         "1",       
-         customer.referencia_agente_empresa,
-         customer.CURP,  
-         customer.email_1,
-         "",
-         customer.profecion_id,
-         customer.ocupation_id,
-         (customer.country == "MEXICO".to_s)? 153:153,       
-         "25",
-         customer.estado_de_nacimiento,
-         customer.INE,
-         "",
-         "",
-         "",
-         "INE",
-         "Si",
-         customer.empresa_donde_labora,
-         "VACIA",
-         customer.puesto,
-         customer.created_at,
-         customer.created_at
+        sheet.add_row [customer.id,customer.id, "CL",customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno,"CREDITO"
          ]
       end
     end

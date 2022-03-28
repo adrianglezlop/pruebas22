@@ -1,7 +1,7 @@
 wb = xlsx_package.workbook
   wb.styles do |style|
     highlight_cell = style.add_style(bg_color: "FFFF00")
-    wb.add_worksheet(name: "identifiacion clientes dtkta") do |sheet|
+    wb.add_worksheet(name: "identificacion clientes dtkta") do |sheet|
       sheet.add_row [@branch_office.nombre] unless @branch_office.nil?
       sheet.add_row [@padre.nombre_completo] unless @padre.nil?
       sheet.add_row [""]
