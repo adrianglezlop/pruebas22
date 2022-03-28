@@ -12,7 +12,5 @@ wb = xlsx_package.workbook
       highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
         highlight_cell,highlight_cell]
 
-        @credits.each do |credit|
-            sheet.add_row [credit.id,credit.id]
-        end    
+         
   end
