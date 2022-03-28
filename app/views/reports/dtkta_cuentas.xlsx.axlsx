@@ -13,12 +13,9 @@ wb = xlsx_package.workbook
         highlight_cell,highlight_cell]
 
 
-      @credits.each do |credit|
-        credit.customers.select(:id,customer.id,:fecha_de_contrato).where("status = 1 or status = 3").order(:fecha_de_contrato).each do |credit|
+        @credits.each do |credit|
+            credit.customers.select(:id,customer.id,:fecha_de_contrato).where("status = 1 or status = 3").order(:fecha_de_contrato).each do |credit|
             
-        end
-        sheet.add_row [credit.id,"CREDITO"    
-         ]
-      end
-    end
+            end
+        end    
   end
