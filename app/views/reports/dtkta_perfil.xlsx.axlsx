@@ -14,7 +14,7 @@ wb = xlsx_package.workbook
          @credits.each do |credit|
 
         #sheet.add_row [customer.id,customer.id,"",customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno, "CREDITO"
-        sheet.add_row [credit.customer_id, credit.id, credit.nombre_1 + " " + credit.nombre_2, "201","MXN","-"
+        sheet.add_row [credit.customer_id, credit.id, credit.nombre_1 + " " + credit.nombre_2 + " " + credit.apellido_paterno + " " + credit.apellido_materno, "201","MXN","-"
          
          ]
       end
