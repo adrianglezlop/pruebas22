@@ -267,6 +267,55 @@
      window.location.href = url
   }
   
+  $scope.descargar_dtkta_perfil= function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/dtkta_perfil.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    
+     window.location.href = url
+  }
+  
+  $scope.descargar_dtkta_movtos= function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/dtkta_movtos.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    
+     window.location.href = url
+  }
+  
+  
   $scope.historial_de_recibos = function(){
      var url = "/reports/historial_de_recibos.xlsx?";
     if (!($scope.fechas.selected == ""||$scope.fechas.selected ==undefined))
