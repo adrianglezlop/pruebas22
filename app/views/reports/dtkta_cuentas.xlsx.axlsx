@@ -11,11 +11,11 @@ wb = xlsx_package.workbook
       highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
         highlight_cell,highlight_cell]
 
-         @customers.each do |customer|
+         #@customers.each do |customer|
 
-        sheet.add_row [customer.id,customer.id,"",customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno, "CREDITO"
+        #sheet.add_row [customer.id,customer.id,"",customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno, "CREDITO"
          
-         ]
-      end
+         #]
+      #end
     end
   end
