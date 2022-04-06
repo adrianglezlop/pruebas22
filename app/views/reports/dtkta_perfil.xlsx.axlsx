@@ -5,7 +5,7 @@ wb = xlsx_package.workbook
       sheet.add_row [@branch_office.nombre] unless @branch_office.nil?
       sheet.add_row [@padre.nombre_completo] unless @padre.nil?
       sheet.add_row [""]
-      sheet.add_row ["ID_CLIENTE","CONTRATO","CONTRATO","NOMBRE","NOMBRE_ADICIONAL","APE_PATERNO","APE_MATERNO","DESCRIPCION"],style: [ 
+      sheet.add_row ["ID_CLIENTE","CUENTA","NOMBRE COMPLETO","INSTRUMENTO","TIPO MONEDA","T/CAMBIO"],style: [ 
 
 
       highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
@@ -14,7 +14,7 @@ wb = xlsx_package.workbook
          @credits.each do |credit|
 
         #sheet.add_row [customer.id,customer.id,"",customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno, "CREDITO"
-        sheet.add_row [credit.customer_id, credit.id, credit.id, credit.nombre_1, credit.nombre_2, credit.apellido_paterno, credit.apellido_materno, "CREDITO"
+        sheet.add_row [credit.customer_id, credit.id, credit.nombre_1 & credit.nombre_2, "201","MXN","-"
          
          ]
       end
