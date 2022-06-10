@@ -79,7 +79,7 @@ class ViewCreditsController < ApplicationController
       end
     end
       
-    if @credit.product_id == 10
+    if @credit.product_id == 10 or @credit.product_id == 11 or @credit.product_id == 12
       pdf = ContratoPdf.new(@credit)
       send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
     else
