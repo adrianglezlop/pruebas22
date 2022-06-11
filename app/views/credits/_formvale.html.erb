@@ -627,10 +627,10 @@
       
          <div style="top:460px;left:2px;position:absolute;">
             Selecciona el monto del prestamo:
-            <%=f.collection_select(:id,Tabulador.all,:id,:prestamo,{"ng-disabled":"block", :style=>"position:absolute;top:470px;left:30px;"})%>
+            
             <!--%=f.collection_select(:id,Tabulador.all,:id,:prestamo,{"ng-disabled":"block"})%-->
           <br>
-      
+          <%=f.collection_select(:id,Tabulador.all,:id,:prestamo,{"ng-disabled":"block", :style=>"position:absolute;top:470px;left:30px;"})%>
     </div>
   </div>
     
