@@ -611,10 +611,7 @@
             <!--%= f.collection_select :produc_id, Product.all, :id, :nombre_del_producto, :prompt => 'Productos:', :selected => 10%-->
           <br>
           <br>
-          
-          Selecciona el monto del prestamo:
-            <%=f.collection_select(:id,Tabulador.all,:id,:prestamo,{"ng-disabled":"block"})%>
-          <br>
+
           
           <a href="{{credito.pdfs}}" target="_blank" , style="boder-radius:20px;padding:20px 10px;background-color:orange;color:white" id="pdfs">mostrar pdfs</a>
           <%if @retorno == "2"%>
@@ -624,6 +621,13 @@
           <%end%>
 
         </div>
+                  
+          <div style="top:12px;left:1px;position:absolute;">
+            Selecciona el monto del prestamo:
+            <%=f.collection_select(:id,Tabulador.all,:id,:prestamo,{"ng-disabled":"block"})%>
+          <br>
+        
+        
         </div>
       </div>
     </div>
