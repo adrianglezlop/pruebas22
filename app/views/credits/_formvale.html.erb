@@ -610,7 +610,7 @@
             <!--%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%--> <!--%= f.label "#{:agente_empresa}_false", "Empresa" %-->
            
            
-            <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:selected => 10},{"ng-disabled":"block"},"ng-click":"quinc()")%>
+            <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:selected => 10},{"ng-disabled":"block"},"ng-change":"quinc()")%>
             <%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:selected => 1},{"ng-disabled":"true"})%>
             <!--%= f.collection_select :produc_id, Product.all, :id, :nombre_del_producto, :prompt => 'Productos:', :selected => 10%-->
           <br>
