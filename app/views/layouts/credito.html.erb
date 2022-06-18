@@ -194,6 +194,17 @@
       });
       }
     }
+    
+    $scope.quinc = function(){
+      $scope.quincenas=6;
+      if($scope.credito.produc_id==12)
+      {
+        $scope.tipo=8;
+
+      }else if ($scope.credito.agente_empresa==0){
+        $scope.quincenas=6;
+      }
+    }
    
     $scope.buscarCliente=function(val){
       var query="/customers.json?"
