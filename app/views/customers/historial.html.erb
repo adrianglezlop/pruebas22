@@ -47,6 +47,10 @@
                         <td><%="MPO12" %></td>
                     <% when 10 %>
                         <td><%="MARJOV" %></td>
+                    <% when 11 %>
+                        <td><%="MARJOV6" %></td>
+                    <% when 12 %>
+                        <td><%="MARJOV8" %></td>
                 <% end %>
                 <td><%= credit.padre.nombre_completo unless credit.padre.nil? %></td>
                 <td><%= credit.fecha_de_contrato.strftime("%d/%m/%Y") unless credit.fecha_de_contrato.nil?  %></td>
