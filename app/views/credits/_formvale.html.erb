@@ -611,7 +611,7 @@
             <!--%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:selected => 10},{"ng-disabled":"block"})%-->
             <!--%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%%-->
             <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Selecciona un Producto:'},{"ng-disabled":"block"})%>
-            <%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:selected => 1},{"ng-disabled":"true"},{"ng-init":"num= 6"})%>
+            <%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:selected => 1},{"ng-disabled":"true"},{"ng-init"="num=6"})%>
             
             <div style="top:430px;left:1100px;position:absolute;">
              
