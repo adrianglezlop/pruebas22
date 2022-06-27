@@ -610,7 +610,7 @@
            
             <!--%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:selected => 10},{"ng-disabled":"block"})%-->
             
-            <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Selecciona un Producto:'},{"ng-disabled":"block","ng-click":"if :selected => 12 num=8","ng-init":"num=6"})%>
+            <%=f.collection_select(:product_id,Product.all,:id,:nombre_del_producto,{:prompt => 'Selecciona un Producto:'},{"ng-disabled":"block","ng-click":"numquinc","ng-init":"num=6"})%>
             <%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:selected => 1},{"ng-disabled":"true"})%>
             <!--%= f.collection_select :produc_id, Product.all, :id, :nombre_del_producto, :prompt => 'Productos:', :selected => 10%-->
             
