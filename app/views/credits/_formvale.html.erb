@@ -614,7 +614,7 @@
             <%=f.collection_select(:destination_id,Destination.all,:id,:descricion,{:selected => 1},{"ng-disabled":"true"})%>
             <!--%= f.collection_select :produc_id, Product.all, :id, :nombre_del_producto, :prompt => 'Productos:', :selected => 10%-->
             
-            <div style="top:470px;left:1100px;position:absolute;">
+            <div style="top:470px;left:600px;position:absolute;">
              
               <font size="4" face="Arial"><b>{num} QUINCENAS</b> </font>
            
@@ -643,14 +643,7 @@
     </div>
     
      </div>
-         <div style="top:430px;left:1100px;position:absolute;">
-             
-              <font size="4" face="Arial"><b>6 QUINCENAS</b> </font>
-           
-           <!--b>QUINCENAS</b-->
-         <!--%= f.collection_select(:id,Tabulador.all,:id,:prestamo,{"ng-disabled":"block","ng-hide":"true", :style=>"position:absolute;top:470px;left:30px;"})%-->
-    
-  </div>
+         
     
     <div class="actions" id="solo_en_new">
       <div class="input-field col s12">
