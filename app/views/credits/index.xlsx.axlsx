@@ -2,9 +2,10 @@ wb = xlsx_package.workbook
 
 wb.add_worksheet(name: "Products") do |sheet|
   sheet.add_row ["CONSULTA DE CREDITOS ACEPTADOS"]
-  sheet.add_row ["PRODUCTO","ID_CRED","AGENTE/EMPRESA","FECHA_DE_CREDITO","FECHA_DE_CONTRATO","NOMBRE","RFC","MONTO"]
+  sheet.add_row ["PRODUCTO","ID","AGENTE/EMPRESA","FECHA_DE_CREDITO","FECHA_DE_CONTRATO","NOMBRE","RFC","MONTO"]
   @credits.each do |credit|
     sheet.add_row [
+      "",
       credit.id,
       credit.padre.nombre_completo,
       credit.fecha.strftime("%d/%m/%Y"),
@@ -16,4 +17,4 @@ wb.add_worksheet(name: "Products") do |sheet|
     end
   
 
-ends
+end
