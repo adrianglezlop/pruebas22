@@ -5,6 +5,7 @@ wb.add_worksheet(name: "Products") do |sheet|
   sheet.add_row ["PRODUCTO","ID_CRED","AGENTE/EMPRESA","FECHA_DE_CREDITO","FECHA_DE_CONTRATO","NOMBRE","RFC","MONTO"]
   @credits.each do |credit|
     sheet.add_row [
+      credit.product_id,
       credit.id,
       credit.padre.nombre_completo,
       credit.fecha.strftime("%d/%m/%Y"),
@@ -16,4 +17,4 @@ wb.add_worksheet(name: "Products") do |sheet|
     end
   
 
-end
+ends
