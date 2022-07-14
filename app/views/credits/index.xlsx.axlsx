@@ -7,6 +7,14 @@ wb.add_worksheet(name: "Products") do |sheet|
     sheet.add_row [
       if credit.product_id=10
         "MARJO VALE" 
+      else
+        if credit.product_id=11
+          "MARJO VALE6" 
+        else
+          if credit.product_id=12
+            "MARJO VALE8" 
+          end
+        end
       end,
       credit.id,
       credit.padre.nombre_completo,
