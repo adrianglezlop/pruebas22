@@ -5,13 +5,13 @@ wb.add_worksheet(name: "Products") do |sheet|
   sheet.add_row ["PRODUCTO","CRED_ID","AGENTE/EMPRESA","FECHA_DE_CREDITO","FECHA_DE_CONTRATO","NOMBRE","RFC","MONTO"]
   @credits.each do |credit|
     sheet.add_row [
-      if credit.product_id=10
+      if credit.product_id=80
         "MARJO VALE" 
       else
-        if credit.product_id=11
+        if credit.product_id=81
           "MARJO VALE6" 
         else
-          if credit.product_id=12
+          if credit.product_id=82
             "MARJO VALE8" 
           end
         end
