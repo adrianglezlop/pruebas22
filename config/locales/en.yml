@@ -244,8 +244,8 @@ en:
               blank: "es requerido"
             estado_actual:
               blank: "es requerido"
-            localidad:
-              blank: "es requerido"
+            #localidad:
+            #  blank: "es requerido"
             observaciones:
               blank: "es requerido"
             croquis_file_name:
