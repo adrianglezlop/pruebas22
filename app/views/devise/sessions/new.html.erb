@@ -1,0 +1,27 @@
+  <div class="col s5 m4 l3 center-align">
+    <h2>Iniciar sesión</h2>
+    <i class="large material-icons">group</i>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :login%>
+        <%= f.text_field :login%>
+      </div>
+    
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+    
+      <% if devise_mapping.rememberable? -%>
+        <div class="">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me,"Recordar" %>
+        </div>
+      <% end -%>
+    
+      <div class="actions">
+        <%= f.submit "Iniciar sesión" %>
+      </div>
+    <% end %>
+  
+  </div>

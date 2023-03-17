@@ -1,0 +1,54 @@
+<div ng-controller="payment">
+  <div>
+    <a class="waves-effect waves-light btn" href= "/payments">Atras</a>
+  </div>
+ <div class= "col s12 m12 12 card-panel">
+   <h4 class="center-align" >Nombre: {{pagos[0].nombre_deudor}}</h4>
+   <h4 class="center-align" >Agente/Empresa: {{pagos[0].empresa_agente}}</h4>
+ </div>
+             <table class="striped" >
+                <thead>
+                  <tr>
+                      <th data-field="Nombre">FOLIO</th>
+                      <th data-field="Monto">FECHA</th>
+                      <th data-field="price">RECIBO</th>
+                      <th data-field="price">ESTATUS</th>
+                      <th data-field="price">IMPORTE</th>
+                      <th data-field="price">PAGO</th>
+                      <th data-field="price">INTERÉS</th>
+                      <th></th>
+                      <th></th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr ng-repeat = "ele in pagos">
+                    <td>{{ele.folio}}</td>
+                    <td>{{ele.fecha_de_pago_formato}}</td>
+                    <td>{{ele.recibo}}</td>
+                    <td>{{ele.estatus==0?"Al corriente":ele.estatus==1?"Vencido":"Pagado"}}</td>
+                    <td>{{ele.importe_con_pago_formato}}</td>
+                    <td>
+                        <input type="number" min="0" class="validate" ng-model ="ele.pago" ng-change="actualizar_pagos(ele)" ng-enter="valida_cant" ng-disabled={ele.active}>
+                    </td>
+                    <td>{{ele.interes_formato}}</td>
+                    <td>
+                      <div ng-if="ele.activo">
+                        <a class="waves-effect waves-light btn" ng-click="pagar(ele)"  id="ena_botton">Hacer Pago</a>
+                      </div>
+                    </td>
+                    <% if current_user.tipo == 1%>
+                    <td>
+                      <div>
+                        <a href="/payments/{{ele.id}}/vencer">Vencer</a>
+                      </div>
+                    </td>
+                    <%end%>
+                    <td>
+                      <a class="waves-effect waves-light btn" href="/tickets?clave={{ele.id}}">Historial</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>

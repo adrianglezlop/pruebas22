@@ -1,0 +1,11 @@
+<h1>Editar Clientes</h1>
+
+<div class="col s12 card">
+    <h4 class="center-align">Cliente: <%=@customer.nombre_completo_deudor%> <br>
+        agente/sucursal: <%=@customer.padre.nombre_completo%></h4 > 
+</div>
+
+<%= render 'form' %>
+
+<%= link_to 'MOSTRAR', @customer ,class:"waves-effect waves-light btn"%> |
+<%= link_to 'ATRAS', customers_path,class:"waves-effect waves-light btn" %>

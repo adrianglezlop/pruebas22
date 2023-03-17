@@ -1,0 +1,178 @@
+<p id="notice"><%= notice %></p>
+<div class="row ">
+  <h5 class="center-align card-panel deep-orange darker-2">
+    <strong>Clave:</strong>
+    <%= @agent.clave %>
+  </h5>
+</div>
+<div class="show row">
+  <p>
+    <strong>Nombre del agente:</strong>
+    <%= @agent.nombre_del_agente %>
+  </p>
+  
+  <p>
+    <strong>Apellido materno:</strong>
+    <%= @agent.apellido_materno %>
+  </p>
+  
+  <p>
+    <strong>Apellido paterno:</strong>
+    <%= @agent.apellido_paterno %>
+  </p>
+  
+  <p>
+    <strong>Nombre 1:</strong>
+    <%= @agent.nombre_1 %>
+  </p>
+  
+  <p>
+    <strong>Nombre 2:</strong>
+    <%= @agent.nombre_2 %>
+  </p>
+  
+  <p>
+    <strong>Rfc:</strong>
+    <%= @agent.RFC %>
+  </p>
+  
+  <p>
+    <strong>Calle:</strong>
+    <%= @agent.calle %>
+  </p>
+  
+   <p>
+    <strong>Numero exterior:</strong>
+    <%= @agent.numero_exterior %>
+  </p>
+  
+  <p>
+    <strong>Numero interior:</strong>
+    <%= @agent.numero_interior %>
+  </p>
+
+  <p>
+    <strong>Colonia:</strong>
+    <%= @agent.colonia %>
+  </p>
+  
+  <p>
+    <strong>Codigo postal:</strong>
+    <%= @agent.codigo_postal %>
+  </p>
+  
+  <p>
+    <strong>Municipio:</strong>
+    <%= @agent.municipio %>
+  </p>
+  
+  <p>
+    <strong>Estado:</strong>
+    <%= @agent.estado %>
+  </p>
+  
+  <p>
+    <strong>Curp:</strong>
+    <%= @agent.CURP %>
+  </p>
+  
+  <p>
+    <strong>Seguro social:</strong>
+    <%= @agent.seguro_social %>
+  </p>
+  
+  <p>
+    <strong>Ine:</strong>
+    <%= @agent.INE %>
+  </p>
+  
+  <p>
+    <strong>Nacionalidad:</strong>
+    <%= @agent.nacionalidad %>
+  </p>
+  
+  <p>
+    <strong>Fecha de nacimiento:</strong>
+    <%= @agent.fecha_de_nacimiento %>
+  </p>
+  
+  <p>
+    <strong>Ciudad de nacimiento:</strong>
+    <%= @agent.ciudad_de_nacimiento %>
+  </p>
+  
+  <p>
+    <strong>Estado de nacimiento:</strong>
+    <%= @agent.estado_de_nacimiento %>
+  </p>
+  
+  <p>
+    <strong>Pais de nacimiento:</strong>
+    <%= @agent.pais_de_nacimiento %>
+  </p>
+  
+  <p>
+    <strong>Sexo:</strong>
+    <% if @agent.sexo %>
+      Masculino
+    <% else%>
+      Femenino
+    <%end%>
+  </p>
+  
+  <p>
+    <strong>Telefono de casa:</strong>
+    <%= @agent.telefono_de_casa %>
+  </p>
+  
+  <p>
+    <strong>Telefono celular:</strong>
+    <%= @agent.telefono_celular %>
+  </p>
+  
+  <p>
+    <strong>Correo electronico 1:</strong>
+    <%= @agent.correo_electronico_1 %>
+  </p>
+  
+  <p>
+    <strong>Correo electronico 2:</strong>
+    <%= @agent.correo_electronico_2 %>
+  </p>
+  
+  <p>
+    <strong>Cuenta bancaria:</strong>
+    <%= @agent.cuenta_bancaria %>
+  </p>
+  
+  <p>
+    <strong>Banco:</strong>
+    <%= @agent.banco %>
+  </p>
+  
+  <p>
+    <strong>Comision por cobranza:</strong>
+    <%= @agent.comision_por_cobranza %>%
+  </p>
+  
+  <p>
+    <strong>Comision por colocacion:</strong>
+    <%= @agent.comision_por_colocacion %> %
+  </p>
+  
+  <p>
+    <strong>Monto maximo de prestamo:</strong>
+    <%= Dinero.to_money(@agent.monto_maximo_de_prestamo) %>
+  </p>
+  
+  <p>
+    <strong>Permitir prestamo multiple:</strong>
+    <%= @agent.permitir_prestamo_multiple %>
+  </p>
+  <p>
+    <strong>Sucursal:</strong>
+    <%= @agent.branch_office.nombre%>
+  </p>
+</div>
+<%= link_to 'Editar', edit_agent_path(@agent),class:'crud-links' %> |
+<%= link_to 'Atras', agents_path,class:'crud-links' %>

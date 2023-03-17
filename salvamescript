@@ -1,0 +1,37 @@
+
+
+def diferenciaDeCorte(producto,fechad)
+          count = 0
+          fp = Payment.select(:fecha_de_pago,:fecha_de_corte).joins(:credit=>:product).where("credits.status = ? ",1 ).where("products.id = ? ", producto.id).uniq.order(:fecha_de_pago)
+          while (fp.last.fecha_de_corte <= Time.now)
+               fp << Payment.new(fecha_de_corte:Auxiliar.getArreglo(producto,fp.last.fecha_de_corte)["corte"],fecha_de_pago:Auxiliar.getArreglo(producto,fp.last.fecha_de_corte)["pago"])
+          end
+          fp.reverse.each do |fechas|
+               if fechad < fechas.fecha_de_corte.to_date and fechas.fecha_de_corte.to_date < Time.now.to_date
+                    count+=1
+               end
+               return count if fechas.fecha_de_corte.to_date <= fechad
+          end
+          return 0
+     end
+     def salvame
+         count = 0
+Product.all.each do |p|
+   fecha = Time.now.to_date
+          
+               Payment.joins(:credit).where("credits.product_id = ? ",p.id)
+               .where("payments.fecha_de_pago <= ?",fecha).where.not(estatus:2).each do |pp|
+                    unless pp.estatus==2
+                    venc = diferenciaDeCorte(pp.credit.product,pp.fecha_de_corte)
+                    puts venc
+                    inter =  pp.deuda_sin_interes * (pp.credit.product.interes_moratorio_aplicable.to_f/100)
+                    puts inter
+                        puts count
+                        pp.update(interes: inter.to_f * venc.to_f ,estatus:1,vencimientos:venc)
+                        count+=1
+                    end
+               
+           end
+        end
+        count
+end

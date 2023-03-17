@@ -1,0 +1,1009 @@
+<p id="notice"><%= notice %></p>
+ <div class="row">
+  <h5 class="center-align card-panel light-blue lighten-5">
+    <strong>NOMBRE:</strong>
+    <%= "#{@customer.apellido_paterno} #{@customer.apellido_materno} #{@customer.nombre_1} #{@customer.nombre_2} " %>
+  </h5>
+ </div>
+
+ <table>
+   <tr>
+     <td>
+       <strong >AGENTE O EMPRESA: </strong>
+       <%= @customer.padre.nombre_completo%>
+    
+     </td>
+     <td>
+       <strong >¿COMO SE ENTERÓ?: </strong>
+       <%= @customer.como_se_entero %>
+    
+     </td>
+     <td>
+       <strong >FAMILIAR CON PRESTAMO:</strong>
+       <%= @customer.familiar_con_prestamo==1?"SI":"NO" %>
+    
+     </td>
+     
+    </tr>
+    
+    <tr>
+     
+     <td>
+       <strong >PARENTESCO 1:</strong>
+       <%= @customer.parentesco_1 %>
+    
+     </td>
+     <td>
+       <strong >APELLIDO PATERNO:</strong>
+       <%= @customer.apellido_paterno %>
+    
+     </td>
+     <td>
+       <strong >APELLIDO MATERNO:</strong>
+       <%= @customer.apellido_materno %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     <td>
+       <strong >NOMBRE 1: </strong>
+       <%= @customer.nombre_1 %>
+    
+     </td>
+     <td>
+       <strong >NOMBRE 2: </strong>
+       <%= @customer.nombre_2 %>
+    
+     </td>
+     <td>
+       <strong >RFC:</strong>
+       <%= @customer.RFC %>
+    
+     </td>
+     
+    </tr>
+    
+    <tr>
+     
+     <td>
+       <strong >CURP:</strong>
+         <%= @customer.CURP %>
+    
+     </td>
+     <td>
+       <strong >SEGURO:</strong>
+       <%= @customer.seguro %>
+    
+     </td>
+     <td>
+       <strong >INE/IFE:</strong>
+       <%= @customer.INE %>
+    
+     </td>
+     
+   </tr>
+   <tr>
+     <td>
+       <strong >NACIONALIDAD: </strong>
+       <%= @customer.nacionalidad%>
+    
+     </td>
+     <td>
+       <strong >FECHA DE NACIMIENTO: </strong>
+       <%= @customer.fecha_de_nacimiento %>
+    
+     </td>
+     <td>
+       <strong >CIUDAD DE NACIMIENTO:</strong>
+       <%= @customer.ciudad_de_nacimiento %>
+    
+     </td>
+     
+    </tr>
+    
+    <tr>
+     
+     <td>
+       <strong >ESTADO DE NACIMIENTO:</strong>
+       <%= @customer.estado_de_nacimiento %>
+    
+     </td>
+     <td>
+       <strong >SEXO:</strong>
+       <%= (@customer.sexo)?"HOMBRE":"MUJER" %>
+    
+     </td>
+     <td>
+       <strong >TELEFONO DE CASA:</strong>
+       <%= @customer.telefono_de_casa %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     <td>
+       <strong >TELEFONO CELULAR: </strong>
+       <%= @customer.telefono_celular %>
+    
+     </td>
+     <td>
+       <strong >EMAIL 1: </strong>
+       <%= @customer.email_1 %>
+    
+     </td>
+     <td>
+       <strong >EMAIL 2:</strong>
+       <%= @customer.email_2 %>
+    
+     </td>
+     
+    </tr>
+    
+    <tr>
+     
+     <td>
+       <strong >ESCOLARIDAD:</strong>
+         <%= Auxiliar.escolaridad_nombre @customer.escolaridad %>
+    
+     </td>
+     <td>
+       <strong >NUMERO DE DEPENDIENTES ECONOMICOS:</strong>
+       <%= @customer.numero_de_dependientes_economicos %>
+    
+     </td>
+     <td>
+       <strong >GASTO PROMEDIO MENSUAL:</strong>
+       <%= @customer.numero_de_dependientes_economicos %>
+    
+     </td>
+     
+   </tr>
+   <tr>
+     <td>
+       <strong >ESTADO CIVIL: </strong>
+        <%= Auxiliar.estado_civil_nombre @customer.estado_civil %>
+    
+     </td>
+     <td>
+       <strong >APELLIDO PATERNO DEL CÓNYUGE: </strong>
+       <%= @customer.apellido_paterno_del_conyuge %>
+    
+     </td>
+     <td>
+       <strong >APELLIDO MATERNO DEL CÓNYUGE:</strong>
+        <%= @customer.apellido_materno_del_conyuge %>
+    
+     </td>
+     
+    </tr>
+    
+    <tr>
+     
+     <td>
+       <strong >NOMBRE 1 DEL CÓNYUGE:</strong>
+       <%= @customer.nombre_1_del_conyuge %>
+    
+     </td>
+     <td>
+       <strong >NOMBRE 2 DEL CÓNYUGE:</strong>
+        <%= @customer.nombre_2_del_conyuge %>
+    
+     </td>
+     <td>
+       <strong >TELEFONO CELULAR DEL CÓNYUGE:</strong>
+       <%= @customer.telefono_celular_del_conyuge %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     <td>
+       <strong >TELEFONO OFICINA DEL CÓNYUGE: </strong>
+       <%= @customer.telefono_de_oficina_del_conyuge %>
+    
+     </td>
+     <td>
+       <strong >CALLE: </strong>
+       <%= @customer.calle %>
+    
+     </td>
+     <td>
+       <strong >NUMERO INTERIOR:</strong>
+       <%= @customer.numero_interior %>
+    
+     </td>
+     
+    </tr>
+    
+    <tr>
+     
+     <td>
+       <strong >NUMERO EXTERIOR:</strong>
+         <%= @customer.numero_exterior %>
+    
+     </td>
+     <td>
+       <strong >TIPO DE DOMICILIO:</strong>
+       <%= Auxiliar.casa_nombre(@customer.tipo_de_domicilio) %>
+    
+     </td>
+     <td>
+       <strong >CÓDIGO POSTAL:</strong>
+       <%= @customer.codigo_postal %>
+    
+     </td>
+     
+   </tr>
+   <tr>
+     <td>
+       <strong >COLONIA: </strong>
+       <%= @customer.colonia %>
+    
+     </td>
+     <td>
+       <strong >MUNICIPIO: </strong>
+       <%= @customer.municipio %>
+    
+     </td>
+     <td>
+       <strong >EMPRESA DONDE LABORA:</strong>
+       <%= @customer.empresa_donde_labora %>
+    
+     </td>
+     
+    </tr>
+    
+    <tr>
+     
+     <td>
+       <strong >GIRO DE LA EMPRESA:</strong>
+       <%= @customer.giro_de_la_empresa %>
+    
+     </td>
+     <td>
+       <strong >PUESTO:</strong>
+       <%= @customer.puesto %>
+    
+     </td>
+     <td>
+       <strong >OCUPACIÓN DEL CÓNYUGE:</strong>
+       <%= @customer.ocupacion_del_conyuge %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     <td>
+       <strong >EMPRESA DONDE LABORA EL CÓNYUGE: </strong>
+       <%= @customer.empresa_donde_labora_el_conyuge %>
+      <%unless @customer.ocupation.nil?%>
+  
+      <strong>Puesto:</strong>
+      <%= @customer.ocupation.descripcion %>
+    
+    <%end%>
+    
+    
+     </td>
+     <td>
+       <strong >EMAIL 1: </strong>
+       <%= @customer.email_1 %>
+    
+     </td>
+     <td>
+       <strong >EMAIL 2:</strong>
+       <%= @customer.email_2 %>
+    
+     </td>
+     
+    </tr>
+    
+    <tr>
+     
+     <td>
+       <strong >ESCOLARIDAD:</strong>
+         <%= Auxiliar.escolaridad_nombre @customer.escolaridad %>
+    
+     </td>
+     <td>
+       <strong >NUMERO DE DEPENDIENTES ECONOMICOS:</strong>
+       <%= @customer.numero_de_dependientes_economicos %>
+    
+     </td>
+     <td>
+       <strong >GASTO PROMEDIO MENSUAL:</strong>
+       <%= @customer.numero_de_dependientes_economicos %>
+    
+     </td>
+     
+   </tr>
+   <tr>
+     
+     <td>
+       <strong >EMPRESA DONDE LABORA EL CÓNYUGE:</strong>
+       
+         <%= @customer.empresa_donde_labora_el_conyuge %>
+    
+     </td>
+        <td>
+       <strong >PAIS:</strong>
+       <%= @customer.country %>
+    
+     </td>
+     <td>
+       <strong >TELEFONO EMPRESA:</strong>
+       <%= @customer.telefono_empresa %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     
+     <td>
+       <strong >SUELDO MENSUAL NETO:</strong>
+         <%= @customer.sueldo_mensual_neto %>
+    
+     </td>
+     <td>
+       <strong >DIRECCIÓN EMPRESA:</strong>
+       <%= @customer.dirreccion_empresa %>
+    
+     </td>
+     <td>
+       <strong >COLONIA EMPRESA:</strong>
+       <%= @customer.colonia_empresa %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     
+     <td>
+       <strong >MUNICIPIO EMPRESA:</strong>
+         <%= @customer.municipio_empresa %>
+    
+     </td>
+     <td>
+       <strong >NOMBRE REFERENCIA 1:</strong>
+       <%= @customer.nombre_referencia_1 %>
+    
+     </td>
+     <td>
+       <strong >DOMICILIO REFERENCIA 1:</strong>
+       <%= @customer.domicilio_referencia_1 %>
+    
+     </td>
+     
+   </tr>
+      <tr>
+     
+     <td>
+       <strong >TELEFONO FIJO REFERENCIA 1:</strong>
+          <%= @customer.telefono_fijo_referencia_1 %>
+    
+     </td>
+     <td>
+       <strong >TELEFONO CELULAR REFERENCIA 1:</strong>
+       <%= @customer.telefono_celular_referencia_1 %>
+    
+     </td>
+     <td>
+       <strong >NOMBRE REFERENCIA 2:</strong>
+       <%= @customer.nombre_referencia_2 %>
+    
+     </td>
+     
+   </tr>
+   <tr>
+     
+     <td>
+       <strong >DOMICILIO REFERENCIA 2:</strong>
+         <%= @customer.domicilio_referencia_2 %>
+    
+     </td>
+     <td>
+       <strong >TELEFONO FIJO REFERENCIA 2:</strong>
+       <%= @customer.telefono_fijo_referencia_2 %>
+    
+     </td>
+     <td>
+       <strong >TELEFONO CELULAR REFERENCIA 2:</strong>
+       <%= @customer.telefono_celular_referencia_2 %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     
+     <td>
+       <strong >NOMBRE REFERENCIA FAMILIAR:</strong>
+         <%= @customer.nombre_referencia_familiar %>
+    
+     </td>
+     <td>
+       <strong >DOMICILIO REFERENCIA FAMILIAR:</strong>
+       <%= @customer.domicilio_referencia_familiar %>
+    
+     </td>
+     <td>
+       <strong >TELEFONO FIJO REFERENCIA FAMILIAR:</strong>
+       <%= @customer.telefono_fijo_referencia_familiar %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     
+     <td>
+       <strong >TELEFONO CELULAR REFERENCIA FAMILIAR:</strong>
+         <%= @customer.telefono_celular_referencia_familiar %>
+    
+     </td>
+     <td>
+       <strong >NOMBRE COMPLETO FAMILIAR 2:</strong>
+       <%= @customer.nombre_completo_familiar_2 %>
+
+    
+     </td>
+     <td>
+       <strong >PARENTESCO 2:</strong>
+       <%= @customer.parentesco_2 %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     
+     <td>
+       <strong >NOMBRE COMPLETO 1:</strong>
+         <%= @customer.nombre_completo_1 %>
+    
+     </td>
+     <td>
+       <strong >EDAD:</strong>
+       <%= @customer.edad_1 %>
+    
+     </td>
+     <td>
+       <strong > PARENTESCO DEL DEPENDIENTE 1:</strong>
+       <%= @customer.parentesco_del_dependiente_1 %>
+    
+     </td>
+     
+   </tr>
+      <tr>
+     
+     <td>
+       <strong >NOMBRE COMPLETO 2:</strong>
+          <%= @customer.nombre_completo_2 %>
+    
+     </td>
+     <td>
+       <strong >EDAD 2:</strong>
+           <%= @customer.edad_2 %>
+    
+     </td>
+     <td>
+       <strong >PARENTESCO DEL DEPENDIENTE 2:</strong>
+       <%= @customer.parentesco_del_dependiente_2 %>
+    
+     </td>
+     
+   </tr>
+   <tr>
+     
+     <td>
+       <strong >NOMBRE COMPLETO 3:</strong>
+         <%= @customer.nombre_completo_3 %>
+    
+     </td>
+     <td>
+       <strong >EDAD 3:</strong>
+       <%= @customer.edad_3 %>
+    
+     </td>
+     <td>
+       <strong >PARENTESCO DEL DEPENDIENTE 3:</strong>
+       <%= @customer.parentesco_del_dependiente_3 %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     
+     <td>
+       <strong >ACTIVIDAD ECONOMICA:</strong>
+         <%= @customer.economical_activity.descripcion unless @customer.economical_activity.nil? %>
+    
+     </td>
+     <td>
+       <strong >NOMBRE COMPLETO FAMILIAR 3:</strong>
+       <%= @customer.nombre_completo_familiar_3 %>
+    
+     </td>
+     <td>
+       <strong >PARENTESCO 3:</strong>
+       <%= @customer.parentesco_3 %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     
+     <td>
+       <strong >NOMBRE COMPLETO FAMILIAR 4:</strong>
+         <%= @customer.nombre_completo_familiar_4 %>
+    
+     </td>
+     <td>
+       <strong >PARENTESCO 4:</strong>
+       <%= @customer.parentesco_4 %>
+
+    
+     </td>
+     <td>
+       <strong >NOMBRE COMPLETO 4:</strong>
+       <%= @customer.nombre_completo_4 %>
+    
+     </td>
+     
+   </tr>
+      <tr>
+     
+     <td>
+       <strong >EDAD 4:</strong>
+         <%= @customer.edad_4 %>
+    
+     </td>
+     <td>
+       <strong >PARENTESCO DEL DEPENDIENTE 4:</strong>
+       <%= @customer.parentesco_del_dependiente_4 %>
+    
+     </td>
+     <td>
+       <strong >ESTADO ACTUAL:</strong>
+       <%= @customer.estado_actual %>
+    
+     </td>
+     
+   </tr>
+    <tr>
+     
+     <td>
+       <strong> LOCALIDAD:</strong>
+         <%= @customer.localidad %>
+    
+     </td>
+     <td>
+       <strong >OBSERVACIONES:</strong>
+        <%= @customer.observaciones %>
+
+    
+     </td>
+     
+     
+   </tr>
+  
+ </table>
+ <!--<div class="show row">  
+    <p>
+      <strong >Agente o Empresa:</strong>
+      <%= @customer.padre.nombre_completo %>
+    </p>
+    
+    <p>
+      <strong>Como se entero:</strong>
+      <%= @customer.como_se_entero %>
+    </p>
+    
+    <p>
+      <strong>Familiar con prestamo:</strong>
+      <%= @customer.familiar_con_prestamo %>
+    </p>
+    
+    <p>
+      <strong>Nombre completo familiar 1:</strong>
+      <%= @customer.nombre_completo_familiar_1 %>
+    </p>
+    
+    <p>
+      <strong>Parentesco 1:</strong>
+      <%= @customer.parentesco_1 %>
+    </p>
+    
+    <p>
+      <strong>Apellido paterno:</strong>
+      <%= @customer.apellido_paterno %>
+    </p>
+    
+    <p>
+      <strong>Apellido materno:</strong>
+      <%= @customer.apellido_materno %>
+    </p>
+    
+    <p>
+      <strong>Nombre 1:</strong>
+      <%= @customer.nombre_1 %>
+    </p>
+    
+    <p>
+      <strong>Nombre 2:</strong>
+      <%= @customer.nombre_2 %>
+    </p>
+    
+    <p>
+      <strong>Rfc:</strong>
+      <%= @customer.RFC %>
+    </p>
+    
+    <p>
+      <strong>Curp:</strong>
+      <%= @customer.CURP %>
+    </p>
+    
+    <p>
+      <strong>Seguro:</strong>
+      <%= @customer.seguro %>
+    </p>
+    
+    <p>
+      <strong>Ine:</strong>
+      <%= @customer.INE %>
+    </p>
+    
+    <p>
+      <strong>Nacionalidad:</strong>
+      <%= @customer.nacionalidad %>
+    </p>
+    
+    <p>
+      <strong>Fecha de nacimiento:</strong>
+      <%= @customer.fecha_de_nacimiento %>
+    </p>
+    
+    <p>
+      <strong>Ciudad de nacimiento:</strong>
+      <%= @customer.ciudad_de_nacimiento %>
+    </p>
+    
+    <p>
+      <strong>Estado de nacimiento:</strong>
+      <%= @customer.estado_de_nacimiento %>
+    </p>
+    
+    <p>
+      <strong>Sexo:</strong>
+      <%= @customer.sexo %>
+    </p>
+    
+    <p>
+      <strong>Telefono de casa:</strong>
+      <%= @customer.telefono_de_casa %>
+    </p>
+    
+    <p>
+      <strong>Telefono celular:</strong>
+      <%= @customer.telefono_celular %>
+    </p>
+    
+    <p>
+      <strong>Email 1:</strong>
+      <%= @customer.email_1 %>
+    </p>
+    
+    <p>
+      <strong>Email 2:</strong>
+      <%= @customer.email_2 %>
+    </p>
+    
+    <p>
+      <strong>Escolaridad:</strong>
+      <%= Auxiliar.escolaridad_nombre @customer.escolaridad %>
+    </p>
+    
+    <p>
+      <strong>Numero de dependientes economicos:</strong>
+      <%= @customer.numero_de_dependientes_economicos %>
+    </p>
+    
+    <p>
+      <strong>Gasto promedio mensual:</strong>
+      <%= @customer.gasto_promedio_mensual %>
+    </p>
+    
+    <p>
+      <strong>Estado civil:</strong>
+      <%= Auxiliar.estado_civil_nombre @customer.estado_civil %>
+    </p>
+    
+    <p>
+      <strong>Apellido paterno del conyuge:</strong>
+      <%= @customer.apellido_paterno_del_conyuge %>
+    </p>
+    
+    <p>
+      <strong>Apellido materno del conyuge:</strong>
+      <%= @customer.apellido_materno_del_conyuge %>
+    </p>
+    
+    <p>
+      <strong>Nombre 1 del conyuge:</strong>
+      <%= @customer.nombre_1_del_conyuge %>
+    </p>
+    
+    <p>
+      <strong>Nombre 2 del conyuge:</strong>
+      <%= @customer.nombre_2_del_conyuge %>
+    </p>
+    
+    <p>
+      <strong>Telefono celular del conyuge:</strong>
+      <%= @customer.telefono_celular_del_conyuge %>
+    </p>
+    
+    <p>
+      <strong>Telefono de oficina del conyuge:</strong>
+      <%= @customer.telefono_de_oficina_del_conyuge %>
+    </p>
+    
+    <p>
+      <strong>Calle:</strong>
+      <%= @customer.calle %>
+    </p>
+    
+    <p>
+      <strong>Numero interior:</strong>
+      <%= @customer.numero_interior %>
+    </p>
+    
+    <p>
+      <strong>Numero exterior:</strong>
+      <%= @customer.numero_exterior %>
+    </p>
+    
+    <p>
+      <strong>Tipo de domicilio:</strong>
+      <%= Auxiliar.casa_nombre(@customer.tipo_de_domicilio) %>
+    </p>
+    
+    <p>
+      <strong>Codigo postal:</strong>
+      <%= @customer.codigo_postal %>
+    </p>
+    
+    <p>
+      <strong>Colonia:</strong>
+      <%= @customer.colonia %>
+    </p>
+    
+    <p>
+      <strong>Municipio:</strong>
+      <%= @customer.municipio %>
+    </p>
+    
+    <p>
+      <strong>Empresa donde labora:</strong>
+      <%= @customer.empresa_donde_labora %>
+    </p>
+    
+    <p>
+      <strong>Giro de la empresa:</strong>
+      <%= @customer.giro_de_la_empresa %>
+    </p>
+    
+    <p>
+      <strong>Puesto:</strong>
+      <%= @customer.puesto %>
+    </p>
+    <p>
+      <strong>Ocupacion del conyuge:</strong>
+      <%= @customer.ocupacion_del_conyuge %>
+    </p>
+    <p>
+      <strong>Empresa donde labora el conyuge:</strong>
+      <%= @customer.empresa_donde_labora_el_conyuge %>
+    </p>
+    <%unless @customer.ocupation.nil?%>
+    <p>
+      <strong>Puesto:</strong>
+      <%= @customer.ocupation.descripcion %>
+    </p>
+    <%end%>
+    <p>
+      <strong>Telefono empresa:</strong>
+      <%= @customer.telefono_empresa %>
+    </p>
+    
+    <p>
+      <strong>Sueldo mensual neto:</strong>
+      <%= @customer.sueldo_mensual_neto %>
+    </p>
+    
+    <p>
+      <strong>Dirreccion empresa:</strong>
+      <%= @customer.dirreccion_empresa %>
+    </p>
+    
+    <p>
+      <strong>Colonia empresa:</strong>
+      <%= @customer.colonia_empresa %>
+    </p>
+    
+    <p>
+      <strong>Municipio empresa:</strong>
+      <%= @customer.municipio_empresa %>
+    </p>
+    
+    <p>
+      <strong>Nombre referencia 1:</strong>
+      <%= @customer.nombre_referencia_1 %>
+    </p>
+    
+    <p>
+      <strong>Domicilio referencia 1:</strong>
+      <%= @customer.domicilio_referencia_1 %>
+    </p>
+    
+    <p>
+      <strong>Telefono fijo referencia 1:</strong>
+      <%= @customer.telefono_fijo_referencia_1 %>
+    </p>
+    
+    <p>
+      <strong>Telefono celular referencia 1:</strong>
+      <%= @customer.telefono_celular_referencia_1 %>
+    </p>
+    
+    <p>
+      <strong>Nombre referencia 2:</strong>
+      <%= @customer.nombre_referencia_2 %>
+    </p>
+    
+    <p>
+      <strong>Domicilio referencia 2:</strong>
+      <%= @customer.domicilio_referencia_2 %>
+    </p>
+    
+    <p>
+      <strong>Telefono fijo referencia 2:</strong>
+      <%= @customer.telefono_fijo_referencia_2 %>
+    </p>
+    
+    <p>
+      <strong>Telefono celular referencia 2:</strong>
+      <%= @customer.telefono_celular_referencia_2 %>
+    </p>
+    
+    <p>
+      <strong>Nombre referencia familiar:</strong>
+      <%= @customer.nombre_referencia_familiar %>
+    </p>
+    
+    <p>
+      <strong>Domicilio referencia familiar:</strong>
+      <%= @customer.domicilio_referencia_familiar %>
+    </p>
+    
+    <p>
+      <strong>Telefono fijo referencia familiar:</strong>
+      <%= @customer.telefono_fijo_referencia_familiar %>
+    </p>
+    
+    <p>
+      <strong>Telefono celular referencia familiar:</strong>
+      <%= @customer.telefono_celular_referencia_familiar %>
+    </p>
+    
+    <p>
+      <strong>Nombre completo familiar 2:</strong>
+      <%= @customer.nombre_completo_familiar_2 %>
+    </p>
+    
+    <p>
+      <strong>Parentesco 2:</strong>
+      <%= @customer.parentesco_2 %>
+    </p>
+    
+    <p>
+      <strong>Nombre completo 1:</strong>
+      <%= @customer.nombre_completo_1 %>
+    </p>
+    
+    <p>
+      <strong>Edad 1:</strong>
+      <%= @customer.edad_1 %>
+    </p>
+    
+    <p>
+      <strong>Parentesco del dependiente 1:</strong>
+      <%= @customer.parentesco_del_dependiente_1 %>
+    </p>
+    
+    <p>
+      <strong>Nombre completo 2:</strong>
+      <%= @customer.nombre_completo_2 %>
+    </p>
+    
+    <p>
+      <strong>Edad 2:</strong>
+      <%= @customer.edad_2 %>
+    </p>
+    
+    <p>
+      <strong>Parentesco del dependiente 2:</strong>
+      <%= @customer.parentesco_del_dependiente_2 %>
+    </p>
+    
+    <p>
+      <strong>Nombre completo 3:</strong>
+      <%= @customer.nombre_completo_3 %>
+    </p>
+    
+    <p>
+      <strong>Edad 3:</strong>
+      <%= @customer.edad_3 %>
+    </p>
+    
+    <p>
+      <strong>Parentesco del dependiente 3:</strong>
+      <%= @customer.parentesco_del_dependiente_3 %>
+    </p>
+    
+   
+    <p>
+      <strong>Nombre completo familiar 3:</strong>
+      <%= @customer.nombre_completo_familiar_3 %>
+    </p>
+    
+    <p>
+      <strong>Parentesco 3:</strong>
+      <%= @customer.parentesco_3 %>
+    </p>
+    
+    <p>
+      <strong>Nombre completo familiar 4:</strong>
+      <%= @customer.nombre_completo_familiar_4 %>
+    </p>
+    
+    <p>
+      <strong>Parentesco 4:</strong>
+      <%= @customer.parentesco_4 %>
+    </p>
+    
+    <p>
+      <strong>Nombre completo 4:</strong>
+      <%= @customer.nombre_completo_4 %>
+    </p>
+    
+    <p>
+      <strong>Edad 4:</strong>
+      <%= @customer.edad_4 %>
+    </p>
+    
+    <p>
+      <strong>Parentesco del dependiente 4:</strong>
+      <%= @customer.parentesco_del_dependiente_4 %>
+    </p>
+    
+    <p>
+      <strong>Estado actual:</strong>
+      <%= @customer.estado_actual %>
+    </p>
+    
+    <p>
+      <strong>Localidad:</strong>
+      <%= @customer.localidad %>
+    </p>
+    
+    <p>
+      <strong>Observaciones:</strong>
+      <%= @customer.observaciones %>
+    </p>
+    
+ 
+  </div>
+  -->
+ 
+<%= link_to 'EDITAR',edit_customer_path(@customer) ,class:"waves-effect waves-light btn" %> |
+<%= link_to 'ATRAS', customers_path,class:"waves-effect waves-light btn" %>

@@ -1,0 +1,43 @@
+<div class="row card">
+  <h3 class="center-align">
+    
+  </h3>
+</div>
+<% if @credit.fecha_de_contrato.nil? or current_user.tipo==1  %>
+<div class= "row" ng-controller="numero_de_cheque_c">
+  <div class="col s12 m6 l4">
+    NUMERO DE CHEQUE:<br>
+    <input type="number" id="numero_de_cheque" ng-model="numero" ng-change="enviar()">
+  </div>
+</div>
+
+<div class="row">
+    <% if @credit.product_id ==6 || @credit.product_id ==9 %>
+        <a href=<%="/view_credits/contratomunicipal?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Contrato</span></a>
+        <a href=<%="/view_credits/corridamun?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
+        <a href=<%="/view_credits/caratulamun?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Carátula</span></a>
+        <a href=<%="/view_credits/polizamun?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Póliza</span></a>
+        <a href=<%="/view_credits/entrevista?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Entrevista</span></a>
+        <a href=<%="/view_credits/autorizacion?clave=#{@credit.id}"%>  target = "_blank"><span class="waves-effect waves-light btn">Reporte de Crédito</span></a>
+    <%else%> 
+      <% if @credit.product_id ==10 or @credit.product_id ==11 or @credit.product_id ==12 %>
+        <!--a href=<%="/view_credits/contrato?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Contrato</span></a-->
+        <a href=<%="/view_credits/corrida?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
+      <%else%> 
+        <a href=<%="/view_credits/contrato?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Contrato</span></a>
+        <a href=<%="/view_credits/corrida?clave=#{@credit.id}"%> target = "_blank"> <span class="waves-effect waves-light btn">Corrida</span></a>
+        <a href=<%="/view_credits/caratula?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Carátula</span></a>
+        <a href=<%="/view_credits/poliza?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Póliza</span></a>
+        <a href=<%="/view_credits/entrevista?clave=#{@credit.id}"%> target = "_blank"><span class="waves-effect waves-light btn">Entrevista</span></a>
+        <a href=<%="/view_credits/autorizacion?clave=#{@credit.id}"%>  target = "_blank"><span class="waves-effect waves-light btn">Reporte de Crédito</span></a>
+      <%end%> 
+    <%end%>
+
+    
+
+</div>
+<%end%>
+<%= link_to 'Atras',@link , class:"crud-links",id:"regreso" %>
+
+</script>
+

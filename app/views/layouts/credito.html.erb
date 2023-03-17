@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html ng-app ="app_marjo" style = "width:1300px;">
+<head>
+  <title>Workspace</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script>
+  
+    
+    angular.module("app_marjo",[])
+    .controller("solicitud",["$scope","$http","$location",function($scope,$http,$location){
+    $scope.credito="";
+    $scope.block=false;
+    $scope.paices = [];
+    $scope.estados =[];
+    $scope.cuidades = [];
+    $scope.url = location.protocol + '//' + location.host + location.pathname;
+    $("#solo_en_new").hide();
+    $("#errores").hide();
+    var longitud = $scope.url.split("/").length
+    $('#autorelleno').hide();
+    if (($scope.url.split("/")[longitud-1]==="edit")){
+      console.log($scope.url.split("/",longitud-1).join("/")+".json");
+      $http.get($scope.url.split("/",longitud-1).join("/")+".json")
+      .success(function(data){
+          $scope.credito=data;
+          ajuste_credito();
+          console.log( $scope.credito);
+      })
+      .error(function(data){
+          console.log(data);
+      });
+      $("#solo_en_new").show();
+    }else if($scope.url.split("/")[longitud-1]==="new"){
+      $("#solo_en_new").show();
+      $("#pdfs").hide();
+    }else if($scope.url.split("/")[longitud-1]==="nuevo"){
+      $("#solo_en_new").show();
+      $("#pdfs").hide();
+    }else if($scope.url.split("/")[longitud-1]==="credits"){
+      $("#solo_en_new").show();
+      $("#errores").show();
+      $("#pdfs").hide();
+    }else{
+      console.log($scope.url.split("/",longitud-1).join("/")+".json");
+      $http.get($scope.url.split("/",longitud).join("/")+".json")
+      .success(function(data){
+          $scope.credito=data;
+          ajuste_credito();
+          console.log( $scope.credito);
+      })
+      .error(function(data){
+          console.log(data);
+      });
+      $scope.block =true;
+    }
+    function ajuste_credito(){
+      console.log("cambio"+$scope.credito.fecha_de_nacimiento_conyuge);
+      $scope.credito.fecha_de_nacimiento=$scope.credito.fecha_de_nacimiento+"";
+      $scope.credito.fecha_de_nacimiento_conyuge=$scope.credito.fecha_de_nacimiento_conyuge+"";
+      console.log("cambio"+$scope.credito.fecha_de_nacimiento_conyuge);
+        $scope.credito.fecha_de_nacimiento = new Date($scope.credito.fecha_de_nacimiento.split("-")[0],$scope.credito.fecha_de_nacimiento.split("-")[1]-1,$scope.credito.fecha_de_nacimiento.split("-")[2]);
+          $scope.credito.fecha_de_nacimiento_conyuge = new Date($scope.credito.fecha_de_nacimiento_conyuge.split("-")[0],$scope.credito.fecha_de_nacimiento_conyuge.split("-")[1]-1,$scope.credito.fecha_de_nacimiento_conyuge.split("-")[2]);
+          $scope.credito.referencia_agente_empresa=$scope.credito.referencia_agente_empresa+"";
+          $scope.credito.colonia=$scope.credito.colonia+"";
+          $scope.credito.economical_activity_id=$scope.credito.economical_activity_id+"";
+          $scope.credito.profecion_id=$scope.credito.profecion_id+"";
+          $scope.credito.ocupation_id=$scope.credito.ocupation_id+"";
+          $scope.credito.fiel=$scope.credito.fiel+"";
+           $scope.credito.antiguedad_en_el_domicilio_actual_anos = $scope.credito.antiguedad_en_el_domicilio_actual_anos+"";
+           $scope.credito.antiguedad_en_el_domicilio_actual_meses = $scope.credito.antiguedad_en_el_domicilio_actual_meses+"";
+           $scope.credito.antiguedad_en_el_domicilio_anterior_anos = $scope.credito.antiguedad_en_el_domicilio_anterior_anos+"";
+           $scope.credito.antiguedad_en_el_domicilio_anterior_meses = $scope.credito.antiguedad_en_el_domicilio_anterior_meses+"";
+           $scope.credito.antiguedad_laboral_anos = $scope.credito.antiguedad_laboral_anos+"";
+           $scope.credito.antiguedad_laboral_meses = $scope.credito.antiguedad_laboral_meses+"";
+           $scope.agente_o_empresa();
+          $scope.type();
+    }
+    function filterfun(p2){ 
+      return function(p) { 
+        console.log("P2",p2);
+        return p.nombre == p2 
+      }
+    }
+    $scope.setCredito = function(data){
+      if($scope.credito!=null)
+        return;
+       $scope.credito = data;
+    }
+    
+    $scope.numquinc=function(){
+      if ($scope.credito.produc_id==12){
+        return num == 8
+      }else
+        return num == 6
+    }
+    
+     $scope.validarcte = function(data){
+      if($scope.credito.customer_id!=null)
+       return valido == 1 
+    }
+    
+    $scope.getPaices = function(){
+      $http.get("/combos/pais.json")
+      .success(function(data){
+        $scope.paices = data;
+        console.log($scope.credito.contry);
+        
+        console.log(data);
+      })
+      .error(function(data){
+        console.log(data);
+      })
+    }
+    $scope.getEstados = function(){
+      $scope.paices.text = JSON.parse($scope.paices.selected).nombre;
+      url = "/combos/estado.json";
+      id = JSON.parse($scope.paices.selected).id;
+      if(JSON.parse($scope.paices.selected).id != null)
+        url = url + "?id_country="+id;
+      $http.get(url)
+      .success(function(data){
+        $scope.estados = data;
+        console.log(data);
+      })
+      .error(function(data){
+        console.log(data);
+      })
+    }
+    $scope.getCiudades = function(){
+      $scope.estados.text = JSON.parse($scope.estados.selected).nombre;
+      url = "/combos/ciudad.json";
+      id = JSON.parse($scope.estados.selected).clave;
+      if(JSON.parse($scope.estados.selected).id != null)
+        url = url + "?id_state="+id;
+      $http.get(url)
+      .success(function(data){
+        $scope.ciudades = data;
+        console.log(data);
+        console.log(url);
+      })
+      .error(function(data){
+        console.log(data);
+      })
+    }
+    $scope.ciudadesChange =function(){
+      $scope.ciudades.text = JSON.parse($scope.ciudades.selected).nombre;
+    }
+    $scope.rellenar=function(data){
+      $('#autorelleno').hide();
+      //$(".cerrar_bloquear").prop("disabled",true );
+      //$('#credit_apellido_paterno').prop('disabled', true);
+
+      $scope.credito= data;
+      ajuste_credito();
+      console.log(data);
+    }
+    $scope.ocultar=function(){
+      $('#autorelleno').hide();
+    }
+    $scope.focus_curp=function(){
+      if ($scope.credito.es_cliente==1){
+        $('#autorelleno').show();
+        $('#curp_buscador').focus();
+      }else
+        $('#autorelleno').hide();
+      console.log($scope.credito.es_cliente);
+    }
+    
+
+    
+    $scope.agente_o_empresa = function(){
+      $scope.tipo="";
+      $scope.agentEmp=[];
+      if($scope.credito.agente_empresa==1)
+      {
+        $scope.tipo="Agente";
+        $http.get("/agents.json")
+        .success(function(data){
+          for (var x=0;x<data.length;x++)
+            $scope.agentEmp.push({id:data[x].id,nombre:data[x].nombre_del_agente});
+          console.log($scope.agentEmp);
+        })
+        .error(function(data){
+          console.log(data);
+        });
+      }else if ($scope.credito.agente_empresa==0){
+        $scope.tipo="Empresa";
+        $http.get("/companies.json")
+        .success(function(data){
+          for (var x=0;x<data.length;x++)
+            $scope.agentEmp.push({id:data[x].id,nombre:data[x].nombre_de_empresa});
+          console.log(data);
+        })
+        .error(function(data){
+          console.log(data);
+      });
+      }
+    }
+   
+    $scope.buscarCliente=function(val){
+      var query="/customers.json?"
+      if($scope.credito.CURP!=""&&$scope.credito.CURP!=null)
+        query= query+"curp="+$scope.credito.CURP+"&";
+      if($scope.credito.apellido_paterno!=""&&$scope.credito.apellido_paterno!=null)
+        query= query+"paterno="+$scope.credito.apellido_paterno+"&";
+      if($scope.credito.apellido_materno!=""&&$scope.credito.apellido_materno!=null)
+        query= query+"materno="+$scope.credito.apellido_materno+"&";
+      if($scope.credito.nombre_1!=""&&$scope.credito.nombre_1!=null)
+        query= query+"nombre1="+$scope.credito.nombre_1+"&";
+      if($scope.credito.nombre_2!=""&&$scope.credito.nombre_2!=null)
+        query= query+"nombre2="+$scope.credito.nombre_2+"&";
+      console.log(query);
+      $http.get(query)
+      .success(function(data){
+        
+        if (data.length!=0){
+          $scope.clientes=data;
+          $('#autorelleno').show();
+        }else{
+          if(val)
+          $('#autorelleno').hide();
+        }
+        console.log(data);
+      })
+      .error(function(data){
+        console.log(data);
+      });
+      
+    }
+    
+    
+    $scope.buscarUltCredCte=function(val){
+      var query="/customers.json?"
+      if($scope.credito.CURP!=""&&$scope.credito.CURP!=null)
+        query= query+"curp="+$scope.credito.CURP+"&";
+      if($scope.credito.apellido_paterno!=""&&$scope.credito.apellido_paterno!=null)
+        query= query+"paterno="+$scope.credito.apellido_paterno+"&";
+      if($scope.credito.apellido_materno!=""&&$scope.credito.apellido_materno!=null)
+        query= query+"materno="+$scope.credito.apellido_materno+"&";
+      if($scope.credito.nombre_1!=""&&$scope.credito.nombre_1!=null)
+        query= query+"nombre1="+$scope.credito.nombre_1+"&";
+      if($scope.credito.nombre_2!=""&&$scope.credito.nombre_2!=null)
+        query= query+"nombre2="+$scope.credito.nombre_2+"&";
+      console.log(query);
+      $http.get(query)
+      .success(function(data){
+        
+        if (data.length!=0){
+          $scope.clientes=data;
+          $('#autorelleno').show();
+        }else{
+          if(val)
+          $('#autorelleno').hide();
+        }
+        console.log(data);
+      })
+      .error(function(data){
+        console.log(data);
+      });
+      
+    }
+    
+    
+   
+        $scope.type= function(){
+          $scope.colonias=[];
+          $scope.localidades=[];
+
+          /*$http.get("https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"+ $scope.credito.codigo_postal)*/
+          $http.get("https://sepomex-api.herokuapp.com/api/v1/zip_codes?zip_code="+ $scope.credito.codigo_postal)
+    		 .success(function(data){
+          console.log(data);
+          $scope.data=data;
+          elementos=$('.model');
+          if (data.estado!==""){
+            for (var x=0;x<elementos.length;x++){
+              $(elementos[x]).addClass("active");
+            }
+          }else{
+            for (var x=0;x<elementos.length;x++){
+              $(elementos[x]).removeClass("active");
+            }
+          }
+           
+        })
+    		.error(function(data){
+    			console.log(data);
+    		});    
+        }
+        /*$(document).ready($scope.ocultar());
+        $scope.ocultar();*/
+        $scope.getPaices();
+         
+   /* var fecha_part=$scope.fecha_de_nacimiento.split("-");
+     $scope.fecha_de_nacimiento =new  Date(fecha_part[0],fecha_part[1],fecha_part[2]);
+     */
+     /*
+        $scope.municipio;
+        $scope.estado;
+        $scope.colonias=[];
+        $scope.localidades=[];
+        
+        
+        $scope.type= function(){
+        $http.get("https://sepomex-api.herokuapp.com/api/v1/zip_codes?zip_code="+ $scope.credito.codigo_postal)
+    		.success(function(data){
+    		  $scope.credito.municipio = data.zip_codes[0].d_mnpio;
+    		  $scope.credito.estado = data.zip_codes[0].d_estado;
+    		  
+    		  $scope.colonias=[];
+          $scope.localidades=[];
+          $scope.localidades.push(data.zip_codes[0].d_ciudad);
+    			for (var x=0;data.zip_codes.length;x++){
+      			$scope.colonias.push(data.zip_codes[x].d_asenta);
+    			} 
+    			
+    			/*
+    			 var ret = [];
+    			 var val = $scope.localidades;
+    			 var flag = false;
+    			 for (var x = 0;x < val.length;x++){
+             for (var y = 0;y < ret.length;y++){
+              if (!(val[x]===ret[y]))
+                flag = true;
+              }
+              if (!flag)
+                ret.push(val[x]);
+            }
+    			  $scope.localidades=[];
+    			  $scope.localidades.push(ret);
+    				alert("dfd");
+    				console.log(ret);
+    				*/
+    				/*
+    		})
+    		.error(function(data){
+    			console.log(data);
+    		});    
+        }
+        function uniqValues(val){
+          var ret = [];
+          for (var x = 0;x < val.length;x++){
+            if (exist(ret,val[x]))
+              ret.push(val[x]);
+          }
+          return ret;
+        }
+        function exist(arg,val){
+          for (var x = 0;x < arg.length;x++){
+            if (arg[x]===val){
+              return true;
+            }
+            return false;
+          }
+        }
+       */
+}]);
+  $(document).ready(function(){
+    $("input[type='text']").focusout(function(){$('input[type=text]').val (function () {
+        return this.value.toUpperCase();
+    })});
+  });
+  </script>
+  <style>
+    input[type="text"] { 
+      text-transform: uppercase;
+      }
+      ::-webkit-input-placeholder { /* WebKit browsers */
+          text-transform: none;
+      }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          text-transform: none;
+      }
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+          text-transform: none;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10+ */
+          text-transform: none;
+      }
+  </style>
+</head>
+<body id="top" class="scrollspy">
+  
+  <div class="container"> 
+    <%unless current_user.nil?%>
+      <div class="card-panel">
+        <h6 class="center-align">Usuario: <%=current_user.email%></h6>
+      </div>
+    <%end%>
+  
+    <%= yield %>
+  </div>
+</body>
+</html>
+
+

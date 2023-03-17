@@ -1,0 +1,32 @@
+wb = xlsx_package.workbook
+   wb.add_worksheet(name: "reporte usuarios") do |sheet|
+    wb.styles do |style|
+    highlight_cell = style.add_style(bg_color: "F4A460")
+    border = wb.styles.add_style({:border => { :style => :thin, :color => "000000" }}) 
+    
+    title = wb.styles.add_style(:bg_color => "F4A460",
+                           :fg_color=>"#FF000000",
+                           :border=>Axlsx::STYLE_THIN_BORDER,
+                           :alignment=>{:horizontal => :center})
+                           
+    linea = wb.styles.add_style(:bg_color => "F4A460",
+                           :fg_color=>"#FF000000",
+                           :alignment=>{:horizontal => :center})
+
+    currency = wb.styles.add_style(:format_code=>"#,##0;[Red]-#,##0",
+                              :border=>Axlsx::STYLE_THIN_BORDER)
+    
+    sheet.add_row ["FINANCIERA MARJO, S.A. DE C.V., SOFOM, E.N.R."]
+    sheet.add_row ["USUARIOS"]
+    sheet.add_row [@fecha]
+    @linea = 5
+    sheet.add_row ["USUARIO","NOMBRE","PERFIL"],:style=>[title,title,title,title,title]
+
+    @users.each do |user|
+        @avance = 0
+        
+            sheet.add_row [user.alias, user.nom1 + " " + user.nom2 + " " + user.app+ " " + user.apm, user.tipo]
+            @avance += 1
+    end
+   end
+end

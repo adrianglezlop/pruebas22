@@ -1,0 +1,22 @@
+wb = xlsx_package.workbook
+  wb.styles do |style|
+    highlight_cell = style.add_style(bg_color: "FFFF00")
+    wb.add_worksheet(name: "Perfil Transaccional Dtkta") do |sheet|
+      sheet.add_row [@branch_office.nombre] unless @branch_office.nil?
+      sheet.add_row [@padre.nombre_completo] unless @padre.nil?
+      sheet.add_row [""]
+      sheet.add_row ["ID_CLIENTE","CUENTA","NOMBRE COMPLETO","INSTRUMENTO","TIPO MONEDA","T/CAMBIO", "MONTO PREST/INV","PLAZO","FRECUENCIA","TOTAL PAGOPS","MONTO C/PAGO","AUT. ADELANTAR PAGO"],style: [ 
+
+
+      highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,
+        highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell]
+
+         @credits.each do |credit|
+
+        #sheet.add_row [customer.id,customer.id,"",customer.nombre_1, customer.nombre_2,customer.apellido_paterno, customer.apellido_materno, "CREDITO"
+        sheet.add_row [credit.customer_id, credit.id, credit.nombre_1 + " " + credit.nombre_2 + " " + credit.apellido_paterno + " " + credit.apellido_materno, "201","MXN","-",credit.monto_solicitud, "6", credit.cada_cuanto_se_realizara_el_pago,"12","","SI"
+         
+         ]
+      end
+    end
+  end

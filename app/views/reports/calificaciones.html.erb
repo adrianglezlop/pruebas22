@@ -1,0 +1,36 @@
+
+<div ng-controller="recibos">
+     <div class = "row">
+       <h1 align="center">REPORTE DE CALIFICACIONES</h1>
+         <div class = "col s12 m6 l4">
+              <label>
+                Sucursales
+              </label>
+             <select class="browser-default" ng-model="sucursales.selected" ng-change="cargarHijos()">
+                 <option value="" selected>Sucursales</option>
+                <option ng-repeat="option in sucursales" value="{{option.id}}">{{option.nombre}}</option>
+            </select>
+              <label>
+                Seleciona...
+              </label>
+              </br>
+                   <p>
+                      <input name="group1" type="radio" id="test1" value =1 ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test1">Agente</label>
+                    </p>
+                    <p>
+                      <input name="group1" type="radio" id="test2"  value =0  ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test2">Empresa</label>
+                    </p>
+                 
+                 <label>
+                   Empresa o agente
+                 </label>
+                 <select  class="browser-default" ng-model="hijos.selected">
+                    <option value="" selected>{{tipo}}</option>
+                    <option ng-repeat="option in hijos" value="{{option.id}}">{{option.nombre_completo}}</option>
+                </select>
+                <a class="waves-effect waves-light btn" ng-click="descargar_calificaciones()">Cargar</a>
+            </div>
+    </div>
+</div>

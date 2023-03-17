@@ -1,0 +1,41 @@
+<%= form_for(@conf) do |f| %>
+  <% if @conf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@conf.errors.count, "error") %> prohibited this conf from being saved:</h2>
+
+      <ul>
+      <% @conf.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :domicilio %><br>
+    <%= f.text_field :domicilio %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :representante_legal %><br>
+    <%= f.text_field :representante_legal %>
+  </div>
+  <div class="field">
+    <%= f.label :pagina %><br>
+    <%= f.text_field :pagina %>
+  </div>
+  <div class="field">
+    <%= f.label :RFC %><br>
+    <%= f.text_field :RFC %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

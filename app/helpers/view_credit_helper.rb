@@ -1,0 +1,2 @@
+module ViewCreditHelper
+end

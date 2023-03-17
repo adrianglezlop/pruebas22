@@ -1,0 +1,525 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+en:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+  activerecord:
+    attributes:
+      credit:
+    
+        #country: "Pais"
+        economical_activity_id: "Actividad Economica"
+        product_id: "Producto"
+        dirreccion_empresa: "Dirección de empresa"
+        customer_id: "Cliente"
+      user:
+        email: "Correo"
+        password: "Contraseña"
+        tipo: "Tipo"
+        app: "Apellido paterno"
+        apm: "Apellido materno"
+        nom1: "Nombre 1"
+        nom2: " Nombre 2"
+        RFC: "RFC"
+        CURP: "CURP"
+        seguro: "Seguro"
+        INE: "INE"
+        nacionalidad: " Nacionalidad"
+        fecha_nacimiento: "Fecha de nacimiento"
+        nac_ciudad: "Ciudad de nacimiento"
+        nac_estado: "Estado de nacimiento"
+        nac_pais: "Pais de nacimiento"
+        sexo: "Sexo"
+        telefono_casa: "Telefono de casa"
+        telefono_celular: "Telefono celular"
+        correo1: "Correo 1"
+        correo2: "Correo 2"
+        calle: "Calle"
+        numero_int: " Numero interior"
+        numero_ext: "Numero Esterior"
+        colonia: "Colonia"
+        codigo_postal: "Codigo postal"
+        municipio: "Municipio"
+        estado: "Estado"
+        pais: "Pais"
+    errors:
+      models:
+        credit:
+          attributes:
+            agente_empresa:
+              blank: "es requerido"
+            referencia_agenteEmpresa:
+              blank: "es requerido"
+            fecha:
+              blank: "es requerido"
+            es_cliente:
+              blank: "es requerido"
+            como_se_entero:
+              blank: "es requerido"
+            familiar_con_prestamo:
+              blank: "es requerido"
+            nombre_completo_familiar_1:
+              blank: "es requerido"
+            parentesco_1:
+              blank: "es requerido"
+            apellido_paterno:
+              blank: "es requerido"
+            apellido_materno:
+              blank: "es requerido"
+            nombre_1:
+              blank: "es requerido"
+            nombre_2:
+              blank: "es requerido"
+            RFC:
+              blank: "es requerido"
+            CURP:
+              blank: "es requerido"
+            seguro:
+              blank: "es requerido"
+            INE:
+              blank: "es requerido"
+            nacionalidad:
+              blank: "es requerido"
+            fecha_de_nacimiento:
+              blank: "es requerido"
+            ciudad_de_nacimiento:
+              blank: "es requerido"
+            estado_de_nacimiento:
+              blank: "es requerido"
+            sexo:
+              blank: "es requerido"
+            telefono_de_casa:
+              blank: "es requerido"
+            telefono_celular:
+              blank: "es requerido"
+            email_1:
+              blank: "es requerido"
+            email_2:
+              blank: "es requerido"
+            escolaridad:
+              blank: "es requerido"
+            numero_de_dependientes_economicos:
+              blank: "es requerido"
+            gasto_promedio_mensual:
+              blank: "es requerido"
+            estado_civil:
+              blank: "es requerido"
+            apellido_paterno_del_conyuge:
+              blank: "es requerido"
+            apellido_materno_del_conyuge:
+              blank: "es requerido"
+            nombre_1_del_conyuge:
+              blank: "es requerido"
+            nombre_2_del_conyuge:
+              blank: "es requerido"
+            telefono_celular_del_conyuge:
+              blank: "es requerido"
+            telefono_de_oficina_del_conyuge:
+              blank: "es requerido"
+            calle:
+              blank: "es requerido"
+            numero_interior:
+              blank: "es requerido"
+            numero_exterior:
+              blank: "es requerido"
+            tipo_de_domicilio:
+              blank: "es requerido"
+            codigo_postal:
+              blank: "es requerido"
+            colonia:
+              blank: "es requerido"
+            municipio:
+              blank: "es requerido"
+            antiguedad_en_el_domicilio_actual:
+              blank: "es requerido"
+            antiguedad_en_el_domicilio_anterior:
+              blank: "es requerido"
+            empresa_donde_labora:
+              blank: "es requerido"
+            giro_de_la_empresa:
+              blank: "es requerido"
+            puesto:
+              blank: "es requerido"
+            telefono_empresa:
+              blank: "es requerido"
+            sueldo_mensual_neto:
+              blank: "es requerido"
+            dirreccion_empresa:
+              blank: "es requerido"
+            colonia_empresa:
+              blank: "es requerido"
+            municipio_empresa:
+              blank: "es requerido"
+            monto_solicitud:
+              blank: "es requerido"
+            cada_cuanto_se_realizara_el_pago:
+              blank: "es requerido"
+            lugar_donde_se_realizara_el_pago:
+              blank: "es requerido"
+            nombre_referencia_1:
+              blank: "es requerido"
+            domicilio_referencia_1:
+              blank: "es requerido"
+            telefono_fijo_referencia_1:
+              blank: "es requerido"
+            telefono_celular_referencia_1:
+              blank: "es requerido"
+            nombre_referencia_2:
+              blank: "es requerido"
+            domicilio_referencia_2:
+              blank: "es requerido"
+            telefono_fijo_referencia_2:
+              blank: "es requerido"
+            telefono_celular_referencia_2:
+              blank: "es requerido"
+            nombre_referencia_familiar:
+              blank: "es requerido"
+            domicilio_referencia_familiar:
+              blank: "es requerido"
+            telefono_fijo_referencia_familiar:
+              blank: "es requerido"
+            telefono_celular_referencia_familiar:
+              blank: "es requerido"
+            nombre_completo_familiar_2:
+              blank: "es requerido"
+            parentesco_2:
+              blank: "es requerido"
+            nombre_completo_1:
+              blank: "es requerido"
+            edad_1:
+              blank: "es requerido"
+            parentesco_del_dependiente_1:
+              blank: "es requerido"
+            nombre_completo_2:
+              blank: "es requerido"
+            edad_2:
+              blank: "es requerido"
+            parentesco_del_dependiente_2:
+              blank: "es requerido"
+            nombre_completo_3:
+              blank: "es requerido"
+            edad_3:
+              blank: "es requerido"
+            parentesco_del_dependiente_3:
+              blank: "es requerido"
+            status:
+              blank: "es requerido"
+            economical_activity_id:
+              blank: "es requerido"
+            nombre_completo_familiar_3:
+              blank: "es requerido"
+            parentesco_3:
+              blank: "es requerido"
+            nombre_completo_familiar_4:
+              blank: "es requerido"
+            parentesco_4:
+              blank: "es requerido"
+            nombre_completo_4:
+              blank: "es requerido"
+            edad_4:
+              blank: "es requerido"
+            parentesco_del_dependiente_4:
+              blank: "es requerido"
+            estado_actual:
+              blank: "es requerido"
+            localidad:
+              blank: "es requerido"
+            observaciones:
+              blank: "es requerido"
+            croquis_file_name:
+              blank: "es requerido"
+            croquis_content_type:
+              blank: "es requerido"
+            croquis_file_size:
+              blank: "es requerido"
+            croquis_updated_at:
+              blank: "es requerido"
+            fecha_de_nacimiento_conyuge:
+              blank: "es requerido"
+            antiguedad_en_el_domicilio_actual_meses:
+              blank: "es requerido"
+            antiguedad_en_el_domicilio_actual_anos:
+              blank: "es requerido"
+            product_id:
+              blank: "es requerido"
+            antiguedad_en_el_domicilio_anterior_anos:
+              blank: "es requerido"
+            antiguedad_en_el_domicilio_anterior_meses:
+              blank: "es requerido"
+            country:
+              blank: "es requerido"
+            customer_id:
+              blank: "no se ha podido crear o vincular, por favor verifique que el RFC y el CURP esten correctos si desea cambiar estos datos de algun cliente existente hagalo desde el formulario de editar cliente"
+            antiguedad_laboral_anos:
+              blank: "es requerido"
+            antiguedad_laboral_meses:
+              blank: "es requerido"
+            Numero_de_cheque:
+              blank: "es requerido"
+        user:
+          attributes:
+            email:
+              blank: "es requerido"
+            password: 
+              blank: "es requerido"
+            tipo: 
+              blank: "es requerido"
+            app: 
+              blank: "es requerido"
+            apm: 
+              blank: "es requerido"
+            nom1: 
+              blank: "es requerido"
+            nom2: 
+              blank: "es requerido"
+            RFC: 
+              blank: "es requerido"
+            CURP: 
+              blank: "es requerido"
+            seguro: 
+              blank: "es requerido"
+            INE: 
+              blank: "es requerido"
+            nacionalidad: 
+              blank: "es requerido"
+            fecha_nacimiento: 
+              blank: "es requerido"
+            nac_ciudad: 
+              blank: "es requerido"
+            nac_estado: 
+              blank: "es requerido"
+            nac_pais: 
+              blank: "es requerido"
+            sexo: 
+              blank: "es requerido"
+            telefono_casa: 
+              blank: "es requerido"
+            telefono_celular: 
+              blank: "es requerido"
+            correo1: 
+              blank: "es requerido"
+            correo2: 
+              blank: "es requerido"
+            calle: 
+              blank: "es requerido"
+            numero_int: 
+              blank: "es requerido"
+            numero_ext: 
+              blank: "es requerido"
+            colonia: 
+              blank: "es requerido"
+            codigo_postal: 
+              blank: "es requerido"
+            municipio: 
+              blank: "es requerido"
+            estado: 
+              blank: "es requerido"
+            pais: 
+              blank: "es requerido"
+        agent:
+          attributes:
+            branch_offices_id:
+              blank: "es requerido"
+            clave:
+              blank: "es requerido"
+            nombre_del_agente:
+              blank: "es requerido"
+            apellido_materno:
+              blank: "es requerido"
+            apellido_paterno:
+              blank: "es requerido"
+            nombre_1:
+              blank: "es requerido"
+            nombre_2:
+              blank: "es requerido"
+            RFC:
+              blank: "es requerido"
+            calle:
+              blank: "es requerido"
+            numero_interior:
+              blank: "es requerido"
+            numero_exterior:
+              blank: "es requerido"
+            colonia:
+              blank: "es requerido"
+            codigo_postal:
+              blank: "es requerido"
+            municipio:
+              blank: "es requerido"
+            estado:
+              blank: "es requerido"
+            CURP:
+              blank: "es requerido"
+            seguro_social:
+              blank: "es requerido"
+            INE:
+              blank: "es requerido"
+            nacionalidad:
+              blank: "es requerido"
+            fecha_de_nacimiento:
+              blank: "es requerido"
+            ciudad_de_nacimiento:
+              blank: "es requerido"
+            estado_de_nacimiento:
+              blank: "es requerido"
+            pais_de_nacimiento:
+              blank: "es requerido"
+            sexo:
+              blank: "es requerido"
+            telefono_de_casa:
+              blank: "es requerido"
+            telefono_celular:
+              blank: "es requerido"
+            correo_electronico_1:
+              blank: "es requerido"
+            correo_electronico_2:
+              blank: "es requerido"
+            cuenta_bancaria:
+              blank: "es requerido"
+            banco:
+              blank: "es requerido"
+            comision_por_cobranza:
+              blank: "es requerido"
+            comision_por_colocacion:
+              blank: "es requerido"
+            monto_maximo_de_prestamo:
+              blank: "es requerido"
+            permitir_prestamo_multiple:
+              blank: "es requerido"
+        branch_office:
+          attributes:
+            product_id:
+              blank: "es requerido"
+            user_id:
+              blank: "es requerido"
+            nombre:
+              blank: "es requerido"
+            calle:
+              blank: "es requerido"
+            no_ext:
+              blank: "es requerido"
+            no_int:
+              blank: "es requerido"
+            colonia:
+              blank: "es requerido"
+            codigo_postal:
+              blank: "es requerido"
+            municipio:
+              blank: "es requerido"
+            estado:
+              blank: "es requerido"
+            telefono_oficina:
+              blank: "es requerido"
+            telefono_celular:
+              blank: "es requerido"
+            correo1:
+              blank: "es requerido"
+            correo2:
+              blank: "es requerido"
+            comision_por_colocacion:
+              blank: "es requerido"
+            comision_por_cobranza:
+              blank: "es requerido"
+            monto_maximo_adeudo_sucursal:
+              blank: "es requerido"
+            formato_impresion:
+              blank: "es requerido"
+        company:
+          attributes:
+            clave:
+              blank: "es requerido"
+            nombre_de_empresa:
+              blank: "es requerido"
+            razon_social:
+              blank: "es requerido"
+            calle:
+              blank: "es requerido"
+            numero_exterior:
+              blank: "es requerido"
+            numero_interior:
+              blank: "es requerido"
+            colonia:
+              blank: "es requerido"
+            codigo_postal:
+              blank: "es requerido"
+            municipio:
+              blank: "es requerido"
+            estado:
+              blank: "es requerido"
+            apellido_paterno:
+              blank: "es requerido"
+            apellido_materno:
+              blank: "es requerido"
+            nombre_1:
+              blank: "es requerido"
+            nombre_2:
+              blank: "es requerido"
+            telefono_de_oficina:
+              blank: "es requerido"
+            telefono_celular:
+              blank: "es requerido"
+            correo_electronico_1:
+              blank: "es requerido"
+            correo_electronico_2:
+              blank: "es requerido"
+            cuenta_bacaria:
+              blank: "es requerido"
+            banco:
+              blank: "es requerido"
+            comicion_por_cobranza:
+              blank: "es requerido"
+            comicion_por_colocacion:
+              blank: "es requerido"
+            monto_maximo_de_prestamo:
+              blank: "es requerido"
+            permitir_prestamo_multiple:
+              blank: "es requerido"
+              
+        loan:
+          attributes:
+            nombre: "es requerido"
+            
+        product:
+          attributes:
+            payout_id:
+              blank: "es requerido"
+            loan_id:
+              blank: "es requerido"
+            nombre_del_producto:
+              blank: "es requerido"
+            registro_del_contrado_de_adhesion:
+              blank: "es requerido"
+            plazo_de_prestamo:
+              blank: "es requerido"
+            numero_de_pagos_a_realizar:
+              blank: "es requerido"
+            taza_de_interes_ordinaria:
+              blank: "es requerido"
+            taza_de_interes_moratoria:
+              blank: "es requerido"
+            cat_sin_iva:
+              blank: "es requerido"
+            numero_de_meses_de_sueldo_para_prestemo:
+              blank: "es requerido"

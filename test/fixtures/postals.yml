@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cp: 1
+  colonia: MyString
+  municipio: MyString
+  ciudad: MyString
+
+two:
+  cp: 1
+  colonia: MyString
+  municipio: MyString
+  ciudad: MyString

@@ -1,0 +1,48 @@
+wb = xlsx_package.workbook
+wb.styles do |style|
+    highlight_cell = style.add_style(bg_color: "FFFF00")
+  wb.add_worksheet(name: "Historial de pagos") do |sheet|
+    sheet.add_row ["Numero de cliente",@customer.id]
+    sheet.add_row ["Sucursal",@customer.padre.branch_office.nombre]
+    sheet.add_row ["Empresa",@customer.padre.nombre_completo]
+    sheet.add_row ["CLIENTE",@customer.nombre_completo_deudor]
+    sheet.add_row [""]
+    sheet.add_row ["DETALLE MOVIMIENTOS"]
+    sheet.add_row ["FECHA DE OPERACION","FOLIO PRESTAMO","RECIBO","FECHA RECIBO","MOVIMIENTO","PRESTAMO","PAGO","SALDO","DIAS_ATRASADO"], style: [ highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell]
+    @customer.credits.where("credits.status =  1 or credits.status =  3").each do |credit|
+      acu = 0
+      sheet.add_row [
+      credit.fecha_de_contrato,
+      credit.id,
+      "",
+      "",
+      "PRESTAMO",
+      credit.monto_solicitud*(1+(credit.product.taza_de_interes_ordinaria/100)),
+      "",
+      credit.monto_solicitud*(1+(credit.product.taza_de_interes_ordinaria/100))
+      ]
+      Ticket.joins(:payment).where("payments.credit_id = ? and tickets.status = 0",credit.id).order("payments.fecha_de_pago").each do |t|
+          acu = acu + t.cantidad
+          xdias= (t.payment.fecha_de_pago.to_date + 15 - t.payment.fecha_updated_last_ticket.to_date).to_i
+         if xdias>0
+            xdias=""
+          else
+            xdias=xdias * -1
+         end
+          sheet.add_row [
+              t.updated_at,
+              credit.id,
+              t.id,
+              t.payment.fecha_de_pago,
+              "ABONO A PRESTAMO",
+              "",
+              t.cantidad,
+              credit.monto_solicitud*(1+(credit.product.taza_de_interes_ordinaria/100)) - acu,
+              xdias
+          ]
+      end
+    end
+    sheet.add_row []
+  
+  end
+end

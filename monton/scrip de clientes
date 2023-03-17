@@ -1,0 +1,57 @@
+   agente_empresa:boolean     referencia_agenteEmpresa:integer     como_se_entero:text        familiar_con_prestamo:boolean     nombre_completo_familiar_1:string      parentesco_1:string      apellido_paterno:string      apellido_materno:string      nombre_1:string      nombre_2:string      RFC:string      CURP:string      seguro:string      INE:string      nacionalidad:string      fecha_de_nacimiento:date        ciudad_de_nacimiento:string      estado_de_nacimiento:string      sexo:boolean     telefono_de_casa:string      telefono_celular:string      email_1:string      email_2:string      escolaridad:integer     numero_de_dependientes_economicos:integer     gasto_promedio_mensual:decimal     estado_civil:integer     apellido_paterno_del_conyuge:string      apellido_materno_del_conyuge:string      nombre_1_del_conyuge:string      nombre_2_del_conyuge:string      telefono_celular_del_conyuge:string      telefono_de_oficina_del_conyuge:string      calle:string      numero_interior:integer     numero_exterior:integer     tipo_de_domicilio:integer     codigo_postal:integer     colonia:string      municipio:string      antiguedad_en_el_domicilio_actual:string      antiguedad_en_el_domicilio_anterior:string      empresa_donde_labora:string      giro_de_la_empresa:string      puesto:string      telefono_empresa:string      antiguedad_laboral:string      sueldo_mensual_neto:string      dirreccion_empresa:string      colonia_empresa:string      municipio_empresa:string      nombre_referencia_1:string      domicilio_referencia_1:string      telefono_fijo_referencia_1:string      telefono_celular_referencia_1:string      nombre_referencia_2:string      domicilio_referencia_2:string      telefono_fijo_referencia_2:string      telefono_celular_referencia_2:string      nombre_referencia_familiar:string      domicilio_referencia_familiar:string      telefono_fijo_referencia_familiar:string      telefono_celular_referencia_familiar:string      nombre_completo_familiar_2:string      parentesco_2:string      nombre_completo_1:string      edad_1:integer     parentesco_del_dependiente_1:string      nombre_completo_2:string      edad_2:integer     parentesco_del_dependiente_2:string      nombre_completo_3:string      edad_3:integer     parentesco_del_dependiente_3:string      status:integer     economical_activity:references     nombre_completo_familiar_3:string      parentesco_3:string      nombre_completo_familiar_4:string      parentesco_4:string      nombre_completo_4:string      edad_4:string      parentesco_del_dependiente_4:string      estado_actual:string      localidad:string      observaciones:text country:references
+   
+
+
+Prawn::Document.generate("#{Rails.root.to_s}/public/#{filename}.pdf", :page_size => [576,576], :left_margin => 50, :right_margin => 50, :page_layout => :portrait, :skip_page_creation => true, :skip_encoding => true) do |pdf|
+   bg_image = "#{Rails.root.join("pdfs")}/autorizacion_en_blanco.png"
+   
+  pdf.image bg_image, :scale => 0.2311
+  pdf.move_up 576
+end
+
+bg_image = "#{Rails.root.join("pdfs")}/autorizacion_en_blanco.png"
+
+
+filename = "#{Rails.root.join("pdfs")}/autorizacion_en_blanco.pdf"
+Prawn::Document.generate("full_template.pdf", :template => filename)
+  image open("http://statics.cuantocabron.com/ccs/2016/11/CC_2622141_duele_cuando_pasa.jpg?cb=523055"), position: :center,:width=>90
+  text "hola"
+end
+
+
+def concat(filename)
+      if File.exists?(filename)
+        pdf_temp_nb_pages = Prawn::Document.new(:template => filename).page_count
+        (1..pdf_temp_nb_pages).each do |i|
+          self.start_new_page(:template => filename, :template_page => i)
+        end
+      end
+    end
+
+
+File.open("/pdfs/autorizacion_en_blanco.pdf", "rb") do |io|
+  reader = PDF::Reader.new(io)
+  puts reader.info
+end
+
+
+require 'open-uri'
+
+io     = open("#{Rails.root.join("pdfs")}/autorizacion_en_blanco.pdf")
+reader = PDF::Reader.new(io)
+puts reader.info
+
+
+require 'prawn'
+require 'pdf/toolkit'
+
+template_file = "#{Rails.root.join("pdfs")}/autorizacion_en_blanco.pdf"
+prawn_file = 'temp.pdf'
+output_file = 'output.pdf'
+
+Prawn::Document.generate(prawn_file) do
+  # Generate whatever you want here.
+  text_box "This is some new text!", :at => [100, 300]
+end
+
+PDF::Toolkit.pdftk(prawn_file, "background", template_file, "output", output_file)

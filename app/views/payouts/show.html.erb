@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @payout.nombre %>
+</p>
+
+<p>
+  <strong>Periocidad:</strong>
+  <%= @payout.periocidad %>
+</p>
+<p>
+  <strong>Tipo de payout:</strong>
+  <%= @payout.type_payout==0?"semanal":@payout.type_payout==1?"Mensual":"Anual" %>
+</p>
+<p>
+<strong>Dias de pago:</strong>
+  <%= @payout.days %>
+</p>
+<p>
+<strong>Dias de corte:</strong>
+  <%= @payout.flow %>
+</p>
+<strong>Dias de desplazamiento para la imprecion:</strong>
+  <%= @payout.desplazamiento %>
+</p>
+
+<%= link_to 'Edit', edit_payout_path(@payout) %> |
+<%= link_to 'Back', payouts_path %>

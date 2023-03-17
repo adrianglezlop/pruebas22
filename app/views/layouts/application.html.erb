@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html ng-app ="app_marjo">
+<head>
+  
+  <title>Workspace</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+          
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script>
+    
+    angular.module("app_marjo",[])
+   
+    /*.controller("cp",["$scope","$http",function($scope,$http){
+        $scope.codigo;
+        //$scope.colonias=[];
+        $scope.type= function(){
+        
+
+          $scope.colonias=[];
+          $scope.localidades=[];
+
+          /*$http.get("https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"+ $scope.credito.codigo_postal)
+          $http.get("https://sepomex-api.herokuapp.com/api/v1/zip_codes?zip_code=" + $scope.codigo)
+        .success(function(data){
+          console.log(data);
+          /*Array.prototype.unique=function(a){
+            return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
+          });
+          $scope.credito.municipio = data.zip_codes[0].d_mnpio;
+          $scope.credito.estado = data.zip_codes[0].d_estado;
+          $scope.localidades.push(data.zip_codes[0].d_mnpio);
+          //for (var x=0;data.zip_codes.length;x++){
+          for (var x=0;data.zip_codes.length;x++){
+            $scope.colonias.push(data.zip_codes[x].d_asenta);
+          } 
+
+
+          /*$scope.credito.estado_actual=data.estado;
+          $scope.credito.municipio=data.municipio;
+          $scope.colonias=data.colonias.unique();
+          $scope.localidades.push(data.municipio);
+            
+        })
+        .error(function(data){
+          console.log(data);
+        });    
+        }
+
+
+
+
+        /*$http.get("https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"+ $scope.codigo)
+    		.success(function(data){
+    			console.log(data);
+    			$scope.data=data;
+    			elementos=$('.model');
+    			if (data.estado!==""){
+    				for (var x=0;x<elementos.length;x++){
+    					$(elementos[x]).addClass("active");
+    				}
+    			}else{
+    				for (var x=0;x<elementos.length;x++){
+    					$(elementos[x]).removeClass("active");
+    				}
+    			}
+    				
+    		})
+    		.error(function(data){
+    			console.log(data);
+    		});    
+        }
+        $(document).ready(function(){
+          $scope.type();
+        });
+
+    }]).*/
+
+     .controller("cp",["$scope","$http",function($scope,$http){
+        $scope.codigo;
+        $scope.colonias=[];
+        
+        $scope.type= function(){
+       
+        //$http.get("https://api-codigos-postales.herokuapp.com/v2/codigo_postal/"+ $scope.codigo)
+         $http.get("https://sepomex-api.herokuapp.com/api/v1/zip_codes?zip_code="+ $scope.codigo)
+    .success(function(data){
+    console.log(data);
+    $scope.data=data;
+    elementos=$('.model');
+    if (data.estado!==""){
+    for (var x=0;x<elementos.length;x++){
+    $(elementos[x]).addClass("active");
+    }
+    }else{
+    for (var x=0;x<elementos.length;x++){
+    $(elementos[x]).removeClass("active");
+    }
+    }
+   
+    })
+    .error(function(data){
+    console.log(data);
+    });    
+        }
+        $(document).ready(function(){
+          $scope.type();
+        });
+    }]).controller("filtroClientes",["$scope","$http",function($scope,$http){
+    $scope.clientes=[];
+    $scope.nombre1="";
+    $scope.paterno="";
+    $scope.materno="";
+    $scope.getClientes=function(){
+        var url="";
+        if ($scope.nombre1!="" && $scope.nombre1!=undefined )
+            url=url+"nombre1="+ $scope.nombre1;
+        if ($scope.paterno!="" && $scope.paterno != undefined)
+            url=url+"&paterno="+ $scope.paterno;
+        if ($scope.materno!="" && $scope.materno != undefined)
+            url=url+"&materno="+ $scope.materno;
+        if ($scope.sucursal!="" && $scope.sucursal != undefined)
+            url=url+"&sucursal="+ $scope.sucursal;
+        if ($scope.empresa!="" && $scope.empresa != undefined)
+            url=url+"&empresa="+ $scope.empresa;
+        $http.get("/customers.json?"+url)
+        .success(function(data){
+             $scope.clientes=data;
+             console.log(data);
+             console.log("/customers.json?"+url);
+        })
+        .error(function(data){
+            console.log(data);
+        });
+    }
+    
+}])
+.controller("numero_de_cheque_c",["$scope","$http","$location",function($scope,$http,$location){
+  $scope.numero=0;
+  var clave = $location.absUrl().split("=")[1];
+  var url="/credits/"+clave;
+  $scope.enviar=function(){
+   $.ajax({
+      type:'PUT',
+      url: '/credits/'+clave,
+      dataType: 'json',
+      data: { credit: { numero_de_cheque:$scope.numero}},
+      success: function(data){
+        console.log(data);
+                 },
+      error: function(data){
+        console.log(data);
+      }
+    });
+  };
+  
+}])
+
+
+
+.controller("recibos",["$scope","$http",function($scope,$http){
+  $scope.sucursales=[];
+  $scope.agente_empresa=1;
+  $scope.seleccionados = [];
+  $scope.porductos = [];
+  $scope.hijos = [];
+  $scope.hijos.selected = [];
+  $scope.fecha=[];
+  $scope.fechas_de_pago = [];
+  $scope.pagos = [];
+  $scope.fechas=[];
+  $scope.fechas.selected=[];
+  $scope.seguimiento
+  $scope.seguimiento_datos = [];
+  $scope.tablero
+  $scope.tablero_datos = [];
+  
+  $scope.descargar_calificaciones = function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/calificaciones.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    
+     window.location.href = url
+  }
+  
+  $scope.descargar_clientes = function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal:', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/clientes.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    
+     window.location.href = url
+  }
+  $scope.descargar_dtkta_ctes= function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/dtkta_clientes.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    
+     window.location.href = url
+  }
+  
+  $scope.descargar_dtkta_cuentas= function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/dtkta_cuentas.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    
+     window.location.href = url
+  }
+  
+  $scope.descargar_dtkta_perfil= function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/dtkta_perfil.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    
+     window.location.href = url
+  }
+  
+  $scope.descargar_dtkta_movtos= function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/dtkta_movtos.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    
+     window.location.href = url
+  }
+  
+  
+  $scope.historial_de_recibos = function(){
+     var url = "/reports/historial_de_recibos.xlsx?";
+    if (!($scope.fechas.selected == ""||$scope.fechas.selected ==undefined))
+      url = url + "fecha=" + $scope.fechas.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + JSON.parse($scope.hijos.selected).id;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    if (!($scope.productos.selected == "" ||$scope.productos.selected ==undefined))
+      url = url + "&producto="+$scope.productos.selected;
+    console.log(url);
+    
+     window.location.href = url
+  }
+  
+  $scope.descargar_num_tablero = function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+     var url ="/reports/num_tablero.xlsx?"
+    if (!($scope.sucursales.selected == "" || $scope.sucursales.selected ==undefined))
+      url = url + "sucursal_id=" + $scope.sucursales.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+ 
+     window.location.href = url
+  }
+  
+  $scope.descargar_tablero = function(){
+      var url ="/reports/tablero.xlsx?"
+    if (!($scope.fechas_de_pago.selected == ""))
+      url = url + "fecha=" + $scope.fechas_de_pago.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    if (!($scope.productos.selected == "" ||$scope.productos.selected ==undefined))
+      url = url + "&producto="+$scope.productos.selected;
+    if (!($scope.fecha_encabezado == "" ||$scope.fecha_encabezado ==undefined))
+      url = url + "&fecha_encabezado="+$scope.fecha_encabezado;
+    
+     window.location.href = url
+  }
+  
+  $scope.descargar_excel = function(){
+     var url ="/reports/seguimiento.xlsx?"
+    if (!($scope.fechas_de_pago.selected == ""))
+      url = url + "fecha=" + $scope.fechas_de_pago.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    if (!($scope.productos.selected == "" ||$scope.productos.selected ==undefined))
+      url = url + "&producto="+$scope.productos.selected;
+    if (!($scope.fecha_encabezado == "" ||$scope.fecha_encabezado ==undefined))
+      url = url + "&fecha_encabezado="+$scope.fecha_encabezado;
+    
+     window.location.href = url
+  }
+   $scope.descargar_excel_quincenal = function(){
+     var url ="/reports/seguimiento_quincenal.xlsx?"
+    if (!($scope.fechas_de_pago.selected == ""))
+      url = url + "fecha=" + $scope.fechas_de_pago.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    if (!($scope.productos.selected == "" ||$scope.productos.selected ==undefined))
+      url = url + "&producto="+$scope.productos.selected;
+    if (!($scope.fecha_encabezado == "" ||$scope.fecha_encabezado ==undefined))
+      url = url + "&fecha_encabezado="+$scope.fecha_encabezado;
+    
+     window.location.href = url
+  }
+  $scope.imprimir_recibos = function(){
+    var cad = '[';
+    for(var i = 0;i < $scope.pagos.length;i++){
+      cad = cad +'{"id":' + $scope.pagos[i].id + '},'
+    }
+    cad = cad.slice(0, -1);
+    cad = cad + ']';
+    window.open("/multiprint?payments="+cad,'_blank');
+  }
+  $scope.descargar_excel_cobranza = function(){
+    <% unless current_user.nil?%>
+      <% if current_user.tipo == 3%>
+        if($scope.sucursales.selected === undefined){
+          Materialize.toast('Se debe seleccionar sucursal', 4000);
+          return;
+        }
+        if($scope.hijos.selected === undefined){
+          Materialize.toast('Se debe seleccionar usuario sucursal', 4000);
+          return;
+        }
+      <% end %>
+    <% end %>
+    var url ="/reports/cobranza.xlsx?"
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined))
+      url = url + "&tipo="+$scope.agente_empresa;
+    if (!($scope.productos.selected == "" ||$scope.productos.selected ==undefined))
+      url = url + "&producto="+$scope.productos.selected;
+    if (!($scope.fecha_inicial == "" || $scope.fecha_inicial == undefined))
+      url= url + "&fecha1="+$scope.fecha_inicial;
+    if (!($scope.fecha_final == "" || $scope.fecha_final == undefined))
+      url= url + "&fecha2="+$scope.fecha_final;
+    
+     window.open(url,'_blank');
+  }
+  $scope.get_seguimiento = function(){
+    var url ="/reports/seguimiento.json?"
+    if (!($scope.fechas_de_pago.selected == ""))
+      url = url + "fecha=" + $scope.fechas_de_pago.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    url = url + "&tipo="+$scope.agente_empresa;
+    url = url + "&producto="+$scope.productos.selected;
+    console.log(url);
+    $http.get(url)
+    .success(function(data){
+      $scope.seguimiento = data;
+      $scope.seguimiento_datos = data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  } 
+   $scope.get_tablero = function(){
+    var url ="/reports/tablero.json?"
+    if (!($scope.fechas_de_pago.selected == ""))
+      url = url + "fecha=" + $scope.fechas_de_pago.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    url = url + "&tipo="+$scope.agente_empresa;
+    url = url + "&producto="+$scope.productos.selected;
+    console.log(url);
+    $http.get(url)
+    .success(function(data){
+      $scope.tablero = data;
+      $scope.tablero_datos = data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+    
+  }
+  $scope.get_seguimiento_quincenal = function(){
+    var url ="/reports/seguimiento_quincenal.json?"
+    if (!($scope.fechas_de_pago.selected == ""))
+      url = url + "fecha=" + $scope.fechas_de_pago.selected;
+    if (!($scope.hijos.selected == "" ||$scope.hijos.selected ==undefined))
+      url = url + "&id=" + $scope.hijos.selected;
+    url = url + "&tipo="+$scope.agente_empresa;
+    url = url + "&producto="+$scope.productos.selected;
+    console.log(url);
+    $http.get(url)
+    .success(function(data){
+      $scope.seguimiento = data;
+      $scope.seguimiento_datos = data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  $scope.obtenerPayments = function(){
+    var url = "/payments.json?"
+    url = url + "padres="+ JSON.stringify($scope.seleccionados)
+    url = url + "&fecha="+ $scope.fechas.selected
+    url = url + "&producto="+ $scope.productos.selected
+    console.log(url);
+    $http.get(url)
+    .success(function(data){
+      $scope.pagos = data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  $scope.fecha_encabezado_cambio = function(val){
+    var fechas = $scope.fechas_de_pago;
+    for (var i = 0; i < fechas.length; i++){
+      if (fechas[i].fecha_de_corte == val){
+        $scope.fecha_encabezado = fechas[i].fecha_de_pago;
+      }
+    }
+  }
+    $scope.obtenerPaymentsPorEmpresa = function(){
+    var url = "/payments.json?"
+    url = url + "padres="+ JSON.stringify($scope.seleccionados)
+    url = url + "&&fecha="+ $scope.fechas.selected
+    url = url + "&&nextval=true"
+    console.log(url);
+    $http.get(url)
+    .success(function(data){
+      $scope.pagos = data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  
+  $scope.pagar_por_empresa = function(val){
+    $scope.obtenerPaymentsPorEmpresa();
+    window.open("/payments/"+val.id+"/pagar", '_blank');
+  }
+  $scope.agregar = function(data){
+    data = JSON.parse(data);
+    if (data==undefined)
+      return;
+    for (var i = 0; i<$scope.seleccionados.length;i++)
+      if($scope.seleccionados[i].padre ==  data.id&& $scope.seleccionados[i].tipo==$scope.agente_empresa) 
+        return;
+    $scope.seleccionados.push( {padre:data.id,tipo:$scope.agente_empresa,clave:data.clave,nombre_completo:data.nombre_completo});
+    
+    console.log($scope.seleccionados);
+  }
+  $scope.eliminar=function(data){
+    $scope.seleccionados.splice(data,1);
+  }
+  $scope.cargarHijos = function(){
+    var url = "";
+    if ($scope.agente_empresa == 1)
+      url = "/agents.json";
+    else
+      url = "/companies.json"
+    url = url + "?sucursal="+ $scope.sucursales.selected
+    $http.get(url)
+    .success(function(data){
+      console.log(data);
+       $scope.hijos = data;
+    })
+    .error(function(data){
+      console.log(data);
+    });
+     $scope.tipo = ($scope.agente_empresa == 1)? "Agente": "Empresa";
+  }
+  
+  $http.get("/branch_offices.json")
+  .success(function(data){
+    console.log(data);
+    $scope.sucursales=data;
+  })
+  .error(function(data){
+    console.log(data);
+  });
+  $http.get("/products.json")
+  .success(function(data){
+    console.log(data);
+    $scope.productos=data;
+  })
+  .error(function(data){
+    console.log(data);
+  });
+  $scope.obtenerFechas = function(){
+    $http.get("/products/"+$scope.productos.selected+".json")
+    .success(function (data){
+      console.log(data);
+      $scope.fechas = data.fechas_activas_con_formato
+      $scope.fechas_de_pago = data.fechas_de_pago_con_formato
+    })
+    .error(function (data){
+      console.log(data);
+    });
+  }
+}])
+.controller("payment",["$scope","$http","$location",function($scope,$http,$location){
+  $scope.creditos = [];
+  $scope.ena_botton=true;
+ 
+  $scope.cargarHijos = function(){
+    var url = "";
+    if ($scope.agente_empresa == 1)
+      url = "/agents.json";
+    else
+      url = "/companies.json"
+    url = url + "?sucursal="+ $scope.data.sucursales.repeatSelect
+    $http.get(url)
+    .success(function(data){
+      console.log(data);
+       $scope.hijos = data;
+    })
+    .error(function(data){
+      console.log(data);
+    });
+     $scope.tipo = ($scope.agente_empresa == 1)? "Agente": "Empresa";
+  }
+  
+  
+  function cargar_payments(){
+       url = window.location+"";
+      url = url.split("?")
+      if (url[1]== undefined)
+        return;
+      console.log(url[0]+".json?"+url[1]);
+      $http.get(url[0]+".json?"+url[1])
+      .success(function(data){
+        console.log(data);
+        $scope.pagos=data;
+      })
+      .error(function(data){
+        console.log(data);
+      });
+  }
+  $scope.pagar = function (val){
+    if (parseFloat(val.pago)==0){
+      alert("Ingrese la cantidad a pagar");
+      return  null;
+    }
+    if(val.interes>0){
+      var r = confirm("Desea condonar interes moratorios? ");
+      
+      $http.put('/payments/'+val.id+"?interes_flag="+r)
+      .success(function (data, status, headers) {
+          alert("exito");
+      });
+    }
+    
+     $("#ena_botton").hide();
+    
+    $http.post('/tickets.json',{ticket:{cantidad:parseFloat(val.pago),payment_id:val.id}})
+    .success(function(data){
+      window.open('/tickets/'+data.id, '_blank');
+      console.log(data);
+      
+      cargar_payments();
+      //location.reload();
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  $scope.actualizar_pagos = function(val){
+    if (parseFloat(val.pago)>parseFloat(val.importe_con_pago)){
+      val.pago = parseFloat(val.importe_con_pago);
+      alert("No se puede pagar una cantidad mayor al adeudo");
+    }
+  }
+  
+  $scope.exportar_excel = function(){
+     url="/credits.xlsx?";
+    
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined)){
+      var p = ($scope.agente_empresa==1)?1:0;
+      url=url+ "tpadre="+p+"&";
+    }
+    if($scope.select_op!=null)
+    if (!($scope.select_op.repeatSelect == "" ||$scope.select_op.repeatSelect ==undefined))
+      url=url+ "padre="+$scope.select_op.repeatSelect+"&";
+    if (!($scope.product_select == "" ||$scope.product_select ==undefined))
+      url=url+ "product_id="+$scope.product_select+"&";
+    if($scope.data!=null)
+    if (!($scope.data.sucursales.repeatSelect == "" ||$scope.data.sucursales.repeatSelect ==undefined))
+      url=url+ "sucursal_id="+$scope.data.sucursales.repeatSelect+"&";
+    if (!($scope.fecha1 == "" ||$scope.fecha1 ==undefined))
+      url=url+ "fecha1="+$scope.fecha1+"&";
+    if (!($scope.fecha2 == "" ||$scope.fecha2 ==undefined))
+      url=url+ "fecha2="+$scope.fecha2+"&";
+    window.open(url, '_blank');
+  }
+  $scope.filtrar_pagos = function(){
+    url="/credits.json?printed=1&";
+    
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined)){
+      var p = ($scope.agente_empresa==1)?1:0;
+      url=url+ "tpadre="+p+"&";
+    }
+    if($scope.select_op!=null)
+    if (!($scope.select_op.repeatSelect == "" ||$scope.select_op.repeatSelect ==undefined))
+      url=url+ "padre="+$scope.select_op.repeatSelect+"&";
+    if (!($scope.product_select == "" ||$scope.product_select ==undefined))
+      url=url+ "product_id="+$scope.product_select+"&";
+    if($scope.data!=null)
+    if (!($scope.data.sucursales.repeatSelect == "" ||$scope.data.sucursales.repeatSelect ==undefined))
+      url=url+ "sucursal_id="+$scope.data.sucursales.repeatSelect+"&";
+    if (!($scope.fecha1 == "" ||$scope.fecha1 ==undefined))
+      url=url+ "fecha1="+$scope.fecha1+"&";
+    if (!($scope.fecha2 == "" ||$scope.fecha2 ==undefined))
+      url=url+ "fecha2="+$scope.fecha2+"&";
+    console.log(url);
+    $http.get(url)
+    .success(function(data){
+      $scope.creditos=data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  $scope.filtrar_pagos_2 = function(){
+    url="/credits.json?";
+    if (!($scope.nombre1==""||$scope.nombre1==undefined))
+        url=url+"nombre1="+ $scope.nombre1;
+    if (!($scope.paterno==""||$scope.paterno==undefined))
+        url=url+"&paterno="+ $scope.paterno;
+    if (!($scope.materno==""||$scope.materno==undefined))
+        url=url+"&materno="+ $scope.materno;
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined)){
+      var p = ($scope.agente_empresa==1)?1:0;
+      url=url+ "tpadre="+p+"&";
+    }
+    if($scope.select_op!=null)
+    if (!($scope.select_op.repeatSelect == "" ||$scope.select_op.repeatSelect ==undefined))
+      url=url+ "padre="+$scope.select_op.repeatSelect+"&";
+    if (!($scope.product_select == "" ||$scope.product_select ==undefined))
+      url=url+ "product_id="+$scope.product_select+"&";
+    if($scope.data!=null)
+    if (!($scope.data.sucursales.repeatSelect == "" ||$scope.data.sucursales.repeatSelect ==undefined))
+      url=url+ "sucursal_id="+$scope.data.sucursales.repeatSelect+"&";
+    if (!($scope.fecha1 == "" ||$scope.fecha1 ==undefined))
+      url=url+ "fecha1="+$scope.fecha1+"&";
+    if (!($scope.fecha2 == "" ||$scope.fecha2 ==undefined))
+      url=url+ "fecha2="+$scope.fecha2+"&";
+    console.log(url);
+    $http.get(url)
+    .success(function(data){
+      $scope.creditos=data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  $scope.abrir_estado_de_cuente=function(val){
+    url="/reports/estado_de_cuenta.pdf?";
+    url=url+"c_id="+ val+"&";
+    if (!($scope.fecha_inicial==""||$scope.fecha_inicial==undefined))
+        url=url+"f1="+ $scope.fecha_inicial+"&";
+    if (!($scope.fecha_final==""||$scope.fecha_final==undefined))
+        url=url+"&f2="+ $scope.fecha_final+"&";
+    window.open(url,"_blank")
+  }
+  $scope.filtrar_pagos_clientes = function(){
+    url="/customers.json?";
+    if (!($scope.nombre1==""||$scope.nombre1==undefined))
+        url=url+"nombre1="+ $scope.nombre1+"&";
+    if (!($scope.paterno==""||$scope.paterno==undefined))
+        url=url+"&paterno="+ $scope.paterno+"&";
+    if (!($scope.materno==""||$scope.materno==undefined))
+        url=url+"&materno="+ $scope.materno+"&";
+    if (!($scope.agente_empresa == "" ||$scope.agente_empresa ==undefined)){
+      var p = ($scope.agente_empresa==1)?1:0;
+      url=url+ "tpadre="+p+"&";
+    }
+    if($scope.select_op!=null)
+    if (!($scope.select_op.repeatSelect == "" ||$scope.select_op.repeatSelect ==undefined))
+      url=url+ "padre="+$scope.select_op.repeatSelect+"&";
+    if (!($scope.product_select == "" ||$scope.product_select ==undefined))
+      url=url+ "product_id="+$scope.product_select+"&";
+    if($scope.data!=null)
+    if (!($scope.data.sucursales.repeatSelect == "" ||$scope.data.sucursales.repeatSelect ==undefined))
+      url=url+ "sucursal_id="+$scope.data.sucursales.repeatSelect+"&";
+    if (!($scope.fecha1 == "" ||$scope.fecha1 ==undefined))
+      url=url+ "fecha1="+$scope.fecha1+"&";
+    if (!($scope.fecha2 == "" ||$scope.fecha2 ==undefined))
+      url=url+ "fecha2="+$scope.fecha2+"&";
+    console.log(url);
+    $http.get(url)
+    .success(function(data){
+      $scope.creditos=data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  function initial (){
+    if(window.location.pathname == "/view_credits/aceptadas")
+      $scope.filtrar_pagos();
+    if(window.location.pathname == "/payments")
+      $scope.filtrar_pagos_2();
+      
+    $http.get("/branch_offices.json")
+    .success(function(data){
+      console.log(data);
+      $scope.sucursales=data;
+    })
+    .error(function(data){
+      console.log(data);
+    });
+    $http.get("/products.json")
+    .success(function(data){
+      console.log(data);
+      $scope.productos=data;
+    })
+    .error(function(data){
+      console.log(data);
+    });
+    
+  }
+  initial();
+  cargar_payments();
+}])
+.controller("productos",["$http","$scope",function($http,$scope){
+  $scope.payouts=[];
+  $scope.obtenerPayouts = function(){
+    $http.get("/payouts.json")
+    .success(function(data){
+      $scope.payouts = data;
+      console.log(data);
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  $scope.obtenerPayouts();
+}])
+
+
+.controller("payouts",["$scope","$http",function($scope,$http){
+  $scope.tipo = '0' ;
+  $scope.nombre = "";
+  $scope.desplazamiento = 0;
+  $scope.dias = [];
+  $scope.flow  =0;
+  $scope.periocidad = "";
+  $scope.mes  = new Array(28);
+  $scope.semana =new Array(7);
+  $scope.ano =new Array(12);
+  $scope.seleccionados =[];
+  $scope.corte_flag=false;
+  $scope.fin_de_mes = null;
+  var rojo = "red darken-4";
+  var gris = "grey darken-2";
+  $scope.guardar = function(){
+     var res = obtenerDias();
+    console.log("dias: "+ res[0].toString());
+    console.log("corte:"+ res[1].toString());
+    var control = {"ano":$scope.ano,"semana":$scope.semana,"mes":$scope.mes};
+    $http.post('/payouts',{payout:{nombre:$scope.nombre,days:res[0].toString(),
+                            flow:res[1].toString(),
+                            type_payout: parseInt($scope.tipo),
+                            periocidad:$scope.periocidad,
+                            desplazamiento:parseInt($scope.desplazamiento),
+                            scope_data:JSON.stringify(control)}})
+    .success(function(data){
+      console.log(data);
+      
+      window.location.href = "/payouts";
+    })
+    .error(function(data){console.log(data)});
+  }
+  
+  function obtenerDias(){
+    switch($scope.tipo){
+      case '0':
+        console.log("semana");
+        return convertir($scope.semana);
+      break;
+      case '1':
+        console.log("mes");
+        var res= convertir($scope.mes);
+        if ($scope.fin_de_mes==null)
+         return res;
+         $scope.fin_de_mes.es_de_corte?res[1].push(-1):res[0].push(-1);
+        return res;
+        
+      break;
+      case '2':
+        console.log("año");
+        return convertir($scope.ano);
+      break;
+      default: return null;
+    }
+  }
+  function convertir(val){
+    var obj=[];
+    var nodo1= [];
+    var nodo2= [];
+    for (var x=0;x<val.length;x++){
+      if (val[x]==null)
+        continue;
+      val[x].es_de_corte?nodo2.push(x+1):nodo1.push(x+1);
+    }
+    obj.push(nodo1);
+    obj.push(nodo2);
+    return obj;
+  } 
+  $scope.cargar_datos = function (){
+    var url = window.location.href;
+    if (!(url.split("/")[url.split("/").length-1]=="edit"))
+      return;
+    console.log(url.split("edit")[0]);
+    $http.get(url.split("edit")[0].slice(0, -1)+".json")
+    .success(function(data){
+      console.log(data);
+      $scope.periocidad = data.periocidad;
+      $scope.desplazamiento = data.desplazamiento;
+      $scope.nombre = data.nombre;
+      $scope.tipo = data.type_payout;
+      var obj = JSON.parse(data.scope_data);
+      $scope.ano = obj.ano;
+      $scope.semana = obj.semana;
+      $scope.mes = obj.mes;
+      
+      
+    })
+    .error(function(data){
+      console.log(data);
+    });
+  }
+  $scope.finDeMes=function(){
+      if ($scope.fin_de_mes==null){
+       if ($scope.corte_flag)
+         $scope.fin_de_mes = {value:true,es_de_corte:$scope.corte_flag, color:gris};  
+       else
+         $scope.fin_de_mes = {value:true,es_de_corte:$scope.corte_flag, color:rojo}; 
+      return;
+    }
+    $scope.fin_de_mes= null;
+  }
+  $scope.getColorFinDeMes= function(){
+    return $scope.fin_de_mes==null?"":$scope.fin_de_mes.color;
+  }
+  $scope.getColor= function(arr,n){
+    if (arr[n]==null)
+      return;
+    return arr[n].color;
+  }
+  $scope.cambiosAno = function(v){
+    if ($scope.ano[v]==null){
+       if ($scope.corte_flag)
+         $scope.ano[v] = {value:true,es_de_corte:$scope.corte_flag, color:gris};  
+       else
+         $scope.ano[v] = {value:true,es_de_corte:$scope.corte_flag, color:rojo}; 
+      return;
+    }
+    $scope.ano[v]= null;
+  }
+  $scope.cambiosSemana = function(v){
+     if ($scope.semana[v]==null){
+       if ($scope.corte_flag)
+         $scope.semana[v] = {value:true,es_de_corte:$scope.corte_flag, color:gris};  
+       else
+         $scope.semana[v] = {value:true,es_de_corte:$scope.corte_flag, color:rojo}; 
+      return;
+    }
+    $scope.semana[v]= null;
+  }
+  $scope.cambiosMes = function(v){
+     if ($scope.mes[v]==null){
+       if ($scope.corte_flag)
+         $scope.mes[v] = {value:true,es_de_corte:$scope.corte_flag, color:gris};  
+       else
+         $scope.mes[v] = {value:true,es_de_corte:$scope.corte_flag, color:rojo}; 
+      return;
+    }
+    $scope.mes[v]= null;
+    console.log($scope.mes);
+  }
+  
+  $scope.cambio_de_tipo = function(){
+    console.log($scope.tipo);
+    console.log($scope.mes);
+    console.log($scope.semana);
+    $("table").hide();
+    
+    switch($scope.tipo){
+      case '0':
+        $("#semana").show();
+      break;
+      case '1':
+        $("#mes").show();
+      break;
+      case '2':
+        $("#ano").show();
+      break;
+      
+    }
+  }
+  $scope.cambio_de_tipo();
+  $scope.cargar_datos();
+  
+}]).controller("editar_clientes",["$scope","$http",function($scope,$http){
+  $scope.credito = "";
+  $scope.credito.agente_empresa ="";
+  $scope.elementos = "";
+  $scope.block = true;
+  $scope.agente_o_empresa = function(){
+      $scope.tipo="";
+      $scope.agentEmp=[];
+      if($scope.credito.agente_empresa==1)
+      {
+        $scope.tipo="Agente";
+        $http.get("/agents.json")
+        .success(function(data){
+          for (var x=0;x<data.length;x++)
+            $scope.agentEmp.push({id:data[x].id,nombre:data[x].nombre_del_agente});
+          console.log($scope.agentEmp);
+        })
+        .error(function(data){
+          console.log(data);
+        });
+      }else if ($scope.credito.agente_empresa==0){
+        $scope.tipo="Empresa";
+        $http.get("/companies.json")
+        .success(function(data){
+          for (var x=0;x<data.length;x++)
+            $scope.agentEmp.push({id:data[x].id,nombre:data[x].nombre_de_empresa});
+          console.log(data);
+        })
+        .error(function(data){
+          console.log(data);
+      });
+      }
+    }
+  $("#cambiar_sucursal").hide();
+  $scope.mostrar = function(){
+    $("#cambiar_sucursal").show();
+    $scope.block = false;
+    $("#btn_mostrar").hide();
+  }
+  $scope.ocultar = function(){
+    $("#cambiar_sucursal").hide();
+    $scope.block = true;
+    $("#btn_mostrar").show();
+  }
+}]);
+  </script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<style>
+  input[type="text"] { 
+    text-transform: uppercase;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        text-transform: none;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        text-transform: none;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        text-transform: none;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        text-transform: none;
+    }
+</style>
+</head>
+<body id="top" class="scrollspy">
+    <div class="navbar-fixed"> 
+     <nav>
+      <%if current_user.nil? %>
+        <div class="nav-wrapper #883311 darken-1">
+      <%else%>
+        <div class="nav-wrapper">
+      <%end%>
+        <a href="<%=root_path%>" class="brand-logo">MARJO</a>
+        <!--<%=image_tag("logo marjo.png")%>-->
+        
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <%=render "partials/menu"%>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <%=render "partials/menu2"%>
+  
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <%unless current_user.nil?%>
+      <div class="card-panel">
+        <h6 class="center-align">Usuario: <%=current_user.email%></h6>
+      </div>
+    <%end%>
+  
+    <%= yield %>
+  </div>
+  <footer id="contact" class="page-footer deep-orange scrollspy">
+    <div class="container">  
+ <div class="row">
+
+        <div class="col l6 s12">
+          <h5 class="white-text">Contáctanos</h5>
+          <p class="grey-text text-lighten-4">
+            Dirección: Calle Río Nazas # 1240, Col. Los Pinos, C.P. 80128, Culiacán Sinaloa</p>
+              <li><a class="white-text" href="https://www.google.com.mx/maps/place/Calle+R%C3%ADo+Nazas+1240/@24.7929319,-107.4065136,19.75z/data=!4m6!3m5!1s0x86bcd0bfb0f19665:0xd40820d409421835!4b1!8m2!3d24.793005!4d-107.4063763">CÓMO LLEGAR</a></li>
+
+        </div>
+        <div class="col l3 s12">
+          
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Social</h5>
+          <ul>
+            <li><a class="white-text" href="">Dribbble</a></li>
+            <li><a class="white-text" href="https://www.facebook.com/financieramarjo1">Facebook</a></li>
+            <li><a class="white-text" href="">Twitter</a></li>
+            <li><a class="white-text" href="">Google+</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright deep-orange ">
+      <div class="container">
+      FINANCIERA <a class="">MARJO</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

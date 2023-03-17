@@ -1,0 +1,25 @@
+Customer.all.each do |c|
+    if(  c.credits.count > 0)
+        c.update(
+            nombre_referencia_1:c.credits.last.nombre_referencia_1,
+            domicilio_referencia_1:c.credits.last.domicilio_referencia_1,
+            telefono_fijo_referencia_1:c.credits.last.telefono_fijo_referencia_1,
+            telefono_celular_referencia_1:c.credits.last.telefono_celular_referencia_1,
+            nombre_referencia_2:c.credits.last.nombre_referencia_2,
+            domicilio_referencia_2:c.credits.last.domicilio_referencia_2,
+            telefono_fijo_referencia_2:c.credits.last.telefono_fijo_referencia_2,
+            telefono_celular_referencia_2:c.credits.last.telefono_celular_referencia_2,
+            nombre_referencia_familiar:c.credits.last.nombre_referencia_familiar,
+            domicilio_referencia_familiar:c.credits.last.domicilio_referencia_familiar,
+            telefono_fijo_referencia_familiar:c.credits.last.telefono_fijo_referencia_familiar,
+            telefono_celular_referencia_familiar:c.credits.last.telefono_celular_referencia_familiar,
+            profecion:c.credits.last.profecion,
+            ocupation:c.credits.last.ocupation,
+            colonia:c.credits.last.colonia,
+            estado_actual:c.credits.last.estado_actual,
+            country:c.credits.last.country,
+            email_1:c.credits.last.email_1,
+            telefono_celular:c.credits.last.telefono_celular
+        )
+    end
+end

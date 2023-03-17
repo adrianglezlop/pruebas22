@@ -1,0 +1,181 @@
+<div class="row">
+  <%= form_for(@agent) do |f| %>
+    <% if @agent.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@agent.errors.count, "error") %> prohibited this agent from being saved:</h2>
+  
+        <ul>
+        <% @agent.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= f.label :claves %>
+      <%= f.text_field :clave %>
+    </div>
+    <div class="field">
+      <%=f.collection_select(:branch_office_id,BranchOffice.all.order(:nombre),:id,:nombre,:prompt => 'Sucursal:')%>
+    </div>
+    
+    <div class="field">
+      <%= f.label :nombre_del_agente %>
+      <%= f.text_field :nombre_del_agente %>
+    </div>
+    <div class="field">
+      <%= f.label :apellido_paterno %>
+      <%= f.text_field :apellido_paterno %>
+    </div>
+     <div class="field">
+      <%= f.label :apellido_materno %>
+      <%= f.text_field :apellido_materno %>
+    </div>
+    <div class="field">
+      <%= f.label :nombre_1 %>
+      <%= f.text_field :nombre_1 %>
+    </div>
+    <div class="field">
+      <%= f.label :nombre_2 %>
+      <%= f.text_field :nombre_2 %>
+    </div>
+    <div class="field">
+      <%= f.label :RFC %>
+      <%= f.text_field :RFC %>
+    </div>
+    <div class="field">
+      <%= f.label :calle %>
+      <%= f.text_field :calle %>
+    </div>
+    <div class="field">
+      <%= f.label :numero_exterior %>
+      <%= f.number_field :numero_exterior %>
+    </div>
+    <div class="field">
+      <%= f.label :numero_interior %>
+      <%= f.text_field :numero_interior %>
+    </div>
+     <div ng-controller="cp">
+      <div class="field">
+        <%= f.label :codigo_postal,"Código postal","ng-init":"codigo='#{:codigo_postal}'" %>
+        <%= f.text_field :codigo_postal,"ng-model":"codigo","ng-blur":"type()" %>
+
+      </div>
+        <div class="field">
+          <div class="field" style="display: none;">
+            <tt>Colonias = {{data.zip_codes}}</tt><br/>
+          </div>
+         
+         <select id="agent_colonia" name="agent[colonia]"class="browser-default" ng-model="data.Colonias">
+             <option value="" disabled selected>Colonia</option>
+            <option ng-repeat="option in data.zip_codes" value="{{option.d_asenta}}">{{option.d_asenta}}</option>
+        </select>
+      </div>
+      <div class="field">
+        <%= f.label :municipio,class:"model" %>
+        <%= f.text_field :municipio,"ng-model":"data.zip_codes[0].d_mnpio" %>
+      </div>
+      <div class="field">
+        <%= f.label :estado,class:"model" %>
+        <%= f.text_field :estado,"ng-model":"data.zip_codes[0].d_estado" %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :CURP %>
+      <%= f.text_field :CURP %>
+    </div>
+    <div class="field">
+      <%= f.label :seguro_social %>
+      <%= f.text_field :seguro_social %>
+    </div>
+    <div class="field">
+      <%= f.label :INE %>
+      <%= f.text_field :INE %>
+    </div>
+    <div class="field">
+      <%= f.label :nacionalidad %>
+      <%= f.text_field :nacionalidad %>
+    </div>
+    <div class="field">
+      <%= f.label :fecha_de_nacimiento,"Fecha de nacimiento" ,class:"active"%> 
+      <%= f.date_field :fecha_de_nacimiento, autocomplete: "off" %>
+    </div>
+    <div class="field">
+      <%= f.label :ciudad_de_nacimiento %>
+      <%= f.text_field :ciudad_de_nacimiento %>
+    </div>
+    <div class="field">
+      <%= f.label :estado_de_nacimiento %>
+      <%= f.text_field :estado_de_nacimiento %>
+    </div>
+    <div class="field">
+      <%= f.label :pais_de_nacimiento %>
+      <%= f.text_field :pais_de_nacimiento %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :telefono_de_casa %>
+      <%= f.text_field :telefono_de_casa %>
+    </div>
+    <div class="field">
+      <%= f.label :telefono_celular %>
+      <%= f.text_field :telefono_celular %>
+    </div>
+    <div class="field">
+      <%= f.label :correo_electronico_1 %>
+      <%= f.text_field :correo_electronico_1 %>
+    </div>
+    <div class="field">
+      <%= f.label :correo_electronico_2 %>
+      <%= f.text_field :correo_electronico_2 %>
+    </div>
+    <div class="field">
+      <%= f.label :cuenta_bancaria %>
+      <%= f.text_field :cuenta_bancaria %>
+    </div>
+    <div class="field">
+      <%= f.label :banco %>
+      <%= f.text_field :banco %>
+    </div>
+    <div class="field">
+       <div class="col s10 m10 l11 ">
+        <%= f.label :comision_por_cobranza %>
+        <%= f.number_field :comision_por_cobranza, :step => 'any' %>
+      </div>
+      <div class="col s2 m2 l1 valign-wrapper">
+        <h5 class="valign">%</h5>
+      </div>
+    </div>
+    <div class="field">
+      <div class="col s10 m10 l11 ">
+        <%= f.label :comision_por_colocacion %>
+        <%= f.number_field :comision_por_colocacion, :step => 'any'  %>
+      </div>
+      <div class="col s2 m2 l1 valign-wrapper">
+        <h5 class="valign">%</h5>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :monto_maximo_de_prestamo %>
+      <%= f.number_field :monto_maximo_de_prestamo %>
+    </div>
+    <div class="field-b">
+      <p>
+        <%= f.check_box :permitir_prestamo_multiple,id:'prestamo_multiple' %>
+        <%= f.label :permitir_prestamo_multiple,for:'prestamo_multiple' %>
+      </p>
+    </div>
+    <div class="field-b">
+      <%= f.label :sexo%><br />
+      <p>
+        <%= f.radio_button  :sexo,true,checked:true%> <%= f.label "#{:sexo}_true", "Hombre" %>
+        <%= f.radio_button  :sexo,false %> <%= f.label "#{:sexo}_false", "Mujer" %>
+      </p>
+    </div>
+
+</div>
+    <div class="actions">
+      <%= f.submit "Guardar"%>
+    </div>
+  <% end %>

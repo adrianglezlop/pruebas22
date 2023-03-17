@@ -1,0 +1,120 @@
+<div class="row" ng-app="codigo_postal">
+  <%= form_for(@branch_office) do |f| %>
+    <% if @branch_office.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@branch_office.errors.count, "error,") %> llene los campos necesarios para poder crear/modificaar sucursales:</h2>
+  
+        <ul>
+        <% @branch_office.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :clave %>
+      <%= f.text_field :clave %>
+    </div>
+    <div class="field">
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre %>
+    </div>
+    <div class="field">
+      <%= f.label :calle %>
+      <%= f.text_field :calle %>
+    </div>
+    <div class="field">
+      <%= f.label :no_ext,"Número exterior" %>
+      <%= f.number_field :no_ext %>
+    </div>
+    <div class="field">
+      
+      <%= f.label :no_int,"Número interior" %>
+      <%= f.text_field :no_int %>
+    </div>
+    <div ng-controller="cp">
+      <div class="field">
+        <%= f.label :codigo_postal,"Código postal","ng-init":"codigo='#{:codigo_postal}'" %>
+        <%= f.text_field :codigo_postal,"ng-model":"codigo","ng-blur":"type()" %>
+        
+      </div>
+        <div class="field">
+          <div class="field" style="display: none;">
+            <tt>Colonias = {{data.zip_codes}}</tt><br/>
+          </div>
+         <select id="branch_office_colonia" name="branch_office[colonia]"class="browser-default" ng-model="data.colonias.repeatSelect">
+             <option value="" disabled selected>Colonia</option>
+             <option ng-repeat="option in data.zip_codes" value="{{option.d_asenta}}">{{option.d_asenta}}</option>
+        </select>
+      </div>
+      <div class="field">
+        <%= f.label :municipio,class:"model" %>
+        <%= f.text_field :municipio,"ng-model":"data.zip_codes[0].d_mnpio" %>
+      </div>
+      <div class="field">
+        <%= f.label :estado,class:"model" %>
+        <%= f.text_field :estado,"ng-model":"data.zip_codes[0].d_estado" %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :telefono_oficina %>
+      <%= f.text_field :telefono_oficina %>
+    </div>
+    <div class="field">
+      <%= f.label :telefono_celular %>
+      <%= f.text_field :telefono_celular %>
+    </div>
+    <div class="field">
+      <%= f.label :correo1,"Correo electronico 1" %>
+      <%= f.text_field :correo1 %>
+    </div>
+    <div class="field">
+      <%= f.label :correo2,"Correo electronico 2" %>
+      <%= f.text_field :correo2 %>
+    </div>
+    <div class="field">
+      <div class="col s10 m10 l11 ">
+        <%= f.label :comision_por_colocacion,"Comisión por colocación" %>
+        <%= f.number_field :comision_por_colocacion, :step => 'any' %>
+      </div>
+      <div class="col s2 m2 l1 valign-wrapper">
+        <h5 class="valign">%</h5>
+      </div>
+    </div>
+    <div class="field">
+      <div class="col s10 m10 l11 ">
+        <%= f.label :comision_por_cobranza,"Comisión por cobranza" %>
+        <%= f.number_field :comision_por_cobranza, :step => 'any'  %>
+      </div>
+      <div class="col s2 m2 l1 valign-wrapper">
+        <h5 class="valign">%</h5>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :monto_maximo_adeudo_sucursal,"Monto maxímo de adeudo" %>
+      <%= f.number_field :monto_maximo_adeudo_sucursal %>
+    </div>
+    <div class="field-b">
+      <%= f.label :formato_impresion, "pre-impresión" %>
+      <p>
+        <%= f.radio_button  :formato_impresion,1,checked:true%> <%= f.label "#{:formato_impresion}_1", "Hoja blanca" %>
+        <%= f.radio_button  :formato_impresion,2 %> <%= f.label "#{:formato_impresion}_2", "pre-impresión" %>
+      </p>
+    </div>
+    <div class="field">
+    <%= f.collection_select(:user_id, User.all.order(:alias), :id, :alias, :prompt => 'Usuario:') %>
+    <%=f.label :user_id, "Usuario" %>
+    </div>
+    <div class="field">
+      <%= f.label :banco,"Banco" %>
+      <%= f.text_field :banco %>
+    </div>
+    <div class="field">
+      <%= f.label :cuenta%>
+      <%= f.text_field :cuenta %>
+    </div>
+</div>    
+    <div class="actions">
+      <%= f.submit "Guardar"%>
+    </div>
+  <% end %>

@@ -1,0 +1,135 @@
+<div ng-controller="productos">
+  <div class="row">
+    <%= form_for(@product) do |f| %>
+      <% if @product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+    
+          <ul>
+          <% @product.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    
+      <div class="field">
+        <%= f.label :nombre_del_producto %>
+        <%= f.text_field :nombre_del_producto %>
+      </div>
+      <div class="field">
+        <%= f.label :registro_del_contrado_de_adhesion," Registro de contrato de adhesión" %>
+        <%= f.text_field :registro_del_contrado_de_adhesion %>
+      </div>
+      <div class="field">
+        <div class="col s9 m9 l9">
+          <%= f.collection_select(:loan_id, Loan.all ,:id, :nombre, :prompt => 'Tipo de préstamo:') %>
+          <%=f.label :loan_id,"Tipo de prestamo"%>
+        </div>
+        <div class="col s3 m3 l3">
+          <a href="<%=loans_path%>" target = "_blank" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+      </div>
+      <div class="field">
+        
+        <div class = "col s2 m2 l2">
+          <a ng-click="obtenerPayouts()"  class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">replay</i></a>
+        </div>
+        <div class="col s7 m7 l7">
+          <select id="product_payout_id" name="product[payout_id]"class="browser-default" ng-model="payouts.prepeatSelect">
+            <option value="" disabled selected>Payouts</option>
+            <option ng-repeat="option in payouts" value="{{option.id}}">{{option.nombre}}</option>
+          </select>
+         
+        </div>
+        <div class="col s3 m3 l3">
+          <a href="<%=payouts_path%>" target = "_blank" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :numero_de_pagos_a_realizar,'Número de pagos a realizar capital' %>
+        <%= f.number_field :numero_de_pagos_a_realizar %>
+      </div>
+       <div class="field">
+       
+        <%=f.label :plazo_de_prestamo, "Plazo de préstamo capital"%>
+        <%=f.text_field :plazo_de_prestamo%>
+      </div>
+      
+      <div class="field">
+        <%= f.collection_select(:forma_de_pago_interes, Payout.all ,:id, :nombre, :prompt => 'Forma de pago:') %>
+        <%=f.label :forma_de_pago_interes,"Forma de pago interés"%>
+      </div>
+      <div class="field">
+        <%= f.label :numero_de_pagos_a_realizar_interes,'Número de pagos a realizar interés' %>
+        <%= f.number_field :numero_de_pagos_a_realizar_interes %>
+      </div>
+       <div class="field">
+        <%=f.label :plazo_de_prestamo_interes, "Plazo de préstamo interés"%>
+        <%= f.text_field :plazo_de_prestamo_interes %>
+      </div>
+      
+      <div class="field">
+        <div class="col s11 m11 l11 ">
+          <%= f.label :taza_de_interes_ordinaria,'Tasa de interés ordinaria' %>
+          <%= f.number_field :taza_de_interes_ordinaria, :step => 'any' %>
+        </div>
+        <div class="col s1 m1 l1 valign-wrapper">
+          <h5 class="valign">%</h5>
+        </div>
+      </div>
+      <div class="field">
+        <div class="col s11 m11 l11 ">
+          <%= f.label :taza_de_interes_moratoria,'Tasa de interés moratoria' %>
+          <%= f.number_field :taza_de_interes_moratoria, :step => 'any' %>
+        </div>
+        <div class="col s1 m1 l1 valign-wrapper">
+          <h5 class="valign">%</h5>
+        </div>
+      </div>
+      <div class="field">
+        <div class="col s11 m11 l11 ">
+          <%= f.label :cat_sin_iva,'CAT sin iva' %>
+          <%= f.number_field :cat_sin_iva, :step => 'any' %>
+        </div>
+        <div class="col s1 m1 l1 valign-wrapper">
+          <h5 class="valign">%</h5>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :numero_de_meses_de_sueldo_para_prestamo,'Número de meses de sueldo para préstamo' %>
+        <%= f.number_field :numero_de_meses_de_sueldo_para_prestamo %>
+      </div>
+      <div class="field">
+        <%= f.label :plazo,'Plazo de prestamo' %>
+        <%= f.text_field :plazo %>
+      </div>
+      <div class="field">
+        <div class="col s11 m11 l11 ">
+          <%= f.label :interes_moratorio_aplicable,'Interes moratorio aplicable' %>
+          <%= f.number_field :interes_moratorio_aplicable, :step => 'any' %>
+        </div>
+        <div class="col s1 m1 l1 valign-wrapper">
+          <h5 class="valign">%</h5>
+        </div>
+      </div>
+      <div class="field">
+          <%= f.label :etiqueta_plural,'Etiqueta Plural' %>
+          <%= f.text_field :etiqueta_plural %>
+      </div>
+       <div class="field">
+         <div class="col s11 m11 l11 ">
+            <%= f.label :comision_apert,'Comisión por Apertura' %>
+            <%= f.number_field :comision_apert, :step => 'any' %>
+          </div>
+          <div class="col s1 m1 l1 valign-wrapper">
+          <h5 class="valign">%</h5>
+        </div>
+      
+      </div>
+  </div>
+      <div class="actions">
+        <%= f.submit 'Guardar' %>
+      </div>
+    <% end %>
+</div>

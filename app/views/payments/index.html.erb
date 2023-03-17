@@ -1,0 +1,66 @@
+<div ng-controller="payment">
+  <h2 align="center">PAGOS</h2>
+
+     <div class = "row">
+         <div class = "col s12 m6 l4">
+    
+             <select class="browser-default" ng-model="data.sucursales.repeatSelect" ng-change="cargarHijos()">
+                 <option value="" selected>Sucursales</option>
+                <option ng-repeat="option in sucursales" value="{{option.id}}">{{option.nombre}}</option>
+            </select>
+              
+              </br>
+                   <p>
+                      <input name="group1" type="radio" id="test1" value =1 ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test1">Agente</label>
+                    </p>
+                    <p>
+                      <input name="group1" type="radio" id="test2"  value =2  ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test2">Empresa</label>
+                    </p>
+                 <select  class="browser-default" ng-model="select_op.repeatSelect">
+                    <option value="" selected>{{tipo}}</option>
+                    <option ng-repeat="option in hijos" value="{{option.id}}">{{option.nombre_completo}}</option>
+                </select>
+                  </br>
+                <select  class="browser-default" ng-model="product_select">
+                  <option value="" selected>Productos</option>
+                  <option ng-repeat="option in productos" value="{{option.id}}">{{option.nombre_del_producto}}</option>
+                </select>
+                </br>
+                <a class="waves-effect waves-light btn" ng-click="filtrar_pagos_2()">Filtrar</a>
+         </div>
+          <div class="col s12 m6 l6">
+            NOMBRE: <input type="text" placeholder="INGRESE EL NOMBRE"ng-model="nombre1" ng-change="filtrar_pagos_2()">
+            PATERNO: <input type="text" placeholder="APELLIDO PATERNO"ng-model="paterno" ng-change="filtrar_pagos_2()">
+            MATERNO: <input type="text" placeholder="APELLIDO MATERNO"ng-model="materno" ng-change="filtrar_pagos_2()">
+          </div>
+        <div class= "col s12">
+             <table class="striped responsive-table" >
+                <thead>
+                  <tr>
+                      <th data-field="Monto">PRODUCTO</th>
+                      <th data-field="Monto">SUCURSAL</th>
+                      <th data-field="Monto">AGENTE/EMPRESA</th>
+                      <th data-field="Nombre">NOMBRE</th>
+                      <th data-field="Monto">FECHA</th>
+                      <th data-field="Monto">MONTO</th>
+                      
+                      <th data-field="price"></th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr ng-repeat = "ele in creditos">
+                    <td>{{ele.product_id}}</td>
+                    <td>{{ele.sucursal}}</td>
+                    <td>{{ele.nombre_agente}}</td>
+                    <td>{{ele.nombre_completo_deudor}}</td>
+                    <td>{{ele.fecha_formato}}</td>
+                    <td>{{ele.monto_solicitud_formato}}</td>
+                    <td><a class="waves-effect waves-light btn" ng-click="" href= "/payments/show?clave={{ele.id}}" >Ver</a></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+</div>

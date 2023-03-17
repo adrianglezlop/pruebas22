@@ -1,0 +1,128 @@
+<p id="notice"><%= notice %></p>
+ <div class="row">
+  <h5 class="center-align card-panel deep-orange darker-2">
+    <strong>Clave:</strong>
+    <%= @company.clave %>
+  </h5>
+ </div>
+ <div class="show row">  
+  <p>
+    <strong>Nombre de empresa:</strong>
+    <%= @company.nombre_de_empresa %>
+  </p>
+  
+  <p>
+    <strong>Razon social:</strong>
+    <%= @company.razon_social %>
+  </p>
+  
+  <p>
+    <strong>Calle:</strong>
+    <%= @company.calle %>
+  </p>
+  
+  <p>
+    <strong>Numero exterior:</strong>
+    <%= @company.numero_exterior %>
+  </p>
+  
+  <p>
+    <strong>Numero interior:</strong>
+    <%= @company.numero_interior %>
+  </p>
+  
+  <p>
+    <strong>Colonia:</strong>
+    <%= @company.colonia %>
+  </p>
+  
+  <p>
+    <strong>Codigo postal:</strong>
+    <%= @company.codigo_postal %>
+  </p>
+  
+  <p>
+    <strong>Municipio:</strong>
+    <%= @company.municipio %>
+  </p>
+  
+  <p>
+    <strong>Estado:</strong>
+    <%= @company.estado %>
+  </p>
+  
+  <p>
+    <strong>Apellido paterno:</strong>
+    <%= @company.apellido_paterno %>
+  </p>
+  
+  <p>
+    <strong>Apellido materno:</strong>
+    <%= @company.apellido_materno %>
+  </p>
+  
+  <p>
+    <strong>Nombre 1:</strong>
+    <%= @company.nombre_1 %>
+  </p>
+  
+  <p>
+    <strong>Nombre 2:</strong>
+    <%= @company.nombre_2 %>
+  </p>
+  
+  <p>
+    <strong>Telefono de oficina:</strong>
+    <%= @company.telefono_de_oficina %>
+  </p>
+  
+  <p>
+    <strong>Telefono celular:</strong>
+    <%= @company.telefono_celular %>
+  </p>
+  
+  <p>
+    <strong>Correo electronico 1:</strong>
+    <%= @company.correo_electronico_1 %>
+  </p>
+  
+  <p>
+    <strong>Correo electronico 2:</strong>
+    <%= @company.correo_electronico_2 %>
+  </p>
+  
+  <p>
+    <strong>Cuenta bacaria:</strong>
+    <%= @company.cuenta_bacaria %>
+  </p>
+  
+  <p>
+    <strong>Banco:</strong>
+    <%= @company.banco %>
+  </p>
+  
+  <p>
+    <strong>Comicion por cobranza:</strong>
+    <%= @company.comicion_por_cobranza %> %
+  </p>
+  
+  <p>
+    <strong>Comicion por colocacion:</strong>
+    <%= @company.comicion_por_colocacion %>%
+  </p>
+  
+  <p>
+    <strong>Monto maximo de prestamo:</strong>
+    <%= Dinero.to_money(@company.monto_maximo_de_prestamo) %>
+  </p>
+  <p>
+    <strong>Sucursal:</strong>
+    <%= @company.branch_office.nombre%>
+  </p>
+  <p>
+    <strong>Permitir prestamo multiple:</strong>
+    <%= @company.permitir_prestamo_multiple %>
+  </p>
+  </div>
+<%= link_to 'Editar', edit_company_path(@company),class:'crud-links' %> |
+<%= link_to 'Atras', companies_path,class:'crud-links' %>

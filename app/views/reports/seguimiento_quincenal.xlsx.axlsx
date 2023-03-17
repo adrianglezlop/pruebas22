@@ -1,0 +1,38 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Seguimiento Quincenal") do |sheet|
+  sheet.add_row [@resp["nombre_empresa"]]
+  sheet.add_row ["ABONO A PRESTAMO",@resp["fecha"]]
+  sheet.add_row ["Nombre","Fecha prestamo","Capital","Monto a cobrar","Adeudo","A pagar fecha" ,"Atrasado" ,"Interes moratorio","Total a cobrar","Cobrado","Diferencia","Adelantado","Empresa","No. pago","No. creditos"]
+  @resp["datos"].each do |fila|
+    sheet.add_row [
+    fila["nombre_completo"],
+    fila["fecha"],
+    fila["monto_solicitud"],
+    fila["monto_a_pagar"],
+    fila["adeudo"],
+    fila["pagar"],
+    fila["atrasado"] ,
+    fila["interes_moratorio"],
+    fila["total_a_cobrar"],
+    fila["cobrado"],
+    fila["diferencia"],
+    fila["adelantado"],
+    fila["empresa"],
+    fila["numero_de_pago"],
+    fila["numero_de_creditos"]]
+  end
+  sheet.add_row ['']
+  sheet.add_row ['','Total',
+  "=SUM(C4:C#{@resp["datos"].length+3})",
+  "=SUM(D4:D#{@resp["datos"].length+3})",
+  "=SUM(E4:E#{@resp["datos"].length+3})",
+  "=SUM(F4:F#{@resp["datos"].length+3})",
+  "=SUM(G4:G#{@resp["datos"].length+3})",
+  "=SUM(H4:H#{@resp["datos"].length+3})",
+  "=SUM(I4:I#{@resp["datos"].length+3})",
+  "=SUM(J4:J#{@resp["datos"].length+3})",
+  "=SUM(K4:K#{@resp["datos"].length+3})",
+  "=SUM(L4:L#{@resp["datos"].length+3})"]
+
+end

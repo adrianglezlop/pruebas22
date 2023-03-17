@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  calle: MyString
+  no_ext: 1
+  no_int: 1
+  colonia: MyString
+  codigo_postal: 1
+  municipio: MyString
+  estado: MyString
+  telefono_oficina: MyString
+  telefono_celular: MyString
+  correo1: MyString
+  correo2: MyString
+  comision_por_colocacion: 9.99
+  comision_por_cobranza: 9.99
+  monto_maximo_adeudo_sucursal: 9.99
+  formato_impresion: 1
+
+two:
+  nombre: MyString
+  calle: MyString
+  no_ext: 1
+  no_int: 1
+  colonia: MyString
+  codigo_postal: 1
+  municipio: MyString
+  estado: MyString
+  telefono_oficina: MyString
+  telefono_celular: MyString
+  correo1: MyString
+  correo2: MyString
+  comision_por_colocacion: 9.99
+  comision_por_cobranza: 9.99
+  monto_maximo_adeudo_sucursal: 9.99
+  formato_impresion: 1

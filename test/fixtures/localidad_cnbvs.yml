@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clave: 1
+  descripcion: MyString
+  entidad_federativa: MyString
+
+two:
+  clave: 1
+  descripcion: MyString
+  entidad_federativa: MyString

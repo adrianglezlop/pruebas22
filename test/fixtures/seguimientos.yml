@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  fecha_prestamo: 2018-05-07
+  capital: 1.5
+  monto_a_cobrar: 1.5
+  adeudo: 1.5
+  a_pagar: 1.5
+  atrasado: 1.5
+  interés_moratorio: 1.5
+  total_a_cobrar: 1.5
+  cobrado: 1.5
+  diferencia: 1.5
+  adelantado: 1.5
+  empresa: MyString
+  no_pago: MyString
+  no_creditos: MyString
+
+two:
+  nombre: MyString
+  fecha_prestamo: 2018-05-07
+  capital: 1.5
+  monto_a_cobrar: 1.5
+  adeudo: 1.5
+  a_pagar: 1.5
+  atrasado: 1.5
+  interés_moratorio: 1.5
+  total_a_cobrar: 1.5
+  cobrado: 1.5
+  diferencia: 1.5
+  adelantado: 1.5
+  empresa: MyString
+  no_pago: MyString
+  no_creditos: MyString

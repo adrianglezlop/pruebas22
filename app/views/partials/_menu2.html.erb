@@ -1,0 +1,66 @@
+
+  <ul id="dropdown1_2" class="dropdown-content">
+      <li><%= link_to 'Levantar credito', '/credits/new'%></li>
+      <li><%= link_to 'Levantar Vale', '/credits/nuevo'%></li>
+      <li><%= link_to 'Por aceptar', view_credits_path%></li>
+      <li><%= link_to 'Aceptados', view_credits_aceptadas_path%></li>
+      <li><%= link_to 'Rechazado', view_credits_rechazadas_path%></li>
+    </ul>
+    <ul id="dropdown2_2" class="dropdown-content">
+      <li><%= link_to 'Configuraciones', Conf.last%></li>
+      <li><%= link_to 'Productos', products_path%></li>
+      <li><%= link_to 'Usuarios', users_path%></li>
+      <li><%= link_to 'Sucursales', branch_offices_path%></li>
+      <li><%= link_to 'Empresas', companies_path%></li>
+      <li><%= link_to 'Agentes', agents_path%></li>
+    </ul>
+    <ul id="dropdown3_2" class="dropdown-content">
+      <li><%= link_to 'Recibos', receipts_path%></li>
+      <li><%= link_to 'Pagos', payments_path%></li>
+      <li><%= link_to 'Pagos por empresa', paymentscompany_path%></li>
+    </ul>
+    <ul id="dropdown4_2" class="dropdown-content">
+      <li><%= link_to 'Seguimiento de cobranza', "/reports/seguimiento"%></li>
+      <li><%= link_to 'Seguimiento quincenal', "/reports/seguimiento_quincenal"%></li>
+      <li><%= link_to 'Reporte de cobranza', "/reports/cobranza"%></li>
+      <li><%= link_to 'Pronostico de cobranza', "/reports/pronostico_de_cobranza"%></li>
+      <li><%= link_to 'Clientes', "/reports/clientes"%></li>
+      <li><%= link_to 'Calificaciones', "/reports/calificaciones"%></li>
+      <li><%= link_to 'Estado de cta.', "/reports/estado_de_cuenta"%></li>
+      <li><%= link_to 'Reporte de pagos', "/reports/reporte_de_pagos"%></li>
+      <li><%= link_to 'Historial de pagos', "/reports/historial_de_pagos"%></li>
+      <li><%= link_to 'Historial de recibos', "/reports/historial_de_recibos"%></li>
+    </ul>
+<%if current_user.nil?%>
+    <li><%= link_to 'Quienes somos',"#quienes_somos"%></li>
+    <li><a href="#row">Sucursales</a></li>
+<li><a href="#work">Principios</a></li>
+<li><a href="#contact">Contacto</a></li>
+    <li><%= link_to 'Iniciar sesión', new_user_session_path%></li>
+<%elsif current_user.tipo==1%>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown1_2">Creditos<i class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown3_2">Pagos/recibos<i class="material-icons right">arrow_drop_down</i></a></li> 
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown2_2">Admon<i class="material-icons right">arrow_drop_down</i></a></li> 
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown4_2">Reportes<i class="material-icons right">arrow_drop_down</i></a></li> 
+    <li><%= link_to 'Clientes', customers_path%></li>
+   
+    
+<%elsif current_user.tipo==2%>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown1_2">Creditos<i class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown3_2">Pagos/recibos<i class="material-icons right">arrow_drop_down</i></a></li> 
+    <li><%= link_to 'Clientes', customers_path%></li>
+<%elsif current_user.tipo==3%>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown1_2">Creditos<i class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown3_2">Pagos/recibos<i class="material-icons right">arrow_drop_down</i></a></li>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown4_2">Reportes<i class="material-icons right">arrow_drop_down</i></a></li> 
+    <li><%= link_to 'Clientes', customers_path%></li>
+<%elsif current_user.tipo==4%>
+    
+<%end%>
+<%unless current_user.nil?%>
+    <li><%= link_to "Cerrar Sesión", destroy_user_session_path, :method => :delete %></li> 
+<%end%>
+
+
+
+    

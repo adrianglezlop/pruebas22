@@ -1,0 +1,6562 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Loan.create([{nombre:'Arrendamiento financiero'},
+            {nombre:'Credito de auto'},
+            {nombre:'Credito de habilitacion o AVIO'},
+            {nombre:'Credito en cuenta corriente'},
+            {nombre:'Credito hipotecario'},
+            {nombre:'Credito personal'},
+            {nombre:'Credito quirografario'},
+            {nombre:'Credito refaccionario'},
+            {nombre:'Credito simple'},
+            {nombre:'Factoraje finaciero'},
+            {nombre:'Tarjeta de credito'}]) if Loan.all.count==0
+            
+Payout.create([{nombre:'Al vencimiento'},
+                {nombre:'Anual'},
+                {nombre:'Catorcenal'},
+                {nombre:'Diaria'},
+                {nombre:'Mensual'},
+                {nombre:'Quincenal'},
+                {nombre:'Semanal'},
+                {nombre:'Semestral'},
+                {nombre:'Trimestral'}])  if Payout.all.count==0
+
+User.create(
+email:'luisesh1x10@hotmail.com',
+password:'luisesh1',
+tipo:1,
+app:'luis',
+apm:'luis',
+nom1:'luis',
+nom2:'luis',
+RFC:'ddd333333fff',
+CURP:'luis',
+seguro:'luis',
+INE:'luis',
+nacionalidad:'luis',
+fecha_nacimiento:'17/10/1994',
+nac_ciudad:'luis',
+nac_estado:'luis',
+nac_pais:'luis',
+sexo:true,
+telefono_casa:'luis',
+telefono_celular:'luis',
+correo1:'luis',
+correo2:'luis',
+calle:'luis',
+numero_int:555,
+numero_ext:555,
+colonia:'luis',
+codigo_postal:45,
+municipio:'luis',
+estado:'luis',
+pais:'luis',
+alias:'luisesh1') if User.all.count==0
+
+
+EconomicalActivity.loadJson('[{"clave":100008,"descripcion":"AGRICULTURA"},
+{"clave":111013,"descripcion":"CULTIVO DE ALPISTE"},
+{"clave":111021,"descripcion":"CULTIVO DE ARROZ"},
+{"clave":111039,"descripcion":"CULTIVO DE AVENA"},
+{"clave":111047,"descripcion":"CULTIVO DE CEBADA"},
+{"clave":111055,"descripcion":"CULTIVO DE LINAZA"},
+{"clave":111063,"descripcion":"CULTIVO DE MAIZ"},
+{"clave":111071,"descripcion":"CULTIVO DE MILO"},
+{"clave":111089,"descripcion":"CULTIVO DE SORGO"},
+{"clave":111097,"descripcion":"CULTIVO DE SOYA"},
+{"clave":111104,"descripcion":"CULTIVO DE TRIGO"},
+{"clave":112011,"descripcion":"CULTIVO DE AJO"},
+{"clave":112029,"descripcion":"CULTIVO DE CALABAZA"},
+{"clave":112037,"descripcion":"CULTIVO DE CAMOTE"},
+{"clave":112045,"descripcion":"CULTIVO DE CEBOLLA"},
+{"clave":112053,"descripcion":"CULTIVO DE CHILE"},
+{"clave":112061,"descripcion":"CULTIVO DE ESPARRAGO"},
+{"clave":112079,"descripcion":"CULTIVO DE FRIJOL"},
+{"clave":112087,"descripcion":"CULTIVO DE GARBANZO"},
+{"clave":112095,"descripcion":"CULTIVO DE JITOMATE"},
+{"clave":112102,"descripcion":"CULTIVO DE LENTEJA"},
+{"clave":112110,"descripcion":"CULTIVO DE NOPAL"},
+{"clave":112128,"descripcion":"CULTIVO DE OTRAS HORTALIZAS"},
+{"clave":112136,"descripcion":"CULTIVO DE PAPA"},
+{"clave":112144,"descripcion":"CULTIVO DE REMOLACHA"},
+{"clave":112152,"descripcion":"CULTIVO DE TOMATE"},
+{"clave":112160,"descripcion":"CULTIVO DE YUCA"},
+{"clave":113019,"descripcion":"CULTIVO DE ALFALFA"},
+{"clave":119017,"descripcion":"CULTIVO DE FRESA"},
+{"clave":119025,"descripcion":"CULTIVO DE MELON"},
+{"clave":119033,"descripcion":"CULTIVO DE PIÑA"},
+{"clave":119041,"descripcion":"CULTIVO DE SANDIA"},
+{"clave":121012,"descripcion":"CULTIVO DE ALGODON"},
+{"clave":122010,"descripcion":"CULTIVO DE CAÑA DE AZUCAR"},
+{"clave":123018,"descripcion":"CULTIVO DE TABACO"},
+{"clave":124016,"descripcion":"CULTIVO DE AJONJOLI"},
+{"clave":124024,"descripcion":"CULTIVO DE CACAHUATE"},
+{"clave":124032,"descripcion":"CULTIVO DE CARTAMO"},
+{"clave":124040,"descripcion":"CULTIVO DE NUEZ"},
+{"clave":124058,"descripcion":"CULTIVO DE OLIVO"},
+{"clave":129016,"descripcion":"CULTIVO DE ESPECIAS"},
+{"clave":129024,"descripcion":"CULTIVO DE OTRAS SEMILLAS"},
+{"clave":129032,"descripcion":"CULTIVO DE SEMILLAS MEJORADAS"},
+{"clave":129040,"descripcion":"CULTIVO DE VAINILLA"},
+{"clave":131011,"descripcion":"CULTIVO DE FLORES Y PLANTAS DE ORNATO"},
+{"clave":141010,"descripcion":"CULTIVO DE CAFE"},
+{"clave":142018,"descripcion":"CULTIVO DE AGUACATE"},
+{"clave":142026,"descripcion":"CULTIVO DE DURAZNO"},
+{"clave":142034,"descripcion":"CULTIVO DE GUAYABA"},
+{"clave":142042,"descripcion":"CULTIVO DE LIMON"},
+{"clave":142050,"descripcion":"CULTIVO DE MANGO"},
+{"clave":142068,"descripcion":"CULTIVO DE MANZANA"},
+{"clave":142076,"descripcion":"CULTIVO DE NARANJA"},
+{"clave":142084,"descripcion":"CULTIVO DE OTROS ARBOLES FRUTALES"},
+{"clave":142092,"descripcion":"CULTIVO DE PAPAYA"},
+{"clave":142109,"descripcion":"CULTIVO DE PLATANO"},
+{"clave":142117,"descripcion":"CULTIVO DE TAMARINDO"},
+{"clave":142125,"descripcion":"CULTIVO DE TORONJA"},
+{"clave":143016,"descripcion":"CULTIVO DE VID"},
+{"clave":144014,"descripcion":"CULTIVO DE HENEQUEN"},
+{"clave":144022,"descripcion":"CULTIVO DE LINO"},
+{"clave":144030,"descripcion":"CULTIVO DE OTRAS FIBRAS DURAS"},
+{"clave":145012,"descripcion":"CULTIVO DE AGAVE O MEZCAL"},
+{"clave":145020,"descripcion":"CULTIVO DE MAGUEY"},
+{"clave":146010,"descripcion":"CULTIVO DE COPRA"},
+{"clave":147018,"descripcion":"CULTIVO DE CACAO"},
+{"clave":149014,"descripcion":"OTROS CULTIVOS PERMANENTES"},
+{"clave":149907,"descripcion":"USUARIOS MENORES AGRICULTURA"},
+{"clave":149915,"descripcion":"CARTERA AGRICOLA DE ESTADOS ANALITICOS"},
+{"clave":191015,"descripcion":"IRRIGACION DE TIERRAS"},
+{"clave":191023,"descripcion":"PREPARACION DE TIERRAS DE CULTIVO Y OTROS SERVICIOS AGRICOLAS"},
+{"clave":200006,"descripcion":"GANADERÍA"},
+{"clave":211011,"descripcion":"CRIA Y EXPLOTACION DE GANADO VACUNO PARA CARNE"},
+{"clave":212019,"descripcion":"CRIA Y EXPLOTACION DE GANADO VACUNO PARA LECHE"},
+{"clave":213017,"descripcion":"CRIA DE GANADO DE LIDIA"},
+{"clave":214015,"descripcion":"CRIA DE GANADO CABALLAR"},
+{"clave":219015,"descripcion":"CRIA DE OTROS EQUINOS Y GANADO PARA EL TRABAJO"},
+{"clave":219908,"descripcion":"USUARIOS MENORES GANADERIA"},
+{"clave":219916,"descripcion":"CARTERA GANADERA DE ESTADOS ANALITICOS"},
+{"clave":221010,"descripcion":"CRIA Y EXPLOTACION DE GANADO PORCINO"},
+{"clave":222018,"descripcion":"CRIA Y EXPLOTACION DE GANADO OVINO"},
+{"clave":223016,"descripcion":"CRIA Y EXPLOTACION DE GANADO CAPRINO"},
+{"clave":231019,"descripcion":"CRIA Y EXPLOTACION DE GALLINA PARA PRODUCCION DE HUEVO"},
+{"clave":232017,"descripcion":"CRIA Y EXPLOTACION DE POLLOS"},
+{"clave":233015,"descripcion":"CRIA Y EXPLOTACION DE OTRAS AVES PARA ALIMENTACION"},
+{"clave":241018,"descripcion":"CRIA Y EXPLOTACION DE ABEJAS"},
+{"clave":251017,"descripcion":"CRIA Y EXPLOTACION DE CONEJOS Y LIEBRES"},
+{"clave":259011,"descripcion":"CRIA Y EXPLOTACION DE ANIMALES DOMESTICOS, PARA LABORATORIO Y OTROS FINES NO ALIMENTICIOS"},
+{"clave":259029,"descripcion":"CRIA Y EXPLOTACION DE GUSANO DE SEDA"},
+{"clave":291013,"descripcion":"FORMACION DE PRADERAS Y POTREROS ARTIFICIALES"},
+{"clave":291021,"descripcion":"INSEMINACION ARTIFICIAL Y OTROS SERVICIOS DE GANADERIA"},
+{"clave":300004,"descripcion":"SILVICULTURA"},
+{"clave":311019,"descripcion":"PLANTACION Y REFORESTACION"},
+{"clave":312017,"descripcion":"EXTRACCION DE TRONCOS PARA ASERRADEROS Y PARA PULPA INCLUSO LA MADERA TOSCAMENTE ASERRADA"},
+{"clave":313015,"descripcion":"EXTRACCION DE CARBON VEGETAL"},
+{"clave":321018,"descripcion":"EXTRACCION DE CHICLE"},
+{"clave":322016,"descripcion":"EXPLOTACION DE CANDELILLA"},
+{"clave":322024,"descripcion":"EXPLOTACION DE HULE"},
+{"clave":322032,"descripcion":"EXTRACCION DE COLOFONIA"},
+{"clave":322040,"descripcion":"EXTRACCION DE OTRAS RESINAS"},
+{"clave":323014,"descripcion":"EXPLOTACION DE RAICES"},
+{"clave":323022,"descripcion":"EXTRACCION DE ALQUITRAN VEGETAL"},
+{"clave":323030,"descripcion":"EXTRACCION DE TREMENTINA"},
+{"clave":329012,"descripcion":"CULTIVO Y EXPLOTACION DE PALMA Y LECHUGUILLA"},
+{"clave":329020,"descripcion":"EXPLOTACION DE BARBASCO ARBORESCENTES Y ARBUSTOS"},
+{"clave":329905,"descripcion":"USUARIOS MENORES SILVICULTURA, PESCA Y PRESERVACION DE ANIMALES SALVAJES"},
+{"clave":329913,"descripcion":"CARTERA SILVICOLA DE ESTADOS ANALITICOS"},
+{"clave":391011,"descripcion":"SERVICIOS DE CORTADO ESTIMACION DEL VOLUMEN DE MADERA PROTECCION DE BOSQUES Y OTROS SERVICIOS RELATIVOS A LA EXPLOTACION FORESTAL"},
+{"clave":400002,"descripcion":"PESCA"},
+{"clave":411017,"descripcion":"CAPTURA DE ATUN BONITO BARRILETE Y SIMILARES"},
+{"clave":412015,"descripcion":"CAPTURA DE SARDINA Y SIMILARES"},
+{"clave":413013,"descripcion":"CAPTURA DE TIBURON CAZON RAYA Y SIMILARES"},
+{"clave":419011,"descripcion":"CAPTURA DE OTROS PECES EN ESTUARIOS COSTAS O ALTA MAR"},
+{"clave":419912,"descripcion":"CARTERA PESQUERA DE ESTADOS ANALITICOS"},
+{"clave":421016,"descripcion":"CAPTURA DE CAMARON"},
+{"clave":422014,"descripcion":"CAPTURA DE OSTION"},
+{"clave":429010,"descripcion":"CAPTURA DE OTROS CRUSTACEOS Y MOLUSCOS MARINOS"},
+{"clave":431015,"descripcion":"CAPTURA DE TORTUGA Y OTROS REPTILES MARINOS"},
+{"clave":439019,"descripcion":"CAPTURA DE MAMIFEROS ANFIBIOS Y DIVERSOS INVERTEBRADOS DE MAR"},
+{"clave":441014,"descripcion":"RECOLECCION DE CONCHAS HUEVOS CORALES ESPONJAS Y PERLAS"},
+{"clave":442012,"descripcion":"RECOLECCION DE ALGAS Y OTRAS PLANTAS ACUATICAS"},
+{"clave":451013,"descripcion":"CAPTURA DE PECES EN RIOS  LAGOS Y ESTUARIOS"},
+{"clave":452011,"descripcion":"CAPTURA DE CRUSTACEOS MOLUSCOS REPTILES ANFIBIOS Y OTRA FAUNA DE AGUA DULCE"},
+{"clave":459017,"descripcion":"CRIA Y EXPLOTACION DE OSTRAS"},
+{"clave":459025,"descripcion":"CRIA Y EXPLOTACION DE PECES  OTRAS ESPECIES ANIMALES Y PLANTAS ACUATICAS"},
+{"clave":491019,"descripcion":"SERVICIOS DE PESQUERIAS MARITIMAS Y DE AGUA DULCE POR CONTRATO"},
+{"clave":500000,"descripcion":"CAZA"},
+{"clave":511015,"descripcion":"CAPTURA Y PRESERVACION DE ESPECIES ANIMALES SALVAJES"},
+{"clave":1100007,"descripcion":"EXTRACCIÓN Y BENEFICIO DE CARBÓN MINERAL Y GRAFITO"},
+{"clave":1111012,"descripcion":"EXTRACCION Y BENEFICIO DE CARBON MINERAL Y GRAFITO"},
+{"clave":1200005,"descripcion":"EXTRACCIÓN DE PETRÓLEO CRUDO Y GAS NATURAL"},
+{"clave":1211010,"descripcion":"EXPLORACION DE PETROLEO POR COMPAÑIAS"},
+{"clave":1211028,"descripcion":"EXTRACCION DE PETROLEO CRUDO Y GAS NATURAL"},
+{"clave":1211903,"descripcion":"USUARIOS MENORES PETROLEO"},
+{"clave":1211911,"descripcion":"CARTERA PETROLERA DE ESTADOS ANALITICOS"},
+{"clave":1221019,"descripcion":"PIDIREGAS PETROLEO"},
+{"clave":1300003,"descripcion":"EXTRACCIÓN Y BENEFICIO DE MINERALES METÁLICOS"},
+{"clave":1311018,"descripcion":"EXTRACCION Y BENEFICIO DE MINERAL DE HIERRO"},
+{"clave":1321017,"descripcion":"EXTRACCION Y BENEFICIO DE ORO PLATA Y OTROS METALES PRECIOSOS"},
+{"clave":1322015,"descripcion":"EXTRACCION Y BENEFICIO DE MERCURIO Y ANTIMONIO"},
+{"clave":1329011,"descripcion":"EXTRACCION Y BENEFICIO DE COBRE  PLOMO  ZINC Y OTROS MINERALES NO FERROSOS"},
+{"clave":1329904,"descripcion":"USUARIOS MENORES MINERIA"},
+{"clave":1329912,"descripcion":"CARTERA MINERA DE ESTADOS ANALITICOS"},
+{"clave":1330001,"descripcion":"EXTRACCION DE ORO, PLATA Y OTROS METALES PRECIOSOS"},
+{"clave":1400001,"descripcion":"EXTRACCIÓN DE MINERALES NO METÁLICOS, EXCEPTO SAL"},
+{"clave":1411016,"descripcion":"EXTRACCION Y BENEFICIO DE PIEDRA"},
+{"clave":1412014,"descripcion":"EXTRACCION DE YESO"},
+{"clave":1413012,"descripcion":"EXTRACCION Y BENEFICIO DE ARENA Y GRAVA"},
+{"clave":1419010,"descripcion":"EXTRACCION Y BENEFICIO DE OTROS MATERIALES PARA CONSTRUCCION"},
+{"clave":1421015,"descripcion":"EXTRACCION Y BENEFICIO DE ARCILLAS REFRACTARIAS"},
+{"clave":1431014,"descripcion":"EXTRACCION Y BENEFICIO DE BARITA Y ROCA FOSFORICA"},
+{"clave":1432012,"descripcion":"EXTRACCION Y BENEFICIO DE FLUORITA"},
+{"clave":1433010,"descripcion":"EXTRACCION Y BENEFICIO DE SILICE"},
+{"clave":1439018,"descripcion":"EXTRACCION Y BENEFICIO DE OTROS MINERALES NO METALICOS EXCEPTO SAL"},
+{"clave":1500009,"descripcion":"EXPLOTACIÓN DE SAL"},
+{"clave":1511014,"descripcion":"EXPLOTACION DE SAL MARINA Y DE YACIMIENTOS"},
+{"clave":2000008,"descripcion":"FABRICACIÓN DE ALIMENTOS"},
+{"clave":2011013,"descripcion":"DESHIDRATACION DE FRUTAS"},
+{"clave":2012011,"descripcion":"EMPACADORA DE CONSERVAS ALIMENTICIAS"},
+{"clave":2012029,"descripcion":"EMPACADORA DE FRUTAS Y LEGUMBRES"},
+{"clave":2012037,"descripcion":"FABRICACION DE CONCENTRADOS DE FRUTAS"},
+{"clave":2012045,"descripcion":"FABRICACION DE ENCURTIDOS"},
+{"clave":2013019,"descripcion":"FABRICACION DE ATES"},
+{"clave":2013027,"descripcion":"FABRICACION DE QUESO Y MIEL DE TUNA"},
+{"clave":2014017,"descripcion":"FABRICACION DE SALSAS"},
+{"clave":2021012,"descripcion":"MOLINO DE TRIGO"},
+{"clave":2022010,"descripcion":"MOLINO DE MAIZ"},
+{"clave":2023018,"descripcion":"MOLINO DE NIXTAMAL"},
+{"clave":2024016,"descripcion":"MOLINO DE ARROZ"},
+{"clave":2025014,"descripcion":"BENEFICIO DE CAFE EXCEPTO MOLIENDA Y TOSTADO"},
+{"clave":2026012,"descripcion":"MOLINO Y TOSTADOR DE CAFE"},
+{"clave":2027010,"descripcion":"EMPACADORA DE TE"},
+{"clave":2028018,"descripcion":"BENEFICIO DE ARROZ EXCEPTO MOLIENDA"},
+{"clave":2028026,"descripcion":"DESCASCARADO Y TOSTADO DE CACAHUATE Y NUEZ"},
+{"clave":2028034,"descripcion":"DESCASCARADORA Y TOSTADORA DE SEMILLA DE CALABAZA"},
+{"clave":2028042,"descripcion":"MOLINO PARA OTROS GRANOS EXCEPTO CEREALES"},
+{"clave":2029016,"descripcion":"MOLINO DE AVENA"},
+{"clave":2029024,"descripcion":"MOLINO DE CEBADA"},
+{"clave":2029032,"descripcion":"MOLINO DE OTROS CEREALES"},
+{"clave":2031011,"descripcion":"FABRICACION DE MARQUETAS Y ESTUCHADOS DE AZUCAR"},
+{"clave":2031029,"descripcion":"INGENIO AZUCARERO"},
+{"clave":2032019,"descripcion":"FABRICACION DE PILONCILLO"},
+{"clave":2033017,"descripcion":"DESTILACION DE ALCOHOL ETILICO"},
+{"clave":2041010,"descripcion":"RASTRO"},
+{"clave":2049014,"descripcion":"EMPACADORA DE CARNE"},
+{"clave":2049022,"descripcion":"FABRICACION DE CARNES FRIAS Y EMBUTIDOS"},
+{"clave":2049030,"descripcion":"REFRIGERACION DE CARNES"},
+{"clave":2051019,"descripcion":"FABRICACION Y PREHIDRATACION DE LECHE"},
+{"clave":2051027,"descripcion":"PASTEURIZACION HOMOGENEIZACION Y ENVASADO DE LECHE"},
+{"clave":2052017,"descripcion":"FABRICACION DE CREMA MANTEQUILLA Y QUESO"},
+{"clave":2053015,"descripcion":"FABRICACION DE LECHE CONDENSADA EVAPORADA Y PULVERIZADA"},
+{"clave":2054013,"descripcion":"FABRICACION DE GELATINAS"},
+{"clave":2054021,"descripcion":"FABRICACION DE GRENETINA"},
+{"clave":2059013,"descripcion":"FABRICACION DE CAJETAS YOGURTS Y OTROS PRODUCTOS A BASE DE LECHE"},
+{"clave":2061018,"descripcion":"CONGELADORA DE PRODUCTOS MARINOS"},
+{"clave":2061026,"descripcion":"EMPACADORA DE OTROS MARISCOS"},
+{"clave":2061034,"descripcion":"EMPACADORA DE PESCADO"},
+{"clave":2071017,"descripcion":"FABRICACION DE PAN Y PASTELES"},
+{"clave":2072015,"descripcion":"FABRICACION DE CONOS PARA NIEVE"},
+{"clave":2072023,"descripcion":"FABRICACION DE GALLETAS"},
+{"clave":2072031,"descripcion":"FABRICACION DE PASTAS ALIMENTICIAS"},
+{"clave":2081016,"descripcion":"FABRICACION DE CHOCOLATES"},
+{"clave":2082014,"descripcion":"FABRICACION DE DULCES BOMBONES Y CONFITES"},
+{"clave":2083012,"descripcion":"FABRICACION DE GOMA DE MASCAR"},
+{"clave":2084010,"descripcion":"TRATAMIENTO Y ENVASE DE MIEL DE ABEJA"},
+{"clave":2089010,"descripcion":"FABRICACION DE JARABES"},
+{"clave":2091015,"descripcion":"FABRICACION DE ACEITES VEGETALES COMESTIBLES"},
+{"clave":2091023,"descripcion":"FABRICACION DE MANTECAS VEGETALES COMESTIBLES"},
+{"clave":2092013,"descripcion":"FABRICACION DE ALMIDON"},
+{"clave":2092021,"descripcion":"FABRICACION DE LEVADURAS"},
+{"clave":2093011,"descripcion":"TORTILLERIA"},
+{"clave":2094019,"descripcion":"FABRICACION DE FRITURAS"},
+{"clave":2094027,"descripcion":"FABRICACION DE OTROS PREPARADOS ALIMENTICIOS DERIVADOS DE CEREALES"},
+{"clave":2095017,"descripcion":"FABRICACION DE VINAGRE"},
+{"clave":2095025,"descripcion":"REFINACION DE SAL"},
+{"clave":2096015,"descripcion":"FABRICACION DE HIELO"},
+{"clave":2097013,"descripcion":"FABRICACION DE HELADOS NIEVES Y PALETAS"},
+{"clave":2098011,"descripcion":"DESHIDRATACION DE PLANTAS PARA FORRAJES"},
+{"clave":2098029,"descripcion":"FABRICACION DE ALIMENTO PARA GANADO Y OTROS ANIMALES"},
+{"clave":2098037,"descripcion":"FABRICACION DE ALIMENTOS PARA AVES"},
+{"clave":2099019,"descripcion":"EMPACADORA DE ESPECIAS"},
+{"clave":2099027,"descripcion":"FABRICACION DE ACEITES Y MANTECAS ANIMALES COMESTIBLES"},
+{"clave":2099035,"descripcion":"FABRICACION DE HARINA DE PESCADO"},
+{"clave":2099043,"descripcion":"FABRICACION DE OTROS PRODUCTOS ALIMENTICIOS"},
+{"clave":2099051,"descripcion":"FABRICACION DE PASTAS PARA GUISOS"},
+{"clave":2100006,"descripcion":"FABRICACIÓN Y ELABORACIÓN DE BEBIDAS (AGUA, REFRESCOS, CERVEZA, VINOS Y LICORES)"},
+{"clave":2111011,"descripcion":"FABRICACION DE TEQUILA Y MEZCAL"},
+{"clave":2112019,"descripcion":"FABRICACION DE AGUARDIENTE DE CAÑA"},
+{"clave":2113017,"descripcion":"FABRICACION DE SOTOL"},
+{"clave":2114015,"descripcion":"FABRICACION DE OTROS AGUARDIENTES NO DE CAÑA"},
+{"clave":2114023,"descripcion":"FABRICACION DE VINOS Y OTROS LICORES"},
+{"clave":2115013,"descripcion":"ELABORACION DE PULQUE"},
+{"clave":2119015,"descripcion":"FABRICACION DE SIDRA  CHAMPAÑA Y OTRAS BEBIDAS FERMENTADAS  EXCEPTO LAS MALTEADAS"},
+{"clave":2121010,"descripcion":"FABRICACION DE MALTA"},
+{"clave":2122018,"descripcion":"FABRICACION DE CERVEZA"},
+{"clave":2131019,"descripcion":"EMBOTELLADO DE AGUAS MINERALES"},
+{"clave":2131027,"descripcion":"FABRICACION DE BEBIDAS GASEOSAS"},
+{"clave":2131035,"descripcion":"FABRICACION DE REFRESCOS DE FRUTAS NATURALES"},
+{"clave":2131043,"descripcion":"PURIFICACION DE AGUA  EXCEPTO CAPTACION TRATAMIENTO CONDUCCION Y DISTRIBUCION DE AGUA POTABLE"},
+{"clave":2200004,"descripcion":"FABRICACIÓN Y BENEFICIO DE PRODUCTOS DE TABACO"},
+{"clave":2211019,"descripcion":"DESECADO DE TABACO"},
+{"clave":2212017,"descripcion":"FABRICACION DE CIGARROS"},
+{"clave":2219013,"descripcion":"FABRICACION DE PUROS"},
+{"clave":2219021,"descripcion":"PICADO DE TABACO"},
+{"clave":2300002,"descripcion":"INDUSTRIA TEXTIL (FABRICACIÓN DE: HILADOS Y TEJIDOS)"},
+{"clave":2311017,"descripcion":"DESFIBRACION DE ALGODON"},
+{"clave":2311025,"descripcion":"DESPEPITE DE ALGODON"},
+{"clave":2311033,"descripcion":"COMPRESORA DE ALGODON"},
+{"clave":2312015,"descripcion":"BENEFICIO DE LANAS"},
+{"clave":2312023,"descripcion":"BENEFICIO DE OTRAS FIBRAS TEXTILES"},
+{"clave":2312031,"descripcion":"FABRICACION DE HILADOS Y TEJIDOS DE ALGODON"},
+{"clave":2312049,"descripcion":"FABRICACION DE HILADOS Y TEJIDOS DE LANA"},
+{"clave":2313013,"descripcion":"FABRICACION DE HILOS PARA COSER"},
+{"clave":2313021,"descripcion":"ACABADO DE HILOS"},
+{"clave":2313039,"descripcion":"FABRICACION DE OTROS HILADOS Y TEJIDOS NO SINTETICOS"},
+{"clave":2314011,"descripcion":"FABRICACION DE ESTAMBRES"},
+{"clave":2315019,"descripcion":"FABRICACION DE SARAPES Y COBIJAS"},
+{"clave":2315027,"descripcion":"FABRICACION DE CASIMIRES Y PAÑOS"},
+{"clave":2316017,"descripcion":"FABRICACION DE TOALLAS"},
+{"clave":2316025,"descripcion":"FABRICACION DE COLCHAS"},
+{"clave":2317015,"descripcion":"FABRICACION DE HILADOS Y TEJIDOS DE SEDA"},
+{"clave":2317023,"descripcion":"FABRICACION DE OTROS ARTICULOS DE LANA"},
+{"clave":2317031,"descripcion":"FABRICACION DE OTRAS TELAS MIXTAS DE FIBRAS BLANDAS"},
+{"clave":2318013,"descripcion":"FABRICACION DE CINTAS AGUJETAS Y LISTONES"},
+{"clave":2318021,"descripcion":"FABRICACION DE ENCAJES"},
+{"clave":2318039,"descripcion":"FABRICACION DE TELAS ELASTICAS"},
+{"clave":2319011,"descripcion":"ACABADO DE TELAS"},
+{"clave":2321016,"descripcion":"FABRICACION DE CALCETINES"},
+{"clave":2321024,"descripcion":"FABRICACION DE MEDIAS"},
+{"clave":2322014,"descripcion":"FABRICACION DE SUETERES"},
+{"clave":2329010,"descripcion":"FABRICACION DE HILADOS Y TEJIDOS DE OTRAS FIBRAS SINTETICAS"},
+{"clave":2331015,"descripcion":"DESFIBRACION DE HENEQUEN"},
+{"clave":2332013,"descripcion":"FABRICACION DE HILADOS Y TEJIDOS DE HENEQUEN"},
+{"clave":2333011,"descripcion":"FABRICACION DE ARTICULOS DE PALMA Y TULE"},
+{"clave":2333029,"descripcion":"FABRICACION DE TEJIDOS Y TORCIDOS DE PALMA"},
+{"clave":2333037,"descripcion":"FABRICACION DE TEJIDOS Y TORCIDOS DE IXTLE"},
+{"clave":2339019,"descripcion":"FABRICACION DE HILADOS Y TEJIDOS DE YUTE"},
+{"clave":2339027,"descripcion":"FABRICACION DE HILADOS Y TEJIDOS DE FIBRA DE COCO"},
+{"clave":2391019,"descripcion":"FABRICACION DE ARTICULOS DE LONA"},
+{"clave":2391027,"descripcion":"FABRICACION DE LONA"},
+{"clave":2391035,"descripcion":"FABRICACION DE TELAS IMPERMEABLES"},
+{"clave":2392017,"descripcion":"FABRICACION DE TAPETES Y ALFOMBRAS"},
+{"clave":2392025,"descripcion":"FABRICACION DE TELAS PARA TAPICERIA"},
+{"clave":2393015,"descripcion":"FABRICACION DE ENTRETELAS Y FIELTROS"},
+{"clave":2394013,"descripcion":"BENEFICIO DE PELO Y CERDA PARA LA INDUSTRIA TEXTIL"},
+{"clave":2394021,"descripcion":"FABRICACION DE BORRAS Y ESTOPAS"},
+{"clave":2394039,"descripcion":"FABRICACION DE OTROS ARTICULOS DE ALGODON"},
+{"clave":2400000,"descripcion":"FABRICACIÓN DE PRENDAS DE VESTIR Y OTROS ARTÍCULOS CONFECCIONADOS CON TEXTILES Y OTROS MATERIALES EXCEPTO CALZADO"},
+{"clave":2411015,"descripcion":"FABRICACION DE VESTIDOS Y OTRAS PRENDAS EXTERIORES DE VESTIR PARA DAMA"},
+{"clave":2411023,"descripcion":"TALLER DE CONFECCION DE VESTIDOS"},
+{"clave":2412013,"descripcion":"FABRICACION DE OTRAS PRENDAS EXTERIORES DE VESTIR PARA CABALLERO"},
+{"clave":2412021,"descripcion":"FABRICACION DE TRAJES PARA CABALLERO"},
+{"clave":2412039,"descripcion":"TALLER DE SASTRERIA"},
+{"clave":2413011,"descripcion":"FABRICACION DE UNIFORMES"},
+{"clave":2414019,"descripcion":"FABRICACION DE CAMISAS"},
+{"clave":2415017,"descripcion":"FABRICACION DE OTRAS PRENDAS EXTERIORES DE VESTIR PARA NIÑO"},
+{"clave":2416015,"descripcion":"FABRICACION DE CORBATAS"},
+{"clave":2416023,"descripcion":"FABRICACION DE GUANTES"},
+{"clave":2416031,"descripcion":"FABRICACION DE PAÑUELOS PAÑOLETAS Y MASCADAS"},
+{"clave":2417013,"descripcion":"FABRICACION DE CACHUCHAS Y GORRAS"},
+{"clave":2417021,"descripcion":"FABRICACION DE SOMBREROS EXCEPTO DE PALMA"},
+{"clave":2418011,"descripcion":"FABRICACION DE SOMBREROS DE PALMA"},
+{"clave":2419019,"descripcion":"FABRICACION DE CHAMARRAS Y ABRIGOS"},
+{"clave":2419027,"descripcion":"FABRICACION DE IMPERMEABLES"},
+{"clave":2419035,"descripcion":"FABRICACION DE TIRANTES"},
+{"clave":2419043,"descripcion":"FABRICACION DE MANTONES Y CHALINAS"},
+{"clave":2419051,"descripcion":"FABRICACION DE REBOZOS Y CINTURONES TEJIDOS DE HILO"},
+{"clave":2419069,"descripcion":"FABRICACION DE ROPA CON PIEL"},
+{"clave":2421014,"descripcion":"FABRICACION DE CORSETERIA Y ROPA INTERIOR PARA DAMA"},
+{"clave":2429018,"descripcion":"FABRICACION DE ROPA INTERIOR PARA CABALLERO"},
+{"clave":2431013,"descripcion":"FABRICACION DE SABANAS"},
+{"clave":2431021,"descripcion":"FABRICACION DE CORTINAS DE TELA Y MANTELERIA"},
+{"clave":2432011,"descripcion":"FABRICACION DE CUBRE ASIENTOS PARA VEHICULOS"},
+{"clave":2432029,"descripcion":"FABRICACION DE TAPICES PLASTICOS"},
+{"clave":2433019,"descripcion":"FABRICACION DE ALGODON ABSORBENTE VENDAS TELA ADHESIVA Y PRODUCTOS SIMILARES"},
+{"clave":2434017,"descripcion":"FABRICACION DE ARTICULOS BORDADOS Y DESHILADOS"},
+{"clave":2434025,"descripcion":"FORRADO DE BOTONES Y HEBILLAS"},
+{"clave":2439017,"descripcion":"FABRICACION DE BANDERAS Y ADORNOS DE TELA"},
+{"clave":2439025,"descripcion":"FABRICACION DE COSTALES"},
+{"clave":2500008,"descripcion":"FABRICACIÓN DE CALZADO E INDUSTRIA DEL CUERO"},
+{"clave":2511013,"descripcion":"FABRICACION DE CALZADO PARA DEPORTE EXCEPTO DE PLASTICO Y HULE"},
+{"clave":2512011,"descripcion":"FABRICACION DE ALPARGATAS BABUCHAS Y PANTUFLAS"},
+{"clave":2512029,"descripcion":"FABRICACION DE GUARACHES Y SANDALIAS"},
+{"clave":2519017,"descripcion":"FABRICACION DE CALZADO DE CUERO O PIEL"},
+{"clave":2521020,"descripcion":"PREPARACION DE VISCERAS PARA INDUSTRIAS NO ALIMENTICIAS"},
+{"clave":2529016,"descripcion":"FABRICACION DE CEPILLOS Y PLUMEROS"},
+{"clave":2529024,"descripcion":"FABRICACION DE ARTICULOS DE CUERO PARA VIAJE"},
+{"clave":2529032,"descripcion":"FABRICACION DE ARTICULOS DE CUERO Y HUESO"},
+{"clave":2529040,"descripcion":"FABRICACION DE ARTICULOS DE CUERO Y PIEL PARA ZAPATERO"},
+{"clave":2529058,"descripcion":"FABRICACION DE ARTICULOS TEJIDOS DE CUERO"},
+{"clave":2529066,"descripcion":"FABRICACION DE BANDAS Y CORREAS DE CUERO"},
+{"clave":2529074,"descripcion":"FABRICACION DE BOLSAS Y CARTERAS DE CUERO"},
+{"clave":2529082,"descripcion":"FABRICACION DE BROCHAS Y PINCELES"},
+{"clave":2529090,"descripcion":"FABRICACION DE FORNITURAS MILITARES DE CUERO"},
+{"clave":2529107,"descripcion":"FABRICACION DE OTROS ARTICULOS DE CUERO"},
+{"clave":2529115,"descripcion":"TALABARTERIA"},
+{"clave":2600006,"descripcion":"INDUSTRIA Y PRODUCTOS DE MADERA Y CORCHO; EXCEPTO MUEBLES"},
+{"clave":2611011,"descripcion":"ASERRADERO"},
+{"clave":2611029,"descripcion":"BENEFICIO DE MADERAS (DESFLEMADO ESTUFADO CEPILLADO ETC)"},
+{"clave":2612019,"descripcion":"FABRICACION DE TRIPLAY Y OTROS AGLOMERADOS DE MADERA"},
+{"clave":2621010,"descripcion":"FABRICACION DE CAJAS Y EMPAQUES DE MADERA"},
+{"clave":2621028,"descripcion":"FABRICACION DE TONELES Y BARRICAS DE MADERA"},
+{"clave":2622018,"descripcion":"FABRICACION DE ARTICULOS DE PALMA VARA CARRIZO MIMBRE Y SIMILARES"},
+{"clave":2631019,"descripcion":"FABRICACION DE ATAUDES DE MADERA"},
+{"clave":2632017,"descripcion":"FABRICACION DE JUNTAS Y EMPAQUES DE CORCHO"},
+{"clave":2632025,"descripcion":"FABRICACION DE OTROS ARTICULOS DE CORCHO"},
+{"clave":2632033,"descripcion":"FABRICACION DE ASBESTOS Y CORCHOS AISLANTES"},
+{"clave":2633015,"descripcion":"FABRICACION DE DUELAS Y OTROS MATERIALES DE MADERA PARA PISO"},
+{"clave":2633023,"descripcion":"FABRICACION DE PUERTAS Y VENTANAS DE MADERA"},
+{"clave":2639013,"descripcion":"FABRICACION DE CARROCERIAS Y REDILAS DE MADERA"},
+{"clave":2639021,"descripcion":"FABRICACION DE MANGOS DE MADERA"},
+{"clave":2639039,"descripcion":"FABRICACION DE OTROS ARTICULOS DE MADERA"},
+{"clave":2700004,"descripcion":"FABRICACIÓN Y REPARACIÓN DE MUEBLES Y ACCESORIOS; EXCEPTO LOS DE METAL Y LOS DE PLÁSTICO MOLDEADO"},
+{"clave":2711019,"descripcion":"FABRICACION DE MUEBLES DE MADERA"},
+{"clave":2711027,"descripcion":"FABRICACION DE MUEBLES DE MATERIAL SINTETICO"},
+{"clave":2712017,"descripcion":"FABRICACION DE PERSIANAS DE MADERA"},
+{"clave":2713015,"descripcion":"FABRICACION DE ALMOHADAS Y COJINES"},
+{"clave":2713023,"descripcion":"FABRICACION DE COLCHONES Y COLCHONETAS"},
+{"clave":2719013,"descripcion":"FABRICACION DE MARCOS Y MOLDURAS DE MADERA"},
+{"clave":2800002,"descripcion":"INDUSTRIA DEL PAPEL"},
+{"clave":2811017,"descripcion":"FABRICACION DE PAPEL"},
+{"clave":2811025,"descripcion":"FABRICACION DE PAPEL PARA CIGARROS"},
+{"clave":2811033,"descripcion":"FABRICACION DE PASTA DE CELULOSA"},
+{"clave":2811041,"descripcion":"FABRICACION DE PASTA O PULPA PARA PAPEL"},
+{"clave":2812015,"descripcion":"FABRICACION DE CARTON"},
+{"clave":2821016,"descripcion":"FABRICACION DE SACOS Y BOLSAS DE PAPEL PARA ENVASE"},
+{"clave":2822014,"descripcion":"FABRICACION DE ENVASES DE CARTON"},
+{"clave":2829010,"descripcion":"FABRICACION DE OTROS ARTICULOS DE CARTON"},
+{"clave":2829028,"descripcion":"FABRICACION DE OTROS ARTICULOS DE PAPEL"},
+{"clave":2900000,"descripcion":"INDUSTRIAS EDITORIAL, DE IMPRESIÓN Y CONEXAS"},
+{"clave":2911015,"descripcion":"EDICION DE PERIODICOS Y REVISTAS"},
+{"clave":2912005,"descripcion":"EDICION DE LIBROS Y SIMILARES"},
+{"clave":2912013,"descripcion":"EDICION DE LIBROS"},
+{"clave":2921014,"descripcion":"ENCUADERNACION"},
+{"clave":2921022,"descripcion":"FABRICACION DE FORMULARIOS Y FORMAS CONTINUAS"},
+{"clave":2921030,"descripcion":"FABRICACION DE LIBRETAS CUADERNOS Y HOJAS PARA ENCUADERNACION"},
+{"clave":2921048,"descripcion":"FOTOCOPIADO"},
+{"clave":2921056,"descripcion":"IMPRENTA ( TIPOGRAFIA)"},
+{"clave":2921064,"descripcion":"IMPRESION MEDIANTE CILINDROS DE CAUCHO"},
+{"clave":2921072,"descripcion":"IMPRESION MEDIANTE CILINDROS (ROTOGRABADO)"},
+{"clave":2929018,"descripcion":"FABRICACION DE CALCOMANIAS"},
+{"clave":2929026,"descripcion":"FABRICACION DE TIPOS PARA IMPRENTA"},
+{"clave":2929034,"descripcion":"GRABADO E IMPRESION EN PIEDRA  VIDRIO Y OTROS MATERIALES LITOGRAFIA Y FOTOLITOGRAFIA"},
+{"clave":2929042,"descripcion":"GRABADO E IMPRESION FOTOMECANICA MEDIANTE AGUA FUERTE(HELIOGRABADO)"},
+{"clave":2929050,"descripcion":"GRABADO EN METAL (FABRICACION DE CLICHES Y FOTOGRABADO)"},
+{"clave":3000007,"descripcion":"INDUSTRIA QUÍMICA"},
+{"clave":3011012,"descripcion":"FABRICACION DE AÑIL"},
+{"clave":3011020,"descripcion":"FABRICACION DE ANILINAS"},
+{"clave":3011038,"descripcion":"FABRICACION DE OTRAS MATERIAS COLORANTES"},
+{"clave":3012010,"descripcion":"FABRICACION DE GAS ACETILENO"},
+{"clave":3013018,"descripcion":"FABRICACION DE ACIDOS INDUSTRIALES"},
+{"clave":3013026,"descripcion":"FABRICACION DE OTRAS SUBSTANCIAS QUIMICAS BASICAS"},
+{"clave":3013034,"descripcion":"FABRICACION DE PRODUCTOS AMONIACALES"},
+{"clave":3013042,"descripcion":"FABRICACION DE SOSA"},
+{"clave":3021011,"descripcion":"FABRICACION DE ABONOS Y FERTILIZANTES QUIMICOS"},
+{"clave":3022019,"descripcion":"FABRICACION DE INSECTICIDAS Y PLAGUICIDAS"},
+{"clave":3031010,"descripcion":"FABRICACION DE HULE ESPUMA"},
+{"clave":3032018,"descripcion":"FABRICACION DE FIBRAS SINTETICAS"},
+{"clave":3041019,"descripcion":"FABRICACION DE PINTURAS  BARNICES Y LACAS"},
+{"clave":3051018,"descripcion":"FABRICACION DE ALGODON ESTERILIZADO  GASAS Y VENDAS"},
+{"clave":3051026,"descripcion":"FABRICACION DE OTROS PRODUCTOS FARMACEUTICOS Y MEDICAMENTOS"},
+{"clave":3051034,"descripcion":"FABRICACION DE OXIGENO MEDICINAL"},
+{"clave":3061017,"descripcion":"FABRICACION DE DENTIFRICO"},
+{"clave":3061025,"descripcion":"FABRICACION DE JABON Y DETERGENTE"},
+{"clave":3062015,"descripcion":"FABRICACION DE PERFUMES Y COSMETICOS"},
+{"clave":3071016,"descripcion":"FABRICACION DE ESENCIAS"},
+{"clave":3072014,"descripcion":"FABRICACION Y REFINACION DE SEBO GRASAS Y ACEITES ANIMALES PARA USO INDUSTRIAL"},
+{"clave":3072022,"descripcion":"FUNDICION DE SEBO"},
+{"clave":3072030,"descripcion":"HIDROGENADORA DE PRODUCTOS DIVERSOS"},
+{"clave":3091014,"descripcion":"FABRICACION DE COLAS Y PEGAMENTOS"},
+{"clave":3091022,"descripcion":"FABRICACION DE IMPERMEABILIZANTES"},
+{"clave":3092012,"descripcion":"FABRICACION DE CERA PULIMENTOS Y ABRILLANTADORES"},
+{"clave":3092020,"descripcion":"FABRICACION DE DESINFECTANTES Y DESODORIZANTES"},
+{"clave":3092038,"descripcion":"FABRICACION DE GRASAS Y CREMAS LUSTRADORAS"},
+{"clave":3092046,"descripcion":"FABRICACION DE LANOLINA"},
+{"clave":3093010,"descripcion":"FABRICACION DE AGUARRAS"},
+{"clave":3094018,"descripcion":"FABRICACION DE CERILLOS Y FOSFOROS"},
+{"clave":3095016,"descripcion":"FABRICACION DE OTROS ARTICULOS DE CERA"},
+{"clave":3095024,"descripcion":"FABRICACION DE VELAS VELADORAS Y CIRIOS"},
+{"clave":3096014,"descripcion":"FABRICACION DE TINTAS PARA IMPRESION"},
+{"clave":3097012,"descripcion":"FABRICACION DE DINAMITA"},
+{"clave":3097020,"descripcion":"FABRICACION DE MECHAS PARA MINAS"},
+{"clave":3097038,"descripcion":"FABRICACION DE OTROS EXPLOSIVOS"},
+{"clave":3097046,"descripcion":"FABRICACION DE POLVORA"},
+{"clave":3097054,"descripcion":"FABRICACION DE PRODUCTOS PIROTECNICOS"},
+{"clave":3099018,"descripcion":"FABRICACION DE ARTICULOS DE BAQUELITA"},
+{"clave":3099026,"descripcion":"FABRICACION DE DESINCRUSTANTES"},
+{"clave":3099034,"descripcion":"FABRICACION DE HIELO SECO"},
+{"clave":3099042,"descripcion":"INDUSTRIALIZACION DE BASURA"},
+{"clave":3100005,"descripcion":"REFINACIÓN DE PETRÓLEO Y DERIVADOS DEL CARBÓN MINERAL"},
+{"clave":3111010,"descripcion":"FABRICACION DE GASOLINA Y OTROS PRODUCTOS DERIVADOS DE LA REFINACION DE PETROLEO"},
+{"clave":3112018,"descripcion":"FABRICACION DE PRODUCTOS PETROQUIMICOS BASICOS"},
+{"clave":3113016,"descripcion":"FABRICACION DE ACEITES Y LUBRICANTES"},
+{"clave":3121019,"descripcion":"FABRICACION DE COQUE Y OTROS DERIVADOS DEL CARBON MINERAL"},
+{"clave":3122017,"descripcion":"FABRICACION DE MATERIALES ASFALTICOS PARA PAVIMENTACION Y TECHADO"},
+{"clave":3200003,"descripcion":"FABRICACIÓN DE PRODUCTOS DE HULE Y DE PLÁSTICO"},
+{"clave":3211018,"descripcion":"FABRICACION DE LLANTAS Y CAMARAS PARA VEHICULOS"},
+{"clave":3212016,"descripcion":"REGENERACION DE HULE"},
+{"clave":3212024,"descripcion":"VULCANIZACION DE LLANTAS Y CAMARAS"},
+{"clave":3219012,"descripcion":"FABRICACION DE ARTICULOS CON HULE USADO"},
+{"clave":3219020,"descripcion":"FABRICACION DE LINOLEO"},
+{"clave":3219038,"descripcion":"FABRICACION DE OTROS ARTICULOS DE HULE"},
+{"clave":3221017,"descripcion":"FABRICACION DE LAMINAS PERFILES TUBOS Y OTROS MATERIALES SIMILARES DE PLASTICO"},
+{"clave":3222015,"descripcion":"FABRICACION DE ARTICULOS DE POLIETILENO"},
+{"clave":3222023,"descripcion":"FABRICACION DE CELULOIDE Y POLIETILENO"},
+{"clave":3223013,"descripcion":"FABRICACION DE CALZADO DE PLASTICO"},
+{"clave":3223021,"descripcion":"FABRICACION DE OTROS JUGUETES DE PLASTICO"},
+{"clave":3229011,"descripcion":"FABRICACION DE ARTICULOS DE CELULOIDE"},
+{"clave":3229029,"descripcion":"FABRICACION DE BALONES GLOBOS Y PELOTAS"},
+{"clave":3229037,"descripcion":"FABRICACION DE BOTONES DE PLASTICO"},
+{"clave":3229045,"descripcion":"FABRICACION DE OTROS ARTICULOS DE PLASTICO"},
+{"clave":3229053,"descripcion":"FABRICACION DE OTROS MATERIALES DE PLASTICO"},
+{"clave":3229061,"descripcion":"FABRICACION DE PEINES PEINETAS Y CEPILLOS PARA USO PERSONAL"},
+{"clave":3229079,"descripcion":"FABRICACION DE PIELES ARTIFICIALES"},
+{"clave":3300001,"descripcion":"FABRICACIÓN DE PRODUCTOS DE MINERALES NO METÁLICOS; EXCEPTO DEL PETRÓLEO Y DEL CARBÓN MINERAL"},
+{"clave":3311016,"descripcion":"FABRICACION DE VAJILLAS Y OTROS PRODUCTOS DE ALFARERIA Y CERAMICA PARA EL HOGAR"},
+{"clave":3319010,"descripcion":"ELABORACION DE OBJETOS ARTISTICOS DE ALFARERIA Y CERAMICA"},
+{"clave":3319028,"descripcion":"FABRICACION DE AZULEJOS"},
+{"clave":3319036,"descripcion":"FABRICACION DE LOZA Y PORCELANA"},
+{"clave":3319044,"descripcion":"FABRICACION DE MUEBLES Y ARTICULOS SANITARIOS"},
+{"clave":3321015,"descripcion":"FABRICACION DE VIDRIO"},
+{"clave":3322013,"descripcion":"FABRICACION DE CRISTALES PARA AUTOMOVIL"},
+{"clave":3322021,"descripcion":"FABRICACION DE FIBRA DE VIDRIO"},
+{"clave":3323011,"descripcion":"FABRICACION DE AMPOLLETAS"},
+{"clave":3323029,"descripcion":"FABRICACION DE BOTELLAS"},
+{"clave":3323037,"descripcion":"FABRICACION DE CRISOLES"},
+{"clave":3323045,"descripcion":"FABRICACION DE OTROS ENVASES DE VIDRIO"},
+{"clave":3324019,"descripcion":"FABRICACION DE EMPLOMADOS"},
+{"clave":3324027,"descripcion":"FABRICACION DE ESPEJOS Y LUNAS"},
+{"clave":3329019,"descripcion":"FABRICACION DE ESFERAS DE VIDRIO"},
+{"clave":3329027,"descripcion":"FABRICACION DE OBJETOS ARTISTICOS DE VIDRIO Y CRISTAL"},
+{"clave":3329035,"descripcion":"FABRICACION DE OTROS OBJETOS DE CRISTAL"},
+{"clave":3331014,"descripcion":"FABRICACION DE ADOBE"},
+{"clave":3331022,"descripcion":"FABRICACION DE LADRILLOS"},
+{"clave":3331030,"descripcion":"FABRICACION DE TEJA Y TUBO DE ARCILLA"},
+{"clave":3332012,"descripcion":"FABRICACION DE MATERIALES PARA MUROS"},
+{"clave":3332020,"descripcion":"FABRICACION DE PRODUCTOS REFRACTARIOS"},
+{"clave":3341013,"descripcion":"FABRICACION DE CEMENTO"},
+{"clave":3341021,"descripcion":"FABRICACION DE CONCRETO CIENTIFICO"},
+{"clave":3341039,"descripcion":"FABRICACION DE CONCRETO PARA CONSTRUCCION"},
+{"clave":3342011,"descripcion":"FABRICACION DE BLOQUES DE CEMENTO"},
+{"clave":3342029,"descripcion":"FABRICACION DE YESO"},
+{"clave":3343019,"descripcion":"HORNO DE CAL"},
+{"clave":3351012,"descripcion":"FABRICACION DE TINACOS DE ASBESTO"},
+{"clave":3352010,"descripcion":"FABRICACION DE ABRASIVOS"},
+{"clave":3352028,"descripcion":"FABRICACION DE ESMERILES"},
+{"clave":3352036,"descripcion":"FABRICACION DE LIJA"},
+{"clave":3353018,"descripcion":"TALLER DE MARMOLERIA"},
+{"clave":3354016,"descripcion":"FABRICACION DE MOSAICOS TERRAZOS Y GRANITO"},
+{"clave":3354024,"descripcion":"FABRICACION DE POSTES Y DURMIENTES DE CONCRETO"},
+{"clave":3354032,"descripcion":"FABRICACION DE TUBOS DE CONCRETO"},
+{"clave":3354909,"descripcion":"USUARIOS MENORES INDUSTRIA PRODUCTOS DE MINERALES NO METALICOS"},
+{"clave":3354917,"descripcion":"CARTERA DE PRODUCTOS MINERALES NO METALICOS DE EST"},
+{"clave":3400009,"descripcion":"INDUSTRIAS METÁLICAS BÁSICAS"},
+{"clave":3411014,"descripcion":"FABRICACION DE FIERRO ESPONJA"},
+{"clave":3411022,"descripcion":"FUNDICION DE FIERRO Y ACERO"},
+{"clave":3411030,"descripcion":"PLANTA METALURGICA"},
+{"clave":3411907,"descripcion":"USUARIOS MENORES DE INDUSTRIA SIDERURGICA Y PRODUCTOS METALICOS"},
+{"clave":3411915,"descripcion":"CARTERA SIDERURGICA Y DE PRODUCTOS METALICOS DE ES"},
+{"clave":3412012,"descripcion":"FABRICACION DE LAMINAS DE HIERRO Y ACERO"},
+{"clave":3412020,"descripcion":"FABRICACION DE OTROS ARTICULOS DE LAMINA"},
+{"clave":3413010,"descripcion":"FABRICACION DE TUBOS DE HIERRO Y ACERO"},
+{"clave":3421013,"descripcion":"FUNDICION REFINACION LAMINACION EXTRUSION Y ESTIRAJE DE COBRE Y SUS ALEACIONES"},
+{"clave":3422011,"descripcion":"FUNDICION LAMINACION EXTRUSION Y ESTIRAJE DE ALUMINIO Y FABRICACION DE SOLDADURAS ALUMINOTERMICAS"},
+{"clave":3423019,"descripcion":"FABRICACION DE TUBOS DE ESTAÑO"},
+{"clave":3423027,"descripcion":"FABRICACION DE EQUIPOS PARA SOLDAR Y SOLDADURAS"},
+{"clave":3429017,"descripcion":"FUNDICION DE METALES NO FERRUGINOSOS"},
+{"clave":3500007,"descripcion":"FABRICACIÓN DE PRODUCTOS METÁLICOS; EXCEPTO MAQUINARIA Y EQUIPO"},
+{"clave":3511012,"descripcion":"FABRICACION DE CUBIERTOS Y CUCHILLERIA"},
+{"clave":3512010,"descripcion":"FABRICACION DE UTENSILIOS AGRICOLAS Y HERRAMIENTAS DE MANO"},
+{"clave":3513018,"descripcion":"FABRICACION DE REMACHES"},
+{"clave":3513026,"descripcion":"FABRICACION DE TORNILLOS TUERCAS Y PIJAS"},
+{"clave":3514016,"descripcion":"FABRICACION DE CLAVOS CADENAS GRAPAS Y TACHUELAS"},
+{"clave":3515014,"descripcion":"FABRICACION DE CANDADOS"},
+{"clave":3515022,"descripcion":"FABRICACION DE CERRADURAS"},
+{"clave":3516012,"descripcion":"FABRICACION DE CORTINAS DE METAL"},
+{"clave":3516020,"descripcion":"FABRICACION DE JAULAS DE METAL"},
+{"clave":3516038,"descripcion":"FABRICACION DE OTROS ARTICULOS DE ALUMINIO"},
+{"clave":3516046,"descripcion":"FABRICACION DE PERFILES PUERTAS Y VENTANAS DE METAL"},
+{"clave":3516054,"descripcion":"TALLER DE HERRERIA"},
+{"clave":3521011,"descripcion":"FABRICACION DE BUTACAS DE METAL"},
+{"clave":3521029,"descripcion":"FABRICACION DE ESTUFAS"},
+{"clave":3521037,"descripcion":"FABRICACION DE OTROS MUEBLES DE METAL"},
+{"clave":3531010,"descripcion":"FABRICACION DE ESTRUCTURAS DE METAL"},
+{"clave":3531028,"descripcion":"FABRICACION DE TANQUES PARA ENVASADO DE GASES O LIQUIDOS"},
+{"clave":3532018,"descripcion":"FABRICACION DE CALDERAS TANQUES Y TINACOS DE METAL"},
+{"clave":3532026,"descripcion":"FABRICACION DE CALENTADORES PARA BAÑO"},
+{"clave":3591014,"descripcion":"FABRICACION DE ENVASES DE LAMINA"},
+{"clave":3591022,"descripcion":"TALLER DE HOJALATERIA"},
+{"clave":3592012,"descripcion":"FABRICACION DE CORCHOLATAS"},
+{"clave":3593010,"descripcion":"FABRICACION DE ALAMBRADOS Y TELAS DE METAL"},
+{"clave":3593028,"descripcion":"FABRICACION DE ALAMBRE"},
+{"clave":3593036,"descripcion":"FABRICACION DE OTROS ARTICULOS DE ALAMBRE"},
+{"clave":3594018,"descripcion":"FABRICACION DE ARTICULOS DE PELTRE"},
+{"clave":3595016,"descripcion":"GALVANIZACION DE LAMINA"},
+{"clave":3595024,"descripcion":"GALVANIZACION DE TUBERIA"},
+{"clave":3595032,"descripcion":"TALLER DE COBRIZADO"},
+{"clave":3595040,"descripcion":"TALLER DE CROMADO Y NIQUELADO"},
+{"clave":3595058,"descripcion":"TALLER DE ESMALTADO"},
+{"clave":3596014,"descripcion":"FABRICACION DE PIEZAS METALICAS POR FUNDICION Y MOLDEO EXCEPTO PARA MAQUINARIA EQUIPO Y MATERIAL DE TRANSPORTE"},
+{"clave":3596022,"descripcion":"FABRICACION DE TUBOS DE COBRE  PLOMO Y ALUMINIO"},
+{"clave":3599018,"descripcion":"FABRICACION DE ALFILERES AGUJAS Y BROCHES"},
+{"clave":3599026,"descripcion":"FABRICACION DE CAJAS FUERTES"},
+{"clave":3599034,"descripcion":"FABRICACION DE CIERRES AUTOMATICOS DE METAL"},
+{"clave":3599042,"descripcion":"FABRICACION DE ESPUELAS FRENOS Y ARNESES DE METAL"},
+{"clave":3599050,"descripcion":"FABRICACION DE HEBILLAS DE METAL"},
+{"clave":3599068,"descripcion":"FABRICACION DE HOJAS PARA RASURAR"},
+{"clave":3599076,"descripcion":"FABRICACION DE OJILLOS DE METAL"},
+{"clave":3599084,"descripcion":"FABRICACION DE OTROS ARTICULOS DE LATON"},
+{"clave":3599092,"descripcion":"FABRICACION DE OTROS ARTICULOS DE METAL NO CLASIFICADOS EN OTRA PARTE"},
+{"clave":3599109,"descripcion":"FABRICACION DE PASADORES Y HORQUILLAS"},
+{"clave":3599117,"descripcion":"FABRICACION DE PLANCHAS INDUSTRIALES"},
+{"clave":3599125,"descripcion":"FABRICACION DE TAPONES DE METAL"},
+{"clave":3599133,"descripcion":"FABRICACION DE TROQUELES"},
+{"clave":3600005,"descripcion":"FABRICACIÓN, ENSAMBLE Y REPARACIÓN DE MAQUINARIA, EQUIPO Y SUS PARTES; EXCEPTO LOS ELÉCTRICOS"},
+{"clave":3611010,"descripcion":"FABRICACION ENSAMBLE Y REPARACION DE VEHICULOS DE USO AGROPECUARIO"},
+{"clave":3611028,"descripcion":"FABRICACION DE MAQUINARIA E IMPLEMENTOS AGRICOLAS"},
+{"clave":3621019,"descripcion":"FABRICACION DE HERRAMIENTAS DE METAL"},
+{"clave":3621027,"descripcion":"FABRICACION DE REFACCIONES Y MAQUINARIA INDUSTRIAL"},
+{"clave":3631018,"descripcion":"FABRICACION ENSAMBLE Y REPARACION DE MAQUINARIA Y EQUIPO PARA LA INDUSTRIA DE ALIMENTOS Y BEBIDAS"},
+{"clave":3632016,"descripcion":"FABRICACION ENSAMBLE Y REPARACION DE MAQUINARIA EQUIPO Y TRACTORES PARA LAS INDUSTRIAS EXTRACTIVAS Y DE LA CONSTRUCCION"},
+{"clave":3639012,"descripcion":"FABRICACION DE MOLINOS PARA GRANOS"},
+{"clave":3639905,"descripcion":"USUARIOS MENORES FABRICACION MAQUINARIA Y ARTICULOS ELECTRICOS"},
+{"clave":3639913,"descripcion":"CARTERA DE FABRICACION DE MAQUINARIA Y ARTICULOS E"},
+{"clave":3641017,"descripcion":"FABRICACION DE MAQUINAS CALCULADORAS REGISTRADORAS Y DE ESCRIBIR"},
+{"clave":3641025,"descripcion":"FABRICACION DE EQUIPO DE PROCESAMIENTO ELECTRONICO DE DATOS"},
+{"clave":3691012,"descripcion":"FABRICACION DE MAQUINAS DE COSER"},
+{"clave":3692010,"descripcion":"FABRICACION ENSAMBLE Y REPARACION DE GRUAS MONTACARGAS Y OTRAS MAQUINAS PARA TRANSPORTAR O LEVANTAR"},
+{"clave":3693018,"descripcion":"FABRICACION ENSAMBLE Y REPARACION DE MOTORES NO ELECTRICOS EXCEPTO PARA VEHICULOS AUTOMOVILES"},
+{"clave":3694016,"descripcion":"FABRICACION DE EXTINGUIDORES"},
+{"clave":3694024,"descripcion":"FABRICACION DE BOMBAS PARA AGUA"},
+{"clave":3695014,"descripcion":"FABRICACION DE VALVULAS DE METAL"},
+{"clave":3696012,"descripcion":"FABRICACION DE FILTROS DE METAL"},
+{"clave":3697010,"descripcion":"FABRICACION E INSTALACION DE EQUIPOS Y APARATOS DE AIRE ACONDICIONADO CALEFACCION Y REFRIGERACION"},
+{"clave":3699016,"descripcion":"FABRICACION DE ENGRANES DE METAL"},
+{"clave":3699024,"descripcion":"TALLER MECANICO DE FABRICACION Y REPARACION DE PARTES INDUSTRIALES"},
+{"clave":3699032,"descripcion":"FABRICACION DE ACCESORIOS PARA LA INDUSTRIA TEXTIL"},
+{"clave":3700003,"descripcion":"FABRICACIÓN Y ENSAMBLE DE MAQUINARIA, EQUIPO, APARATOS, ACCESORIOS Y ARTÍCULOS ELÉCTRICOS, ELECTRÓNICOS Y SUS PARTES"},
+{"clave":3711018,"descripcion":"FABRICACION ENSAMBLE Y REPARACION DE TRANSFORMADORES MOTORES Y MAQUINARIA Y EQUIPO PARA GENERACION Y UTILIZACION DE LA ENERGIA ELECTRICA"},
+{"clave":3721017,"descripcion":"FABRICACION DE RADIOS TOCADISCOS GRABADORAS Y TELEVISORES"},
+{"clave":3722015,"descripcion":"FABRICACION DE DISCOS Y CINTAS PARA GRABACIONES"},
+{"clave":3722023,"descripcion":"GRABACION DE DISCOS Y CINTAS"},
+{"clave":3723013,"descripcion":"FABRICACION DE APARATOS DE INTERCOMUNICACION"},
+{"clave":3729011,"descripcion":"FABRICACION DE PARTES DISPOSITIVOS Y ACCESORIOS PARA EQUIPO Y APARATOS DE RADIO TELEVISION Y COMUNICACIONES"},
+{"clave":3731016,"descripcion":"FABRICACION DE OTROS APARATOS ELECTRICOS PARA EL HOGAR"},
+{"clave":3731024,"descripcion":"FABRICACION DE REFRIGERADORES Y EQUIPOS DE CALEFACCION DOMESTICA"},
+{"clave":3791010,"descripcion":"FABRICACION DE ACUMULADORES"},
+{"clave":3791028,"descripcion":"FABRICACION DE PILAS SECAS"},
+{"clave":3792018,"descripcion":"FABRICACION DE FOCOS"},
+{"clave":3793016,"descripcion":"FABRICACION DE CABLES DE METAL"},
+{"clave":3793024,"descripcion":"FABRICACION DE MATERIAL PARA INSTALACIONES ELECTRICAS"},
+{"clave":3793032,"descripcion":"FABRICACION DE REFACCIONES PARA APARATOS ELECTRICOS"},
+{"clave":3799014,"descripcion":"FABRICACION DE ANUNCIOS LUMINOSOS"},
+{"clave":3799022,"descripcion":"FABRICACION DE CANDILES Y ARBOTANTES"},
+{"clave":3799030,"descripcion":"FABRICACION DE LAMPARAS ELECTRICAS"},
+{"clave":3800001,"descripcion":"CONSTRUCCIÓN, RECONSTRUCCIÓN Y ENSAMBLE DE EQUIPO DE TRANSPORTE Y SUS PARTES"},
+{"clave":3811016,"descripcion":"FABRICACION Y ENSAMBLE DE AUTOMOVILES Y CAMIONES"},
+{"clave":3812014,"descripcion":"FABRICACION DE CARROCERIAS DE METAL"},
+{"clave":3812022,"descripcion":"FABRICACION DE FURGONES Y VAGONES"},
+{"clave":3812030,"descripcion":"FABRICACION Y ENSAMBLE DE OTROS VEHICULOS"},
+{"clave":3813012,"descripcion":"FABRICACION DE PISTONES BIELAS ANILLOS CIGÜEÑALES Y MONOBLOCKS PARA MOTORES"},
+{"clave":3814010,"descripcion":"FABRICACION DE PARTES PARA EL SISTEMA DE TRANSMISION DE VEHICULOS AUTOMOVILES"},
+{"clave":3815018,"descripcion":"FABRICACION DE MUELLES Y RESORTES PARA VEHICULOS"},
+{"clave":3816016,"descripcion":"FABRICACION DE PARTES PARA EL SISTEMA DE FRENOS DE VEHICULOS AUTOMOVILES"},
+{"clave":3817014,"descripcion":"FABRICACION DE BUJIAS"},
+{"clave":3819010,"descripcion":"FABRICACION DE REFACCIONES Y ACCESORIOS AUTOMOTRICES"},
+{"clave":3821015,"descripcion":"FABRICACION ENSAMBLE Y REPARACION DE CARROS DE FERROCARRIL Y OTRO EQUIPO FERROVIARIO"},
+{"clave":3831014,"descripcion":"FABRICACION Y REPARACION DE BUQUES Y BARCOS"},
+{"clave":3831022,"descripcion":"FABRICACION Y REPARACION DE OTROS VEHICULOS ACUATICOS"},
+{"clave":3832012,"descripcion":"FABRICACION ENSAMBLE Y REPARACION DE AERONAVES"},
+{"clave":3891018,"descripcion":"FABRICACION Y ENSAMBLE DE MOTOCICLETAS BICICLETAS Y OTROS VEHICULOS DE PEDAL"},
+{"clave":3892016,"descripcion":"FABRICACION DE PARTES REFACCIONES Y ACCESORIOS PARA MOTOCICLETAS BICICLETAS Y OTROS VEHICULOS DE PEDAL"},
+{"clave":3899012,"descripcion":"FABRICACION DE CARREOLAS Y ANDADERAS"},
+{"clave":3900001,"descripcion":"FABRICACIÓN DE ARTÍCULOS DE JOYERÍA"},
+{"clave":3900002,"descripcion":"TALLADO DE PIEDRAS PRECIOSAS"},
+{"clave":3900009,"descripcion":"OTRAS INDUSTRIAS MANUFACTURERAS (JOYERIA, ARTICULOS DE ESCRITORIO, FOTOGRAFICOS, PARA DENTISTA, PARA OPTICA, DEPORTIVOS)"},
+{"clave":3911014,"descripcion":"FABRICACION Y REPARACION DE ARTICULOS DE OPTICA"},
+{"clave":3912012,"descripcion":"FABRICACION DE CAMARAS FOTOGRAFICAS DE CINE Y PROYECTORES"},
+{"clave":3912020,"descripcion":"FABRICACION DE MATERIAL FOTOGRAFICO"},
+{"clave":3921013,"descripcion":"FABRICACION DE RELOJES"},
+{"clave":3931012,"descripcion":"FABRICACION DE MEDALLAS INSIGNIAS Y PLACAS"},
+{"clave":3932010,"descripcion":"FABRICACION DE ARTICULOS DE JOYERIA"},
+{"clave":3932028,"descripcion":"ORFEBRERIA"},
+{"clave":3932036,"descripcion":"TALLADO DE PIEDRAS PRECIOSAS"},
+{"clave":3933018,"descripcion":"FABRICACION DE ARTICULOS DE QUINCALLERIA Y BISUTERIA"},
+{"clave":3941011,"descripcion":"FABRICACION DE CUERDAS PARA GUITARRA"},
+{"clave":3941029,"descripcion":"FABRICACION Y REPARACION DE INSTRUMENTOS MUSICALES"},
+{"clave":3951010,"descripcion":"FABRICACION DE APARATOS PARA GIMNASIA"},
+{"clave":3951028,"descripcion":"FABRICACION DE MESAS DE BILLAR"},
+{"clave":3951036,"descripcion":"FABRICACION DE OTROS ARTICULOS PARA DEPORTES"},
+{"clave":3961019,"descripcion":"FABRICACION DE OTROS INSTRUMENTOS DE MEDICION"},
+{"clave":3961027,"descripcion":"FABRICACION Y REPARACION DE BASCULAS Y BALANZAS"},
+{"clave":3961035,"descripcion":"FABRICACION Y REPARACION DE INSTRUMENTOS DE FISICA Y QUIMICA"},
+{"clave":3961043,"descripcion":"FABRICACION Y REPARACION DE INSTRUMENTOS DE INGENIERIA"},
+{"clave":3961051,"descripcion":"FABRICACION DE APARATOS OZONIZADORES"},
+{"clave":3961069,"descripcion":"FABRICACION DE TAXIMETROS"},
+{"clave":3962017,"descripcion":"FABRICACION Y REPARACION DE APARATOS ORTOPEDICOS"},
+{"clave":3962025,"descripcion":"FABRICACION Y REPARACION DE INSTRUMENTOS DE CIRUGIA"},
+{"clave":3991016,"descripcion":"FABRICACION DE JUGUETES EXCEPTO LOS DE HULE Y DE PLASTICO MOLDEADOS"},
+{"clave":3992014,"descripcion":"FABRICACION DE ARTICULOS PARA ESCRITORIO"},
+{"clave":3992022,"descripcion":"FABRICACION DE CANUTEROS"},
+{"clave":3992030,"descripcion":"FABRICACION DE CINTAS PARA MAQUINAS CALCULADORAS REGISTRADORAS Y DE ESCRIBIR"},
+{"clave":3992048,"descripcion":"FABRICACION DE LAPICES"},
+{"clave":3992056,"descripcion":"FABRICACION DE PIZARRONES"},
+{"clave":3993012,"descripcion":"FABRICACION DE SELLOS DE GOMA"},
+{"clave":3993020,"descripcion":"FABRICACION DE SELLOS PARA CARROS DE FERROCARRIL"},
+{"clave":3994010,"descripcion":"FABRICACION DE ARTICULOS PARA DENTISTA"},
+{"clave":3995018,"descripcion":"FABRICACION DE CERCOS PARA CALZADO"},
+{"clave":3995026,"descripcion":"FABRICACION DE HORMAS PARA CALZADO Y TACONES"},
+{"clave":3996016,"descripcion":"FABRICACION DE ESCOBAS"},
+{"clave":3997014,"descripcion":"FABRICACION DE ARMAS"},
+{"clave":3997022,"descripcion":"FABRICACION DE CARTUCHOS"},
+{"clave":3997030,"descripcion":"FABRICACION DE CASQUILLOS"},
+{"clave":3997048,"descripcion":"FABRICACION DE MUNICIONES PARA CAZA"},
+{"clave":3999010,"descripcion":"FABRICACION DE ABANICOS"},
+{"clave":3999028,"descripcion":"FABRICACION DE ARTICULOS DE CAREY"},
+{"clave":3999036,"descripcion":"FABRICACION DE ARTICULOS DE CONCHA"},
+{"clave":3999044,"descripcion":"FABRICACION DE BASTONES PARAGUAS Y SOMBRILLAS"},
+{"clave":3999052,"descripcion":"FABRICACION DE FLORES ARTIFICIALES"},
+{"clave":3999060,"descripcion":"FABRICACION DE OTROS ARTICULOS DE PLUMA DE AVE"},
+{"clave":3999078,"descripcion":"FABRICACION DE ROTULOS"},
+{"clave":3999086,"descripcion":"FABRICACION DE TALCO INDUSTRIAL"},
+{"clave":3999094,"descripcion":"FABRICACION DE TRAGALUCES Y MARQUESINAS"},
+{"clave":3999101,"descripcion":"FABRICACION DE PRODUCTOS MANUFACTURADOS NO CLASIFICADOS EN OTRA PARTE"},
+{"clave":3999119,"descripcion":"AJUSTE PROGRAMA VENTA DE CARTERA FOBAPROA"},
+{"clave":3999127,"descripcion":"AJUSTE ESTADISTICO"},
+{"clave":3999903,"descripcion":"USUARIOS MENORES INDUSTRIA MANUFACTURERA"},
+{"clave":3999911,"descripcion":"CARTERA DE INDUSTRIA MANUFACTURERA DE ESTADOS ANAL"},
+{"clave":4100004,"descripcion":"CONTRATACIÓN DE OBRAS COMPLETAS DE CONSTRUCCIÓN (CASAS, DEPARTAMENTOS, INMUEBLES, PAVIMENTACIÓN, NO RESIDENCIALES, VIAS DE COMUNICACIÓN)"},
+{"clave":4111019,"descripcion":"CONSTRUCCION DE CASAS Y TECHOS DESARMABLES"},
+{"clave":4111027,"descripcion":"CONSTRUCCION DE INMUEBLES"},
+{"clave":4111035,"descripcion":"PRESTAMOS PARA LA CONSTRUCCION DE VIVIENDA  TANTO DE INTERES SOCIAL COMO PROVENIENTES DE LA RESERVA PARA PENSIONES DEL PERSONAL"},
+{"clave":4111043,"descripcion":"PRESTAMOS PARA LA CONSTRUCCION DE VIVIENDA PARA ACREDITADOS DE INGRESOS MINIMOS"},
+{"clave":4111051,"descripcion":"DESARROLLADORES DE VIVIENDA"},
+{"clave":4111910,"descripcion":"CARTERA DE VIVIENDA DE INTERES SOCIAL DE ESTADOS A"},
+{"clave":4111928,"descripcion":"CONSTRUCCION DE VIVIENDA TIPO MEDIO"},
+{"clave":4111936,"descripcion":"USUARIOS MENORES CONSTRUCCION DE VIVIENDA TIPO MEDIO"},
+{"clave":4111944,"descripcion":"CONSTRUCCION DE VIVIENDA RESIDENCIAL"},
+{"clave":4111952,"descripcion":"MENORES CONSTRUCCION DE VIVIENDA RESIDENCIAL"},
+{"clave":4112017,"descripcion":"CONSTRUCCION DE EDIFICIOS PARA OFICINAS ESCUELAS HOSPITALES HOTELES Y OTROS NO RESIDENCIALES"},
+{"clave":4113015,"descripcion":"CONSTRUCCION DE EDIFICIOS INDUSTRIALES Y PARA FINES ANALOGOS"},
+{"clave":4121018,"descripcion":"CONSTRUCCION DE VIAS DE COMUNICACION"},
+{"clave":4121026,"descripcion":"PAVIMENTACION"},
+{"clave":4121034,"descripcion":"URBANIZACION"},
+{"clave":4122016,"descripcion":"CONSTRUCCION DE PUERTOS"},
+{"clave":4123014,"descripcion":"CONSTRUCCION E INSTALACION DE LINEAS TELEFONICAS TORRES EMISORAS DE RADIO Y TELEVISION Y OTRAS OBRAS CONEXAS"},
+{"clave":4129012,"descripcion":"CONSTRUCCION DE PISTAS DE ATERRIZAJE DUCTOS Y OTRAS OBRAS VINCULADAS A LAS VIAS DE COMUNICACION"},
+{"clave":4191011,"descripcion":"CONSTRUCCION DE PRESAS"},
+{"clave":4192019,"descripcion":"PERFORACION DE NORIAS Y POZOS PARA AGUA"},
+{"clave":4193017,"descripcion":"CONSTRUCCION E INSTALACION DE PLANTAS GENERADORAS Y LINEAS DE TRANSMISION Y DISTRIBUCION DE ENERGIA ELECTRICA"},
+{"clave":4194015,"descripcion":"PERFORACION DE POZOS PETROLEROS Y DE GAS"},
+{"clave":4199015,"descripcion":"CONSTRUCCION DE ESTADIOS MONUMENTOS Y OTRAS OBRAS DE INGENIERIA"},
+{"clave":4199908,"descripcion":"USUARIOS MENORES CONSTRUCCION DIFERENTE A VIVIENDA"},
+{"clave":4199916,"descripcion":"CARTERA DE CONSTRUCCION DE ESTADOS ANALITICOS"},
+{"clave":4200002,"descripcion":"SERVICIOS ESPECIALES PRESTADOS POR SUBCONTRATISTAS (DEMOLICIONES, CARPINTERIA, IMPERMIABILIZACIÓN, INST ESLECTRICAS, PINTURA, PLOMERIA)"},
+{"clave":4211017,"descripcion":"PREMEZCLADO Y COLADO DE CONCRETO"},
+{"clave":4212015,"descripcion":"DEMOLICION DE INMUEBLES"},
+{"clave":4219011,"descripcion":"IMPERMEABILIZACION DE INMUEBLES"},
+{"clave":4221016,"descripcion":"TALLER DE PLOMERIA"},
+{"clave":4222014,"descripcion":"INSTALACIONES DEL SISTEMA ELECTRICO INCLUYE SISTEMAS DE INTERCOMUNICACION"},
+{"clave":4229010,"descripcion":"INSTALACIONES DE SISTEMAS DE AIRE ACONDICIONADO Y CALEFACCION Y OTRAS INSTALACIONES ANALOGAS"},
+{"clave":4291019,"descripcion":"SERVICIOS DE PINTADO Y TAPIZADO DE INMUEBLES"},
+{"clave":4292017,"descripcion":"LABRADO Y COLOCACION DE PIEDRA"},
+{"clave":4293015,"descripcion":"COLOCACION DE DUELAS PARQUET LAMBRINES Y OTROS TRABAJOS DE CARPINTERIA"},
+{"clave":4299013,"descripcion":"OTROS SERVICIOS DE ACABADO PRESTADOS POR SUBCONTRATISTAS"},
+{"clave":5000005,"descripcion":"GENERACIÓN, TRANSMISIÓN Y DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA"},
+{"clave":5011010,"descripcion":"GENERACION Y SUMINISTRO DE ENERGIA ELECTRICA"},
+{"clave":5011903,"descripcion":"USUARIOS MENORES ENERGIA ELECTRICA"},
+{"clave":5011911,"descripcion":"CARTERA DE ENERGIA ELECTRICA DE ESTADOS ANALITICOS"},
+{"clave":5012018,"descripcion":"DISTRIBUCION DE ENERGIA ELECTRICA"},
+{"clave":5021019,"descripcion":"PIDIREGAS ENERGIA ELECTRICA"},
+{"clave":5100003,"descripcion":"CAPTACIÓN, TRATAMIENTO, CONDUCCIÓN Y DISTRIBUCIÓN DE AGUA POTABLE EXCEPTO DE RIEGO"},
+{"clave":5111018,"descripcion":"CAPTACION, TRATAMIENTO, CONDUCCION Y DISTRIBUCION DE AGUA POTABLE EXCEPTO DE RIEGO"},
+{"clave":6100002,"descripcion":"COMPRAVENTA DE ALIMENTOS, BEBIDAS Y PRODUCTOS DE TABACO"},
+{"clave":6111017,"descripcion":"COMPRAVENTA DE SEMILLAS Y GRANOS"},
+{"clave":6112015,"descripcion":"COMPRAVENTA DE FRUTAS"},
+{"clave":6112023,"descripcion":"COMPRAVENTA DE LEGUMBRES Y HORTALIZAS"},
+{"clave":6113013,"descripcion":"COMPRAVENTA DE CHILE SECO Y ESPECIAS"},
+{"clave":6114011,"descripcion":"COMPRAVENTA DE FORRAJES EN ESTADO NATURAL"},
+{"clave":6119011,"descripcion":"COMPRAVENTA DE OTROS PRODUCTOS ALIMENTICIOS AGRICOLAS EN ESTADO NATURAL"},
+{"clave":6121016,"descripcion":"COMPRAVENTA DE AVES EN PIE"},
+{"clave":6121024,"descripcion":"COMPRAVENTA DE GANADO MAYOR EN PIE"},
+{"clave":6121032,"descripcion":"COMPRAVENTA DE GANADO MENOR EN PIE"},
+{"clave":6122014,"descripcion":"COMPRAVENTA DE CARNE DE RES Y OTRAS ESPECIES DE GANADO"},
+{"clave":6123012,"descripcion":"COMPRAVENTA DE VISCERAS DE GANADO CRUDAS Y SEMICRUDAS"},
+{"clave":6124010,"descripcion":"COMPRAVENTA DE CARNE DE AVES"},
+{"clave":6125018,"descripcion":"COMPRAVENTA DE HUEVO"},
+{"clave":6126016,"descripcion":"COMPRAVENTA DE MANTECA"},
+{"clave":6126024,"descripcion":"COMPRAVENTA DE MATERIAS PRIMAS ANIMALES"},
+{"clave":6126032,"descripcion":"COMPRAVENTA DE PESCADOS Y MARISCOS"},
+{"clave":6131015,"descripcion":"SALCHICHONERIA"},
+{"clave":6131023,"descripcion":"TIENDA DE ABARROTES Y MISCELANEA"},
+{"clave":6132013,"descripcion":"COMPRAVENTA DE DULCES"},
+{"clave":6132021,"descripcion":"COMPRAVENTA DE ESPECIAS Y ARTICULOS ALIMENTICIOS DESHIDRATADOS"},
+{"clave":6132039,"descripcion":"COMPRAVENTA DE LECHE"},
+{"clave":6132047,"descripcion":"COMPRAVENTA DE OTROS PRODUCTOS LACTEOS"},
+{"clave":6132055,"descripcion":"COMPRAVENTA DE PAN Y PASTELES"},
+{"clave":6132063,"descripcion":"COMPRAVENTA DE SAL"},
+{"clave":6132071,"descripcion":"VENTA Y DISTRIBUCION DE DESPENSAS FAMILIARES"},
+{"clave":6132089,"descripcion":"COMPRAVENTA DE AZUCAR"},
+{"clave":6133011,"descripcion":"COMPRAVENTA DE ALIMENTO PARA GANADO"},
+{"clave":6133029,"descripcion":"COMPRAVENTA DE ALIMENTOS PARA AVES Y OTROS ANIMALES"},
+{"clave":6134019,"descripcion":"COMPRAVENTA DE REFRESCOS AGUAS GASEOSAS Y AGUAS PURIFICADAS"},
+{"clave":6135017,"descripcion":"COMPRAVENTA DE CERVEZA"},
+{"clave":6136015,"descripcion":"COMPRAVENTA DE PULQUE"},
+{"clave":6136023,"descripcion":"COMPRAVENTA DE VINOS Y LICORES"},
+{"clave":6139019,"descripcion":"COMPRAVENTA DE TABACO"},
+{"clave":6139027,"descripcion":"COMPRAVENTA DE TABACOS PUROS Y CIGARROS"},
+{"clave":6200000,"descripcion":"COMPRAVENTA DE PRENDAS DE VESTIR Y OTROS ARTÍCULOS DE USO PERSONAL"},
+{"clave":6211015,"descripcion":"COMPRAVENTA DE ARTICULOS DE LENCERIA"},
+{"clave":6211023,"descripcion":"COMPRAVENTA DE ROPA"},
+{"clave":6212013,"descripcion":"COMPRAVENTA DE CALZADO"},
+{"clave":6213011,"descripcion":"COMPRAVENTA DE SOMBREROS"},
+{"clave":6214019,"descripcion":"COMPRAVENTA DE PIELES FINAS CON PELO"},
+{"clave":6215017,"descripcion":"COMPRAVENTA DE ARTICULOS DE MERCERIA Y CEDERIA"},
+{"clave":6215025,"descripcion":"COMPRAVENTA DE ARTICULOS DE BONETERIA"},
+{"clave":6216015,"descripcion":"COMPRAVENTA DE CASIMIRES"},
+{"clave":6216023,"descripcion":"COMPRAVENTA DE OTROS PRODUCTOS TEXTILES"},
+{"clave":6216031,"descripcion":"COMPRAVENTA DE TELAS"},
+{"clave":6221014,"descripcion":"COMPRAVENTA DE ARTICULOS PARA DEPORTE"},
+{"clave":6222012,"descripcion":"COMPRAVENTA DE ARTICULOS DE OPTICA"},
+{"clave":6223010,"descripcion":"COMPRAVENTA DE JUGUETES"},
+{"clave":6224018,"descripcion":"COMPRAVENTA DE INSTRUMENTOS Y ARTICULOS MUSICALES"},
+{"clave":6225016,"descripcion":"COMPRAVENTA DE ARTICULOS DE PLATA"},
+{"clave":6225024,"descripcion":"COMPRAVENTA DE OTRAS JOYAS"},
+{"clave":6225032,"descripcion":"COMPRAVENTA DE RELOJES"},
+{"clave":6226014,"descripcion":"COMPRAVENTA DE ARTICULOS DE TALABARTERIA"},
+{"clave":6226022,"descripcion":"COMPRAVENTA DE OTROS ARTICULOS DE PIEL"},
+{"clave":6226030,"descripcion":"COMPRAVENTA DE SILLAS DE MONTAR"},
+{"clave":6227012,"descripcion":"COMPRAVENTA DE LIBROS"},
+{"clave":6228010,"descripcion":"DISTRIBUCION Y COMPRAVENTA DE PERIODICOS Y REVISTAS"},
+{"clave":6229018,"descripcion":"COMPRAVENTA DE ARTICULOS FOTOGRAFICOS Y CINEMATOGRAFICOS"},
+{"clave":6231013,"descripcion":"COMPRAVENTA DE MEDICINAS"},
+{"clave":6231021,"descripcion":"COMPRAVENTA DE PERFUMES"},
+{"clave":6232011,"descripcion":"DISTRIBUCION DE OTROS PRODUCTOS QUIMICOS FARMACEUTICOS"},
+{"clave":6233019,"descripcion":"COMPRAVENTA DE PAPELERIA Y ARTICULOS DE ESCRITORIO"},
+{"clave":6239017,"descripcion":"COMPRAVENTA DE PARAGUAS SOMBRILLAS ROPA USADA Y OTROS ARTICULOS DE USO PERSONAL"},
+{"clave":6300008,"descripcion":"COMPRAVENTA DE ARTÍCULOS PARA EL HOGAR (ELECTRODOMESTICOS, REFACCIONES, LOZA Y PORCELANA, ANTIGUEDADES)"},
+{"clave":6311013,"descripcion":"COMPRAVENTA DE REFRIGERADORES LAVADORAS Y ESTUFAS"},
+{"clave":6311021,"descripcion":"COMPRAVENTA DE TELEVISORES CONSOLAS RADIOS MODULARES Y TOCACINTAS"},
+{"clave":6311039,"descripcion":"COMPRAVENTA DE OTROS APARATOS ELECTRICOS Y ELECTRONICOS DE USO DOMESTICO"},
+{"clave":6312011,"descripcion":"COMPRAVENTA DE MUEBLES"},
+{"clave":6313019,"descripcion":"COMPRAVENTA DE MAQUINAS DE COSER Y TEJEDORAS"},
+{"clave":6314017,"descripcion":"COMPRAVENTA DE REFACCIONES Y ACCESORIOS DE MAQUINAS APARATOS E INSTRUMENTOS PARA EL HOGAR EXCEPTO, LOS DE MAQUINAS DE COSER Y TEJER"},
+{"clave":6321012,"descripcion":"COMPRAVENTA DE ARTICULOS DE CRISTAL LOZA Y PORCELANA"},
+{"clave":6322010,"descripcion":"COMPRAVENTA DE ARTICULOS PARA DECORACION"},
+{"clave":6322028,"descripcion":"COMPRAVENTA DE TAPETES Y ALFOMBRAS"},
+{"clave":6323018,"descripcion":"COMPRAVENTA DE DISCOS Y CASSETTES"},
+{"clave":6324016,"descripcion":"COMPRAVENTA DE ARTICULOS RELIGIOSOS"},
+{"clave":6325014,"descripcion":"COMPRAVENTA DE ANTIGÜEDADES"},
+{"clave":6325022,"descripcion":"COMPRAVENTA DE ARTICULOS DE YUTE Y HENEQUEN"},
+{"clave":6325030,"descripcion":"COMPRAVENTA DE ARTICULOS PARA REGALO"},
+{"clave":6325048,"descripcion":"COMPRAVENTA DE ARTICULOS REGIONALES CURIOSIDADES Y ARTESANIAS"},
+{"clave":6326012,"descripcion":"COMPRAVENTA DE FLORES Y ADORNOS FLORALES ARTIFICIALES"},
+{"clave":6326020,"descripcion":"COMPRAVENTA DE FLORES Y ADORNOS FLORALES NATURALES"},
+{"clave":6329016,"descripcion":"COMPRAVENTA DE OTROS ARTICULOS PARA EL HOGAR"},
+{"clave":6400006,"descripcion":"COMPRAVENTA EN TIENDAS DE AUTOSERVICIO Y DE DEPARTAMENTOS ESPECIALIZADOS POR LÍNEA DE MERCANCÍAS"},
+{"clave":6411011,"descripcion":"TIENDA DE AUTOSERVICIO"},
+{"clave":6412019,"descripcion":"TIENDAS DE DEPARTAMENTOS ESPECIALIZADOS EXCEPTO DE COMESTIBLES"},
+{"clave":6419015,"descripcion":"COMPRAVENTA DE OTROS APARATOS ELECTRICOS"},
+{"clave":6419023,"descripcion":"COMPRAVENTA DE REFACCIONES PARA APARATOS ELECTRICOS"},
+{"clave":6500004,"descripcion":"COMPRAVENTA DE GASES, COMBUSTIBLES Y LUBRICANTES"},
+{"clave":6511019,"descripcion":"COMPRAVENTA DE FLUIDOS Y GASES"},
+{"clave":6512017,"descripcion":"COMPRAVENTA DE GAS PARA USO DOMESTICO O COMERCIAL"},
+{"clave":6513015,"descripcion":"COMPRAVENTA DE GASOLINA Y DIESEL"},
+{"clave":6514013,"descripcion":"COMPRAVENTA DE PETROLEO COMBUSTIBLE"},
+{"clave":6515011,"descripcion":"COMPRAVENTA DE LUBRICANTES"},
+{"clave":6519013,"descripcion":"COMPRAVENTA DE CARBON Y OTROS COMBUSTIBLES"},
+{"clave":6600002,"descripcion":"COMPRAVENTA DE MATERIAS PRIMAS, MATERIALES Y AUXILIARES (ALGODÓN, CEMENTO, SANITARIOS, PIELES, FERRETERIA, MADERA, PINTURAS)"},
+{"clave":6611017,"descripcion":"COMPRAVENTA DE ALGODON"},
+{"clave":6612015,"descripcion":"COMPRAVENTA DE SEMILLAS PARA SIEMBRA"},
+{"clave":6613013,"descripcion":"COMPRAVENTA DE CUEROS Y PIELES SIN CURTIR"},
+{"clave":6619011,"descripcion":"COMPRAVENTA DE HENEQUEN E IXTLE"},
+{"clave":6619029,"descripcion":"COMPRAVENTA DE LANA"},
+{"clave":6619037,"descripcion":"COMPRAVENTA DE OTRAS MATERIAS PRIMAS VEGETALES"},
+{"clave":6619045,"descripcion":"COMPRAVENTA DE OTRAS FIBRAS COMERCIALES"},
+{"clave":6619053,"descripcion":"COMPRAVENTA DE OTRAS MATERIAS PRIMAS DE ORIGEN ANIMAL"},
+{"clave":6621016,"descripcion":"COMPRAVENTA DE CEMENTO CAL YESO Y OTROS PRODUCTOS A BASE DE MINERALES NO METALICOS"},
+{"clave":6622014,"descripcion":"COMPRAVENTA DE FIERRO LAMINADO Y EN LINGOTES"},
+{"clave":6622022,"descripcion":"COMPRAVENTA DE ARTICULOS DE FERRETERIA"},
+{"clave":6623012,"descripcion":"COMPRAVENTA DE COLORANTES PARA LA INDUSTRIA"},
+{"clave":6623020,"descripcion":"COMPRAVENTA DE PINTURAS BARNICES Y BROCHAS"},
+{"clave":6624010,"descripcion":"COMPRAVENTA DE MADERA"},
+{"clave":6625018,"descripcion":"COMPRAVENTA DE VIDRIOS CRISTALES Y EMPLOMADOS"},
+{"clave":6626016,"descripcion":"COMPRAVENTA DE ANILINAS"},
+{"clave":6626024,"descripcion":"COMPRAVENTA DE ARTICULOS DE TLAPALERIA"},
+{"clave":6626032,"descripcion":"COMPRAVENTA DE COSTALES Y BOLSAS"},
+{"clave":6627014,"descripcion":"COMPRA DE ARTICULOS SANITARIOS"},
+{"clave":6628012,"descripcion":"COMPRAVENTA DE MATERIAL PARA INSTALACIONES ELECTRICAS Y DE SONIDO"},
+{"clave":6629010,"descripcion":"COMPRAVENTA DE MATERIALES PARA CONSTRUCCION"},
+{"clave":6629028,"descripcion":"COMPRAVENTA DE TAPICES"},
+{"clave":6691019,"descripcion":"COMPRAVENTA DE FERTILIZANTES Y PLAGUICIDAS"},
+{"clave":6692017,"descripcion":"COMPRAVENTA DE ARTICULOS DE PELETERIA"},
+{"clave":6693015,"descripcion":"COMPRAVENTA DE DESPERDICIOS DE PAPEL"},
+{"clave":6694013,"descripcion":"COMPRAVENTA DE FIERRO USADO"},
+{"clave":6695011,"descripcion":"COMPRAVENTA DE SUBSTANCIAS QUIMICAS PARA LA INDUSTRIA"},
+{"clave":6699013,"descripcion":"COMPRAVENTA DE CERAS Y PARAFINAS"},
+{"clave":6699021,"descripcion":"COMPRAVENTA DE DESPERDICIOS INDUSTRIALES"},
+{"clave":6699039,"descripcion":"COMPRAVENTA DE MATERIAS PRIMAS DE ORIGEN MINERAL"},
+{"clave":6699047,"descripcion":"COMPRAVENTA DE OTROS METALES Y MINERALES LAMINADOS Y EN LINGOTES"},
+{"clave":6700000,"descripcion":"COMPRAVENTA DE MAQUINARIA, EQUIPO, INSTRUMENTOS, APARATOS Y HERRAMIENTAS, SUS REFACCIONES Y ACCESORIOS"},
+{"clave":6711015,"descripcion":"COMPRAVENTA DE MAQUINARIA EQUIPO E IMPLEMENTOS PARA LA AGRICULTURA Y LA GANADERIA"},
+{"clave":6712013,"descripcion":"COMPRAVENTA DE ARTICULOS PARA LA EXPLOTACION DE MINAS"},
+{"clave":6713011,"descripcion":"COMPRAVENTA DE MAQUINARIA EQUIPO IMPLEMENTOS Y HERRAMIENTAS PARA TRABAJAR LA MADERA METALES Y OTROS MATERIALES"},
+{"clave":6714019,"descripcion":"COMPRAVENTA DE MAQUINARIA NUEVA"},
+{"clave":6714027,"descripcion":"COMPRAVENTA DE MAQUINARIA USADA"},
+{"clave":6714035,"descripcion":"COMPRAVENTA DE EQUIPO DE TRABAJO Y PROTECCION INDUSTRIAL"},
+{"clave":6719019,"descripcion":"COMPRAVENTA DE REFACCIONES PARA MAQUINARIA"},
+{"clave":6721014,"descripcion":"COMPRAVENTA DE MAQUINAS DE ESCRIBIR"},
+{"clave":6721022,"descripcion":"COMPRAVENTA DE MUEBLES Y ARTICULOS PARA OFICINA"},
+{"clave":6721036,"descripcion":"COMPRAVENTA DE EQUIPO DE PROCESAMIENTO ELECTRONICO DE DATOS"},
+{"clave":6722012,"descripcion":"COMPRAVENTA DE EQUIPO Y MOBILIARIO PARA HOTELES RESTAURANTES BILLARES BOLICHES PELUQUERIAS Y SALONES DE BELLEZA"},
+{"clave":6729018,"descripcion":"COMPRAVENTA DE EQUIPOS DE REFRIGERACION COMERCIAL"},
+{"clave":6729026,"descripcion":"COMPRAVENTA DE ACCESORIOS PARA MUEBLES"},
+{"clave":6729034,"descripcion":"COMPRAVENTA DE EQUIPO CONTRA INCENDIO"},
+{"clave":6731013,"descripcion":"COMPRAVENTA DE BASCULAS BALANZAS Y APARATOS SIMILARES PARA EQUIPO PESADO"},
+{"clave":6732011,"descripcion":"COMPRAVENTA DE ARTICULOS MEDICOS"},
+{"clave":6732029,"descripcion":"COMPRAVENTA DE ARTICULOS Y APARATOS ORTOPEDICOS"},
+{"clave":6732037,"descripcion":"COMPRAVENTA DE MUEBLES PARA CONSULTORIOS Y SANATORIOS"},
+{"clave":6732045,"descripcion":"COMPRAVENTA DE EQUIPOS QUIMICOS Y PARA LABORATORIO"},
+{"clave":6739017,"descripcion":"COMPRAVENTA DE APARATOS CIENTIFICOS Y DE PRECISION"},
+{"clave":6800001,"descripcion":"VENTA DE VEHÍCULOS, EMBARCACIONES Ó AERONAVES  NUEVOS"},
+{"clave":6800002,"descripcion":"VENTA DE VEHÍCULOS, EMBARCACIONES Ó AERONAVES  USADOS"},
+{"clave":6800003,"descripcion":"SERVICIOS DE BLINDAJE"},
+{"clave":6800008,"descripcion":"COMPRAVENTA DE EQUIPO DE TRANSPORTE, SUS REFACCIONES Y ACCESORIOS"},
+{"clave":6800010,"descripcion":"COMPRAVENTA DE OTROS EQUIPOS DE TRANSPORTE, SUS REFACCIONES Y ACCESORIOS"},
+{"clave":6811013,"descripcion":"COMPRAVENTA DE AUTOMOVILES Y CAMIONES NUEVOS"},
+{"clave":6812011,"descripcion":"COMPRAVENTA DE AUTOMOVILES Y CAMIONES USADOS"},
+{"clave":6813019,"descripcion":"COMPRAVENTA DE BICICLETAS Y SUS ACCESORIOS"},
+{"clave":6813027,"descripcion":"COMPRAVENTA DE MOTOCICLETAS Y SUS ACCESORIOS"},
+{"clave":6814017,"descripcion":"COMPRAVENTA DE LLANTAS"},
+{"clave":6815015,"descripcion":"COMPRAVENTA DE REFACCIONES Y ACCESORIOS NUEVOS PARA AUTOS Y CAMIONES"},
+{"clave":6816013,"descripcion":"COMPRAVENTA DE REFACCIONES Y ACCESORIOS USADOS PARA AUTOMOVILES Y CAMIONES"},
+{"clave":6819017,"descripcion":"COMPRAVENTA DE PARTES Y REFACCIONES PARA VEHICULOS AEREOS"},
+{"clave":6819025,"descripcion":"COMPRAVENTA DE VEHICULOS ACUATICOS Y SUS REFACCIONES"},
+{"clave":6819033,"descripcion":"COMPRAVENTA DE VEHICULOS AEREOS"},
+{"clave":6900001,"descripcion":"COMPRAVENTA DE ARMAS DE FUEGO Y SUS ACCESORIOS"},
+{"clave":6900002,"descripcion":"COMPRAVENTA DE DIAMANTES"},
+{"clave":6900003,"descripcion":"TARJETA DE CRÉDITO Y COMERCIALIZACIÓN DE TARJETAS DE SERVICIOS"},
+{"clave":6900006,"descripcion":"COMPRAVENTA DE BIENES INMUEBLES Y ARTÍCULOS DIVERSOS"},
+{"clave":6911011,"descripcion":"PRESTAMOS PARA LA ADQUISICION DE VIVIENDA PARA ACREDITADOS DE INGRESOS MINIMOS"},
+{"clave":6911029,"descripcion":"COMPRA DE CASA HABITACION"},
+{"clave":6911037,"descripcion":"PRESTAMOS PARA LA ADQUISICION DE VIVIENDA TANTO DE INTERES SOCIAL COMO PROVENIENTES DE LA RESERVA PARA PENSIONES DEL PERSONAL"},
+{"clave":6911045,"descripcion":"COMPRAVENTA DE CASAS Y OTROS INMUEBLES"},
+{"clave":6911053,"descripcion":"COMPRAVENTA DE TERRENOS"},
+{"clave":6911061,"descripcion":"ACTUALIZACION MENSUAL DEL SALDO OPERACIONES DE CRE"},
+{"clave":6911079,"descripcion":"ADQUISICION DE VIVIENDA TIPO MEDIO"},
+{"clave":6911087,"descripcion":"USUARIOS MENORES ADQUISICION DE VIVIENDA TIPO MEDIO"},
+{"clave":6911095,"descripcion":"ADQUISICION DE VIVIENDA RESIDENCIAL"},
+{"clave":6911102,"descripcion":"USUARIOS MENORES ADQUISICION DE VIVIENDA RESIDENCIAL"},
+{"clave":6991013,"descripcion":"COMPRAVENTA DE ARMAS DE FUEGO"},
+{"clave":6992011,"descripcion":"AGENCIAS DE RIFAS Y SORTEOS (QUINIELAS Y LOTERIA)"},
+{"clave":6993019,"descripcion":"COMPRAVENTA DE PRODUCTOS VETERINARIOS Y OTROS ARTICULOS PARA EL CUIDADO DE LOS ANIMALES"},
+{"clave":6999017,"descripcion":"COMPRAVENTA DE DIAMANTES"},
+{"clave":6999025,"descripcion":"COMPRAVENTA DE EQUIPOS Y APARATOS DE AIRE ACONDICIONADO"},
+{"clave":6999033,"descripcion":"COMPRAVENTA DE JARCIERIA REATAS CANASTAS Y ARTICULOS TEJIDOS DE FIBRA"},
+{"clave":6999041,"descripcion":"COMPRAVENTA DE OTROS ARTICULOS DE PLASTICO"},
+{"clave":6999059,"descripcion":"USUARIOS MENORES POR OPERACIONES DE REPORTO"},
+{"clave":6999067,"descripcion":"COMPRAVENTA DE OTROS PRODUCTOS DE HULE"},
+{"clave":6999075,"descripcion":"COMPRAVENTA DE VELAS Y VELADORAS"},
+{"clave":6999083,"descripcion":"CREDITOS PERSONALES AL CONSUMO"},
+{"clave":6999091,"descripcion":"PRESTAMOS AL PERSONAL DE LA INSTITUCION"},
+{"clave":6999108,"descripcion":"COMPRAVENTA DE ARTICULOS NO CLASIFICADOS EN OTRA PARTE"},
+{"clave":6999116,"descripcion":"TARJETA DE CREDITO"},
+{"clave":6999124,"descripcion":"CREDITOS PARA ADQUISICION DE BIENES DE CONSUMO DURADERO"},
+{"clave":6999132,"descripcion":"CONSUMOS PERSONALES"},
+{"clave":6999146,"descripcion":"OPERACIONES DE ARRENDAMIENTO CAPITALIZABLE"},
+{"clave":6999158,"descripcion":"OTROS CREDITOS AL CONSUMO"},
+{"clave":6999166,"descripcion":"AUTOMOTRIZ"},
+{"clave":6999174,"descripcion":"ADQUISICION DE BIENES MUEBLES"},
+{"clave":6999900,"descripcion":"USUARIOS MENORES COMERCIO"},
+{"clave":6999991,"descripcion":"CARTERA DE COMERCIO DE ESTADOS ANALITICOS"},
+{"clave":6999992,"descripcion":"CENTROS CAMBIARIOS"},
+{"clave":7100001,"descripcion":"TRANSPORTE TERRESTRE"},
+{"clave":7111016,"descripcion":"TRANSPORTE EN AUTOBUS URBANO Y SUBURBANO DE PASAJEROS"},
+{"clave":7112014,"descripcion":"TRANSPORTE EN AUTOBUS FORANEO DE PASAJEROS"},
+{"clave":7113012,"descripcion":"TRANSPORTE EN AUTOMOVIL DE RULETEO"},
+{"clave":7114010,"descripcion":"TRANSPORTE EN AUTOMOVILES DE SITIO Y TURISMO"},
+{"clave":7115018,"descripcion":"TRANSPORTE EN AUTOMOVIL DE RUTA FIJA"},
+{"clave":7119010,"descripcion":"AUTOTRANSPORTE ESCOLAR TURISTICO EN AUTOBUS Y OTROS ESPECIALIZADOS EXCEPTO AMBULANCIAS"},
+{"clave":7121015,"descripcion":"AUTOTRANSPORTE DE MATERIALES DE CONSTRUCCION"},
+{"clave":7122013,"descripcion":"AGENCIA DE MUDANZAS"},
+{"clave":7123011,"descripcion":"AUTOTRANSPORTE DE CARGA DE PRODUCTOS ESPECIFICOS"},
+{"clave":7129019,"descripcion":"TRANSPORTE DE CARGA FORANEA"},
+{"clave":7129902,"descripcion":"USUARIOS MENORES TRANSPORTES"},
+{"clave":7129910,"descripcion":"CARTERA DE TRANSPORTES DE ESTADOS ANALITICOS"},
+{"clave":7131014,"descripcion":"FERROCARRILES"},
+{"clave":7132012,"descripcion":"TRANVIAS Y TROLEBUSES"},
+{"clave":7133010,"descripcion":"TRANSPORTE EN FERROCARRIL URBANO (METRO)"},
+{"clave":7191018,"descripcion":"TRANSPORTE POR DUCTOS"},
+{"clave":7200009,"descripcion":"TRANSPORTE POR AGUA"},
+{"clave":7211014,"descripcion":"AGENCIA DE VAPORES Y BUQUES"},
+{"clave":7212012,"descripcion":"TRANSPORTES MARITIMOS DE CABOTAJE"},
+{"clave":7291016,"descripcion":"TRANSPORTE FLUVIAL Y LACUSTRE"},
+{"clave":7299010,"descripcion":"CARGA Y ESTIBA PORTUARIA"},
+{"clave":7300007,"descripcion":"TRANSPORTE AÉREO"},
+{"clave":7311012,"descripcion":"TRANSPORTACION AEREA DE PASAJEROS"},
+{"clave":7312010,"descripcion":"SERVICIOS RELACIONADOS CON EL TRANSPORTE EN AERONAVES CON MATRICULA EXTRANJERA"},
+{"clave":7400005,"descripcion":"SERVICIOS CONEXOS AL TRANSPORTE"},
+{"clave":7411010,"descripcion":"ADMINISTRACION DE CAMINOS PUENTES Y SERVICIOS AUXILIARES"},
+{"clave":7412018,"descripcion":"AEROPUERTO CIVIL"},
+{"clave":7413016,"descripcion":"ADMINISTRACION DE PUERTOS MARITIMOS LACUSTRES Y FLUVIALES"},
+{"clave":7414014,"descripcion":"ADMINISTRACION DE CENTRALES CAMIONERAS Y SERVICIOS AUXILIARES"},
+{"clave":7500003,"descripcion":"SERVICIOS RELACIONADOS CON EL TRANSPORTE EN GENERAL"},
+{"clave":7511018,"descripcion":"SERVICIOS DE ALMACENAMIENTO Y REFRIGERACION"},
+{"clave":7512016,"descripcion":"AGENCIA DE TURISMO"},
+{"clave":7513014,"descripcion":"AGENCIA ADUANAL"},
+{"clave":7514012,"descripcion":"SERVICIOS DE BASCULA Y DE GRUA PARA VEHICULOS"},
+{"clave":7519012,"descripcion":"AGENCIA DE FERROCARRIL"},
+{"clave":7519020,"descripcion":"ALQUILER DE LANCHAS Y VELEROS"},
+{"clave":7519038,"descripcion":"RENTA DE VEHICULOS AEREOS"},
+{"clave":7600001,"descripcion":"COMUNICACIONES"},
+{"clave":7611016,"descripcion":"EMPRESA DE TELEFONOS"},
+{"clave":7612014,"descripcion":"EMPRESA DE TELEGRAFOS"},
+{"clave":7613004,"descripcion":"OTROS SERVS. DE TELECOMUNICACIONES (EXCEPTO RADIO."},
+{"clave":7613012,"descripcion":"OTROS SERVICIOS DE TELECOMUNICACIONES (EXCEPTO RADIODIFUSION Y TELEVISION)"},
+{"clave":7613905,"descripcion":"MENORES COMUNICACIONES"},
+{"clave":7613913,"descripcion":"CARTERA DE COMUNICACIONES DE ESTADOS ANALITICOS"},
+{"clave":7614010,"descripcion":"SERVICIOS POSTALES"},
+{"clave":8100000,"descripcion":"SERVICIOS DE INSTITUCIONES DE CRÉDITO, ORGANIZACIONES AUXILIARES E INSTITUCIONES DE SEGUROS Y FIANZAS"},
+{"clave":8113011,"descripcion":"SERVICIOS DE LA BANCA NACIONAL"},
+{"clave":8113029,"descripcion":"SERVICIOS DE LA BANCA NACIONAL POR OPERACIONES DE CALL MONEY"},
+{"clave":8113128,"descripcion":"MENORES BANCA DESARROLLO"},
+{"clave":8114019,"descripcion":"SERVICIOS DE FONDOS Y FIDEICOMISOS DE FOMENTO ECONOMICO"},
+{"clave":8123010,"descripcion":"SERVICIOS DE LA BANCA PRIVADA Y MIXTA MULTIPLE"},
+{"clave":8123028,"descripcion":"SERVICIOS DE LA BANCA PRIVADA ESPECIALIZADA"},
+{"clave":8123036,"descripcion":"SERVICIOS DE LA BANCA PRIVADA Y MIXTA MULTIPLE POR OPERACIONES DE CALL MONEY"},
+{"clave":8123044,"descripcion":"SERVICIOS DE LA BANCA PRIVADA ESPECIALIZADA POR OP"},
+{"clave":8123052,"descripcion":"SOCIEDADES DE AHORRO Y PRESTAMO"},
+{"clave":8123060,"descripcion":"SOCIEDADES DE AHORRO Y CREDITO POPULAR"},
+{"clave":8123078,"descripcion":"SOCIEDADES FINANCIERAS DE OBJETO LIMITADO"},
+{"clave":8123086,"descripcion":"SOCIEDADES FINANCIERAS DE OBJETO MULTIPLE REGULADAS"},
+{"clave":8123094,"descripcion":"SOCIEDADES FINANCIERAS DE OBJETO MULTIPLE NO REGULADAS"},
+{"clave":8123143,"descripcion":"USUARIOS MENORES BANCA COMERCIAL"},
+{"clave":8123903,"descripcion":"USUARIOS MENORES DE SERVICIOS BANCARIOS"},
+{"clave":8123911,"descripcion":"CARTERA DE SERVICIOS BANCARIOS DE ESTADOS ANALITIC"},
+{"clave":8131013,"descripcion":"ALMACENES DE DEPOSITO NACIONALES"},
+{"clave":8131021,"descripcion":"ALMACENES DE DEPOSITO PRIVADOS"},
+{"clave":8132011,"descripcion":"UNIONES DE CREDITO NACIONALES"},
+{"clave":8132029,"descripcion":"UNIONES DE CREDITO PRIVADAS"},
+{"clave":8133019,"descripcion":"COMPAÑIAS DE FIANZAS NACIONALES"},
+{"clave":8133027,"descripcion":"COMPAÑIAS DE FIANZAS PRIVADAS"},
+{"clave":8133035,"descripcion":"AJ. INT. FINANCIEROS NO BANCARIOS UDIS"},
+{"clave":8141012,"descripcion":"BOLSA DE VALORES"},
+{"clave":8142010,"descripcion":"SOCIEDADES DE INVERSION"},
+{"clave":8151011,"descripcion":"COMPAÑIAS DE SEGUROS NACIONALES"},
+{"clave":8151029,"descripcion":"COMPAÑIAS DE SEGUROS PRIVADAS"},
+{"clave":8200001,"descripcion":"MONTEPÍO Ó CASAS DE EMPEÑO"},
+{"clave":8200008,"descripcion":"SERVICIOS COLATERALES A INSTITUCIONES FINANCIERAS Y DE SEGUROS"},
+{"clave":8211013,"descripcion":"INVERSIONISTA"},
+{"clave":8211021,"descripcion":"AGENTE DE BOLSA"},
+{"clave":8211039,"descripcion":"CASAS DE BOLSA NACIONALES"},
+{"clave":8211047,"descripcion":"CASAS DE BOLSA PRIVADAS"},
+{"clave":8219017,"descripcion":"AGENTE DE SEGUROS"},
+{"clave":8219025,"descripcion":"CASA DE CAMBIO"},
+{"clave":8219033,"descripcion":"CORRESPONSAL BANCARIO"},
+{"clave":8219041,"descripcion":"CAJA DE AHORROS"},
+{"clave":8219059,"descripcion":"MONTEPIO"},
+{"clave":8219067,"descripcion":"PRESTAMISTA"},
+{"clave":8219075,"descripcion":"FACTORING"},
+{"clave":8219083,"descripcion":"EMPRESAS CONTROLADORAS FINANCIERAS"},
+{"clave":8219091,"descripcion":"USUARIOS MENORES OTROS INTERMEDIARIOS FINANCIEROS PUBLICOS"},
+{"clave":8219108,"descripcion":"USUARIOS MENORES OTROS INTERMEDIARIOS FINANCIEROS PRIVADOS"},
+{"clave":8219114,"descripcion":"ADMINISTRADORAS DE TARJETA DE CREDITO"},
+{"clave":8219122,"descripcion":"EMPRESAS DE AUTOFINANCIAMIENTO AUTOMOTRIZ"},
+{"clave":8219130,"descripcion":"EMPRESAS DE AUTOFINANCIAMIENTO RESIDENCIAL"},
+{"clave":8220014,"descripcion":"FOBAPROA-IPAB"},
+{"clave":8221013,"descripcion":"FOBAPROA-IPAB"},
+{"clave":8300006,"descripcion":"SERVICIOS RELACIONADOS CON INMUEBLES"},
+{"clave":8311011,"descripcion":"ALQUILER DE TERRENOS LOCALES Y EDIFICIOS NO RESIDENCIALES"},
+{"clave":8312019,"descripcion":"ARRENDAMIENTO DE INMUEBLES RESIDENCIALES"},
+{"clave":8313017,"descripcion":"SERVICIO DE CORREDORES DE BIENES RAICES"},
+{"clave":8314015,"descripcion":"ADMINISTRACION DE INMUEBLES"},
+{"clave":8400001,"descripcion":"CONTADURÍA Y AUDITORÍA"},
+{"clave":8400002,"descripcion":"ASESORES  FISCALES Y FINANCIEROS"},
+{"clave":8400003,"descripcion":"NOTARÍAS PÚBLICAS"},
+{"clave":8400004,"descripcion":"SERVICIOS PROFESIONALES Y TÉCNICOS"},
+{"clave":8411019,"descripcion":"SERVICIOS DE NOTARIAS PUBLICAS"},
+{"clave":8412017,"descripcion":"SERVICIOS DE BUFETES JURIDICOS"},
+{"clave":8413015,"descripcion":"SERVICIOS DE CONTADURIA Y AUDITORIA; INCLUSO TENEDURIA DE LIBROS"},
+{"clave":8414013,"descripcion":"SERVICIOS DE ASESORIA Y ESTUDIOS TECNICOS DE ARQUITECTURA E INGENIERIA (INCLUSO DISEÑO INDUSTRIAL)"},
+{"clave":8415011,"descripcion":"DESPACHO DE OTROS PROFESIONISTAS"},
+{"clave":8419013,"descripcion":"SERVICIO DE INVESTIGACION DE MERCADO  SOLVENCIA FINANCIERA, DE PATENTES  Y MARCAS INDUSTRIALES Y OTROS SIMILARES"},
+{"clave":8421018,"descripcion":"SERVICIOS DE ANALISIS DE SISTEMAS Y PROCESAMIENTO ELECTRONICO DE DATOS"},
+{"clave":8422016,"descripcion":"AGENCIA DE PUBLICIDAD"},
+{"clave":8423014,"descripcion":"AGENCIA NOTICIOSA"},
+{"clave":8424012,"descripcion":"SERVICIOS ADMINISTRATIVOS DE TRAMITE Y COBRANZA; INCLUSO ESCRITORIOS PUBLICOS"},
+{"clave":8425010,"descripcion":"SERVICIOS DE COPIAS FOTOSTATICAS XEROGRAFITAS Y SIMILARES"},
+{"clave":8426018,"descripcion":"COMISIONISTA"},
+{"clave":8426026,"descripcion":"REPRESENTACION DE ARTISTAS"},
+{"clave":8426034,"descripcion":"REPRESENTANTE CASAS EXTRANJERAS"},
+{"clave":8426042,"descripcion":"REPRESENTANTE CASAS NACIONALES"},
+{"clave":8427016,"descripcion":"SERVICIOS DE INSTALACION Y MANTENIMIENTO DE MAQUINARIA Y EQUIPO POR EMPRESAS ESPECIALIZADAS"},
+{"clave":8428014,"descripcion":"SERVICIOS DE AGENCIAS DE COLOCACION Y SELECCION DE PERSONAL"},
+{"clave":8429012,"descripcion":"PRESTACION DE OTROS SERVICIOS TECNICOS"},
+{"clave":8429020,"descripcion":"EMPRESAS CONTROLADORAS NO FINANCIERAS"},
+{"clave":8429038,"descripcion":"EMPRESAS DE SEGURIDAD PRIVADA"},
+{"clave":8429046,"descripcion":"EMPRESAS TRANSPORTADORAS DE VALORES"},
+{"clave":8500002,"descripcion":"SERVICIOS DE ALQUILER A EMPRESAS"},
+{"clave":8511017,"descripcion":"ARRENDAMIENTO DE MAQUINARIA"},
+{"clave":8511025,"descripcion":"ARRENDADORAS FINANCIERAS NACIONALES"},
+{"clave":8511033,"descripcion":"ARRENDADORAS FINANCIERAS PRIVADAS"},
+{"clave":8512015,"descripcion":"ARRENDAMIENTO DE EQUIPO PARA PROCESAMIENTO ELECTRONICO DE DATOS"},
+{"clave":8519011,"descripcion":"ALQUILER DE MOBILIARIO Y EQUIPO PARA COMERCIOS  SERVICIOS Y OFICINAS"},
+{"clave":8521016,"descripcion":"SALON DE FIESTAS"},
+{"clave":8522014,"descripcion":"ALQUILER DE SILLAS Y VAJILLAS PARA BANQUETES"},
+{"clave":8523012,"descripcion":"ALQUILER DE EQUIPOS ELECTRONICOS"},
+{"clave":8524010,"descripcion":"ALQUILER O RENTA DE AUTOMOVILES SIN CHOFER"},
+{"clave":8529010,"descripcion":"ALQUILER DE ROPA"},
+{"clave":8600000,"descripcion":"SERVICIOS DE ALOJAMIENTO TEMPORAL"},
+{"clave":8611015,"descripcion":"HOTEL"},
+{"clave":8612013,"descripcion":"SERVICIOS DE ALOJAMIENTO EN MOTELES"},
+{"clave":8613011,"descripcion":"CAMPOS DE TURISMO"},
+{"clave":8619019,"descripcion":"CASA DE HUESPEDES"},
+{"clave":8700008,"descripcion":"PREPARACIÓN Y SERVICIO DE ALIMENTOS Y BEBIDAS"},
+{"clave":8711013,"descripcion":"CAFETERIA"},
+{"clave":8711021,"descripcion":"RESTAURANTE"},
+{"clave":8712011,"descripcion":"SERVICIOS DE ALIMENTOS EN LENCERIAS TAQUERIAS Y TORTERIAS"},
+{"clave":8713019,"descripcion":"SERVICIOS EN OSTIONERIAS Y PREPARACION DE OTROS MARISCOS Y PESCADOS"},
+{"clave":8714017,"descripcion":"NEVERIA Y REFRESQUERIA"},
+{"clave":8719017,"descripcion":"SERVICIOS EN MERENDEROS CENADURIAS Y PREPARACION DE ANTOJITOS Y PLATILLOS REGIONALES"},
+{"clave":8721012,"descripcion":"BARES Y CANTINAS"},
+{"clave":8722010,"descripcion":"CERVECERIA"},
+{"clave":8723018,"descripcion":"SERVICIOS EN PULQUERIAS"},
+{"clave":8723026,"descripcion":"USUARIOS MENORES TURISMO"},
+{"clave":8800001,"descripcion":"HIPÓDROMO"},
+{"clave":8800002,"descripcion":"JUEGOS DE FERIA Y APUESTAS"},
+{"clave":8800003,"descripcion":"AGENCIAS DE RIFAS Y SORTEOS (QUINIELAS Y LOTERÍA)"},
+{"clave":8800006,"descripcion":"SERVICIOS RECREATIVOS Y DE ESPARCIMIENTO"},
+{"clave":8811011,"descripcion":"SERVICIOS EN BALNEARIOS Y ALBERCAS"},
+{"clave":8812019,"descripcion":"SALON DE BILLAR"},
+{"clave":8812027,"descripcion":"SALON DE BOLICHE"},
+{"clave":8813017,"descripcion":"CLUB SOCIAL"},
+{"clave":8814015,"descripcion":"CENTRO DEPORTIVO"},
+{"clave":8819015,"descripcion":"SERVICIOS Y EXPLOTACION DE PLAYAS Y PARQUES DE DESCANSO CLUBES DE EXCURSIONISMO DE CAZA Y PESCA INCLUSO ALQUILER DE LANCHAS,  CABALLOS, CALESAS Y OTROS CON FINES RECREATIVOS Y DEPORTIVOS"},
+{"clave":8821010,"descripcion":"ESTUDIOS CINEMATOGRAFICOS"},
+{"clave":8821028,"descripcion":"GRABACION DE SONIDO EN PELICULAS"},
+{"clave":8821036,"descripcion":"LABORATORIOS CINEMATOGRAFICOS"},
+{"clave":8821044,"descripcion":"PRODUCCION DE PELICULAS"},
+{"clave":8822018,"descripcion":"DISTRIBUCION Y ALQUILER DE PELICULAS"},
+{"clave":8823016,"descripcion":"SALA DE CINE"},
+{"clave":8824014,"descripcion":"RADIODIFUSORA"},
+{"clave":8825012,"descripcion":"TELEDIFUSORA"},
+{"clave":8826010,"descripcion":"TEATRO"},
+{"clave":8827018,"descripcion":"ACTIVIDADES DE CLUBES DEPORTIVOS PROFESIONALES"},
+{"clave":8829014,"descripcion":"ESTADIOS Y ARENAS"},
+{"clave":8829022,"descripcion":"HIPODROMO"},
+{"clave":8829030,"descripcion":"PLAZA DE TOROS"},
+{"clave":8829048,"descripcion":"PROMOCION DE ESPECTACULOS DEPORTIVOS"},
+{"clave":8829056,"descripcion":"PROMOCION DE ESPECTACULOS TAURINOS"},
+{"clave":8831019,"descripcion":"CENTRO NOCTURNO"},
+{"clave":8832017,"descripcion":"GALERIAS DE ARTES GRAFICAS Y MUSEOS"},
+{"clave":8833015,"descripcion":"FEDERACIONES Y ASOCIACIONES DEPORTIVAS Y OTRAS CON FINES RECREATIVOS"},
+{"clave":8839013,"descripcion":"JUEGOS DE FERIA"},
+{"clave":8839906,"descripcion":"USUARIOS MENORES CINEMATOGRAFIA Y ESPARCIMIENTO"},
+{"clave":8839914,"descripcion":"CARTERA DE SERVICIOS DE ESPARCIMIENTO DE ESTADOS A"},
+{"clave":8900004,"descripcion":"SERVICIOS PERSONALES, PARA EL HOGAR Y DIVERSOS"},
+{"clave":8911019,"descripcion":"TALLER DE REPARACION GENERAL DE AUTOMOVILES Y CAMIONES"},
+{"clave":8912017,"descripcion":"SERVICIOS DE REPARACION DE MOTOCICLETAS Y BICICLETAS"},
+{"clave":8913015,"descripcion":"SERVICIOS DE REPARACION ESPECIALIZADO EN PARTES DE AUTOMOVILES EXCEPTO RECONSTRUCCION DE MOTORES Y CARROCERIAS"},
+{"clave":8914013,"descripcion":"SERVICIOS DE REPARACION DE CARROCERIAS PINTURA TAPICERIA HOJALATERIA Y CRISTALES DE AUTOMOVILES"},
+{"clave":8915011,"descripcion":"SERVICIOS DE LAVADO Y LUBRICACION DE AUTOMOVILES"},
+{"clave":8916019,"descripcion":"ESTACIONAMIENTO PRIVADO PARA VEHICULOS"},
+{"clave":8916027,"descripcion":"ESTACIONAMIENTO PUBLICO PARA VEHICULOS"},
+{"clave":8919013,"descripcion":"SERVICIO DE REPARACION DE VEHICULOS DE TRACCION ANIMAL Y PROPULSION A MANO"},
+{"clave":8921018,"descripcion":"TALLER DE REPARACION DE CALZADO"},
+{"clave":8922016,"descripcion":"TALLER DE REPARACION DE APARATOS ELECTRICOS Y ELECTRONICOS INDUSTRIALES Y COMERCIALES"},
+{"clave":8922024,"descripcion":"TALLER DE REPARACION DE ARTICULOS ELECTRICOS Y ELECTRONICOS PARA EL HOGAR"},
+{"clave":8923014,"descripcion":"SERVICIOS DE REPARACION DE RELOJES Y JOYAS"},
+{"clave":8924012,"descripcion":"TALLER DE TAPICERIA"},
+{"clave":8929012,"descripcion":"TALLER DE REPARACION DE PARAGUAS Y SOMBRILLAS"},
+{"clave":8929020,"descripcion":"TALLER DE REPARACION DE ROPA Y MEDIAS"},
+{"clave":8929038,"descripcion":"TALLER DE REPARACION DE SOMBREROS"},
+{"clave":8931017,"descripcion":"BAÑOS"},
+{"clave":8932015,"descripcion":"BARBERIA Y PELUQUERIA"},
+{"clave":8933013,"descripcion":"SALON DE BELLEZA"},
+{"clave":8934011,"descripcion":"LAVANDERIA"},
+{"clave":8934029,"descripcion":"TINTORERIA Y PLANCHADURIA"},
+{"clave":8935019,"descripcion":"EMPRESA DE SERVICIO DE LIMPIEZA"},
+{"clave":8936017,"descripcion":"SERVICIOS DE FUMIGACION  DESINFECCION Y CONTROL DE PLAGAS"},
+{"clave":8939011,"descripcion":"SERVICIOS DE BOLERIAS  MASAJISTAS  SANITARIOS PUBLICOS Y OTROS SERVICIOS DE ASEO Y LIMPIEZA"},
+{"clave":8941016,"descripcion":"ESTUDIO FOTOGRAFICO"},
+{"clave":8942014,"descripcion":"DECORACION EN GENERAL"},
+{"clave":8943012,"descripcion":"AGENCIA DE INHUMACIONES"},
+{"clave":8944010,"descripcion":"PANTEON"},
+{"clave":8944028,"descripcion":"USUARIOS MENORES SERVICIOS PROFESIONALES Y TECNICOS"},
+{"clave":8944098,"descripcion":"EMPLEADO PRIVADO"},
+{"clave":8949010,"descripcion":"TAXIDERMISTA"},
+{"clave":8949888,"descripcion":"USUARIOS MENORES OTRAS ACTIVIDADES"},
+{"clave":8949896,"descripcion":"CARTERA DE OTRAS ACTIVIDADES DE ESTADOS ANALITICOS"},
+{"clave":8949903,"descripcion":"USUARIOS MENORES DE SERVICIOS"},
+{"clave":8949911,"descripcion":"CARTERA DE SERVICIOS DE ESTADOS ANALITICOS"},
+{"clave":8991011,"descripcion":"QUEHACERES DEL HOGAR"},
+{"clave":9100009,"descripcion":"SERVICIOS DE ENSEÑANZA, INVESTIGACIÓN CIENTÍFICA Y DIFUSIÓN CULTURAL"},
+{"clave":9112012,"descripcion":"SERVICIOS DE ENSEÑANZA PRERRIMARIA Y PRIMARIA"},
+{"clave":9113010,"descripcion":"SERVICIOS DE ENSEÑANZA SECUNDARIA"},
+{"clave":9115016,"descripcion":"ESTABLECIMIENTOS PUBLICOS DE INSTRUCCION  EDUCACION SUBPROFESIONAL Y PROFESIONAL  CULTURA E INVESTIGACION"},
+{"clave":9119018,"descripcion":"ESTABLECIMIENTOS PRIVADOS DE INSTRUCCION EDUCACION CULTURA E INVESTIGACION"},
+{"clave":9121013,"descripcion":"SERVICIOS DE ENSEÑANZA COMERCIAL Y DE IDIOMA"},
+{"clave":9122011,"descripcion":"SERVICIOS DE CAPACITACION TECNICA DE OFICIOS Y ARTESANIAS"},
+{"clave":9129017,"descripcion":"SERVICIOS DE ENSEÑANZA DE MUSICA DANZA Y OTRAS ARTES CULTURA FISICA MANEJO DE VEHICULOS Y OTROS ESPECIALIZADOS"},
+{"clave":9191016,"descripcion":"SERVICIOS DE INVESTIGACION CIENTIFICA"},
+{"clave":9199010,"descripcion":"SERVICIOS DE BIBLIOTECAS MUSEOS JARDINES BOTANICOS Y OTROS SERVICIOS DE DIFUSION CULTURAL"},
+{"clave":9200007,"descripcion":"SERVICIOS MÉDICOS, DE ASISTENCIA SOCIAL Y VETERINARIOS"},
+{"clave":9211012,"descripcion":"HOSPITALES  SANATORIOS  CLINICAS Y MATERNIDADES"},
+{"clave":9212010,"descripcion":"SERVICIOS MEDICO GENERAL Y ESPECIALIZADO EN CONSULTORIOS"},
+{"clave":9213018,"descripcion":"SERVICIOS DE CONSULTORIOS Y CLINICAS DENTALES"},
+{"clave":9214016,"descripcion":"LABORATORIOS DE ANALISIS CLINICOS"},
+{"clave":9215014,"descripcion":"SERVICIOS DE LABORATORIOS DE RADIOLOGIA Y RADIOSCOPIA"},
+{"clave":9219016,"descripcion":"SERVICIOS DE FISIOTERAPIA  BANCOS DE SANGRE Y OTROS SERVICIOS MEDICOS"},
+{"clave":9221011,"descripcion":"CENTRO DE BENEFICENCIA"},
+{"clave":9231010,"descripcion":"SERVICIOS VETERINARIOS EN CLINICAS Y CONSULTORIOS  INCLUSO ZOOTECNISTAS  PENSIONES DE ANIMALES Y OTROS SERVICIOS AUXILIARES"},
+{"clave":9231028,"descripcion":"USUARIOS MENORES SERVICIOS MEDICOS"},
+{"clave":9300001,"descripcion":"ORGANIZACIONES DE ABOGADOS"},
+{"clave":9300005,"descripcion":"AGRUPACIONES MERCANTILES, PROFESIONALES, CÍVICAS, POLÍTICAS, LABORALES Y RELIGIOSAS"},
+{"clave":9311010,"descripcion":"ASOCIACIONES Y CONFEDERACIONES"},
+{"clave":9311028,"descripcion":"CAMARAS DE COMERCIO"},
+{"clave":9311036,"descripcion":"CAMARAS INDUSTRIALES"},
+{"clave":9311044,"descripcion":"SOCIEDADES COOPERATIVAS"},
+{"clave":9312018,"descripcion":"ORGANIZACIONES DE ABOGADOS MEDICOS INGENIEROS Y OTRAS ASOCIACIONES DE PROFESIONALES"},
+{"clave":9319014,"descripcion":"ORGANIZACIONES CIVICAS"},
+{"clave":9321019,"descripcion":"ORGANIZACIONES LABORALES Y SINDICALES"},
+{"clave":9322017,"descripcion":"ORGANIZACIONES POLITICAS"},
+{"clave":9331018,"descripcion":"ORGANIZACIONES RELIGIOSAS"},
+{"clave":9400003,"descripcion":"SERVICIOS DE ADMINISTRACIÓN PÚBLICA, DEFENSA Y SEGURIDAD SOCIAL"},
+{"clave":9411018,"descripcion":"GOBIERNO FEDERAL"},
+{"clave":9411026,"descripcion":"GOBIERNO ESTATAL"},
+{"clave":9411034,"descripcion":"GOBIERNO MUNICIPAL"},
+{"clave":9411042,"descripcion":"DEPARTAMENTO DEL DF"},
+{"clave":9411886,"descripcion":"USUARIOS MENORES GOBIERNO FEDERAL"},
+{"clave":9411894,"descripcion":"CARTERA DE GOBIERNO FEDERAL DE ESTADOS ANALITICOS"},
+{"clave":9411901,"descripcion":"USUARIOS MENORES GOBIERNO ESTATAL Y MUNICIPAL"},
+{"clave":9411919,"descripcion":"CARTERA DE GOBIERNO ESTATAL Y MUNICIPAL DE ESTADOS"},
+{"clave":9411998,"descripcion":"EMPLEADO PUBLICO  "},
+{"clave":9471012,"descripcion":"PRESTACION DE SERVICIOS PUBLICOS Y SOCIALES"},
+{"clave":9501009,"descripcion":"EMPLEADO DEL SECTOR PRIVADO "},
+{"clave":9502007,"descripcion":"EMPLEADO DEL SECTOR PUBLICO"},
+{"clave":9503005,"descripcion":"TRANSMISORES DE DINERO O DISPERSORES/CAMBISTAS O CENTROS CAMBIARIOS/CASAS DE EMPEÑO"},
+{"clave":9504003,"descripcion":"NEGOCIOS RELACIONADOS CON INTERNET "},
+{"clave":9505001,"descripcion":"VENTA DE TARJETAS TELEFONICAS PREPAGADAS"},
+{"clave":9506009,"descripcion":"ESTUDIANTE, DESEMPLEADO, JUBILADO, PENSIONADO, DISCAPACITADO"},
+{"clave":9800000,"descripcion":"EMPLEADO DEL SECTOR PUBLICO"},
+{"clave":9800100,"descripcion":"EMPLEADO DEL GOBIERNO FEDERAL"},
+{"clave":9800101,"descripcion":"PRESIDENTE DE LA REPUBLICA"},
+{"clave":9800102,"descripcion":"SECRETARIA DE ESTADO,  TITULAR DE ENTIDAD / PROCURADOR GENERAL DE LA REPÚBLICA"},
+{"clave":9800103,"descripcion":"SUBSECRETARIA DE ESTADO"},
+{"clave":9800104,"descripcion":"OFICIAL MAYOR"},
+{"clave":9800105,"descripcion":"TITULAR DE ENTIDAD"},
+{"clave":9800106,"descripcion":"JEFATURA DE UNIDAD"},
+{"clave":9800107,"descripcion":"DIRECCIÓN GENERAL ADJUNTA"},
+{"clave":9800108,"descripcion":"DIRECCIÓN DE ÁREA"},
+{"clave":9800109,"descripcion":"SUBDIRECCIÓN DE ÁREA"},
+{"clave":9800110,"descripcion":"JEFATURA DE DEPARTAMENTO"},
+{"clave":9800111,"descripcion":"ENLACE"},
+{"clave":9800112,"descripcion":"DIPUTADO  DEL H. CONGRESO DE LA UNIÓN"},
+{"clave":9800113,"descripcion":"SENADOR DE LA REPUBLICA"},
+{"clave":9800114,"descripcion":"SECRETARIA DE LA DEFENSA NACIONAL (MILITAR)"},
+{"clave":9800115,"descripcion":"SECRETARIA DE MARINA (MARINO)"},
+{"clave":9800116,"descripcion":"EMBAJADOR"},
+{"clave":9800117,"descripcion":"CÓNSUL"},
+{"clave":9800200,"descripcion":"EMPLEADO DE GOBIERNO DE ENTIDAD FEDERATIVA"},
+{"clave":9800201,"descripcion":"GOBERNADOR CONSTITUCIONAL DEL ESTADO Ó JEFE DE GOBIERNO DEL DF"},
+{"clave":9800202,"descripcion":"SECRETARIO DEL RAMO"},
+{"clave":9800203,"descripcion":"PROCURADOR GENERAL DE JUSTICIA DEL ESTADO"},
+{"clave":9800204,"descripcion":"DIPUTADO AL H. CONGRESO DEL ESTADO"},
+{"clave":9800205,"descripcion":"SUB-PROCURADOR GENERAL DE JUSTICIA DEL ESTAD"},
+{"clave":9800206,"descripcion":"CONTRALOR DEL H. CONGRESO DEL ESTADO"},
+{"clave":9800207,"descripcion":"TESORERO DEL ESTADO"},
+{"clave":9800208,"descripcion":"SUB-SECRETARIO"},
+{"clave":9800209,"descripcion":"VOCAL EJECUTIVO"},
+{"clave":9800210,"descripcion":"OFICIAL MAYOR DE ENTIDAD FEDERATIVA"},
+{"clave":9800211,"descripcion":"DIRECTOR GENERAL"},
+{"clave":9800212,"descripcion":"DIRECTOR EJECUTIVO"},
+{"clave":9800213,"descripcion":"JEFE DE LA POLICÍA JUDICIAL DEL ESTADO"},
+{"clave":9800214,"descripcion":"JEFE DE UNIDAD"},
+{"clave":9800215,"descripcion":"DIRECTOR"},
+{"clave":9800216,"descripcion":"SUB-JEFE OPERATIVO"},
+{"clave":9800217,"descripcion":"SUB-DIRECTOR"},
+{"clave":9800218,"descripcion":"JEFE DE DEPARTAMENTO"},
+{"clave":9800219,"descripcion":"COORDINADOR OPERATIVO"},
+{"clave":9800220,"descripcion":"ENLACE"},
+{"clave":9800300,"descripcion":"EMPLEADO DE GOBIERNO MUNICIPAL O DELEGACIONES (D.F)"},
+{"clave":9800301,"descripcion":"PRESIDENTE MUNICIPAL O DELEGADO"},
+{"clave":9800302,"descripcion":"SUB-DELEGADO"},
+{"clave":9800303,"descripcion":"REGIDOR"},
+{"clave":9800304,"descripcion":"DIRECTOR GENERAL"},
+{"clave":9800305,"descripcion":"DIRECTOR"},
+{"clave":9800306,"descripcion":"SUBDIRECTOR"},
+{"clave":9800307,"descripcion":"JEFE DE DEPARTAMENTO"},
+{"clave":9800308,"descripcion":"COORDINADOR DE ÁREA O TÉCNICO"},
+{"clave":9800309,"descripcion":"ANALISTA"},
+{"clave":9800310,"descripcion":"ENLACE Ó AUXILIAR ADMINISTRATIVO"},
+{"clave":9800311,"descripcion":"POLICÍA"},
+{"clave":9800312,"descripcion":"INSPECTOR"},
+{"clave":9800400,"descripcion":"EMPLEADO DEL PODER JUDICIAL"},
+{"clave":9800401,"descripcion":"MINISTRO DE LA SUPREMA CORTE DE JUSTICIA DE LA NACIÓN"},
+{"clave":9800402,"descripcion":"MAGISTRADO FEDERAL"},
+{"clave":9800403,"descripcion":"JUEZ FEDERAL"},
+{"clave":9800404,"descripcion":"EMPLEADO DEL PODER JUDICIAL FEDERAL (SECRETARIOS, ACTUARIOS, ETC)"},
+{"clave":9800405,"descripcion":"MAGISTRADO DE ENTIDAD FEDERATIVA"},
+{"clave":9800406,"descripcion":"JUEZ DE ENTIDAD FEDERATIVA"},
+{"clave":9800407,"descripcion":"EMPLEADO DEL PODER JUDICIAL DE ENTIDAD FEDERATIVA (SECRETARIOS, ACTUARIOS, ETC)"},
+{"clave":9800408,"descripcion":"JUEZ MUNICIPAL Ó DE DELEGACIÓN"},
+{"clave":9800409,"descripcion":"EMPLEADO DEL PODER JUDICIAL DE MUNICIPIO Ó DELEGACIÓN (SECRETARIOS, ACTUARIOS, ETC)"},
+{"clave":9900003,"descripcion":"SERVICIOS DE ORGANIZACIONES INTERNACIONALES Y OTROS ORGANISMOS EXTRATERRITORIALES"},
+{"clave":9900900,"descripcion":"DEPENDENCIAS DE GOBIERNO O EMPRESAS PARAESTATALES"},
+{"clave":9900901,"descripcion":"SERVICIOS DE ORGANIZACIONES INTERNACIONALES Y OTROS ORGANISMOS EXTRATERRITORIALES"},
+{"clave":9900902,"descripcion":"TRANSMISORES DE DINERO O DISPERSORES"},
+{"clave":9900903,"descripcion":"CAMBISTAS O CENTROS CAMBIARIOS"},
+{"clave":9900904,"descripcion":"ESTUDIANTE Ó MENOR DE EDAD SIN OCUPACIÓN"},
+{"clave":9900905,"descripcion":"DESEMPLEADO"},
+{"clave":9900906,"descripcion":"JUBILADO"},
+{"clave":9900907,"descripcion":"PENSIONADO"},
+{"clave":9900908,"descripcion":"AMA DE CASA"},
+{"clave":9900909,"descripcion":"MINISTROS DE CULTO RELIGIOSO (SACERDOTE, PASTOR, MONJA, ETC)"},
+{"clave":9911018,"descripcion":"INSTITUCIONES FINANCIERAS DEL EXTRANJERO"},
+{"clave":9912016,"descripcion":"CONSULADO"},
+{"clave":9912024,"descripcion":"GOBIERNO EXTRANJERO"},
+{"clave":9919012,"descripcion":"SERVICIOS DE OFICINAS Y REPRESENTACIONES DE OTROS PAISES QUE GOZAN DE EXTRATERRITORIALIDAD"},
+{"clave":9999999,"descripcion":"NO CLASIFICADA (USO EXCLUSIVO CNBV)"}]') if EconomicalActivity.all.count==0
+
+LocalidadCnbv.loadJson('[{"clave":101003,"descripcion":"AGUASCALIENTES MUNICIPIO DE, AGS                                                                                                                      ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":101027,"descripcion":"AGUASCALIENTES LOCALIDAD DE, AGS                                                                                                                      ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":101106,"descripcion":"SAN FRANCISCO DE LOS ROMOS, AGS                                                                                                                       ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":104003,"descripcion":"ASIENTOS, AGS                                                                                                                                         ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":107003,"descripcion":"CALVILLO, AGS                                                                                                                                         ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":110006,"descripcion":"COSÍO, AGS                                                                                                                                            ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":113006,"descripcion":"JESÚS MARÍA, AGS                                                                                                                                      ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":116006,"descripcion":"PABELLÓN DE ARTEAGA, AGS                                                                                                                              ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":119006,"descripcion":"RINCÓN DE ROMOS, AGS                                                                                                                                  ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":122009,"descripcion":"SAN JOSÉ DE GRACIA, AGS                                                                                                                               ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":125009,"descripcion":"TEPEZALÁ, AGS                                                                                                                                         ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":128009,"descripcion":"EL LLANO, AGS                                                                                                                                         ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":199009,"descripcion":"AGUASCALIENTES (OTROS)                                                                                                                                ","entidad_federativa":"AGUASCALIENTES                                                                                                                                        "},
+{"clave":201009,"descripcion":"ENSENADA MUNICIPIO DE, BC                                                                                                                             ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":201105,"descripcion":"ENSENADA LOCALIDAD DE, BC                                                                                                                             ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":201159,"descripcion":"FRANCISCO ZARCO, BC                                                                                                                                   ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":201195,"descripcion":"MANEADERO, BC                                                                                                                                         ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":201309,"descripcion":"SAN QUINTÍN, BC                                                                                                                                       ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":201355,"descripcion":"VALLE TRINIDAD, BC                                                                                                                                    ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":201408,"descripcion":"VICENTE GUERRERO, BC                                                                                                                                  ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204009,"descripcion":"MEXICALI MUNICIPIO DE, BC                                                                                                                             ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204052,"descripcion":"ALGODONES, BC                                                                                                                                         ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204102,"descripcion":"BATAQUEZ ,ESTACIÓN, BC                                                                                                                                ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204159,"descripcion":"BENITO JUÁREZ, BC                                                                                                                                     ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204175,"descripcion":"CIUDAD OBREGÓN BCN, BC                                                                                                                                ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204208,"descripcion":"CIUDAD MORELOS, BC                                                                                                                                    ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204219,"descripcion":"DELTA, BC                                                                                                                                             ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204228,"descripcion":"EJIDO PUEBLA, BC                                                                                                                                      ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204235,"descripcion":"ESTACIÓN COAHUILA, BC                                                                                                                                 ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204252,"descripcion":"GUADALUPE VICTORIA, BC                                                                                                                                ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204262,"descripcion":"HECHICERA, BC                                                                                                                                         ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204279,"descripcion":"HERMOSILLO, EJIDO, BC                                                                                                                                 ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204309,"descripcion":"JESÚS GONZÁLEZ ORTEGA, BC                                                                                                                             ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204369,"descripcion":"LA CURVA, BC                                                                                                                                          ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204405,"descripcion":"MEXICALI LOCALIDAD DE, BC                                                                                                                             ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204445,"descripcion":"NUEVO LEÓN, BC                                                                                                                                        ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204505,"descripcion":"PACÍFICO, BC                                                                                                                                          ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204555,"descripcion":"SAN FELIPE, BC                                                                                                                                        ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204579,"descripcion":"SAN IGNACIO, BC                                                                                                                                       ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204609,"descripcion":"SÁNCHEZ TABOADA, BC                                                                                                                                   ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":204708,"descripcion":"VICTORIA, BC                                                                                                                                          ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":207009,"descripcion":"TECATE, BC                                                                                                                                            ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":210009,"descripcion":"TIJUANA MUNICIPIO DE, BC                                                                                                                              ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":210042,"descripcion":"LA MESA, BC                                                                                                                                           ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":210088,"descripcion":"ROSARITO, BC                                                                                                                                          ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":210208,"descripcion":"TIJUANA LOCALIDAD DE, BC                                                                                                                              ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":299009,"descripcion":"BAJA CALIFORNIA (OTROS)                                                                                                                               ","entidad_federativa":"BAJA CALIFORNIA                                                                                                                                       "},
+{"clave":302006,"descripcion":"CABOS LOS, BCS                                                                                                                                        ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":302103,"descripcion":"CABO SAN LUCAS, BCS                                                                                                                                   ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":302309,"descripcion":"SAN ANTONIO, BCS                                                                                                                                      ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":302357,"descripcion":"SAN JOSÉ DEL CABO, BCS                                                                                                                                ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":302409,"descripcion":"SANTIAGO, BCS                                                                                                                                         ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":302504,"descripcion":"TODOS SANTOS, BCS                                                                                                                                     ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":303009,"descripcion":"COMONDÚ, BCS                                                                                                                                          ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":303058,"descripcion":"INSURGENTES, BCS                                                                                                                                      ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":303069,"descripcion":"LORETO, BCS                                                                                                                                           ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":303085,"descripcion":"V CONSTITUCIÓN, BCS                                                                                                                                   ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":305006,"descripcion":"MULEGE MUNICIPIO DE, BCS                                                                                                                              ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":305021,"descripcion":"BAHIA TORTUGAS, BCS                                                                                                                                   ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":305073,"descripcion":"GUERRERO NEGRO, BCS                                                                                                                                   ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":305159,"descripcion":"MULEGE LOCALIDAD DE, BCS                                                                                                                              ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":305207,"descripcion":"SANTA ROSALÍA, BCS                                                                                                                                    ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":308006,"descripcion":"PAZ, LA, BCS                                                                                                                                          ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":399009,"descripcion":"BAJA CALIFORNIA SUR (OTROS)                                                                                                                           ","entidad_federativa":"BAJA CALIFORNIA SUR                                                                                                                                   "},
+{"clave":403009,"descripcion":"CALKINÍ, CAMP                                                                                                                                         ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":405009,"descripcion":"CAMPECHE MUNICIPIO DE, CAMP                                                                                                                           ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":405138,"descripcion":"CAMPECHE LOCALIDAD DE, CAMP                                                                                                                           ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":405609,"descripcion":"LERMA, CAMP                                                                                                                                           ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":407003,"descripcion":"CARMEN, CAMP                                                                                                                                          ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":407043,"descripcion":"CANDELARIA, CAMP                                                                                                                                      ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":407057,"descripcion":"CIUDAD DEL CARMEN, CAMP                                                                                                                               ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":407079,"descripcion":"ESCÁRCEGA, CAMP                                                                                                                                       ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":409009,"descripcion":"CHAMPOTÓN, CAMP                                                                                                                                       ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":411009,"descripcion":"HECELCHAKÁN, CAMP                                                                                                                                     ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":413006,"descripcion":"HOPELCHÉN, CAMP                                                                                                                                       ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":415006,"descripcion":"PALIZADA, CAMP                                                                                                                                        ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":417009,"descripcion":"TENABO, CAMP                                                                                                                                          ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":419006,"descripcion":"CALAKMUL, CAMP                                                                                                                                        ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":499009,"descripcion":"CAMPECHE (OTROS)                                                                                                                                      ","entidad_federativa":"CAMPECHE                                                                                                                                              "},
+{"clave":503009,"descripcion":"ABASOLO, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":505003,"descripcion":"ACU A, COAH                                                                                                                                           ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":507009,"descripcion":"ALLENDE, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":509009,"descripcion":"ARTEAGA, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":511009,"descripcion":"CANDELA, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":513009,"descripcion":"CASTA OS, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":515003,"descripcion":"CUATROCIÉNEGAS, COAH                                                                                                                                  ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":516009,"descripcion":"EL PILAR, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":517009,"descripcion":"ESCOBEDO, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":519009,"descripcion":"FRANCISCO I. MADERO, COAH                                                                                                                             ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":521006,"descripcion":"FRONTERA, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":523006,"descripcion":"GENERAL CEPEDA, COAH                                                                                                                                  ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":525009,"descripcion":"GUERRERO, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":527006,"descripcion":"HIDALGO, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":528009,"descripcion":"HORMIGUERO, COAH                                                                                                                                      ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":529006,"descripcion":"JIMÉNEZ, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":531009,"descripcion":"JUÁREZ, COAH                                                                                                                                          ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":533009,"descripcion":"LAMADRID, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":535003,"descripcion":"MATAMOROS MUNICIPIO DE, COAH                                                                                                                          ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":535059,"descripcion":"LAS ESPERANZAS, COAH                                                                                                                                  ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":535159,"descripcion":"MATAMOROS LOCALIDAD DE, COAH                                                                                                                          ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":537009,"descripcion":"MONCLOVA MUNICIPIO DE, COAH                                                                                                                           ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":537208,"descripcion":"MONCLOVA LOCALIDAD DE, COAH                                                                                                                           ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":537405,"descripcion":"SAN JUAN BAUTISTA, COAH                                                                                                                               ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":539009,"descripcion":"MORELOS, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":541009,"descripcion":"MÚZQUIZ MUNICIPIO DE, COAH                                                                                                                            ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":541056,"descripcion":"MINAS DE BARRO TERÁN, COAH                                                                                                                            ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":541063,"descripcion":"MUZQUIZ LOCALIDAD DE, COAH                                                                                                                            ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":541089,"descripcion":"PALAU, COAH                                                                                                                                           ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":543009,"descripcion":"NADADORES, COAH                                                                                                                                       ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":545003,"descripcion":"NAVA, COAH                                                                                                                                            ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":547009,"descripcion":"OCAMPO, COAH                                                                                                                                          ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":549009,"descripcion":"PARRAS DE LA FUENTE, COAH                                                                                                                             ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":551006,"descripcion":"PIEDRAS NEGRAS MUNICIPIO DE, COAH                                                                                                                     ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":551259,"descripcion":"PIEDRAS NEGRAS LOCALIDAD DE, COAH                                                                                                                     ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":551354,"descripcion":"VILLA FUENTE, COAH                                                                                                                                    ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":553006,"descripcion":"PROGRESO, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":555009,"descripcion":"RAMOS ARIZPE, COAH                                                                                                                                    ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":557006,"descripcion":"SABINAS MUNICIPIO DE, COAH                                                                                                                            ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":557039,"descripcion":"AGUJITA, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":557207,"descripcion":"SABINAS LOCALIDAD DE, COAH                                                                                                                            ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":559006,"descripcion":"SACRAMENTO, COAH                                                                                                                                      ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":561009,"descripcion":"SALTILLO, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":563009,"descripcion":"SAN BUENAVENTURA, COAH                                                                                                                                ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":565003,"descripcion":"SAN JUAN DE SABINAS MUNICIPIO DE, COAH                                                                                                                ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":565104,"descripcion":"NUEVA ROSITA, COAH                                                                                                                                    ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":565209,"descripcion":"SAN JUAN DE SABINAS LOCALIDAD DE, COAH                                                                                                                ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":569009,"descripcion":"SAN PEDRO, COAH                                                                                                                                       ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":569303,"descripcion":"SAN PEDRO DE LAS COLONIAS, COAH                                                                                                                       ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":570309,"descripcion":"SANTA TERESA, COAH                                                                                                                                    ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":571009,"descripcion":"SIERRA MOJADA MUNICIPIO DE, COAH                                                                                                                      ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":571206,"descripcion":"LAGUNA DEL REY, COAH                                                                                                                                  ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":571401,"descripcion":"SIERRA MOJADA LOCALIDAD DE, COAH                                                                                                                      ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":573009,"descripcion":"TORREÓN, COAH                                                                                                                                         ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":575003,"descripcion":"VIESCA, COAH                                                                                                                                          ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":577009,"descripcion":"VILLA UNIÓN, COAH                                                                                                                                     ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":579009,"descripcion":"ZARAGOZA, COAH                                                                                                                                        ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":599009,"descripcion":"COAHUILA (OTROS)                                                                                                                                      ","entidad_federativa":"COAHUILA                                                                                                                                              "},
+{"clave":603009,"descripcion":"ARMERÍA, COL                                                                                                                                          ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":605006,"descripcion":"COLIMA MUNICIPIO DE, COL                                                                                                                              ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":605054,"descripcion":"COLIMA LOCALIDAD DE, COL                                                                                                                              ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":605309,"descripcion":"TEPAMES, COL                                                                                                                                          ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":607006,"descripcion":"COMALA, COL                                                                                                                                           ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":609009,"descripcion":"COQUIMATLÁN, COL                                                                                                                                      ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":611009,"descripcion":"CUAUHTÉMOC MUNICIPIO DE, COL                                                                                                                          ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":611109,"descripcion":"CUAUHTÉMOC LOCALIDAD DE, COL                                                                                                                          ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":611303,"descripcion":"QUESERÍA, COL                                                                                                                                         ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":613003,"descripcion":"IXTLAHUACÁN, COL                                                                                                                                      ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":615009,"descripcion":"MANZANILLO MUNICIPIO DE, COL                                                                                                                          ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":615099,"descripcion":"CAMPOS, COL                                                                                                                                           ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":615205,"descripcion":"MANZANILLO LOCALIDAD DE, COL                                                                                                                          ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":615255,"descripcion":"SALAHUA, COL                                                                                                                                          ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":615309,"descripcion":"SANTIAGO, COL                                                                                                                                         ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":617009,"descripcion":"MINATITLÁN, COL                                                                                                                                       ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":619003,"descripcion":"TECOMÁN MUNICIPIO DE, COL                                                                                                                             ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":619039,"descripcion":"CERRO DE ORTEGA, COL                                                                                                                                  ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":619251,"descripcion":"TECOMÁN LOCALIDAD DE, COL                                                                                                                             ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":621009,"descripcion":"VILLA DE ALVAREZ MUNICIPIO DE, COL                                                                                                                    ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":621355,"descripcion":"LA PE A COLORADA, COL                                                                                                                                 ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":621639,"descripcion":"VILLA DE ÁLVAREZ LOCALIDAD DE, COL                                                                                                                    ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":699009,"descripcion":"COLIMA (OTROS)                                                                                                                                        ","entidad_federativa":"COLIMA                                                                                                                                                "},
+{"clave":701003,"descripcion":"ACACOYAGUA, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":702009,"descripcion":"ACALA, CHIS                                                                                                                                           ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":703009,"descripcion":"ACAPETAHUA, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":704003,"descripcion":"ALTAMIRANO, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":705009,"descripcion":"AMATÁN, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":706009,"descripcion":"AMATENANGO DE LA FRONTERA, CHIS                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":707003,"descripcion":"AMATENANGO DEL VALLE, CHIS                                                                                                                            ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":708009,"descripcion":"ANGEL ALBINO CORZO, CHIS                                                                                                                              ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":709009,"descripcion":"ARRIAGA, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":710006,"descripcion":"BEJUCAL DE OCAMPO, CHIS                                                                                                                               ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":711009,"descripcion":"BELLA VISTA, CHIS                                                                                                                                     ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":712006,"descripcion":"BERRIOZÁBAL, CHIS                                                                                                                                     ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":713006,"descripcion":"BOCHIL, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":714009,"descripcion":"BOSQUE, EL, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":715006,"descripcion":"CACAHOATAN, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":716006,"descripcion":"CATAZAJÁ, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":717009,"descripcion":"CINTALAPA, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":718006,"descripcion":"COAPILLA, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":719006,"descripcion":"COMITÁN DE DOMÍNGUEZ, CHIS                                                                                                                            ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":720009,"descripcion":"CONCORDIA MUNICIPIO DE, CHIS                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":720129,"descripcion":"CONCORDIA LOCALIDAD DE, CHIS                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":720178,"descripcion":"CUXTEPEQUES, CHIS                                                                                                                                     ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":720225,"descripcion":"EJIDO BENITO JUÁREZ, CHIS                                                                                                                             ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":721003,"descripcion":"COPAINALÁ, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":722009,"descripcion":"CHALCHIHUITÁN, CHIS                                                                                                                                   ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":723009,"descripcion":"CHAMULA, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":724003,"descripcion":"CHANAL, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":725009,"descripcion":"CHAPULTENANGO, CHIS                                                                                                                                   ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":726009,"descripcion":"CHENALHÓ, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":727003,"descripcion":"CHIAPA DE CORZO, CHIS                                                                                                                                 ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":728009,"descripcion":"CHIAPILLA, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":729009,"descripcion":"CHICOASÉN, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":730009,"descripcion":"CHICOMUSELO, CHIS                                                                                                                                     ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":731003,"descripcion":"CHILÓN, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":732009,"descripcion":"ESCUINTLA, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":733009,"descripcion":"FRANCISCO LEÓN, CHIS                                                                                                                                  ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":734003,"descripcion":"FRONTERA COMALAPA, CHIS                                                                                                                               ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":735009,"descripcion":"FRONTERA HIDALGO, CHIS                                                                                                                                ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":736009,"descripcion":"GRANDEZA, LA, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":737003,"descripcion":"HUEHUETAN, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":738009,"descripcion":"HUIXTÁN, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":739009,"descripcion":"HUITIUPÁN, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":740006,"descripcion":"HUIXTLA, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":741009,"descripcion":"INDEPENDENCIA, LA, CHIS                                                                                                                               ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":742006,"descripcion":"IXHUATAN, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":743006,"descripcion":"IXTACOMITÁN, CHIS                                                                                                                                     ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":744009,"descripcion":"IXTAPA, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":745006,"descripcion":"IXTAPANGAJOYA, CHIS                                                                                                                                   ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":746006,"descripcion":"JIQUIPILAS, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":747009,"descripcion":"JITOTOL, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":748006,"descripcion":"JUÁREZ, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":749006,"descripcion":"LARRÁINZAR, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":750009,"descripcion":"LIBERTAD, LA, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":751003,"descripcion":"MAPASTEPEC, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":752009,"descripcion":"MARGARITAS, LAS, CHIS                                                                                                                                 ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":753009,"descripcion":"MAZAPA DE MADERO, CHIS                                                                                                                                ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":754003,"descripcion":"MAZATÁN, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":755009,"descripcion":"METAPA, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":756009,"descripcion":"MITONTIC, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":757003,"descripcion":"MOTOZINTLA, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":758009,"descripcion":"NICOLÁS RUÍZ, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":759009,"descripcion":"OCOSINGO, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":760009,"descripcion":"OCOTEPEC, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":761003,"descripcion":"OCOZOCOAUTLA DE ESPINOSA, CHIS                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":762009,"descripcion":"OSTUACÁN, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":763009,"descripcion":"OSUMACINTA, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":764003,"descripcion":"OXCHUC, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":765009,"descripcion":"PALENQUE, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":766009,"descripcion":"PANTELHÓ, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":767003,"descripcion":"PANTEPEC, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":768009,"descripcion":"PICHUCALCO, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":769009,"descripcion":"PIJIJIAPÁN, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":770006,"descripcion":"PORVENIR, EL, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":771009,"descripcion":"VILLA COMALTITLÁN, CHIS                                                                                                                               ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":772006,"descripcion":"PUEBLO NUEVO SOLISTAHUACÁN, CHIS                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":773006,"descripcion":"RAYÓN, CHIS                                                                                                                                           ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":774009,"descripcion":"REFORMA MUNICIPIO DE, CHIS                                                                                                                            ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":774102,"descripcion":"CACTUS, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":774252,"descripcion":"REFORMA LOCALIDAD DE, CHIS                                                                                                                            ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":775006,"descripcion":"ROSAS, LAS, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":776006,"descripcion":"SABANILLA, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":777009,"descripcion":"SALTO DE AGUA, CHIS                                                                                                                                   ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":778006,"descripcion":"SAN CRISTÓBAL DE LAS CASAS, CHIS                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":779006,"descripcion":"SAN FERNANDO, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":780009,"descripcion":"SILTEPEC, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":781003,"descripcion":"SIMOJOVEL DE ALLENDE, CHIS                                                                                                                            ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":782009,"descripcion":"SITALÁ, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":783009,"descripcion":"SOCOLTENANGO, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":784003,"descripcion":"SOLOSUCHIAPA, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":785009,"descripcion":"SOYALÓ, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":786009,"descripcion":"SUCHIAPA, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":787003,"descripcion":"SUCHIATE, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":787107,"descripcion":"CIUDAD HIDALGO, CHIS                                                                                                                                  ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":788009,"descripcion":"SUNUAPA, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":789009,"descripcion":"TAPACHULA, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":789505,"descripcion":"PUERTO MADERO, CHIS                                                                                                                                   ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":790009,"descripcion":"TAPALAPA, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":791003,"descripcion":"TAPILULA, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":792009,"descripcion":"TECPATÁN, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":793009,"descripcion":"TENEJAPA, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":794003,"descripcion":"TEOPISCA, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":795009,"descripcion":"TERÁN, CHIS                                                                                                                                           ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":796009,"descripcion":"TILA, CHIS                                                                                                                                            ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":797003,"descripcion":"TONALÁ, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":798009,"descripcion":"TOTOLAPA, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":799009,"descripcion":"TRINITARIA, LA, CHIS                                                                                                                                  ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":801009,"descripcion":"TUMBALÁ, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":802003,"descripcion":"TUXTLA GUTIÉRREZ, CHIS                                                                                                                                ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":803009,"descripcion":"TUXTLA CHICO, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":804009,"descripcion":"TUZANTÁN, CHIS                                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":805003,"descripcion":"TZIMOL, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":806009,"descripcion":"UNIÓN JUÁREZ, CHIS                                                                                                                                    ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":807009,"descripcion":"VENUSTIANO CARRANZA, CHIS                                                                                                                             ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":808003,"descripcion":"JALTENANGO, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":808503,"descripcion":"VILLA CORZO, CHIS                                                                                                                                     ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":809009,"descripcion":"VILLAFLORES, CHIS                                                                                                                                     ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":809504,"descripcion":"VILLA DE ALCALÁ, CHIS                                                                                                                                 ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":810009,"descripcion":"YAJALÓN, CHIS                                                                                                                                         ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":811009,"descripcion":"SAN LUCAS, CHIS                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":812003,"descripcion":"ZINACANTÁN, CHIS                                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":813009,"descripcion":"SAN JUAN CANCUC, CHIS                                                                                                                                 ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":814009,"descripcion":"ALDAMA, CHIS                                                                                                                                          ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":815003,"descripcion":"BENEMÉRITO DE LAS AMÉRICAS, CHIS                                                                                                                      ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":816009,"descripcion":"MARAVILLA TENEJAPA, CHIS                                                                                                                              ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":817009,"descripcion":"MARQUÉS DE COMILLAS, CHIS                                                                                                                             ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":818003,"descripcion":"MONTE CRISTO DE GUERRERO, CHIS                                                                                                                        ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":819009,"descripcion":"SAN ANDRÉS DURAZNAL, CHIS                                                                                                                             ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":820006,"descripcion":"SANTIAGO EL PINAR, CHIS                                                                                                                               ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":899009,"descripcion":"CHIAPAS (OTROS)                                                                                                                                       ","entidad_federativa":"CHIAPAS                                                                                                                                               "},
+{"clave":901006,"descripcion":"AHUMADA, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":902006,"descripcion":"ALDAMA, CHIH                                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":903009,"descripcion":"ALLENDE, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":904006,"descripcion":"AQUILES SERDÁN, CHIH                                                                                                                                  ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":905006,"descripcion":"ASCENSIÓN MUNICIPIO DE, CHIH                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":905111,"descripcion":"ASCENCIÓN LOCALIDAD DE, CHIH                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":905463,"descripcion":"RODRIGO M QUEVEDO, CHIH                                                                                                                               ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":906009,"descripcion":"BOCOYNA MUNICIPIO DE, CHIH                                                                                                                            ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":906058,"descripcion":"BOCOYNA LOCALIDAD DE, CHIH                                                                                                                            ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":906138,"descripcion":"CREEL ,ESTACIÓN, CHIH                                                                                                                                 ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":906309,"descripcion":"JUANITO, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":907006,"descripcion":"BACHÍNIVA, CHIH                                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":908006,"descripcion":"BALLEZA, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":909009,"descripcion":"BATOPILAS, CHIH                                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":910003,"descripcion":"BUENAVENTURA MUNICIPIO DE, CHIH                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":910101,"descripcion":"BENITO JUÁREZ, CHIH                                                                                                                                   ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":910159,"descripcion":"BUENAVENTURA LOCALIDAD DE, CHIH                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":910257,"descripcion":"FLORES MAGÓN, CHIH                                                                                                                                    ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":911009,"descripcion":"CAMARGO MUNICIPIO DE, CHIH                                                                                                                            ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":911223,"descripcion":"CAMARGO LOCALIDAD DE, CHIH                                                                                                                            ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":911537,"descripcion":"LA PERLA, CHIH                                                                                                                                        ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":912009,"descripcion":"CARICHÍ, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":913003,"descripcion":"CASAS GRANDES, CHIH                                                                                                                                   ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":913509,"descripcion":"CENECO, CHIH                                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":914009,"descripcion":"CORONADO, CHIH                                                                                                                                        ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":915009,"descripcion":"COYAME DEL SOTOL, CHIH                                                                                                                                ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":916003,"descripcion":"CRUZ, LA, CHIH                                                                                                                                        ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":917009,"descripcion":"CUAUHTÉMOC MUNICIPIO DE, CHIH                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":917033,"descripcion":"ANAHUAC CIUDAD, CHIH                                                                                                                                  ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":917087,"descripcion":"COLONIA OBREGÓN, CHIH                                                                                                                                 ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":917153,"descripcion":"CUAUHTÉMOC LOCALIDAD DE, CHIH                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":918009,"descripcion":"CUSIHUIRIACHI, CHIH                                                                                                                                   ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":919003,"descripcion":"CHIHUAHUA MUNICIPIO DE, CHIH                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":919113,"descripcion":"AVALOS, CHIH                                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":919269,"descripcion":"CHIHUAHUA LOCALIDAD DE, CHIH                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":920003,"descripcion":"CHÍNIPAS, CHIH                                                                                                                                        ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":921009,"descripcion":"DELICIAS, CIUDAD, CHIH                                                                                                                                ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":922009,"descripcion":"DR. BELISARIO DOMÍNGUEZ, CHIH                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":923003,"descripcion":"GALEANA, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":924009,"descripcion":"SANTA ISABEL, CHIH                                                                                                                                    ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":925009,"descripcion":"GÓMEZ FARÍAS, CHIH                                                                                                                                    ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":926003,"descripcion":"GRAN MORELOS, CHIH                                                                                                                                    ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":927009,"descripcion":"GUACHOCHI, CHIH                                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":928009,"descripcion":"GUADALUPE, CHIH                                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":929003,"descripcion":"GUADALUPE Y CALVO, CHIH                                                                                                                               ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":930009,"descripcion":"GUAZAPARES, CHIH                                                                                                                                      ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":930309,"descripcion":"TEMORIS, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":931006,"descripcion":"GUERRERO MUNICIPIO DE, CHIH                                                                                                                           ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":931059,"descripcion":"GUERRERO LOCALIDAD DE, CHIH                                                                                                                           ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":931083,"descripcion":"LÓPEZ MATEOS EST, CHIH                                                                                                                                ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":932006,"descripcion":"HIDALGO DEL PARRAL, CHIH                                                                                                                              ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":933009,"descripcion":"HUEJOTITÁN, CHIH                                                                                                                                      ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":934006,"descripcion":"IGNACIO ZARAGOZA, CHIH                                                                                                                                ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":935006,"descripcion":"JANOS, CHIH                                                                                                                                           ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":936009,"descripcion":"JIMÉNEZ, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":937006,"descripcion":"JUÁREZ CIUDAD, CHIH                                                                                                                                   ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":938006,"descripcion":"JULIMES, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":939009,"descripcion":"LÓPEZ, CHIH                                                                                                                                           ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":940003,"descripcion":"MADERA CIUDAD MUNICIPIO DE, CHIH                                                                                                                      ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":940371,"descripcion":"MADERA CIUDAD LOCALIDAD DE, CHIH                                                                                                                      ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":940467,"descripcion":"NICOLÁS BRAVO, CHIH                                                                                                                                   ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":941009,"descripcion":"MAGUARICHI, CHIH                                                                                                                                      ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":942009,"descripcion":"MANUEL BENAVIDES, CHIH                                                                                                                                ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":943003,"descripcion":"MATACHÍ, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":944009,"descripcion":"MATAMOROS, CHIH                                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":945009,"descripcion":"MEOQUI MUNICIPIO DE, CHIH                                                                                                                             ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":945132,"descripcion":"LÁZARO CÁRDENAS, CHIH                                                                                                                                 ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":945238,"descripcion":"MEOQUI LOCALIDAD DE, CHIH                                                                                                                             ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":946003,"descripcion":"MORELOS, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":947009,"descripcion":"MORIS, CHIH                                                                                                                                           ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":948009,"descripcion":"NAMIQUIPA MUNICIPIO DE, CHIH                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":948205,"descripcion":"MOLINO EL, CHIH                                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":948309,"descripcion":"NAMIQUIPA LOCALIDAD DE, CHIH                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":948432,"descripcion":"OSCAR SOTO MAYNES, CHIH                                                                                                                               ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":949003,"descripcion":"NONOAVA, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":950003,"descripcion":"NUEVO CASAS GRANDES MUNICIPIO DE, CHIH                                                                                                                ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":950166,"descripcion":"DUBLAN, CHIH                                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":950373,"descripcion":"NUEVO CASAS GRANDES LOCALIDAD DE, CHIH                                                                                                                ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":951009,"descripcion":"OCAMPO, CHIH                                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":952009,"descripcion":"OJINAGA, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":953003,"descripcion":"PRAXEDIS G. GUERRERO, CHIH                                                                                                                            ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":954009,"descripcion":"RIVA PALACIO, CHIH                                                                                                                                    ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":955009,"descripcion":"ROSALES, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":956003,"descripcion":"ROSARIO, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":957009,"descripcion":"SAN FRANCISCO DE BORJA, CHIH                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":958009,"descripcion":"SAN FRANCISCO DE CONCHOS, CHIH                                                                                                                        ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":959003,"descripcion":"SAN FRANCISCO DEL ORO, CHIH                                                                                                                           ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":960009,"descripcion":"SANTA BÁRBARA, CHIH                                                                                                                                   ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":961006,"descripcion":"SATEVÓ, CHIH                                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":962006,"descripcion":"SAUCILLO, CHIH                                                                                                                                        ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":963009,"descripcion":"TEMÓSACHI, CHIH                                                                                                                                       ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":964006,"descripcion":"EL TULE, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":965006,"descripcion":"URIQUE, CHIH                                                                                                                                          ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":966009,"descripcion":"URUACHI, CHIH                                                                                                                                         ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":967006,"descripcion":"VALLE DE ZARAGOZA, CHIH                                                                                                                               ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":999009,"descripcion":"CHIHUAHUA (OTROS)                                                                                                                                     ","entidad_federativa":"CHIHUAHUA                                                                                                                                             "},
+{"clave":1001002,"descripcion":"DISTRITO FEDERAL, DF                                                                                                                                  ","entidad_federativa":"DISTRITO FEDERAL                                                                                                                                      "},
+{"clave":1103002,"descripcion":"CANATLÁN MUNICIPIO DE, DGO                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1103058,"descripcion":"CANATLÁN LOCALIDAD DE, DGO                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1103152,"descripcion":"NUEVO IDEAL, DGO                                                                                                                                      ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1105004,"descripcion":"CANELAS, DGO                                                                                                                                          ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1107009,"descripcion":"CONETO DE COMONFORT, DGO                                                                                                                              ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1109008,"descripcion":"CUENCAMÉ, DGO                                                                                                                                         ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1111007,"descripcion":"DURANGO, DGO                                                                                                                                          ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1113006,"descripcion":"GENERAL SIMÓN BOLÍVAR, DGO                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1115008,"descripcion":"GÓMEZ PALACIO, DGO                                                                                                                                    ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1116009,"descripcion":"BERMEJILLO, DGO                                                                                                                                       ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1117004,"descripcion":"GUADALUPE VICTORIA, DGO                                                                                                                               ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1119003,"descripcion":"GUANACEVÍ, DGO                                                                                                                                        ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1121008,"descripcion":"HIDALGO, DGO                                                                                                                                          ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1123007,"descripcion":"INDÉ, DGO                                                                                                                                             ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1125009,"descripcion":"LERDO, DGO                                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1127005,"descripcion":"MAPIMÍ MUNICIPIO DE, DGO                                                                                                                              ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1127079,"descripcion":"CEBALLOS, DGO                                                                                                                                         ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1127208,"descripcion":"MAPIMI LOCALIDAD DE, DGO                                                                                                                              ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1129004,"descripcion":"MEZQUITAL, DGO                                                                                                                                        ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1131006,"descripcion":"NAZAS, DGO                                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1133005,"descripcion":"NOMBRE DE DIOS, DGO                                                                                                                                   ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1135007,"descripcion":"OCAMPO MUNICIPIO DE, DGO                                                                                                                              ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1135109,"descripcion":"LAS NIEVES, DGO                                                                                                                                       ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1135206,"descripcion":"OCAMPO LOALIDAD DE, DGO                                                                                                                               ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1137003,"descripcion":"ORO EL, DGO                                                                                                                                           ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1137207,"descripcion":"SAN FELIPE, DGO                                                                                                                                       ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1137306,"descripcion":"SANTA MARÍA DEL ORO, DGO                                                                                                                              ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1139002,"descripcion":"OTÁEZ, DGO                                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1141001,"descripcion":"PÁNUCO DE CORONADO, DGO                                                                                                                               ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1141154,"descripcion":"FRANCISCO I MADERO, DGO                                                                                                                               ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1141301,"descripcion":"PANUCO DE CORONADO LOCALIDAD DE, DGO                                                                                                                  ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1143009,"descripcion":"PEÑÓN BLANCO, DGO                                                                                                                                     ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1145002,"descripcion":"POANAS, DGO                                                                                                                                           ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1145352,"descripcion":"VILLA UNIÓN, DGO                                                                                                                                      ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1147007,"descripcion":"PUEBLO NUEVO, DGO                                                                                                                                     ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1147103,"descripcion":"EL SALTO, DGO                                                                                                                                         ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1149006,"descripcion":"RODEO, DGO                                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1151002,"descripcion":"SAN BERNARDO, DGO                                                                                                                                     ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1153001,"descripcion":"SAN DIMAS, DGO                                                                                                                                        ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1153301,"descripcion":"TAYOLTITA, DGO                                                                                                                                        ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1155003,"descripcion":"SAN JUAN DE GUADALUPE, DGO                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1157008,"descripcion":"SAN JUAN DEL RÍO, DGO                                                                                                                                 ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1159007,"descripcion":"SAN LUIS DEL CORDERO, DGO                                                                                                                             ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1161009,"descripcion":"SAN PEDRO DEL GALLO, DGO                                                                                                                              ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1163008,"descripcion":"SANTA CLARA, DGO                                                                                                                                      ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1165001,"descripcion":"SANTIAGO PAPASQUIARO, DGO                                                                                                                             ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1167006,"descripcion":"SÚCHIL, DGO                                                                                                                                           ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1169005,"descripcion":"TAMAZULA, DGO                                                                                                                                         ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1171004,"descripcion":"TEPEHUANES, DGO                                                                                                                                       ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1173003,"descripcion":"TLAHUALILO DE ZARAGOZA, DGO                                                                                                                           ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1174007,"descripcion":"EL LUCERO, DGO                                                                                                                                        ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1175005,"descripcion":"TOPIA, DGO                                                                                                                                            ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1177001,"descripcion":"VICENTE GUERRERO, DGO                                                                                                                                 ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1199008,"descripcion":"DURANGO (OTROS)                                                                                                                                       ","entidad_federativa":"DURANGO                                                                                                                                               "},
+{"clave":1202008,"descripcion":"ABASOLO, GTO                                                                                                                                          ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1204007,"descripcion":"ACÁMBARO, GTO                                                                                                                                         ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1205002,"descripcion":"ALDAMA, GTO                                                                                                                                           ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1206009,"descripcion":"ALLENDE SAN MIGUEL DE, GTO                                                                                                                            ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1208005,"descripcion":"APASEO EL ALTO, GTO                                                                                                                                   ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1210001,"descripcion":"APASEO EL GRANDE, GTO                                                                                                                                 ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1212006,"descripcion":"ATARJEA, GTO                                                                                                                                          ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1214005,"descripcion":"CELAYA MUNICIPIO DE, GTO                                                                                                                              ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1214055,"descripcion":"CELAYA LOCALIDAD DE, GTO                                                                                                                              ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1214115,"descripcion":"RINCÓN DE TAMAYO, GTO                                                                                                                                 ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1214155,"descripcion":"SAN JUAN DE LA VEGA, GTO                                                                                                                              ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1216007,"descripcion":"CIUDAD MANUEL DOBLADO, GTO                                                                                                                            ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1218003,"descripcion":"COMONFORT, GTO                                                                                                                                        ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1220005,"descripcion":"CORONEO, GTO                                                                                                                                          ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1222001,"descripcion":"CORTAZAR, GTO                                                                                                                                         ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1224009,"descripcion":"CUERÁMARO, GTO                                                                                                                                        ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1226002,"descripcion":"DOCTOR MORA, GTO                                                                                                                                      ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1228007,"descripcion":"DOLORES HIDALGO, GTO                                                                                                                                  ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1230006,"descripcion":"GUANAJUATO, GTO                                                                                                                                       ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1232002,"descripcion":"HUANÍMARO, GTO                                                                                                                                        ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1234001,"descripcion":"IRAPUATO, GTO                                                                                                                                         ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1236003,"descripcion":"JARAL DEL PROGRESO, GTO                                                                                                                               ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1238008,"descripcion":"JERÉCUARO, GTO                                                                                                                                        ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1240004,"descripcion":"LEÓN, GTO                                                                                                                                             ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1242009,"descripcion":"MOROLEÓN, GTO                                                                                                                                         ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1244008,"descripcion":"OCAMPO, GTO                                                                                                                                           ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1246001,"descripcion":"PÉNJAMO MUNICIPIO DE, GTO                                                                                                                             ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1246109,"descripcion":"PÉNJAMO LOCALIDAD DE, GTO                                                                                                                             ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1246154,"descripcion":"SANTA ANA PACUECO, GTO                                                                                                                                ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1248006,"descripcion":"PUEBLO NUEVO, GTO                                                                                                                                     ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1250008,"descripcion":"PURÍSIMA DEL RINCÓN, GTO                                                                                                                              ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1250259,"descripcion":"PURÍSIMA DE BUSTOS, GTO                                                                                                                               ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1252004,"descripcion":"ROMITA, GTO                                                                                                                                           ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1254003,"descripcion":"SALAMANCA, GTO                                                                                                                                        ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1256005,"descripcion":"SALVATIERRA, GTO                                                                                                                                      ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1258001,"descripcion":"SAN DIEGO DE LA UNIÓN, GTO                                                                                                                            ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1262005,"descripcion":"SAN FELIPE, GTO                                                                                                                                       ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1264004,"descripcion":"SAN FRANCISCO DEL RINCÓN, GTO                                                                                                                         ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1268002,"descripcion":"SAN JOSÉ ITURBIDE, GTO                                                                                                                                ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1270007,"descripcion":"SAN LUIS DE LA PAZ, GTO                                                                                                                               ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1272003,"descripcion":"SANTA CATARINA, GTO                                                                                                                                   ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1274002,"descripcion":"SANTA CRUZ DE JUVENTINO ROSAS, GTO                                                                                                                    ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1276004,"descripcion":"SANTIAGO MARAVATÍO, GTO                                                                                                                               ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1278009,"descripcion":"SILAO, GTO                                                                                                                                            ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1280002,"descripcion":"TARANDACUAO, GTO                                                                                                                                      ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1282007,"descripcion":"TARIMORO, GTO                                                                                                                                         ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1284006,"descripcion":"TIERRA BLANCA, GTO                                                                                                                                    ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1286008,"descripcion":"URIANGATO, GTO                                                                                                                                        ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1288004,"descripcion":"VALLE DE SANTIAGO, GTO                                                                                                                                ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1288503,"descripcion":"VICENTE GUERRERO, GTO                                                                                                                                 ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1290003,"descripcion":"VICTORIA, GTO                                                                                                                                         ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1292008,"descripcion":"VILLAGRAN, GTO                                                                                                                                        ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1294007,"descripcion":"XICHÚ, GTO                                                                                                                                            ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1296009,"descripcion":"YURIRIA MUNICIPIO DE, GTO                                                                                                                             ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1296169,"descripcion":"CERANO, GTO                                                                                                                                           ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1296771,"descripcion":"YURIRIA LOCALIDAD DE, GTO                                                                                                                             ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1299003,"descripcion":"GUANAJUATO (OTROS)                                                                                                                                    ","entidad_federativa":"GUANAJUATO                                                                                                                                            "},
+{"clave":1301005,"descripcion":"ACAPULCO DE JUÁREZ MUNICIPIO DE, GRO                                                                                                                  ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1301115,"descripcion":"ACAPULCO LOCALIDAD DE, GRO                                                                                                                            ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1301439,"descripcion":"LA SABANA, GRO                                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1302006,"descripcion":"AHUACUOTZINGO, GRO                                                                                                                                    ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1303001,"descripcion":"AJUCHITLÁN DEL PROGRESO, GRO                                                                                                                          ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1304008,"descripcion":"ALCOZAUCA DE GUERRERO, GRO                                                                                                                            ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1305009,"descripcion":"ALPOYECA, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1306004,"descripcion":"APAXTLA, GRO                                                                                                                                          ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1307002,"descripcion":"ARCELIA, GRO                                                                                                                                          ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1308003,"descripcion":"ATENANGO DEL RÍO, GRO                                                                                                                                 ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1309007,"descripcion":"ATLAMAJALCINGO DEL MONTE, GRO                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1310008,"descripcion":"ATLIXTAC, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1311006,"descripcion":"ATOYAC DE ÁLVAREZ, GRO                                                                                                                                ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1312007,"descripcion":"AYUTLA DE LOS LIBRES, GRO                                                                                                                             ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1313002,"descripcion":"AZOYÚ MUNICIPIO DE, GRO                                                                                                                               ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1313049,"descripcion":"AZOYÚ LOCALIDAD DE, GRO                                                                                                                               ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1313379,"descripcion":"MARQUELIA, GRO                                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1314009,"descripcion":"BENITO JUÁREZ, GRO                                                                                                                                    ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1314303,"descripcion":"SAN JERÓNIMO DE JUÁREZ, GRO                                                                                                                           ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1315001,"descripcion":"BUENAVISTA DE CUÉLLAR, GRO                                                                                                                            ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1316005,"descripcion":"COAHUAYUTLA DE J MA IZAZAGA, GRO                                                                                                                      ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1317003,"descripcion":"COCULA, GRO                                                                                                                                           ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1318004,"descripcion":"COPALA, GRO                                                                                                                                           ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1319008,"descripcion":"COPALILLO, GRO                                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1320006,"descripcion":"COPANATOYAC, GRO                                                                                                                                      ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1321004,"descripcion":"COYUCA DE BENÍTEZ, GRO                                                                                                                                ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1322005,"descripcion":"COYUCA DE CATALÁN, GRO                                                                                                                                ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1323009,"descripcion":"CUAJINICUILAPA, GRO                                                                                                                                   ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1324007,"descripcion":"CUALÁC, GRO                                                                                                                                           ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1325008,"descripcion":"CUAUTEPEC, GRO                                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1326003,"descripcion":"CUETZALA DEL PROGRESO, GRO                                                                                                                            ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1327001,"descripcion":"CUTZAMALA DE PINZÓN, GRO                                                                                                                              ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1328002,"descripcion":"CHILAPA DE ALVAREZ, GRO                                                                                                                               ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1329006,"descripcion":"CHILPANCINGO DE LOS BRAVO, GRO                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1330001,"descripcion":"FLORENCIO VILLARREAL, GRO                                                                                                                             ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1330056,"descripcion":"CRUZ GRANDE, GRO                                                                                                                                      ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1331008,"descripcion":"GENERAL CANUTO A NERI, GRO                                                                                                                            ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1331052,"descripcion":"ACAPETLAHUAYA, GRO                                                                                                                                    ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1332009,"descripcion":"GENERAL HELIODORO CASTILLO, GRO                                                                                                                       ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1332303,"descripcion":"TLACOTEPEC, GRO                                                                                                                                       ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1333004,"descripcion":"HUAMUXTITLÁN, GRO                                                                                                                                     ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1334002,"descripcion":"HUITZUCO DE LOS FIGUEROA, GRO                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1335003,"descripcion":"IGUALA DE LA INDEPENDENCIA, GRO                                                                                                                       ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1336007,"descripcion":"IGUALAPA, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1337005,"descripcion":"IXCATEOPAN DE CUAUHTÉMOC, GRO                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1339001,"descripcion":"JOSÉ AZUETA, GRO                                                                                                                                      ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1339154,"descripcion":"IXTAPA, GRO                                                                                                                                           ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1339256,"descripcion":"ZIHUATANEJO, GRO                                                                                                                                      ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1340002,"descripcion":"JUAN R ESCUDERO, GRO                                                                                                                                  ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1340308,"descripcion":"TIERRA COLORADA, GRO                                                                                                                                  ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1341009,"descripcion":"LEONARDO BRAVO, GRO                                                                                                                                   ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1341106,"descripcion":"CHICHIHUALCO, GRO                                                                                                                                     ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1342001,"descripcion":"MALINALTEPEC, GRO                                                                                                                                     ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1343005,"descripcion":"MÁRTIR DE CUILAPÁN, GRO                                                                                                                               ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1343055,"descripcion":"APÁNGO, GRO                                                                                                                                           ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1344003,"descripcion":"METLATÓNOC, GRO                                                                                                                                       ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1345004,"descripcion":"MOCHITLÁN, GRO                                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1346008,"descripcion":"OLINALÁ, GRO                                                                                                                                          ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1347006,"descripcion":"OMETEPEC, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1348007,"descripcion":"PEDRO ASCENCIO ALQUISIRAS, GRO                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1348209,"descripcion":"HISCAPUZALCO, GRO                                                                                                                                     ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1349002,"descripcion":"PETATLÁN, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1350009,"descripcion":"PILCAYA, GRO                                                                                                                                          ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1351007,"descripcion":"PUNGARABATO, GRO                                                                                                                                      ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1351053,"descripcion":"ALTAMIRANO, GRO                                                                                                                                       ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1352008,"descripcion":"QUECHULTENANGO, GRO                                                                                                                                   ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1353003,"descripcion":"SAN LUIS ACATLÁN, GRO                                                                                                                                 ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1354001,"descripcion":"SAN MARCOS, GRO                                                                                                                                       ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1355002,"descripcion":"SAN MIGUEL TOTOLAPÁN, GRO                                                                                                                             ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1356006,"descripcion":"TAXCO DE ALARACÓN, GRO                                                                                                                                ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1357004,"descripcion":"TECOANAPA, GRO                                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1358005,"descripcion":"TÉCPAN DE GALEANA MUNICIPIO DE, GRO                                                                                                                   ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1358502,"descripcion":"TECPAN LOCALIDAD DE, GRO                                                                                                                              ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1358758,"descripcion":"SAN LUIS DE LA LOMA, GRO                                                                                                                              ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1359009,"descripcion":"TELOLOAPÁN, GRO                                                                                                                                       ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1360004,"descripcion":"TEPECOACUILCO DE TRUJANO, GRO                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1361002,"descripcion":"TETIPAC, GRO                                                                                                                                          ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1362003,"descripcion":"TIXTLA DE GUERRERO, GRO                                                                                                                               ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1363007,"descripcion":"TLACOACHISTLAHUACA, GRO                                                                                                                               ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1364005,"descripcion":"TLACOAPA, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1365006,"descripcion":"TLALCHAPA, GRO                                                                                                                                        ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1366001,"descripcion":"TLALIXTAQUILLA DE MALDONADO, GRO                                                                                                                      ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1367008,"descripcion":"TLAPA DE COMONFORT, GRO                                                                                                                               ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1368009,"descripcion":"TLAPEHUALA, GRO                                                                                                                                       ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1369004,"descripcion":"UNIÓN LA, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1370005,"descripcion":"XALPATLÁHUAC, GRO                                                                                                                                     ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1371003,"descripcion":"XOCHIHUEHUETLÁN, GRO                                                                                                                                  ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1372004,"descripcion":"XOCHISTLAHUACA, GRO                                                                                                                                   ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1373008,"descripcion":"ZAPOTITLÁN TABLAS, GRO                                                                                                                                ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1374006,"descripcion":"ZIRÁNDARO MUNICIPIO DE, GRO                                                                                                                           ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1374057,"descripcion":"GUAYAMEO, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1374253,"descripcion":"ZIRANDARO LOCALIDAD, GRO                                                                                                                              ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1375007,"descripcion":"ZITLALA, GRO                                                                                                                                          ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1376002,"descripcion":"ZUMPANGO DEL RÍO, GRO                                                                                                                                 ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1377009,"descripcion":"ACATEPEC, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1378001,"descripcion":"COCHOAPA EL GRANDE, GRO                                                                                                                               ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1379005,"descripcion":"JOSÉ JOAQUIN DE HERRERA, GRO                                                                                                                          ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1380003,"descripcion":"JUCHITÁN, GRO                                                                                                                                         ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1399007,"descripcion":"GUERRERO (OTROS)                                                                                                                                      ","entidad_federativa":"GUERRERO                                                                                                                                              "},
+{"clave":1401006,"descripcion":"ACATLÁN, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1402004,"descripcion":"ACAXOCHITLÁN, HGO                                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1403005,"descripcion":"ACTOPAN, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1404009,"descripcion":"AGUA BLANCA DE ITURBIDE, HGO                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1405007,"descripcion":"AJACUBA, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1406008,"descripcion":"ALFAJAYUCAN, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1407003,"descripcion":"ALMOLOYA, HGO                                                                                                                                         ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1408001,"descripcion":"APÁN, HGO                                                                                                                                             ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1409002,"descripcion":"ARENAL EL, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1410006,"descripcion":"ATITALAQUIA, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1411001,"descripcion":"ATLAPEXCO, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1412008,"descripcion":"ATOTONILCO EL GRANDE, HGO                                                                                                                             ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1413009,"descripcion":"ATOTONILCO DE TULA, HGO                                                                                                                               ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1414004,"descripcion":"CALNALI, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1415002,"descripcion":"CARDONAL, HGO                                                                                                                                         ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1416003,"descripcion":"CUAUTEPEC DE HINOJOSA, HGO                                                                                                                            ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1417007,"descripcion":"CHAPÁNTONGO, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1418005,"descripcion":"CHAPULHUACÁN, HGO                                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1419006,"descripcion":"CHILCUAUTLA, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1420007,"descripcion":"ELOXOCHITLÁN, HGO                                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1421002,"descripcion":"EMILIANO ZAPATA, HGO                                                                                                                                  ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1422009,"descripcion":"EPAZOYUCAN, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1423001,"descripcion":"FRANCISCO I. MADERO, HGO                                                                                                                              ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1423301,"descripcion":"TEPATEPEC, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1424005,"descripcion":"HUASCA DE OCAMPO, HGO                                                                                                                                 ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1425003,"descripcion":"HUAUTLA, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1426004,"descripcion":"HUAZALINGO, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1427008,"descripcion":"HUEHUETLA, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1428006,"descripcion":"HUEJUTLA DE REYES, HGO                                                                                                                                ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1429007,"descripcion":"HUICHAPÁN, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1430005,"descripcion":"IXMIQUILPAN, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1431009,"descripcion":"JACALA, HGO                                                                                                                                           ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1432007,"descripcion":"JALTOCÁN, HGO                                                                                                                                         ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1433008,"descripcion":"JUÁREZ HIDALGO, HGO                                                                                                                                   ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1434003,"descripcion":"LOLOTLA, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1435001,"descripcion":"METEPEC, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1436002,"descripcion":"METZQUITITLÁN, HGO                                                                                                                                    ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1437006,"descripcion":"METZTITLÁN, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1438004,"descripcion":"MINERAL DEL CHICO, HGO                                                                                                                                ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1439005,"descripcion":"MINERAL DEL MONTE, HGO                                                                                                                                ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1440009,"descripcion":"MISION LA, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1440400,"descripcion":"BACA                                                                                                                                                  ","entidad_federativa":"                                                                                                                                                      "},
+{"clave":1441004,"descripcion":"MIXQUIAHUALA, HGO                                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1442002,"descripcion":"MOLANGO, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1443003,"descripcion":"NICOLÁS FLORES, HGO                                                                                                                                   ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1444007,"descripcion":"NOPALA, HGO                                                                                                                                           ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1445005,"descripcion":"OMITLÁN DE JUÁREZ, HGO                                                                                                                                ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1446006,"descripcion":"ORIZATLÁN, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1447001,"descripcion":"PACULA, HGO                                                                                                                                           ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1448008,"descripcion":"PACHUCA DE SOTO, HGO                                                                                                                                  ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1449009,"descripcion":"PISAFLORES, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1450001,"descripcion":"PROGRESO, HGO                                                                                                                                         ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1451005,"descripcion":"MINERAL DE LA REFORMA, HGO                                                                                                                            ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1451208,"descripcion":"PACHUQUILLA, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1452003,"descripcion":"SAN AGUSTÍN TLAXIACA, HGO                                                                                                                             ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1453004,"descripcion":"SAN BARTOLO TUTOTEPEC, HGO                                                                                                                            ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1454008,"descripcion":"SAN SALVADOR, HGO                                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1455006,"descripcion":"SANTIAGO DE ANAYA, HGO                                                                                                                                ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1456007,"descripcion":"SANTIAGO TULANTEPEC, HGO                                                                                                                              ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1457002,"descripcion":"SINGUILUCAN, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1458009,"descripcion":"TASQUILLO, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1459001,"descripcion":"TECOZAUTLA, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1460008,"descripcion":"TENANGO DE DORIA, HGO                                                                                                                                 ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1461003,"descripcion":"TEPEAPULCO MUNICIPIO DE, HGO                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1461103,"descripcion":"CIUDAD SAHAGÚN, HGO                                                                                                                                   ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1461259,"descripcion":"TEPEAPULCO LOCALIDAD DE, HGO                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1462001,"descripcion":"TEPEHUACÁN DE GUERRERO, HGO                                                                                                                           ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1463002,"descripcion":"TEPEJI DEL RÍO, HGO                                                                                                                                   ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1464006,"descripcion":"TEPETITLÁN, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1465004,"descripcion":"TETEPANGO, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1466005,"descripcion":"TEZONTEPEC, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1467009,"descripcion":"TEZONTEPEC DE ALDAMA, HGO                                                                                                                             ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1468007,"descripcion":"TIANGUISTENGO, HGO                                                                                                                                    ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1469008,"descripcion":"TIZAYUCA, HGO                                                                                                                                         ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1470003,"descripcion":"TLAHUELILPAN, HGO                                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1471007,"descripcion":"TLAHUILTEPA, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1472005,"descripcion":"TLANALAPA, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1473006,"descripcion":"TLANCHINOL, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1474001,"descripcion":"TLAXCOAPÁN, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1475008,"descripcion":"TOLCAYUCA, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1476009,"descripcion":"TULA DE ALLENDE MUNICIPIO DE, HGO                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1476109,"descripcion":"COOPERATIVA CRUZ AZUL, HGO                                                                                                                            ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1476256,"descripcion":"TULA DE ALLENDE LOCALIDAD DE, HGO                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1477004,"descripcion":"TULANCINGO, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1478002,"descripcion":"XOCHIATIPAN, HGO                                                                                                                                      ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1479003,"descripcion":"XOCHICOATLÁN, HGO                                                                                                                                     ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1480004,"descripcion":"YAHUALICA, HGO                                                                                                                                        ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1481008,"descripcion":"ZACULTIPÁN, HGO                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1482006,"descripcion":"ZAPOTLÁN DE JUÁREZ, HGO                                                                                                                               ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1483007,"descripcion":"ZEMPOALA, HGO                                                                                                                                         ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1484002,"descripcion":"ZIMAPÁN, HGO                                                                                                                                          ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1499002,"descripcion":"HIDALGO (OTROS)                                                                                                                                       ","entidad_federativa":"HIDALGO                                                                                                                                               "},
+{"clave":1501007,"descripcion":"ACATIC, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1502002,"descripcion":"ACATLÁN DE JUÁREZ, JAL                                                                                                                                ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1503009,"descripcion":"AHUALULCO DEL MERCADO, JAL                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1504001,"descripcion":"AMACUECA, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1505005,"descripcion":"AMATITÁN, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1506003,"descripcion":"AMECA, JAL                                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1507004,"descripcion":"SAN JUANITO DE ESCOBEDO, JAL                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1508008,"descripcion":"ARANDAS, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1508692,"descripcion":"SAN IGNACIO CERRO GORDO, JAL                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1509006,"descripcion":"EL ARENAL, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1510004,"descripcion":"ATEMAJAC DE BRIZUELA, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1511005,"descripcion":"ATENGO, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1512009,"descripcion":"ATENGUILLO, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1513007,"descripcion":"ATOTONILCO EL ALTO, JAL                                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1514008,"descripcion":"ATOYAC, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1515003,"descripcion":"AUTLÁN DE NAVARRO, JAL                                                                                                                                ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1516001,"descripcion":"AYOTLÁN, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1517002,"descripcion":"AYUTLA, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1518006,"descripcion":"BARCA LA, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1519004,"descripcion":"BOLA OS, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1520008,"descripcion":"CABO CORRIENTES, JAL                                                                                                                                  ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1520109,"descripcion":"EL TUITO, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1521009,"descripcion":"CASIMIRO CASTILLO, JAL                                                                                                                                ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1522004,"descripcion":"CIHUATLÁN MUNICIPIO DE, JAL                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1522053,"descripcion":"BARRA DE NAVIDAD, JAL                                                                                                                                 ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1522103,"descripcion":"CIHUATLÁN LOCALIDAD DE, JAL                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1522406,"descripcion":"SAN PATRICIO MELAQUE, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1523002,"descripcion":"CIUDAD GUZMÁN, JAL                                                                                                                                    ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1524003,"descripcion":"COCULA, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1525007,"descripcion":"COLOTLÁN, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1526005,"descripcion":"CONCEPCIÓN DE BUENOS AIRES, JAL                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1527006,"descripcion":"CUAUTITLÁN DE GARCÍA BARRAGÁN, JAL                                                                                                                    ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1528001,"descripcion":"CUAUTLA, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1529008,"descripcion":"CUQUÍO, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1530009,"descripcion":"CHAPALA MUNICIPIO DE, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1530054,"descripcion":"AJIJIC, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1530156,"descripcion":"CHAPALA LOCALIDAD DE, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1531001,"descripcion":"CHIMALTITÁN, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1532005,"descripcion":"CHIQUILISTLÁN, JAL                                                                                                                                    ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1533003,"descripcion":"DEGOLLADO, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1534004,"descripcion":"EJUTLA, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1535008,"descripcion":"ENCARNACIÓN DE DÍAZ, JAL                                                                                                                              ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1536006,"descripcion":"ETZATLÁN, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1537007,"descripcion":"GRULLO EL, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1538002,"descripcion":"GUACHINANGO, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1539009,"descripcion":"GUADALAJARA, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1540007,"descripcion":"HOSTOTIPAQUILLO, JAL                                                                                                                                  ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1541008,"descripcion":"HUEJÚCAR, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1543001,"descripcion":"HUEJUQUILLA EL ALTO, JAL                                                                                                                              ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1544002,"descripcion":"HUERTA LA MUNICIPIO DE, JAL                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1544248,"descripcion":"CHAMELA, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1544379,"descripcion":"HUERTA LA LOCALIDAD DE, JAL                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1545006,"descripcion":"IXTLAHUACÁN DE LOS MEMBRILLOS MUNICIPIO DE, JAL                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1545051,"descripcion":"ATEQUIZA, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1545204,"descripcion":"IXTLAHUACÁN DE LOS MEMBRILLOS LOCALIDAD DE, JAL                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1546004,"descripcion":"IXTLAHUACÁN DEL RÍO, JAL                                                                                                                              ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1547005,"descripcion":"JALOSTOTITLÁN, JAL                                                                                                                                    ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1548009,"descripcion":"JAMAY, JAL                                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1549007,"descripcion":"JESÚS MARÍA, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1550002,"descripcion":"JILOTLÁN DE LOS DOLORES, JAL                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1551003,"descripcion":"JOCOTEPEC, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1551501,"descripcion":"JOCOTITLÁN, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1552007,"descripcion":"JUANACATLÁN, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1553005,"descripcion":"JUCHITLÁN, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1554006,"descripcion":"LAGOS DE MORENO, JAL                                                                                                                                  ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1555001,"descripcion":"LIMÓN EL, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1556008,"descripcion":"MAGDALENA, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1557009,"descripcion":"SANTA MARIA DEL ORO, JAL                                                                                                                              ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1558004,"descripcion":"MANZANILLA DE LA PAZ, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1559002,"descripcion":"MASCOTA, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1560003,"descripcion":"MAZAMITLA, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1561004,"descripcion":"MEXTICACÁN, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1563006,"descripcion":"MEZQUITIC, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1564007,"descripcion":"MIXTLÁN, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1565002,"descripcion":"OCOTLÁN, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1566009,"descripcion":"OJUELOS DE JALISCO, JAL                                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1567001,"descripcion":"PIHUAMO, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1568005,"descripcion":"PONCITLÁN, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1569003,"descripcion":"PUERTO VALLARTA MUNICIPIO DE, JAL                                                                                                                     ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1569651,"descripcion":"PITILLAL, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1569717,"descripcion":"PUERTO VALLARTA LOCALIDAD DE, JAL                                                                                                                     ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1570001,"descripcion":"VILLA PURIFICACIÓN, JAL                                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1571002,"descripcion":"QUITUPAN, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1572006,"descripcion":"SALTO EL, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1573004,"descripcion":"SAN CRISTÓBAL DE LA BARRANCA, JAL                                                                                                                     ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1574005,"descripcion":"SAN DIEGO DE ALEJANDRÍA, JAL                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1575009,"descripcion":"SAN JUAN DE LOS LAGOS, JAL                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1576007,"descripcion":"SAN JULIÁN, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1577008,"descripcion":"SAN MARCOS, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1578003,"descripcion":"SAN MARTÍN DE BOLAÑOS, JAL                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1579001,"descripcion":"SAN MARTÍN HIDALGO, JAL                                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1580005,"descripcion":"SAN MIGUEL EL ALTO, JAL                                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1581006,"descripcion":"SAN SEBASTIÁN DEL SUR, JAL                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1581207,"descripcion":"GÓMEZ FARIAS, JAL                                                                                                                                     ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1582001,"descripcion":"SAN SEBASTIÁN DEL OESTE, JAL                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1583008,"descripcion":"SANTA MARÍA DE LOS ÁNGELES, JAL                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1584009,"descripcion":"SAYULA, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1585004,"descripcion":"TALA, JAL                                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1586002,"descripcion":"TALPA DE ALLENDE, JAL                                                                                                                                 ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1587003,"descripcion":"TAMAZULA DE GORDIANO, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1588007,"descripcion":"TAPALPA, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1589005,"descripcion":"TECALITLÁN, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1590006,"descripcion":"TECOLOTLÁN, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1591007,"descripcion":"TECHALUTA DE MONTENEGRO, JAL                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1592002,"descripcion":"TENAMAXTLÁN, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1593009,"descripcion":"TEOCALTICHE, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1594001,"descripcion":"TEOCUITATLÁN DE CORONA, JAL                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1595005,"descripcion":"TEPATITLÁN DE MORELOS MUNICIPIO DE, JAL                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1595109,"descripcion":"CAPILLA DE GUADALUPE, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1595215,"descripcion":"PEGUEROS, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1595259,"descripcion":"TEPATITLÁN DE MORELOS LOCALIDAD DE, JAL                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1596003,"descripcion":"TEQUILA, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1597004,"descripcion":"TEUCHITLÁN, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1598008,"descripcion":"TIZAPÁN EL ALTO, JAL                                                                                                                                  ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1599006,"descripcion":"TLAJOMULCO DE ZÚÑIGA, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1601008,"descripcion":"TLAQUEPAQUE MUNICIPIO DE, JAL                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1601238,"descripcion":"LAS JUNTAS, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1601482,"descripcion":"SANTA ANITA, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1601532,"descripcion":"TLAQUEPAQUE LOCALIDAD DE, JAL                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1602009,"descripcion":"TOLIMÁN, JAL                                                                                                                                          ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1603004,"descripcion":"TOMATLÁN, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1604002,"descripcion":"TONALÁ, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1605003,"descripcion":"TONAYA, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1606007,"descripcion":"TONILA, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1607005,"descripcion":"TOTATICHE, JAL                                                                                                                                        ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1608006,"descripcion":"TOTOTLÁN, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1609001,"descripcion":"TUXCACUESCO, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1610002,"descripcion":"TUXCUECA MUNICIPIO DE, JAL                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1610202,"descripcion":"SAN LUIS SOYATLAN, JAL                                                                                                                                ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1610352,"descripcion":"TUXCUECA LOCALIDAD DE, JAL                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1611009,"descripcion":"TUXPAN, JAL                                                                                                                                           ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1612001,"descripcion":"UNIÓN DE SAN ANTONIO, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1613005,"descripcion":"UNIÓN DE TULA, JAL                                                                                                                                    ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1614003,"descripcion":"VALLE DE GUADALUPE, JAL                                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1615004,"descripcion":"VALLE DE JUÁREZ, JAL                                                                                                                                  ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1616008,"descripcion":"SAN GABRIEL, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1617006,"descripcion":"VILLA CORONA, JAL                                                                                                                                     ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1618007,"descripcion":"VILLA GUERRERO, JAL                                                                                                                                   ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1619002,"descripcion":"VILLA HIDALGO, JAL                                                                                                                                    ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1620009,"descripcion":"CAÑADAS DE OBREGÓN, JAL                                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1621007,"descripcion":"YAHUALICA DE GONZÁLEZ GALLO, JAL                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1622008,"descripcion":"ZACOALCO DE TORRES, JAL                                                                                                                               ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1623003,"descripcion":"ZAPOPAN MUNICIPIO DE, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1623733,"descripcion":"TESISTAN, JAL                                                                                                                                         ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1623867,"descripcion":"ZAPOPAN LOCALIDAD DE, JAL                                                                                                                             ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1624001,"descripcion":"ZAPOTILTIC, JAL                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1625002,"descripcion":"ZAPOTITLÁN DE VADILLO, JAL                                                                                                                            ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1626006,"descripcion":"ZAPOTLÁN DEL REY, JAL                                                                                                                                 ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1627004,"descripcion":"ZAPOTLANEJO, JAL                                                                                                                                      ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1699001,"descripcion":"JALISCO (OTROS)                                                                                                                                       ","entidad_federativa":"JALISCO                                                                                                                                               "},
+{"clave":1701009,"descripcion":"ACAMBAY, MEX                                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1702007,"descripcion":"ACOLMAN, MEX                                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1703008,"descripcion":"ACULCO, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1704003,"descripcion":"ALMOLOYA DE ALQUISIRAS, MEX                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1705001,"descripcion":"ALMOLOYA DE JUÁREZ, MEX                                                                                                                               ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1706002,"descripcion":"ALMOLOYA DEL RÍO, MEX                                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1707006,"descripcion":"AMANALCO, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1708004,"descripcion":"AMATEPEC, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1709005,"descripcion":"AMECAMECA, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1710009,"descripcion":"APAXCO, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1711004,"descripcion":"ATENCO SAN SALVADOR, MEX                                                                                                                              ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1712002,"descripcion":"ATIZAPÁN, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1713003,"descripcion":"ATIZAPÁN DE ZARAGOZA, MEX                                                                                                                             ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1713057,"descripcion":"CIUDAD LÓPEZ MATEOS, MEX                                                                                                                              ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1714007,"descripcion":"ATLACOMULCO, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1715005,"descripcion":"ATLAUTLA, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1716006,"descripcion":"AXAPUSCO, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1717001,"descripcion":"AYAPÁNGO DE GABRIEL RAMOS MILLÁN, MEX                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1718008,"descripcion":"CALIMAYA, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1719009,"descripcion":"CAPULHUAC, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1720001,"descripcion":"COACALCO, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1721005,"descripcion":"COATEPEC HARINAS, MEX                                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1722003,"descripcion":"COCOTITLÁN, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1723004,"descripcion":"COYOTEPEC, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1724008,"descripcion":"CUAUTITLÁN DE ROMERO RUBIO, MEX                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1725006,"descripcion":"CUAUTITLÁN IZCALLI, MEX                                                                                                                               ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1726007,"descripcion":"CHALCO, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1727002,"descripcion":"CHAPA DE MOTA, MEX                                                                                                                                    ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1728009,"descripcion":"CHAPULTEPEC, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1729001,"descripcion":"CHIAUTLA, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1730008,"descripcion":"CHICOLOAPÁN, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1731003,"descripcion":"CHICONCUAC, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1732001,"descripcion":"CHIMALHUACÁN, MEX                                                                                                                                     ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1733002,"descripcion":"DONATO GUERRA ASUNCIÓN, MEX                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1734006,"descripcion":"ECATEPEC MUNICIPIO DE, MEX                                                                                                                            ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1734051,"descripcion":"ECATEPEC LOCALIDAD DE, MEX                                                                                                                            ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1734103,"descripcion":"SANTA CLARA, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1734153,"descripcion":"XALOSTOC, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1735004,"descripcion":"ECATZINGO, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1736005,"descripcion":"HUEHUETOCA, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1737009,"descripcion":"HUEYPOXTLA, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1738007,"descripcion":"HUIXQUILUCAN, MEX                                                                                                                                     ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1739008,"descripcion":"ISIDRO FABELA, MEX                                                                                                                                    ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1739305,"descripcion":"SANTIAGO TLAZALA, MEX                                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1740003,"descripcion":"IXTAPALUCA MUNICIPIO DE, MEX                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1740057,"descripcion":"AYOTLA, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1740159,"descripcion":"IXTAPALUCA LOCALIDAD DE, MEX                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1740306,"descripcion":"RÍO FRÍO, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1741007,"descripcion":"IXTAPAN DE LA SAL, MEX                                                                                                                                ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1742005,"descripcion":"IXTAPÁN DEL ORO, MEX                                                                                                                                  ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1743006,"descripcion":"IXTLAHUACA, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1744001,"descripcion":"XALATLACO, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1745008,"descripcion":"JALTENCO, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1746009,"descripcion":"JILOTEPEC, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1747004,"descripcion":"JILOTZINGO SANTA ANA, MEX                                                                                                                             ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1748002,"descripcion":"JIQUIPILCO, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1749003,"descripcion":"JOCOTITLÁN, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1750004,"descripcion":"JOQUICINGO, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1751008,"descripcion":"JUCHITEPEC, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1752006,"descripcion":"LERMA, MEX                                                                                                                                            ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1753007,"descripcion":"MALINALCO, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1754002,"descripcion":"MELCHOR OCAMPO, MEX                                                                                                                                   ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1755009,"descripcion":"METEPEC, MEX                                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1756001,"descripcion":"MEXICALTZINGO, MEX                                                                                                                                    ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1757005,"descripcion":"MORELOS, MEX                                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1758003,"descripcion":"NAUCALPAN MUNICIPIO DE, MEX                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1758106,"descripcion":"ECHEGARAY, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1758159,"descripcion":"LOMAS DE TECAMACHALCO, MEX                                                                                                                            ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1758204,"descripcion":"LOMAS VERDES, MEX                                                                                                                                     ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1758253,"descripcion":"NAUCALPAN LOCALIDAD DE, MEX                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1758306,"descripcion":"SATELITE, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1759004,"descripcion":"NEZAHUALCÓYOTL, MEX                                                                                                                                   ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1760002,"descripcion":"NEXTLALPAN, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1761006,"descripcion":"NICOLÁS ROMERO, MEX                                                                                                                                   ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1762004,"descripcion":"NOPALTEPEC, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1763005,"descripcion":"OCOYOACAC, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1764009,"descripcion":"OCUILAN, MEX                                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1765007,"descripcion":"ORO EL, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1766008,"descripcion":"OTUMBA, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1767003,"descripcion":"OTZOLOAPÁN, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1768001,"descripcion":"OTZOLOTEPEC, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1768059,"descripcion":"CUAUHTÉMOC, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1769002,"descripcion":"OZUMBA, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1770006,"descripcion":"PAPALOTLA, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1771001,"descripcion":"PAZ LA, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1771154,"descripcion":"LOS REYES, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1772008,"descripcion":"POLOTITLÁN, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1773009,"descripcion":"RAYÓN, MEX                                                                                                                                            ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1774004,"descripcion":"SAN ANTONIO LA ISLA, MEX                                                                                                                              ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1775002,"descripcion":"SAN FELIPE DEL PROGRESO, MEX                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1776003,"descripcion":"SAN MARTÍN DE LAS PIRÁMIDES, MEX                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1777007,"descripcion":"SAN MATEO ATENCO, MEX                                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1778005,"descripcion":"SAN SIMÓN DE GUERRERO, MEX                                                                                                                            ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1779006,"descripcion":"SANTO TOMÁS DE LOS PLÁTANOS, MEX                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1780007,"descripcion":"SOYANIQUILPAN DE JUÁREZ, MEX                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1781002,"descripcion":"SULTEPEC, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1782009,"descripcion":"TECÁMAC, MEX                                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1783001,"descripcion":"TEJUPILCO, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1784005,"descripcion":"TEMAMATLA, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1785003,"descripcion":"TEMASCALAPA, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1786004,"descripcion":"TEMASCALCINGO, MEX                                                                                                                                    ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1787008,"descripcion":"TEMASCALTEPEC, MEX                                                                                                                                    ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1788006,"descripcion":"TEMOAYA, MEX                                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1789007,"descripcion":"TENANCINGO, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1790005,"descripcion":"TENANGO DEL AIRE, MEX                                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1790302,"descripcion":"TENANGO DE TEPOPULA, MEX                                                                                                                              ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1791009,"descripcion":"TENANGO DEL VALLE, MEX                                                                                                                                ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1791303,"descripcion":"TENANGO DE ARISTA, MEX                                                                                                                                ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1792007,"descripcion":"TEOLOYUCÁN, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1793008,"descripcion":"TEOTIHUACÁN, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1794003,"descripcion":"TEPETLAOXTOC, MEX                                                                                                                                     ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1795001,"descripcion":"TEPETLIXPA, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1796002,"descripcion":"TEPOTZOTLÁN, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1797006,"descripcion":"TEQUIXQUIAC, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1798004,"descripcion":"TEXCALTITLÁN, MEX                                                                                                                                     ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1799005,"descripcion":"TEXCALYACAC, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1801001,"descripcion":"TEXCOCO, MEX                                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1802005,"descripcion":"TEZOYUCA, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1803003,"descripcion":"TIANGUISTENGO SANTIAGO, MEX                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1804004,"descripcion":"TIMILPAN, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1805008,"descripcion":"TLALMANALCO, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1806006,"descripcion":"TLALNEPANTLA MUNICIPIO DE, MEX                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1806057,"descripcion":"PUENTE DE VIGAS, MEX                                                                                                                                  ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1806106,"descripcion":"TLALNEPANTLA LOCALIDAD DE, MEX                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1806153,"descripcion":"VALLE DORADO, MEX                                                                                                                                     ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1806201,"descripcion":"VIVEROS DE LA LOMA, MEX                                                                                                                               ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1807007,"descripcion":"TLATLAYA, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1808002,"descripcion":"TOLUCA, MEX                                                                                                                                           ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1809009,"descripcion":"TONATICO, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1810007,"descripcion":"TULTEPEC, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1811008,"descripcion":"TULTITLÁN, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1812003,"descripcion":"VALLE DE BRAVO MUNICIPIO DE, MEX                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1812103,"descripcion":"COLORINES, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1812306,"descripcion":"VALLE DE BRAVO LOCALIDAD DE, MEX                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1813001,"descripcion":"VILLA DE ALLENDE, MEX                                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1813301,"descripcion":"SAN JOSÉ ALLENDE, MEX                                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1814002,"descripcion":"VILLA DEL CARBÓN, MEX                                                                                                                                 ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1815006,"descripcion":"VILLA GUERRERO, MEX                                                                                                                                   ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1816004,"descripcion":"VILLA VICTORIA, MEX                                                                                                                                   ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1817005,"descripcion":"XONACATLÁN, MEX                                                                                                                                       ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1818009,"descripcion":"ZACAZONAPÁN, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1819007,"descripcion":"ZACUALPAN, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1820002,"descripcion":"ZINACANTEPEC SAN MIGUEL, MEX                                                                                                                          ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1821003,"descripcion":"ZUMPAHUACÁN, MEX                                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1822007,"descripcion":"ZUMPANGO, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1823005,"descripcion":"VALLE DE CHALCO SOLIDARIDAD, MEX                                                                                                                      ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1824006,"descripcion":"LUVIANOS, MEX                                                                                                                                         ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1825001,"descripcion":"SAN JOSÉ DEL RINCÓN, MEX                                                                                                                              ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1826008,"descripcion":"TONANITLA, MEX                                                                                                                                        ","entidad_federativa":"EDO DE MEXICO                                                                                                                                         "},
+{"clave":1899009,"descripcion":"ESTADO DE MEXICO (OTROS)                                                                                                                              ","entidad_federativa":"ESTADO DE MEXICO                                                                                                                                      "},
+{"clave":1901002,"descripcion":"ACUITZIO, MICH                                                                                                                                        ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1902003,"descripcion":"AGUILILLA, MICH                                                                                                                                       ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1903007,"descripcion":"ÁLVARO OBREGÓN MUNICIPIO DE, MICH                                                                                                                     ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1903059,"descripcion":"ÁLVARO OBREGÓN LOCALIDAD DE, MICH                                                                                                                     ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1903103,"descripcion":"CARRILLO PUERTO, MICH                                                                                                                                 ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1904005,"descripcion":"ANGAMACUTIRO, MICH                                                                                                                                    ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1905006,"descripcion":"ANGANGUEO, MICH                                                                                                                                       ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1906001,"descripcion":"APATZINGÁN, MICH                                                                                                                                      ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1907008,"descripcion":"APORO, MICH                                                                                                                                           ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1908009,"descripcion":"AQUILA, MICH                                                                                                                                          ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1909004,"descripcion":"ARIO DE ROSALES, MICH                                                                                                                                 ","entidad_federativa":"MICHOACAN                                                                                                                                             "},
+{"clave":1910005,"descripcion":"ARTEAGA, MICH                                                                                                                                         ","entidad_federativa":"MICHOACAN                                                                                                                                             "}]') if LocalidadCnbv.all.count==0
+
+
+State.loadJson('[{"clave":1,"descripcion":"Aguascalientes                                    "},
+{"clave":2,"descripcion":"Baja California                                   "},
+{"clave":3,"descripcion":"Baja California Sur                               "},
+{"clave":4,"descripcion":"Campeche                                          "},
+{"clave":5,"descripcion":"Chiapas                                           "},
+{"clave":6,"descripcion":" Chihuahua                                        "},
+{"clave":7,"descripcion":"Coahuila de Zaragoza                              "},
+{"clave":8,"descripcion":"Colima                                            "},
+{"clave":9,"descripcion":"Distrito Federal                                  "},
+{"clave":10,"descripcion":"Durango                                           "},
+{"clave":11,"descripcion":"Guanajuato                                        "},
+{"clave":12,"descripcion":"Guerrero                                          "},
+{"clave":13,"descripcion":"Hidalgo                                           "},
+{"clave":14,"descripcion":"Jalisco                                           "},
+{"clave":15,"descripcion":"México                                            "},
+{"clave":16,"descripcion":"Michoacán de Ocampo                               "},
+{"clave":17,"descripcion":"Morelos                                           "},
+{"clave":18,"descripcion":"Nayarit                                           "},
+{"clave":19,"descripcion":"Nuevo León                                        "},
+{"clave":20,"descripcion":"Oaxaca                                            "},
+{"clave":21,"descripcion":"Puebla                                            "},
+{"clave":22,"descripcion":"Querétaro Arteaga                                 "},
+{"clave":23,"descripcion":"Quintana Roo                                      "},
+{"clave":24,"descripcion":"San Luis Potosí                                   "},
+{"clave":25,"descripcion":"Sinaloa                                           "},
+{"clave":26,"descripcion":"Sonora                                            "},
+{"clave":27,"descripcion":"Tabasco                                           "},
+{"clave":28,"descripcion":"Tamaulipas                                        "},
+{"clave":29,"descripcion":"Tlaxcala                                          "},
+{"clave":30,"descripcion":"Veracruz de Ignacio de la Llave                   "},
+{"clave":31,"descripcion":"Yucatán                                           "},
+{"clave":32,"descripcion":"Zacatecas                                         "}]') if State.all.count==0
+
+Country.loadJson('[{"clave":1,"pais":"Andorra                                           "},
+{"clave":2,"pais":"Emiratos Árabes Unidos                            "},
+{"clave":3,"pais":"Afganistán                                        "},
+{"clave":4,"pais":"Antigua y Barbuda                                 "},
+{"clave":5,"pais":"Anguilla                                          "},
+{"clave":6,"pais":"Albania                                           "},
+{"clave":7,"pais":"Armenia                                           "},
+{"clave":8,"pais":"Antillas Holandesas                               "},
+{"clave":9,"pais":"Angola                                            "},
+{"clave":10,"pais":"Antártida                                         "},
+{"clave":11,"pais":"Argentina                                         "},
+{"clave":12,"pais":"Samoa Americana                                   "},
+{"clave":13,"pais":"Austria                                           "},
+{"clave":14,"pais":"Australia                                         "},
+{"clave":15,"pais":"Aruba                                             "},
+{"clave":16,"pais":"Azerbaiyán                                        "},
+{"clave":17,"pais":"Bosnia                                            "},
+{"clave":18,"pais":"Barbados                                          "},
+{"clave":19,"pais":"Bangladesh                                        "},
+{"clave":20,"pais":"Bélgica                                           "},
+{"clave":21,"pais":"Burkina Faso                                      "},
+{"clave":22,"pais":"Bulgaria                                          "},
+{"clave":23,"pais":"Bahrein                                           "},
+{"clave":24,"pais":"Burundi                                           "},
+{"clave":25,"pais":"Benin                                             "},
+{"clave":26,"pais":"Bermuda                                           "},
+{"clave":27,"pais":"Brunei                                            "},
+{"clave":28,"pais":"Bolivia                                           "},
+{"clave":29,"pais":"Brasil                                            "},
+{"clave":30,"pais":"Bahamas                                           "},
+{"clave":31,"pais":"Bhutan                                            "},
+{"clave":32,"pais":"Bielorusia                                        "},
+{"clave":33,"pais":"Islas Bouvet                                      "},
+{"clave":34,"pais":"Botswana                                          "},
+{"clave":35,"pais":"Belice                                            "},
+{"clave":36,"pais":"Canadá                                            "},
+{"clave":37,"pais":"Islas Cocos                                       "},
+{"clave":38,"pais":"República Centroafricana                          "},
+{"clave":39,"pais":"Congo                                             "},
+{"clave":40,"pais":"Suiza                                             "},
+{"clave":41,"pais":"Costa de Marfil                                   "},
+{"clave":42,"pais":"Islas Cook                                        "},
+{"clave":43,"pais":"Chile                                             "},
+{"clave":44,"pais":"Camerún                                           "},
+{"clave":45,"pais":"China                                             "},
+{"clave":46,"pais":"Colombia                                          "},
+{"clave":47,"pais":"Costa Rica                                        "},
+{"clave":48,"pais":"Checoslovaquia                                    "},
+{"clave":49,"pais":"Cuba                                              "},
+{"clave":50,"pais":"Cabo Verde                                        "},
+{"clave":51,"pais":"Islas Christmas                                   "},
+{"clave":52,"pais":"Chipre                                            "},
+{"clave":53,"pais":"República Checa                                   "},
+{"clave":54,"pais":"Alemania                                          "},
+{"clave":55,"pais":"Djibouti                                          "},
+{"clave":56,"pais":"Dinamarca                                         "},
+{"clave":57,"pais":"Dominica                                          "},
+{"clave":58,"pais":"República Dominicana                              "},
+{"clave":59,"pais":"Algeria                                           "},
+{"clave":60,"pais":"Ecuador                                           "},
+{"clave":61,"pais":"Eslovaquia                                        "},
+{"clave":62,"pais":"Estonia                                           "},
+{"clave":63,"pais":"Egipto                                            "},
+{"clave":64,"pais":"Sahara Occidental                                 "},
+{"clave":65,"pais":"España                                            "},
+{"clave":66,"pais":"Etiopía                                           "},
+{"clave":67,"pais":"Finlandia                                         "},
+{"clave":68,"pais":"Fiji                                              "},
+{"clave":69,"pais":"Islas Malvinas (Islas Falkland)                   "},
+{"clave":70,"pais":"Micronesia                                        "},
+{"clave":71,"pais":"Islas Feroe                                       "},
+{"clave":72,"pais":"Francia                                           "},
+{"clave":73,"pais":"Gabón                                             "},
+{"clave":74,"pais":"Gran Bretaña                                      "},
+{"clave":75,"pais":"Granada                                           "},
+{"clave":76,"pais":"Georgia                                           "},
+{"clave":77,"pais":"Guayana Francesa                                  "},
+{"clave":78,"pais":"Islas Guernsey                                    "},
+{"clave":79,"pais":"Ghana                                             "},
+{"clave":80,"pais":"Gibraltar                                         "},
+{"clave":81,"pais":"Groenlandia                                       "},
+{"clave":82,"pais":"Gambia                                            "},
+{"clave":83,"pais":"Guinea                                            "},
+{"clave":84,"pais":"Guadalupe                                         "},
+{"clave":85,"pais":"Guinea Ecuatorial                                 "},
+{"clave":86,"pais":"Grecia                                            "},
+{"clave":87,"pais":"Georgia del Sur e Islands Sandwich                "},
+{"clave":88,"pais":"Guatemala                                         "},
+{"clave":89,"pais":"Guam                                              "},
+{"clave":90,"pais":"Guinea Bissau                                     "},
+{"clave":91,"pais":"Hong Kong                                         "},
+{"clave":92,"pais":"Islas Heard y McDonald                            "},
+{"clave":93,"pais":"Honduras                                          "},
+{"clave":94,"pais":"Croacia                                           "},
+{"clave":95,"pais":"Haiti                                             "},
+{"clave":96,"pais":"Hungría                                           "},
+{"clave":97,"pais":"Indonesia                                         "},
+{"clave":98,"pais":"Irlanda                                           "},
+{"clave":99,"pais":"Israel                                            "},
+{"clave":100,"pais":"Isla de Man                                       "},
+{"clave":101,"pais":"India                                             "},
+{"clave":102,"pais":"British Indian Ocean Territory                    "},
+{"clave":103,"pais":"Iraq                                              "},
+{"clave":104,"pais":"Irán                                              "},
+{"clave":105,"pais":"Islandia                                          "},
+{"clave":106,"pais":"Italia                                            "},
+{"clave":107,"pais":"Isla Jersey                                       "},
+{"clave":108,"pais":"Jamaica                                           "},
+{"clave":109,"pais":"Jordania                                          "},
+{"clave":110,"pais":"Japón                                             "},
+{"clave":111,"pais":"Kenia                                             "},
+{"clave":112,"pais":"Kirguistán                                        "},
+{"clave":113,"pais":"Camboya                                           "},
+{"clave":114,"pais":"Kiribati                                          "},
+{"clave":115,"pais":"Islas Comoros                                     "},
+{"clave":116,"pais":"Saint Kitts y Nevis                               "},
+{"clave":117,"pais":"Corea del Norte                                   "},
+{"clave":118,"pais":"República de Corea del Sur                        "},
+{"clave":119,"pais":"Kuwait                                            "},
+{"clave":120,"pais":"Islas Caymán                                      "},
+{"clave":121,"pais":"Kazajstán                                         "},
+{"clave":122,"pais":"Laos                                              "},
+{"clave":123,"pais":"Líbano                                            "},
+{"clave":124,"pais":"Santa Lucía                                       "},
+{"clave":125,"pais":"Liechtenstein                                     "},
+{"clave":126,"pais":"Sri Lanka                                         "},
+{"clave":127,"pais":"Liberia                                           "},
+{"clave":128,"pais":"Lesotho                                           "},
+{"clave":129,"pais":"Letonia                                           "},
+{"clave":130,"pais":"Lituania                                          "},
+{"clave":131,"pais":"Luxemburgo                                        "},
+{"clave":132,"pais":"Letonia                                           "},
+{"clave":133,"pais":"Libia                                             "},
+{"clave":134,"pais":"Marruecos                                         "},
+{"clave":135,"pais":"Mónaco                                            "},
+{"clave":136,"pais":"Moldavia                                          "},
+{"clave":137,"pais":"Madagascar                                        "},
+{"clave":138,"pais":"Islas Marshall                                    "},
+{"clave":140,"pais":"Macedonia                                         "},
+{"clave":141,"pais":"Mali                                              "},
+{"clave":142,"pais":"Myanmar (Birmania)                                "},
+{"clave":143,"pais":"Mongolia                                          "},
+{"clave":144,"pais":"Macao                                             "},
+{"clave":145,"pais":"Islas Marianas del Norte                          "},
+{"clave":146,"pais":"Martinica                                         "},
+{"clave":147,"pais":"Mauritania                                        "},
+{"clave":148,"pais":"Montserrat                                        "},
+{"clave":149,"pais":"Malta                                             "},
+{"clave":150,"pais":"Maldivas                                          "},
+{"clave":151,"pais":"Isla Mauricio                                     "},
+{"clave":152,"pais":"Malawi                                            "},
+{"clave":153,"pais":"México                                            "},
+{"clave":154,"pais":"Malasia                                           "},
+{"clave":156,"pais":"Mozambique                                        "},
+{"clave":157,"pais":"Namibia                                           "},
+{"clave":158,"pais":"Nueva Caledonia                                   "},
+{"clave":159,"pais":"Nigeria                                           "},
+{"clave":161,"pais":"Islas Norfolk                                     "},
+{"clave":162,"pais":"Nigeria                                           "},
+{"clave":163,"pais":"Nicaragua                                         "},
+{"clave":164,"pais":"Holanda                                           "},
+{"clave":165,"pais":"Noruega                                           "},
+{"clave":166,"pais":"Nepal                                             "},
+{"clave":167,"pais":"Nauru                                             "},
+{"clave":168,"pais":"Zona Neutral                                      "},
+{"clave":169,"pais":"Niue                                              "},
+{"clave":170,"pais":"Nueva Zelanda                                     "},
+{"clave":171,"pais":"Omán                                              "},
+{"clave":172,"pais":"Panamá                                            "},
+{"clave":173,"pais":"Perú                                              "},
+{"clave":174,"pais":"Polinesia Francesa                                "},
+{"clave":175,"pais":"Papúa Nueva Guinea                                "},
+{"clave":176,"pais":"Filipinas                                         "},
+{"clave":177,"pais":"Paquistán                                         "},
+{"clave":178,"pais":"Polonia                                           "},
+{"clave":179,"pais":"San Pedro y Miquelón (Saint Pierre et Miquelon)   "},
+{"clave":180,"pais":"Islas Pitcairn                                    "},
+{"clave":181,"pais":"Puerto Rico                                       "},
+{"clave":182,"pais":"Portugal                                          "},
+{"clave":183,"pais":"Palaos                                            "},
+{"clave":184,"pais":"Paraguay                                          "},
+{"clave":185,"pais":"Qatar                                             "},
+{"clave":186,"pais":"Reunión                                           "},
+{"clave":187,"pais":"Rumanía                                           "},
+{"clave":188,"pais":"Federación Rusa                                   "},
+{"clave":189,"pais":"Ruanda (Rwanda)                                   "},
+{"clave":190,"pais":"Arabia Saudita                                    "},
+{"clave":191,"pais":"Islas Salomón                                     "},
+{"clave":192,"pais":"Islas Seychelles                                  "},
+{"clave":193,"pais":"Sudán                                             "},
+{"clave":194,"pais":"Suecia                                            "},
+{"clave":195,"pais":"Singapur                                          "},
+{"clave":196,"pais":"Santa Helena                                      "},
+{"clave":197,"pais":"Eslovenia                                         "},
+{"clave":198,"pais":"Archipiélago Svalbard e Isla Jan Mayen            "},
+{"clave":199,"pais":"Eslovaquia                                        "},
+{"clave":200,"pais":"Sierra Leona                                      "},
+{"clave":201,"pais":"San Marino                                        "},
+{"clave":202,"pais":"Senegal                                           "},
+{"clave":203,"pais":"Somalia                                           "},
+{"clave":204,"pais":"Surinam                                           "},
+{"clave":205,"pais":"Santo Tomé y Príncipe                             "},
+{"clave":206,"pais":"Union Soviética                                   "},
+{"clave":207,"pais":"El Salvador                                       "},
+{"clave":208,"pais":"Siria                                             "},
+{"clave":209,"pais":"Swazilandia                                       "},
+{"clave":210,"pais":"Islas Turks y Caicos                              "},
+{"clave":211,"pais":"Chad                                              "},
+{"clave":212,"pais":"Togo                                              "},
+{"clave":213,"pais":"Tailandia                                         "},
+{"clave":214,"pais":"Tadjikistán                                       "},
+{"clave":215,"pais":"Tokelau                                           "},
+{"clave":216,"pais":"Turkmenistán                                      "},
+{"clave":217,"pais":"Túnez                                             "},
+{"clave":218,"pais":"Tonga                                             "},
+{"clave":219,"pais":"Timor Oriental                                    "},
+{"clave":220,"pais":"Turquía                                           "},
+{"clave":221,"pais":"Trinidad yTobago                                  "},
+{"clave":222,"pais":"Tuvalu                                            "},
+{"clave":223,"pais":"Taiwán                                            "},
+{"clave":224,"pais":"Tanzania                                          "},
+{"clave":225,"pais":"Ucrania                                           "},
+{"clave":226,"pais":"Uganda                                            "},
+{"clave":227,"pais":"Reino Unido                                       "},
+{"clave":228,"pais":"US Minor Outlying Islands                         "},
+{"clave":229,"pais":"Estados Unidos                                    "},
+{"clave":230,"pais":"Uruguay                                           "},
+{"clave":231,"pais":"Uzbekistán                                        "},
+{"clave":232,"pais":"Vaticano                                          "},
+{"clave":233,"pais":"San Vicente y las Granadinas                      "},
+{"clave":234,"pais":"Venezuela                                         "},
+{"clave":235,"pais":"Islas Virgenes (GB)                               "},
+{"clave":236,"pais":"Islas Virgenes (EE.UU.)                           "},
+{"clave":237,"pais":"Vietnam                                           "},
+{"clave":238,"pais":"Vanuatu                                           "},
+{"clave":239,"pais":"Islas Wallis y Futuna                             "},
+{"clave":240,"pais":"Samoa                                             "},
+{"clave":241,"pais":"Yemen                                             "},
+{"clave":242,"pais":"Mayotte                                           "},
+{"clave":243,"pais":"Yugoslavia                                        "},
+{"clave":244,"pais":"Sudáfrica                                         "},
+{"clave":245,"pais":"Zaire                                             "},
+{"clave":246,"pais":"Zambia                                            "},
+{"clave":247,"pais":"Zimbabwe                                          "},
+{"clave":248,"pais":"Otro                                              "}]')  if Country.all.count==0
+
+Profecion.loadJson('[{"clave":10001,"descripcion":"ACTUARIA"},
+{"clave":10002,"descripcion":"ARQUITECTURA"},
+{"clave":10003,"descripcion":"ARQUITECTURA DEL PAISAJE"},
+{"clave":10004,"descripcion":"CIENCIAS DE LA COMPUTACION"},
+{"clave":10005,"descripcion":"DISEÑO INDUSTRIAL"},
+{"clave":10006,"descripcion":"FISICA"},
+{"clave":10007,"descripcion":"INGENIERIA CIVIL"},
+{"clave":10008,"descripcion":"INGENIERIA DE MINAS Y METALURGIA"},
+{"clave":10009,"descripcion":"INGENIERIA ELECTRICA Y ELECTRONICA"},
+{"clave":10010,"descripcion":"INGENIERIA EN COMPUTACION"},
+{"clave":10011,"descripcion":"INGENIERIA EN TELECOMUNICACIONES"},
+{"clave":10012,"descripcion":"INGENIERIA GEOFISICA"},
+{"clave":10013,"descripcion":"INGENIERIA GEOLOGICA"},
+{"clave":10014,"descripcion":"INGENIERIA INDUSTRIAL"},
+{"clave":10015,"descripcion":"INGENIERIA MECANICA"},
+{"clave":10016,"descripcion":"INGENIERIA MECANICA ELECTRICA"},
+{"clave":10017,"descripcion":"INGENIERIA PETROLERA"},
+{"clave":10018,"descripcion":"INGENIERIA QUIMICA"},
+{"clave":10019,"descripcion":"INGENIERIA QUIMICA METALURGICA"},
+{"clave":10020,"descripcion":"INGENIERIA TOPOGRAFICA Y GEODESICA"},
+{"clave":10021,"descripcion":"MATEMATICAS APLICADAS Y COMPUTACION"},
+{"clave":10022,"descripcion":"MATEMATICAS"},
+{"clave":10023,"descripcion":"URBANISMO"},
+{"clave":10024,"descripcion":"INGENIERIA MECATRONICA"},
+{"clave":10025,"descripcion":"INGENIERIA GEOMATICA"},
+{"clave":10026,"descripcion":"TECNOLOGIA"},
+{"clave":10027,"descripcion":"CIENCIAS DE LA TIERRA"},
+{"clave":10028,"descripcion":"INGENIERIA EN ENERGIAS RENOVABLES"},
+{"clave":10029,"descripcion":"NANOTECNOLOGIA"},
+{"clave":10030,"descripcion":"INGENIERIA EN TELECOMUNICACIONES, SIST. Y ELEC."},
+{"clave":10031,"descripcion":"GEOCIENCIAS"},
+{"clave":20001,"descripcion":"BIOLOGIA"},
+{"clave":20002,"descripcion":"CIRUJANO DENTISTA"},
+{"clave":20003,"descripcion":"ENFERMERIA Y OBSTETRICIA"},
+{"clave":20004,"descripcion":"INGENIERIA AGRICOLA"},
+{"clave":20005,"descripcion":"INGENIERIA EN ALIMENTOS"},
+{"clave":20006,"descripcion":"INVESTIGACION BIOMEDICA BASICA"},
+{"clave":20007,"descripcion":"MEDICINA VETERINARIA Y ZOOTECNIA"},
+{"clave":20008,"descripcion":"MEDICO CIRUJANO"},
+{"clave":20009,"descripcion":"OPTOMETRIA"},
+{"clave":20010,"descripcion":"PSICOLOGIA"},
+{"clave":20011,"descripcion":"QUIMICA"},
+{"clave":20012,"descripcion":"QUIMICA DE ALIMENTOS"},
+{"clave":20013,"descripcion":"QUIMICA FARMACEUTICO BIOLOGICA"},
+{"clave":20014,"descripcion":"QUIMICA INDUSTRIAL"},
+{"clave":20015,"descripcion":"CIENCIAS GENOMICAS"},
+{"clave":20016,"descripcion":"CIENCIAS AMBIENTALES"},
+{"clave":20017,"descripcion":"MANEJO SUSTENTABLE DE ZONAS COSTERAS"},
+{"clave":20018,"descripcion":"BIOQUIMICA DIAGNOSTICA"},
+{"clave":20019,"descripcion":"FARMACIA"},
+{"clave":20020,"descripcion":"ENFERMERIA"},
+{"clave":20021,"descripcion":"FISIOTERAPIA"},
+{"clave":20022,"descripcion":"ODONTOLOGIA"},
+{"clave":30001,"descripcion":"ADMINISTRACION"},
+{"clave":30002,"descripcion":"CIENCIAS DE LA COMUNICACION (PERIODISMO)"},
+{"clave":30003,"descripcion":"CIENCIAS POLITICAS Y ADMINISTRACION PUBLICA"},
+{"clave":30004,"descripcion":"CONTADURIA"},
+{"clave":30005,"descripcion":"DERECHO"},
+{"clave":30006,"descripcion":"ECONOMIA"},
+{"clave":30007,"descripcion":"GEOGRAFIA"},
+{"clave":30008,"descripcion":"INFORMATICA"},
+{"clave":30009,"descripcion":"PLANIFICACION PARA EL DESARROLLO AGR"},
+{"clave":30010,"descripcion":"RELACIONES INTERNACIONALES"},
+{"clave":30011,"descripcion":"SOCIOLOGIA"},
+{"clave":30012,"descripcion":"TRABAJO SOCIAL"},
+{"clave":30013,"descripcion":"ECONOMIA INDUSTRIAL"},
+{"clave":30014,"descripcion":"ADMINISTRACION AGROPECUARIA"},
+{"clave":30015,"descripcion":"COMUNICACION"},
+{"clave":30016,"descripcion":"COMUNICACION Y PERIODISMO"},
+{"clave":40001,"descripcion":"ARTES VISUALES"},
+{"clave":40002,"descripcion":"BIBLIOTECOLOGIA"},
+{"clave":40003,"descripcion":"CANTO"},
+{"clave":40004,"descripcion":"COMPOSICION"},
+{"clave":40005,"descripcion":"COMUNICACION GRAFICA"},
+{"clave":40006,"descripcion":"DISEÑO GRAFICO"},
+{"clave":40007,"descripcion":"EDUCACION MUSICAL"},
+{"clave":40008,"descripcion":"ENSEÑANZA DE INGLES"},
+{"clave":40009,"descripcion":"ESTUDIOS LATINOAMERICANOS"},
+{"clave":40010,"descripcion":"ETNOMUSICOLOGIA"},
+{"clave":40011,"descripcion":"FILOSOFIA"},
+{"clave":40012,"descripcion":"HISTORIA"},
+{"clave":40013,"descripcion":"INSTRUMENTISTA"},
+{"clave":40014,"descripcion":"LENGUA Y LITERATURAS HISPANICAS"},
+{"clave":40015,"descripcion":"LENGUA Y LIT MODERNAS ALEMANAS"},
+{"clave":40016,"descripcion":"LENGUA Y LIT MODERNAS FRANCESAS"},
+{"clave":40017,"descripcion":"LENGUA Y LIT MODERNAS INGLESAS"},
+{"clave":40018,"descripcion":"LENGUA Y LIT MODERNAS ITALIANAS"},
+{"clave":40019,"descripcion":"LETRAS CLASICAS"},
+{"clave":40020,"descripcion":"LITERATURA DRAMATICA Y TEATRO"},
+{"clave":40021,"descripcion":"PEDAGOGIA"},
+{"clave":40022,"descripcion":"PIANO"},
+{"clave":40023,"descripcion":"DISEÑO Y COMUNICACION VISUAL"},
+{"clave":40024,"descripcion":"ENSEÑANZA DE ALEMAN COMO LENGUA EXTRANJERA"},
+{"clave":40025,"descripcion":"ENSEÑANZA DE ESPAÑOL COMO LENGUA EXTRANJERA"},
+{"clave":40026,"descripcion":"ENSEÑANZA DE FRANCES COMO LENGUA EXTRANJERA"},
+{"clave":40027,"descripcion":"ENSEÑANZA DE INGLES COMO LENGUA EXTRANJERA"},
+{"clave":40028,"descripcion":"ENSEÑANZA DE ITALIANO COMO LENGUA EXTRANJERA"},
+{"clave":40029,"descripcion":"DESARROLLO Y GESTION INTERCULTURALES"},
+{"clave":40030,"descripcion":"LENGUA Y LIT MODERNAS PORTUGUESAS"},
+{"clave":40031,"descripcion":"GEOHISTORIA"},
+{"clave":40032,"descripcion":"LITERATURA INTERCULTURAL"},
+{"clave":40033,"descripcion":"HISTORIA DEL ARTE"},
+{"clave":50001,"descripcion":"NOMBRE DEL NIVEL"},
+{"clave":50002,"descripcion":"TECNICO"},
+{"clave":50003,"descripcion":"BACHILLERATO"},
+{"clave":50004,"descripcion":"INICIACION UNIVERSITARIA"}]')  if Profecion.all.count==0
+
+Ocupation.loadJson('[{"clave":100,"descripcion":"ADMINISTRACION DE PERSONAL"},
+{"clave":101100,"descripcion":" AUXILIAR DE PERSONAL"},
+{"clave":102100,"descripcion":" CONSULTOR EN ANÁLISIS ORGANIZACIONAL"},
+{"clave":103100,"descripcion":" DIRECTOR DE RECURSOS HUMANOS"},
+{"clave":104100,"descripcion":" ESPECIALISTA EN RECLUTAMIENTO Y SELECCIÓN DE PERS"},
+{"clave":105100,"descripcion":" GERENTE DE CAPACITACIÓN Y DESARROLLO"},
+{"clave":106100,"descripcion":" GERENTE DE PLANEACIÓN DE RECURSOS HUMANOS"},
+{"clave":107100,"descripcion":" GERENTE DE RELACIONES LABORALES"},
+{"clave":108100,"descripcion":" JEFE DE PERSONAL"},
+{"clave":109100,"descripcion":" JEFE DE RECLUTAMIENTO"},
+{"clave":200,"descripcion":"ADMINISTRACION DE PROCESOS"},
+{"clave":201200,"descripcion":" ADMINISTRADOR"},
+{"clave":202200,"descripcion":" ADMINISTRADOR DE EMPRESAS"},
+{"clave":203200,"descripcion":" ADMINISTRADOR DE GARANTÍAS"},
+{"clave":204200,"descripcion":" ANALISTA DE PROCEDIMIENTOS"},
+{"clave":205200,"descripcion":"ASESOR GERENCIAL"},
+{"clave":206200,"descripcion":" ASISTENTE DE DIRECCIÓN"},
+{"clave":207200,"descripcion":"CONTRALOR DE PROCESOS"},
+{"clave":208200,"descripcion":" CONTRALOR GENERAL"},
+{"clave":209200,"descripcion":" DIRECTOR DE PRODUCCIÓN"},
+{"clave":210200,"descripcion":" DIRECTORES DE VENTAS"},
+{"clave":211200,"descripcion":" GERENTE ADMINISTRATIVO"},
+{"clave":212200,"descripcion":" GERENTE DE CONTROL DE CALIDAD"},
+{"clave":213200,"descripcion":" GERENTE DE PRODUCCIÓN"},
+{"clave":214200,"descripcion":" INGENIERO EN PROCESAMIENTO DE ALIMENTOS"},
+{"clave":215200,"descripcion":"JEFE DE ÁREA"},
+{"clave":216200,"descripcion":" SUPERVISOR"},
+{"clave":217200,"descripcion":" TÉCNICO"},
+{"clave":218200,"descripcion":" TÉCNICO EN ESTUDIOS DE TIEMPOS Y MOVIMIENTOS"},
+{"clave":300,"descripcion":"AGRICULTURA Y GANADERIA "},
+{"clave":301300,"descripcion":"AGRICULTOR"},
+{"clave":302300,"descripcion":"ASESOR AGRÍCOLA"},
+{"clave":303300,"descripcion":"ASESORGANADERO"},
+{"clave":304300,"descripcion":"AVICULTOR"},
+{"clave":305300,"descripcion":"CAPORAL"},
+{"clave":306300,"descripcion":"CORTADOR DE CAÑA"},
+{"clave":307300,"descripcion":"CRIADOR DE GANADO"},
+{"clave":308300,"descripcion":"CUIDADOR DE ANIMALES"},
+{"clave":309300,"descripcion":"ENCARGADO DE RANCHO AGRÍCOLA"},
+{"clave":310300,"descripcion":"ENCARGADO DE RANCHO GANADERO"},
+{"clave":311300,"descripcion":"FLORICULTOR"},
+{"clave":312300,"descripcion":"FRUTICULTOR"},
+{"clave":313300,"descripcion":"FUMIGADOR AGRÍCOLA"},
+{"clave":314300,"descripcion":"HORTICULTOR"},
+{"clave":315300,"descripcion":"JARDINERO"},
+{"clave":316300,"descripcion":"JORNALERO AGRÍCOLA"},
+{"clave":317300,"descripcion":"MOZO DE CUADRA"},
+{"clave":318300,"descripcion":"OPERADOR MÁQUINA AGRÍCOLA"},
+{"clave":319300,"descripcion":"PASTOR DE GANADO"},
+{"clave":320300,"descripcion":"PEÓN"},
+{"clave":321300,"descripcion":"TÉCNICO AGRÓNOMO"},
+{"clave":322300,"descripcion":"TÉCNICO VETERINARIO"},
+{"clave":323300,"descripcion":"TRACTORISTA"},
+{"clave":324300,"descripcion":"VITICULTOR"},
+{"clave":400,"descripcion":"ALIMENTACION Y HOSPEDAJE "},
+{"clave":401400,"descripcion":"AUXILIAR DE COCINA"},
+{"clave":402400,"descripcion":"AUXILIAR GENERAL"},
+{"clave":403400,"descripcion":"BOTONES"},
+{"clave":404400,"descripcion":"CAMARERA"},
+{"clave":405400,"descripcion":"CAMARISTA"},
+{"clave":406400,"descripcion":"CANTINERO"},
+{"clave":407400,"descripcion":"CAPITÁN DE BOTONES"},
+{"clave":408400,"descripcion":"CAPITÁN DE MESEROS Y CANTINEROS"},
+{"clave":409400,"descripcion":"CAPITÁN DE SERVICIO A CUARTOS"},
+{"clave":410400,"descripcion":"CHEF"},
+{"clave":411400,"descripcion":"COCINERA DOMÉSTICA"},
+{"clave":412400,"descripcion":"COCINERO"},
+{"clave":414400,"descripcion":"FUENTERO"},
+{"clave":415400,"descripcion":"GALOPINA"},
+{"clave":416400,"descripcion":"GARROTERO"},
+{"clave":417400,"descripcion":"HOSTESS"},
+{"clave":418400,"descripcion":"JEFE DE BAR"},
+{"clave":419400,"descripcion":"JEFE DE COCINA"},
+{"clave":420400,"descripcion":" JEFE DE COMEDOR (COMEDOR INDUSTRIAL);"},
+{"clave":421400,"descripcion":"MAYORA DE COCINA"},
+{"clave":422400,"descripcion":"MESERO"},
+{"clave":423400,"descripcion":"PARRILLERO (ASADOR DE CARNES);"},
+{"clave":424400,"descripcion":"PASTELERO REPOSTERO"},
+{"clave":425400,"descripcion":"PIZZERO"},
+{"clave":426400,"descripcion":"PORTERO DE EDIFICIO"},
+{"clave":427400,"descripcion":"RECEPCIONISTA DE HOTEL"},
+{"clave":428400,"descripcion":"ROSTIZADOR"},
+{"clave":429400,"descripcion":"TAQUERO"},
+{"clave":430400,"descripcion":"TORTERO"},
+{"clave":500,"descripcion":"CIENCIAS BIOLOGICAS Y ECOLOGIA "},
+{"clave":501500,"descripcion":" BIÓLOGO"},
+{"clave":502500,"descripcion":" BIOMÉDICO"},
+{"clave":503500,"descripcion":" BOTÁNICO"},
+{"clave":504500,"descripcion":" CLIMATÓLOGO"},
+{"clave":505500,"descripcion":" ECÓLOGO"},
+{"clave":506500,"descripcion":" GENETISTA"},
+{"clave":507500,"descripcion":" ANTROPÓLOGO"},
+{"clave":508500,"descripcion":" ARQUEOLOGO"},
+{"clave":509500,"descripcion":" DEMÓGRAFO"},
+{"clave":510500,"descripcion":" ECONOMETRISTA"},
+{"clave":511500,"descripcion":" ECONOMISTA"},
+{"clave":512500,"descripcion":" LIC. EN CIENCIAS POLÍTICAS"},
+{"clave":513500,"descripcion":" LIC. EN RELACIONES INTERNACIONALES"},
+{"clave":514500,"descripcion":" SOCIÓLOGO"},
+{"clave":515500,"descripcion":" TRABAJADOR SOCIAL"},
+{"clave":600,"descripcion":"COMERCIO Y VENTAS "},
+{"clave":601600,"descripcion":" AGENTE DE OPERACIONES COMERCIALES"},
+{"clave":602600,"descripcion":" AGENTE DE SEGUROS"},
+{"clave":603600,"descripcion":" AGENTE DE VENTAS"},
+{"clave":604600,"descripcion":" ANAQUELERO DE TIENDA"},
+{"clave":605600,"descripcion":" APARADORISTA"},
+{"clave":606600,"descripcion":" AUXILIAR DE VENTAS"},
+{"clave":607600,"descripcion":" CAJERO REGISTRADOR"},
+{"clave":608600,"descripcion":" CHOFER VENDEDOR"},
+{"clave":609600,"descripcion":" COMISIONISTA"},
+{"clave":610600,"descripcion":" DEMOEDECÁN"},
+{"clave":611600,"descripcion":" DEMOSTRADOR"},
+{"clave":612600,"descripcion":" DEMOVENDEDOR"},
+{"clave":613600,"descripcion":" EJECUTIVO DE VENTAS"},
+{"clave":614600,"descripcion":" EMPACADOR"},
+{"clave":616600,"descripcion":" ENCARGADO DE TIENDA"},
+{"clave":617600,"descripcion":" ETIQUETADOR"},
+{"clave":618600,"descripcion":" EXPENDEDOR DE BOLETOS DE AUTOBÚS"},
+{"clave":619600,"descripcion":" GASOLINERO"},
+{"clave":620600,"descripcion":" GERENTE DE VENTAS"},
+{"clave":621600,"descripcion":" JEFE DE PISO (VENTAS MENUDEO);"},
+{"clave":622600,"descripcion":" LIC. MERCADOTECNIA"},
+{"clave":623600,"descripcion":" PROMOTOR"},
+{"clave":624600,"descripcion":" REPARTIDOR"},
+{"clave":625600,"descripcion":" SUBGERENTE DE VENTAS"},
+{"clave":626600,"descripcion":" SUPERVISOR DE VENTAS"},
+{"clave":627600,"descripcion":" TAQUILLERO (ESPECTÁCULOS);"},
+{"clave":628600,"descripcion":" VENDEDOR A DOMICILIO"},
+{"clave":629600,"descripcion":" VENDEDOR DE PISO"},
+{"clave":630600,"descripcion":" VENDEDOR POR TELÉFONO"},
+{"clave":631600,"descripcion":" VENDEDOR TÉCNICO"},
+{"clave":632600,"descripcion":" VOLANTERO"},
+{"clave":700,"descripcion":"COMPRAS E INVENTARIOS "},
+{"clave":701700,"descripcion":" ADMINISTRADOR DE BIENES"},
+{"clave":702700,"descripcion":" AGENTE DE COMPRAS"},
+{"clave":703700,"descripcion":" ALMACENISTA"},
+{"clave":704700,"descripcion":" ANALISTA DE ADQUISICIONES"},
+{"clave":705700,"descripcion":" ASESOR EN DISTRIBUCIÓN Y LOGÍSTICA"},
+{"clave":706700,"descripcion":" AUXILIAR DE ALMACÉN"},
+{"clave":707700,"descripcion":" AUXILIAR DE CRÉDITO Y COBRANZA"},
+{"clave":708700,"descripcion":" AUXILIAR DE INVENTARIO"},
+{"clave":709700,"descripcion":" AUXILLIAR DE IMPUESTOS"},
+{"clave":710700,"descripcion":" BODEGUERO"},
+{"clave":711700,"descripcion":" COBRADOR"},
+{"clave":712700,"descripcion":" DIRECTOR COMERCIAL"},
+{"clave":713700,"descripcion":" ESTIBADOR"},
+{"clave":714700,"descripcion":" FACTURISTA"},
+{"clave":715700,"descripcion":" JEFE DE ALMACÉN"},
+{"clave":716700,"descripcion":" JEFE DE COMPRAS"},
+{"clave":800,"descripcion":"DISEÑO Y EXHIBICION "},
+{"clave":801800,"descripcion":"ANUNCIANTE"},
+{"clave":802800,"descripcion":"DISEÑADOR GRÁFICO"},
+{"clave":803800,"descripcion":"DISEÑADOR INDUSTRIAL"},
+{"clave":900,"descripcion":"EDIFICACION Y ACABADO "},
+{"clave":901900,"descripcion":" AISLADOR DE INSTALACIONES"},
+{"clave":902900,"descripcion":" AISLADOR DE SONIDO"},
+{"clave":903900,"descripcion":" AYUDANTE CONCRETERO"},
+{"clave":904900,"descripcion":" AYUDANTE DE CARPINTERO DE OBRA BLANCA"},
+{"clave":905900,"descripcion":" BLOQUERO"},
+{"clave":906900,"descripcion":" CADENERO"},
+{"clave":907900,"descripcion":" CARPINTERO DE OBRA BLANCA"},
+{"clave":908900,"descripcion":" CARPINTERO DE OBRA NEGRA"},
+{"clave":909900,"descripcion":" COLOCADOR DE ALFOMBRA"},
+{"clave":910900,"descripcion":" COLOCADOR DE AZULEJOS Y MOSAICOS"},
+{"clave":911900,"descripcion":" CONCRETERO"},
+{"clave":912900,"descripcion":" CONTRATISTA DE OBRAS"},
+{"clave":913900,"descripcion":" CRISTALERO"},
+{"clave":914900,"descripcion":" IMPERMEABILIZADOR"},
+{"clave":915900,"descripcion":" MAESTRO FIERRERO"},
+{"clave":916900,"descripcion":" MAMPOSTERO"},
+{"clave":917900,"descripcion":" MARMOLERO"},
+{"clave":918900,"descripcion":" OFICIAL COLOCADOR PISOS"},
+{"clave":919900,"descripcion":" OFICIAL DE ALBAÑILERÍA"},
+{"clave":920900,"descripcion":" OPERADOR CABRESTANTE"},
+{"clave":921900,"descripcion":" OPERADORES DE MAQUINARIA"},
+{"clave":922900,"descripcion":" PEÓN DE ALBAÑIL"},
+{"clave":923900,"descripcion":" PINTOR DE EDIFICIOS Y CONSTRUCCIONES"},
+{"clave":924900,"descripcion":" SOLDADOR"},
+{"clave":925900,"descripcion":" TABLARROQUERO"},
+{"clave":926900,"descripcion":" TECHADOR ASFÁLTICO"},
+{"clave":927900,"descripcion":" YESERO"},
+{"clave":1000,"descripcion":"EDUCACION Y CAPACITACION "},
+{"clave":10011000,"descripcion":" ALFABETIZADOR"},
+{"clave":10021000,"descripcion":" ASISTENTE DE PROFESOR"},
+{"clave":10031000,"descripcion":" AUXILIAR DE EDUCADORA"},
+{"clave":10041000,"descripcion":" AYUDANTE DE INVESTIGADOR"},
+{"clave":10051000,"descripcion":" CAPACITADOR"},
+{"clave":10061000,"descripcion":" EDUCADORA"},
+{"clave":10071000,"descripcion":" ESPECIALISTA EN MÉTODOS DE ENSEÑANZA"},
+{"clave":10081000,"descripcion":" ORIENTADOR EDUCATIVO"},
+{"clave":10091000,"descripcion":" PEDAGOGO"},
+{"clave":10101000,"descripcion":" PREFECTO"},
+{"clave":10111000,"descripcion":" PROFESOR DE COMPUTACIÓN"},
+{"clave":10121000,"descripcion":" PROFESOR DE EDUCACIÓN ARTÍSTICA"},
+{"clave":10131000,"descripcion":" PROFESOR DE EDUCACIÓN FÍSICA"},
+{"clave":10141000,"descripcion":" PROFESOR DE INGLÉS"},
+{"clave":10151000,"descripcion":" PROFESOR EDUCACIÓN MEDIA SUPERIOR"},
+{"clave":10161000,"descripcion":" PROFESOR ENSEÑANZA SECUNDARIA"},
+{"clave":10171000,"descripcion":" PROFESOR ENSEÑANZA SUPERIOR"},
+{"clave":10181000,"descripcion":" PROFESORENSEÑANZA ESPECIAL"},
+{"clave":10191000,"descripcion":" PROFESORENSEÑANZA PRIMARIA"},
+{"clave":1100,"descripcion":"EXPLORACION Y EXTRACCION "},
+{"clave":11011100,"descripcion":" AYUDANTE GENERAL"},
+{"clave":11021100,"descripcion":" BARRENERO"},
+{"clave":11031100,"descripcion":" CIMENTADOR DE POZOS DE PETRÓLEO"},
+{"clave":11041100,"descripcion":" DINAMITERO"},
+{"clave":11051100,"descripcion":" INGENIERO DE GAS"},
+{"clave":11061100,"descripcion":" INGENIERO EN MINAS"},
+{"clave":11071100,"descripcion":" INGENIERO GEODESTA"},
+{"clave":11081100,"descripcion":" INGENIERO GEÓLOGO"},
+{"clave":11091100,"descripcion":" INGENIERO METALÚRGICO"},
+{"clave":11101100,"descripcion":" INGENIERO PETROLERO"},
+{"clave":11111100,"descripcion":" INGENIERO SIDERÚRGICO"},
+{"clave":11121100,"descripcion":" TÉCNICO EN GEOLOGÍA"},
+{"clave":11131100,"descripcion":" TÉCNICO EN MINERÍA"},
+{"clave":11141100,"descripcion":" TÉCNICO EN PERFORACIÓN DE POZOS"},
+{"clave":11151100,"descripcion":" TÉCNICO EXTRACCIÓN (PETRÓLEO Y GAS);"},
+{"clave":11161100,"descripcion":" TÉCNICO METALÚRGICO"},
+{"clave":1200,"descripcion":"FINANZAS Y CONTABILIDAD "},
+{"clave":12011200,"descripcion":" ADMINISTRADOR DE CARTERA"},
+{"clave":12021200,"descripcion":" ADMINISTRADOR FISCAL"},
+{"clave":12031200,"descripcion":" ANALISTA BURSÁTIL"},
+{"clave":12041200,"descripcion":" ANALISTA CONTABLE"},
+{"clave":12051200,"descripcion":" ANALISTA DE MERCADO"},
+{"clave":12061200,"descripcion":" ANALISTA DE SEGUROS (AJUSTADOR);"},
+{"clave":12071200,"descripcion":" ANALISTA FINANCIERO"},
+{"clave":12081200,"descripcion":" ASESOR DE INVERSIONES"},
+{"clave":12091200,"descripcion":" AUDITOR"},
+{"clave":12101200,"descripcion":" AUXILIAR DE AUDITORIA"},
+{"clave":12111200,"descripcion":" AUXILIAR DE CONTABILIDAD (NIVEL TÉCNICO);"},
+{"clave":12121200,"descripcion":" AUXILIAR DE CRÉDITO Y COBRANZA"},
+{"clave":12131200,"descripcion":" AUXILIAR DE NOMINA"},
+{"clave":12141200,"descripcion":" CAJERO DE BANCO"},
+{"clave":12151200,"descripcion":" CONTADOR EN GENERAL"},
+{"clave":12161200,"descripcion":" CONTADOR PÚBLICO"},
+{"clave":12171200,"descripcion":" CONTRALOR"},
+{"clave":12181200,"descripcion":" CORREDOR DE BOLSA"},
+{"clave":12191200,"descripcion":" CORREDOR DE FONDOS DE PENSIONES"},
+{"clave":12201200,"descripcion":" DIRECTOR DE PRESUPUESTO Y CONTABILIDAD"},
+{"clave":12211200,"descripcion":" EJECUTIVO DE CUENTA"},
+{"clave":12231200,"descripcion":" ENCARGADO DE NÓMINA"},
+{"clave":12241200,"descripcion":" GERENTE DE FINANZAS"},
+{"clave":12251200,"descripcion":" PERITO VALUADOR DE BIENES"},
+{"clave":12261200,"descripcion":" TÉCNICOFINANCIERO"},
+{"clave":12271200,"descripcion":" VALUADOR"},
+{"clave":1300,"descripcion":"FISICA Y QUIMICA "},
+{"clave":13011300,"descripcion":" ASTRÓNOMO"},
+{"clave":13021300,"descripcion":" FÍSICO"},
+{"clave":13031300,"descripcion":" QUÍMICO"},
+{"clave":13041300,"descripcion":" QUÍMICO FARMACOBIÓLOGO"},
+{"clave":1400,"descripcion":"FORESTAL Y SILVICULTURA "},
+{"clave":14011400,"descripcion":" ASERRADOR"},
+{"clave":14021400,"descripcion":" ASESOR FORESTAL"},
+{"clave":14031400,"descripcion":" INGENIERO FORESTAL"},
+{"clave":14041400,"descripcion":" PEÓN"},
+{"clave":14051400,"descripcion":" TÉCNICO FORESTAL"},
+{"clave":14061400,"descripcion":" TRABAJADOR FORESTAL"},
+{"clave":1500,"descripcion":"HUMANIDADES"},
+{"clave":15011500,"descripcion":" FILÓSOFO"},
+{"clave":15021500,"descripcion":" GEÓGRAFO"},
+{"clave":15031500,"descripcion":" HISTORIADOR"},
+{"clave":15041500,"descripcion":" LINGÜISTA"},
+{"clave":16001600,"descripcion":"IMPRENTA Y EDITORIALES  "},
+{"clave":16011600,"descripcion":" AUXILIAR DE ARTES GRÁFICAS"},
+{"clave":16021600,"descripcion":" CAJISTA DE IMPRENTA"},
+{"clave":16031600,"descripcion":" ENCUADERNADOR"},
+{"clave":16041600,"descripcion":" ESTAMPADOR"},
+{"clave":16051600,"descripcion":" FOTOGRABADOR"},
+{"clave":16061600,"descripcion":" FOTOMECÁNICO"},
+{"clave":16071600,"descripcion":" GUILLOTINISTA"},
+{"clave":16081600,"descripcion":" LINOTIPISTA"},
+{"clave":16091600,"descripcion":" PANTOGRAFISTA"},
+{"clave":16101600,"descripcion":" PRENSISTA DE PRENSA PLANA"},
+{"clave":16111600,"descripcion":" PRENSISTA DE ROTATIVA"},
+{"clave":16121600,"descripcion":" PRENSISTA DE ROTOGRABADO"},
+{"clave":16131600,"descripcion":" PRENSISTA OFFSET"},
+{"clave":16141600,"descripcion":" SERIGRAFISTA"},
+{"clave":16151600,"descripcion":" TIPÓGRAFO"},
+{"clave":1700,"descripcion":"INFORMATICA Y DESARROLLO DE SISTEMAS  "},
+{"clave":17011700,"descripcion":" ADMINISTRADOR DE BASES DE DATOS (DBA);"},
+{"clave":17021700,"descripcion":" ADMINISTRADOR DE SISTEMAS DE CÓMPUTO"},
+{"clave":17031700,"descripcion":" ANALISTA DE SISTEMAS INFORMÁTICOS"},
+{"clave":17041700,"descripcion":" AUXILIAR DE INFORMÁTICA"},
+{"clave":17051700,"descripcion":" CONSULTOR DE SISTEMAS"},
+{"clave":17061700,"descripcion":" DESARROLLADOR DE SISTEMAS"},
+{"clave":17071700,"descripcion":" DISEÑADOR EN AMBIENTE WEB"},
+{"clave":17081700,"descripcion":" INGENIERO DE SERVICIO"},
+{"clave":17091700,"descripcion":" INGENIERO DE SOPORTE"},
+{"clave":17101700,"descripcion":" INGENIERO EN CIBERNÉTICA"},
+{"clave":17111700,"descripcion":" INGENIERO SISTEMAS DE CÓMPUTO"},
+{"clave":17121700,"descripcion":" LIDER DE PROYECTO"},
+{"clave":17131700,"descripcion":" TÉCNICO EN INFORMÁTICA"},
+{"clave":17141700,"descripcion":" TÉCNICO EN REPARACIÓN Y MTO. DE COMPUTADORAS"},
+{"clave":17151700,"descripcion":" WEBMASTER"},
+{"clave":1800,"descripcion":"INSTALACION Y MANTENIMIENTO"},
+{"clave":18011800,"descripcion":" AYUDANTE GENERAL"},
+{"clave":18021800,"descripcion":" DUCTERO"},
+{"clave":18031800,"descripcion":" INSTALADOR"},
+{"clave":18041800,"descripcion":" INSTALADOR MATERIAL AISLANTE"},
+{"clave":18051800,"descripcion":" OBRERO DE MANTENIMIENTO"},
+{"clave":18061800,"descripcion":" OFICIAL DE AIRE ACONDICIONADO"},
+{"clave":18071800,"descripcion":" PLOMERO"},
+{"clave":18081800,"descripcion":" SUPERINTENDENTE DE MANTENIMIENTO"},
+{"clave":18091800,"descripcion":" TÉCNICO EN AIRE ACONDICIONADO Y REFRIGERACIÓN"},
+{"clave":18101800,"descripcion":" TUBERO"},
+{"clave":1900,"descripcion":"INTERPRETACION ARTISTICA  "},
+{"clave":19011900,"descripcion":" ACRÓBATA"},
+{"clave":19021900,"descripcion":" ACTOR"},
+{"clave":19031900,"descripcion":" ACTRIZ"},
+{"clave":19041900,"descripcion":" ANIMADOR"},
+{"clave":19051900,"descripcion":" BAILARÍN"},
+{"clave":19061900,"descripcion":" CANTANTE"},
+{"clave":19071900,"descripcion":" CARICATURISTA"},
+{"clave":19081900,"descripcion":" CERAMISTA"},
+{"clave":19091900,"descripcion":" COMPOSITOR DE MÚSICA"},
+{"clave":19101900,"descripcion":" COREÓGRAFO"},
+{"clave":19111900,"descripcion":" DECORADOR"},
+{"clave":19121900,"descripcion":" ESCRITOR"},
+{"clave":19131900,"descripcion":" ESCULTOR"},
+{"clave":19141900,"descripcion":" FOTÓGRAFO EN GENERAL"},
+{"clave":19151900,"descripcion":" MÚSICO"},
+{"clave":19161900,"descripcion":" PINTOR DE CABALLETE"},
+{"clave":19171900,"descripcion":" RESTAURADOR OBRAS DE ARTE"},
+{"clave":19181900,"descripcion":" TITIRITERO"},
+{"clave":2000,"descripcion":"MANUFACTURA DE ALIMENTOS Y BEBIDAS  "},
+{"clave":20012000,"descripcion":"AMASADOR DE PAN"},
+{"clave":20022000,"descripcion":"AUXILIAR DE ALIMENTOS Y BEBIDAS"},
+{"clave":20032000,"descripcion":"AYUDANTE GENERAL"},
+{"clave":20042000,"descripcion":"CARNICERO"},
+{"clave":20052000,"descripcion":" CATADOR BEBIDAS"},
+{"clave":20062000,"descripcion":"CATADOR DE ALIMENTOS"},
+{"clave":20072000,"descripcion":"CERVECERO"},
+{"clave":20082000,"descripcion":"CHOCOLATERO"},
+{"clave":20092000,"descripcion":" CLASIFICADOR DE ALIMENTOS"},
+{"clave":20102000,"descripcion":" CONSERVERO FRUTAS Y LEGUMBRES"},
+{"clave":20112000,"descripcion":" DULCERO CONFITERO"},
+{"clave":20122000,"descripcion":" EMPACADOR DE CARNES FRÍAS"},
+{"clave":20132000,"descripcion":" ESCAMADOR DE PESCADO"},
+{"clave":20142000,"descripcion":" HELADERO"},
+{"clave":20152000,"descripcion":" HORNERO"},
+{"clave":20162000,"descripcion":" LABORATORISTA DE CERVEZA"},
+{"clave":20172000,"descripcion":" LAVADOR DE VÍSCERAS"},
+{"clave":20182000,"descripcion":" MATADOR DE AVES Y GANADO"},
+{"clave":20192000,"descripcion":" MOLINERO"},
+{"clave":20202000,"descripcion":" PANADERO"},
+{"clave":20212000,"descripcion":" PASTELERO"},
+{"clave":20222000,"descripcion":" PESCADERO"},
+{"clave":20232000,"descripcion":" SALADOR CARNES"},
+{"clave":20242000,"descripcion":" TORTILLERO"},
+{"clave":20252000,"descripcion":" VOLTEADOR DE QUESOS"},
+{"clave":2100,"descripcion":"MANUFACTURA DE PAPEL "},
+{"clave":21012100,"descripcion":"AYUDANTE GENERAL"},
+{"clave":21022100,"descripcion":"CLASIFICADOR DE PIELES Y CUEROS"},
+{"clave":21032100,"descripcion":"CLASIFICADOR Y TRATADOR DE MADERA"},
+{"clave":21042100,"descripcion":"CURTIDOR PIELES"},
+{"clave":21052100,"descripcion":"OPERADOR INSTALACIONES FABRICACIÓN PAPEL"},
+{"clave":21062100,"descripcion":"OPERADOR INSTALACIONES PROCESAMIENTO DE LA MADERA"},
+{"clave":21072100,"descripcion":"PIGMENTADOR DE PIELES"},
+{"clave":2200,"descripcion":"MANUFACTURA DE PRODUCTOS METALICOS Y DE MADERA  "},
+{"clave":22012200,"descripcion":" ARMADOR DE MUEBLES"},
+{"clave":22022200,"descripcion":" AYUDANTE GENERAL"},
+{"clave":22032200,"descripcion":" CARPINTERO"},
+{"clave":22042200,"descripcion":" EBANISTA"},
+{"clave":22052200,"descripcion":" FRESADOR"},
+{"clave":22062200,"descripcion":" GRABADOR / PINTOGRAFISTA"},
+{"clave":22072200,"descripcion":" HERRERO"},
+{"clave":22082200,"descripcion":" HOJALATERO"},
+{"clave":22092200,"descripcion":" HOJALATERO AUTOMOTRIZ"},
+{"clave":22102200,"descripcion":" MONTADOR DE MARCOS"},
+{"clave":22112200,"descripcion":" ORFEBRE"},
+{"clave":22122200,"descripcion":" PAILERO"},
+{"clave":22132200,"descripcion":" PINTOR AUTOMOTRIZ"},
+{"clave":22142200,"descripcion":" PINTOR DE MUEBLES"},
+{"clave":22152200,"descripcion":" SOLDADOR DE MUEBLES"},
+{"clave":22162200,"descripcion":" TORNERO"},
+{"clave":2300,"descripcion":"MANUFACTURA DE PRODUCTOS QUIMICOS "},
+{"clave":23012300,"descripcion":"AYUDANTE GENERAL"},
+{"clave":23022300,"descripcion":"INGENIERO QUÍMICO"},
+{"clave":23032300,"descripcion":"INGENIERO QUÍMICO INDUSTRIAL"},
+{"clave":23042300,"descripcion":"LABORATORISTA QUÍMICO"},
+{"clave":23052300,"descripcion":"QUÍMICO ANALISTA"},
+{"clave":2400,"descripcion":"MANUFACTURA DE TEXTILES Y PRENDAS DE VESTIR  "},
+{"clave":24012400,"descripcion":" ACABADOR DE CALZADO"},
+{"clave":24022400,"descripcion":" ACABADOR DE PRENDAS DE VESTIR"},
+{"clave":24032400,"descripcion":" ACABADOR Y ADORNADOR DE SOMBREROS"},
+{"clave":24042400,"descripcion":" ACONDICIONADOR DE HILADOS"},
+{"clave":24052400,"descripcion":" ALIMENTADOR DE CARDAS"},
+{"clave":24062400,"descripcion":" ARTESANO TEXTIL"},
+{"clave":24072400,"descripcion":" AUXILIAR DE ESTAMPADOR DE TELAS"},
+{"clave":24082400,"descripcion":" AYUDANTE DE ATADOR TEXTIL"},
+{"clave":24092400,"descripcion":" AYUDANTE GENERAL"},
+{"clave":24102400,"descripcion":" BORDADOR A MANO"},
+{"clave":24112400,"descripcion":" CARDADOR DE FIBRAS"},
+{"clave":24122400,"descripcion":" CLASIFICADOR DE FIBRAS"},
+{"clave":24132400,"descripcion":" CLASIFICADOR DE TEXTILES"},
+{"clave":24142400,"descripcion":" COLOCADOR DE ENTRETELA"},
+{"clave":24152400,"descripcion":" CONFECCIONADOR COLCHAS Y COLCHONES"},
+{"clave":24162400,"descripcion":" CORTADOR DE TELAS"},
+{"clave":24172400,"descripcion":" CORTADOR PIELES"},
+{"clave":24182400,"descripcion":" COSEDOR DE CALZADO"},
+{"clave":24192400,"descripcion":" COSTURERA A MANO DE PRENDAS DE VESTIR"},
+{"clave":24202400,"descripcion":" COSTURERA PRENDAS DE CUERO Y PIEL"},
+{"clave":24212400,"descripcion":" DISEÑADOR DE MODAS"},
+{"clave":24222400,"descripcion":" DOBLADOR DE EMPEINE"},
+{"clave":24232400,"descripcion":" ENCASQUILLADOR DE CALZADO"},
+{"clave":24242400,"descripcion":" ESCOBERO"},
+{"clave":24252400,"descripcion":" ESTAMPADOR TEXTILES"},
+{"clave":24262400,"descripcion":" ESTIRADOR DE FIBRAS"},
+{"clave":24272400,"descripcion":" HILANDERO"},
+{"clave":24282400,"descripcion":" INGENIERO TEXTIL"},
+{"clave":24292400,"descripcion":" LAVADOR FIBRAS BRUTAS"},
+{"clave":24302400,"descripcion":" MACHUCONERO"},
+{"clave":24312400,"descripcion":" MEZCLADOR DE FIBRAS"},
+{"clave":24322400,"descripcion":" MONTADOR DE CORTE"},
+{"clave":24332400,"descripcion":" OPERADOR MÁQUINARIA TEXTIL"},
+{"clave":24342400,"descripcion":" PARAGÜERO"},
+{"clave":24352400,"descripcion":" PATRONISTA DE CALZADO"},
+{"clave":24362400,"descripcion":" PATRONISTA DE PELETERÍA"},
+{"clave":24372400,"descripcion":" PATRONISTA PRENDAS DE VESTIR"},
+{"clave":24382400,"descripcion":" REPARADOR ZAPATOS"},
+{"clave":24392400,"descripcion":" REPASADOR MANUAL"},
+{"clave":24402400,"descripcion":" SASTRE"},
+{"clave":24412400,"descripcion":" TALABARTERO"},
+{"clave":24422400,"descripcion":" TAPICERO AUTOMOTRIZ"},
+{"clave":24432400,"descripcion":" TÉCNICO TEXTIL"},
+{"clave":24442400,"descripcion":" TEJEDOR EN TELAR"},
+{"clave":24452400,"descripcion":" TEÑIDOR CUERO Y PIELES"},
+{"clave":24462400,"descripcion":" TORCEDOR DE FIBRAS"},
+{"clave":24472400,"descripcion":" ZAPATERO"},
+{"clave":2500,"descripcion":"MATEMATICAS "},
+{"clave":25012500,"descripcion":"ACTUARIO"},
+{"clave":25022500,"descripcion":"ESTADÍGRAFO (A);"},
+{"clave":25032500,"descripcion":"MATEMÁTICO(A);"},
+{"clave":26002600,"descripcion":"PESCA Y ACUACULTURA "},
+{"clave":2601,"descripcion":"ADMINISTRADOR DE UNIDAD ACUÍCOLA"},
+{"clave":26022600,"descripcion":"CULTIVADOR DE CRUSTÁCEOS Y MOLUSCOS"},
+{"clave":26032600,"descripcion":"PEÓN PESQUERO"},
+{"clave":26042600,"descripcion":"PESCADOR"},
+{"clave":26052600,"descripcion":"PISCICULTOR"},
+{"clave":2700,"descripcion":"PLANEACION Y SUPERVISION   "},
+{"clave":27012700,"descripcion":"ADMINISTRADOR DE OBRA"},
+{"clave":27022700,"descripcion":"ARQUITECTO"},
+{"clave":27032700,"descripcion":"CALCULISTA DE COSTOS DE CONSTRUCCIÓN"},
+{"clave":27042700,"descripcion":"CALCULISTA DE OBRAS DE INGENIERÍA"},
+{"clave":27052700,"descripcion":"CARTÓGRAFO"},
+{"clave":27062700,"descripcion":"DIBUJANTE ARQUITECTÓNICO"},
+{"clave":27072700,"descripcion":"DISEÑADOR DE INTERIORES"},
+{"clave":27082700,"descripcion":"GERENTE DE CONSTRUCCIÓN"},
+{"clave":27092700,"descripcion":"INGENIERO CIVIL"},
+{"clave":27102700,"descripcion":"INGENIERO CONSULTOR EN OBRAS DE CONSTRUCCIÓN"},
+{"clave":27112700,"descripcion":"INGENIERO DE CAMINOS"},
+{"clave":27122700,"descripcion":"ING.DE COSTOS Y PRESUPUESTO (MAT. DE CONSTR.);"},
+{"clave":27132700,"descripcion":"INGENIERO DE SISTEMAS HIDRÁULICOS"},
+{"clave":27142700,"descripcion":"INGENIERO EN MECÁNICA DE SUELOS"},
+{"clave":27152700,"descripcion":"INGENIERO EN OBRAS PÚBLICAS"},
+{"clave":27162700,"descripcion":"INGENIERO EN SANEAMIENTO"},
+{"clave":27172700,"descripcion":"INSPECTOR DE CONTROL DE CALIDAD"},
+{"clave":27182700,"descripcion":"INSPECTOR DE ESTRUCTURAS DE ACERO"},
+{"clave":27192700,"descripcion":"INSPECTOR OBRAS Y EDIFICIOS"},
+{"clave":27202700,"descripcion":"RESIDENTE DE OBRA"},
+{"clave":27212700,"descripcion":"SUPERINTENDENTE DE CONSTRUCCIÓN"},
+{"clave":27222700,"descripcion":"SUPERVISOR DE OBRA"},
+{"clave":27232700,"descripcion":"TÉCNICO AUXILIAR DE ARQUITECTURA"},
+{"clave":27242700,"descripcion":"TÉCNICO EN CONSTRUCCIÓN"},
+{"clave":27252700,"descripcion":"TÉCNICO TOPÓGRAFO"},
+{"clave":27262700,"descripcion":"TOPÓGRAFO"},
+{"clave":2800,"descripcion":"PROCESAMIENTO DE MINERALES Y METALURGIA  "},
+{"clave":28012800,"descripcion":" ACABADOR DE PIEZAS DE FIBRA DE VIDRIO"},
+{"clave":28022800,"descripcion":" ACABADOR DE PRODUCTOS DE VIDRIO"},
+{"clave":28032800,"descripcion":" AFILADOR EN GENERAL"},
+{"clave":28042800,"descripcion":" AJUSTADOR-MODELISTA (FUNDICIÓN);"},
+{"clave":28052800,"descripcion":" ALFARERO"},
+{"clave":28062800,"descripcion":" ALIMENTADOR DE MOLEDORA DE VIDRIO"},
+{"clave":28072800,"descripcion":" AYUDANTE GENERAL"},
+{"clave":28082800,"descripcion":" CANTERO"},
+{"clave":28092800,"descripcion":" CIZALLISTA"},
+{"clave":28102800,"descripcion":" COLADOR DE METALES"},
+{"clave":28112800,"descripcion":" CORAZONERO"},
+{"clave":28122800,"descripcion":" CORTADOR CRISTALES ÓPTICOS"},
+{"clave":28132800,"descripcion":" CORTADOR DE PIEDRA"},
+{"clave":28142800,"descripcion":" CORTADOR DE PIEZAS DE CRISTAL"},
+{"clave":28152800,"descripcion":" CORTADOR VIDRIO"},
+{"clave":28162800,"descripcion":" FUNDIDOR PIEZAS DE MOLDEO"},
+{"clave":28172800,"descripcion":" GRABADOR DE PIEDRA"},
+{"clave":28182800,"descripcion":" GRABADOR DE VIDRIO O CRISTAL CON PANTÓGRAFO"},
+{"clave":28192800,"descripcion":" INGENIERO METALÚRGICO"},
+{"clave":28202800,"descripcion":" LAMINADOR DE VIDRIO"},
+{"clave":28212800,"descripcion":" LIMPIADOR DE METALES"},
+{"clave":28222800,"descripcion":" LISADOR DE CARTÓN DE ASBESTO"},
+{"clave":28232800,"descripcion":" MACHERO FUNDICIÓN"},
+{"clave":28242800,"descripcion":" MOLDEADOR DE CAJA"},
+{"clave":28252800,"descripcion":" PULIDOR"},
+{"clave":28262800,"descripcion":" PULIDOR CRISTALES ÓPTICOS"},
+{"clave":28272800,"descripcion":" PULIDOS CRISTALES Y VIDRIOS DECORATIVOS"},
+{"clave":28282800,"descripcion":" SOPLADOR DE VIDRIO ARTÍSTICO"},
+{"clave":28292800,"descripcion":" TÉCNICO METALÚRGICO"},
+{"clave":28302800,"descripcion":" TEMPLADOR REVENIDO DE METALES"},
+{"clave":28312800,"descripcion":" TERMINADOR DE CONCRETO"},
+{"clave":28322800,"descripcion":" TORNERO DE PRODUCTOS DE PIEDRA"},
+{"clave":28332800,"descripcion":" TREFILADOR A MANO (ALAMBRE);"},
+{"clave":28342800,"descripcion":" VITRALISTA"},
+{"clave":2900,"descripcion":"PRODUCCION Y BIOTECNOLOGIA "},
+{"clave":29012900,"descripcion":"APICULTOR"},
+{"clave":29022900,"descripcion":"AYUDANTE GENERAL"},
+{"clave":29032900,"descripcion":"COSECHADOR DE MIEL"},
+{"clave":29042900,"descripcion":"CRIADOR DE ANIMALES DE LABORATORIO"},
+{"clave":29052900,"descripcion":"INGENIERO AGRÍCOLA"},
+{"clave":29062900,"descripcion":"INGENIERO AGRÓNOMO"},
+{"clave":29072900,"descripcion":"INGENIERO BIÓMEDICO"},
+{"clave":29082900,"descripcion":"AYUDANTE GENERAL"},
+{"clave":29092900,"descripcion":"CALDERO"},
+{"clave":29102900,"descripcion":"COORDINADOR DE TRÁFICO DE ENERGÍA ELÉCTRICA"},
+{"clave":29112900,"descripcion":"FOGONERO A MÁQUINA DE VAPOR"},
+{"clave":29122900,"descripcion":"INGENIERO HIDRAULICO"},
+{"clave":29132900,"descripcion":"INGENIERO HIDRÓLOGO"},
+{"clave":29142900,"descripcion":"LECTURISTA"},
+{"clave":29152900,"descripcion":"OPERADOR DE INSTALACIONES ENERGIA ELÉCTRICA"},
+{"clave":29162900,"descripcion":"TÉCNICO EN HIDROMETRÍA"},
+{"clave":29172900,"descripcion":"TÉCNICO INGENIERÍA HIDRÁULICA"},
+{"clave":3000,"descripcion":"PUBLICACION Y MEDIOS   "},
+{"clave":30013000,"descripcion":" ASESOR EDITORIAL"},
+{"clave":30023000,"descripcion":" ASISTENTE DE PRODUCCIÓN"},
+{"clave":30033000,"descripcion":" CAMARÓGRAFO"},
+{"clave":30043000,"descripcion":" COLUMNISTA"},
+{"clave":30053000,"descripcion":" COMENTARISTA RADIO Y TELEVISIÓN"},
+{"clave":30063000,"descripcion":" CORRECTOR DE ESTILO"},
+{"clave":30073000,"descripcion":" CRONISTA"},
+{"clave":30083000,"descripcion":" DIBUJANTE ILUSTRADOR"},
+{"clave":30093000,"descripcion":" DIRECTORES"},
+{"clave":30103000,"descripcion":" EDITOR"},
+{"clave":30113000,"descripcion":" GUIONISTA"},
+{"clave":30123000,"descripcion":" ILUMINADOR"},
+{"clave":30133000,"descripcion":" LIC. EN COMUNICACIÓN"},
+{"clave":30143000,"descripcion":" LOCUTOR DE RADIO Y TELEVISIÓN"},
+{"clave":30153000,"descripcion":" MAESTRO DE CEREMONIAS"},
+{"clave":30163000,"descripcion":" PERIODISTA"},
+{"clave":30173000,"descripcion":" PRODUCTORES"},
+{"clave":30183000,"descripcion":" REDACTOR"},
+{"clave":30193000,"descripcion":" REPORTERO"},
+{"clave":30203000,"descripcion":" ROTULISTA"},
+{"clave":30213000,"descripcion":" TÉCNICO DE SONIDO"},
+{"clave":30223000,"descripcion":" TÉCNICO EN EQUIPOS DE RADIO Y TELEVISIÓN"},
+{"clave":30233000,"descripcion":" TRAMOYISTA"},
+{"clave":3100,"descripcion":"PUBLICIDAD Y PROPAGANDA   "},
+{"clave":31013100,"descripcion":" EDECÁN (ENROLLER);"},
+{"clave":31023100,"descripcion":" LIC. EN MERCADOTÉCNIA"},
+{"clave":31033100,"descripcion":" MODELO DE MODAS"},
+{"clave":31043100,"descripcion":" MODELO DE PUBLICIDAD"},
+{"clave":31053100,"descripcion":" PUBLICISTA"},
+{"clave":31063100,"descripcion":" TÉCNICO EN MERCADOTECNIA"},
+{"clave":3200,"descripcion":"REFINACION Y BENEFICIO  "},
+{"clave":32013200,"descripcion":" AYUDANTE GENERAL"},
+{"clave":32023200,"descripcion":" BOMBERO DE REFINACIÓN DE PETRÓLEO"},
+{"clave":32033200,"descripcion":" HORNERO DE COCIMIENTO DE PRODUCTOS MINERALES MET."},
+{"clave":32043200,"descripcion":" INGENIERO PETROQUÍMICO"},
+{"clave":32053200,"descripcion":" INSPECTOR DE PLANTAS PETROQUÍMICAS"},
+{"clave":32063200,"descripcion":" INSPECTOR DE TUBERÍAS DE PETRÓLEO"},
+{"clave":32073200,"descripcion":" OPERADOR DE CENTRO DE CONTROL"},
+{"clave":32083200,"descripcion":" SUPERINTENDENTE DE PLANTA"},
+{"clave":3300,"descripcion":"SEGURIDAD PUBLICA   "},
+{"clave":33013300,"descripcion":"CUSTODIO"},
+{"clave":33023300,"descripcion":"ECOGUARDA"},
+{"clave":33033300,"descripcion":"GUARDIA DE SEGURIDAD"},
+{"clave":33043300,"descripcion":"POLICÍA AUXILIAR"},
+{"clave":33053300,"descripcion":"POLICIA DE CAMINOS"},
+{"clave":33063300,"descripcion":"POLICIA DE TRÁNSITO"},
+{"clave":33073300,"descripcion":"POLICIA JUDICIAL"},
+{"clave":33083300,"descripcion":"POLICIA PREVENTIVO"},
+{"clave":33093300,"descripcion":"VIGILANTE"},
+{"clave":3400,"descripcion":"SERVICIO POSTAL Y MENSAJERIA  "},
+{"clave":34013400,"descripcion":" CARTERO"},
+{"clave":34023400,"descripcion":" CHOFER MENSAJERO"},
+{"clave":34033400,"descripcion":" MENSAJERO"},
+{"clave":3500,"descripcion":"SERVICIOS BIBLIOTECARIOS "},
+{"clave":35013500,"descripcion":"AUXILIAR DE BIBLIOTECA"},
+{"clave":35023500,"descripcion":"BIBLIOTECARIO"},
+{"clave":3600,"descripcion":"SERVICIOS DE APOYO AL TRANSPORTE  "},
+{"clave":36013600,"descripcion":" ACOMODADOR DE AUTOS"},
+{"clave":36023600,"descripcion":" AUXILIAR VIAL"},
+{"clave":36033600,"descripcion":" AYUDANTE DE CHOFER"},
+{"clave":36043600,"descripcion":" AYUDANTE DE MAQUINISTA DE PATIO Y DE CAMINO"},
+{"clave":36053600,"descripcion":" EQUIPAJERO"},
+{"clave":36063600,"descripcion":" ESPECIALISTA EN SERVICIOS AÉREOS"},
+{"clave":36073600,"descripcion":" GARROTERO DE CAMINO Y DE PATIO"},
+{"clave":36083600,"descripcion":" GUARDACRUCERO"},
+{"clave":36093600,"descripcion":" JEFE DE AEROPUERTO"},
+{"clave":36103600,"descripcion":" JEFE DE OPERACIONES DE APOYO EN EL TRANS. AÉREO"},
+{"clave":36113600,"descripcion":" JEFE DE SEGURIDAD AÉREA"},
+{"clave":36123600,"descripcion":" JEFE DE TRÁFICO MARÍTIMO"},
+{"clave":36133600,"descripcion":" MACHETERO"},
+{"clave":36143600,"descripcion":" SUPERVISOR DE TERMINAL"},
+{"clave":36153600,"descripcion":" SUPERVISOR DE TRANSPORTE TERRESTRE"},
+{"clave":3700,"descripcion":"SERVICIOS DE BELLEZA  "},
+{"clave":37013700,"descripcion":" AUXILIAR GENERAL"},
+{"clave":37023700,"descripcion":" BARBERO"},
+{"clave":37033700,"descripcion":" COSMETÓLOGO"},
+{"clave":37043700,"descripcion":" ESTILISTA"},
+{"clave":37053700,"descripcion":" MANICURISTA-PEDICURISTA"},
+{"clave":37063700,"descripcion":" MAQUILLISTA"},
+{"clave":37073700,"descripcion":" PEINADOR"},
+{"clave":37083700,"descripcion":" PELUQUERO CANINO"},
+{"clave":3800,"descripcion":"SERVICIOS DE ESPARCIMIENTO  "},
+{"clave":38013800,"descripcion":" ANIMADOR SOCIO-CULTURAL"},
+{"clave":38023800,"descripcion":" ÁRBITRO DEPORTIVO"},
+{"clave":38033800,"descripcion":" CONDUCTOR RECREATIVO"},
+{"clave":38043800,"descripcion":" ENTRENADOR DE FÚTBOL"},
+{"clave":38053800,"descripcion":" ENTRENADOR DEPORTIVO"},
+{"clave":38063800,"descripcion":" INSTRUCTOR DE AERÓBICS"},
+{"clave":38073800,"descripcion":" INSTRUCTOR DE CULTURA FÍSICA"},
+{"clave":38083800,"descripcion":" INSTRUCTOR DE NATACIÓN"},
+{"clave":38093800,"descripcion":" INSTRUCTORDE GIMNASIA"},
+{"clave":38103800,"descripcion":" PROMOTOR DE DIFUSIÓN CULTURAL"},
+{"clave":3900,"descripcion":"SERVICIOS DE LIMPIEZA  "},
+{"clave":39013900,"descripcion":" AFANADORA"},
+{"clave":39023900,"descripcion":" AMA DE LLAVES"},
+{"clave":39033900,"descripcion":" AYUDANTE DE LIMPIEZA"},
+{"clave":39043900,"descripcion":" BOLERO (CALZADO);"},
+{"clave":39053900,"descripcion":" CONTROLADOR DE PLAGAS"},
+{"clave":39063900,"descripcion":" DESHOLLINADOR"},
+{"clave":39073900,"descripcion":" FUMIGADOR"},
+{"clave":39083900,"descripcion":" LAVADOR DE VEHÍCULOS"},
+{"clave":39093900,"descripcion":" LAVADOR DE VENTANAS"},
+{"clave":39103900,"descripcion":" LAVANDERO A MANO (LAVANDERÍA);"},
+{"clave":39113900,"descripcion":" MOZO DE LIMPIEZA"},
+{"clave":39123900,"descripcion":" AGENTE DE VIAJES"},
+{"clave":39143900,"descripcion":" ENCARGADO DE AGENCIA DE VIAJES"},
+{"clave":39153900,"descripcion":" GUÍA DE TURISTAS"},
+{"clave":39163900,"descripcion":" PROMOTOR DE SERVICIOS TURÍSTICOS"},
+{"clave":39173900,"descripcion":" SOBRECARGO (AUTOBÚS);"},
+{"clave":39183900,"descripcion":" SOBRECARGO (LÍNEAS AÉREAS);"},
+{"clave":39193900,"descripcion":" TÉCNICO EN ADMINISTRACIÓN DE EMPRESAS TURÍSTICAS"},
+{"clave":4000,"descripcion":"SERVICIOS DOMESTICOS Y PERSONALES  "},
+{"clave":40014000,"descripcion":" CERRAJERO"},
+{"clave":40024000,"descripcion":" CONSERJE"},
+{"clave":40034000,"descripcion":" CUIDADOR DE PERSONAS"},
+{"clave":40054000,"descripcion":" MASAJISTA"},
+{"clave":40064000,"descripcion":" PLANCHADOR A MANO"},
+{"clave":40074000,"descripcion":" REPARADOR DE APARATOS ELECTRODOMÉSTICOS"},
+{"clave":40084000,"descripcion":" VALET"},
+{"clave":40094000,"descripcion":"AMAS DE CASA"},
+{"clave":4100,"descripcion":"SERVICIOS LEGALES  "},
+{"clave":41014100,"descripcion":" ABOGADO"},
+{"clave":41024100,"descripcion":" ACTUARIO CIVIL"},
+{"clave":41034100,"descripcion":" AGENTE DE FIANZAS"},
+{"clave":41044100,"descripcion":" ANALISTA ADUANAL"},
+{"clave":41054100,"descripcion":" ASESOR JURÍDICO"},
+{"clave":41064100,"descripcion":" ASISTENTE JURÍDICO"},
+{"clave":41074100,"descripcion":" GESTOR ADUANAL"},
+{"clave":41084100,"descripcion":" NOTARIO PÚBLICO"},
+{"clave":4200,"descripcion":"SERVICIOS MEDICOS Y SANITARIOS "},
+{"clave":42014200,"descripcion":" ANESTESISTA"},
+{"clave":42024200,"descripcion":" CAMILLERO"},
+{"clave":42034200,"descripcion":" ENFERMERA"},
+{"clave":42044200,"descripcion":" GINECÓLOGO"},
+{"clave":42054200,"descripcion":" LABORATORISTA CLÍNICO"},
+{"clave":42064200,"descripcion":" MÉDICO CIRUJANO"},
+{"clave":42074200,"descripcion":" MÉDICO ESPECIALISTA"},
+{"clave":42084200,"descripcion":" NUTRIOLOGO"},
+{"clave":42094200,"descripcion":" OBSTETRA"},
+{"clave":42104200,"descripcion":" ODONTÓLOGO"},
+{"clave":42114200,"descripcion":" OFTALMÓLOGO"},
+{"clave":42124200,"descripcion":" PARAMÉDICO"},
+{"clave":42134200,"descripcion":" PEDIATRA"},
+{"clave":42144200,"descripcion":" PROMOTOR SANITARIO"},
+{"clave":42154200,"descripcion":" PSICÓLOGO"},
+{"clave":42164200,"descripcion":" PSIQUIATRA"},
+{"clave":42174200,"descripcion":" TÉCNICO FARMACOBIÓLOGO"},
+{"clave":42184200,"descripcion":" TERAPEUTA"},
+{"clave":42194200,"descripcion":" VETERINARIO ZOOTECNISTA"},
+{"clave":42204200,"descripcion":" VISITADOR MÉDICO"},
+{"clave":4300,"descripcion":"TECNOLOGIA AERONAUTICA Y MARINA  "},
+{"clave":43014300,"descripcion":" INGENIERO EN AERONÁUTICA"},
+{"clave":43024300,"descripcion":" INGENIERO NAVAL"},
+{"clave":43034300,"descripcion":" TÉCNICO EN AERONÁUTICA"},
+{"clave":4400,"descripcion":"TECNOLOGIA DE PROCESOS INDUSTRIALES "},
+{"clave":44014400,"descripcion":"INGENIERO EN DISEÑO Y MONTAJE"},
+{"clave":44024400,"descripcion":"INSTALADOR DE MAQUINARIA INDUSTRIAL"},
+{"clave":44034400,"descripcion":"TÉCNICO EN INSTALACIÓN Y MONTAJE"},
+{"clave":4500,"descripcion":"TECNOLOGIA ELECTRICA "},
+{"clave":45014500,"descripcion":"AYUDANTE GENERAL"},
+{"clave":45024500,"descripcion":"ELECTRICISTA"},
+{"clave":45034500,"descripcion":"ELECTRICISTA AUTOMOTRIZ"},
+{"clave":45044500,"descripcion":"ELECTRICISTA INDUSTRIAL"},
+{"clave":45054500,"descripcion":"ELECTRICISTA MANTENIMIENTO"},
+{"clave":45064500,"descripcion":"ELECTROMECÁNICO INSTRUMENTOS"},
+{"clave":45074500,"descripcion":"INGENIERO ELECTRICISTA"},
+{"clave":45084500,"descripcion":"INSTALADOR CABLES ELÉCTRICOS"},
+{"clave":45094500,"descripcion":"INSTALADOR DE LÍNEAS DE ENERGÍA ELÉCTRICA"},
+{"clave":45104500,"descripcion":"LINIERO MANIOBRISTA"},
+{"clave":45114500,"descripcion":"LINIERO SUBTERRÁNEO"},
+{"clave":45124500,"descripcion":"TABLERISTA (ELÉCTRICO);"},
+{"clave":45134500,"descripcion":"TÉCNICO ELECTRICISTA"},
+{"clave":45144500,"descripcion":"TÉCNICO ELECTROMECÁNICO"},
+{"clave":45154500,"descripcion":"VERIFICADOR-CALIBRADOR DE MEDIDORES"},
+{"clave":4600,"descripcion":"TECNOLOGIA ELECTRONICA "},
+{"clave":46014600,"descripcion":"ARMADOR DE CIRCUITOS ELÉCTRICOS Y ELECTRÓNICOS"},
+{"clave":46024600,"descripcion":"INGENIERO EN ELECTRÓNICA"},
+{"clave":46034600,"descripcion":"TÉCNICO EN ALARMAS"},
+{"clave":46044600,"descripcion":"TÉCNICO EN ELECTRÓNICA"},
+{"clave":47004700,"descripcion":"TECNOLOGIA MECANICA  "},
+{"clave":47014700,"descripcion":" ADAPTADOR DE APARATOS PARA SORDERA"},
+{"clave":47024700,"descripcion":" AJUSTADOR-ELECTRICISTA ELEVADORES"},
+{"clave":47034700,"descripcion":" AYUDANTE GENERAL"},
+{"clave":47044700,"descripcion":" ELECTROMECÁNICO INSTRUMENTOS DE MEDICIÓN"},
+{"clave":47054700,"descripcion":" INGENIERO DE DISEÑO MECÁNICO"},
+{"clave":47064700,"descripcion":" INGENIERO DE SEGURIDAD INDUSTRIAL"},
+{"clave":47074700,"descripcion":" INGENIERO INDUSTRIAL"},
+{"clave":47084700,"descripcion":" INGENIERO MECÁNICO AUTOMOTRIZ"},
+{"clave":47094700,"descripcion":" INGENIERO MECÁNICO DE LOCOMOTORAS"},
+{"clave":47104700,"descripcion":" INGENIERO MECÁNICO DE MOTORES"},
+{"clave":47114700,"descripcion":" INGENIERO MECÁNICO ELECTRICISTA"},
+{"clave":47124700,"descripcion":" INGENIERO MECÁNICO EN GENERAL"},
+{"clave":47134700,"descripcion":" INGENIERO MECÁNICO INDUSTRIAL"},
+{"clave":47144700,"descripcion":" INGENIERO MECÁNICO NAVAL"},
+{"clave":47154700,"descripcion":" INGENIERO MÉCÁNICO NAVAL"},
+{"clave":47164700,"descripcion":" INGENIERO MECÁNICOMAQUINARIA AGRÍCOLA"},
+{"clave":47174700,"descripcion":" MECÁNICO AJUSTADOR MAQUINARIA"},
+{"clave":47184700,"descripcion":" MECÁNICO DE APARATOS ORTOPÉDICOS"},
+{"clave":47194700,"descripcion":" MECÁNICO DE BICICLETAS"},
+{"clave":47204700,"descripcion":" MECÁNICO DE ELEVADORES"},
+{"clave":47214700,"descripcion":" MECÁNICO DE MOTOCICLETAS"},
+{"clave":47224700,"descripcion":" MECÁNICO DENTAL"},
+{"clave":47234700,"descripcion":" MECÁNICO ELECTRICISTA"},
+{"clave":47244700,"descripcion":" MECÁNICO ENGRASADOR (INDUSTRIAL);"},
+{"clave":47254700,"descripcion":" MECÁNICO INSTRUMENTOS ODONTOLOGÍA"},
+{"clave":47264700,"descripcion":" MECÁNICO INSTRUMENTOS ÓPTICOS"},
+{"clave":47274700,"descripcion":" MECÁNICO MANTENIMIENTO INDUSTRIAL"},
+{"clave":47284700,"descripcion":" MOFLERO"},
+{"clave":47294700,"descripcion":" MONTACARGISTA"},
+{"clave":47304700,"descripcion":" MOTORISTA"},
+{"clave":47314700,"descripcion":" OPERADOR DE MAQUINARIA PESADA"},
+{"clave":47324700,"descripcion":" RELOJERO"},
+{"clave":47334700,"descripcion":" TÉCNICO ELECTROMECÁNICO AUTOMOTRIZ"},
+{"clave":47344700,"descripcion":" TÉCNICO EN DISEÑO Y CONSTRUCCIÓN"},
+{"clave":47354700,"descripcion":" TÉCNICO EN MANTENIMIENTO INDUSTRIAL"},
+{"clave":47364700,"descripcion":" TÉCNICO EN MAQUINARIA DE CONSTRUCCIÓN"},
+{"clave":47374700,"descripcion":" TÉCNICO MECÁNICO"},
+{"clave":47384700,"descripcion":" TÉCNICO MECÁNICO AUTOMOTRIZ"},
+{"clave":47394700,"descripcion":" TÉCNICO MECÁNICO INDUSTRIAL"},
+{"clave":47404700,"descripcion":" TÉCNICO PRÓTESIS"},
+{"clave":47414700,"descripcion":" TÉCNICO RADIÓLOGO (RAYOS X);"},
+{"clave":47424700,"descripcion":" VULCANIZADOR"},
+{"clave":4800,"descripcion":"TELEFONIA Y TELECOMUNICACIONES  "},
+{"clave":48014800,"descripcion":" AYUDANTE GENERAL"},
+{"clave":48024800,"descripcion":" DISEÑADOR DE REDES DE TELECOMUNICACIONES"},
+{"clave":48034800,"descripcion":" INGENIERO EN TELECOMUNICACIONES"},
+{"clave":48044800,"descripcion":" INGENIERO EN TELEMÁTICA"},
+{"clave":48054800,"descripcion":" RADIO-TELEGRAFISTA"},
+{"clave":48064800,"descripcion":" REPARADOR DE LÍNEAS"},
+{"clave":48074800,"descripcion":" TÉCNICO EN EQUIPOS DE TELECOMUNICACIONES"},
+{"clave":48084800,"descripcion":" TÉCNICO EN TELECOMUNICACIONES"},
+{"clave":48094800,"descripcion":" TÉCNICO EN TELEMÁTICA"},
+{"clave":48104800,"descripcion":" TELEGRAFISTA"},
+{"clave":48114800,"descripcion":" TELETIPISTA"},
+{"clave":4900,"descripcion":"TELEVISION Y RADIO TRANSMISION "},
+{"clave":49014900,"descripcion":"INGENIERO DE RADIO"},
+{"clave":49024900,"descripcion":"INGENIERO DE TELEVISIÓN"},
+{"clave":49034900,"descripcion":"INSTALADOR ANTENAS DE RADIO Y TELEVISIÓN"},
+{"clave":49044900,"descripcion":"RADIO TÉCNICO"},
+{"clave":49054900,"descripcion":"RADIO-OPERADOR"},
+{"clave":49064900,"descripcion":"TÉCNICO EN TELEVISIÓN"},
+{"clave":5000,"descripcion":"TRABAJO DE OFICINA   "},
+{"clave":50015000,"descripcion":"ANALISTA"},
+{"clave":50025000,"descripcion":"ARCHIVISTA"},
+{"clave":50035000,"descripcion":"ASISTENTE DE GERENCIA"},
+{"clave":50045000,"descripcion":"AUXILIAR ADMINISTRATIVO"},
+{"clave":50055000,"descripcion":"AUXILIAR DE ARCHIVO"},
+{"clave":50065000,"descripcion":"CAPTURISTA DE DATOS"},
+{"clave":50075000,"descripcion":"DESPACHADOR"},
+{"clave":50105000,"descripcion":"ENCUESTADOR"},
+{"clave":50115000,"descripcion":"GESTOR"},
+{"clave":50125000,"descripcion":"OPERADOR DE TÉLEX Y FAX"},
+{"clave":50135000,"descripcion":"RECEPCIONISTA EN GENERAL"},
+{"clave":50145000,"descripcion":"SECRETARIA"},
+{"clave":50155000,"descripcion":"SECRETARIA BILINGÜE"},
+{"clave":50165000,"descripcion":"SECRETARIA EJECUTIVA"},
+{"clave":50175000,"descripcion":"SECRETARIA GERENCIAL"},
+{"clave":50185000,"descripcion":"TAQUIMECANÓGRAFO"},
+{"clave":50195000,"descripcion":"TELEFONISTA"},
+{"clave":5100,"descripcion":"TRADUCCION "},
+{"clave":51015100,"descripcion":"INTÉRPRETE"},
+{"clave":51025100,"descripcion":"TRADUCTOR"},
+{"clave":5200,"descripcion":"TRANSPORTE AEREO Y MARITIMO  "},
+{"clave":52015200,"descripcion":" CAPITÁN DE BUQUE"},
+{"clave":52025200,"descripcion":" CAPITÁN DE PUERTO"},
+{"clave":52035200,"descripcion":" CONDUCTOR DE BOTE DE MOTOR"},
+{"clave":52045200,"descripcion":" CONDUCTOR DE TRANSBORDADOR"},
+{"clave":52055200,"descripcion":" CONTROLADOR DE TRÁFICO AÉREO"},
+{"clave":52065200,"descripcion":" CONTROLADOR DE TRÁFICO MARÍTIMO"},
+{"clave":52075200,"descripcion":" COPILOTO DE AERONAVE"},
+{"clave":52085200,"descripcion":" DESPACHADOR DE TRANSPORTE AÉREO"},
+{"clave":52095200,"descripcion":" DESPACHADOR DE VUELOS"},
+{"clave":52105200,"descripcion":" INGENIERO DE VUELO"},
+{"clave":52115200,"descripcion":" INSTRUCTOR DE VUELO"},
+{"clave":52125200,"descripcion":" LANCHERO"},
+{"clave":52135200,"descripcion":" MARINERO"},
+{"clave":52145200,"descripcion":" OFICIAL DE CUBIERTA"},
+{"clave":52155200,"descripcion":" PILOTO AVIADOR"},
+{"clave":52165200,"descripcion":" PILOTO DE HELICÓPTERO"},
+{"clave":52175200,"descripcion":" PROGRAMADOR DE RUTAS TRANSPORTE AÉREO"},
+{"clave":52185200,"descripcion":" TÉCNICO EN SEGURIDAD TRÁFICO AÉREO"},
+{"clave":5300,"descripcion":"TRANSPORTE FERROVIARIO  "},
+{"clave":53015300,"descripcion":" CONDUCTOR DE TREN METROPOLITANO"},
+{"clave":53025300,"descripcion":" CONDUCTOR FERROCARRIL"},
+{"clave":53035300,"descripcion":" CONTROLADOR DE TRÁFICO DE TRENES"},
+{"clave":53045300,"descripcion":" DESPACHADOR DE TRENES"},
+{"clave":53055300,"descripcion":" INSPECTOR DE PASAJE"},
+{"clave":53065300,"descripcion":" JEFE DE ESTACIÓN"},
+{"clave":53075300,"descripcion":" MAQUINISTA DE PATIO"},
+{"clave":5308,"descripcion":" OPERADOR DE CAMBIO DE CONTROL REMOTO"},
+{"clave":54005400,"descripcion":"TRANSPORTE POR VEHICULOS  "},
+{"clave":54015400,"descripcion":" AUTOMOTORES CHOFER AUTOMÓVIL"},
+{"clave":54025400,"descripcion":" AUTOMOTORES CHOFER DE CAMIÓN DE CARGA"},
+{"clave":54035400,"descripcion":" AUTOMOTORES CHOFER DE CAMIÓN REPARTIDOR"},
+{"clave":54045400,"descripcion":" AUTOMOTORES CONDUCTOR CAMIÓN DE GRAN TONELAJE"},
+{"clave":54055400,"descripcion":" AUTOMOTORES CONDUCTOR CAMIONETA"},
+{"clave":54065400,"descripcion":" AUTOMOTORES CONDUCTOR DE AUTOBÚS"},
+{"clave":54075400,"descripcion":" AUTOMOTORES CONDUCTOR DE COLECTIVO"},
+{"clave":54085400,"descripcion":" AUTOMOTORES CONDUCTOR MOTOCICLETA"},
+{"clave":54095400,"descripcion":" AUTOMOTORES TAXISTA"},
+{"clave":5500,"descripcion":"EMPLEADO"},
+{"clave":55011000,"descripcion":"EMPLEADO DE GOBIERNO"},
+{"clave":55021000,"descripcion":"EMPLEADO DE OFICINA"},
+{"clave":55031000,"descripcion":"EMPLEADO INFORMACIÓN AL PÚBLICO"},
+{"clave":55041000,"descripcion":"EMPLEADO DE FOTOCOPIADORA"},
+{"clave":55051000,"descripcion":" EMPLEADO OPERACIONES DE CAMBIO"},
+{"clave":55061000,"descripcion":" EMPLEADO DE MOSTRADOR"},
+{"clave":55071000,"descripcion":"EMPLEADO DE PUERTA"},
+{"clave":55091000,"descripcion":" EMPLEADA DOMÉSTICA"},
+{"clave":60001000,"descripcion":"LABORES DEL HOGAR"},
+{"clave":7000,"descripcion":"GOBIERNO"},
+{"clave":70007001,"descripcion":"SERVICIOS"},
+{"clave":9000,"descripcion":"OTRAS OCUPACIONES"},
+{"clave":90009001,"descripcion":"JUBILADO"},
+{"clave":90009002,"descripcion":"PENSIONADO"},
+{"clave":90009999,"descripcion":"SIN OCUPACION"}]')  if Ocupation.all.count==0
+
+ Conf.create(RFC:"eee555555eee") if Conf.all.count==0
+ 
+ 
+if Destination.count == 0
+    Destination.create(descricion:"ADQUIRIR O COMPRAR MERCANCIA")
+    Destination.create(descricion:"COMPRAR MAQUINARIA, EQUIPO O HERRAMIENTAS")
+    Destination.create(descricion:"AMPLIAR, ADECUAR O REPARAR EL LOCAL O VEHICULO")
+    Destination.create(descricion:"COMPRAR LOCAL O VEHICULO")
+    Destination.create(descricion:"PAGAR DEUDAS DEL NEGOCIO")
+end
+
+
+if (CCountry.count == 0)
+CCountry.create(nombre:'MEXICO',clave:'0')
+end
+if (CState.count == 0)
+CState.create(nombre:'Chihuahua',clave:'6',c_country_id:1)
+CState.create(nombre:'Ciudad de Mexico (antes Distrito Federal modificado 03 de febrero de 2016)',clave:'9',c_country_id:1)
+CState.create(nombre:'Nayarit',clave:'18',c_country_id:1)
+CState.create(nombre:'Baja California',clave:'2',c_country_id:1)
+CState.create(nombre:'Morelos',clave:'17',c_country_id:1)
+CState.create(nombre:'Michoacan De Ocampo',clave:'16',c_country_id:1)
+CState.create(nombre:'San Luis Potosi',clave:'24',c_country_id:1)
+CState.create(nombre:'Sinaloa',clave:'25',c_country_id:1)
+CState.create(nombre:'Nuevo Leon',clave:'19',c_country_id:1)
+CState.create(nombre:'Campeche',clave:'4',c_country_id:1)
+CState.create(nombre:'Colima',clave:'8',c_country_id:1)
+CState.create(nombre:'Guanajuato',clave:'11',c_country_id:1)
+CState.create(nombre:'Durango',clave:'10',c_country_id:1)
+CState.create(nombre:'Guerrero',clave:'12',c_country_id:1)
+CState.create(nombre:'Quintana Roo',clave:'23',c_country_id:1)
+CState.create(nombre:'Hidalgo',clave:'13',c_country_id:1)
+CState.create(nombre:'Tabasco',clave:'27',c_country_id:1)
+CState.create(nombre:'Tamaulipas',clave:'28',c_country_id:1)
+CState.create(nombre:'Sonora',clave:'26',c_country_id:1)
+CState.create(nombre:'Coahuila De Zaragoza',clave:'5',c_country_id:1)
+CState.create(nombre:'Tlaxcala',clave:'29',c_country_id:1)
+CState.create(nombre:'Baja California Sur',clave:'3',c_country_id:1)
+CState.create(nombre:'Zacatecas',clave:'32',c_country_id:1)
+CState.create(nombre:'Aguascalientes',clave:'1',c_country_id:1)
+CState.create(nombre:'Chiapas',clave:'7',c_country_id:1)
+CState.create(nombre:'Yucatan',clave:'31',c_country_id:1)
+CState.create(nombre:'Jalisco',clave:'14',c_country_id:1)
+CState.create(nombre:'Mexico',clave:'15',c_country_id:1)
+CState.create(nombre:'Veracruz De Ignacio De La Llave',clave:'30',c_country_id:1)
+CState.create(nombre:'Oaxaca',clave:'20',c_country_id:1)
+CState.create(nombre:'Queretaro',clave:'22',c_country_id:1)
+CState.create(nombre:'Puebla',clave:'21',c_country_id:1)
+end
+if (CMunicipality.count == 0)
+    CMunicipality.create(nombre:'AGUASCALIENTES MUNICIPIO DE, AGS',clave:'00101003',c_state_id:1)	
+    CMunicipality.create(nombre:'AGUASCALIENTES LOCALIDAD DE, AGS',clave:'00101027',c_state_id:1)	
+    CMunicipality.create(nombre:'SAN FRANCISCO DE LOS ROMOS, AGS',clave:'00101106',c_state_id:1)	
+    CMunicipality.create(nombre:'ASIENTOS, AGS',clave:'00104003',c_state_id:1)	
+    CMunicipality.create(nombre:'CALVILLO, AGS',clave:'00107003',c_state_id:1)	
+    CMunicipality.create(nombre:'COSÍO, AGS',clave:'00110006',c_state_id:1)	
+    CMunicipality.create(nombre:'JESÚS MARÍA, AGS',clave:'00113006',c_state_id:1)	
+    CMunicipality.create(nombre:'PABELLÓN DE ARTEAGA, AGS',clave:'00116006',c_state_id:1)	
+    CMunicipality.create(nombre:'RINCÓN DE ROMOS, AGS',clave:'00119006',c_state_id:1)	
+    CMunicipality.create(nombre:'SAN JOSÉ DE GRACIA, AGS',clave:'00122009',c_state_id:1)	
+    CMunicipality.create(nombre:'TEPEZALÁ, AGS',clave:'00125009',c_state_id:1)	
+    CMunicipality.create(nombre:'EL LLANO, AGS',clave:'00128009',c_state_id:1)	
+    CMunicipality.create(nombre:'AGUASCALIENTES (OTROS)',clave:'00199009',c_state_id:1)	
+    CMunicipality.create(nombre:'ENSENADA MUNICIPIO DE, BC',clave:'00201009',c_state_id:2)	
+    CMunicipality.create(nombre:'ENSENADA LOCALIDAD DE, BC',clave:'00201105',c_state_id:2)	
+    CMunicipality.create(nombre:'FRANCISCO ZARCO, BC',clave:'00201159',c_state_id:2)	
+    CMunicipality.create(nombre:'MANEADERO, BC',clave:'00201195',c_state_id:2)	
+    CMunicipality.create(nombre:'SAN QUINTÍN, BC',clave:'00201309',c_state_id:2)	
+    CMunicipality.create(nombre:'VALLE TRINIDAD, BC',clave:'00201355',c_state_id:2)	
+    CMunicipality.create(nombre:'VICENTE GUERRERO, BC',clave:'00201408',c_state_id:2)	
+    CMunicipality.create(nombre:'MEXICALI MUNICIPIO DE, BC',clave:'00204009',c_state_id:2)	
+    CMunicipality.create(nombre:'ALGODONES, BC',clave:'00204052',c_state_id:2)	
+    CMunicipality.create(nombre:'BATAQUEZ ,ESTACIÓN, BC',clave:'00204102',c_state_id:2)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ, BC',clave:'00204159',c_state_id:2)	
+    CMunicipality.create(nombre:'CIUDAD OBREGÓN BCN, BC',clave:'00204175',c_state_id:2)	
+    CMunicipality.create(nombre:'CIUDAD MORELOS, BC',clave:'00204208',c_state_id:2)	
+    CMunicipality.create(nombre:'DELTA, BC',clave:'00204219',c_state_id:2)	
+    CMunicipality.create(nombre:'EJIDO PUEBLA, BC',clave:'00204228',c_state_id:2)	
+    CMunicipality.create(nombre:'ESTACIÓN COAHUILA, BC',clave:'00204235',c_state_id:2)	
+    CMunicipality.create(nombre:'GUADALUPE VICTORIA, BC',clave:'00204252',c_state_id:2)	
+    CMunicipality.create(nombre:'HECHICERA, BC',clave:'00204262',c_state_id:2)	
+    CMunicipality.create(nombre:'HERMOSILLO, EJIDO, BC',clave:'00204279',c_state_id:2)	
+    CMunicipality.create(nombre:'JESÚS GONZÁLEZ ORTEGA, BC',clave:'00204309',c_state_id:2)	
+    CMunicipality.create(nombre:'LA CURVA, BC',clave:'00204369',c_state_id:2)	
+    CMunicipality.create(nombre:'MEXICALI LOCALIDAD DE, BC',clave:'00204405',c_state_id:2)	
+    CMunicipality.create(nombre:'NUEVO LEÓN, BC',clave:'00204445',c_state_id:2)	
+    CMunicipality.create(nombre:'PACÍFICO, BC',clave:'00204505',c_state_id:2)	
+    CMunicipality.create(nombre:'SAN FELIPE, BC',clave:'00204555',c_state_id:2)	
+    CMunicipality.create(nombre:'SAN IGNACIO, BC',clave:'00204579',c_state_id:2)	
+    CMunicipality.create(nombre:'SÁNCHEZ TABOADA, BC',clave:'00204609',c_state_id:2)	
+    CMunicipality.create(nombre:'VICTORIA, BC',clave:'00204708',c_state_id:2)	
+    CMunicipality.create(nombre:'TECATE, BC',clave:'00207009',c_state_id:2)	
+    CMunicipality.create(nombre:'TIJUANA MUNICIPIO DE, BC',clave:'00210009',c_state_id:2)	
+    CMunicipality.create(nombre:'LA MESA, BC',clave:'00210042',c_state_id:2)	
+    CMunicipality.create(nombre:'ROSARITO, BC',clave:'00210088',c_state_id:2)	
+    CMunicipality.create(nombre:'TIJUANA LOCALIDAD DE, BC',clave:'00210208',c_state_id:2)	
+    CMunicipality.create(nombre:'BAJA CALIFORNIA (OTROS)',clave:'00299009',c_state_id:2)	
+    CMunicipality.create(nombre:'CABOS LOS, BCS',clave:'00302006',c_state_id:3)	
+    CMunicipality.create(nombre:'CABO SAN LUCAS, BCS',clave:'00302103',c_state_id:3)	
+    CMunicipality.create(nombre:'SAN ANTONIO, BCS',clave:'00302309',c_state_id:3)	
+    CMunicipality.create(nombre:'SAN JOSÉ DEL CABO, BCS',clave:'00302357',c_state_id:3)	
+    CMunicipality.create(nombre:'SANTIAGO, BCS',clave:'00302409',c_state_id:3)	
+    CMunicipality.create(nombre:'TODOS SANTOS, BCS',clave:'00302504',c_state_id:3)	
+    CMunicipality.create(nombre:'COMONDÚ, BCS',clave:'00303009',c_state_id:3)	
+    CMunicipality.create(nombre:'INSURGENTES, BCS',clave:'00303058',c_state_id:3)	
+    CMunicipality.create(nombre:'LORETO, BCS',clave:'00303069',c_state_id:3)	
+    CMunicipality.create(nombre:'V CONSTITUCIÓN, BCS',clave:'00303085',c_state_id:3)	
+    CMunicipality.create(nombre:'MULEGE MUNICIPIO DE, BCS',clave:'00305006',c_state_id:3)	
+    CMunicipality.create(nombre:'BAHIA TORTUGAS, BCS',clave:'00305021',c_state_id:3)	
+    CMunicipality.create(nombre:'GUERRERO NEGRO, BCS',clave:'00305073',c_state_id:3)	
+    CMunicipality.create(nombre:'MULEGE LOCALIDAD DE, BCS',clave:'00305159',c_state_id:3)	
+    CMunicipality.create(nombre:'SANTA ROSALÍA, BCS',clave:'00305207',c_state_id:3)	
+    CMunicipality.create(nombre:'PAZ, LA, BCS',clave:'00308006',c_state_id:3)	
+    CMunicipality.create(nombre:'BAJA CALIFORNIA SUR (OTROS)',clave:'00399009',c_state_id:3)	
+    CMunicipality.create(nombre:'CALKINÍ, CAMP',clave:'00403009',c_state_id:4)	
+    CMunicipality.create(nombre:'CAMPECHE MUNICIPIO DE, CAMP',clave:'00405009',c_state_id:4)	
+    CMunicipality.create(nombre:'CAMPECHE LOCALIDAD DE, CAMP',clave:'00405138',c_state_id:4)	
+    CMunicipality.create(nombre:'LERMA, CAMP',clave:'00405609',c_state_id:4)	
+    CMunicipality.create(nombre:'CARMEN, CAMP',clave:'00407003',c_state_id:4)	
+    CMunicipality.create(nombre:'CANDELARIA, CAMP',clave:'00407043',c_state_id:4)	
+    CMunicipality.create(nombre:'CIUDAD DEL CARMEN, CAMP',clave:'00407057',c_state_id:4)	
+    CMunicipality.create(nombre:'ESCÁRCEGA, CAMP',clave:'00407079',c_state_id:4)	
+    CMunicipality.create(nombre:'CHAMPOTÓN, CAMP',clave:'00409009',c_state_id:4)	
+    CMunicipality.create(nombre:'HECELCHAKÁN, CAMP',clave:'00411009',c_state_id:4)	
+    CMunicipality.create(nombre:'HOPELCHÉN, CAMP',clave:'00413006',c_state_id:4)	
+    CMunicipality.create(nombre:'PALIZADA, CAMP',clave:'00415006',c_state_id:4)	
+    CMunicipality.create(nombre:'TENABO, CAMP',clave:'00417009',c_state_id:4)	
+    CMunicipality.create(nombre:'CALAKMUL, CAMP',clave:'00419006',c_state_id:4)	
+    CMunicipality.create(nombre:'CAMPECHE (OTROS)',clave:'00499009',c_state_id:4)	
+    CMunicipality.create(nombre:'ABASOLO, COAH',clave:'00503009',c_state_id:7)	
+    CMunicipality.create(nombre:'ACU A, COAH',clave:'00505003',c_state_id:7)	
+    CMunicipality.create(nombre:'ALLENDE, COAH',clave:'00507009',c_state_id:7)	
+    CMunicipality.create(nombre:'ARTEAGA, COAH',clave:'00509009',c_state_id:7)	
+    CMunicipality.create(nombre:'CANDELA, COAH',clave:'00511009',c_state_id:7)	
+    CMunicipality.create(nombre:'CASTA OS, COAH',clave:'00513009',c_state_id:7)	
+    CMunicipality.create(nombre:'CUATROCIÉNEGAS, COAH',clave:'00515003',c_state_id:7)	
+    CMunicipality.create(nombre:'EL PILAR, COAH',clave:'00516009',c_state_id:7)	
+    CMunicipality.create(nombre:'ESCOBEDO, COAH',clave:'00517009',c_state_id:7)	
+    CMunicipality.create(nombre:'FRANCISCO I. MADERO, COAH',clave:'00519009',c_state_id:7)	
+    CMunicipality.create(nombre:'FRONTERA, COAH',clave:'00521006',c_state_id:7)	
+    CMunicipality.create(nombre:'GENERAL CEPEDA, COAH',clave:'00523006',c_state_id:7)	
+    CMunicipality.create(nombre:'GUERRERO, COAH',clave:'00525009',c_state_id:7)	
+    CMunicipality.create(nombre:'HIDALGO, COAH',clave:'00527006',c_state_id:7)	
+    CMunicipality.create(nombre:'HORMIGUERO, COAH',clave:'00528009',c_state_id:7)	
+    CMunicipality.create(nombre:'JIMÉNEZ, COAH',clave:'00529006',c_state_id:7)	
+    CMunicipality.create(nombre:'JUÁREZ, COAH',clave:'00531009',c_state_id:7)	
+    CMunicipality.create(nombre:'LAMADRID, COAH',clave:'00533009',c_state_id:7)	
+    CMunicipality.create(nombre:'MATAMOROS MUNICIPIO DE, COAH',clave:'00535003',c_state_id:7)	
+    CMunicipality.create(nombre:'LAS ESPERANZAS, COAH',clave:'00535059',c_state_id:7)	
+    CMunicipality.create(nombre:'MATAMOROS LOCALIDAD DE, COAH',clave:'00535159',c_state_id:7)	
+    CMunicipality.create(nombre:'MONCLOVA MUNICIPIO DE, COAH',clave:'00537009',c_state_id:7)	
+    CMunicipality.create(nombre:'MONCLOVA LOCALIDAD DE, COAH',clave:'00537208',c_state_id:7)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA, COAH',clave:'00537405',c_state_id:7)	
+    CMunicipality.create(nombre:'MORELOS, COAH',clave:'00539009',c_state_id:7)	
+    CMunicipality.create(nombre:'MÚZQUIZ MUNICIPIO DE, COAH',clave:'00541009',c_state_id:7)	
+    CMunicipality.create(nombre:'MINAS DE BARRO TERÁN, COAH',clave:'00541056',c_state_id:7)	
+    CMunicipality.create(nombre:'MUZQUIZ LOCALIDAD DE, COAH',clave:'00541063',c_state_id:7)	
+    CMunicipality.create(nombre:'PALAU, COAH',clave:'00541089',c_state_id:7)	
+    CMunicipality.create(nombre:'NADADORES, COAH',clave:'00543009',c_state_id:7)	
+    CMunicipality.create(nombre:'NAVA, COAH',clave:'00545003',c_state_id:7)	
+    CMunicipality.create(nombre:'OCAMPO, COAH',clave:'00547009',c_state_id:7)	
+    CMunicipality.create(nombre:'PARRAS DE LA FUENTE, COAH',clave:'00549009',c_state_id:7)	
+    CMunicipality.create(nombre:'PIEDRAS NEGRAS MUNICIPIO DE, COAH',clave:'00551006',c_state_id:7)	
+    CMunicipality.create(nombre:'PIEDRAS NEGRAS LOCALIDAD DE, COAH',clave:'00551259',c_state_id:7)	
+    CMunicipality.create(nombre:'VILLA FUENTE, COAH',clave:'00551354',c_state_id:7)	
+    CMunicipality.create(nombre:'PROGRESO, COAH',clave:'00553006',c_state_id:7)	
+    CMunicipality.create(nombre:'RAMOS ARIZPE, COAH',clave:'00555009',c_state_id:7)	
+    CMunicipality.create(nombre:'SABINAS MUNICIPIO DE, COAH',clave:'00557006',c_state_id:7)	
+    CMunicipality.create(nombre:'AGUJITA, COAH',clave:'00557039',c_state_id:7)	
+    CMunicipality.create(nombre:'SABINAS LOCALIDAD DE, COAH',clave:'00557207',c_state_id:7)	
+    CMunicipality.create(nombre:'SACRAMENTO, COAH',clave:'00559006',c_state_id:7)	
+    CMunicipality.create(nombre:'SALTILLO, COAH',clave:'00561009',c_state_id:7)	
+    CMunicipality.create(nombre:'SAN BUENAVENTURA, COAH',clave:'00563009',c_state_id:7)	
+    CMunicipality.create(nombre:'SAN JUAN DE SABINAS MUNICIPIO DE, COAH',clave:'00565003',c_state_id:7)	
+    CMunicipality.create(nombre:'NUEVA ROSITA, COAH',clave:'00565104',c_state_id:7)	
+    CMunicipality.create(nombre:'SAN JUAN DE SABINAS LOCALIDAD DE, COAH',clave:'00565209',c_state_id:7)	
+    CMunicipality.create(nombre:'SAN PEDRO, COAH',clave:'00569009',c_state_id:7)	
+    CMunicipality.create(nombre:'SAN PEDRO DE LAS COLONIAS, COAH',clave:'00569303',c_state_id:7)	
+    CMunicipality.create(nombre:'SANTA TERESA, COAH',clave:'00570309',c_state_id:7)	
+    CMunicipality.create(nombre:'SIERRA MOJADA MUNICIPIO DE, COAH',clave:'00571009',c_state_id:7)	
+    CMunicipality.create(nombre:'LAGUNA DEL REY, COAH',clave:'00571206',c_state_id:7)	
+    CMunicipality.create(nombre:'SIERRA MOJADA LOCALIDAD DE, COAH',clave:'00571401',c_state_id:7)	
+    CMunicipality.create(nombre:'TORREÓN, COAH',clave:'00573009',c_state_id:7)	
+    CMunicipality.create(nombre:'VIESCA, COAH',clave:'00575003',c_state_id:7)	
+    CMunicipality.create(nombre:'VILLA UNIÓN, COAH',clave:'00577009',c_state_id:7)	
+    CMunicipality.create(nombre:'ZARAGOZA, COAH',clave:'00579009',c_state_id:7)	
+    CMunicipality.create(nombre:'COAHUILA (OTROS)',clave:'00599009',c_state_id:7)	
+    CMunicipality.create(nombre:'ARMERÍA, COL',clave:'00603009',c_state_id:8)	
+    CMunicipality.create(nombre:'COLIMA MUNICIPIO DE, COL',clave:'00605006',c_state_id:8)	
+    CMunicipality.create(nombre:'COLIMA LOCALIDAD DE, COL',clave:'00605054',c_state_id:8)	
+    CMunicipality.create(nombre:'TEPAMES, COL',clave:'00605309',c_state_id:8)	
+    CMunicipality.create(nombre:'COMALA, COL',clave:'00607006',c_state_id:8)	
+    CMunicipality.create(nombre:'COQUIMATLÁN, COL',clave:'00609009',c_state_id:8)	
+    CMunicipality.create(nombre:'CUAUHTÉMOC MUNICIPIO DE, COL',clave:'00611009',c_state_id:8)	
+    CMunicipality.create(nombre:'CUAUHTÉMOC LOCALIDAD DE, COL',clave:'00611109',c_state_id:8)	
+    CMunicipality.create(nombre:'QUESERÍA, COL',clave:'00611303',c_state_id:8)	
+    CMunicipality.create(nombre:'IXTLAHUACÁN, COL',clave:'00613003',c_state_id:8)	
+    CMunicipality.create(nombre:'MANZANILLO MUNICIPIO DE, COL',clave:'00615009',c_state_id:8)	
+    CMunicipality.create(nombre:'CAMPOS, COL',clave:'00615099',c_state_id:8)	
+    CMunicipality.create(nombre:'MANZANILLO LOCALIDAD DE, COL',clave:'00615205',c_state_id:8)	
+    CMunicipality.create(nombre:'SALAHUA, COL',clave:'00615255',c_state_id:8)	
+    CMunicipality.create(nombre:'SANTIAGO, COL',clave:'00615309',c_state_id:8)	
+    CMunicipality.create(nombre:'MINATITLÁN, COL',clave:'00617009',c_state_id:8)	
+    CMunicipality.create(nombre:'TECOMÁN MUNICIPIO DE, COL',clave:'00619003',c_state_id:8)	
+    CMunicipality.create(nombre:'CERRO DE ORTEGA, COL',clave:'00619039',c_state_id:8)	
+    CMunicipality.create(nombre:'TECOMÁN LOCALIDAD DE, COL',clave:'00619251',c_state_id:8)	
+    CMunicipality.create(nombre:'VILLA DE ALVAREZ MUNICIPIO DE, COL',clave:'00621009',c_state_id:8)	
+    CMunicipality.create(nombre:'LA PE A COLORADA, COL',clave:'00621355',c_state_id:8)	
+    CMunicipality.create(nombre:'VILLA DE ÁLVAREZ LOCALIDAD DE, COL',clave:'00621639',c_state_id:8)	
+    CMunicipality.create(nombre:'COLIMA (OTROS)',clave:'00699009',c_state_id:8)	
+    CMunicipality.create(nombre:'ACACOYAGUA, CHIS',clave:'00701003',c_state_id:5)	
+    CMunicipality.create(nombre:'ACALA, CHIS',clave:'00702009',c_state_id:5)	
+    CMunicipality.create(nombre:'ACAPETAHUA, CHIS',clave:'00703009',c_state_id:5)	
+    CMunicipality.create(nombre:'ALTAMIRANO, CHIS',clave:'00704003',c_state_id:5)	
+    CMunicipality.create(nombre:'AMATÁN, CHIS',clave:'00705009',c_state_id:5)	
+    CMunicipality.create(nombre:'AMATENANGO DE LA FRONTERA, CHIS',clave:'00706009',c_state_id:5)	
+    CMunicipality.create(nombre:'AMATENANGO DEL VALLE, CHIS',clave:'00707003',c_state_id:5)	
+    CMunicipality.create(nombre:'ANGEL ALBINO CORZO, CHIS',clave:'00708009',c_state_id:5)	
+    CMunicipality.create(nombre:'ARRIAGA, CHIS',clave:'00709009',c_state_id:5)	
+    CMunicipality.create(nombre:'BEJUCAL DE OCAMPO, CHIS',clave:'00710006',c_state_id:5)	
+    CMunicipality.create(nombre:'BELLA VISTA, CHIS',clave:'00711009',c_state_id:5)	
+    CMunicipality.create(nombre:'BERRIOZÁBAL, CHIS',clave:'00712006',c_state_id:5)	
+    CMunicipality.create(nombre:'BOCHIL, CHIS',clave:'00713006',c_state_id:5)	
+    CMunicipality.create(nombre:'BOSQUE, EL, CHIS',clave:'00714009',c_state_id:5)	
+    CMunicipality.create(nombre:'CACAHOATAN, CHIS',clave:'00715006',c_state_id:5)	
+    CMunicipality.create(nombre:'CATAZAJÁ, CHIS',clave:'00716006',c_state_id:5)	
+    CMunicipality.create(nombre:'CINTALAPA, CHIS',clave:'00717009',c_state_id:5)	
+    CMunicipality.create(nombre:'COAPILLA, CHIS',clave:'00718006',c_state_id:5)	
+    CMunicipality.create(nombre:'COMITÁN DE DOMÍNGUEZ, CHIS',clave:'00719006',c_state_id:5)	
+    CMunicipality.create(nombre:'CONCORDIA MUNICIPIO DE, CHIS',clave:'00720009',c_state_id:5)	
+    CMunicipality.create(nombre:'CONCORDIA LOCALIDAD DE, CHIS',clave:'00720129',c_state_id:5)	
+    CMunicipality.create(nombre:'CUXTEPEQUES, CHIS',clave:'00720178',c_state_id:5)	
+    CMunicipality.create(nombre:'EJIDO BENITO JUÁREZ, CHIS',clave:'00720225',c_state_id:5)	
+    CMunicipality.create(nombre:'COPAINALÁ, CHIS',clave:'00721003',c_state_id:5)	
+    CMunicipality.create(nombre:'CHALCHIHUITÁN, CHIS',clave:'00722009',c_state_id:5)	
+    CMunicipality.create(nombre:'CHAMULA, CHIS',clave:'00723009',c_state_id:5)	
+    CMunicipality.create(nombre:'CHANAL, CHIS',clave:'00724003',c_state_id:5)	
+    CMunicipality.create(nombre:'CHAPULTENANGO, CHIS',clave:'00725009',c_state_id:5)	
+    CMunicipality.create(nombre:'CHENALHÓ, CHIS',clave:'00726009',c_state_id:5)	
+    CMunicipality.create(nombre:'CHIAPA DE CORZO, CHIS',clave:'00727003',c_state_id:5)	
+    CMunicipality.create(nombre:'CHIAPILLA, CHIS',clave:'00728009',c_state_id:5)	
+    CMunicipality.create(nombre:'CHICOASÉN, CHIS',clave:'00729009',c_state_id:5)	
+    CMunicipality.create(nombre:'CHICOMUSELO, CHIS',clave:'00730009',c_state_id:5)	
+    CMunicipality.create(nombre:'CHILÓN, CHIS',clave:'00731003',c_state_id:5)	
+    CMunicipality.create(nombre:'ESCUINTLA, CHIS',clave:'00732009',c_state_id:5)	
+    CMunicipality.create(nombre:'FRANCISCO LEÓN, CHIS',clave:'00733009',c_state_id:5)	
+    CMunicipality.create(nombre:'FRONTERA COMALAPA, CHIS',clave:'00734003',c_state_id:5)	
+    CMunicipality.create(nombre:'FRONTERA HIDALGO, CHIS',clave:'00735009',c_state_id:5)	
+    CMunicipality.create(nombre:'GRANDEZA, LA, CHIS',clave:'00736009',c_state_id:5)	
+    CMunicipality.create(nombre:'HUEHUETAN, CHIS',clave:'00737003',c_state_id:5)	
+    CMunicipality.create(nombre:'HUIXTÁN, CHIS',clave:'00738009',c_state_id:5)	
+    CMunicipality.create(nombre:'HUITIUPÁN, CHIS',clave:'00739009',c_state_id:5)	
+    CMunicipality.create(nombre:'HUIXTLA, CHIS',clave:'00740006',c_state_id:5)	
+    CMunicipality.create(nombre:'INDEPENDENCIA, LA, CHIS',clave:'00741009',c_state_id:5)	
+    CMunicipality.create(nombre:'IXHUATAN, CHIS',clave:'00742006',c_state_id:5)	
+    CMunicipality.create(nombre:'IXTACOMITÁN, CHIS',clave:'00743006',c_state_id:5)	
+    CMunicipality.create(nombre:'IXTAPA, CHIS',clave:'00744009',c_state_id:5)	
+    CMunicipality.create(nombre:'IXTAPANGAJOYA, CHIS',clave:'00745006',c_state_id:5)	
+    CMunicipality.create(nombre:'JIQUIPILAS, CHIS',clave:'00746006',c_state_id:5)	
+    CMunicipality.create(nombre:'JITOTOL, CHIS',clave:'00747009',c_state_id:5)	
+    CMunicipality.create(nombre:'JUÁREZ, CHIS',clave:'00748006',c_state_id:5)	
+    CMunicipality.create(nombre:'LARRÁINZAR, CHIS',clave:'00749006',c_state_id:5)	
+    CMunicipality.create(nombre:'LIBERTAD, LA, CHIS',clave:'00750009',c_state_id:5)	
+    CMunicipality.create(nombre:'MAPASTEPEC, CHIS',clave:'00751003',c_state_id:5)	
+    CMunicipality.create(nombre:'MARGARITAS, LAS, CHIS',clave:'00752009',c_state_id:5)	
+    CMunicipality.create(nombre:'MAZAPA DE MADERO, CHIS',clave:'00753009',c_state_id:5)	
+    CMunicipality.create(nombre:'MAZATÁN, CHIS',clave:'00754003',c_state_id:5)	
+    CMunicipality.create(nombre:'METAPA, CHIS',clave:'00755009',c_state_id:5)	
+    CMunicipality.create(nombre:'MITONTIC, CHIS',clave:'00756009',c_state_id:5)	
+    CMunicipality.create(nombre:'MOTOZINTLA, CHIS',clave:'00757003',c_state_id:5)	
+    CMunicipality.create(nombre:'NICOLÁS RUÍZ, CHIS',clave:'00758009',c_state_id:5)	
+    CMunicipality.create(nombre:'OCOSINGO, CHIS',clave:'00759009',c_state_id:5)	
+    CMunicipality.create(nombre:'OCOTEPEC, CHIS',clave:'00760009',c_state_id:5)	
+    CMunicipality.create(nombre:'OCOZOCOAUTLA DE ESPINOSA, CHIS',clave:'00761003',c_state_id:5)	
+    CMunicipality.create(nombre:'OSTUACÁN, CHIS',clave:'00762009',c_state_id:5)	
+    CMunicipality.create(nombre:'OSUMACINTA, CHIS',clave:'00763009',c_state_id:5)	
+    CMunicipality.create(nombre:'OXCHUC, CHIS',clave:'00764003',c_state_id:5)	
+    CMunicipality.create(nombre:'PALENQUE, CHIS',clave:'00765009',c_state_id:5)	
+    CMunicipality.create(nombre:'PANTELHÓ, CHIS',clave:'00766009',c_state_id:5)	
+    CMunicipality.create(nombre:'PANTEPEC, CHIS',clave:'00767003',c_state_id:5)	
+    CMunicipality.create(nombre:'PICHUCALCO, CHIS',clave:'00768009',c_state_id:5)	
+    CMunicipality.create(nombre:'PIJIJIAPÁN, CHIS',clave:'00769009',c_state_id:5)	
+    CMunicipality.create(nombre:'PORVENIR, EL, CHIS',clave:'00770006',c_state_id:5)	
+    CMunicipality.create(nombre:'VILLA COMALTITLÁN, CHIS',clave:'00771009',c_state_id:5)	
+    CMunicipality.create(nombre:'PUEBLO NUEVO SOLISTAHUACÁN, CHIS',clave:'00772006',c_state_id:5)	
+    CMunicipality.create(nombre:'RAYÓN, CHIS',clave:'00773006',c_state_id:5)	
+    CMunicipality.create(nombre:'REFORMA MUNICIPIO DE, CHIS',clave:'00774009',c_state_id:5)	
+    CMunicipality.create(nombre:'CACTUS, CHIS',clave:'00774102',c_state_id:5)	
+    CMunicipality.create(nombre:'REFORMA LOCALIDAD DE, CHIS',clave:'00774252',c_state_id:5)	
+    CMunicipality.create(nombre:'ROSAS, LAS, CHIS',clave:'00775006',c_state_id:5)	
+    CMunicipality.create(nombre:'SABANILLA, CHIS',clave:'00776006',c_state_id:5)	
+    CMunicipality.create(nombre:'SALTO DE AGUA, CHIS',clave:'00777009',c_state_id:5)	
+    CMunicipality.create(nombre:'SAN CRISTÓBAL DE LAS CASAS, CHIS',clave:'00778006',c_state_id:5)	
+    CMunicipality.create(nombre:'SAN FERNANDO, CHIS',clave:'00779006',c_state_id:5)	
+    CMunicipality.create(nombre:'SILTEPEC, CHIS',clave:'00780009',c_state_id:5)	
+    CMunicipality.create(nombre:'SIMOJOVEL DE ALLENDE, CHIS',clave:'00781003',c_state_id:5)	
+    CMunicipality.create(nombre:'SITALÁ, CHIS',clave:'00782009',c_state_id:5)	
+    CMunicipality.create(nombre:'SOCOLTENANGO, CHIS',clave:'00783009',c_state_id:5)	
+    CMunicipality.create(nombre:'SOLOSUCHIAPA, CHIS',clave:'00784003',c_state_id:5)	
+    CMunicipality.create(nombre:'SOYALÓ, CHIS',clave:'00785009',c_state_id:5)	
+    CMunicipality.create(nombre:'SUCHIAPA, CHIS',clave:'00786009',c_state_id:5)	
+    CMunicipality.create(nombre:'SUCHIATE, CHIS',clave:'00787003',c_state_id:5)	
+    CMunicipality.create(nombre:'CIUDAD HIDALGO, CHIS',clave:'00787107',c_state_id:5)	
+    CMunicipality.create(nombre:'SUNUAPA, CHIS',clave:'00788009',c_state_id:5)	
+    CMunicipality.create(nombre:'TAPACHULA, CHIS',clave:'00789009',c_state_id:5)	
+    CMunicipality.create(nombre:'PUERTO MADERO, CHIS',clave:'00789505',c_state_id:5)	
+    CMunicipality.create(nombre:'TAPALAPA, CHIS',clave:'00790009',c_state_id:5)	
+    CMunicipality.create(nombre:'TAPILULA, CHIS',clave:'00791003',c_state_id:5)	
+    CMunicipality.create(nombre:'TECPATÁN, CHIS',clave:'00792009',c_state_id:5)	
+    CMunicipality.create(nombre:'TENEJAPA, CHIS',clave:'00793009',c_state_id:5)	
+    CMunicipality.create(nombre:'TEOPISCA, CHIS',clave:'00794003',c_state_id:5)	
+    CMunicipality.create(nombre:'TERÁN, CHIS',clave:'00795009',c_state_id:5)	
+    CMunicipality.create(nombre:'TILA, CHIS',clave:'00796009',c_state_id:5)	
+    CMunicipality.create(nombre:'TONALÁ, CHIS',clave:'00797003',c_state_id:5)	
+    CMunicipality.create(nombre:'TOTOLAPA, CHIS',clave:'00798009',c_state_id:5)	
+    CMunicipality.create(nombre:'TRINITARIA, LA, CHIS',clave:'00799009',c_state_id:5)	
+    CMunicipality.create(nombre:'TUMBALÁ, CHIS',clave:'00801009',c_state_id:5)	
+    CMunicipality.create(nombre:'TUXTLA GUTIÉRREZ, CHIS',clave:'00802003',c_state_id:5)	
+    CMunicipality.create(nombre:'TUXTLA CHICO, CHIS',clave:'00803009',c_state_id:5)	
+    CMunicipality.create(nombre:'TUZANTÁN, CHIS',clave:'00804009',c_state_id:5)	
+    CMunicipality.create(nombre:'TZIMOL, CHIS',clave:'00805003',c_state_id:5)	
+    CMunicipality.create(nombre:'UNIÓN JUÁREZ, CHIS',clave:'00806009',c_state_id:5)	
+    CMunicipality.create(nombre:'VENUSTIANO CARRANZA, CHIS',clave:'00807009',c_state_id:5)	
+    CMunicipality.create(nombre:'JALTENANGO, CHIS',clave:'00808003',c_state_id:5)	
+    CMunicipality.create(nombre:'VILLA CORZO, CHIS',clave:'00808503',c_state_id:5)	
+    CMunicipality.create(nombre:'VILLAFLORES, CHIS',clave:'00809009',c_state_id:5)	
+    CMunicipality.create(nombre:'VILLA DE ALCALÁ, CHIS',clave:'00809504',c_state_id:5)	
+    CMunicipality.create(nombre:'YAJALÓN, CHIS',clave:'00810009',c_state_id:5)	
+    CMunicipality.create(nombre:'SAN LUCAS, CHIS',clave:'00811009',c_state_id:5)	
+    CMunicipality.create(nombre:'ZINACANTÁN, CHIS',clave:'00812003',c_state_id:5)	
+    CMunicipality.create(nombre:'SAN JUAN CANCUC, CHIS',clave:'00813009',c_state_id:5)	
+    CMunicipality.create(nombre:'ALDAMA, CHIS',clave:'00814009',c_state_id:5)	
+    CMunicipality.create(nombre:'BENEMÉRITO DE LAS AMÉRICAS, CHIS',clave:'00815003',c_state_id:5)	
+    CMunicipality.create(nombre:'MARAVILLA TENEJAPA, CHIS',clave:'00816009',c_state_id:5)	
+    CMunicipality.create(nombre:'MARQUÉS DE COMILLAS, CHIS',clave:'00817009',c_state_id:5)	
+    CMunicipality.create(nombre:'MONTE CRISTO DE GUERRERO, CHIS',clave:'00818003',c_state_id:5)	
+    CMunicipality.create(nombre:'SAN ANDRÉS DURAZNAL, CHIS',clave:'00819009',c_state_id:5)	
+    CMunicipality.create(nombre:'SANTIAGO EL PINAR, CHIS',clave:'00820006',c_state_id:5)	
+    CMunicipality.create(nombre:'CHIAPAS (OTROS)',clave:'00899009',c_state_id:5)	
+    CMunicipality.create(nombre:'AHUMADA, CHIH',clave:'00901006',c_state_id:6)	
+    CMunicipality.create(nombre:'ALDAMA, CHIH',clave:'00902006',c_state_id:6)	
+    CMunicipality.create(nombre:'ALLENDE, CHIH',clave:'00903009',c_state_id:6)	
+    CMunicipality.create(nombre:'AQUILES SERDÁN, CHIH',clave:'00904006',c_state_id:6)	
+    CMunicipality.create(nombre:'ASCENSIÓN MUNICIPIO DE, CHIH',clave:'00905006',c_state_id:6)	
+    CMunicipality.create(nombre:'ASCENCIÓN LOCALIDAD DE, CHIH',clave:'00905111',c_state_id:6)	
+    CMunicipality.create(nombre:'RODRIGO M QUEVEDO, CHIH',clave:'00905463',c_state_id:6)	
+    CMunicipality.create(nombre:'BOCOYNA MUNICIPIO DE, CHIH',clave:'00906009',c_state_id:6)	
+    CMunicipality.create(nombre:'BOCOYNA LOCALIDAD DE, CHIH',clave:'00906058',c_state_id:6)	
+    CMunicipality.create(nombre:'CREEL ,ESTACIÓN, CHIH',clave:'00906138',c_state_id:6)	
+    CMunicipality.create(nombre:'JUANITO, CHIH',clave:'00906309',c_state_id:6)	
+    CMunicipality.create(nombre:'BACHÍNIVA, CHIH',clave:'00907006',c_state_id:6)	
+    CMunicipality.create(nombre:'BALLEZA, CHIH',clave:'00908006',c_state_id:6)	
+    CMunicipality.create(nombre:'BATOPILAS, CHIH',clave:'00909009',c_state_id:6)	
+    CMunicipality.create(nombre:'BUENAVENTURA MUNICIPIO DE, CHIH',clave:'00910003',c_state_id:6)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ, CHIH',clave:'00910101',c_state_id:6)	
+    CMunicipality.create(nombre:'BUENAVENTURA LOCALIDAD DE, CHIH',clave:'00910159',c_state_id:6)	
+    CMunicipality.create(nombre:'FLORES MAGÓN, CHIH',clave:'00910257',c_state_id:6)	
+    CMunicipality.create(nombre:'CAMARGO MUNICIPIO DE, CHIH',clave:'00911009',c_state_id:6)	
+    CMunicipality.create(nombre:'CAMARGO LOCALIDAD DE, CHIH',clave:'00911223',c_state_id:6)	
+    CMunicipality.create(nombre:'LA PERLA, CHIH',clave:'00911537',c_state_id:6)	
+    CMunicipality.create(nombre:'CARICHÍ, CHIH',clave:'00912009',c_state_id:6)	
+    CMunicipality.create(nombre:'CASAS GRANDES, CHIH',clave:'00913003',c_state_id:6)	
+    CMunicipality.create(nombre:'CENECO, CHIH',clave:'00913509',c_state_id:6)	
+    CMunicipality.create(nombre:'CORONADO, CHIH',clave:'00914009',c_state_id:6)	
+    CMunicipality.create(nombre:'COYAME DEL SOTOL, CHIH',clave:'00915009',c_state_id:6)	
+    CMunicipality.create(nombre:'CRUZ, LA, CHIH',clave:'00916003',c_state_id:6)	
+    CMunicipality.create(nombre:'CUAUHTÉMOC MUNICIPIO DE, CHIH',clave:'00917009',c_state_id:6)	
+    CMunicipality.create(nombre:'ANAHUAC CIUDAD, CHIH',clave:'00917033',c_state_id:6)	
+    CMunicipality.create(nombre:'COLONIA OBREGÓN, CHIH',clave:'00917087',c_state_id:6)	
+    CMunicipality.create(nombre:'CUAUHTÉMOC LOCALIDAD DE, CHIH',clave:'00917153',c_state_id:6)	
+    CMunicipality.create(nombre:'CUSIHUIRIACHI, CHIH',clave:'00918009',c_state_id:6)	
+    CMunicipality.create(nombre:'CHIHUAHUA MUNICIPIO DE, CHIH',clave:'00919003',c_state_id:6)	
+    CMunicipality.create(nombre:'AVALOS, CHIH',clave:'00919113',c_state_id:6)	
+    CMunicipality.create(nombre:'CHIHUAHUA LOCALIDAD DE, CHIH',clave:'00919269',c_state_id:6)	
+    CMunicipality.create(nombre:'CHÍNIPAS, CHIH',clave:'00920003',c_state_id:6)	
+    CMunicipality.create(nombre:'DELICIAS, CIUDAD, CHIH',clave:'00921009',c_state_id:6)	
+    CMunicipality.create(nombre:'DR. BELISARIO DOMÍNGUEZ, CHIH',clave:'00922009',c_state_id:6)	
+    CMunicipality.create(nombre:'GALEANA, CHIH',clave:'00923003',c_state_id:6)	
+    CMunicipality.create(nombre:'SANTA ISABEL, CHIH',clave:'00924009',c_state_id:6)	
+    CMunicipality.create(nombre:'GÓMEZ FARÍAS, CHIH',clave:'00925009',c_state_id:6)	
+    CMunicipality.create(nombre:'GRAN MORELOS, CHIH',clave:'00926003',c_state_id:6)	
+    CMunicipality.create(nombre:'GUACHOCHI, CHIH',clave:'00927009',c_state_id:6)	
+    CMunicipality.create(nombre:'GUADALUPE, CHIH',clave:'00928009',c_state_id:6)	
+    CMunicipality.create(nombre:'GUADALUPE Y CALVO, CHIH',clave:'00929003',c_state_id:6)	
+    CMunicipality.create(nombre:'GUAZAPARES, CHIH',clave:'00930009',c_state_id:6)	
+    CMunicipality.create(nombre:'TEMORIS, CHIH',clave:'00930309',c_state_id:6)	
+    CMunicipality.create(nombre:'GUERRERO MUNICIPIO DE, CHIH',clave:'00931006',c_state_id:6)	
+    CMunicipality.create(nombre:'GUERRERO LOCALIDAD DE, CHIH',clave:'00931059',c_state_id:6)	
+    CMunicipality.create(nombre:'LÓPEZ MATEOS EST, CHIH',clave:'00931083',c_state_id:6)	
+    CMunicipality.create(nombre:'HIDALGO DEL PARRAL, CHIH',clave:'00932006',c_state_id:6)	
+    CMunicipality.create(nombre:'HUEJOTITÁN, CHIH',clave:'00933009',c_state_id:6)	
+    CMunicipality.create(nombre:'IGNACIO ZARAGOZA, CHIH',clave:'00934006',c_state_id:6)	
+    CMunicipality.create(nombre:'JANOS, CHIH',clave:'00935006',c_state_id:6)	
+    CMunicipality.create(nombre:'JIMÉNEZ, CHIH',clave:'00936009',c_state_id:6)	
+    CMunicipality.create(nombre:'JUÁREZ CIUDAD, CHIH',clave:'00937006',c_state_id:6)	
+    CMunicipality.create(nombre:'JULIMES, CHIH',clave:'00938006',c_state_id:6)	
+    CMunicipality.create(nombre:'LÓPEZ, CHIH',clave:'00939009',c_state_id:6)	
+    CMunicipality.create(nombre:'MADERA CIUDAD MUNICIPIO DE, CHIH',clave:'00940003',c_state_id:6)	
+    CMunicipality.create(nombre:'MADERA CIUDAD LOCALIDAD DE, CHIH',clave:'00940371',c_state_id:6)	
+    CMunicipality.create(nombre:'NICOLÁS BRAVO, CHIH',clave:'00940467',c_state_id:6)	
+    CMunicipality.create(nombre:'MAGUARICHI, CHIH',clave:'00941009',c_state_id:6)	
+    CMunicipality.create(nombre:'MANUEL BENAVIDES, CHIH',clave:'00942009',c_state_id:6)	
+    CMunicipality.create(nombre:'MATACHÍ, CHIH',clave:'00943003',c_state_id:6)	
+    CMunicipality.create(nombre:'MATAMOROS, CHIH',clave:'00944009',c_state_id:6)	
+    CMunicipality.create(nombre:'MEOQUI MUNICIPIO DE, CHIH',clave:'00945009',c_state_id:6)	
+    CMunicipality.create(nombre:'LÁZARO CÁRDENAS, CHIH',clave:'00945132',c_state_id:6)	
+    CMunicipality.create(nombre:'MEOQUI LOCALIDAD DE, CHIH',clave:'00945238',c_state_id:6)	
+    CMunicipality.create(nombre:'MORELOS, CHIH',clave:'00946003',c_state_id:6)	
+    CMunicipality.create(nombre:'MORIS, CHIH',clave:'00947009',c_state_id:6)	
+    CMunicipality.create(nombre:'NAMIQUIPA MUNICIPIO DE, CHIH',clave:'00948009',c_state_id:6)	
+    CMunicipality.create(nombre:'MOLINO EL, CHIH',clave:'00948205',c_state_id:6)	
+    CMunicipality.create(nombre:'NAMIQUIPA LOCALIDAD DE, CHIH',clave:'00948309',c_state_id:6)	
+    CMunicipality.create(nombre:'OSCAR SOTO MAYNES, CHIH',clave:'00948432',c_state_id:6)	
+    CMunicipality.create(nombre:'NONOAVA, CHIH',clave:'00949003',c_state_id:6)	
+    CMunicipality.create(nombre:'NUEVO CASAS GRANDES MUNICIPIO DE, CHIH',clave:'00950003',c_state_id:6)	
+    CMunicipality.create(nombre:'DUBLAN, CHIH',clave:'00950166',c_state_id:6)	
+    CMunicipality.create(nombre:'NUEVO CASAS GRANDES LOCALIDAD DE, CHIH',clave:'00950373',c_state_id:6)	
+    CMunicipality.create(nombre:'OCAMPO, CHIH',clave:'00951009',c_state_id:6)	
+    CMunicipality.create(nombre:'OJINAGA, CHIH',clave:'00952009',c_state_id:6)	
+    CMunicipality.create(nombre:'PRAXEDIS G. GUERRERO, CHIH',clave:'00953003',c_state_id:6)	
+    CMunicipality.create(nombre:'RIVA PALACIO, CHIH',clave:'00954009',c_state_id:6)	
+    CMunicipality.create(nombre:'ROSALES, CHIH',clave:'00955009',c_state_id:6)	
+    CMunicipality.create(nombre:'ROSARIO, CHIH',clave:'00956003',c_state_id:6)	
+    CMunicipality.create(nombre:'SAN FRANCISCO DE BORJA, CHIH',clave:'00957009',c_state_id:6)	
+    CMunicipality.create(nombre:'SAN FRANCISCO DE CONCHOS, CHIH',clave:'00958009',c_state_id:6)	
+    CMunicipality.create(nombre:'SAN FRANCISCO DEL ORO, CHIH',clave:'00959003',c_state_id:6)	
+    CMunicipality.create(nombre:'SANTA BÁRBARA, CHIH',clave:'00960009',c_state_id:6)	
+    CMunicipality.create(nombre:'SATEVÓ, CHIH',clave:'00961006',c_state_id:6)	
+    CMunicipality.create(nombre:'SAUCILLO, CHIH',clave:'00962006',c_state_id:6)	
+    CMunicipality.create(nombre:'TEMÓSACHI, CHIH',clave:'00963009',c_state_id:6)	
+    CMunicipality.create(nombre:'EL TULE, CHIH',clave:'00964006',c_state_id:6)	
+    CMunicipality.create(nombre:'URIQUE, CHIH',clave:'00965006',c_state_id:6)	
+    CMunicipality.create(nombre:'URUACHI, CHIH',clave:'00966009',c_state_id:6)	
+    CMunicipality.create(nombre:'VALLE DE ZARAGOZA, CHIH',clave:'00967006',c_state_id:6)	
+    CMunicipality.create(nombre:'CHIHUAHUA (OTROS)',clave:'00999009',c_state_id:6)	
+    CMunicipality.create(nombre:'DISTRITO FEDERAL, DF',clave:'01001002',c_state_id:9)	
+    CMunicipality.create(nombre:'CANATLÁN MUNICIPIO DE, DGO',clave:'01103002',c_state_id:10)	
+    CMunicipality.create(nombre:'CANATLÁN LOCALIDAD DE, DGO',clave:'01103058',c_state_id:10)	
+    CMunicipality.create(nombre:'NUEVO IDEAL, DGO',clave:'01103152',c_state_id:10)	
+    CMunicipality.create(nombre:'CANELAS, DGO',clave:'01105004',c_state_id:10)	
+    CMunicipality.create(nombre:'CONETO DE COMONFORT, DGO',clave:'01107009',c_state_id:10)	
+    CMunicipality.create(nombre:'CUENCAMÉ, DGO',clave:'01109008',c_state_id:10)	
+    CMunicipality.create(nombre:'DURANGO, DGO',clave:'01111007',c_state_id:10)	
+    CMunicipality.create(nombre:'GENERAL SIMÓN BOLÍVAR, DGO',clave:'01113006',c_state_id:10)	
+    CMunicipality.create(nombre:'GÓMEZ PALACIO, DGO',clave:'01115008',c_state_id:10)	
+    CMunicipality.create(nombre:'BERMEJILLO, DGO',clave:'01116009',c_state_id:10)	
+    CMunicipality.create(nombre:'GUADALUPE VICTORIA, DGO',clave:'01117004',c_state_id:10)	
+    CMunicipality.create(nombre:'GUANACEVÍ, DGO',clave:'01119003',c_state_id:10)	
+    CMunicipality.create(nombre:'HIDALGO, DGO',clave:'01121008',c_state_id:10)	
+    CMunicipality.create(nombre:'INDÉ, DGO',clave:'01123007',c_state_id:10)	
+    CMunicipality.create(nombre:'LERDO, DGO',clave:'01125009',c_state_id:10)	
+    CMunicipality.create(nombre:'MAPIMÍ MUNICIPIO DE, DGO',clave:'01127005',c_state_id:10)	
+    CMunicipality.create(nombre:'CEBALLOS, DGO',clave:'01127079',c_state_id:10)	
+    CMunicipality.create(nombre:'MAPIMI LOCALIDAD DE, DGO',clave:'01127208',c_state_id:10)	
+    CMunicipality.create(nombre:'MEZQUITAL, DGO',clave:'01129004',c_state_id:10)	
+    CMunicipality.create(nombre:'NAZAS, DGO',clave:'01131006',c_state_id:10)	
+    CMunicipality.create(nombre:'NOMBRE DE DIOS, DGO',clave:'01133005',c_state_id:10)	
+    CMunicipality.create(nombre:'OCAMPO MUNICIPIO DE, DGO',clave:'01135007',c_state_id:10)	
+    CMunicipality.create(nombre:'LAS NIEVES, DGO',clave:'01135109',c_state_id:10)	
+    CMunicipality.create(nombre:'OCAMPO LOALIDAD DE, DGO',clave:'01135206',c_state_id:10)	
+    CMunicipality.create(nombre:'ORO EL, DGO',clave:'01137003',c_state_id:10)	
+    CMunicipality.create(nombre:'SAN FELIPE, DGO',clave:'01137207',c_state_id:10)	
+    CMunicipality.create(nombre:'SANTA MARÍA DEL ORO, DGO',clave:'01137306',c_state_id:10)	
+    CMunicipality.create(nombre:'OTÁEZ, DGO',clave:'01139002',c_state_id:10)	
+    CMunicipality.create(nombre:'PÁNUCO DE CORONADO, DGO',clave:'01141001',c_state_id:10)	
+    CMunicipality.create(nombre:'FRANCISCO I MADERO, DGO',clave:'01141154',c_state_id:10)	
+    CMunicipality.create(nombre:'PANUCO DE CORONADO LOCALIDAD DE, DGO',clave:'01141301',c_state_id:10)	
+    CMunicipality.create(nombre:'PEÑÓN BLANCO, DGO',clave:'01143009',c_state_id:10)	
+    CMunicipality.create(nombre:'POANAS, DGO',clave:'01145002',c_state_id:10)	
+    CMunicipality.create(nombre:'VILLA UNIÓN, DGO',clave:'01145352',c_state_id:10)	
+    CMunicipality.create(nombre:'PUEBLO NUEVO, DGO',clave:'01147007',c_state_id:10)	
+    CMunicipality.create(nombre:'EL SALTO, DGO',clave:'01147103',c_state_id:10)	
+    CMunicipality.create(nombre:'RODEO, DGO',clave:'01149006',c_state_id:10)	
+    CMunicipality.create(nombre:'SAN BERNARDO, DGO',clave:'01151002',c_state_id:10)	
+    CMunicipality.create(nombre:'SAN DIMAS, DGO',clave:'01153001',c_state_id:10)	
+    CMunicipality.create(nombre:'TAYOLTITA, DGO',clave:'01153301',c_state_id:10)	
+    CMunicipality.create(nombre:'SAN JUAN DE GUADALUPE, DGO',clave:'01155003',c_state_id:10)	
+    CMunicipality.create(nombre:'SAN JUAN DEL RÍO, DGO',clave:'01157008',c_state_id:10)	
+    CMunicipality.create(nombre:'SAN LUIS DEL CORDERO, DGO',clave:'01159007',c_state_id:10)	
+    CMunicipality.create(nombre:'SAN PEDRO DEL GALLO, DGO',clave:'01161009',c_state_id:10)	
+    CMunicipality.create(nombre:'SANTA CLARA, DGO',clave:'01163008',c_state_id:10)	
+    CMunicipality.create(nombre:'SANTIAGO PAPASQUIARO, DGO',clave:'01165001',c_state_id:10)	
+    CMunicipality.create(nombre:'SÚCHIL, DGO',clave:'01167006',c_state_id:10)	
+    CMunicipality.create(nombre:'TAMAZULA, DGO',clave:'01169005',c_state_id:10)	
+    CMunicipality.create(nombre:'TEPEHUANES, DGO',clave:'01171004',c_state_id:10)	
+    CMunicipality.create(nombre:'TLAHUALILO DE ZARAGOZA, DGO',clave:'01173003',c_state_id:10)	
+    CMunicipality.create(nombre:'EL LUCERO, DGO',clave:'01174007',c_state_id:10)	
+    CMunicipality.create(nombre:'TOPIA, DGO',clave:'01175005',c_state_id:10)	
+    CMunicipality.create(nombre:'VICENTE GUERRERO, DGO',clave:'01177001',c_state_id:10)	
+    CMunicipality.create(nombre:'DURANGO (OTROS)',clave:'01199008',c_state_id:10)	
+    CMunicipality.create(nombre:'ABASOLO, GTO',clave:'01202008',c_state_id:11)	
+    CMunicipality.create(nombre:'ACÁMBARO, GTO',clave:'01204007',c_state_id:11)	
+    CMunicipality.create(nombre:'ALDAMA, GTO',clave:'01205002',c_state_id:11)	
+    CMunicipality.create(nombre:'ALLENDE SAN MIGUEL DE, GTO',clave:'01206009',c_state_id:11)	
+    CMunicipality.create(nombre:'APASEO EL ALTO, GTO',clave:'01208005',c_state_id:11)	
+    CMunicipality.create(nombre:'APASEO EL GRANDE, GTO',clave:'01210001',c_state_id:11)	
+    CMunicipality.create(nombre:'ATARJEA, GTO',clave:'01212006',c_state_id:11)	
+    CMunicipality.create(nombre:'CELAYA MUNICIPIO DE, GTO',clave:'01214005',c_state_id:11)	
+    CMunicipality.create(nombre:'CELAYA LOCALIDAD DE, GTO',clave:'01214055',c_state_id:11)	
+    CMunicipality.create(nombre:'RINCÓN DE TAMAYO, GTO',clave:'01214115',c_state_id:11)	
+    CMunicipality.create(nombre:'SAN JUAN DE LA VEGA, GTO',clave:'01214155',c_state_id:11)	
+    CMunicipality.create(nombre:'CIUDAD MANUEL DOBLADO, GTO',clave:'01216007',c_state_id:11)	
+    CMunicipality.create(nombre:'COMONFORT, GTO',clave:'01218003',c_state_id:11)	
+    CMunicipality.create(nombre:'CORONEO, GTO',clave:'01220005',c_state_id:11)	
+    CMunicipality.create(nombre:'CORTAZAR, GTO',clave:'01222001',c_state_id:11)	
+    CMunicipality.create(nombre:'CUERÁMARO, GTO',clave:'01224009',c_state_id:11)	
+    CMunicipality.create(nombre:'DOCTOR MORA, GTO',clave:'01226002',c_state_id:11)	
+    CMunicipality.create(nombre:'DOLORES HIDALGO, GTO',clave:'01228007',c_state_id:11)	
+    CMunicipality.create(nombre:'GUANAJUATO, GTO',clave:'01230006',c_state_id:11)	
+    CMunicipality.create(nombre:'HUANÍMARO, GTO',clave:'01232002',c_state_id:11)	
+    CMunicipality.create(nombre:'IRAPUATO, GTO',clave:'01234001',c_state_id:11)	
+    CMunicipality.create(nombre:'JARAL DEL PROGRESO, GTO',clave:'01236003',c_state_id:11)	
+    CMunicipality.create(nombre:'JERÉCUARO, GTO',clave:'01238008',c_state_id:11)	
+    CMunicipality.create(nombre:'LEÓN, GTO',clave:'01240004',c_state_id:11)	
+    CMunicipality.create(nombre:'MOROLEÓN, GTO',clave:'01242009',c_state_id:11)	
+    CMunicipality.create(nombre:'OCAMPO, GTO',clave:'01244008',c_state_id:11)	
+    CMunicipality.create(nombre:'PÉNJAMO MUNICIPIO DE, GTO',clave:'01246001',c_state_id:11)	
+    CMunicipality.create(nombre:'PÉNJAMO LOCALIDAD DE, GTO',clave:'01246109',c_state_id:11)	
+    CMunicipality.create(nombre:'SANTA ANA PACUECO, GTO',clave:'01246154',c_state_id:11)	
+    CMunicipality.create(nombre:'PUEBLO NUEVO, GTO',clave:'01248006',c_state_id:11)	
+    CMunicipality.create(nombre:'PURÍSIMA DEL RINCÓN, GTO',clave:'01250008',c_state_id:11)	
+    CMunicipality.create(nombre:'PURÍSIMA DE BUSTOS, GTO',clave:'01250259',c_state_id:11)	
+    CMunicipality.create(nombre:'ROMITA, GTO',clave:'01252004',c_state_id:11)	
+    CMunicipality.create(nombre:'SALAMANCA, GTO',clave:'01254003',c_state_id:11)	
+    CMunicipality.create(nombre:'SALVATIERRA, GTO',clave:'01256005',c_state_id:11)	
+    CMunicipality.create(nombre:'SAN DIEGO DE LA UNIÓN, GTO',clave:'01258001',c_state_id:11)	
+    CMunicipality.create(nombre:'SAN FELIPE, GTO',clave:'01262005',c_state_id:11)	
+    CMunicipality.create(nombre:'SAN FRANCISCO DEL RINCÓN, GTO',clave:'01264004',c_state_id:11)	
+    CMunicipality.create(nombre:'SAN JOSÉ ITURBIDE, GTO',clave:'01268002',c_state_id:11)	
+    CMunicipality.create(nombre:'SAN LUIS DE LA PAZ, GTO',clave:'01270007',c_state_id:11)	
+    CMunicipality.create(nombre:'SANTA CATARINA, GTO',clave:'01272003',c_state_id:11)	
+    CMunicipality.create(nombre:'SANTA CRUZ DE JUVENTINO ROSAS, GTO',clave:'01274002',c_state_id:11)	
+    CMunicipality.create(nombre:'SANTIAGO MARAVATÍO, GTO',clave:'01276004',c_state_id:11)	
+    CMunicipality.create(nombre:'SILAO, GTO',clave:'01278009',c_state_id:11)	
+    CMunicipality.create(nombre:'TARANDACUAO, GTO',clave:'01280002',c_state_id:11)	
+    CMunicipality.create(nombre:'TARIMORO, GTO',clave:'01282007',c_state_id:11)	
+    CMunicipality.create(nombre:'TIERRA BLANCA, GTO',clave:'01284006',c_state_id:11)	
+    CMunicipality.create(nombre:'URIANGATO, GTO',clave:'01286008',c_state_id:11)	
+    CMunicipality.create(nombre:'VALLE DE SANTIAGO, GTO',clave:'01288004',c_state_id:11)	
+    CMunicipality.create(nombre:'VICENTE GUERRERO, GTO',clave:'01288503',c_state_id:11)	
+    CMunicipality.create(nombre:'VICTORIA, GTO',clave:'01290003',c_state_id:11)	
+    CMunicipality.create(nombre:'VILLAGRAN, GTO',clave:'01292008',c_state_id:11)	
+    CMunicipality.create(nombre:'XICHÚ, GTO',clave:'01294007',c_state_id:11)	
+    CMunicipality.create(nombre:'YURIRIA MUNICIPIO DE, GTO',clave:'01296009',c_state_id:11)	
+    CMunicipality.create(nombre:'CERANO, GTO',clave:'01296169',c_state_id:11)	
+    CMunicipality.create(nombre:'YURIRIA LOCALIDAD DE, GTO',clave:'01296771',c_state_id:11)	
+    CMunicipality.create(nombre:'GUANAJUATO (OTROS)',clave:'01299003',c_state_id:11)	
+    CMunicipality.create(nombre:'ACAPULCO DE JUÁREZ MUNICIPIO DE, GRO',clave:'01301005',c_state_id:12)	
+    CMunicipality.create(nombre:'ACAPULCO LOCALIDAD DE, GRO',clave:'01301115',c_state_id:12)	
+    CMunicipality.create(nombre:'LA SABANA, GRO',clave:'01301439',c_state_id:12)	
+    CMunicipality.create(nombre:'AHUACUOTZINGO, GRO',clave:'01302006',c_state_id:12)	
+    CMunicipality.create(nombre:'AJUCHITLÁN DEL PROGRESO, GRO',clave:'01303001',c_state_id:12)	
+    CMunicipality.create(nombre:'ALCOZAUCA DE GUERRERO, GRO',clave:'01304008',c_state_id:12)	
+    CMunicipality.create(nombre:'ALPOYECA, GRO',clave:'01305009',c_state_id:12)	
+    CMunicipality.create(nombre:'APAXTLA, GRO',clave:'01306004',c_state_id:12)	
+    CMunicipality.create(nombre:'ARCELIA, GRO',clave:'01307002',c_state_id:12)	
+    CMunicipality.create(nombre:'ATENANGO DEL RÍO, GRO',clave:'01308003',c_state_id:12)	
+    CMunicipality.create(nombre:'ATLAMAJALCINGO DEL MONTE, GRO',clave:'01309007',c_state_id:12)	
+    CMunicipality.create(nombre:'ATLIXTAC, GRO',clave:'01310008',c_state_id:12)	
+    CMunicipality.create(nombre:'ATOYAC DE ÁLVAREZ, GRO',clave:'01311006',c_state_id:12)	
+    CMunicipality.create(nombre:'AYUTLA DE LOS LIBRES, GRO',clave:'01312007',c_state_id:12)	
+    CMunicipality.create(nombre:'AZOYÚ MUNICIPIO DE, GRO',clave:'01313002',c_state_id:12)	
+    CMunicipality.create(nombre:'AZOYÚ LOCALIDAD DE, GRO',clave:'01313049',c_state_id:12)	
+    CMunicipality.create(nombre:'MARQUELIA, GRO',clave:'01313379',c_state_id:12)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ, GRO',clave:'01314009',c_state_id:12)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO DE JUÁREZ, GRO',clave:'01314303',c_state_id:12)	
+    CMunicipality.create(nombre:'BUENAVISTA DE CUÉLLAR, GRO',clave:'01315001',c_state_id:12)	
+    CMunicipality.create(nombre:'COAHUAYUTLA DE J MA IZAZAGA, GRO',clave:'01316005',c_state_id:12)	
+    CMunicipality.create(nombre:'COCULA, GRO',clave:'01317003',c_state_id:12)	
+    CMunicipality.create(nombre:'COPALA, GRO',clave:'01318004',c_state_id:12)	
+    CMunicipality.create(nombre:'COPALILLO, GRO',clave:'01319008',c_state_id:12)	
+    CMunicipality.create(nombre:'COPANATOYAC, GRO',clave:'01320006',c_state_id:12)	
+    CMunicipality.create(nombre:'COYUCA DE BENÍTEZ, GRO',clave:'01321004',c_state_id:12)	
+    CMunicipality.create(nombre:'COYUCA DE CATALÁN, GRO',clave:'01322005',c_state_id:12)	
+    CMunicipality.create(nombre:'CUAJINICUILAPA, GRO',clave:'01323009',c_state_id:12)	
+    CMunicipality.create(nombre:'CUALÁC, GRO',clave:'01324007',c_state_id:12)	
+    CMunicipality.create(nombre:'CUAUTEPEC, GRO',clave:'01325008',c_state_id:12)	
+    CMunicipality.create(nombre:'CUETZALA DEL PROGRESO, GRO',clave:'01326003',c_state_id:12)	
+    CMunicipality.create(nombre:'CUTZAMALA DE PINZÓN, GRO',clave:'01327001',c_state_id:12)	
+    CMunicipality.create(nombre:'CHILAPA DE ALVAREZ, GRO',clave:'01328002',c_state_id:12)	
+    CMunicipality.create(nombre:'CHILPANCINGO DE LOS BRAVO, GRO',clave:'01329006',c_state_id:12)	
+    CMunicipality.create(nombre:'FLORENCIO VILLARREAL, GRO',clave:'01330001',c_state_id:12)	
+    CMunicipality.create(nombre:'CRUZ GRANDE, GRO',clave:'01330056',c_state_id:12)	
+    CMunicipality.create(nombre:'GENERAL CANUTO A NERI, GRO',clave:'01331008',c_state_id:12)	
+    CMunicipality.create(nombre:'ACAPETLAHUAYA, GRO',clave:'01331052',c_state_id:12)	
+    CMunicipality.create(nombre:'GENERAL HELIODORO CASTILLO, GRO',clave:'01332009',c_state_id:12)	
+    CMunicipality.create(nombre:'TLACOTEPEC, GRO',clave:'01332303',c_state_id:12)	
+    CMunicipality.create(nombre:'HUAMUXTITLÁN, GRO',clave:'01333004',c_state_id:12)	
+    CMunicipality.create(nombre:'HUITZUCO DE LOS FIGUEROA, GRO',clave:'01334002',c_state_id:12)	
+    CMunicipality.create(nombre:'IGUALA DE LA INDEPENDENCIA, GRO',clave:'01335003',c_state_id:12)	
+    CMunicipality.create(nombre:'IGUALAPA, GRO',clave:'01336007',c_state_id:12)	
+    CMunicipality.create(nombre:'IXCATEOPAN DE CUAUHTÉMOC, GRO',clave:'01337005',c_state_id:12)	
+    CMunicipality.create(nombre:'JOSÉ AZUETA, GRO',clave:'01339001',c_state_id:12)	
+    CMunicipality.create(nombre:'IXTAPA, GRO',clave:'01339154',c_state_id:12)	
+    CMunicipality.create(nombre:'ZIHUATANEJO, GRO',clave:'01339256',c_state_id:12)	
+    CMunicipality.create(nombre:'JUAN R ESCUDERO, GRO',clave:'01340002',c_state_id:12)	
+    CMunicipality.create(nombre:'TIERRA COLORADA, GRO',clave:'01340308',c_state_id:12)	
+    CMunicipality.create(nombre:'LEONARDO BRAVO, GRO',clave:'01341009',c_state_id:12)	
+    CMunicipality.create(nombre:'CHICHIHUALCO, GRO',clave:'01341106',c_state_id:12)	
+    CMunicipality.create(nombre:'MALINALTEPEC, GRO',clave:'01342001',c_state_id:12)	
+    CMunicipality.create(nombre:'MÁRTIR DE CUILAPÁN, GRO',clave:'01343005',c_state_id:12)	
+    CMunicipality.create(nombre:'APÁNGO, GRO',clave:'01343055',c_state_id:12)	
+    CMunicipality.create(nombre:'METLATÓNOC, GRO',clave:'01344003',c_state_id:12)	
+    CMunicipality.create(nombre:'MOCHITLÁN, GRO',clave:'01345004',c_state_id:12)	
+    CMunicipality.create(nombre:'OLINALÁ, GRO',clave:'01346008',c_state_id:12)	
+    CMunicipality.create(nombre:'OMETEPEC, GRO',clave:'01347006',c_state_id:12)	
+    CMunicipality.create(nombre:'PEDRO ASCENCIO ALQUISIRAS, GRO',clave:'01348007',c_state_id:12)	
+    CMunicipality.create(nombre:'HISCAPUZALCO, GRO',clave:'01348209',c_state_id:12)	
+    CMunicipality.create(nombre:'PETATLÁN, GRO',clave:'01349002',c_state_id:12)	
+    CMunicipality.create(nombre:'PILCAYA, GRO',clave:'01350009',c_state_id:12)	
+    CMunicipality.create(nombre:'PUNGARABATO, GRO',clave:'01351007',c_state_id:12)	
+    CMunicipality.create(nombre:'ALTAMIRANO, GRO',clave:'01351053',c_state_id:12)	
+    CMunicipality.create(nombre:'QUECHULTENANGO, GRO',clave:'01352008',c_state_id:12)	
+    CMunicipality.create(nombre:'SAN LUIS ACATLÁN, GRO',clave:'01353003',c_state_id:12)	
+    CMunicipality.create(nombre:'SAN MARCOS, GRO',clave:'01354001',c_state_id:12)	
+    CMunicipality.create(nombre:'SAN MIGUEL TOTOLAPÁN, GRO',clave:'01355002',c_state_id:12)	
+    CMunicipality.create(nombre:'TAXCO DE ALARACÓN, GRO',clave:'01356006',c_state_id:12)	
+    CMunicipality.create(nombre:'TECOANAPA, GRO',clave:'01357004',c_state_id:12)	
+    CMunicipality.create(nombre:'TÉCPAN DE GALEANA MUNICIPIO DE, GRO',clave:'01358005',c_state_id:12)	
+    CMunicipality.create(nombre:'TECPAN LOCALIDAD DE, GRO',clave:'01358502',c_state_id:12)	
+    CMunicipality.create(nombre:'SAN LUIS DE LA LOMA, GRO',clave:'01358758',c_state_id:12)	
+    CMunicipality.create(nombre:'TELOLOAPÁN, GRO',clave:'01359009',c_state_id:12)	
+    CMunicipality.create(nombre:'TEPECOACUILCO DE TRUJANO, GRO',clave:'01360004',c_state_id:12)	
+    CMunicipality.create(nombre:'TETIPAC, GRO',clave:'01361002',c_state_id:12)	
+    CMunicipality.create(nombre:'TIXTLA DE GUERRERO, GRO',clave:'01362003',c_state_id:12)	
+    CMunicipality.create(nombre:'TLACOACHISTLAHUACA, GRO',clave:'01363007',c_state_id:12)	
+    CMunicipality.create(nombre:'TLACOAPA, GRO',clave:'01364005',c_state_id:12)	
+    CMunicipality.create(nombre:'TLALCHAPA, GRO',clave:'01365006',c_state_id:12)	
+    CMunicipality.create(nombre:'TLALIXTAQUILLA DE MALDONADO, GRO',clave:'01366001',c_state_id:12)	
+    CMunicipality.create(nombre:'TLAPA DE COMONFORT, GRO',clave:'01367008',c_state_id:12)	
+    CMunicipality.create(nombre:'TLAPEHUALA, GRO',clave:'01368009',c_state_id:12)	
+    CMunicipality.create(nombre:'UNIÓN LA, GRO',clave:'01369004',c_state_id:12)	
+    CMunicipality.create(nombre:'XALPATLÁHUAC, GRO',clave:'01370005',c_state_id:12)	
+    CMunicipality.create(nombre:'XOCHIHUEHUETLÁN, GRO',clave:'01371003',c_state_id:12)	
+    CMunicipality.create(nombre:'XOCHISTLAHUACA, GRO',clave:'01372004',c_state_id:12)	
+    CMunicipality.create(nombre:'ZAPOTITLÁN TABLAS, GRO',clave:'01373008',c_state_id:12)	
+    CMunicipality.create(nombre:'ZIRÁNDARO MUNICIPIO DE, GRO',clave:'01374006',c_state_id:12)	
+    CMunicipality.create(nombre:'GUAYAMEO, GRO',clave:'01374057',c_state_id:12)	
+    CMunicipality.create(nombre:'ZIRANDARO LOCALIDAD, GRO',clave:'01374253',c_state_id:12)	
+    CMunicipality.create(nombre:'ZITLALA, GRO',clave:'01375007',c_state_id:12)	
+    CMunicipality.create(nombre:'ZUMPANGO DEL RÍO, GRO',clave:'01376002',c_state_id:12)	
+    CMunicipality.create(nombre:'ACATEPEC, GRO',clave:'01377009',c_state_id:12)	
+    CMunicipality.create(nombre:'COCHOAPA EL GRANDE, GRO',clave:'01378001',c_state_id:12)	
+    CMunicipality.create(nombre:'JOSÉ JOAQUIN DE HERRERA, GRO',clave:'01379005',c_state_id:12)	
+    CMunicipality.create(nombre:'JUCHITÁN, GRO',clave:'01380003',c_state_id:12)	
+    CMunicipality.create(nombre:'GUERRERO (OTROS)',clave:'01399007',c_state_id:12)	
+    CMunicipality.create(nombre:'ACATLÁN, HGO',clave:'01401006',c_state_id:13)	
+    CMunicipality.create(nombre:'ACAXOCHITLÁN, HGO',clave:'01402004',c_state_id:13)	
+    CMunicipality.create(nombre:'ACTOPAN, HGO',clave:'01403005',c_state_id:13)	
+    CMunicipality.create(nombre:'AGUA BLANCA DE ITURBIDE, HGO',clave:'01404009',c_state_id:13)	
+    CMunicipality.create(nombre:'AJACUBA, HGO',clave:'01405007',c_state_id:13)	
+    CMunicipality.create(nombre:'ALFAJAYUCAN, HGO',clave:'01406008',c_state_id:13)	
+    CMunicipality.create(nombre:'ALMOLOYA, HGO',clave:'01407003',c_state_id:13)	
+    CMunicipality.create(nombre:'APÁN, HGO',clave:'01408001',c_state_id:13)	
+    CMunicipality.create(nombre:'ARENAL EL, HGO',clave:'01409002',c_state_id:13)	
+    CMunicipality.create(nombre:'ATITALAQUIA, HGO',clave:'01410006',c_state_id:13)	
+    CMunicipality.create(nombre:'ATLAPEXCO, HGO',clave:'01411001',c_state_id:13)	
+    CMunicipality.create(nombre:'ATOTONILCO EL GRANDE, HGO',clave:'01412008',c_state_id:13)	
+    CMunicipality.create(nombre:'ATOTONILCO DE TULA, HGO',clave:'01413009',c_state_id:13)	
+    CMunicipality.create(nombre:'CALNALI, HGO',clave:'01414004',c_state_id:13)	
+    CMunicipality.create(nombre:'CARDONAL, HGO',clave:'01415002',c_state_id:13)	
+    CMunicipality.create(nombre:'CUAUTEPEC DE HINOJOSA, HGO',clave:'01416003',c_state_id:13)	
+    CMunicipality.create(nombre:'CHAPÁNTONGO, HGO',clave:'01417007',c_state_id:13)	
+    CMunicipality.create(nombre:'CHAPULHUACÁN, HGO',clave:'01418005',c_state_id:13)	
+    CMunicipality.create(nombre:'CHILCUAUTLA, HGO',clave:'01419006',c_state_id:13)	
+    CMunicipality.create(nombre:'ELOXOCHITLÁN, HGO',clave:'01420007',c_state_id:13)	
+    CMunicipality.create(nombre:'EMILIANO ZAPATA, HGO',clave:'01421002',c_state_id:13)	
+    CMunicipality.create(nombre:'EPAZOYUCAN, HGO',clave:'01422009',c_state_id:13)	
+    CMunicipality.create(nombre:'FRANCISCO I. MADERO, HGO',clave:'01423001',c_state_id:13)	
+    CMunicipality.create(nombre:'TEPATEPEC, HGO',clave:'01423301',c_state_id:13)	
+    CMunicipality.create(nombre:'HUASCA DE OCAMPO, HGO',clave:'01424005',c_state_id:13)	
+    CMunicipality.create(nombre:'HUAUTLA, HGO',clave:'01425003',c_state_id:13)	
+    CMunicipality.create(nombre:'HUAZALINGO, HGO',clave:'01426004',c_state_id:13)	
+    CMunicipality.create(nombre:'HUEHUETLA, HGO',clave:'01427008',c_state_id:13)	
+    CMunicipality.create(nombre:'HUEJUTLA DE REYES, HGO',clave:'01428006',c_state_id:13)	
+    CMunicipality.create(nombre:'HUICHAPÁN, HGO',clave:'01429007',c_state_id:13)	
+    CMunicipality.create(nombre:'IXMIQUILPAN, HGO',clave:'01430005',c_state_id:13)	
+    CMunicipality.create(nombre:'JACALA, HGO',clave:'01431009',c_state_id:13)	
+    CMunicipality.create(nombre:'JALTOCÁN, HGO',clave:'01432007',c_state_id:13)	
+    CMunicipality.create(nombre:'JUÁREZ HIDALGO, HGO',clave:'01433008',c_state_id:13)	
+    CMunicipality.create(nombre:'LOLOTLA, HGO',clave:'01434003',c_state_id:13)	
+    CMunicipality.create(nombre:'METEPEC, HGO',clave:'01435001',c_state_id:13)	
+    CMunicipality.create(nombre:'METZQUITITLÁN, HGO',clave:'01436002',c_state_id:13)	
+    CMunicipality.create(nombre:'METZTITLÁN, HGO',clave:'01437006',c_state_id:13)	
+    CMunicipality.create(nombre:'MINERAL DEL CHICO, HGO',clave:'01438004',c_state_id:13)	
+    CMunicipality.create(nombre:'MINERAL DEL MONTE, HGO',clave:'01439005',c_state_id:13)	
+    CMunicipality.create(nombre:'MISION LA, HGO',clave:'01440009',c_state_id:13)	
+    CMunicipality.create(nombre:'MIXQUIAHUALA, HGO',clave:'01441004',c_state_id:13)	
+    CMunicipality.create(nombre:'MOLANGO, HGO',clave:'01442002',c_state_id:13)	
+    CMunicipality.create(nombre:'NICOLÁS FLORES, HGO',clave:'01443003',c_state_id:13)	
+    CMunicipality.create(nombre:'NOPALA, HGO',clave:'01444007',c_state_id:13)	
+    CMunicipality.create(nombre:'OMITLÁN DE JUÁREZ, HGO',clave:'01445005',c_state_id:13)	
+    CMunicipality.create(nombre:'ORIZATLÁN, HGO',clave:'01446006',c_state_id:13)	
+    CMunicipality.create(nombre:'PACULA, HGO',clave:'01447001',c_state_id:13)	
+    CMunicipality.create(nombre:'PACHUCA DE SOTO, HGO',clave:'01448008',c_state_id:13)	
+    CMunicipality.create(nombre:'PISAFLORES, HGO',clave:'01449009',c_state_id:13)	
+    CMunicipality.create(nombre:'PROGRESO, HGO',clave:'01450001',c_state_id:13)	
+    CMunicipality.create(nombre:'MINERAL DE LA REFORMA, HGO',clave:'01451005',c_state_id:13)	
+    CMunicipality.create(nombre:'PACHUQUILLA, HGO',clave:'01451208',c_state_id:13)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN TLAXIACA, HGO',clave:'01452003',c_state_id:13)	
+    CMunicipality.create(nombre:'SAN BARTOLO TUTOTEPEC, HGO',clave:'01453004',c_state_id:13)	
+    CMunicipality.create(nombre:'SAN SALVADOR, HGO',clave:'01454008',c_state_id:13)	
+    CMunicipality.create(nombre:'SANTIAGO DE ANAYA, HGO',clave:'01455006',c_state_id:13)	
+    CMunicipality.create(nombre:'SANTIAGO TULANTEPEC, HGO',clave:'01456007',c_state_id:13)	
+    CMunicipality.create(nombre:'SINGUILUCAN, HGO',clave:'01457002',c_state_id:13)	
+    CMunicipality.create(nombre:'TASQUILLO, HGO',clave:'01458009',c_state_id:13)	
+    CMunicipality.create(nombre:'TECOZAUTLA, HGO',clave:'01459001',c_state_id:13)	
+    CMunicipality.create(nombre:'TENANGO DE DORIA, HGO',clave:'01460008',c_state_id:13)	
+    CMunicipality.create(nombre:'TEPEAPULCO MUNICIPIO DE, HGO',clave:'01461003',c_state_id:13)	
+    CMunicipality.create(nombre:'CIUDAD SAHAGÚN, HGO',clave:'01461103',c_state_id:13)	
+    CMunicipality.create(nombre:'TEPEAPULCO LOCALIDAD DE, HGO',clave:'01461259',c_state_id:13)	
+    CMunicipality.create(nombre:'TEPEHUACÁN DE GUERRERO, HGO',clave:'01462001',c_state_id:13)	
+    CMunicipality.create(nombre:'TEPEJI DEL RÍO, HGO',clave:'01463002',c_state_id:13)	
+    CMunicipality.create(nombre:'TEPETITLÁN, HGO',clave:'01464006',c_state_id:13)	
+    CMunicipality.create(nombre:'TETEPANGO, HGO',clave:'01465004',c_state_id:13)	
+    CMunicipality.create(nombre:'TEZONTEPEC, HGO',clave:'01466005',c_state_id:13)	
+    CMunicipality.create(nombre:'TEZONTEPEC DE ALDAMA, HGO',clave:'01467009',c_state_id:13)	
+    CMunicipality.create(nombre:'TIANGUISTENGO, HGO',clave:'01468007',c_state_id:13)	
+    CMunicipality.create(nombre:'TIZAYUCA, HGO',clave:'01469008',c_state_id:13)	
+    CMunicipality.create(nombre:'TLAHUELILPAN, HGO',clave:'01470003',c_state_id:13)	
+    CMunicipality.create(nombre:'TLAHUILTEPA, HGO',clave:'01471007',c_state_id:13)	
+    CMunicipality.create(nombre:'TLANALAPA, HGO',clave:'01472005',c_state_id:13)	
+    CMunicipality.create(nombre:'TLANCHINOL, HGO',clave:'01473006',c_state_id:13)	
+    CMunicipality.create(nombre:'TLAXCOAPÁN, HGO',clave:'01474001',c_state_id:13)	
+    CMunicipality.create(nombre:'TOLCAYUCA, HGO',clave:'01475008',c_state_id:13)	
+    CMunicipality.create(nombre:'TULA DE ALLENDE MUNICIPIO DE, HGO',clave:'01476009',c_state_id:13)	
+    CMunicipality.create(nombre:'COOPERATIVA CRUZ AZUL, HGO',clave:'01476109',c_state_id:13)	
+    CMunicipality.create(nombre:'TULA DE ALLENDE LOCALIDAD DE, HGO',clave:'01476256',c_state_id:13)	
+    CMunicipality.create(nombre:'TULANCINGO, HGO',clave:'01477004',c_state_id:13)	
+    CMunicipality.create(nombre:'XOCHIATIPAN, HGO',clave:'01478002',c_state_id:13)	
+    CMunicipality.create(nombre:'XOCHICOATLÁN, HGO',clave:'01479003',c_state_id:13)	
+    CMunicipality.create(nombre:'YAHUALICA, HGO',clave:'01480004',c_state_id:13)	
+    CMunicipality.create(nombre:'ZACULTIPÁN, HGO',clave:'01481008',c_state_id:13)	
+    CMunicipality.create(nombre:'ZAPOTLÁN DE JUÁREZ, HGO',clave:'01482006',c_state_id:13)	
+    CMunicipality.create(nombre:'ZEMPOALA, HGO',clave:'01483007',c_state_id:13)	
+    CMunicipality.create(nombre:'ZIMAPÁN, HGO',clave:'01484002',c_state_id:13)	
+    CMunicipality.create(nombre:'HIDALGO (OTROS)',clave:'01499002',c_state_id:13)	
+    CMunicipality.create(nombre:'ACATIC, JAL',clave:'01501007',c_state_id:14)	
+    CMunicipality.create(nombre:'ACATLÁN DE JUÁREZ, JAL',clave:'01502002',c_state_id:14)	
+    CMunicipality.create(nombre:'AHUALULCO DEL MERCADO, JAL',clave:'01503009',c_state_id:14)	
+    CMunicipality.create(nombre:'AMACUECA, JAL',clave:'01504001',c_state_id:14)	
+    CMunicipality.create(nombre:'AMATITÁN, JAL',clave:'01505005',c_state_id:14)	
+    CMunicipality.create(nombre:'AMECA, JAL',clave:'01506003',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN JUANITO DE ESCOBEDO, JAL',clave:'01507004',c_state_id:14)	
+    CMunicipality.create(nombre:'ARANDAS, JAL',clave:'01508008',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN IGNACIO CERRO GORDO, JAL',clave:'01508692',c_state_id:14)	
+    CMunicipality.create(nombre:'EL ARENAL, JAL',clave:'01509006',c_state_id:14)	
+    CMunicipality.create(nombre:'ATEMAJAC DE BRIZUELA, JAL',clave:'01510004',c_state_id:14)	
+    CMunicipality.create(nombre:'ATENGO, JAL',clave:'01511005',c_state_id:14)	
+    CMunicipality.create(nombre:'ATENGUILLO, JAL',clave:'01512009',c_state_id:14)	
+    CMunicipality.create(nombre:'ATOTONILCO EL ALTO, JAL',clave:'01513007',c_state_id:14)	
+    CMunicipality.create(nombre:'ATOYAC, JAL',clave:'01514008',c_state_id:14)	
+    CMunicipality.create(nombre:'AUTLÁN DE NAVARRO, JAL',clave:'01515003',c_state_id:14)	
+    CMunicipality.create(nombre:'AYOTLÁN, JAL',clave:'01516001',c_state_id:14)	
+    CMunicipality.create(nombre:'AYUTLA, JAL',clave:'01517002',c_state_id:14)	
+    CMunicipality.create(nombre:'BARCA LA, JAL',clave:'01518006',c_state_id:14)	
+    CMunicipality.create(nombre:'BOLA OS, JAL',clave:'01519004',c_state_id:14)	
+    CMunicipality.create(nombre:'CABO CORRIENTES, JAL',clave:'01520008',c_state_id:14)	
+    CMunicipality.create(nombre:'EL TUITO, JAL',clave:'01520109',c_state_id:14)	
+    CMunicipality.create(nombre:'CASIMIRO CASTILLO, JAL',clave:'01521009',c_state_id:14)	
+    CMunicipality.create(nombre:'CIHUATLÁN MUNICIPIO DE, JAL',clave:'01522004',c_state_id:14)	
+    CMunicipality.create(nombre:'BARRA DE NAVIDAD, JAL',clave:'01522053',c_state_id:14)	
+    CMunicipality.create(nombre:'CIHUATLÁN LOCALIDAD DE, JAL',clave:'01522103',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN PATRICIO MELAQUE, JAL',clave:'01522406',c_state_id:14)	
+    CMunicipality.create(nombre:'CIUDAD GUZMÁN, JAL',clave:'01523002',c_state_id:14)	
+    CMunicipality.create(nombre:'COCULA, JAL',clave:'01524003',c_state_id:14)	
+    CMunicipality.create(nombre:'COLOTLÁN, JAL',clave:'01525007',c_state_id:14)	
+    CMunicipality.create(nombre:'CONCEPCIÓN DE BUENOS AIRES, JAL',clave:'01526005',c_state_id:14)	
+    CMunicipality.create(nombre:'CUAUTITLÁN DE GARCÍA BARRAGÁN, JAL',clave:'01527006',c_state_id:14)	
+    CMunicipality.create(nombre:'CUAUTLA, JAL',clave:'01528001',c_state_id:14)	
+    CMunicipality.create(nombre:'CUQUÍO, JAL',clave:'01529008',c_state_id:14)	
+    CMunicipality.create(nombre:'CHAPALA MUNICIPIO DE, JAL',clave:'01530009',c_state_id:14)	
+    CMunicipality.create(nombre:'AJIJIC, JAL',clave:'01530054',c_state_id:14)	
+    CMunicipality.create(nombre:'CHAPALA LOCALIDAD DE, JAL',clave:'01530156',c_state_id:14)	
+    CMunicipality.create(nombre:'CHIMALTITÁN, JAL',clave:'01531001',c_state_id:14)	
+    CMunicipality.create(nombre:'CHIQUILISTLÁN, JAL',clave:'01532005',c_state_id:14)	
+    CMunicipality.create(nombre:'DEGOLLADO, JAL',clave:'01533003',c_state_id:14)	
+    CMunicipality.create(nombre:'EJUTLA, JAL',clave:'01534004',c_state_id:14)	
+    CMunicipality.create(nombre:'ENCARNACIÓN DE DÍAZ, JAL',clave:'01535008',c_state_id:14)	
+    CMunicipality.create(nombre:'ETZATLÁN, JAL',clave:'01536006',c_state_id:14)	
+    CMunicipality.create(nombre:'GRULLO EL, JAL',clave:'01537007',c_state_id:14)	
+    CMunicipality.create(nombre:'GUACHINANGO, JAL',clave:'01538002',c_state_id:14)	
+    CMunicipality.create(nombre:'GUADALAJARA, JAL',clave:'01539009',c_state_id:14)	
+    CMunicipality.create(nombre:'HOSTOTIPAQUILLO, JAL',clave:'01540007',c_state_id:14)	
+    CMunicipality.create(nombre:'HUEJÚCAR, JAL',clave:'01541008',c_state_id:14)	
+    CMunicipality.create(nombre:'HUEJUQUILLA EL ALTO, JAL',clave:'01543001',c_state_id:14)	
+    CMunicipality.create(nombre:'HUERTA LA MUNICIPIO DE, JAL',clave:'01544002',c_state_id:14)	
+    CMunicipality.create(nombre:'CHAMELA, JAL',clave:'01544248',c_state_id:14)	
+    CMunicipality.create(nombre:'HUERTA LA LOCALIDAD DE, JAL',clave:'01544379',c_state_id:14)	
+    CMunicipality.create(nombre:'IXTLAHUACÁN DE LOS MEMBRILLOS MUNICIPIO DE, JAL',clave:'01545006',c_state_id:14)	
+    CMunicipality.create(nombre:'ATEQUIZA, JAL',clave:'01545051',c_state_id:14)	
+    CMunicipality.create(nombre:'IXTLAHUACÁN DE LOS MEMBRILLOS LOCALIDAD DE, JAL',clave:'01545204',c_state_id:14)	
+    CMunicipality.create(nombre:'IXTLAHUACÁN DEL RÍO, JAL',clave:'01546004',c_state_id:14)	
+    CMunicipality.create(nombre:'JALOSTOTITLÁN, JAL',clave:'01547005',c_state_id:14)	
+    CMunicipality.create(nombre:'JAMAY, JAL',clave:'01548009',c_state_id:14)	
+    CMunicipality.create(nombre:'JESÚS MARÍA, JAL',clave:'01549007',c_state_id:14)	
+    CMunicipality.create(nombre:'JILOTLÁN DE LOS DOLORES, JAL',clave:'01550002',c_state_id:14)	
+    CMunicipality.create(nombre:'JOCOTEPEC, JAL',clave:'01551003',c_state_id:14)	
+    CMunicipality.create(nombre:'JOCOTITLÁN, JAL',clave:'01551501',c_state_id:14)	
+    CMunicipality.create(nombre:'JUANACATLÁN, JAL',clave:'01552007',c_state_id:14)	
+    CMunicipality.create(nombre:'JUCHITLÁN, JAL',clave:'01553005',c_state_id:14)	
+    CMunicipality.create(nombre:'LAGOS DE MORENO, JAL',clave:'01554006',c_state_id:14)	
+    CMunicipality.create(nombre:'LIMÓN EL, JAL',clave:'01555001',c_state_id:14)	
+    CMunicipality.create(nombre:'MAGDALENA, JAL',clave:'01556008',c_state_id:14)	
+    CMunicipality.create(nombre:'SANTA MARIA DEL ORO, JAL',clave:'01557009',c_state_id:14)	
+    CMunicipality.create(nombre:'MANZANILLA DE LA PAZ, JAL',clave:'01558004',c_state_id:14)	
+    CMunicipality.create(nombre:'MASCOTA, JAL',clave:'01559002',c_state_id:14)	
+    CMunicipality.create(nombre:'MAZAMITLA, JAL',clave:'01560003',c_state_id:14)	
+    CMunicipality.create(nombre:'MEXTICACÁN, JAL',clave:'01561004',c_state_id:14)	
+    CMunicipality.create(nombre:'MEZQUITIC, JAL',clave:'01563006',c_state_id:14)	
+    CMunicipality.create(nombre:'MIXTLÁN, JAL',clave:'01564007',c_state_id:14)	
+    CMunicipality.create(nombre:'OCOTLÁN, JAL',clave:'01565002',c_state_id:14)	
+    CMunicipality.create(nombre:'OJUELOS DE JALISCO, JAL',clave:'01566009',c_state_id:14)	
+    CMunicipality.create(nombre:'PIHUAMO, JAL',clave:'01567001',c_state_id:14)	
+    CMunicipality.create(nombre:'PONCITLÁN, JAL',clave:'01568005',c_state_id:14)	
+    CMunicipality.create(nombre:'PUERTO VALLARTA MUNICIPIO DE, JAL',clave:'01569003',c_state_id:14)	
+    CMunicipality.create(nombre:'PITILLAL, JAL',clave:'01569651',c_state_id:14)	
+    CMunicipality.create(nombre:'PUERTO VALLARTA LOCALIDAD DE, JAL',clave:'01569717',c_state_id:14)	
+    CMunicipality.create(nombre:'VILLA PURIFICACIÓN, JAL',clave:'01570001',c_state_id:14)	
+    CMunicipality.create(nombre:'QUITUPAN, JAL',clave:'01571002',c_state_id:14)	
+    CMunicipality.create(nombre:'SALTO EL, JAL',clave:'01572006',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN CRISTÓBAL DE LA BARRANCA, JAL',clave:'01573004',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN DIEGO DE ALEJANDRÍA, JAL',clave:'01574005',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN JUAN DE LOS LAGOS, JAL',clave:'01575009',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN JULIÁN, JAL',clave:'01576007',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN MARCOS, JAL',clave:'01577008',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN MARTÍN DE BOLAÑOS, JAL',clave:'01578003',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN MARTÍN HIDALGO, JAL',clave:'01579001',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN MIGUEL EL ALTO, JAL',clave:'01580005',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN DEL SUR, JAL',clave:'01581006',c_state_id:14)	
+    CMunicipality.create(nombre:'GÓMEZ FARIAS, JAL',clave:'01581207',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN DEL OESTE, JAL',clave:'01582001',c_state_id:14)	
+    CMunicipality.create(nombre:'SANTA MARÍA DE LOS ÁNGELES, JAL',clave:'01583008',c_state_id:14)	
+    CMunicipality.create(nombre:'SAYULA, JAL',clave:'01584009',c_state_id:14)	
+    CMunicipality.create(nombre:'TALA, JAL',clave:'01585004',c_state_id:14)	
+    CMunicipality.create(nombre:'TALPA DE ALLENDE, JAL',clave:'01586002',c_state_id:14)	
+    CMunicipality.create(nombre:'TAMAZULA DE GORDIANO, JAL',clave:'01587003',c_state_id:14)	
+    CMunicipality.create(nombre:'TAPALPA, JAL',clave:'01588007',c_state_id:14)	
+    CMunicipality.create(nombre:'TECALITLÁN, JAL',clave:'01589005',c_state_id:14)	
+    CMunicipality.create(nombre:'TECOLOTLÁN, JAL',clave:'01590006',c_state_id:14)	
+    CMunicipality.create(nombre:'TECHALUTA DE MONTENEGRO, JAL',clave:'01591007',c_state_id:14)	
+    CMunicipality.create(nombre:'TENAMAXTLÁN, JAL',clave:'01592002',c_state_id:14)	
+    CMunicipality.create(nombre:'TEOCALTICHE, JAL',clave:'01593009',c_state_id:14)	
+    CMunicipality.create(nombre:'TEOCUITATLÁN DE CORONA, JAL',clave:'01594001',c_state_id:14)	
+    CMunicipality.create(nombre:'TEPATITLÁN DE MORELOS MUNICIPIO DE, JAL',clave:'01595005',c_state_id:14)	
+    CMunicipality.create(nombre:'CAPILLA DE GUADALUPE, JAL',clave:'01595109',c_state_id:14)	
+    CMunicipality.create(nombre:'PEGUEROS, JAL',clave:'01595215',c_state_id:14)	
+    CMunicipality.create(nombre:'TEPATITLÁN DE MORELOS LOCALIDAD DE, JAL',clave:'01595259',c_state_id:14)	
+    CMunicipality.create(nombre:'TEQUILA, JAL',clave:'01596003',c_state_id:14)	
+    CMunicipality.create(nombre:'TEUCHITLÁN, JAL',clave:'01597004',c_state_id:14)	
+    CMunicipality.create(nombre:'TIZAPÁN EL ALTO, JAL',clave:'01598008',c_state_id:14)	
+    CMunicipality.create(nombre:'TLAJOMULCO DE ZÚÑIGA, JAL',clave:'01599006',c_state_id:14)	
+    CMunicipality.create(nombre:'TLAQUEPAQUE MUNICIPIO DE, JAL',clave:'01601008',c_state_id:14)	
+    CMunicipality.create(nombre:'LAS JUNTAS, JAL',clave:'01601238',c_state_id:14)	
+    CMunicipality.create(nombre:'SANTA ANITA, JAL',clave:'01601482',c_state_id:14)	
+    CMunicipality.create(nombre:'TLAQUEPAQUE LOCALIDAD DE, JAL',clave:'01601532',c_state_id:14)	
+    CMunicipality.create(nombre:'TOLIMÁN, JAL',clave:'01602009',c_state_id:14)	
+    CMunicipality.create(nombre:'TOMATLÁN, JAL',clave:'01603004',c_state_id:14)	
+    CMunicipality.create(nombre:'TONALÁ, JAL',clave:'01604002',c_state_id:14)	
+    CMunicipality.create(nombre:'TONAYA, JAL',clave:'01605003',c_state_id:14)	
+    CMunicipality.create(nombre:'TONILA, JAL',clave:'01606007',c_state_id:14)	
+    CMunicipality.create(nombre:'TOTATICHE, JAL',clave:'01607005',c_state_id:14)	
+    CMunicipality.create(nombre:'TOTOTLÁN, JAL',clave:'01608006',c_state_id:14)	
+    CMunicipality.create(nombre:'TUXCACUESCO, JAL',clave:'01609001',c_state_id:14)	
+    CMunicipality.create(nombre:'TUXCUECA MUNICIPIO DE, JAL',clave:'01610002',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN LUIS SOYATLAN, JAL',clave:'01610202',c_state_id:14)	
+    CMunicipality.create(nombre:'TUXCUECA LOCALIDAD DE, JAL',clave:'01610352',c_state_id:14)	
+    CMunicipality.create(nombre:'TUXPAN, JAL',clave:'01611009',c_state_id:14)	
+    CMunicipality.create(nombre:'UNIÓN DE SAN ANTONIO, JAL',clave:'01612001',c_state_id:14)	
+    CMunicipality.create(nombre:'UNIÓN DE TULA, JAL',clave:'01613005',c_state_id:14)	
+    CMunicipality.create(nombre:'VALLE DE GUADALUPE, JAL',clave:'01614003',c_state_id:14)	
+    CMunicipality.create(nombre:'VALLE DE JUÁREZ, JAL',clave:'01615004',c_state_id:14)	
+    CMunicipality.create(nombre:'SAN GABRIEL, JAL',clave:'01616008',c_state_id:14)	
+    CMunicipality.create(nombre:'VILLA CORONA, JAL',clave:'01617006',c_state_id:14)	
+    CMunicipality.create(nombre:'VILLA GUERRERO, JAL',clave:'01618007',c_state_id:14)	
+    CMunicipality.create(nombre:'VILLA HIDALGO, JAL',clave:'01619002',c_state_id:14)	
+    CMunicipality.create(nombre:'CAÑADAS DE OBREGÓN, JAL',clave:'01620009',c_state_id:14)	
+    CMunicipality.create(nombre:'YAHUALICA DE GONZÁLEZ GALLO, JAL',clave:'01621007',c_state_id:14)	
+    CMunicipality.create(nombre:'ZACOALCO DE TORRES, JAL',clave:'01622008',c_state_id:14)	
+    CMunicipality.create(nombre:'ZAPOPAN MUNICIPIO DE, JAL',clave:'01623003',c_state_id:14)	
+    CMunicipality.create(nombre:'TESISTAN, JAL',clave:'01623733',c_state_id:14)	
+    CMunicipality.create(nombre:'ZAPOPAN LOCALIDAD DE, JAL',clave:'01623867',c_state_id:14)	
+    CMunicipality.create(nombre:'ZAPOTILTIC, JAL',clave:'01624001',c_state_id:14)	
+    CMunicipality.create(nombre:'ZAPOTITLÁN DE VADILLO, JAL',clave:'01625002',c_state_id:14)	
+    CMunicipality.create(nombre:'ZAPOTLÁN DEL REY, JAL',clave:'01626006',c_state_id:14)	
+    CMunicipality.create(nombre:'ZAPOTLANEJO, JAL',clave:'01627004',c_state_id:14)	
+    CMunicipality.create(nombre:'JALISCO (OTROS)',clave:'01699001',c_state_id:14)	
+    CMunicipality.create(nombre:'ACAMBAY, MEX',clave:'01701009',c_state_id:15)	
+    CMunicipality.create(nombre:'ACOLMAN, MEX',clave:'01702007',c_state_id:15)	
+    CMunicipality.create(nombre:'ACULCO, MEX',clave:'01703008',c_state_id:15)	
+    CMunicipality.create(nombre:'ALMOLOYA DE ALQUISIRAS, MEX',clave:'01704003',c_state_id:15)	
+    CMunicipality.create(nombre:'ALMOLOYA DE JUÁREZ, MEX',clave:'01705001',c_state_id:15)	
+    CMunicipality.create(nombre:'ALMOLOYA DEL RÍO, MEX',clave:'01706002',c_state_id:15)	
+    CMunicipality.create(nombre:'AMANALCO, MEX',clave:'01707006',c_state_id:15)	
+    CMunicipality.create(nombre:'AMATEPEC, MEX',clave:'01708004',c_state_id:15)	
+    CMunicipality.create(nombre:'AMECAMECA, MEX',clave:'01709005',c_state_id:15)	
+    CMunicipality.create(nombre:'APAXCO, MEX',clave:'01710009',c_state_id:15)	
+    CMunicipality.create(nombre:'ATENCO SAN SALVADOR, MEX',clave:'01711004',c_state_id:15)	
+    CMunicipality.create(nombre:'ATIZAPÁN, MEX',clave:'01712002',c_state_id:15)	
+    CMunicipality.create(nombre:'ATIZAPÁN DE ZARAGOZA, MEX',clave:'01713003',c_state_id:15)	
+    CMunicipality.create(nombre:'CIUDAD LÓPEZ MATEOS, MEX',clave:'01713057',c_state_id:15)	
+    CMunicipality.create(nombre:'ATLACOMULCO, MEX',clave:'01714007',c_state_id:15)	
+    CMunicipality.create(nombre:'ATLAUTLA, MEX',clave:'01715005',c_state_id:15)	
+    CMunicipality.create(nombre:'AXAPUSCO, MEX',clave:'01716006',c_state_id:15)	
+    CMunicipality.create(nombre:'AYAPÁNGO DE GABRIEL RAMOS MILLÁN, MEX',clave:'01717001',c_state_id:15)	
+    CMunicipality.create(nombre:'CALIMAYA, MEX',clave:'01718008',c_state_id:15)	
+    CMunicipality.create(nombre:'CAPULHUAC, MEX',clave:'01719009',c_state_id:15)	
+    CMunicipality.create(nombre:'COACALCO, MEX',clave:'01720001',c_state_id:15)	
+    CMunicipality.create(nombre:'COATEPEC HARINAS, MEX',clave:'01721005',c_state_id:15)	
+    CMunicipality.create(nombre:'COCOTITLÁN, MEX',clave:'01722003',c_state_id:15)	
+    CMunicipality.create(nombre:'COYOTEPEC, MEX',clave:'01723004',c_state_id:15)	
+    CMunicipality.create(nombre:'CUAUTITLÁN DE ROMERO RUBIO, MEX',clave:'01724008',c_state_id:15)	
+    CMunicipality.create(nombre:'CUAUTITLÁN IZCALLI, MEX',clave:'01725006',c_state_id:15)	
+    CMunicipality.create(nombre:'CHALCO, MEX',clave:'01726007',c_state_id:15)	
+    CMunicipality.create(nombre:'CHAPA DE MOTA, MEX',clave:'01727002',c_state_id:15)	
+    CMunicipality.create(nombre:'CHAPULTEPEC, MEX',clave:'01728009',c_state_id:15)	
+    CMunicipality.create(nombre:'CHIAUTLA, MEX',clave:'01729001',c_state_id:15)	
+    CMunicipality.create(nombre:'CHICOLOAPÁN, MEX',clave:'01730008',c_state_id:15)	
+    CMunicipality.create(nombre:'CHICONCUAC, MEX',clave:'01731003',c_state_id:15)	
+    CMunicipality.create(nombre:'CHIMALHUACÁN, MEX',clave:'01732001',c_state_id:15)	
+    CMunicipality.create(nombre:'DONATO GUERRA ASUNCIÓN, MEX',clave:'01733002',c_state_id:15)	
+    CMunicipality.create(nombre:'ECATEPEC MUNICIPIO DE, MEX',clave:'01734006',c_state_id:15)	
+    CMunicipality.create(nombre:'ECATEPEC LOCALIDAD DE, MEX',clave:'01734051',c_state_id:15)	
+    CMunicipality.create(nombre:'SANTA CLARA, MEX',clave:'01734103',c_state_id:15)	
+    CMunicipality.create(nombre:'XALOSTOC, MEX',clave:'01734153',c_state_id:15)	
+    CMunicipality.create(nombre:'ECATZINGO, MEX',clave:'01735004',c_state_id:15)	
+    CMunicipality.create(nombre:'HUEHUETOCA, MEX',clave:'01736005',c_state_id:15)	
+    CMunicipality.create(nombre:'HUEYPOXTLA, MEX',clave:'01737009',c_state_id:15)	
+    CMunicipality.create(nombre:'HUIXQUILUCAN, MEX',clave:'01738007',c_state_id:15)	
+    CMunicipality.create(nombre:'ISIDRO FABELA, MEX',clave:'01739008',c_state_id:15)	
+    CMunicipality.create(nombre:'SANTIAGO TLAZALA, MEX',clave:'01739305',c_state_id:15)	
+    CMunicipality.create(nombre:'IXTAPALUCA MUNICIPIO DE, MEX',clave:'01740003',c_state_id:15)	
+    CMunicipality.create(nombre:'AYOTLA, MEX',clave:'01740057',c_state_id:15)	
+    CMunicipality.create(nombre:'IXTAPALUCA LOCALIDAD DE, MEX',clave:'01740159',c_state_id:15)	
+    CMunicipality.create(nombre:'RÍO FRÍO, MEX',clave:'01740306',c_state_id:15)	
+    CMunicipality.create(nombre:'IXTAPAN DE LA SAL, MEX',clave:'01741007',c_state_id:15)	
+    CMunicipality.create(nombre:'IXTAPÁN DEL ORO, MEX',clave:'01742005',c_state_id:15)	
+    CMunicipality.create(nombre:'IXTLAHUACA, MEX',clave:'01743006',c_state_id:15)	
+    CMunicipality.create(nombre:'XALATLACO, MEX',clave:'01744001',c_state_id:15)	
+    CMunicipality.create(nombre:'JALTENCO, MEX',clave:'01745008',c_state_id:15)	
+    CMunicipality.create(nombre:'JILOTEPEC, MEX',clave:'01746009',c_state_id:15)	
+    CMunicipality.create(nombre:'JILOTZINGO SANTA ANA, MEX',clave:'01747004',c_state_id:15)	
+    CMunicipality.create(nombre:'JIQUIPILCO, MEX',clave:'01748002',c_state_id:15)	
+    CMunicipality.create(nombre:'JOCOTITLÁN, MEX',clave:'01749003',c_state_id:15)	
+    CMunicipality.create(nombre:'JOQUICINGO, MEX',clave:'01750004',c_state_id:15)	
+    CMunicipality.create(nombre:'JUCHITEPEC, MEX',clave:'01751008',c_state_id:15)	
+    CMunicipality.create(nombre:'LERMA, MEX',clave:'01752006',c_state_id:15)	
+    CMunicipality.create(nombre:'MALINALCO, MEX',clave:'01753007',c_state_id:15)	
+    CMunicipality.create(nombre:'MELCHOR OCAMPO, MEX',clave:'01754002',c_state_id:15)	
+    CMunicipality.create(nombre:'METEPEC, MEX',clave:'01755009',c_state_id:15)	
+    CMunicipality.create(nombre:'MEXICALTZINGO, MEX',clave:'01756001',c_state_id:15)	
+    CMunicipality.create(nombre:'MORELOS, MEX',clave:'01757005',c_state_id:15)	
+    CMunicipality.create(nombre:'NAUCALPAN MUNICIPIO DE, MEX',clave:'01758003',c_state_id:15)	
+    CMunicipality.create(nombre:'ECHEGARAY, MEX',clave:'01758106',c_state_id:15)	
+    CMunicipality.create(nombre:'LOMAS DE TECAMACHALCO, MEX',clave:'01758159',c_state_id:15)	
+    CMunicipality.create(nombre:'LOMAS VERDES, MEX',clave:'01758204',c_state_id:15)	
+    CMunicipality.create(nombre:'NAUCALPAN LOCALIDAD DE, MEX',clave:'01758253',c_state_id:15)	
+    CMunicipality.create(nombre:'SATELITE, MEX',clave:'01758306',c_state_id:15)	
+    CMunicipality.create(nombre:'NEZAHUALCÓYOTL, MEX',clave:'01759004',c_state_id:15)	
+    CMunicipality.create(nombre:'NEXTLALPAN, MEX',clave:'01760002',c_state_id:15)	
+    CMunicipality.create(nombre:'NICOLÁS ROMERO, MEX',clave:'01761006',c_state_id:15)	
+    CMunicipality.create(nombre:'NOPALTEPEC, MEX',clave:'01762004',c_state_id:15)	
+    CMunicipality.create(nombre:'OCOYOACAC, MEX',clave:'01763005',c_state_id:15)	
+    CMunicipality.create(nombre:'OCUILAN, MEX',clave:'01764009',c_state_id:15)	
+    CMunicipality.create(nombre:'ORO EL, MEX',clave:'01765007',c_state_id:15)	
+    CMunicipality.create(nombre:'OTUMBA, MEX',clave:'01766008',c_state_id:15)	
+    CMunicipality.create(nombre:'OTZOLOAPÁN, MEX',clave:'01767003',c_state_id:15)	
+    CMunicipality.create(nombre:'OTZOLOTEPEC, MEX',clave:'01768001',c_state_id:15)	
+    CMunicipality.create(nombre:'CUAUHTÉMOC, MEX',clave:'01768059',c_state_id:15)	
+    CMunicipality.create(nombre:'OZUMBA, MEX',clave:'01769002',c_state_id:15)	
+    CMunicipality.create(nombre:'PAPALOTLA, MEX',clave:'01770006',c_state_id:15)	
+    CMunicipality.create(nombre:'PAZ LA, MEX',clave:'01771001',c_state_id:15)	
+    CMunicipality.create(nombre:'LOS REYES, MEX',clave:'01771154',c_state_id:15)	
+    CMunicipality.create(nombre:'POLOTITLÁN, MEX',clave:'01772008',c_state_id:15)	
+    CMunicipality.create(nombre:'RAYÓN, MEX',clave:'01773009',c_state_id:15)	
+    CMunicipality.create(nombre:'SAN ANTONIO LA ISLA, MEX',clave:'01774004',c_state_id:15)	
+    CMunicipality.create(nombre:'SAN FELIPE DEL PROGRESO, MEX',clave:'01775002',c_state_id:15)	
+    CMunicipality.create(nombre:'SAN MARTÍN DE LAS PIRÁMIDES, MEX',clave:'01776003',c_state_id:15)	
+    CMunicipality.create(nombre:'SAN MATEO ATENCO, MEX',clave:'01777007',c_state_id:15)	
+    CMunicipality.create(nombre:'SAN SIMÓN DE GUERRERO, MEX',clave:'01778005',c_state_id:15)	
+    CMunicipality.create(nombre:'SANTO TOMÁS DE LOS PLÁTANOS, MEX',clave:'01779006',c_state_id:15)	
+    CMunicipality.create(nombre:'SOYANIQUILPAN DE JUÁREZ, MEX',clave:'01780007',c_state_id:15)	
+    CMunicipality.create(nombre:'SULTEPEC, MEX',clave:'01781002',c_state_id:15)	
+    CMunicipality.create(nombre:'TECÁMAC, MEX',clave:'01782009',c_state_id:15)	
+    CMunicipality.create(nombre:'TEJUPILCO, MEX',clave:'01783001',c_state_id:15)	
+    CMunicipality.create(nombre:'TEMAMATLA, MEX',clave:'01784005',c_state_id:15)	
+    CMunicipality.create(nombre:'TEMASCALAPA, MEX',clave:'01785003',c_state_id:15)	
+    CMunicipality.create(nombre:'TEMASCALCINGO, MEX',clave:'01786004',c_state_id:15)	
+    CMunicipality.create(nombre:'TEMASCALTEPEC, MEX',clave:'01787008',c_state_id:15)	
+    CMunicipality.create(nombre:'TEMOAYA, MEX',clave:'01788006',c_state_id:15)	
+    CMunicipality.create(nombre:'TENANCINGO, MEX',clave:'01789007',c_state_id:15)	
+    CMunicipality.create(nombre:'TENANGO DEL AIRE, MEX',clave:'01790005',c_state_id:15)	
+    CMunicipality.create(nombre:'TENANGO DE TEPOPULA, MEX',clave:'01790302',c_state_id:15)	
+    CMunicipality.create(nombre:'TENANGO DEL VALLE, MEX',clave:'01791009',c_state_id:15)	
+    CMunicipality.create(nombre:'TENANGO DE ARISTA, MEX',clave:'01791303',c_state_id:15)	
+    CMunicipality.create(nombre:'TEOLOYUCÁN, MEX',clave:'01792007',c_state_id:15)	
+    CMunicipality.create(nombre:'TEOTIHUACÁN, MEX',clave:'01793008',c_state_id:15)	
+    CMunicipality.create(nombre:'TEPETLAOXTOC, MEX',clave:'01794003',c_state_id:15)	
+    CMunicipality.create(nombre:'TEPETLIXPA, MEX',clave:'01795001',c_state_id:15)	
+    CMunicipality.create(nombre:'TEPOTZOTLÁN, MEX',clave:'01796002',c_state_id:15)	
+    CMunicipality.create(nombre:'TEQUIXQUIAC, MEX',clave:'01797006',c_state_id:15)	
+    CMunicipality.create(nombre:'TEXCALTITLÁN, MEX',clave:'01798004',c_state_id:15)	
+    CMunicipality.create(nombre:'TEXCALYACAC, MEX',clave:'01799005',c_state_id:15)	
+    CMunicipality.create(nombre:'TEXCOCO, MEX',clave:'01801001',c_state_id:15)	
+    CMunicipality.create(nombre:'TEZOYUCA, MEX',clave:'01802005',c_state_id:15)	
+    CMunicipality.create(nombre:'TIANGUISTENGO SANTIAGO, MEX',clave:'01803003',c_state_id:15)	
+    CMunicipality.create(nombre:'TIMILPAN, MEX',clave:'01804004',c_state_id:15)	
+    CMunicipality.create(nombre:'TLALMANALCO, MEX',clave:'01805008',c_state_id:15)	
+    CMunicipality.create(nombre:'TLALNEPANTLA MUNICIPIO DE, MEX',clave:'01806006',c_state_id:15)	
+    CMunicipality.create(nombre:'PUENTE DE VIGAS, MEX',clave:'01806057',c_state_id:15)	
+    CMunicipality.create(nombre:'TLALNEPANTLA LOCALIDAD DE, MEX',clave:'01806106',c_state_id:15)	
+    CMunicipality.create(nombre:'VALLE DORADO, MEX',clave:'01806153',c_state_id:15)	
+    CMunicipality.create(nombre:'VIVEROS DE LA LOMA, MEX',clave:'01806201',c_state_id:15)	
+    CMunicipality.create(nombre:'TLATLAYA, MEX',clave:'01807007',c_state_id:15)	
+    CMunicipality.create(nombre:'TOLUCA, MEX',clave:'01808002',c_state_id:15)	
+    CMunicipality.create(nombre:'TONATICO, MEX',clave:'01809009',c_state_id:15)	
+    CMunicipality.create(nombre:'TULTEPEC, MEX',clave:'01810007',c_state_id:15)	
+    CMunicipality.create(nombre:'TULTITLÁN, MEX',clave:'01811008',c_state_id:15)	
+    CMunicipality.create(nombre:'VALLE DE BRAVO MUNICIPIO DE, MEX',clave:'01812003',c_state_id:15)	
+    CMunicipality.create(nombre:'COLORINES, MEX',clave:'01812103',c_state_id:15)	
+    CMunicipality.create(nombre:'VALLE DE BRAVO LOCALIDAD DE, MEX',clave:'01812306',c_state_id:15)	
+    CMunicipality.create(nombre:'VILLA DE ALLENDE, MEX',clave:'01813001',c_state_id:15)	
+    CMunicipality.create(nombre:'SAN JOSÉ ALLENDE, MEX',clave:'01813301',c_state_id:15)	
+    CMunicipality.create(nombre:'VILLA DEL CARBÓN, MEX',clave:'01814002',c_state_id:15)	
+    CMunicipality.create(nombre:'VILLA GUERRERO, MEX',clave:'01815006',c_state_id:15)	
+    CMunicipality.create(nombre:'VILLA VICTORIA, MEX',clave:'01816004',c_state_id:15)	
+    CMunicipality.create(nombre:'XONACATLÁN, MEX',clave:'01817005',c_state_id:15)	
+    CMunicipality.create(nombre:'ZACAZONAPÁN, MEX',clave:'01818009',c_state_id:15)	
+    CMunicipality.create(nombre:'ZACUALPAN, MEX',clave:'01819007',c_state_id:15)	
+    CMunicipality.create(nombre:'ZINACANTEPEC SAN MIGUEL, MEX',clave:'01820002',c_state_id:15)	
+    CMunicipality.create(nombre:'ZUMPAHUACÁN, MEX',clave:'01821003',c_state_id:15)	
+    CMunicipality.create(nombre:'ZUMPANGO, MEX',clave:'01822007',c_state_id:15)	
+    CMunicipality.create(nombre:'VALLE DE CHALCO SOLIDARIDAD, MEX',clave:'01823005',c_state_id:15)	
+    CMunicipality.create(nombre:'LUVIANOS, MEX',clave:'01824006',c_state_id:15)	
+    CMunicipality.create(nombre:'SAN JOSÉ DEL RINCÓN, MEX',clave:'01825001',c_state_id:15)	
+    CMunicipality.create(nombre:'TONANITLA, MEX',clave:'01826008',c_state_id:15)	
+    CMunicipality.create(nombre:'ESTADO DE MEXICO (OTROS)',clave:'01899009',c_state_id:15)	
+    CMunicipality.create(nombre:'ACUITZIO, MICH',clave:'01901002',c_state_id:16)	
+    CMunicipality.create(nombre:'AGUILILLA, MICH',clave:'01902003',c_state_id:16)	
+    CMunicipality.create(nombre:'ÁLVARO OBREGÓN MUNICIPIO DE, MICH',clave:'01903007',c_state_id:16)	
+    CMunicipality.create(nombre:'ÁLVARO OBREGÓN LOCALIDAD DE, MICH',clave:'01903059',c_state_id:16)	
+    CMunicipality.create(nombre:'CARRILLO PUERTO, MICH',clave:'01903103',c_state_id:16)	
+    CMunicipality.create(nombre:'ANGAMACUTIRO, MICH',clave:'01904005',c_state_id:16)	
+    CMunicipality.create(nombre:'ANGANGUEO, MICH',clave:'01905006',c_state_id:16)	
+    CMunicipality.create(nombre:'APATZINGÁN, MICH',clave:'01906001',c_state_id:16)	
+    CMunicipality.create(nombre:'APORO, MICH',clave:'01907008',c_state_id:16)	
+    CMunicipality.create(nombre:'AQUILA, MICH',clave:'01908009',c_state_id:16)	
+    CMunicipality.create(nombre:'ARIO DE ROSALES, MICH',clave:'01909004',c_state_id:16)	
+    CMunicipality.create(nombre:'ARTEAGA, MICH',clave:'01910005',c_state_id:16)	
+    CMunicipality.create(nombre:'BRISE AS DE MATAMOROS, MICH',clave:'01911003',c_state_id:16)	
+    CMunicipality.create(nombre:'BUENAVISTA, MICH',clave:'01912004',c_state_id:16)	
+    CMunicipality.create(nombre:'CARÁCUARO, MICH',clave:'01913008',c_state_id:16)	
+    CMunicipality.create(nombre:'COAHUAYANA MUNICIPIO, MICH',clave:'01914006',c_state_id:16)	
+    CMunicipality.create(nombre:'COAHUAYANA LOCALIDAD DE, MICH',clave:'01914057',c_state_id:16)	
+    CMunicipality.create(nombre:'EL RANCHITO, MICH',clave:'01914106',c_state_id:16)	
+    CMunicipality.create(nombre:'COALCOMÁN, MICH',clave:'01915007',c_state_id:16)	
+    CMunicipality.create(nombre:'COENEO, MICH',clave:'01916002',c_state_id:16)	
+    CMunicipality.create(nombre:'CONTEPEC, MICH',clave:'01917009',c_state_id:16)	
+    CMunicipality.create(nombre:'COPÁNDARO DE GALEANA, MICH',clave:'01918001',c_state_id:16)	
+    CMunicipality.create(nombre:'COTIJA, MICH',clave:'01919005',c_state_id:16)	
+    CMunicipality.create(nombre:'CUITZEO, MICH',clave:'01920003',c_state_id:16)	
+    CMunicipality.create(nombre:'CHARAPÁN, MICH',clave:'01921001',c_state_id:16)	
+    CMunicipality.create(nombre:'CHARO, MICH',clave:'01922002',c_state_id:16)	
+    CMunicipality.create(nombre:'CHAVINDA, MICH',clave:'01923006',c_state_id:16)	
+    CMunicipality.create(nombre:'CHERÁN, MICH',clave:'01924004',c_state_id:16)	
+    CMunicipality.create(nombre:'CHILCHOTA, MICH',clave:'01925005',c_state_id:16)	
+    CMunicipality.create(nombre:'CHINICUILA, MICH',clave:'01926009',c_state_id:16)	
+    CMunicipality.create(nombre:'VILLA VICTORIA, MICH',clave:'01926357',c_state_id:16)	
+    CMunicipality.create(nombre:'CHUCÁNDIRO, MICH',clave:'01927007',c_state_id:16)	
+    CMunicipality.create(nombre:'CHURINTZIO, MICH',clave:'01928008',c_state_id:16)	
+    CMunicipality.create(nombre:'CHURUMUCO, MICH',clave:'01929003',c_state_id:16)	
+    CMunicipality.create(nombre:'ECUANDUREO, MICH',clave:'01930007',c_state_id:16)	
+    CMunicipality.create(nombre:'EPITACIO HUERTA, MICH',clave:'01931005',c_state_id:16)	
+    CMunicipality.create(nombre:'ERONGARÍCUARO, MICH',clave:'01932006',c_state_id:16)	
+    CMunicipality.create(nombre:'GABRIEL ZAMORA, MICH',clave:'01933001',c_state_id:16)	
+    CMunicipality.create(nombre:'HIDALGO, MICH',clave:'01934008',c_state_id:16)	
+    CMunicipality.create(nombre:'HUACANA LA, MICH',clave:'01935009',c_state_id:16)	
+    CMunicipality.create(nombre:'HUANDACAREO, MICH',clave:'01936004',c_state_id:16)	
+    CMunicipality.create(nombre:'HUANIQUEO, MICH',clave:'01937002',c_state_id:16)	
+    CMunicipality.create(nombre:'HUAYANGAREO, MICH',clave:'01937505',c_state_id:16)	
+    CMunicipality.create(nombre:'HUETAMO, MICH',clave:'01938003',c_state_id:16)	
+    CMunicipality.create(nombre:'HUIRAMBA, MICH',clave:'01939007',c_state_id:16)	
+    CMunicipality.create(nombre:'INDAPARAPEO, MICH',clave:'01940008',c_state_id:16)	
+    CMunicipality.create(nombre:'IRIMBO, MICH',clave:'01941006',c_state_id:16)	
+    CMunicipality.create(nombre:'IXTLÁN, MICH',clave:'01942007',c_state_id:16)	
+    CMunicipality.create(nombre:'JACONA, MICH',clave:'01943002',c_state_id:16)	
+    CMunicipality.create(nombre:'JIMÉNEZ, MICH',clave:'01944009',c_state_id:16)	
+    CMunicipality.create(nombre:'JIQUILPAN, MICH',clave:'01945001',c_state_id:16)	
+    CMunicipality.create(nombre:'JUÁREZ, MICH',clave:'01946005',c_state_id:16)	
+    CMunicipality.create(nombre:'JUNGAPEO, MICH',clave:'01947003',c_state_id:16)	
+    CMunicipality.create(nombre:'LAGUNILLAS, MICH',clave:'01948004',c_state_id:16)	
+    CMunicipality.create(nombre:'MADERO, MICH',clave:'01949008',c_state_id:16)	
+    CMunicipality.create(nombre:'MARAVATÍO, MICH',clave:'01950006',c_state_id:16)	
+    CMunicipality.create(nombre:'MARCOS CASTELLANOS, MICH',clave:'01951004',c_state_id:16)	
+    CMunicipality.create(nombre:'ORNELAS, MICH',clave:'01951253',c_state_id:16)	
+    CMunicipality.create(nombre:'MELCHOR OCAMPO DEL BALSAS, MICH',clave:'01952005',c_state_id:16)	
+    CMunicipality.create(nombre:'GUACAMAYAS, MICH',clave:'01952088',c_state_id:16)	
+    CMunicipality.create(nombre:'LA MIRA, MICH',clave:'01952155',c_state_id:16)	
+    CMunicipality.create(nombre:'LÁZARO CÁRDENAS, MICH',clave:'01952208',c_state_id:16)	
+    CMunicipality.create(nombre:'MORELIA, MICH',clave:'01953009',c_state_id:16)	
+    CMunicipality.create(nombre:'MORELOS, MICH',clave:'01954007',c_state_id:16)	
+    CMunicipality.create(nombre:'MÚGICA, MICH',clave:'01955008',c_state_id:16)	
+    CMunicipality.create(nombre:'NUEVA ITALIA, MICH',clave:'01955205',c_state_id:16)	
+    CMunicipality.create(nombre:'NAHUATZEN, MICH',clave:'01956003',c_state_id:16)	
+    CMunicipality.create(nombre:'NOCUPÉTARO, MICH',clave:'01957001',c_state_id:16)	
+    CMunicipality.create(nombre:'NUEVO PARANGARICUTIRO, MICH',clave:'01958002',c_state_id:16)	
+    CMunicipality.create(nombre:'NUEVO URECHO, MICH',clave:'01959006',c_state_id:16)	
+    CMunicipality.create(nombre:'NUMARÁN, MICH',clave:'01960001',c_state_id:16)	
+    CMunicipality.create(nombre:'OCAMPO, MICH',clave:'01961008',c_state_id:16)	
+    CMunicipality.create(nombre:'PAJACUARÁN, MICH',clave:'01962009',c_state_id:16)	
+    CMunicipality.create(nombre:'PANINDÍCUARO, MICH',clave:'01963004',c_state_id:16)	
+    CMunicipality.create(nombre:'PARÁCUARO, MICH',clave:'01964002',c_state_id:16)	
+    CMunicipality.create(nombre:'PARACHO, MICH',clave:'01965003',c_state_id:16)	
+    CMunicipality.create(nombre:'PARACHO DE VERDUSCO, MICH',clave:'01965057',c_state_id:16)	
+    CMunicipality.create(nombre:'PASTOR ORTIZ, MICH',clave:'01965109',c_state_id:16)	
+    CMunicipality.create(nombre:'PÁTZCUARO, MICH',clave:'01966007',c_state_id:16)	
+    CMunicipality.create(nombre:'PENJAMILLO, MICH',clave:'01967005',c_state_id:16)	
+    CMunicipality.create(nombre:'PERIBÁN, MICH',clave:'01968006',c_state_id:16)	
+    CMunicipality.create(nombre:'PIEDAD LA, MICH',clave:'01969001',c_state_id:16)	
+    CMunicipality.create(nombre:'PURÉPERO, MICH',clave:'01970002',c_state_id:16)	
+    CMunicipality.create(nombre:'PURUÁNDIRO, MICH',clave:'01971009',c_state_id:16)	
+    CMunicipality.create(nombre:'QUERÉNDARO, MICH',clave:'01972001',c_state_id:16)	
+    CMunicipality.create(nombre:'QUIROGA, MICH',clave:'01973005',c_state_id:16)	
+    CMunicipality.create(nombre:'REGULES, MICH',clave:'01974003',c_state_id:16)	
+    CMunicipality.create(nombre:'COJUMATLÁN DE REGULES, MICH',clave:'01974051',c_state_id:16)	
+    CMunicipality.create(nombre:'REYES LOS, MICH',clave:'01975004',c_state_id:16)	
+    CMunicipality.create(nombre:'SAHUAYO, MICH',clave:'01976008',c_state_id:16)	
+    CMunicipality.create(nombre:'SAN LUCAS, MICH',clave:'01977006',c_state_id:16)	
+    CMunicipality.create(nombre:'SANTA ANA MAYA, MICH',clave:'01978007',c_state_id:16)	
+    CMunicipality.create(nombre:'SANTA CLARA, MICH',clave:'01979002',c_state_id:16)	
+    CMunicipality.create(nombre:'VILLA ESCALANTE, MICH',clave:'01979352',c_state_id:16)	
+    CMunicipality.create(nombre:'SENGUIO, MICH',clave:'01980009',c_state_id:16)	
+    CMunicipality.create(nombre:'SUSUPUATO, MICH',clave:'01981007',c_state_id:16)	
+    CMunicipality.create(nombre:'TACÁMBARO, MICH',clave:'01982008',c_state_id:16)	
+    CMunicipality.create(nombre:'TANCÍTARO, MICH',clave:'01983003',c_state_id:16)	
+    CMunicipality.create(nombre:'TANGAMANDAPIO, MICH',clave:'01984001',c_state_id:16)	
+    CMunicipality.create(nombre:'TANGANCÍCUARO MUNICIPIO DE, MICH',clave:'01985002',c_state_id:16)	
+    CMunicipality.create(nombre:'SAN JOSÉ DE GRACIA, MICH',clave:'01985308',c_state_id:16)	
+    CMunicipality.create(nombre:'TANGANCÍCUARO LOCALIDAD DE, MICH',clave:'01985409',c_state_id:16)	
+    CMunicipality.create(nombre:'TANHUATO, MICH',clave:'01986006',c_state_id:16)	
+    CMunicipality.create(nombre:'TARETAN, MICH',clave:'01987004',c_state_id:16)	
+    CMunicipality.create(nombre:'TARÍMBARO, MICH',clave:'01988005',c_state_id:16)	
+    CMunicipality.create(nombre:'TEPALCATEPEC, MICH',clave:'01989009',c_state_id:16)	
+    CMunicipality.create(nombre:'TINGAMBATO, MICH',clave:'01990004',c_state_id:16)	
+    CMunicipality.create(nombre:'TINGÜINDÍN, MICH',clave:'01991002',c_state_id:16)	
+    CMunicipality.create(nombre:'TIQUICHEO, MICH',clave:'01992003',c_state_id:16)	
+    CMunicipality.create(nombre:'TLALPUJAHUA, MICH',clave:'01993007',c_state_id:16)	
+    CMunicipality.create(nombre:'TLAZAZALCA, MICH',clave:'01994005',c_state_id:16)	
+    CMunicipality.create(nombre:'TOCUMBO, MICH',clave:'01995006',c_state_id:16)	
+    CMunicipality.create(nombre:'TUMBISCATÍO DE RUIZ, MICH',clave:'01996001',c_state_id:16)	
+    CMunicipality.create(nombre:'TURICATO, MICH',clave:'01997008',c_state_id:16)	
+    CMunicipality.create(nombre:'TUXPAN, MICH',clave:'01998009',c_state_id:16)	
+    CMunicipality.create(nombre:'TUZANTLA, MICH',clave:'01999004',c_state_id:16)	
+    CMunicipality.create(nombre:'TZINTZUNTZAN, MICH',clave:'02001006',c_state_id:16)	
+    CMunicipality.create(nombre:'TZITZIO, MICH',clave:'02002008',c_state_id:16)	
+    CMunicipality.create(nombre:'UCAREO, MICH',clave:'02002509',c_state_id:16)	
+    CMunicipality.create(nombre:'URUAPÁN, MICH',clave:'02003004',c_state_id:16)	
+    CMunicipality.create(nombre:'VENUSTIANO CARRANZA, MICH',clave:'02004003',c_state_id:16)	
+    CMunicipality.create(nombre:'VILLAMAR, MICH',clave:'02005005',c_state_id:16)	
+    CMunicipality.create(nombre:'VISTA HERMOSA, MICH',clave:'02006001',c_state_id:16)	
+    CMunicipality.create(nombre:'YURÉCUARO, MICH',clave:'02007009',c_state_id:16)	
+    CMunicipality.create(nombre:'ZACAPU, MICH',clave:'02008002',c_state_id:16)	
+    CMunicipality.create(nombre:'ZAMORA, MICH',clave:'02009007',c_state_id:16)	
+    CMunicipality.create(nombre:'ZINÁPARO, MICH',clave:'02010006',c_state_id:16)	
+    CMunicipality.create(nombre:'ZINAPÉCUARO, MICH',clave:'02011005',c_state_id:16)	
+    CMunicipality.create(nombre:'ZIRACUARETIRO, MICH',clave:'02012007',c_state_id:16)	
+    CMunicipality.create(nombre:'ZITÁCUARO, MICH',clave:'02013003',c_state_id:16)	
+    CMunicipality.create(nombre:'MICHOACAN (OTROS)',clave:'02099007',c_state_id:16)	
+    CMunicipality.create(nombre:'AMACUZAC, MOR',clave:'02101002',c_state_id:17)	
+    CMunicipality.create(nombre:'ATLATLAHUCAN, MOR',clave:'02103003',c_state_id:17)	
+    CMunicipality.create(nombre:'AXOCHIAPÁN, MOR',clave:'02105007',c_state_id:17)	
+    CMunicipality.create(nombre:'AYALA, MOR',clave:'02107005',c_state_id:17)	
+    CMunicipality.create(nombre:'COATLÁN DEL RÍO, MOR',clave:'02109006',c_state_id:17)	
+    CMunicipality.create(nombre:'CUAUTLA MUNICIPIO DE, MOR',clave:'02111004',c_state_id:17)	
+    CMunicipality.create(nombre:'CUAUTLA LOCALIDAD DE, MOR',clave:'02111106',c_state_id:17)	
+    CMunicipality.create(nombre:'PLAN DE AYALA, MOR',clave:'02111304',c_state_id:17)	
+    CMunicipality.create(nombre:'CUERNAVACA MUNICIPIO DE, MOR',clave:'02113005',c_state_id:17)	
+    CMunicipality.create(nombre:'CHIPITLÁN, MOR',clave:'02113105',c_state_id:17)	
+    CMunicipality.create(nombre:'CUERNAVACA LOCALIDAD DE, MOR',clave:'02113155',c_state_id:17)	
+    CMunicipality.create(nombre:'EMILIANO ZAPATA, MOR',clave:'02115009',c_state_id:17)	
+    CMunicipality.create(nombre:'HUITZILAC, MOR',clave:'02117007',c_state_id:17)	
+    CMunicipality.create(nombre:'JANTETELCO, MOR',clave:'02119008',c_state_id:17)	
+    CMunicipality.create(nombre:'JIUTEPEC, MOR',clave:'02121003',c_state_id:17)	
+    CMunicipality.create(nombre:'JOJUTLA, MOR',clave:'02123004',c_state_id:17)	
+    CMunicipality.create(nombre:'JONACATEPEC, MOR',clave:'02125008',c_state_id:17)	
+    CMunicipality.create(nombre:'MAZATEPEC, MOR',clave:'02127006',c_state_id:17)	
+    CMunicipality.create(nombre:'MIACATLÁN, MOR',clave:'02129007',c_state_id:17)	
+    CMunicipality.create(nombre:'OCUITUCO, MOR',clave:'02131008',c_state_id:17)	
+    CMunicipality.create(nombre:'PUENTE DE IXTLA, MOR',clave:'02133009',c_state_id:17)	
+    CMunicipality.create(nombre:'TEMIXCO, MOR',clave:'02135004',c_state_id:17)	
+    CMunicipality.create(nombre:'TEPALCINGO, MOR',clave:'02137002',c_state_id:17)	
+    CMunicipality.create(nombre:'TEPOZTLÁN, MOR',clave:'02139003',c_state_id:17)	
+    CMunicipality.create(nombre:'TETECALA, MOR',clave:'02141001',c_state_id:17)	
+    CMunicipality.create(nombre:'TETELA DEL VOLCÁN, MOR',clave:'02143002',c_state_id:17)	
+    CMunicipality.create(nombre:'TLALNEPANTLA, MOR',clave:'02145006',c_state_id:17)	
+    CMunicipality.create(nombre:'TLALTIZAPÁN, MOR',clave:'02147004',c_state_id:17)	
+    CMunicipality.create(nombre:'TLAQUILTENANGO, MOR',clave:'02149005',c_state_id:17)	
+    CMunicipality.create(nombre:'TLAYACAPÁN, MOR',clave:'02151009',c_state_id:17)	
+    CMunicipality.create(nombre:'TOTOLAPÁN, MOR',clave:'02153001',c_state_id:17)	
+    CMunicipality.create(nombre:'XOCHITEPEC, MOR',clave:'02155005',c_state_id:17)	
+    CMunicipality.create(nombre:'YAUTEPEC, MOR',clave:'02157003',c_state_id:17)	
+    CMunicipality.create(nombre:'YECAPIXTLA, MOR',clave:'02159004',c_state_id:17)	
+    CMunicipality.create(nombre:'ZACATEPEC DE HIDALGO, MOR',clave:'02161005',c_state_id:17)	
+    CMunicipality.create(nombre:'ZACUALPAN DE AMILPAS, MOR',clave:'02163006',c_state_id:17)	
+    CMunicipality.create(nombre:'TEMOAC, MOR',clave:'02165001',c_state_id:17)	
+    CMunicipality.create(nombre:'MORELOS (OTROS)',clave:'02199006',c_state_id:17)	
+    CMunicipality.create(nombre:'ACAPONETA, NAY',clave:'02201007',c_state_id:18)	
+    CMunicipality.create(nombre:'AHUACATLÁN, NAY',clave:'02204004',c_state_id:18)	
+    CMunicipality.create(nombre:'AMATLÁN DE CA AS MUNICIPIO DE, NAY',clave:'02207001',c_state_id:18)	
+    CMunicipality.create(nombre:'AMATLÁN DE CA AS LOCALIDAD DE, NAY',clave:'02207079',c_state_id:18)	
+    CMunicipality.create(nombre:'ESTANCIA DE LOS LÓPEZ, NAY',clave:'02207214',c_state_id:18)	
+    CMunicipality.create(nombre:'COMPOSTELA MUNICIPIO DE, NAY',clave:'02210001',c_state_id:18)	
+    CMunicipality.create(nombre:'COMPOSTELA LOCALIDAD DE, NAY',clave:'02210056',c_state_id:18)	
+    CMunicipality.create(nombre:'GUAYABITOS RINCÓN DE, NAY',clave:'02210106',c_state_id:18)	
+    CMunicipality.create(nombre:'PE ITA DE JALTEMBA, NAY',clave:'02210206',c_state_id:18)	
+    CMunicipality.create(nombre:'SAN JOSÉ DEL VALLE, NAY',clave:'02210253',c_state_id:18)	
+    CMunicipality.create(nombre:'SAN JUAN EL BAJO, NAY',clave:'02210301',c_state_id:18)	
+    CMunicipality.create(nombre:'VALLE DE BANDERAS, NAY',clave:'02210353',c_state_id:18)	
+    CMunicipality.create(nombre:'NUEVO PUERTO VALLARTA, NAY',clave:'02210389',c_state_id:18)	
+    CMunicipality.create(nombre:'VARAS LAS, NAY',clave:'02210409',c_state_id:18)	
+    CMunicipality.create(nombre:'ZACUALPAN, NAY',clave:'02210503',c_state_id:18)	
+    CMunicipality.create(nombre:'HUAJICORI, NAY',clave:'02213007',c_state_id:18)	
+    CMunicipality.create(nombre:'IXTLÁN, NAY',clave:'02216004',c_state_id:18)	
+    CMunicipality.create(nombre:'JALA, NAY',clave:'02219001',c_state_id:18)	
+    CMunicipality.create(nombre:'XALISCO, NAY',clave:'02222001',c_state_id:18)	
+    CMunicipality.create(nombre:'NAYAR, DEL, NAY',clave:'02225007',c_state_id:18)	
+    CMunicipality.create(nombre:'ROSAMORADA MUNICIPIO DE, NAY',clave:'02228004',c_state_id:18)	
+    CMunicipality.create(nombre:'ROSAMORADA LOCALIDAD DE, NAY',clave:'02228151',c_state_id:18)	
+    CMunicipality.create(nombre:'SAN VICENTE, NAY',clave:'02228253',c_state_id:18)	
+    CMunicipality.create(nombre:'RUÍZ, NAY',clave:'02231004',c_state_id:18)	
+    CMunicipality.create(nombre:'SAN BLAS MUNICIPIO DE, NAY',clave:'02234001',c_state_id:18)	
+    CMunicipality.create(nombre:'AUTLÁN, NAY',clave:'02234059',c_state_id:18)	
+    CMunicipality.create(nombre:'JALCOCOTAN, NAY',clave:'02234157',c_state_id:18)	
+    CMunicipality.create(nombre:'SAN BLAS LOCALIDAD DE, NAY',clave:'02234259',c_state_id:18)	
+    CMunicipality.create(nombre:'SAN PEDRO LAGUNILLAS, NAY',clave:'02237007',c_state_id:18)	
+    CMunicipality.create(nombre:'SANTA MARÍA DEL ORO, NAY',clave:'02240007',c_state_id:18)	
+    CMunicipality.create(nombre:'SANTIAGO IXCUINTLA MUNICIPIO DE, NAY',clave:'02243004',c_state_id:18)	
+    CMunicipality.create(nombre:'SANTIAGO IXCUINTLA LOCALIDAD DE, NAY',clave:'02243103',c_state_id:18)	
+    CMunicipality.create(nombre:'SENTISPETAC, NAY',clave:'02243136',c_state_id:18)	
+    CMunicipality.create(nombre:'VILLA HIDALGO, NAY',clave:'02243151',c_state_id:18)	
+    CMunicipality.create(nombre:'TECUALA MUNICIPIO DE, NAY',clave:'02248008',c_state_id:18)	
+    CMunicipality.create(nombre:'QUIMICHIS, NAY',clave:'02248158',c_state_id:18)	
+    CMunicipality.create(nombre:'SAN FELIPE AZTATAN, NAY',clave:'02248209',c_state_id:18)	
+    CMunicipality.create(nombre:'TECUALA LOCALIDAD DE, NAY',clave:'02248302',c_state_id:18)	
+    CMunicipality.create(nombre:'TEPIC, NAY',clave:'02251002',c_state_id:18)	
+    CMunicipality.create(nombre:'TUXPAN, NAY',clave:'02254008',c_state_id:18)	
+    CMunicipality.create(nombre:'YESCA LA, NAY',clave:'02257005',c_state_id:18)	
+    CMunicipality.create(nombre:'NAYARIT (OTROS)',clave:'02299005',c_state_id:18)	
+    CMunicipality.create(nombre:'ABASOLO, NL',clave:'02301003',c_state_id:19)	
+    CMunicipality.create(nombre:'AGUALEGUAS, NL',clave:'02302005',c_state_id:19)	
+    CMunicipality.create(nombre:'ALDAMAS LOS, NL',clave:'02303001',c_state_id:19)	
+    CMunicipality.create(nombre:'ALLENDE, NL',clave:'02304009',c_state_id:19)	
+    CMunicipality.create(nombre:'ANÁHUAC, NL',clave:'02305002',c_state_id:19)	
+    CMunicipality.create(nombre:'APODACA, NL',clave:'02306007',c_state_id:19)	
+    CMunicipality.create(nombre:'ARAMBERRI, NL',clave:'02307006',c_state_id:19)	
+    CMunicipality.create(nombre:'BUSTAMANTE, NL',clave:'02308008',c_state_id:19)	
+    CMunicipality.create(nombre:'CADEREYTA JIMÉNEZ, NL',clave:'02309004',c_state_id:19)	
+    CMunicipality.create(nombre:'CARMEN, NL',clave:'02310003',c_state_id:19)	
+    CMunicipality.create(nombre:'CERRALVO, NL',clave:'02311002',c_state_id:19)	
+    CMunicipality.create(nombre:'CIÉNEGA DE FLORES, NL',clave:'02312004',c_state_id:19)	
+    CMunicipality.create(nombre:'COLOMBIA, NL',clave:'02313009',c_state_id:19)	
+    CMunicipality.create(nombre:'CHINA, NL',clave:'02314008',c_state_id:19)	
+    CMunicipality.create(nombre:'DOCTOR ARROYO, NL',clave:'02315001',c_state_id:19)	
+    CMunicipality.create(nombre:'DOCTOR COSS, NL',clave:'02316006',c_state_id:19)	
+    CMunicipality.create(nombre:'DOCTOR GONZÁLEZ, NL',clave:'02317005',c_state_id:19)	
+    CMunicipality.create(nombre:'GALEANA MUNICIPIO DE, NL',clave:'02318007',c_state_id:19)	
+    CMunicipality.create(nombre:'GALEANA LOCALIDAD DE, NL',clave:'02318106',c_state_id:19)	
+    CMunicipality.create(nombre:'POTOSI EL, NL',clave:'02318209',c_state_id:19)	
+    CMunicipality.create(nombre:'GARCÍA, NL',clave:'02319003',c_state_id:19)	
+    CMunicipality.create(nombre:'GARZA GARCÍA, NL',clave:'02320008',c_state_id:19)	
+    CMunicipality.create(nombre:'GENERAL BRAVO, NL',clave:'02321007',c_state_id:19)	
+    CMunicipality.create(nombre:'GENERAL ESCOBEDO, NL',clave:'02322009',c_state_id:19)	
+    CMunicipality.create(nombre:'GENERAL TERÁN, NL',clave:'02323005',c_state_id:19)	
+    CMunicipality.create(nombre:'GENERAL TREVI O, NL',clave:'02324004',c_state_id:19)	
+    CMunicipality.create(nombre:'GENERAL ZARAGOZA, NL',clave:'02325006',c_state_id:19)	
+    CMunicipality.create(nombre:'GENERAL ZUAZUA, NL',clave:'02326002',c_state_id:19)	
+    CMunicipality.create(nombre:'GUADALUPE, NL',clave:'02327001',c_state_id:19)	
+    CMunicipality.create(nombre:'HERRERAS LOS, NL',clave:'02328003',c_state_id:19)	
+    CMunicipality.create(nombre:'HIGUERAS, NL',clave:'02329008',c_state_id:19)	
+    CMunicipality.create(nombre:'HUALAHUISES, NL',clave:'02330001',c_state_id:19)	
+    CMunicipality.create(nombre:'ITURBIDE, NL',clave:'02331009',c_state_id:19)	
+    CMunicipality.create(nombre:'JUÁREZ, NL',clave:'02332002',c_state_id:19)	
+    CMunicipality.create(nombre:'LAMPAZOS DE NARANJO, NL',clave:'02333007',c_state_id:19)	
+    CMunicipality.create(nombre:'LINARES, NL',clave:'02334006',c_state_id:19)	
+    CMunicipality.create(nombre:'MARÍN, NL',clave:'02335008',c_state_id:19)	
+    CMunicipality.create(nombre:'MELCHOR OCAMPO, NL',clave:'02336004',c_state_id:19)	
+    CMunicipality.create(nombre:'MIER Y NORIEGA, NL',clave:'02337003',c_state_id:19)	
+    CMunicipality.create(nombre:'MINA, NL',clave:'02338005',c_state_id:19)	
+    CMunicipality.create(nombre:'MONTEMORELOS, NL',clave:'02339001',c_state_id:19)	
+    CMunicipality.create(nombre:'MONTERREY, NL',clave:'02340009',c_state_id:19)	
+    CMunicipality.create(nombre:'PARÁS, NL',clave:'02341008',c_state_id:19)	
+    CMunicipality.create(nombre:'PESQUERÍA, NL',clave:'02342001',c_state_id:19)	
+    CMunicipality.create(nombre:'RAMONES LOS, NL',clave:'02343006',c_state_id:19)	
+    CMunicipality.create(nombre:'RAYONES, NL',clave:'02344005',c_state_id:19)	
+    CMunicipality.create(nombre:'SABINAS HIDALGO, NL',clave:'02345007',c_state_id:19)	
+    CMunicipality.create(nombre:'SALINAS VICTORIA, NL',clave:'02346003',c_state_id:19)	
+    CMunicipality.create(nombre:'SAN NICOLÁS DE LOS GARZA, NL',clave:'02347002',c_state_id:19)	
+    CMunicipality.create(nombre:'HIDALGO, NL',clave:'02348004',c_state_id:19)	
+    CMunicipality.create(nombre:'SANTA CATARINA, NL',clave:'02349009',c_state_id:19)	
+    CMunicipality.create(nombre:'SANTIAGO MUNICIPIO DE, NL',clave:'02350005',c_state_id:19)	
+    CMunicipality.create(nombre:'EL CERCADO VILLA, NL',clave:'02350105',c_state_id:19)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA, NL',clave:'02350255',c_state_id:19)	
+    CMunicipality.create(nombre:'SANTIAGO LOCALIDAD DE, NL',clave:'02350308',c_state_id:19)	
+    CMunicipality.create(nombre:'VALLECILLO, NL',clave:'02351004',c_state_id:19)	
+    CMunicipality.create(nombre:'VILLALDAMA, NL',clave:'02352006',c_state_id:19)	
+    CMunicipality.create(nombre:'NUEVO LEON (OTROS)',clave:'02399004',c_state_id:19)	
+    CMunicipality.create(nombre:'ABEJONES, OAX',clave:'02401008',c_state_id:20)	
+    CMunicipality.create(nombre:'ACATLÁN DE PÉREZ FIGUEROA, OAX',clave:'02402007',c_state_id:20)	
+    CMunicipality.create(nombre:'ASUNCIÓN CACALOTEPEC, OAX',clave:'02403009',c_state_id:20)	
+    CMunicipality.create(nombre:'ASUNCIÓN CUYOTEPEJI, OAX',clave:'02404005',c_state_id:20)	
+    CMunicipality.create(nombre:'ASUNCIÓN IXTALTEPEC, OAX',clave:'02405004',c_state_id:20)	
+    CMunicipality.create(nombre:'ASUNCIÓN NOCHIXTLÁN, OAX',clave:'02406006',c_state_id:20)	
+    CMunicipality.create(nombre:'ASUNCIÓN OCOTLÁN, OAX',clave:'02407002',c_state_id:20)	
+    CMunicipality.create(nombre:'ASUNCIÓN TLACOLULITA, OAX',clave:'02408001',c_state_id:20)	
+    CMunicipality.create(nombre:'AYOTZINTEPEC, OAX',clave:'02409003',c_state_id:20)	
+    CMunicipality.create(nombre:'BARRIO DE LA SOLEDAD MUNICIPIO DEL, OAX',clave:'02410005',c_state_id:20)	
+    CMunicipality.create(nombre:'BARRIO LOCALIDAD DEL, OAX',clave:'02410059',c_state_id:20)	
+    CMunicipality.create(nombre:'RÍO GRANDE, OAX',clave:'02410155',c_state_id:20)	
+    CMunicipality.create(nombre:'CALIHUALÁ, OAX',clave:'02411001',c_state_id:20)	
+    CMunicipality.create(nombre:'CANDELARIA LOXICHA, OAX',clave:'02412009',c_state_id:20)	
+    CMunicipality.create(nombre:'CIÉNEGA DE ZIMATLÁN, OAX',clave:'02413002',c_state_id:20)	
+    CMunicipality.create(nombre:'CIUDAD IXTEPEC, OAX',clave:'02414007',c_state_id:20)	
+    CMunicipality.create(nombre:'COATECAS ALTAS, OAX',clave:'02415006',c_state_id:20)	
+    CMunicipality.create(nombre:'COICOYÁN DE LAS FLORES, OAX',clave:'02416008',c_state_id:20)	
+    CMunicipality.create(nombre:'COMPAÑÍA LA, OAX',clave:'02417004',c_state_id:20)	
+    CMunicipality.create(nombre:'CONCEPCIÓN BUENAVISTA, OAX',clave:'02418003',c_state_id:20)	
+    CMunicipality.create(nombre:'CONCEPCIÓN PÁPALO, OAX',clave:'02419005',c_state_id:20)	
+    CMunicipality.create(nombre:'CONSTANCIA DEL ROSARIO, OAX',clave:'02420004',c_state_id:20)	
+    CMunicipality.create(nombre:'COSOLAPA, OAX',clave:'02421009',c_state_id:20)	
+    CMunicipality.create(nombre:'COSOLTEPEC, OAX',clave:'02422008',c_state_id:20)	
+    CMunicipality.create(nombre:'CUILAPÁM DE GUERRERO, OAX',clave:'02423001',c_state_id:20)	
+    CMunicipality.create(nombre:'CHAHUITES, OAX',clave:'02424006',c_state_id:20)	
+    CMunicipality.create(nombre:'CHALCATONGO DE HIDALGO, OAX',clave:'02425005',c_state_id:20)	
+    CMunicipality.create(nombre:'CHIQUIHUITLÁN DE BENITO JUÁREZ, OAX',clave:'02426007',c_state_id:20)	
+    CMunicipality.create(nombre:'EJUTLA DE CRESPO, OAX',clave:'02427003',c_state_id:20)	
+    CMunicipality.create(nombre:'ELOXOCHITLÁN DE FLORES MAGÓN, OAX',clave:'02428002',c_state_id:20)	
+    CMunicipality.create(nombre:'ESPINAL EL, OAX',clave:'02429004',c_state_id:20)	
+    CMunicipality.create(nombre:'ESPIRITU SANTO TAMAZULÁPAM, OAX',clave:'02430009',c_state_id:20)	
+    CMunicipality.create(nombre:'FRESNILLO DE TRUJANO, OAX',clave:'02431005',c_state_id:20)	
+    CMunicipality.create(nombre:'GUADALUPE ETLA, OAX',clave:'02432004',c_state_id:20)	
+    CMunicipality.create(nombre:'GUADALUPE DE RAMÍREZ, OAX',clave:'02433006',c_state_id:20)	
+    CMunicipality.create(nombre:'GUELATAO DE JUÁREZ, OAX',clave:'02434002',c_state_id:20)	
+    CMunicipality.create(nombre:'GUEVEA DE HUMBOLDT, OAX',clave:'02435001',c_state_id:20)	
+    CMunicipality.create(nombre:'MESONES HIDALGO, OAX',clave:'02436003',c_state_id:20)	
+    CMunicipality.create(nombre:'VILLA HIDALGO, OAX',clave:'02437008',c_state_id:20)	
+    CMunicipality.create(nombre:'HUAJUAPÁN DE LEÓN, OAX',clave:'02438007',c_state_id:20)	
+    CMunicipality.create(nombre:'HUAUTEPEC, OAX',clave:'02439009',c_state_id:20)	
+    CMunicipality.create(nombre:'HUAUTLA DE JIMÉNEZ, OAX',clave:'02440002',c_state_id:20)	
+    CMunicipality.create(nombre:'IXTLÁN DE JUÁREZ, OAX',clave:'02441007',c_state_id:20)	
+    CMunicipality.create(nombre:'JUCHITÁN DE ZARAGOZA MUNICIPIO DE, OAX',clave:'02442006',c_state_id:20)	
+    CMunicipality.create(nombre:'JUCHITÁN DE ZARAGOZA LOCALIDAD DE, OAX',clave:'02442159',c_state_id:20)	
+    CMunicipality.create(nombre:'LAGUNAS, OAX',clave:'02442209',c_state_id:20)	
+    CMunicipality.create(nombre:'LOMA BONITA, OAX',clave:'02443008',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA APASCO, OAX',clave:'02444004',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA JALTEPEC, OAX',clave:'02445003',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA JICOTLÁN, OAX',clave:'02446005',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA MIXTEPEC, OAX',clave:'02447001',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA OCOTLÁN, OAX',clave:'02448009',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA PE ASCO, OAX',clave:'02449002',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA TEITIPAC, OAX',clave:'02450001',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA TEQUISISTLÁN, OAX',clave:'02451006',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA TLACOTEPEC, OAX',clave:'02452005',c_state_id:20)	
+    CMunicipality.create(nombre:'MAGDALENA ZAHUATLÁN, OAX',clave:'02453007',c_state_id:20)	
+    CMunicipality.create(nombre:'MARISCALA DE JUÁREZ, OAX',clave:'02454003',c_state_id:20)	
+    CMunicipality.create(nombre:'MÁRTIRES DE TACUBAYA, OAX',clave:'02455002',c_state_id:20)	
+    CMunicipality.create(nombre:'MATÍAS ROMERO, OAX',clave:'02456004',c_state_id:20)	
+    CMunicipality.create(nombre:'MAZATLÁN DE FLORES, OAX',clave:'02457009',c_state_id:20)	
+    CMunicipality.create(nombre:'MIAHUATLÁN DE PORFIRIO DÍAZ, OAX',clave:'02458008',c_state_id:20)	
+    CMunicipality.create(nombre:'MIXISTLAN DE LA REFORMA, OAX',clave:'02459001',c_state_id:20)	
+    CMunicipality.create(nombre:'MONJAS, OAX',clave:'02460006',c_state_id:20)	
+    CMunicipality.create(nombre:'NATIVIDAD, OAX',clave:'02461002',c_state_id:20)	
+    CMunicipality.create(nombre:'NAZARENO ETLA, OAX',clave:'02462001',c_state_id:20)	
+    CMunicipality.create(nombre:'NEJAPA DE MADERO, OAX',clave:'02463003',c_state_id:20)	
+    CMunicipality.create(nombre:'NIEVES DE IXPANTEPEC, OAX',clave:'02464008',c_state_id:20)	
+    CMunicipality.create(nombre:'NILTEPEC, OAX',clave:'02465007',c_state_id:20)	
+    CMunicipality.create(nombre:'OAXACA DE JUÁREZ, OAX',clave:'02466009',c_state_id:20)	
+    CMunicipality.create(nombre:'OCOTLÁN DE MORELOS, OAX',clave:'02467005',c_state_id:20)	
+    CMunicipality.create(nombre:'PE, LA, OAX',clave:'02468004',c_state_id:20)	
+    CMunicipality.create(nombre:'PINOTEPA DE DON LUIS, OAX',clave:'02469006',c_state_id:20)	
+    CMunicipality.create(nombre:'PLUMA HIDALGO, OAX',clave:'02470008',c_state_id:20)	
+    CMunicipality.create(nombre:'PROGRESO, OAX',clave:'02471004',c_state_id:20)	
+    CMunicipality.create(nombre:'PUTLA DE GUERRERO, OAX',clave:'02472003',c_state_id:20)	
+    CMunicipality.create(nombre:'QUIOQUITANI, OAX',clave:'02473005',c_state_id:20)	
+    CMunicipality.create(nombre:'REFORMA DE PINEDA, OAX',clave:'02474001',c_state_id:20)	
+    CMunicipality.create(nombre:'REFORMA, LA, OAX',clave:'02475009',c_state_id:20)	
+    CMunicipality.create(nombre:'REYES ETLA, OAX',clave:'02476002',c_state_id:20)	
+    CMunicipality.create(nombre:'ROJAS DE CUAUHTÉMOC, OAX',clave:'02477007',c_state_id:20)	
+    CMunicipality.create(nombre:'SALINA CRUZ, OAX',clave:'02478006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN AMATENGO, OAX',clave:'02479008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN ATENANGO, OAX',clave:'02480007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN CHAYUCO, OAX',clave:'02481003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN DE LAS JUNTAS, OAX',clave:'02482002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN ETLA, OAX',clave:'02483004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN LOXICHA, OAX',clave:'02484009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN TLACOTEPEC, OAX',clave:'02485008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN AGUSTÍN YATARENI, OAX',clave:'02486001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS CABECERA NUEVA, OAX',clave:'02487006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS DINICUITI, OAX',clave:'02488005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS HUAXPALTEPEC, OAX',clave:'02489007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS HUAYÁPAM, OAX',clave:'02490003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS IXTLAHUACA, OAX',clave:'02491008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS LAGUNAS, OAX',clave:'02492007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS NUXI O, OAX',clave:'02493009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS PAXTLÁN, OAX',clave:'02494005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS SINAXTLA, OAX',clave:'02495004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS SOLAGA, OAX',clave:'02496006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS TEOTILÁLPAM, OAX',clave:'02497002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS TEPETLAPA, OAX',clave:'02498001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS YAÁ, OAX',clave:'02499003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS ZABACHE, OAX',clave:'02501004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANDRÉS ZAUTLA, OAX',clave:'02502009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO CASTILLO VELASCO, OAX',clave:'02503008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO EL ALTO, OAX',clave:'02504001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO MONTEVERDE, OAX',clave:'02505006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO ACUTLA, OAX',clave:'02506005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO DE LA CAL, OAX',clave:'02507007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO HUITEPEC, OAX',clave:'02508003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO NANAHUATÍPAM, OAX',clave:'02509002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO SINICAHUA, OAX',clave:'02510007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ANTONIO TEPETLAPA, OAX',clave:'02511009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BALTASAR CHICHICÁPAM, OAX',clave:'02512005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BALTAZAR LOXICHA, OAX',clave:'02513004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BALTASAR YATZACHI EL BAJO, OAX',clave:'02514006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BARTOLO COYOTEPEC, OAX',clave:'02515002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BARTOLOMÉ AYAUTLA, OAX',clave:'02516001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BARTOLOMÉ LOXICHA, OAX',clave:'02517003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BARTOLOMÉ QUIALANA, OAX',clave:'02518008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BARTOLOMÉ YUCUA E, OAX',clave:'02519007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BARTOLOMÉ ZOOGOCHO, OAX',clave:'02520009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BARTOLO YAUTEPEC, OAX',clave:'02521002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BERNARDO MIXTEPEC, OAX',clave:'02522007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BLAS ATEMPA, OAX',clave:'02523006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN CARLOS YAUTEPEC, OAX',clave:'02524008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN CRISTÓBAL AMATLÁN, OAX',clave:'02525004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN CRISTÓBAL AMOLTEPEC, OAX',clave:'02526003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN CRISTÓBAL LACHIRIOAG, OAX',clave:'02527005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN CRISTÓBAL SUCHIXTLAHUACA, OAX',clave:'02528001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN DIONISIO DEL MAR, OAX',clave:'02529009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN DIONISIO OCOTEPEC, OAX',clave:'02530008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN DIONISIO OCOTLÁN, OAX',clave:'02531001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ESTEBAN ATATLAHUCA, OAX',clave:'02532006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FELIPE JALAPA DE DÍAZ, OAX',clave:'02533005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FELIPE TEJALÁPAM, OAX',clave:'02534007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FELIPE USILA, OAX',clave:'02535003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO CAHUACUÁ, OAX',clave:'02536002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO CAJONOS, OAX',clave:'02537004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO CHAPULAPA, OAX',clave:'02538009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO CHINDÚA, OAX',clave:'02539008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO DEL MAR, OAX',clave:'02540004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO HUEHUETLÁN, OAX',clave:'02541006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO IXHUATÁN, OAX',clave:'02542002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO JALTEPETONGO, OAX',clave:'02543001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO LACHIGOLÓ, OAX',clave:'02544003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO LOGUECHE, OAX',clave:'02545008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO NUXA O, OAX',clave:'02546007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO OZOLOTEPEC, OAX',clave:'02547009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO SOLA, OAX',clave:'02548005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO TELIXTLAHUACA, OAX',clave:'02549004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO TEOPAN, OAX',clave:'02550006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN FRANCISCO TLAPÁNCINGO, OAX',clave:'02551008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN GABRIEL MIXTEPEC, OAX',clave:'02552004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ILDEFONSO AMATLÁN, OAX',clave:'02553003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ILDEFONSO SOLA, OAX',clave:'02554005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN ILDEFONSO VILLA ALTA, OAX',clave:'02555001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JACINTO AMILPAS, OAX',clave:'02556009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JACINTO TLACOTEPEC, OAX',clave:'02557002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO COATLÁN, OAX',clave:'02558007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO SILACAYOAPILLA, OAX',clave:'02559006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO SOSOLA, OAX',clave:'02560005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO TAVICHE, OAX',clave:'02561007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO TECÓATL, OAX',clave:'02562003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JORGE NUCHITA, OAX',clave:'02563002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JOSÉ AYUQUILA, OAX',clave:'02564004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JOSÉ CHILTEPEC, OAX',clave:'02565009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JOSÉ DEL PE ASCO, OAX',clave:'02566008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JOSÉ ESTANCIA GRANDE, OAX',clave:'02567001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JOSÉ INDEPENDENCIA, OAX',clave:'02568006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JOSÉ LACHIGUIRI, OAX',clave:'02569005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JOSÉ TENANGO, OAX',clave:'02570001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN ACHIUTLA, OAX',clave:'02571003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN ATEPEC, OAX',clave:'02572008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA ANIMAS TRUJANO, OAX',clave:'02573007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA ATATLAHUACA, OAX',clave:'02574009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA COIXTLAHUACA, OAX',clave:'02575005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA CUICATLÁN, OAX',clave:'02576004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA GUELACHE, OAX',clave:'02577006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA JAYACATLÁN, OAX',clave:'02578002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA LO DE SOTO, OAX',clave:'02579001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA SUCHITEPEC, OAX',clave:'02580003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA TLACOATZINTEPEC, OAX',clave:'02581005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA TLACHICHILCO, OAX',clave:'02582001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA TUXTEPEC MUNICIPIO DE, OAX',clave:'02583009',c_state_id:20)	
+    CMunicipality.create(nombre:'JALAPA DE DÍAZ, OAX',clave:'02583266',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN BAUTISTA TUXTEPEC LOCALIDAD DE, OAX',clave:'02583776',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN CACAHUATEPEC, OAX',clave:'02584002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN CIENEGUILLA, OAX',clave:'02585007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN COATZÓSPAM, OAX',clave:'02586006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN COLORADO, OAX',clave:'02587008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN COMALTEPEC, OAX',clave:'02588004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN COTZOCÓN, OAX',clave:'02589003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN CHICOMEZÚCHIL, OAX',clave:'02590002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN CHILATECA, OAX',clave:'02591004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN DEL ESTADO, OAX',clave:'02592009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN DEL RÍO, OAX',clave:'02593008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN DIUXI, OAX',clave:'02594001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN EVANGELISTA ANALCO, OAX',clave:'02595006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN GUELAVÍA, OAX',clave:'02596005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN GUICHICOVI MUNICIPIO DE, OAX',clave:'02597007',c_state_id:20)	
+    CMunicipality.create(nombre:'MOGO E, OAX',clave:'02597319',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN GUICHICOVI LOCALIDAD DE, OAX',clave:'02597724',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN IHUALTEPEC, OAX',clave:'02598003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN JUQUILA MIXES MUNICIPIO DE, OAX',clave:'02599002',c_state_id:20)	
+    CMunicipality.create(nombre:'RÍO GRANDE, OAX',clave:'02599209',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN JUQUILA MIXES LOCALIDAD DE, OAX',clave:'02599305',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN JUQUILA VIJANOS, OAX',clave:'02601009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN LACHAO, OAX',clave:'02602002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN LACHIGALLA, OAX',clave:'02603007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN LAJARCIA, OAX',clave:'02604006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN LALANA, OAX',clave:'02605008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN LOS CUÉS, OAX',clave:'02606004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN MAZATLÁN, OAX',clave:'02608005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN MIXTEPEC, OAX',clave:'02609001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN ÑUMÍ, OAX',clave:'02611008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN OZOLOTEPEC, OAX',clave:'02612001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN PETLAPA, OAX',clave:'02613006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN QUIAHIJE, OAX',clave:'02614005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN QUIOTEPEC, OAX',clave:'02615007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN SAYULTEPEC, OAX',clave:'02616003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN TABAÁ, OAX',clave:'02617002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN TAMAZOLA, OAX',clave:'02618004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN TEITA, OAX',clave:'02619009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN TEITIPAC, OAX',clave:'02620005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN TEPEUXILA, OAX',clave:'02621004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN TEPOSCOLULA, OAX',clave:'02622006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN YAEÉ, OAX',clave:'02623002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN YATZONA, OAX',clave:'02624001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JUAN YUCUITA, OAX',clave:'02625003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LORENZO, OAX',clave:'02626008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LORENZO ALBARRADAS, OAX',clave:'02627007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LORENZO CACAOTEPEC, OAX',clave:'02628009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LORENZO CUAUNECUILTITLA, OAX',clave:'02629005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LORENZO TEXMELUCAN, OAX',clave:'02630007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LORENZO VICTORIA, OAX',clave:'02631006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LUCAS CAMOTLÁN, OAX',clave:'02632008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LUCAS OJITLÁN, OAX',clave:'02633004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LUCAS QUIAVINÍ, OAX',clave:'02634003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LUCAS ZOQUIÁPAM, OAX',clave:'02635005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN LUIS AMATLÁN, OAX',clave:'02636001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARCIAL OZOLOTEPEC, OAX',clave:'02637009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARCOS ARTEAGA, OAX',clave:'02638002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARTÍN DE LOS CANSECOS, OAX',clave:'02639007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARTÍN HUAMELÚLPAM, OAX',clave:'02640006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARTÍN ITUNYOSO, OAX',clave:'02641005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARTÍN LACHILÁ, OAX',clave:'02642007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARTÍN PERAS, OAX',clave:'02643003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARTÍN TILCAJETE, OAX',clave:'02644002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARTÍN TOXPALAN, OAX',clave:'02645004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MARTÍN ZACATEPEC, OAX',clave:'02646009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO CAJONOS, OAX',clave:'02647008',c_state_id:20)	
+    CMunicipality.create(nombre:'CAPULÁLPAM DE MÉNDEZ, OAX',clave:'02648001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO DEL MAR, OAX',clave:'02649006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO YOLOXOCHITLÁN, OAX',clave:'02650002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO ETLATONGO, OAX',clave:'02651001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO NEJÁPAM, OAX',clave:'02652003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO PE ASCO, OAX',clave:'02653008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO PI AS, OAX',clave:'02654007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO RÍO HONDO, OAX',clave:'02655009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO SINDIHUI, OAX',clave:'02656005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MATEO TLAPILTEPEC, OAX',clave:'02657004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MELCHOR BETAZA, OAX',clave:'02658006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL ACHIUTLA, OAX',clave:'02659002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL AHUEHUETITLÁN, OAX',clave:'02660004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL ALOÁPAM, OAX',clave:'02661003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL AMATITLÁN, OAX',clave:'02662005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL AMATLÁN, OAX',clave:'02663001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL COATLÁN, OAX',clave:'02664009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL CHICAHUA, OAX',clave:'02665002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL CHIMALAPA, OAX',clave:'02666007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL DEL PUERTO, OAX',clave:'02667006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL DEL RÍO, OAX',clave:'02668008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL EJUTLA, OAX',clave:'02669004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL EL GRANDE, OAX',clave:'02670003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL HUAUTLA, OAX',clave:'02671002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL MIXTEPEC, OAX',clave:'02672004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL PANIXTLAHUACA, OAX',clave:'02673009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL PERAS, OAX',clave:'02674008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL PIEDRAS, OAX',clave:'02675001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL QUETZALTEPEC, OAX',clave:'02676006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL SANTA FLOR, OAX',clave:'02677005',c_state_id:20)	
+    CMunicipality.create(nombre:'VILLA SOLA DE VEGA, OAX',clave:'02678007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL SOYALTEPEC, OAX',clave:'02679003',c_state_id:20)	
+    CMunicipality.create(nombre:'TEMASCAL, OAX',clave:'02679309',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL SUCHIXTEPEC, OAX',clave:'02680008',c_state_id:20)	
+    CMunicipality.create(nombre:'VILLA TALEA DE CASTRO, OAX',clave:'02681007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL TECOMATLÁN, OAX',clave:'02682009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL TENANGO, OAX',clave:'02683005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL TEQUIXTEPEC, OAX',clave:'02684004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL TILQUIÁPAM, OAX',clave:'02685006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL TLACAMAMA, OAX',clave:'02686002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL TLACOTEPEC, OAX',clave:'02687001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL TULANCINGO, OAX',clave:'02688003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN MIGUEL YOTAO, OAX',clave:'02689008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN NICOLÁS, OAX',clave:'02690001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN NICOLÁS HIDALGO, OAX',clave:'02691009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO COATLÁN, OAX',clave:'02692002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO CUATRO VENADOS, OAX',clave:'02693007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO ETLA, OAX',clave:'02694006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO HUITZO, OAX',clave:'02695008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO HUIXTEPEC, OAX',clave:'02696004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO MACUILTIANGUIS, OAX',clave:'02697003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO TIJALTEPEC, OAX',clave:'02698005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO VILLA DE MITLA, OAX',clave:'02699001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PABLO YAGANIZA, OAX',clave:'02701005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO AMUZGOS, OAX',clave:'02702004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO APÓSTOL, OAX',clave:'02703006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO ATOYAC, OAX',clave:'02704002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO CAJONOS, OAX',clave:'02705001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO COXCALTEPEC CÁNTAROS, OAX',clave:'02706003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO COMITANCILLO, OAX',clave:'02707008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO EL ALTO, OAX',clave:'02708007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO HUAMELULA, OAX',clave:'02709009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO HUILOTEPEC, OAX',clave:'02710002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO IXCATLÁN, OAX',clave:'02711007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO IXTLAHUACA, OAX',clave:'02712006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO JALTEPETONGO, OAX',clave:'02713008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO JICAYÁN, OAX',clave:'02714004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO JOCOTIPAC, OAX',clave:'02715003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO JUCHATENGO, OAX',clave:'02716005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO MÁRTIR, OAX',clave:'02717001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO MÁRTIR QUIECHAPA, OAX',clave:'02718009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO MÁRTIR YUCUXACO, OAX',clave:'02719002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO MIXTEPEC MUNICIPIO DE, OAX',clave:'02720001',c_state_id:20)	
+    CMunicipality.create(nombre:'PUERTO ESCONDIDO, OAX',clave:'02720157',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO MIXTEPEC LOCALIDAD DE, OAX',clave:'02720301',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO MOLINOS, OAX',clave:'02721006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO NOPALA, OAX',clave:'02722005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO OCOPETATILLO, OAX',clave:'02723007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO OCOTEPEC, OAX',clave:'02724003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO POCHUTLA, OAX',clave:'02725002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO QUIATONI, OAX',clave:'02726004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO SOCHIÁPAM, OAX',clave:'02727009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TAPÁNATEPEC, OAX',clave:'02728008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TAVICHE, OAX',clave:'02729001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TEOZACOALCO, OAX',clave:'02730006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TEUTILA, OAX',clave:'02731002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TIDAÁ, OAX',clave:'02732001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TOPILTEPEC, OAX',clave:'02733003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TOTOLAPA, OAX',clave:'02734008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TUTUTEPEC MUNICIPIO DE, OAX',clave:'02735007',c_state_id:20)	
+    CMunicipality.create(nombre:'RÍO GRANDE, OAX',clave:'02735154',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO TUTUTEPEC LOCALIDAD DE, OAX',clave:'02735307',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO YANERI, OAX',clave:'02736009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO YÓLOX, OAX',clave:'02737005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO Y SAN PABLO AYUTLA, OAX',clave:'02738004',c_state_id:20)	
+    CMunicipality.create(nombre:'VILLA DE ETLA, OAX',clave:'02739006',c_state_id:20)	
+    CMunicipality.create(nombre:'VILLA DE ETLA OAX, OAX',clave:'02739734',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO Y SAN PABLO TEPOSCOLULA, OAX',clave:'02740008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO Y SAN PABLO TEQUIXTEPEC, OAX',clave:'02741004',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN PEDRO YUCUNAMA, OAX',clave:'02742003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN RAYMUNDO JALPAN, OAX',clave:'02743005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN ABASOLO, OAX',clave:'02744001',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN COATLÁN, OAX',clave:'02745009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN IXCAPA, OAX',clave:'02746002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN NICANANDUTA, OAX',clave:'02747007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN RÍO HONDO, OAX',clave:'02748006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN TECOMAXTLAHUACA, OAX',clave:'02749008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN TEITIPAC, OAX',clave:'02750007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN TUTLA, OAX',clave:'02751003',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SIMÓN ALMOLONGAS, OAX',clave:'02752002',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN SIMÓN ZAHUATLÁN, OAX',clave:'02753004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA ANA ATEIXTLAHUACA, OAX',clave:'02754009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA ANA CUAUHTÉMOC, OAX',clave:'02755008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA ANA DEL VALLE, OAX',clave:'02756001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA ANA TAVELA, OAX',clave:'02757006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA ANA TLAPACOYAN, OAX',clave:'02758005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA ANA YARENI, OAX',clave:'02759007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA ANA ZEGACHE, OAX',clave:'02760003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA QUIERÍ, OAX',clave:'02761008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA CUIXTLA, OAX',clave:'02762007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA IXTEPEJI, OAX',clave:'02763009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA JUQUILA, OAX',clave:'02764005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA LACHATAO, OAX',clave:'02765004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA LOXICHA, OAX',clave:'02766006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA MECHOACÁN, OAX',clave:'02767002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA MINAS, OAX',clave:'02768001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA QUIANÉ, OAX',clave:'02769003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA TAYATA, OAX',clave:'02770005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA TICUÁ, OAX',clave:'02771001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA YOSONOTÚ, OAX',clave:'02772009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CATARINA ZAPOQUILA, OAX',clave:'02773002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ ACATEPEC, OAX',clave:'02774007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ AMILPAS, OAX',clave:'02775006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ DE BRAVO, OAX',clave:'02776008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ ITUNDUJIA, OAX',clave:'02777004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ MIXTEPEC, OAX',clave:'02778003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ NUNDACO, OAX',clave:'02779005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ PAPALUTLA, OAX',clave:'02780004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ TACACHE DE MINA, OAX',clave:'02781009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ TACAHUA, OAX',clave:'02782008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ TAYATA, OAX',clave:'02783001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ XITLA, OAX',clave:'02784006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ XOXOCOTLÁN, OAX',clave:'02785005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA CRUZ ZENZONTEPEC, OAX',clave:'02786007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA GERTRUDIS, OAX',clave:'02788002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA INÉS YATZECHE, OAX',clave:'02789004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA LUCÍA DEL CAMINO, OAX',clave:'02790009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA LUCÍA MIAHUATLÁN, OAX',clave:'02791005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA LUCÍA MONTEVERDE, OAX',clave:'02792004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA LUCÍA OCOTLÁN, OAX',clave:'02793006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA ALOTEPEC, OAX',clave:'02794002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA APAZCO, OAX',clave:'02795001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA LA ASUNCIÓN, OAX',clave:'02796003',c_state_id:20)	
+    CMunicipality.create(nombre:'HEROICA CIUDAD DE TLAXIACO, OAX',clave:'02797008',c_state_id:20)	
+    CMunicipality.create(nombre:'AYOQUEZCO DE ALDAMA, OAX',clave:'02798007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA ATZOMPA, OAX',clave:'02801001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA CAMOTLÁN, OAX',clave:'02802006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA COLOTEPEC, OAX',clave:'02803005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA CORTIJO, OAX',clave:'02804007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA COYOTEPEC, OAX',clave:'02805003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA CHACHOÁPAM, OAX',clave:'02806002',c_state_id:20)	
+    CMunicipality.create(nombre:'VILLA DE CHILAPA DE DÍAZ, OAX',clave:'02807004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA CHILCHOTLA, OAX',clave:'02808009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA CHIMALAPA, OAX',clave:'02809008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA DEL ROSARIO, OAX',clave:'02810004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA DEL TULE, OAX',clave:'02811006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA ECATEPEC, OAX',clave:'02812002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA GUELACÉ, OAX',clave:'02813001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA GUIENAGATI, OAX',clave:'02814003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA HUATULCO, OAX',clave:'02815008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA HUAZOLOTITLÁN, OAX',clave:'02816007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA IPALAPA, OAX',clave:'02817009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA IXCATLÁN, OAX',clave:'02818005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA JACATEPEC, OAX',clave:'02819004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA JALAPA DEL MARQUÉS, OAX',clave:'02820006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA JALTIANGUIS, OAX',clave:'02821008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA LACHIXÍO, OAX',clave:'02822004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA MIXTEQUILLA, OAX',clave:'02823003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA NATIVITAS, OAX',clave:'02824005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA NDUAYACO, OAX',clave:'02825001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA OZOLOTEPEC, OAX',clave:'02826009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA PÁPALO, OAX',clave:'02827002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA PE OLES, OAX',clave:'02828007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA PETAPA, OAX',clave:'02829006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA QUIEGOLANI, OAX',clave:'02830005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA SOLA, OAX',clave:'02831007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TATALTEPEC, OAX',clave:'02832003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TECOMAVACA, OAX',clave:'02833002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TEMAXCALAPA, OAX',clave:'02834004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TEMAXCALTEPEC, OAX',clave:'02835009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TEOPOXCO, OAX',clave:'02836008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TEPANTLALI, OAX',clave:'02837001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TEXCATITLÁN, OAX',clave:'02838006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TLAHUITOLTEPEC, OAX',clave:'02839005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TLALIXTAC, OAX',clave:'02840001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TONAMECA, OAX',clave:'02841003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA TOTOLAPILLA, OAX',clave:'02842008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA XADANI, OAX',clave:'02843007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA YALINA, OAX',clave:'02844009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA YAVESÍA, OAX',clave:'02845005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA YOLOTEPEC, OAX',clave:'02846004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA YOSOYÚA, OAX',clave:'02847006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA YUCUHITI, OAX',clave:'02848002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA ZACATEPEC, OAX',clave:'02849001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA ZANIZA, OAX',clave:'02850003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA MARÍA ZOQUITLÁN, OAX',clave:'02851005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO AMOLTEPEC, OAX',clave:'02852001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO APOALA, OAX',clave:'02853009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO APÓSTOL, OAX',clave:'02854002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO ASTATA, OAX',clave:'02855007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO ATITLÁN, OAX',clave:'02856006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO AYUQUILILLA, OAX',clave:'02857008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO CACALOXTEPEC, OAX',clave:'02858004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO CAMOTLÁN, OAX',clave:'02859003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO COMALTEPEC, OAX',clave:'02860002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO CHAZUMBA, OAX',clave:'02861004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO CHOÁPAM, OAX',clave:'02862009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO DEL RÍO, OAX',clave:'02863008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO HUAJOLOTITLÁN, OAX',clave:'02864001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO HUAUCLILLA, OAX',clave:'02865006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO IHUITLÁN PLUMAS, OAX',clave:'02866005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO IXCUINTEPEC, OAX',clave:'02867007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO IXTAYUTLA, OAX',clave:'02868003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO JAMILTEPEC, OAX',clave:'02869002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO JOCOTEPEC, OAX',clave:'02870007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO JUXTLAHUACA, OAX',clave:'02871009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO LACHIGUIRI, OAX',clave:'02872005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO LALOPA, OAX',clave:'02873004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO LAOLLAGA, OAX',clave:'02874006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO LAXOPA, OAX',clave:'02875002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO LLANO GRANDE, OAX',clave:'02876001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO MATATLÁN, OAX',clave:'02877003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO MILTEPEC, OAX',clave:'02878008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO MINAS, OAX',clave:'02879007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO NACALTEPEC, OAX',clave:'02880009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO NEJAPILLA, OAX',clave:'02881002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO NUNDICHE, OAX',clave:'02882007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO NUYOÓ, OAX',clave:'02883006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO PINOTEPA NACIONAL, OAX',clave:'02884008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO SUCHILQUITONGO, OAX',clave:'02885004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TAMAZOLA, OAX',clave:'02886003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TAPEXTLA, OAX',clave:'02887005',c_state_id:20)	
+    CMunicipality.create(nombre:'VILLA TEJÚPAM DE LA UNIÓN, OAX',clave:'02888001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TENANGO, OAX',clave:'02889009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TEPETLAPA, OAX',clave:'02890008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TETEPEC, OAX',clave:'02891001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TEXCALCINGO, OAX',clave:'02892006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TEXTITLÁN, OAX',clave:'02893005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TILANTONGO, OAX',clave:'02894007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TILLO, OAX',clave:'02895003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO TLAZOYALTEPEC, OAX',clave:'02896002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO XANICA, OAX',clave:'02897004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO XIACUÍ, OAX',clave:'02898009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO YAITEPEC, OAX',clave:'02899008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO YAVEO, OAX',clave:'02901006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO YOLOMÉCATL, OAX',clave:'02902008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO YOSONDÚA, OAX',clave:'02903004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO YUCUYACHI, OAX',clave:'02904003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO ZACATEPEC, OAX',clave:'02905005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO ZOOCHILA, OAX',clave:'02906001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTIAGO ZOQUIÁPAM, OAX',clave:'02907009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO INGENIO, OAX',clave:'02908002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO ALBARRADAS, OAX',clave:'02909007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO ARMENTA, OAX',clave:'02910006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO CHIHUITÁN, OAX',clave:'02911005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO DE MORELOS, OAX',clave:'02912007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO IXCATLÁN, OAX',clave:'02913003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO NUXAÁ, OAX',clave:'02914002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO OZOLOTEPEC, OAX',clave:'02915004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO PETAPA, OAX',clave:'02916009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO ROAYAGA, OAX',clave:'02917008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO TEHUANTEPEC, OAX',clave:'02918001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO TEOJOMULCO, OAX',clave:'02919006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO TEPUXTEPEC, OAX',clave:'02920002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO TLATAYÁPAM, OAX',clave:'02921001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO TOMALTEPEC, OAX',clave:'02922003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO TONALÁ, OAX',clave:'02923008',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO TONALTEPEC, OAX',clave:'02924007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO XAGACÍA, OAX',clave:'02925009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO YANHUITLÁN, OAX',clave:'02926005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO YODOHINO, OAX',clave:'02927004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO DOMINGO ZANATEPEC, OAX',clave:'02928006',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTOS REYES NOPALA, OAX',clave:'02929002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTOS REYES PÁPALO, OAX',clave:'02930004',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTOS REYES TEPEJILLO, OAX',clave:'02931003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTOS REYES YUCUNÁ, OAX',clave:'02932005',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO TOMÁS JALIEZA, OAX',clave:'02933001',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO TOMÁS MAZALTEPEC, OAX',clave:'02934009',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO TOMÁS OCOTEPEC, OAX',clave:'02935002',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTO TOMÁS TAMAZULAPÁN, OAX',clave:'02936007',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN VICENTE COATLÁN, OAX',clave:'02937006',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN VICENTE LACHIXÍO, OAX',clave:'02938008',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN VICENTE NUÑÚ, OAX',clave:'02939004',c_state_id:20)	
+    CMunicipality.create(nombre:'SILACAYOÁPAM, OAX',clave:'02940003',c_state_id:20)	
+    CMunicipality.create(nombre:'SITIO DE XITLAPEHUA, OAX',clave:'02941002',c_state_id:20)	
+    CMunicipality.create(nombre:'SOLEDAD ETLA, OAX',clave:'02942004',c_state_id:20)	
+    CMunicipality.create(nombre:'TAMAZULÁPAM DEL PROGRESO, OAX',clave:'02943009',c_state_id:20)	
+    CMunicipality.create(nombre:'TANETZE DE ZARAGOZA, OAX',clave:'02944008',c_state_id:20)	
+    CMunicipality.create(nombre:'TANICHE, OAX',clave:'02945001',c_state_id:20)	
+    CMunicipality.create(nombre:'TATALTEPEC DE VALDÉS, OAX',clave:'02946006',c_state_id:20)	
+    CMunicipality.create(nombre:'TEOCOCUILCO DE MARCOS PÉREZ, OAX',clave:'02947005',c_state_id:20)	
+    CMunicipality.create(nombre:'TEOTITLAN DE FLORES MAGÓN, OAX',clave:'02948007',c_state_id:20)	
+    CMunicipality.create(nombre:'TEOTITLÁN DEL VALLE, OAX',clave:'02949003',c_state_id:20)	
+    CMunicipality.create(nombre:'TEOTONGO, OAX',clave:'02950008',c_state_id:20)	
+    CMunicipality.create(nombre:'TEPELMEME VILLA DE MORELOS, OAX',clave:'02951007',c_state_id:20)	
+    CMunicipality.create(nombre:'TEZOATLÁN DE SEGURA Y LUNA, OAX',clave:'02952009',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO TLACOCHAHUAYA, OAX',clave:'02953005',c_state_id:20)	
+    CMunicipality.create(nombre:'TLACOLULA DE MATAMOROS, OAX',clave:'02954004',c_state_id:20)	
+    CMunicipality.create(nombre:'TLACOTEPEC PLUMAS, OAX',clave:'02955006',c_state_id:20)	
+    CMunicipality.create(nombre:'TLALIXTAC DE CABRERA, OAX',clave:'02956002',c_state_id:20)	
+    CMunicipality.create(nombre:'TOTONTEPEC VILLA DE MORELOS, OAX',clave:'02957001',c_state_id:20)	
+    CMunicipality.create(nombre:'TRINIDAD ZAACHILA, OAX',clave:'02958003',c_state_id:20)	
+    CMunicipality.create(nombre:'TRINIDAD VISTA HERMOSA LA, OAX',clave:'02959008',c_state_id:20)	
+    CMunicipality.create(nombre:'UNIÓN HIDALGO, OAX',clave:'02960001',c_state_id:20)	
+    CMunicipality.create(nombre:'VALERIO TRUJANO, OAX',clave:'02961009',c_state_id:20)	
+    CMunicipality.create(nombre:'VALLE NACIONAL SAN JUAN BAUTISTA, OAX',clave:'02962002',c_state_id:20)	
+    CMunicipality.create(nombre:'VILLA DÍAZ ORDAZ, OAX',clave:'02963007',c_state_id:20)	
+    CMunicipality.create(nombre:'YAXE, OAX',clave:'02964006',c_state_id:20)	
+    CMunicipality.create(nombre:'YODOCONO DE PORFIRIO DÍAZ MAGDALENA, OAX',clave:'02965008',c_state_id:20)	
+    CMunicipality.create(nombre:'YOGANA, OAX',clave:'02966004',c_state_id:20)	
+    CMunicipality.create(nombre:'YUTANDUCHI DE GUERRERO, OAX',clave:'02967003',c_state_id:20)	
+    CMunicipality.create(nombre:'ZAACHILA VILLA DE, OAX',clave:'02968005',c_state_id:20)	
+    CMunicipality.create(nombre:'ZAPOTITLÁN DEL RÍO, OAX',clave:'02969001',c_state_id:20)	
+    CMunicipality.create(nombre:'ZAPOTITLÁN LAGUNAS, OAX',clave:'02970009',c_state_id:20)	
+    CMunicipality.create(nombre:'ZAPOTITLÁN PALMAS, OAX',clave:'02971008',c_state_id:20)	
+    CMunicipality.create(nombre:'ZARAGOZA SANTA INÉS DE, OAX',clave:'02972001',c_state_id:20)	
+    CMunicipality.create(nombre:'ZARAGOZA CUYAMECALCO VILLA DE, OAX',clave:'02973006',c_state_id:20)	
+    CMunicipality.create(nombre:'ZIMATLÁN DE ÁLVAREZ, OAX',clave:'02974005',c_state_id:20)	
+    CMunicipality.create(nombre:'SAN BARTOLO SOYALTEPEC, OAX',clave:'02975007',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA ANA, OAX',clave:'02976003',c_state_id:20)	
+    CMunicipality.create(nombre:'SANTA INÉS DEL MONTE, OAX',clave:'02977002',c_state_id:20)	
+    CMunicipality.create(nombre:'OAXACA (OTROS)',clave:'02999007',c_state_id:20)	
+    CMunicipality.create(nombre:'ACAJETE, PUE',clave:'03001009',c_state_id:21)	
+    CMunicipality.create(nombre:'ACATENO, PUE',clave:'03002003',c_state_id:21)	
+    CMunicipality.create(nombre:'ACATLÁN, PUE',clave:'03003009',c_state_id:21)	
+    CMunicipality.create(nombre:'ACATZINGO, PUE',clave:'03004009',c_state_id:21)	
+    CMunicipality.create(nombre:'ACTEOPAN, PUE',clave:'03005003',c_state_id:21)	
+    CMunicipality.create(nombre:'AHUACATLÁN, PUE',clave:'03006009',c_state_id:21)	
+    CMunicipality.create(nombre:'AHUATLÁN, PUE',clave:'03007009',c_state_id:21)	
+    CMunicipality.create(nombre:'AHUAZOTEPEC, PUE',clave:'03008003',c_state_id:21)	
+    CMunicipality.create(nombre:'AHUEHUETITLA, PUE',clave:'03009009',c_state_id:21)	
+    CMunicipality.create(nombre:'AJALPAN, PUE',clave:'03010006',c_state_id:21)	
+    CMunicipality.create(nombre:'ALBINO ZERTUCHE, PUE',clave:'03011006',c_state_id:21)	
+    CMunicipality.create(nombre:'ACAXTLAHUACÁN DE ALBINO ZERTUCHE, PUE',clave:'03011057',c_state_id:21)	
+    CMunicipality.create(nombre:'ALJOJUCA, PUE',clave:'03012009',c_state_id:21)	
+    CMunicipality.create(nombre:'ALTEPEXI, PUE',clave:'03013006',c_state_id:21)	
+    CMunicipality.create(nombre:'AMIXTLÁN, PUE',clave:'03014006',c_state_id:21)	
+    CMunicipality.create(nombre:'AMOZOC, PUE',clave:'03015009',c_state_id:21)	
+    CMunicipality.create(nombre:'AQUIXTLA, PUE',clave:'03016006',c_state_id:21)	
+    CMunicipality.create(nombre:'ATEMPAN, PUE',clave:'03017006',c_state_id:21)	
+    CMunicipality.create(nombre:'ATEXCAL SAN MARTÍN, PUE',clave:'03018009',c_state_id:21)	
+    CMunicipality.create(nombre:'ATLIXCO, PUE',clave:'03019006',c_state_id:21)	
+    CMunicipality.create(nombre:'ATOYATEMPAN, PUE',clave:'03020009',c_state_id:21)	
+    CMunicipality.create(nombre:'ATZALA, PUE',clave:'03021009',c_state_id:21)	
+    CMunicipality.create(nombre:'ATZITZIHUACÁN, PUE',clave:'03022003',c_state_id:21)	
+    CMunicipality.create(nombre:'ATZITZINTLA, PUE',clave:'03023009',c_state_id:21)	
+    CMunicipality.create(nombre:'AXUTLA, PUE',clave:'03024009',c_state_id:21)	
+    CMunicipality.create(nombre:'AYOTOXCO DE GUERRERO, PUE',clave:'03025003',c_state_id:21)	
+    CMunicipality.create(nombre:'CALPAN, PUE',clave:'03026009',c_state_id:21)	
+    CMunicipality.create(nombre:'CALTEPEC, PUE',clave:'03027009',c_state_id:21)	
+    CMunicipality.create(nombre:'CAMOCUAUTLA, PUE',clave:'03028003',c_state_id:21)	
+    CMunicipality.create(nombre:'CAXHUACAN, PUE',clave:'03029009',c_state_id:21)	
+    CMunicipality.create(nombre:'COATEPEC, PUE',clave:'03030009',c_state_id:21)	
+    CMunicipality.create(nombre:'COATZINGO, PUE',clave:'03031009',c_state_id:21)	
+    CMunicipality.create(nombre:'COHETZALA, PUE',clave:'03032003',c_state_id:21)	
+    CMunicipality.create(nombre:'COHUECÁN, PUE',clave:'03033009',c_state_id:21)	
+    CMunicipality.create(nombre:'CORONANGO, PUE',clave:'03034009',c_state_id:21)	
+    CMunicipality.create(nombre:'COXCATLÁN, PUE',clave:'03035003',c_state_id:21)	
+    CMunicipality.create(nombre:'COYOMEAPÁN, PUE',clave:'03036009',c_state_id:21)	
+    CMunicipality.create(nombre:'COYOTEPEC, PUE',clave:'03037009',c_state_id:21)	
+    CMunicipality.create(nombre:'CUAPIAXTLA DE MADERO MUNICIPIO DE, PUE',clave:'03038003',c_state_id:21)	
+    CMunicipality.create(nombre:'CUAPIAXTLA DE MADERO LOCALIDAD DE, PUE',clave:'03038103',c_state_id:21)	
+    CMunicipality.create(nombre:'LÁZARO CÁRDENAS VILLA, PUE',clave:'03038207',c_state_id:21)	
+    CMunicipality.create(nombre:'CUAUTEMPAN, PUE',clave:'03039009',c_state_id:21)	
+    CMunicipality.create(nombre:'CUAUTINCHÁN, PUE',clave:'03040006',c_state_id:21)	
+    CMunicipality.create(nombre:'CUAUTLANCINGO, PUE',clave:'03041006',c_state_id:21)	
+    CMunicipality.create(nombre:'CUAYUCA DE ANDRADE, PUE',clave:'03042009',c_state_id:21)	
+    CMunicipality.create(nombre:'CUETZALAN DEL PROGRESO, PUE',clave:'03043006',c_state_id:21)	
+    CMunicipality.create(nombre:'CUYOACO, PUE',clave:'03044006',c_state_id:21)	
+    CMunicipality.create(nombre:'CHALCHICOMULA DE SESMA, PUE',clave:'03045009',c_state_id:21)	
+    CMunicipality.create(nombre:'CIUDAD SERDAN, PUE',clave:'03045055',c_state_id:21)	
+    CMunicipality.create(nombre:'CHAPULCO, PUE',clave:'03046006',c_state_id:21)	
+    CMunicipality.create(nombre:'CHIAUTLA, PUE',clave:'03047006',c_state_id:21)	
+    CMunicipality.create(nombre:'CHIAUTZINGO, PUE',clave:'03048009',c_state_id:21)	
+    CMunicipality.create(nombre:'CHICONCUAUTLA, PUE',clave:'03049006',c_state_id:21)	
+    CMunicipality.create(nombre:'CHICHIQUILA, PUE',clave:'03050009',c_state_id:21)	
+    CMunicipality.create(nombre:'CHIETLA MUNICIPIO DE, PUE',clave:'03051009',c_state_id:21)	
+    CMunicipality.create(nombre:'ATENCINGO, PUE',clave:'03051055',c_state_id:21)	
+    CMunicipality.create(nombre:'CHIETLA LOCALIDAD DE, PUE',clave:'03051159',c_state_id:21)	
+    CMunicipality.create(nombre:'CHIGMECATITLÁN, PUE',clave:'03052003',c_state_id:21)	
+    CMunicipality.create(nombre:'CHIGNAHUAPÁN, PUE',clave:'03053009',c_state_id:21)	
+    CMunicipality.create(nombre:'CHIGNAUTLA, PUE',clave:'03054009',c_state_id:21)	
+    CMunicipality.create(nombre:'CHILA, PUE',clave:'03055003',c_state_id:21)	
+    CMunicipality.create(nombre:'CHILA DE LA SAL, PUE',clave:'03056009',c_state_id:21)	
+    CMunicipality.create(nombre:'HONEY, PUE',clave:'03057009',c_state_id:21)	
+    CMunicipality.create(nombre:'CHILCHOTLA, PUE',clave:'03058003',c_state_id:21)	
+    CMunicipality.create(nombre:'RAFAEL GARCÍA, PUE',clave:'03058209',c_state_id:21)	
+    CMunicipality.create(nombre:'CHINANTLA, PUE',clave:'03059009',c_state_id:21)	
+    CMunicipality.create(nombre:'DOMINGO ARENAS, PUE',clave:'03060009',c_state_id:21)	
+    CMunicipality.create(nombre:'ELOXOCHITLÁN, PUE',clave:'03061009',c_state_id:21)	
+    CMunicipality.create(nombre:'EPATLÁN, PUE',clave:'03062003',c_state_id:21)	
+    CMunicipality.create(nombre:'ESPERANZA, PUE',clave:'03063009',c_state_id:21)	
+    CMunicipality.create(nombre:'FRANCISCO Z MENA, PUE',clave:'03064009',c_state_id:21)	
+    CMunicipality.create(nombre:'METLALTOYUCA, PUE',clave:'03064156',c_state_id:21)	
+    CMunicipality.create(nombre:'GENERAL FELIPE ÁNGELES, PUE',clave:'03065003',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN PABLO DE LAS TUNAS, PUE',clave:'03065306',c_state_id:21)	
+    CMunicipality.create(nombre:'GUADALUPE, PUE',clave:'03066009',c_state_id:21)	
+    CMunicipality.create(nombre:'GUADALUPE VICTORIA, PUE',clave:'03067009',c_state_id:21)	
+    CMunicipality.create(nombre:'HERMENEGILDO GALEANA, PUE',clave:'03068003',c_state_id:21)	
+    CMunicipality.create(nombre:'BIENVENIDO, PUE',clave:'03068054',c_state_id:21)	
+    CMunicipality.create(nombre:'HUAQUECHULA, PUE',clave:'03069009',c_state_id:21)	
+    CMunicipality.create(nombre:'HUATLATLAUCA, PUE',clave:'03070006',c_state_id:21)	
+    CMunicipality.create(nombre:'HUAUCHINANGO, PUE',clave:'03071006',c_state_id:21)	
+    CMunicipality.create(nombre:'HUEHUETLA, PUE',clave:'03072009',c_state_id:21)	
+    CMunicipality.create(nombre:'HUEHUETLÁN EL CHICO, PUE',clave:'03073006',c_state_id:21)	
+    CMunicipality.create(nombre:'HUEJOTZINGO, PUE',clave:'03074006',c_state_id:21)	
+    CMunicipality.create(nombre:'HUEYAPÁN, PUE',clave:'03075009',c_state_id:21)	
+    CMunicipality.create(nombre:'HUEYTAMALCO, PUE',clave:'03076006',c_state_id:21)	
+    CMunicipality.create(nombre:'HUEYTLALPAN, PUE',clave:'03077006',c_state_id:21)	
+    CMunicipality.create(nombre:'HUITZILAN DE SERDÁN, PUE',clave:'03078009',c_state_id:21)	
+    CMunicipality.create(nombre:'HUITZILTEPEC, PUE',clave:'03079006',c_state_id:21)	
+    CMunicipality.create(nombre:'IGNACIO ALLENDE, PUE',clave:'03080009',c_state_id:21)	
+    CMunicipality.create(nombre:'ATLEQUIZAYAN, PUE',clave:'03080051',c_state_id:21)	
+    CMunicipality.create(nombre:'IXCAMILPA DE GUERRERO, PUE',clave:'03081009',c_state_id:21)	
+    CMunicipality.create(nombre:'IXCAQUIXTLA, PUE',clave:'03082003',c_state_id:21)	
+    CMunicipality.create(nombre:'IXTACAMAXTITLÁN, PUE',clave:'03083009',c_state_id:21)	
+    CMunicipality.create(nombre:'IXTEPEC, PUE',clave:'03084009',c_state_id:21)	
+    CMunicipality.create(nombre:'IZÚCAR DE MATAMOROS, PUE',clave:'03085003',c_state_id:21)	
+    CMunicipality.create(nombre:'JALPAN, PUE',clave:'03086009',c_state_id:21)	
+    CMunicipality.create(nombre:'JOLALPAN, PUE',clave:'03087009',c_state_id:21)	
+    CMunicipality.create(nombre:'JONOTLA, PUE',clave:'03088003',c_state_id:21)	
+    CMunicipality.create(nombre:'JOPALA, PUE',clave:'03089009',c_state_id:21)	
+    CMunicipality.create(nombre:'JUAN C BONILLA, PUE',clave:'03090009',c_state_id:21)	
+    CMunicipality.create(nombre:'CUANALA, PUE',clave:'03090102',c_state_id:21)	
+    CMunicipality.create(nombre:'JUAN GALINDO, PUE',clave:'03091009',c_state_id:21)	
+    CMunicipality.create(nombre:'NUEVO NECAXA, PUE',clave:'03091206',c_state_id:21)	
+    CMunicipality.create(nombre:'JUAN N MÉNDEZ, PUE',clave:'03092003',c_state_id:21)	
+    CMunicipality.create(nombre:'ATENAYUCA, PUE',clave:'03092051',c_state_id:21)	
+    CMunicipality.create(nombre:'LAFRAGUA, PUE',clave:'03093009',c_state_id:21)	
+    CMunicipality.create(nombre:'SALTILLO, PUE',clave:'03093258',c_state_id:21)	
+    CMunicipality.create(nombre:'LIBRES, PUE',clave:'03094009',c_state_id:21)	
+    CMunicipality.create(nombre:'MAGDALENA TLATLAUQUITEPEC LA, PUE',clave:'03095003',c_state_id:21)	
+    CMunicipality.create(nombre:'MAZAPILTEPEC DE JUÁREZ, PUE',clave:'03096009',c_state_id:21)	
+    CMunicipality.create(nombre:'MIXTLA, PUE',clave:'03097009',c_state_id:21)	
+    CMunicipality.create(nombre:'MOLCAXAC, PUE',clave:'03098003',c_state_id:21)	
+    CMunicipality.create(nombre:'MORELOS CA ADA, PUE',clave:'03099009',c_state_id:21)	
+    CMunicipality.create(nombre:'NAUPAN, PUE',clave:'03101009',c_state_id:21)	
+    CMunicipality.create(nombre:'NAUZONTLA, PUE',clave:'03102009',c_state_id:21)	
+    CMunicipality.create(nombre:'NEALTICAN, PUE',clave:'03103003',c_state_id:21)	
+    CMunicipality.create(nombre:'NICOLÁS BRAVO, PUE',clave:'03104009',c_state_id:21)	
+    CMunicipality.create(nombre:'NOPALUCAN, PUE',clave:'03105009',c_state_id:21)	
+    CMunicipality.create(nombre:'MANUEL AVILA CAMACHO, PUE',clave:'03105159',c_state_id:21)	
+    CMunicipality.create(nombre:'NOPALUCAN DE LA GRANJA, PUE',clave:'03105202',c_state_id:21)	
+    CMunicipality.create(nombre:'OCOTEPEC, PUE',clave:'03106003',c_state_id:21)	
+    CMunicipality.create(nombre:'OCOYUCAN, PUE',clave:'03107009',c_state_id:21)	
+    CMunicipality.create(nombre:'OLINTLA, PUE',clave:'03108009',c_state_id:21)	
+    CMunicipality.create(nombre:'ORIENTAL, PUE',clave:'03109003',c_state_id:21)	
+    CMunicipality.create(nombre:'PAHUATLÁN, PUE',clave:'03110003',c_state_id:21)	
+    CMunicipality.create(nombre:'PALMAR DE BRAVO, PUE',clave:'03111009',c_state_id:21)	
+    CMunicipality.create(nombre:'PANTEPEC, PUE',clave:'03112009',c_state_id:21)	
+    CMunicipality.create(nombre:'PETLALCINGO, PUE',clave:'03113003',c_state_id:21)	
+    CMunicipality.create(nombre:'PIAXTLA, PUE',clave:'03114009',c_state_id:21)	
+    CMunicipality.create(nombre:'PUEBLA MUNICIPIO DE, PUE',clave:'03115009',c_state_id:21)	
+    CMunicipality.create(nombre:'CHIPILO, PUE',clave:'03115056',c_state_id:21)	
+    CMunicipality.create(nombre:'PUEBLA LOCALIDAD DE, PUE',clave:'03115203',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN FELIPE HUEYOTLIPAN, PUE',clave:'03115276',c_state_id:21)	
+    CMunicipality.create(nombre:'TLATLAUQUI, PUE',clave:'03115306',c_state_id:21)	
+    CMunicipality.create(nombre:'QUECHOLAC, PUE',clave:'03116003',c_state_id:21)	
+    CMunicipality.create(nombre:'QUIMIXTLÁN, PUE',clave:'03117009',c_state_id:21)	
+    CMunicipality.create(nombre:'RAFAEL LARA GRAJALES, PUE',clave:'03118009',c_state_id:21)	
+    CMunicipality.create(nombre:'REYES DE JUÁREZ LOS, PUE',clave:'03119003',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN ANDRÉS CHOLULA, PUE',clave:'03120009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN ANTONIO CA ADA, PUE',clave:'03121006',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN BALTAZAR CAMPECHE, PUE',clave:'03121503',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN DIEGO LA MEZA TOCHIMILTZINGO, PUE',clave:'03122006',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN FELIPE TEOTLALCINGO, PUE',clave:'03123009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN FELIPE TEPATLÁN, PUE',clave:'03124006',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN GABRIEL CHILAC, PUE',clave:'03125006',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN GREGORIO ATZOMPA, PUE',clave:'03126009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO TECUANIPAN, PUE',clave:'03127006',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO XAYACATLÁN, PUE',clave:'03128006',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN JOSÉ CHIAPA, PUE',clave:'03129009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN JOSÉ MIAHUATLÁN, PUE',clave:'03130003',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN JUAN ATENCO, PUE',clave:'03131009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN JUAN ATZOMPA, PUE',clave:'03132009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN LORENZO, PUE',clave:'03132508',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN MARTÍN TEXMELUCAN, PUE',clave:'03133003',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN MARTÍN TOTOLTEPEC, PUE',clave:'03134009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN MATÍAS TLALANCALECA, PUE',clave:'03135009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN MIGUEL IXITLÁN, PUE',clave:'03136003',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN MIGUEL XOXTLA, PUE',clave:'03137009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN NICOLÁS DE BUENOS AIRES, PUE',clave:'03138009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN NICOLÁS DE LOS RANCHOS, PUE',clave:'03139003',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN PABLO ANICANO, PUE',clave:'03140003',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN PABLO AXOCHIMAUACÁN, PUE',clave:'03140501',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN PEDRO CHOLULA, PUE',clave:'03141009',c_state_id:21)	
+    CMunicipality.create(nombre:'CHOLULA DE RIVADAVIA, PUE',clave:'03141058',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN PEDRO YELOIXTLAHUACA, PUE',clave:'03142009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN SALVADOR EL SECO, PUE',clave:'03143003',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN SALVADOR EL VERDE, PUE',clave:'03144009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN SALVADOR HUIXCOLOTLA, PUE',clave:'03145009',c_state_id:21)	
+    CMunicipality.create(nombre:'SAN SEBASTIÁN TLACOTEPEC, PUE',clave:'03146003',c_state_id:21)	
+    CMunicipality.create(nombre:'SANTA CATARINA TLALTEMPAN, PUE',clave:'03147009',c_state_id:21)	
+    CMunicipality.create(nombre:'SANTA INÉS AHUATEMPAN, PUE',clave:'03148009',c_state_id:21)	
+    CMunicipality.create(nombre:'SANTA ISABEL CHOLULA, PUE',clave:'03149003',c_state_id:21)	
+    CMunicipality.create(nombre:'SANTIAGO MIAHUATLÁN, PUE',clave:'03150009',c_state_id:21)	
+    CMunicipality.create(nombre:'SANTO DOMINGO HUEHUETLÁN, PUE',clave:'03151006',c_state_id:21)	
+    CMunicipality.create(nombre:'SANTO TOMÁS HUEYOTLIPAN, PUE',clave:'03152006',c_state_id:21)	
+    CMunicipality.create(nombre:'SOLTEPEC, PUE',clave:'03153009',c_state_id:21)	
+    CMunicipality.create(nombre:'TECALI DE HERRERA, PUE',clave:'03154006',c_state_id:21)	
+    CMunicipality.create(nombre:'TECAMACHALCO, PUE',clave:'03155006',c_state_id:21)	
+    CMunicipality.create(nombre:'TECOMATLÁN, PUE',clave:'03156009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEHUACÁN, PUE',clave:'03157006',c_state_id:21)	
+    CMunicipality.create(nombre:'TEHUITZINGO, PUE',clave:'03158006',c_state_id:21)	
+    CMunicipality.create(nombre:'TENAMPULCO, PUE',clave:'03159009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEOPANTLÁN, PUE',clave:'03160003',c_state_id:21)	
+    CMunicipality.create(nombre:'TEOTLALCO, PUE',clave:'03161009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPANCO DE LÓPEZ, PUE',clave:'03162009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPANGO DE RODRÍGUEZ, PUE',clave:'03163003',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPATLAXCO DE HIDALGO, PUE',clave:'03164009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPEACA, PUE',clave:'03165009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPEMAXALCO, PUE',clave:'03167009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPEOJUMA, PUE',clave:'03168009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPETZINTLA, PUE',clave:'03169003',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPEXCO, PUE',clave:'03170003',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPEXI DE RODRÍGUEZ, PUE',clave:'03171009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPEYAHUALCO, PUE',clave:'03172009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEPEYAHUALCO DE CUAUHTÉMOC, PUE',clave:'03173003',c_state_id:21)	
+    CMunicipality.create(nombre:'TETELA DE OCAMPO, PUE',clave:'03174009',c_state_id:21)	
+    CMunicipality.create(nombre:'TETELES DE AVILA CASTILLO, PUE',clave:'03175009',c_state_id:21)	
+    CMunicipality.create(nombre:'TEZIUTLÁN, PUE',clave:'03176003',c_state_id:21)	
+    CMunicipality.create(nombre:'TIANGUISMANALCO, PUE',clave:'03177009',c_state_id:21)	
+    CMunicipality.create(nombre:'TILAPA, PUE',clave:'03178009',c_state_id:21)	
+    CMunicipality.create(nombre:'TLACOTEPEC DE BENITO JUÁREZ, PUE',clave:'03179003',c_state_id:21)	
+    CMunicipality.create(nombre:'TLACUILOTEPEC, PUE',clave:'03180009',c_state_id:21)	
+    CMunicipality.create(nombre:'TLACHICHUCA, PUE',clave:'03181006',c_state_id:21)	
+    CMunicipality.create(nombre:'TLAHUAPÁN, PUE',clave:'03182006',c_state_id:21)	
+    CMunicipality.create(nombre:'TLALTENANGO, PUE',clave:'03183009',c_state_id:21)	
+    CMunicipality.create(nombre:'TLANEPANTLA, PUE',clave:'03184006',c_state_id:21)	
+    CMunicipality.create(nombre:'TLAOLA, PUE',clave:'03185006',c_state_id:21)	
+    CMunicipality.create(nombre:'TLAPACOYA, PUE',clave:'03186009',c_state_id:21)	
+    CMunicipality.create(nombre:'TLAPANALÁ, PUE',clave:'03187006',c_state_id:21)	
+    CMunicipality.create(nombre:'TLATLAUQUITEPEC, PUE',clave:'03188006',c_state_id:21)	
+    CMunicipality.create(nombre:'TLAXCO, PUE',clave:'03189009',c_state_id:21)	
+    CMunicipality.create(nombre:'TOCHIMILCO, PUE',clave:'03190003',c_state_id:21)	
+    CMunicipality.create(nombre:'TOCHTEPEC, PUE',clave:'03191009',c_state_id:21)	
+    CMunicipality.create(nombre:'TOTOLTEPEC DE GUERRERO, PUE',clave:'03192009',c_state_id:21)	
+    CMunicipality.create(nombre:'TULCINGO, PUE',clave:'03193003',c_state_id:21)	
+    CMunicipality.create(nombre:'TUZAMAPÁN DE GALEANA, PUE',clave:'03194009',c_state_id:21)	
+    CMunicipality.create(nombre:'TZICATLACOYAN, PUE',clave:'03195009',c_state_id:21)	
+    CMunicipality.create(nombre:'VENUSTIANO CARRANZA MUNICIPIO DE, PUE',clave:'03196003',c_state_id:21)	
+    CMunicipality.create(nombre:'LÁZARO CÁRDENAZ, PUE',clave:'03196161',c_state_id:21)	
+    CMunicipality.create(nombre:'VENUSTIANO CARRANZA LOC DE, PUE',clave:'03196557',c_state_id:21)	
+    CMunicipality.create(nombre:'VICENTE GUERRERO, PUE',clave:'03197009',c_state_id:21)	
+    CMunicipality.create(nombre:'SANTA MARÍA DEL MONTE, PUE',clave:'03197259',c_state_id:21)	
+    CMunicipality.create(nombre:'XAYACATLÁN DE BRAVO, PUE',clave:'03198009',c_state_id:21)	
+    CMunicipality.create(nombre:'XICOTEPEC DE JUÁREZ, PUE',clave:'03199003',c_state_id:21)	
+    CMunicipality.create(nombre:'XICOTLÁN, PUE',clave:'03201009',c_state_id:21)	
+    CMunicipality.create(nombre:'XIUTETELCO, PUE',clave:'03202006',c_state_id:21)	
+    CMunicipality.create(nombre:'XOCHIAPULCO, PUE',clave:'03203006',c_state_id:21)	
+    CMunicipality.create(nombre:'CINCO DE MAYO, PUE',clave:'03203051',c_state_id:21)	
+    CMunicipality.create(nombre:'XOCHILTEPEC, PUE',clave:'03204009',c_state_id:21)	
+    CMunicipality.create(nombre:'XOCHITLÁN DE VICENTE SUÁREZ, PUE',clave:'03205006',c_state_id:21)	
+    CMunicipality.create(nombre:'XOCHITLÁN TODOS SANTOS, PUE',clave:'03206006',c_state_id:21)	
+    CMunicipality.create(nombre:'YAONÁHUAC, PUE',clave:'03207009',c_state_id:21)	
+    CMunicipality.create(nombre:'YEHUALTEPEC, PUE',clave:'03208006',c_state_id:21)	
+    CMunicipality.create(nombre:'ZACAPALA, PUE',clave:'03209006',c_state_id:21)	
+    CMunicipality.create(nombre:'ZACAPOAXTLA, PUE',clave:'03210009',c_state_id:21)	
+    CMunicipality.create(nombre:'ZACATLÁN, PUE',clave:'03211003',c_state_id:21)	
+    CMunicipality.create(nombre:'ZAPOTITLÁN, PUE',clave:'03212009',c_state_id:21)	
+    CMunicipality.create(nombre:'ZAPOTITLAN DE MÉNDEZ, PUE',clave:'03213009',c_state_id:21)	
+    CMunicipality.create(nombre:'ZARAGOZA, PUE',clave:'03214003',c_state_id:21)	
+    CMunicipality.create(nombre:'ZAUTLA, PUE',clave:'03215009',c_state_id:21)	
+    CMunicipality.create(nombre:'ZIHUATEUTLA, PUE',clave:'03216009',c_state_id:21)	
+    CMunicipality.create(nombre:'ZINACATEPEC, PUE',clave:'03217003',c_state_id:21)	
+    CMunicipality.create(nombre:'ZONGOZOTLA, PUE',clave:'03218009',c_state_id:21)	
+    CMunicipality.create(nombre:'ZOQUIAPÁN, PUE',clave:'03219009',c_state_id:21)	
+    CMunicipality.create(nombre:'ZOQUITLÁN, PUE',clave:'03220009',c_state_id:21)	
+    CMunicipality.create(nombre:'PUEBLA (OTROS)',clave:'03299006',c_state_id:21)	
+    CMunicipality.create(nombre:'AMEALCO DE BONFIL, QRO',clave:'03303009',c_state_id:22)	
+    CMunicipality.create(nombre:'AMOLES PINAL DE, QRO',clave:'03306009',c_state_id:22)	
+    CMunicipality.create(nombre:'ARROYO SECO, QRO',clave:'03309009',c_state_id:22)	
+    CMunicipality.create(nombre:'CADEREYTA DE MONTES, QRO',clave:'03312009',c_state_id:22)	
+    CMunicipality.create(nombre:'COLÓN, QRO',clave:'03315009',c_state_id:22)	
+    CMunicipality.create(nombre:'CORREGIDORA, QRO',clave:'03318009',c_state_id:22)	
+    CMunicipality.create(nombre:'VILLA DEL PUEBLITO, QRO',clave:'03318355',c_state_id:22)	
+    CMunicipality.create(nombre:'EZEQUIEL MONTES, QRO',clave:'03321009',c_state_id:22)	
+    CMunicipality.create(nombre:'HUIMILPAN, QRO',clave:'03324009',c_state_id:22)	
+    CMunicipality.create(nombre:'JALPAN DE SERRA, QRO',clave:'03327009',c_state_id:22)	
+    CMunicipality.create(nombre:'LANDA DE MATAMOROS, QRO',clave:'03330009',c_state_id:22)	
+    CMunicipality.create(nombre:'MARQUÉS EL, QRO',clave:'03333009',c_state_id:22)	
+    CMunicipality.create(nombre:'LA CA ADA, QRO',clave:'03333159',c_state_id:22)	
+    CMunicipality.create(nombre:'PEDRO ESCOBEDO, QRO',clave:'03336009',c_state_id:22)	
+    CMunicipality.create(nombre:'PE AMILLER, QRO',clave:'03339009',c_state_id:22)	
+    CMunicipality.create(nombre:'QUERÉTARO MUNICIPIO DE, QRO',clave:'03342009',c_state_id:22)	
+    CMunicipality.create(nombre:'QUERÉTARO LOCALIDAD DE, QRO',clave:'03342535',c_state_id:22)	
+    CMunicipality.create(nombre:'SANTA ROSA DE JAUREGUI, QRO',clave:'03342745',c_state_id:22)	
+    CMunicipality.create(nombre:'SAN JOAQUÍN, QRO',clave:'03345009',c_state_id:22)	
+    CMunicipality.create(nombre:'SAN JUAN DEL RÍO, QRO',clave:'03351009',c_state_id:22)	
+    CMunicipality.create(nombre:'TEQUISQUIAPÁN, QRO',clave:'03354009',c_state_id:22)	
+    CMunicipality.create(nombre:'TOLIMÁN, QRO',clave:'03357009',c_state_id:22)	
+    CMunicipality.create(nombre:'QUERETARO (OTROS)',clave:'03399009',c_state_id:22)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ MUNICIPIO DE, Q ROO',clave:'03403003',c_state_id:23)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ LOCALIDAD DE, Q ROO',clave:'03403089',c_state_id:23)	
+    CMunicipality.create(nombre:'LEONA VICARIO, Q ROO',clave:'03403293',c_state_id:23)	
+    CMunicipality.create(nombre:'PUERTO MORELOS, Q ROO',clave:'03403549',c_state_id:23)	
+    CMunicipality.create(nombre:'COZUMEL MUNICIPIO DE, Q ROO',clave:'03405009',c_state_id:23)	
+    CMunicipality.create(nombre:'COZUMEL LOCALIDAD DE, Q ROO',clave:'03405219',c_state_id:23)	
+    CMunicipality.create(nombre:'PLAYA DEL CARMEN, Q ROO',clave:'03405699',c_state_id:23)	
+    CMunicipality.create(nombre:'FELIPE CARRILLO PUERTO MUNICIPIO DE, Q ROO',clave:'03410003',c_state_id:23)	
+    CMunicipality.create(nombre:'FELIPE CARRILLO PUERTO LOCALIDAD DE, Q ROO',clave:'03410054',c_state_id:23)	
+    CMunicipality.create(nombre:'JOSÉ MARÍA MORELOS, Q ROO',clave:'03410201',c_state_id:23)	
+    CMunicipality.create(nombre:'ISLA MUJERES MUNICIPIO DE, Q ROO',clave:'03415009',c_state_id:23)	
+    CMunicipality.create(nombre:'CAN CUN, Q ROO',clave:'03415059',c_state_id:23)	
+    CMunicipality.create(nombre:'ISLA MUJERES LOCALIDAD DE, Q ROO',clave:'03415101',c_state_id:23)	
+    CMunicipality.create(nombre:'PUERTO JUÁREZ, Q ROO',clave:'03415156',c_state_id:23)	
+    CMunicipality.create(nombre:'JOSÉ MARÍA MORELOS MUNICIPIO DE, Q ROO',clave:'03417009',c_state_id:23)	
+    CMunicipality.create(nombre:'DZIUCHE, Q ROO',clave:'03417132',c_state_id:23)	
+    CMunicipality.create(nombre:'JOSÉ MARÍA MORELOS LOCALIDAD DE, Q ROO',clave:'03417265',c_state_id:23)	
+    CMunicipality.create(nombre:'LÁZARO CÁRDENAS MUNICIPIO DE, Q ROO',clave:'03418009',c_state_id:23)	
+    CMunicipality.create(nombre:'KANTUNILKIN, Q ROO',clave:'03418323',c_state_id:23)	
+    CMunicipality.create(nombre:'LÁZARO CÁRDENAS LOCALIDAD DE, Q ROO',clave:'03418639',c_state_id:23)	
+    CMunicipality.create(nombre:'OTHÓN P BLANCO, Q ROO',clave:'03420009',c_state_id:23)	
+    CMunicipality.create(nombre:'CHETUMAL, Q ROO',clave:'03420052',c_state_id:23)	
+    CMunicipality.create(nombre:'SUBTENIENTE LÓPEZ, Q ROO',clave:'03420765',c_state_id:23)	
+    CMunicipality.create(nombre:'SOLIDARIDAD, Q ROO',clave:'03422006',c_state_id:23)	
+    CMunicipality.create(nombre:'PLAYA DEL CARMEN, Q ROO',clave:'03422466',c_state_id:23)	
+    CMunicipality.create(nombre:'TULUM',clave:'03422573',c_state_id:23)	
+    CMunicipality.create(nombre:'QUINTANA ROO (OTROS)',clave:'03499003',c_state_id:23)	
+    CMunicipality.create(nombre:'AHUALULCO, SLP',clave:'03501009',c_state_id:24)	
+    CMunicipality.create(nombre:'ALAQUINES, SLP',clave:'03502006',c_state_id:24)	
+    CMunicipality.create(nombre:'AQUISMÓN, SLP',clave:'03503006',c_state_id:24)	
+    CMunicipality.create(nombre:'ARMADILLO DE LOS INFANTE, SLP',clave:'03504009',c_state_id:24)	
+    CMunicipality.create(nombre:'CÁRDENAS, SLP',clave:'03505006',c_state_id:24)	
+    CMunicipality.create(nombre:'CATORCE, SLP',clave:'03506006',c_state_id:24)	
+    CMunicipality.create(nombre:'CEDRAL, SLP',clave:'03507009',c_state_id:24)	
+    CMunicipality.create(nombre:'CERRITOS, SLP',clave:'03508006',c_state_id:24)	
+    CMunicipality.create(nombre:'CERRO DE SAN PEDRO, SLP',clave:'03509006',c_state_id:24)	
+    CMunicipality.create(nombre:'CIUDAD DEL MAÍZ MUNICIPIO DE, SLP',clave:'03510009',c_state_id:24)	
+    CMunicipality.create(nombre:'CIUDAD DEL MAÍZ LOCALIDAD DE, SLP',clave:'03510055',c_state_id:24)	
+    CMunicipality.create(nombre:'EL NARANJO DE CARLOS SARABIA, SLP',clave:'03510202',c_state_id:24)	
+    CMunicipality.create(nombre:'CIUDAD FERNÁNDEZ MUNICIPIO DE, SLP',clave:'03511003',c_state_id:24)	
+    CMunicipality.create(nombre:'CIUDAD FERNÁNDEZ LOCALIDAD DE, SLP',clave:'03511113',c_state_id:24)	
+    CMunicipality.create(nombre:'REFUGIO, SLP',clave:'03511473',c_state_id:24)	
+    CMunicipality.create(nombre:'TANCANHUITZ, SLP',clave:'03512009',c_state_id:24)	
+    CMunicipality.create(nombre:'GENERAL PEDRO ANTONIO SANTOS, SLP',clave:'03512051',c_state_id:24)	
+    CMunicipality.create(nombre:'CIUDAD VALLES, SLP',clave:'03513009',c_state_id:24)	
+    CMunicipality.create(nombre:'COXCATLÁN, SLP',clave:'03514003',c_state_id:24)	
+    CMunicipality.create(nombre:'CHARCAS, SLP',clave:'03515009',c_state_id:24)	
+    CMunicipality.create(nombre:'EBANO, SLP',clave:'03516009',c_state_id:24)	
+    CMunicipality.create(nombre:'GUADALCÁZAR, SLP',clave:'03517003',c_state_id:24)	
+    CMunicipality.create(nombre:'HUEHUETLÁN, SLP',clave:'03518009',c_state_id:24)	
+    CMunicipality.create(nombre:'LAGUNILLAS, SLP',clave:'03519009',c_state_id:24)	
+    CMunicipality.create(nombre:'MATEHUALA, SLP',clave:'03520009',c_state_id:24)	
+    CMunicipality.create(nombre:'MEXQUITIC DE CARMONA, SLP',clave:'03521003',c_state_id:24)	
+    CMunicipality.create(nombre:'MOCTEZUMA, SLP',clave:'03522009',c_state_id:24)	
+    CMunicipality.create(nombre:'RAYÓN, SLP',clave:'03523009',c_state_id:24)	
+    CMunicipality.create(nombre:'RÍOVERDE, SLP',clave:'03524003',c_state_id:24)	
+    CMunicipality.create(nombre:'SALINAS, SLP',clave:'03525009',c_state_id:24)	
+    CMunicipality.create(nombre:'SALINAS DE HIDALGO, SLP',clave:'03525258',c_state_id:24)	
+    CMunicipality.create(nombre:'SAN ANTONIO, SLP',clave:'03526009',c_state_id:24)	
+    CMunicipality.create(nombre:'SAN CIRO DE ACOSTA, SLP',clave:'03527003',c_state_id:24)	
+    CMunicipality.create(nombre:'PEDRO MONTOYA, SLP',clave:'03527201',c_state_id:24)	
+    CMunicipality.create(nombre:'SAN LUIS POTOSÍ, SLP',clave:'03528009',c_state_id:24)	
+    CMunicipality.create(nombre:'SAN MARTÍN CHALCHICUAUTLA, SLP',clave:'03529009',c_state_id:24)	
+    CMunicipality.create(nombre:'SAN NICOLÁS TOLENTINO, SLP',clave:'03530006',c_state_id:24)	
+    CMunicipality.create(nombre:'SANTA CATARINA, SLP',clave:'03531009',c_state_id:24)	
+    CMunicipality.create(nombre:'SANTA MARÍA DEL RÍO, SLP',clave:'03532006',c_state_id:24)	
+    CMunicipality.create(nombre:'SANTO DOMINGO, SLP',clave:'03533006',c_state_id:24)	
+    CMunicipality.create(nombre:'SAN VICENTE TANCUAYALAB, SLP',clave:'03534009',c_state_id:24)	
+    CMunicipality.create(nombre:'SOLEDAD DE GRACIANO SÁNCHEZ (SOLEDAD DIEZ GTZ) SLP',clave:'03535006',c_state_id:24)	
+    CMunicipality.create(nombre:'TAMASOPO, SLP',clave:'03536006',c_state_id:24)	
+    CMunicipality.create(nombre:'TAMAZUNCHALE MUNICIPIO DE, SLP',clave:'03537009',c_state_id:24)	
+    CMunicipality.create(nombre:'MATLAPA, SLP',clave:'03537159',c_state_id:24)	
+    CMunicipality.create(nombre:'TAMAZUNCHALE LOCALIDAD DE, SLP',clave:'03537309',c_state_id:24)	
+    CMunicipality.create(nombre:'TAMPACÁN, SLP',clave:'03538006',c_state_id:24)	
+    CMunicipality.create(nombre:'TAMPAMOLÓN CORONA, SLP',clave:'03539006',c_state_id:24)	
+    CMunicipality.create(nombre:'TAMUÍN, SLP',clave:'03540009',c_state_id:24)	
+    CMunicipality.create(nombre:'TANGAMANGA, SLP',clave:'03540502',c_state_id:24)	
+    CMunicipality.create(nombre:'TANLAJÁS, SLP',clave:'03541003',c_state_id:24)	
+    CMunicipality.create(nombre:'TANQUIÁN DE ESCOBEDO, SLP',clave:'03542009',c_state_id:24)	
+    CMunicipality.create(nombre:'TIERRA NUEVA, SLP',clave:'03543009',c_state_id:24)	
+    CMunicipality.create(nombre:'VANEGAS, SLP',clave:'03544003',c_state_id:24)	
+    CMunicipality.create(nombre:'VENADO, SLP',clave:'03545009',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA DE ARRIAGA, SLP',clave:'03546009',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA DE GUADALUPE, SLP',clave:'03547003',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA DE LA PAZ, SLP',clave:'03548009',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA DE RAMOS, SLP',clave:'03549009',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA DE REYES, SLP',clave:'03550009',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA HIDALGO MUNICIPIO DE, SLP',clave:'03551003',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA DE ARISTA, SLP',clave:'03551207',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA HIDALGO LOCALIDAD DE, SLP',clave:'03551256',c_state_id:24)	
+    CMunicipality.create(nombre:'VILLA JUÁREZ, SLP',clave:'03552009',c_state_id:24)	
+    CMunicipality.create(nombre:'AXTLA DE TERRAZAS, SLP',clave:'03553009',c_state_id:24)	
+    CMunicipality.create(nombre:'XILITLA, SLP',clave:'03554003',c_state_id:24)	
+    CMunicipality.create(nombre:'ZARAGOZA, SLP',clave:'03555009',c_state_id:24)	
+    CMunicipality.create(nombre:'SAN LUIS POTOSI (OTROS)',clave:'03599006',c_state_id:24)	
+    CMunicipality.create(nombre:'AHOME MUNICIPIO DE, SIN',clave:'03601009',c_state_id:25)	
+    CMunicipality.create(nombre:'AHOME LOCALIDAD DE, SIN',clave:'03601056',c_state_id:25)	
+    CMunicipality.create(nombre:'ESTACIÓN NARANJO, SIN',clave:'03601104',c_state_id:25)	
+    CMunicipality.create(nombre:'GUSTAVO DÍAZ ORDAZ, SIN',clave:'03601156',c_state_id:25)	
+    CMunicipality.create(nombre:'HIGUERA DE ZARAGOZA, SIN',clave:'03601203',c_state_id:25)	
+    CMunicipality.create(nombre:'JUAN JOSÉ RÍOS, SIN',clave:'03601251',c_state_id:25)	
+    CMunicipality.create(nombre:'LOS MOCHIS, SIN',clave:'03601359',c_state_id:25)	
+    CMunicipality.create(nombre:'SAN MIGUEL ZAPOTILÁN, SIN',clave:'03601506',c_state_id:25)	
+    CMunicipality.create(nombre:'SINALOA DE LEYVA, SIN',clave:'03601653',c_state_id:25)	
+    CMunicipality.create(nombre:'TOPOLOBAMPO, SIN',clave:'03601759',c_state_id:25)	
+    CMunicipality.create(nombre:'ANGOSTURA MUNICIPIO DE, SIN',clave:'03604009',c_state_id:25)	
+    CMunicipality.create(nombre:'ANGOSTURA LOCALIDAD DE, SIN',clave:'03604059',c_state_id:25)	
+    CMunicipality.create(nombre:'LA REFORMA, SIN',clave:'03604156',c_state_id:25)	
+    CMunicipality.create(nombre:'BADIRAGUATO, SIN',clave:'03607009',c_state_id:25)	
+    CMunicipality.create(nombre:'CONCORDIA, SIN',clave:'03610006',c_state_id:25)	
+    CMunicipality.create(nombre:'COSALÁ, SIN',clave:'03613006',c_state_id:25)	
+    CMunicipality.create(nombre:'CULIACÁN MUNICIPIO DE, SIN',clave:'03616006',c_state_id:25)	
+    CMunicipality.create(nombre:'AGUARUTO, SIN',clave:'03616033',c_state_id:25)	
+    CMunicipality.create(nombre:'ROSALES, SIN',clave:'03616044',c_state_id:25)	
+    CMunicipality.create(nombre:'DORADO EL, SIN',clave:'03616053',c_state_id:25)	
+    CMunicipality.create(nombre:'COSTARICA, SIN',clave:'03616101',c_state_id:25)	
+    CMunicipality.create(nombre:'CULIACÁN LOCALIDAD DE, SIN',clave:'03616176',c_state_id:25)	
+    CMunicipality.create(nombre:'NAVOLATO, SIN',clave:'03616209',c_state_id:25)	
+    CMunicipality.create(nombre:'QUILA, SIN',clave:'03616257',c_state_id:25)	
+    CMunicipality.create(nombre:'VILLA ÁNGEL FLORES, SIN',clave:'03616303',c_state_id:25)	
+    CMunicipality.create(nombre:'CHOIX, SIN',clave:'03619006',c_state_id:25)	
+    CMunicipality.create(nombre:'ELOTA MUNICIPIO DE, SIN',clave:'03622003',c_state_id:25)	
+    CMunicipality.create(nombre:'ELOTA LOCALIDAD DE, SIN',clave:'03622059',c_state_id:25)	
+    CMunicipality.create(nombre:'LA CRUZ, SIN',clave:'03622159',c_state_id:25)	
+    CMunicipality.create(nombre:'ESCUINAPA MUNICIPIO DE, SIN',clave:'03625003',c_state_id:25)	
+    CMunicipality.create(nombre:'ESCUINAPA LOCALIDAD DE, SIN',clave:'03625053',c_state_id:25)	
+    CMunicipality.create(nombre:'LA CONCHA, SIN',clave:'03625119',c_state_id:25)	
+    CMunicipality.create(nombre:'TEACAPÁN, SIN',clave:'03625209',c_state_id:25)	
+    CMunicipality.create(nombre:'EL FUERTE MUNICIPIO DE, SIN',clave:'03628003',c_state_id:25)	
+    CMunicipality.create(nombre:'FUERTE LOCALIDAD DE EL, SIN',clave:'03628056',c_state_id:25)	
+    CMunicipality.create(nombre:'SAN BLAS, SIN',clave:'03628159',c_state_id:25)	
+    CMunicipality.create(nombre:'GUASAVE MUNICIPIO DE, SIN',clave:'03631009',c_state_id:25)	
+    CMunicipality.create(nombre:'BURRION, SIN',clave:'03631036',c_state_id:25)	
+    CMunicipality.create(nombre:'GUASAVE LOCALIDAD DE, SIN',clave:'03631059',c_state_id:25)	
+    CMunicipality.create(nombre:'EST BAMOA, SIN',clave:'03631101',c_state_id:25)	
+    CMunicipality.create(nombre:'LEYVA SOLANO GABRIEL, SIN',clave:'03631257',c_state_id:25)	
+    CMunicipality.create(nombre:'MAZATLÁN MUNICIPIO DE, SIN',clave:'03634009',c_state_id:25)	
+    CMunicipality.create(nombre:'MAZATLÁN LOCALIDAD DE, SIN',clave:'03634107',c_state_id:25)	
+    CMunicipality.create(nombre:'URIAS, SIN',clave:'03634137',c_state_id:25)	
+    CMunicipality.create(nombre:'VILLA UNIÓN, SIN',clave:'03634156',c_state_id:25)	
+    CMunicipality.create(nombre:'MOCORITO MUNICIPIO DE, SIN',clave:'03637009',c_state_id:25)	
+    CMunicipality.create(nombre:'CARRIZO EL, SIN',clave:'03637104',c_state_id:25)	
+    CMunicipality.create(nombre:'MOCORITO LOCALIDAD DE, SIN',clave:'03637156',c_state_id:25)	
+    CMunicipality.create(nombre:'PERICOS, SIN',clave:'03637203',c_state_id:25)	
+    CMunicipality.create(nombre:'ROSARIO MUNICIPIO DE, SIN',clave:'03640006',c_state_id:25)	
+    CMunicipality.create(nombre:'AGUA VERDE, SIN',clave:'03640059',c_state_id:25)	
+    CMunicipality.create(nombre:'ROSARIO LOCALIDAD DE, SIN',clave:'03640153',c_state_id:25)	
+    CMunicipality.create(nombre:'SALVADOR ALVARADO, SIN',clave:'03643006',c_state_id:25)	
+    CMunicipality.create(nombre:'GUAMÚCHIL, SIN',clave:'03643101',c_state_id:25)	
+    CMunicipality.create(nombre:'SAN IGNACIO, SIN',clave:'03646006',c_state_id:25)	
+    CMunicipality.create(nombre:'SINALOA MUNICIPIO DE, SIN',clave:'03649006',c_state_id:25)	
+    CMunicipality.create(nombre:'RUIZ CORTÍNEZ, SIN',clave:'03649153',c_state_id:25)	
+    CMunicipality.create(nombre:'SINALOA LOCALIDAD DE, SIN',clave:'03649206',c_state_id:25)	
+    CMunicipality.create(nombre:'SINALOA (OTROS)',clave:'03699009',c_state_id:25)	
+    CMunicipality.create(nombre:'ACONCHI, SON',clave:'03701009',c_state_id:26)	
+    CMunicipality.create(nombre:'AGUA PRIETA, SON',clave:'03702009',c_state_id:26)	
+    CMunicipality.create(nombre:'ALAMOS, SON',clave:'03703003',c_state_id:26)	
+    CMunicipality.create(nombre:'ALTAR, SON',clave:'03704009',c_state_id:26)	
+    CMunicipality.create(nombre:'ARIVECHI, SON',clave:'03705009',c_state_id:26)	
+    CMunicipality.create(nombre:'ARIZPE, SON',clave:'03706003',c_state_id:26)	
+    CMunicipality.create(nombre:'ATIL, SON',clave:'03707009',c_state_id:26)	
+    CMunicipality.create(nombre:'BACADÉHUACHI, SON',clave:'03708009',c_state_id:26)	
+    CMunicipality.create(nombre:'BACANORA, SON',clave:'03709003',c_state_id:26)	
+    CMunicipality.create(nombre:'BACERAC, SON',clave:'03710003',c_state_id:26)	
+    CMunicipality.create(nombre:'BACOACHI, SON',clave:'03711009',c_state_id:26)	
+    CMunicipality.create(nombre:'BÁCUM, SON',clave:'03712009',c_state_id:26)	
+    CMunicipality.create(nombre:'BANÁMICHI, SON',clave:'03713003',c_state_id:26)	
+    CMunicipality.create(nombre:'BAVIÁCORA, SON',clave:'03714009',c_state_id:26)	
+    CMunicipality.create(nombre:'BAVISPE, SON',clave:'03715009',c_state_id:26)	
+    CMunicipality.create(nombre:'BENJAMÍN HILL, SON',clave:'03716003',c_state_id:26)	
+    CMunicipality.create(nombre:'CABORCA, SON',clave:'03717009',c_state_id:26)	
+    CMunicipality.create(nombre:'CAJEME MUNICIPIO DE, SON',clave:'03718009',c_state_id:26)	
+    CMunicipality.create(nombre:'ESPERANZA, SON',clave:'03718056',c_state_id:26)	
+    CMunicipality.create(nombre:'CAJEME LOCALIDAD DE, SON',clave:'03718113',c_state_id:26)	
+    CMunicipality.create(nombre:'OBREGÓN CIUDAD, SON',clave:'03718203',c_state_id:26)	
+    CMunicipality.create(nombre:'YAQUI, SON',clave:'03718251',c_state_id:26)	
+    CMunicipality.create(nombre:'MARTE R GÓMEZ, SON',clave:'03718333',c_state_id:26)	
+    CMunicipality.create(nombre:'CANANEA, SON',clave:'03719003',c_state_id:26)	
+    CMunicipality.create(nombre:'CARBÓ, SON',clave:'03720009',c_state_id:26)	
+    CMunicipality.create(nombre:'COLORADA LA, SON',clave:'03721006',c_state_id:26)	
+    CMunicipality.create(nombre:'CUCURPE, SON',clave:'03722006',c_state_id:26)	
+    CMunicipality.create(nombre:'CUMPAS, SON',clave:'03723009',c_state_id:26)	
+    CMunicipality.create(nombre:'DIVISADEROS, SON',clave:'03724006',c_state_id:26)	
+    CMunicipality.create(nombre:'EMPALME, SON',clave:'03725006',c_state_id:26)	
+    CMunicipality.create(nombre:'ETCHOJOA MUNICIPIO DE, SON',clave:'03726009',c_state_id:26)	
+    CMunicipality.create(nombre:'BACOBAMPO, SON',clave:'03726052',c_state_id:26)	
+    CMunicipality.create(nombre:'ETCHOJOA LOCALIDAD DE, SON',clave:'03726102',c_state_id:26)	
+    CMunicipality.create(nombre:'BASCONCOBE SON, SON',clave:'03726159',c_state_id:26)	
+    CMunicipality.create(nombre:'VILLA JUÁREZ, SON',clave:'03726252',c_state_id:26)	
+    CMunicipality.create(nombre:'FRONTERAS MUNICIPIO DE, SON',clave:'03727006',c_state_id:26)	
+    CMunicipality.create(nombre:'ESQUEDA, SON',clave:'03727137',c_state_id:26)	
+    CMunicipality.create(nombre:'FRONTERAS LOCALIDAD DE, SON',clave:'03727219',c_state_id:26)	
+    CMunicipality.create(nombre:'GRANADOS, SON',clave:'03728006',c_state_id:26)	
+    CMunicipality.create(nombre:'GUAYMAS MUNICIPIO DE, SON',clave:'03729009',c_state_id:26)	
+    CMunicipality.create(nombre:'GUAYMAS LOCALIDAD DE, SON',clave:'03729055',c_state_id:26)	
+    CMunicipality.create(nombre:'POTAM, SON',clave:'03729178',c_state_id:26)	
+    CMunicipality.create(nombre:'SAN CARLOS, SON',clave:'03729202',c_state_id:26)	
+    CMunicipality.create(nombre:'SAN IGNACIO RÍO MUERTO, SON',clave:'03729238',c_state_id:26)	
+    CMunicipality.create(nombre:'VICAM, SON',clave:'03729258',c_state_id:26)	
+    CMunicipality.create(nombre:'HERMOSILLO MUNICIPIO DE, SON',clave:'03730003',c_state_id:26)	
+    CMunicipality.create(nombre:'BAHIA KINO, SON',clave:'03730059',c_state_id:26)	
+    CMunicipality.create(nombre:'HERMOSILLO LOCALIDAD DE SON, SON',clave:'03730107',c_state_id:26)	
+    CMunicipality.create(nombre:'MIGUEL ALEMÁN, SON',clave:'03730159',c_state_id:26)	
+    CMunicipality.create(nombre:'VILLA DE SERIS, SON',clave:'03730753',c_state_id:26)	
+    CMunicipality.create(nombre:'HUACHINERA, SON',clave:'03731009',c_state_id:26)	
+    CMunicipality.create(nombre:'HUÁSABAS, SON',clave:'03732009',c_state_id:26)	
+    CMunicipality.create(nombre:'HUATABAMPO, SON',clave:'03733003',c_state_id:26)	
+    CMunicipality.create(nombre:'HUÉPAC, SON',clave:'03734009',c_state_id:26)	
+    CMunicipality.create(nombre:'IMURIS, SON',clave:'03735009',c_state_id:26)	
+    CMunicipality.create(nombre:'MAGDALENA DE KINO, SON',clave:'03736003',c_state_id:26)	
+    CMunicipality.create(nombre:'MAZATÁN, SON',clave:'03737009',c_state_id:26)	
+    CMunicipality.create(nombre:'MOCTEZUMA, SON',clave:'03738009',c_state_id:26)	
+    CMunicipality.create(nombre:'NACO, SON',clave:'03739003',c_state_id:26)	
+    CMunicipality.create(nombre:'NÁCORI CHICO, SON',clave:'03740003',c_state_id:26)	
+    CMunicipality.create(nombre:'NACOZARI DE GARCÍA, SON',clave:'03741009',c_state_id:26)	
+    CMunicipality.create(nombre:'NAVOJOA, SON',clave:'03742009',c_state_id:26)	
+    CMunicipality.create(nombre:'NOGALES, SON',clave:'03743003',c_state_id:26)	
+    CMunicipality.create(nombre:'ONAVAS, SON',clave:'03744009',c_state_id:26)	
+    CMunicipality.create(nombre:'OPODEPE, SON',clave:'03745009',c_state_id:26)	
+    CMunicipality.create(nombre:'OQUITOA, SON',clave:'03746003',c_state_id:26)	
+    CMunicipality.create(nombre:'PITIQUITO, SON',clave:'03747009',c_state_id:26)	
+    CMunicipality.create(nombre:'PUERTO PE ASCO MUNICIPIO DE, SON',clave:'03748009',c_state_id:26)	
+    CMunicipality.create(nombre:'PUERTO PE ASCO LOCALIDAD DE, SON',clave:'03748156',c_state_id:26)	
+    CMunicipality.create(nombre:'SONOYTA, SON',clave:'03748206',c_state_id:26)	
+    CMunicipality.create(nombre:'QUIRIEGO, SON',clave:'03749003',c_state_id:26)	
+    CMunicipality.create(nombre:'RAYÓN, SON',clave:'03750009',c_state_id:26)	
+    CMunicipality.create(nombre:'ROSARIO, SON',clave:'03751006',c_state_id:26)	
+    CMunicipality.create(nombre:'SAHUARIPA, SON',clave:'03752006',c_state_id:26)	
+    CMunicipality.create(nombre:'SAN FELIPE DE JESÚS, SON',clave:'03753009',c_state_id:26)	
+    CMunicipality.create(nombre:'SAN JAVIER, SON',clave:'03754006',c_state_id:26)	
+    CMunicipality.create(nombre:'SAN LUIS RÍO COLORADO MUNICIPIO DE, SON',clave:'03755006',c_state_id:26)	
+    CMunicipality.create(nombre:'LUIS B SÁNCHEZ, SON',clave:'03755159',c_state_id:26)	
+    CMunicipality.create(nombre:'SAN LUIS RÍO COLORADO LOCALIDAD DE, SON',clave:'03755259',c_state_id:26)	
+    CMunicipality.create(nombre:'SAN MIGUEL DE HORCASITAS, SON',clave:'03756009',c_state_id:26)	
+    CMunicipality.create(nombre:'SAN PEDRO DE LA CUEVA, SON',clave:'03757006',c_state_id:26)	
+    CMunicipality.create(nombre:'SANTA ANA, SON',clave:'03758006',c_state_id:26)	
+    CMunicipality.create(nombre:'SANTA CRUZ, SON',clave:'03759009',c_state_id:26)	
+    CMunicipality.create(nombre:'SÁRIC, SON',clave:'03760003',c_state_id:26)	
+    CMunicipality.create(nombre:'SOYOPA, SON',clave:'03761009',c_state_id:26)	
+    CMunicipality.create(nombre:'SUAQUI GRANDE, SON',clave:'03762009',c_state_id:26)	
+    CMunicipality.create(nombre:'TEPACHE, SON',clave:'03763003',c_state_id:26)	
+    CMunicipality.create(nombre:'TRINCHERAS, SON',clave:'03764009',c_state_id:26)	
+    CMunicipality.create(nombre:'TUBUTAMA, SON',clave:'03765009',c_state_id:26)	
+    CMunicipality.create(nombre:'URES, SON',clave:'03766003',c_state_id:26)	
+    CMunicipality.create(nombre:'VILLA HIDALGO, SON',clave:'03767009',c_state_id:26)	
+    CMunicipality.create(nombre:'VILLA PESQUEIRA, SON',clave:'03768009',c_state_id:26)	
+    CMunicipality.create(nombre:'YÉCORA MUNICIPIO DE, SON',clave:'03769003',c_state_id:26)	
+    CMunicipality.create(nombre:'STA ANA, SON',clave:'03769209',c_state_id:26)	
+    CMunicipality.create(nombre:'YECORA LOCALIDAD DE, SON',clave:'03769309',c_state_id:26)	
+    CMunicipality.create(nombre:'GRAL. PLUTARCO ELÍAS CALLES, SON',clave:'03770003',c_state_id:26)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ, SON',clave:'03771009',c_state_id:26)	
+    CMunicipality.create(nombre:'SONORA (OTROS)',clave:'03799003',c_state_id:26)	
+    CMunicipality.create(nombre:'BALANCÁN, TAB',clave:'03805006',c_state_id:27)	
+    CMunicipality.create(nombre:'CÁRDENAS, TAB',clave:'03808006',c_state_id:27)	
+    CMunicipality.create(nombre:'CENTLA, TAB',clave:'03811003',c_state_id:27)	
+    CMunicipality.create(nombre:'FRONTERA, TAB',clave:'03811059',c_state_id:27)	
+    CMunicipality.create(nombre:'CENTRO, TAB',clave:'03814003',c_state_id:27)	
+    CMunicipality.create(nombre:'CIUDAD PEMEX, TAB',clave:'03814053',c_state_id:27)	
+    CMunicipality.create(nombre:'LUIS GIL PÉREZ, TAB',clave:'03814176',c_state_id:27)	
+    CMunicipality.create(nombre:'VILLA HERMOSA, TAB',clave:'03814309',c_state_id:27)	
+    CMunicipality.create(nombre:'COMALCALCO MUNICIPIO DE, TAB',clave:'03817003',c_state_id:27)	
+    CMunicipality.create(nombre:'COMALCALCO LOCALIDAD DE, TAB',clave:'03817101',c_state_id:27)	
+    CMunicipality.create(nombre:'SANCHEZ MAGALLANES, TAB',clave:'03817257',c_state_id:27)	
+    CMunicipality.create(nombre:'CUNDUACÁN, TAB',clave:'03820009',c_state_id:27)	
+    CMunicipality.create(nombre:'EMILIANO ZAPATA, TAB',clave:'03821003',c_state_id:27)	
+    CMunicipality.create(nombre:'HUIMANGUILLO MUNICIPIO DE, TAB',clave:'03824003',c_state_id:27)	
+    CMunicipality.create(nombre:'CHONTALPA, TAB',clave:'03824046',c_state_id:27)	
+    CMunicipality.create(nombre:'HUIMANGUILLO LOCALIDAD DE, TAB',clave:'03824109',c_state_id:27)	
+    CMunicipality.create(nombre:'LA VENTA, TAB',clave:'03824156',c_state_id:27)	
+    CMunicipality.create(nombre:'JALAPA, TAB',clave:'03827003',c_state_id:27)	
+    CMunicipality.create(nombre:'JALPA DE MÉNDEZ, TAB',clave:'03830006',c_state_id:27)	
+    CMunicipality.create(nombre:'JONUTA, TAB',clave:'03833006',c_state_id:27)	
+    CMunicipality.create(nombre:'MACUSPANA, TAB',clave:'03836006',c_state_id:27)	
+    CMunicipality.create(nombre:'MELCHOR OCAMPO, TAB',clave:'03837009',c_state_id:27)	
+    CMunicipality.create(nombre:'NACAJUCA, TAB',clave:'03839006',c_state_id:27)	
+    CMunicipality.create(nombre:'PARAÍSO MUNICIPIO DE, TAB',clave:'03842009',c_state_id:27)	
+    CMunicipality.create(nombre:'DOS BOCAS, TAB',clave:'03842153',c_state_id:27)	
+    CMunicipality.create(nombre:'PARAISO LOCALIDAD DE, TAB',clave:'03842327',c_state_id:27)	
+    CMunicipality.create(nombre:'TAMULTE, TAB',clave:'03843009',c_state_id:27)	
+    CMunicipality.create(nombre:'TACOTALPA, TAB',clave:'03845009',c_state_id:27)	
+    CMunicipality.create(nombre:'TEAPA, TAB',clave:'03848009',c_state_id:27)	
+    CMunicipality.create(nombre:'TENOSIQUE, TAB',clave:'03851003',c_state_id:27)	
+    CMunicipality.create(nombre:'TABASCO (OTROS)',clave:'03899006',c_state_id:27)	
+    CMunicipality.create(nombre:'ABASOLO, TAMPS',clave:'03901009',c_state_id:28)	
+    CMunicipality.create(nombre:'ALDAMA, TAMPS',clave:'03903009',c_state_id:28)	
+    CMunicipality.create(nombre:'ALTAMIRA, TAMPS',clave:'03905003',c_state_id:28)	
+    CMunicipality.create(nombre:'ANTIGUO MORELOS, TAMPS',clave:'03907009',c_state_id:28)	
+    CMunicipality.create(nombre:'BURGOS, TAMPS',clave:'03909009',c_state_id:28)	
+    CMunicipality.create(nombre:'BUSTAMANTE, TAMPS',clave:'03911006',c_state_id:28)	
+    CMunicipality.create(nombre:'CAMARGO, TAMPS',clave:'03913006',c_state_id:28)	
+    CMunicipality.create(nombre:'CASAS, TAMPS',clave:'03915009',c_state_id:28)	
+    CMunicipality.create(nombre:'CIUDAD MADERO, TAMPS',clave:'03917006',c_state_id:28)	
+    CMunicipality.create(nombre:'CRUILLAS, TAMPS',clave:'03919006',c_state_id:28)	
+    CMunicipality.create(nombre:'GÓMEZ FARÍAS, TAMPS',clave:'03921009',c_state_id:28)	
+    CMunicipality.create(nombre:'GONZÁLEZ MUNICIPIO DE, TAMPS',clave:'03923009',c_state_id:28)	
+    CMunicipality.create(nombre:'GONZÁLEZ VILLA LOCALIDAD DE, TAMPS',clave:'03923057',c_state_id:28)	
+    CMunicipality.create(nombre:'MANUEL ESTACIÓN, TAMPS',clave:'03923204',c_state_id:28)	
+    CMunicipality.create(nombre:'GÜÉMEZ, TAMPS',clave:'03925003',c_state_id:28)	
+    CMunicipality.create(nombre:'GUERRERO, TAMPS',clave:'03927009',c_state_id:28)	
+    CMunicipality.create(nombre:'GUSTAVO DÍAZ ORDAZ MUNICIPIO DE, TAMPS',clave:'03929009',c_state_id:28)	
+    CMunicipality.create(nombre:'GUSTAVO DÍAZ ORDAZ LOCALIDAD DE, TAMPS',clave:'03929103',c_state_id:28)	
+    CMunicipality.create(nombre:'VILLARREALES, TAMPS',clave:'03929303',c_state_id:28)	
+    CMunicipality.create(nombre:'HIDALGO, TAMPS',clave:'03931009',c_state_id:28)	
+    CMunicipality.create(nombre:'JAUMAVE, TAMPS',clave:'03933009',c_state_id:28)	
+    CMunicipality.create(nombre:'JIMENEZ, TAMPS',clave:'03935003',c_state_id:28)	
+    CMunicipality.create(nombre:'SANTANDER JIMENEZ, TAMPS',clave:'03935259',c_state_id:28)	
+    CMunicipality.create(nombre:'LLERA, TAMPS',clave:'03937009',c_state_id:28)	
+    CMunicipality.create(nombre:'MAINERO, TAMPS',clave:'03939009',c_state_id:28)	
+    CMunicipality.create(nombre:'MANTE MUNICIPIO DE, TAMPS',clave:'03941006',c_state_id:28)	
+    CMunicipality.create(nombre:'AZTECAS LOS, TAMPS',clave:'03941051',c_state_id:28)	
+    CMunicipality.create(nombre:'MANTE LOCALIDAD DE, TAMPS',clave:'03941309',c_state_id:28)	
+    CMunicipality.create(nombre:'MATAMOROS MUNICIPIO DE, TAMPS',clave:'03943006',c_state_id:28)	
+    CMunicipality.create(nombre:'MATAMOROS LOCALIDAD DE, TAMPS',clave:'03943153',c_state_id:28)	
+    CMunicipality.create(nombre:'RAMIREZ ESTACIÓN, TAMPS',clave:'03943203',c_state_id:28)	
+    CMunicipality.create(nombre:'MÉNDEZ, TAMPS',clave:'03945009',c_state_id:28)	
+    CMunicipality.create(nombre:'MIER, TAMPS',clave:'03947006',c_state_id:28)	
+    CMunicipality.create(nombre:'MIGUEL ALEMÁN, TAMPS',clave:'03949006',c_state_id:28)	
+    CMunicipality.create(nombre:'MIQUIHUANA, TAMPS',clave:'03951009',c_state_id:28)	
+    CMunicipality.create(nombre:'NUEVO LAREDO, TAMPS',clave:'03953009',c_state_id:28)	
+    CMunicipality.create(nombre:'NUEVO MORELOS, TAMPS',clave:'03955003',c_state_id:28)	
+    CMunicipality.create(nombre:'OCAMPO, TAMPS',clave:'03957009',c_state_id:28)	
+    CMunicipality.create(nombre:'PADILLA, TAMPS',clave:'03959009',c_state_id:28)	
+    CMunicipality.create(nombre:'PALMILLAS, TAMPS',clave:'03961009',c_state_id:28)	
+    CMunicipality.create(nombre:'REYNOSA, TAMPS',clave:'03963009',c_state_id:28)	
+    CMunicipality.create(nombre:'RÍO BRAVO MUNICIPIO DE, TAMPS',clave:'03965003',c_state_id:28)	
+    CMunicipality.create(nombre:'NVO PROGRESO, TAMPS',clave:'03965207',c_state_id:28)	
+    CMunicipality.create(nombre:'RÍO BRAVO LOCALIDAD DE, TAMPS',clave:'03965256',c_state_id:28)	
+    CMunicipality.create(nombre:'STA APOLONIA, TAMPS',clave:'03965306',c_state_id:28)	
+    CMunicipality.create(nombre:'SAN CARLOS, TAMPS',clave:'03967009',c_state_id:28)	
+    CMunicipality.create(nombre:'SAN FERNANDO MUNICIPIO DE, TAMPS',clave:'03969009',c_state_id:28)	
+    CMunicipality.create(nombre:'FRANCISCO GONZÁLEZ VILLARREAL, TAMPS',clave:'03969159',c_state_id:28)	
+    CMunicipality.create(nombre:'SAN FERNANDO LOCALIDAD DE, TAMPS',clave:'03969309',c_state_id:28)	
+    CMunicipality.create(nombre:'SAN NICOLÁS, TAMPS',clave:'03971006',c_state_id:28)	
+    CMunicipality.create(nombre:'SOTO LA MARINA, TAMPS',clave:'03973006',c_state_id:28)	
+    CMunicipality.create(nombre:'TAMPICO, TAMPS',clave:'03975009',c_state_id:28)	
+    CMunicipality.create(nombre:'TULA, TAMPS',clave:'03977006',c_state_id:28)	
+    CMunicipality.create(nombre:'VALLE HERMOSO MUNICIPIO DE, TAMPS',clave:'03979006',c_state_id:28)	
+    CMunicipality.create(nombre:'ANAHUAC, TAMPS',clave:'03979056',c_state_id:28)	
+    CMunicipality.create(nombre:'VALLE HERMOSO LOCALIDAD DE, TAMPS',clave:'03979303',c_state_id:28)	
+    CMunicipality.create(nombre:'VICTORIA, CIUDAD, TAMPS',clave:'03981009',c_state_id:28)	
+    CMunicipality.create(nombre:'VILLA CUAUHTÉMOC, TAMPS',clave:'03982003',c_state_id:28)	
+    CMunicipality.create(nombre:'VILLAGRÁN, TAMPS',clave:'03983009',c_state_id:28)	
+    CMunicipality.create(nombre:'XICOTÉNCATL, TAMPS',clave:'03985003',c_state_id:28)	
+    CMunicipality.create(nombre:'TAMAULIPAS (OTROS)',clave:'03999009',c_state_id:28)	
+    CMunicipality.create(nombre:'AMAXAC DE GUERRERO, TLAX',clave:'04003004',c_state_id:29)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ, TLAX',clave:'04004005',c_state_id:29)	
+    CMunicipality.create(nombre:'APETATITLÁN DE ANTONIO CARVAJAL, TLAX',clave:'04005009',c_state_id:29)	
+    CMunicipality.create(nombre:'EMILIANO ZAPATA, TLAX',clave:'04006007',c_state_id:29)	
+    CMunicipality.create(nombre:'ATLANGATEPEC, TLAX',clave:'04007008',c_state_id:29)	
+    CMunicipality.create(nombre:'ALTZAYANCA, TLAX',clave:'04009001',c_state_id:29)	
+    CMunicipality.create(nombre:'LA MAGDALENA TLALTELULCO, TLAX',clave:'04010005',c_state_id:29)	
+    CMunicipality.create(nombre:'BARRON Y ESCANDÓN (APIZACO), TLAX',clave:'04011006',c_state_id:29)	
+    CMunicipality.create(nombre:'APIZACO, TLAX',clave:'04011054',c_state_id:29)	
+    CMunicipality.create(nombre:'SAN DAMIÁN TEXOLOC, TLAX',clave:'04012001',c_state_id:29)	
+    CMunicipality.create(nombre:'CALPULALPAN, TLAX',clave:'04013008',c_state_id:29)	
+    CMunicipality.create(nombre:'SAN FRANCISCO TETLANOHCAN, TLAX',clave:'04014009',c_state_id:29)	
+    CMunicipality.create(nombre:'CARMEN TEQUEXQUITLA EL, TLAX',clave:'04015004',c_state_id:29)	
+    CMunicipality.create(nombre:'TEQUISQUITLA, TLAX',clave:'04015304',c_state_id:29)	
+    CMunicipality.create(nombre:'SAN JERÓNIMO ZACUALPAN, TLAX',clave:'04016002',c_state_id:29)	
+    CMunicipality.create(nombre:'CUAPIAXTLA, TLAX',clave:'04017003',c_state_id:29)	
+    CMunicipality.create(nombre:'SAN JOSÉ TEACALCO, TLAX',clave:'04018007',c_state_id:29)	
+    CMunicipality.create(nombre:'CUAXOMULCO, TLAX',clave:'04019005',c_state_id:29)	
+    CMunicipality.create(nombre:'SAN JUAN HUACTZINCO, TLAX',clave:'04020006',c_state_id:29)	
+    CMunicipality.create(nombre:'CHIAUTEMPAN, TLAX',clave:'04021007',c_state_id:29)	
+    CMunicipality.create(nombre:'SAN LORENZO AXOCOMANITLA, TLAX',clave:'04022002',c_state_id:29)	
+    CMunicipality.create(nombre:'MUÑOZ DE DOMINGO ARENAS, TLAX',clave:'04023009',c_state_id:29)	
+    CMunicipality.create(nombre:'MU OZ, TLAX',clave:'04023156',c_state_id:29)	
+    CMunicipality.create(nombre:'ESPA ITA, TLAX',clave:'04024001',c_state_id:29)	
+    CMunicipality.create(nombre:'HUAMANTLA, TLAX',clave:'04025005',c_state_id:29)	
+    CMunicipality.create(nombre:'SAN LUCAS TECOPILCO, TLAX',clave:'04026003',c_state_id:29)	
+    CMunicipality.create(nombre:'HUEYOTLIPAN, TLAX',clave:'04027004',c_state_id:29)	
+    CMunicipality.create(nombre:'SANTA ANA NOPALUCAN, TLAX',clave:'04028008',c_state_id:29)	
+    CMunicipality.create(nombre:'IXTACUIXTLA DE MARIANO MATAMOROS, TLAX',clave:'04029006',c_state_id:29)	
+    CMunicipality.create(nombre:'VILLA MARIANO MATAMOROS, TLAX',clave:'04029357',c_state_id:29)	
+    CMunicipality.create(nombre:'SANTA APOLONIA TEACALCO, TLAX',clave:'04030004',c_state_id:29)	
+    CMunicipality.create(nombre:'IXTENCO, TLAX',clave:'04031005',c_state_id:29)	
+    CMunicipality.create(nombre:'SANTA CATARINA AYOMETLA, TLAX',clave:'04032009',c_state_id:29)	
+    CMunicipality.create(nombre:'MAZATECOCHCO DE JOSÉ MARÍA MORELOS, TLAX',clave:'04033007',c_state_id:29)	
+    CMunicipality.create(nombre:'MAZATECOCHCO, TLAX',clave:'04033206',c_state_id:29)	
+    CMunicipality.create(nombre:'SANTA CRUZ QUILEHTLA, TLAX',clave:'04034008',c_state_id:29)	
+    CMunicipality.create(nombre:'CONTLA DE JUAN CUAMATZI, TLAX',clave:'04035003',c_state_id:29)	
+    CMunicipality.create(nombre:'CONTLA, TLAX',clave:'04035054',c_state_id:29)	
+    CMunicipality.create(nombre:'SANTA ISABEL XILOXOXTLA, TLAX',clave:'04036001',c_state_id:29)	
+    CMunicipality.create(nombre:'LARDIZABAL, TLAX',clave:'04037002',c_state_id:29)	
+    CMunicipality.create(nombre:'TEPETITLA, TLAX',clave:'04037308',c_state_id:29)	
+    CMunicipality.create(nombre:'LÁZARO CÁRDENAS, TLAX',clave:'04039004',c_state_id:29)	
+    CMunicipality.create(nombre:'SANCTÓRUM DE L. CÁRDENAS, TLAX',clave:'04039304',c_state_id:29)	
+    CMunicipality.create(nombre:'MARIANO ARISTA, TLAX',clave:'04041009',c_state_id:29)	
+    CMunicipality.create(nombre:'NANACAMILPA, TLAX',clave:'04041204',c_state_id:29)	
+    CMunicipality.create(nombre:'MIGUEL HIDALGO, TLAX',clave:'04043002',c_state_id:29)	
+    CMunicipality.create(nombre:'ACUAMANALA, TLAX',clave:'04043058',c_state_id:29)	
+    CMunicipality.create(nombre:'NATÍVITAS, TLAX',clave:'04045007',c_state_id:29)	
+    CMunicipality.create(nombre:'PANOTLA, TLAX',clave:'04047006',c_state_id:29)	
+    CMunicipality.create(nombre:'SAN PABLO DEL MONTE, TLAX',clave:'04049008',c_state_id:29)	
+    CMunicipality.create(nombre:'VILLA VICENTE GUERRERO, TLAX',clave:'04049355',c_state_id:29)	
+    CMunicipality.create(nombre:'SANTA CRUZ TLAXCALA, TLAX',clave:'04051001',c_state_id:29)	
+    CMunicipality.create(nombre:'TENANCINGO, TLAX',clave:'04053003',c_state_id:29)	
+    CMunicipality.create(nombre:'TEOLOCHOLCO, TLAX',clave:'04055008',c_state_id:29)	
+    CMunicipality.create(nombre:'TEPEYANCO, TLAX',clave:'04057007',c_state_id:29)	
+    CMunicipality.create(nombre:'TERRENATE, TLAX',clave:'04059009',c_state_id:29)	
+    CMunicipality.create(nombre:'TETLA DE LA SOLIDARIDAD, TLAX',clave:'04061008',c_state_id:29)	
+    CMunicipality.create(nombre:'TETLATLAHUCA, TLAX',clave:'04063001',c_state_id:29)	
+    CMunicipality.create(nombre:'TLAXCALA, TLAX',clave:'04065006',c_state_id:29)	
+    CMunicipality.create(nombre:'TLAXCO, TLAX',clave:'04067005',c_state_id:29)	
+    CMunicipality.create(nombre:'TOCATLÁN, TLAX',clave:'04069007',c_state_id:29)	
+    CMunicipality.create(nombre:'TOTOLAC, TLAX',clave:'04071003',c_state_id:29)	
+    CMunicipality.create(nombre:'ZITLALTEPEC DE TRINIDAD SÁNCHEZ SANTOS, TLAX',clave:'04073005',c_state_id:29)	
+    CMunicipality.create(nombre:'ZITLALTEPEC, TLAX',clave:'04073409',c_state_id:29)	
+    CMunicipality.create(nombre:'TZOMPANTEPEC, TLAX',clave:'04075001',c_state_id:29)	
+    CMunicipality.create(nombre:'XALOZTOC, TLAX',clave:'04077009',c_state_id:29)	
+    CMunicipality.create(nombre:'XALTOCAN, TLAX',clave:'04079002',c_state_id:29)	
+    CMunicipality.create(nombre:'PAPALOTLA DE XICOHTÉNCATL, TLAX',clave:'04081004',c_state_id:29)	
+    CMunicipality.create(nombre:'PANZACOLA, TLAX',clave:'04081203',c_state_id:29)	
+    CMunicipality.create(nombre:'PAPALOTLA, TLAX',clave:'04081259',c_state_id:29)	
+    CMunicipality.create(nombre:'XICOHTZINCO, TLAX',clave:'04083006',c_state_id:29)	
+    CMunicipality.create(nombre:'YAUHQUEMEHCAN, TLAX',clave:'04085002',c_state_id:29)	
+    CMunicipality.create(nombre:'ZACATELCO, TLAX',clave:'04087001',c_state_id:29)	
+    CMunicipality.create(nombre:'TLAXCALA (OTROS)',clave:'04099001',c_state_id:29)	
+    CMunicipality.create(nombre:'ACAJETE, VER',clave:'04101006',c_state_id:30)	
+    CMunicipality.create(nombre:'ACATLÁN, VER',clave:'04102007',c_state_id:30)	
+    CMunicipality.create(nombre:'ACAYUCAN, VER',clave:'04103002',c_state_id:30)	
+    CMunicipality.create(nombre:'ACTOPAN, VER',clave:'04104009',c_state_id:30)	
+    CMunicipality.create(nombre:'ACULA, VER',clave:'04105001',c_state_id:30)	
+    CMunicipality.create(nombre:'ACULTZINGO, VER',clave:'04106005',c_state_id:30)	
+    CMunicipality.create(nombre:'CAMARÓN DE TEJEDA, VER',clave:'04107003',c_state_id:30)	
+    CMunicipality.create(nombre:'ALPATLÁHUAC, VER',clave:'04108004',c_state_id:30)	
+    CMunicipality.create(nombre:'ALTO LUCERO DE GUTIÉRREZ BARRIOS MUNICIPIO DE, VER',clave:'04109008',c_state_id:30)	
+    CMunicipality.create(nombre:'ALTO LUCERO LOCALIDAD DE, VER',clave:'04109052',c_state_id:30)	
+    CMunicipality.create(nombre:'PALMA SOLA, VER',clave:'04109205',c_state_id:30)	
+    CMunicipality.create(nombre:'REFORMA, VER',clave:'04109305',c_state_id:30)	
+    CMunicipality.create(nombre:'ALTOTONGA, VER',clave:'04110006',c_state_id:30)	
+    CMunicipality.create(nombre:'ALVARADO, VER',clave:'04111004',c_state_id:30)	
+    CMunicipality.create(nombre:'AMATITLÁN, VER',clave:'04112005',c_state_id:30)	
+    CMunicipality.create(nombre:'NARANJOS AMATLÁN, VER',clave:'04113009',c_state_id:30)	
+    CMunicipality.create(nombre:'NARANJOS, VER',clave:'04113201',c_state_id:30)	
+    CMunicipality.create(nombre:'AMATLÁN DE LOS REYES, VER',clave:'04114007',c_state_id:30)	
+    CMunicipality.create(nombre:'ÁNGEL R CABADA MUNICIPIO DE, VER',clave:'04115008',c_state_id:30)	
+    CMunicipality.create(nombre:'ÁNGEL R CABADA LOCALIDAD DE, VER',clave:'04115079',c_state_id:30)	
+    CMunicipality.create(nombre:'LAGUNA VERDE, VER',clave:'04115319',c_state_id:30)	
+    CMunicipality.create(nombre:'ANTIGUA LA, VER',clave:'04116003',c_state_id:30)	
+    CMunicipality.create(nombre:'JOSÉ CARDEL, VER',clave:'04116103',c_state_id:30)	
+    CMunicipality.create(nombre:'APAZAPÁN, VER',clave:'04117001',c_state_id:30)	
+    CMunicipality.create(nombre:'AQUILA, VER',clave:'04118002',c_state_id:30)	
+    CMunicipality.create(nombre:'ASTACINGA, VER',clave:'04119006',c_state_id:30)	
+    CMunicipality.create(nombre:'ATLAHUILCO, VER',clave:'04120001',c_state_id:30)	
+    CMunicipality.create(nombre:'ATOYAC, VER',clave:'04121008',c_state_id:30)	
+    CMunicipality.create(nombre:'ATZACAN, VER',clave:'04122009',c_state_id:30)	
+    CMunicipality.create(nombre:'ATZALAN, VER',clave:'04123004',c_state_id:30)	
+    CMunicipality.create(nombre:'TLALTETELA MUNICIPIO DE, VER',clave:'04124002',c_state_id:30)	
+    CMunicipality.create(nombre:'TLATETELA, VER',clave:'04124308',c_state_id:30)	
+    CMunicipality.create(nombre:'AYAHUALULCO, VER',clave:'04125003',c_state_id:30)	
+    CMunicipality.create(nombre:'BANDERILLA, VER',clave:'04126007',c_state_id:30)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ, VER',clave:'04127005',c_state_id:30)	
+    CMunicipality.create(nombre:'BOCA DEL RÍO, VER',clave:'04128006',c_state_id:30)	
+    CMunicipality.create(nombre:'CALCAHUALCO, VER',clave:'04129001',c_state_id:30)	
+    CMunicipality.create(nombre:'CAMERINO Z MENDOZA, VER',clave:'04130002',c_state_id:30)	
+    CMunicipality.create(nombre:'CARRILLO PUERTO, VER',clave:'04131009',c_state_id:30)	
+    CMunicipality.create(nombre:'EL TAMARINDO, VER',clave:'04131106',c_state_id:30)	
+    CMunicipality.create(nombre:'CATEMACO, VER',clave:'04132001',c_state_id:30)	
+    CMunicipality.create(nombre:'CAZONES, VER',clave:'04133005',c_state_id:30)	
+    CMunicipality.create(nombre:'CERRO AZUL, VER',clave:'04134003',c_state_id:30)	
+    CMunicipality.create(nombre:'CITLALTÉPETL, VER',clave:'04135004',c_state_id:30)	
+    CMunicipality.create(nombre:'COACOATZINTLA, VER',clave:'04136008',c_state_id:30)	
+    CMunicipality.create(nombre:'COAHUITLÁN, VER',clave:'04137006',c_state_id:30)	
+    CMunicipality.create(nombre:'PROGRESO DE ZARAGOZA, VER',clave:'04137201',c_state_id:30)	
+    CMunicipality.create(nombre:'COATEPEC, VER',clave:'04138007',c_state_id:30)	
+    CMunicipality.create(nombre:'COATZACOALCOS MUNICIPIO DE, VER',clave:'04139002',c_state_id:30)	
+    CMunicipality.create(nombre:'AGUA DULCE, VER',clave:'04139058',c_state_id:30)	
+    CMunicipality.create(nombre:'ALLENDE, VER',clave:'04139082',c_state_id:30)	
+    CMunicipality.create(nombre:'COATZACOALCOS LOCALIDAD DE, VER',clave:'04139109',c_state_id:30)	
+    CMunicipality.create(nombre:'IGNACIO ZARAGOZA, VER',clave:'04139259',c_state_id:30)	
+    CMunicipality.create(nombre:'COATZINTLA, VER',clave:'04140009',c_state_id:30)	
+    CMunicipality.create(nombre:'COETZALA, VER',clave:'04141007',c_state_id:30)	
+    CMunicipality.create(nombre:'COLIPA, VER',clave:'04142008',c_state_id:30)	
+    CMunicipality.create(nombre:'COMAPA, VER',clave:'04143003',c_state_id:30)	
+    CMunicipality.create(nombre:'CÓRDOBA MUNICIPIO DE, VER',clave:'04144001',c_state_id:30)	
+    CMunicipality.create(nombre:'CÓRDOBA LOCALIDAD DE, VER',clave:'04144109',c_state_id:30)	
+    CMunicipality.create(nombre:'NARANJOS LOS, VER',clave:'04144301',c_state_id:30)	
+    CMunicipality.create(nombre:'COSAMALOAPÁN DE CARPIO MUNICIPIO DE, VER',clave:'04145002',c_state_id:30)	
+    CMunicipality.create(nombre:'CARLOS A CARRILLO, VER',clave:'04145079',c_state_id:30)	
+    CMunicipality.create(nombre:'CIUDAD ALEMÁN, VER',clave:'04145109',c_state_id:30)	
+    CMunicipality.create(nombre:'COSAMALOPAN LOCALIDAD DE, VER',clave:'04145125',c_state_id:30)	
+    CMunicipality.create(nombre:'TRES VALLES, VER',clave:'04145202',c_state_id:30)	
+    CMunicipality.create(nombre:'COSAUTLÁN DE CARVAJAL, VER',clave:'04146006',c_state_id:30)	
+    CMunicipality.create(nombre:'COSCOMATEPEC, VER',clave:'04147004',c_state_id:30)	
+    CMunicipality.create(nombre:'COSOLEACAQUE, VER',clave:'04148005',c_state_id:30)	
+    CMunicipality.create(nombre:'COTAXTLA, VER',clave:'04149009',c_state_id:30)	
+    CMunicipality.create(nombre:'COXQUIHUI, VER',clave:'04150004',c_state_id:30)	
+    CMunicipality.create(nombre:'COYUTLA, VER',clave:'04151002',c_state_id:30)	
+    CMunicipality.create(nombre:'CUICHAPA, VER',clave:'04152003',c_state_id:30)	
+    CMunicipality.create(nombre:'CUITLÁHUAC, VER',clave:'04153007',c_state_id:30)	
+    CMunicipality.create(nombre:'CHACALTIANGUIS, VER',clave:'04154005',c_state_id:30)	
+    CMunicipality.create(nombre:'CHALMA, VER',clave:'04155006',c_state_id:30)	
+    CMunicipality.create(nombre:'CHICONAMEL, VER',clave:'04156001',c_state_id:30)	
+    CMunicipality.create(nombre:'CHICONQUIACO, VER',clave:'04157008',c_state_id:30)	
+    CMunicipality.create(nombre:'CHICONTEPEC, VER',clave:'04158009',c_state_id:30)	
+    CMunicipality.create(nombre:'CHINAMECA, VER',clave:'04159004',c_state_id:30)	
+    CMunicipality.create(nombre:'CHINAMPA DE GOROSTIZA, VER',clave:'04160005',c_state_id:30)	
+    CMunicipality.create(nombre:'CHOAPAS LAS, VER',clave:'04161003',c_state_id:30)	
+    CMunicipality.create(nombre:'CHOCAMÁN, VER',clave:'04162004',c_state_id:30)	
+    CMunicipality.create(nombre:'CHONTLA, VER',clave:'04163008',c_state_id:30)	
+    CMunicipality.create(nombre:'CHUMATLÁN, VER',clave:'04164006',c_state_id:30)	
+    CMunicipality.create(nombre:'EMILIANO ZAPATA MUNICIPIO DE, VER',clave:'04165007',c_state_id:30)	
+    CMunicipality.create(nombre:'DOS RÍOS, VER',clave:'04165056',c_state_id:30)	
+    CMunicipality.create(nombre:'EMILIANO ZAPATA LOCALIDAD DE, VER',clave:'04165106',c_state_id:30)	
+    CMunicipality.create(nombre:'ESPINAL MUNICIPIO DE, VER',clave:'04166002',c_state_id:30)	
+    CMunicipality.create(nombre:'ENTABLADERO, VER',clave:'04166109',c_state_id:30)	
+    CMunicipality.create(nombre:'ESPINAL LOCALIDAD DE, VER',clave:'04166125',c_state_id:30)	
+    CMunicipality.create(nombre:'FILOMENO MATA, VER',clave:'04167009',c_state_id:30)	
+    CMunicipality.create(nombre:'FORTÍN, VER',clave:'04168001',c_state_id:30)	
+    CMunicipality.create(nombre:'GUTIÉRREZ ZAMORA, VER',clave:'04169005',c_state_id:30)	
+    CMunicipality.create(nombre:'HIDALGOTITLÁN, VER',clave:'04170003',c_state_id:30)	
+    CMunicipality.create(nombre:'HUATUSCO, VER',clave:'04171001',c_state_id:30)	
+    CMunicipality.create(nombre:'HUAYACOCOTLA, VER',clave:'04172002',c_state_id:30)	
+    CMunicipality.create(nombre:'HUEJUTLA TUXPAN, VER',clave:'04172505',c_state_id:30)	
+    CMunicipality.create(nombre:'HUEYAPÁN DE OCAMPO MUNICIPIO DE, VER',clave:'04173006',c_state_id:30)	
+    CMunicipality.create(nombre:'HUEYAPÁN DE OCAMPO LOCALIDAD DE, VER',clave:'04173153',c_state_id:30)	
+    CMunicipality.create(nombre:'JUAN DÍAZ COVARRUBIAS, VER',clave:'04173259',c_state_id:30)	
+    CMunicipality.create(nombre:'HUILOAPÁN, VER',clave:'04174004',c_state_id:30)	
+    CMunicipality.create(nombre:'IGNACIO DE LA LLAVE, VER',clave:'04175005',c_state_id:30)	
+    CMunicipality.create(nombre:'ILAMATLÁN, VER',clave:'04176009',c_state_id:30)	
+    CMunicipality.create(nombre:'ISLA, VER',clave:'04177007',c_state_id:30)	
+    CMunicipality.create(nombre:'IXCATEPEC, VER',clave:'04178008',c_state_id:30)	
+    CMunicipality.create(nombre:'IXHUACÁN DE LOS REYES, VER',clave:'04179003',c_state_id:30)	
+    CMunicipality.create(nombre:'IXHUATLÁN DEL CAFÉ, VER',clave:'04180007',c_state_id:30)	
+    CMunicipality.create(nombre:'IXHUATLANCILLO, VER',clave:'04181005',c_state_id:30)	
+    CMunicipality.create(nombre:'IXHUATLÁN DEL SURESTE, VER',clave:'04182006',c_state_id:30)	
+    CMunicipality.create(nombre:'NANCHITAL, VER',clave:'04182207',c_state_id:30)	
+    CMunicipality.create(nombre:'IXHUATLÁN DE MADERO, VER',clave:'04183001',c_state_id:30)	
+    CMunicipality.create(nombre:'IXMATLAHUACAN, VER',clave:'04184008',c_state_id:30)	
+    CMunicipality.create(nombre:'IXTACZOQUITLÁN, VER',clave:'04185009',c_state_id:30)	
+    CMunicipality.create(nombre:'JALACINGO, VER',clave:'04186004',c_state_id:30)	
+    CMunicipality.create(nombre:'XALAPA, VER',clave:'04187002',c_state_id:30)	
+    CMunicipality.create(nombre:'JALCOMULCO, VER',clave:'04188003',c_state_id:30)	
+    CMunicipality.create(nombre:'JÁLTIPAN, VER',clave:'04189007',c_state_id:30)	
+    CMunicipality.create(nombre:'JAMAPA, VER',clave:'04190008',c_state_id:30)	
+    CMunicipality.create(nombre:'JESÚS CARRANZA, VER',clave:'04191006',c_state_id:30)	
+    CMunicipality.create(nombre:'XICO, VER',clave:'04192007',c_state_id:30)	
+    CMunicipality.create(nombre:'JILOTEPEC, VER',clave:'04193002',c_state_id:30)	
+    CMunicipality.create(nombre:'JUAN RODRÍGUEZ CLARA, VER',clave:'04194009',c_state_id:30)	
+    CMunicipality.create(nombre:'JUCHIQUE DE FERRER, VER',clave:'04195001',c_state_id:30)	
+    CMunicipality.create(nombre:'LANDERO Y COSS, VER',clave:'04196005',c_state_id:30)	
+    CMunicipality.create(nombre:'LERDO DE TEJADA, VER',clave:'04197003',c_state_id:30)	
+    CMunicipality.create(nombre:'MAGDALENA, VER',clave:'04198004',c_state_id:30)	
+    CMunicipality.create(nombre:'MALTRATA, VER',clave:'04199008',c_state_id:30)	
+    CMunicipality.create(nombre:'MANLIO FABIO ALTAMIRANO, VER',clave:'04201001',c_state_id:30)	
+    CMunicipality.create(nombre:'MARIANO ESCOBEDO, VER',clave:'04202008',c_state_id:30)	
+    CMunicipality.create(nombre:'MARTÍNEZ DE LA TORRE MUNICIPIO DE, VER',clave:'04203009',c_state_id:30)	
+    CMunicipality.create(nombre:'AVILA CAMACHO, VER',clave:'04203051',c_state_id:30)	
+    CMunicipality.create(nombre:'MARTÍNEZ DE LA TORRE LOCALIDAD DE, VER',clave:'04203109',c_state_id:30)	
+    CMunicipality.create(nombre:'SAN RAFAEL, VER',clave:'04203156',c_state_id:30)	
+    CMunicipality.create(nombre:'MECATLÁN, VER',clave:'04204004',c_state_id:30)	
+    CMunicipality.create(nombre:'MECAYAPÁN, VER',clave:'04205002',c_state_id:30)	
+    CMunicipality.create(nombre:'MEDELLÍN, VER',clave:'04206003',c_state_id:30)	
+    CMunicipality.create(nombre:'MIAHUATLÁN, VER',clave:'04207007',c_state_id:30)	
+    CMunicipality.create(nombre:'MINAS LAS, VER',clave:'04208005',c_state_id:30)	
+    CMunicipality.create(nombre:'MINATITLÁN, VER',clave:'04209006',c_state_id:30)	
+    CMunicipality.create(nombre:'MISANTLA, VER',clave:'04210007',c_state_id:30)	
+    CMunicipality.create(nombre:'MIXTLA DE ALTAMIRANO, VER',clave:'04211002',c_state_id:30)	
+    CMunicipality.create(nombre:'MOLOACÁN, VER',clave:'04212009',c_state_id:30)	
+    CMunicipality.create(nombre:'NAOLINCO, VER',clave:'04213001',c_state_id:30)	
+    CMunicipality.create(nombre:'NARANJAL, VER',clave:'04214005',c_state_id:30)	
+    CMunicipality.create(nombre:'NAUTLA, VER',clave:'04215003',c_state_id:30)	
+    CMunicipality.create(nombre:'NOGALES, VER',clave:'04216004',c_state_id:30)	
+    CMunicipality.create(nombre:'OLUTA, VER',clave:'04217008',c_state_id:30)	
+    CMunicipality.create(nombre:'OMEALCA, VER',clave:'04218006',c_state_id:30)	
+    CMunicipality.create(nombre:'ORIZABA, VER',clave:'04219007',c_state_id:30)	
+    CMunicipality.create(nombre:'OTATITLÁN, VER',clave:'04220005',c_state_id:30)	
+    CMunicipality.create(nombre:'OTEAPÁN, VER',clave:'04221009',c_state_id:30)	
+    CMunicipality.create(nombre:'OZULUAMA DE MASCAREÑAS, VER',clave:'04222007',c_state_id:30)	
+    CMunicipality.create(nombre:'PAJAPÁN, VER',clave:'04223008',c_state_id:30)	
+    CMunicipality.create(nombre:'PÁNUCO, VER',clave:'04224003',c_state_id:30)	
+    CMunicipality.create(nombre:'PAPÁNTLA, VER',clave:'04225001',c_state_id:30)	
+    CMunicipality.create(nombre:'PASO DEL MACHO, VER',clave:'04226002',c_state_id:30)	
+    CMunicipality.create(nombre:'PASO DE OVEJAS, VER',clave:'04227006',c_state_id:30)	
+    CMunicipality.create(nombre:'PERLA LA, VER',clave:'04228004',c_state_id:30)	
+    CMunicipality.create(nombre:'PEROTE, VER',clave:'04229005',c_state_id:30)	
+    CMunicipality.create(nombre:'PLATÓN SÁNCHEZ, VER',clave:'04230009',c_state_id:30)	
+    CMunicipality.create(nombre:'PLAYA VICENTE MUNICIPIO DE, VER',clave:'04231004',c_state_id:30)	
+    CMunicipality.create(nombre:'ABASOLO DEL VALLE, VER',clave:'04231053',c_state_id:30)	
+    CMunicipality.create(nombre:'PLAYA VICENTE LOCALIDAD DE, VER',clave:'04231304',c_state_id:30)	
+    CMunicipality.create(nombre:'POTRERO VIEJO, VER',clave:'04231604',c_state_id:30)	
+    CMunicipality.create(nombre:'POZA RICA DE HIDALGO, VER',clave:'04232002',c_state_id:30)	
+    CMunicipality.create(nombre:'LAS VIGAS DE RAMÍREZ, VER',clave:'04233003',c_state_id:30)	
+    CMunicipality.create(nombre:'PUEBLO VIEJO, VER',clave:'04234007',c_state_id:30)	
+    CMunicipality.create(nombre:'VILLA CUAUHTÉMOC, VER',clave:'04234356',c_state_id:30)	
+    CMunicipality.create(nombre:'PUENTE NACIONAL, VER',clave:'04235005',c_state_id:30)	
+    CMunicipality.create(nombre:'RAFAEL DELGADO, VER',clave:'04236006',c_state_id:30)	
+    CMunicipality.create(nombre:'RAFAEL LUCIO, VER',clave:'04237001',c_state_id:30)	
+    CMunicipality.create(nombre:'REYES, LOS, VER',clave:'04238008',c_state_id:30)	
+    CMunicipality.create(nombre:'RÍO BLANCO, VER',clave:'04239009',c_state_id:30)	
+    CMunicipality.create(nombre:'SALTABARRANCA, VER',clave:'04240001',c_state_id:30)	
+    CMunicipality.create(nombre:'SAN ANDRÉS TENEJAPAN, VER',clave:'04241005',c_state_id:30)	
+    CMunicipality.create(nombre:'SAN ANDRÉS TUXTLA, VER',clave:'04242003',c_state_id:30)	
+    CMunicipality.create(nombre:'SAN JUAN EVANGELISTA MUNICIPIO DE, VER',clave:'04243004',c_state_id:30)	
+    CMunicipality.create(nombre:'JUANITA, VER',clave:'04243106',c_state_id:30)	
+    CMunicipality.create(nombre:'SAN JUAN EVANGELISTA LOCALIDAD DE, VER',clave:'04243409',c_state_id:30)	
+    CMunicipality.create(nombre:'SANTIAGO TUXTLA, VER',clave:'04244008',c_state_id:30)	
+    CMunicipality.create(nombre:'SAYULA DE ALEMÁN, VER',clave:'04245006',c_state_id:30)	
+    CMunicipality.create(nombre:'SOCONUSCO, VER',clave:'04246007',c_state_id:30)	
+    CMunicipality.create(nombre:'SOCHIAPA, VER',clave:'04247002',c_state_id:30)	
+    CMunicipality.create(nombre:'SOLEDAD ATZOMPA, VER',clave:'04248009',c_state_id:30)	
+    CMunicipality.create(nombre:'SOLEDAD DE DOBLADO, VER',clave:'04249001',c_state_id:30)	
+    CMunicipality.create(nombre:'SOTEAPÁN, VER',clave:'04250008',c_state_id:30)	
+    CMunicipality.create(nombre:'TAMALÍN, VER',clave:'04251003',c_state_id:30)	
+    CMunicipality.create(nombre:'TAMIAHUA, VER',clave:'04252001',c_state_id:30)	
+    CMunicipality.create(nombre:'TAMPICO ALTO, VER',clave:'04253002',c_state_id:30)	
+    CMunicipality.create(nombre:'TANCOCO, VER',clave:'04254006',c_state_id:30)	
+    CMunicipality.create(nombre:'TANTIMA, VER',clave:'04255004',c_state_id:30)	
+    CMunicipality.create(nombre:'TANTOYUCA, VER',clave:'04256005',c_state_id:30)	
+    CMunicipality.create(nombre:'TATATILA, VER',clave:'04257009',c_state_id:30)	
+    CMunicipality.create(nombre:'CASTILLO DE TEAYO, VER',clave:'04258007',c_state_id:30)	
+    CMunicipality.create(nombre:'TECOLUTLA, VER',clave:'04259008',c_state_id:30)	
+    CMunicipality.create(nombre:'TEHUIPANGO, VER',clave:'04260003',c_state_id:30)	
+    CMunicipality.create(nombre:'TEMAPACHE, VER',clave:'04261007',c_state_id:30)	
+    CMunicipality.create(nombre:'ALAMO, VER',clave:'04261059',c_state_id:30)	
+    CMunicipality.create(nombre:'POTRERO DEL LLANO, VER',clave:'04261439',c_state_id:30)	
+    CMunicipality.create(nombre:'TEMPOAL MUNICIPIO DE, VER',clave:'04262005',c_state_id:30)	
+    CMunicipality.create(nombre:'EL HIGO, VER',clave:'04262109',c_state_id:30)	
+    CMunicipality.create(nombre:'TEMPOAL LOCALIDAD DE, VER',clave:'04262302',c_state_id:30)	
+    CMunicipality.create(nombre:'TENAMPA, VER',clave:'04263006',c_state_id:30)	
+    CMunicipality.create(nombre:'TENOCHTITLÁN, VER',clave:'04264001',c_state_id:30)	
+    CMunicipality.create(nombre:'TEOCELO, VER',clave:'04265008',c_state_id:30)	
+    CMunicipality.create(nombre:'TEPATLAXCO, VER',clave:'04266009',c_state_id:30)	
+    CMunicipality.create(nombre:'TEPETLÁN, VER',clave:'04267004',c_state_id:30)	
+    CMunicipality.create(nombre:'TEPETZINTLA, VER',clave:'04268002',c_state_id:30)	
+    CMunicipality.create(nombre:'TEQUILA, VER',clave:'04269003',c_state_id:30)	
+    CMunicipality.create(nombre:'TESECHOACÁN MUNICIPIO DE, VER',clave:'04270004',c_state_id:30)	
+    CMunicipality.create(nombre:'TESECHOACÁN LOCALIDAD DE, VER',clave:'04270259',c_state_id:30)	
+    CMunicipality.create(nombre:'VILLA AZUETA, VER',clave:'04270356',c_state_id:30)	
+    CMunicipality.create(nombre:'TEXCATEPEC, VER',clave:'04271008',c_state_id:30)	
+    CMunicipality.create(nombre:'TEXHUACÁN, VER',clave:'04272006',c_state_id:30)	
+    CMunicipality.create(nombre:'TEXISTEPEC, VER',clave:'04273007',c_state_id:30)	
+    CMunicipality.create(nombre:'TEZONAPA, VER',clave:'04274002',c_state_id:30)	
+    CMunicipality.create(nombre:'TIERRA BLANCA, VER',clave:'04275009',c_state_id:30)	
+    CMunicipality.create(nombre:'TIHUATLÁN, VER',clave:'04276001',c_state_id:30)	
+    CMunicipality.create(nombre:'TLACOJALPAN, VER',clave:'04277005',c_state_id:30)	
+    CMunicipality.create(nombre:'TLACOLULAN, VER',clave:'04278003',c_state_id:30)	
+    CMunicipality.create(nombre:'TLACOTALPAN, VER',clave:'04279004',c_state_id:30)	
+    CMunicipality.create(nombre:'TLACOTEPEC DE MEJÍA, VER',clave:'04280002',c_state_id:30)	
+    CMunicipality.create(nombre:'TLACHICHILCO, VER',clave:'04281006',c_state_id:30)	
+    CMunicipality.create(nombre:'TLALIXCOYAN MUNICIPIO DE, VER',clave:'04282004',c_state_id:30)	
+    CMunicipality.create(nombre:'PIEDRAS NEGRAS, VER',clave:'04282157',c_state_id:30)	
+    CMunicipality.create(nombre:'TLALIXCOYAN LOCALIDAD DE, VER',clave:'04282304',c_state_id:30)	
+    CMunicipality.create(nombre:'TLALNELHUAYOCAN, VER',clave:'04283005',c_state_id:30)	
+    CMunicipality.create(nombre:'TLAPACOYAN, VER',clave:'04284009',c_state_id:30)	
+    CMunicipality.create(nombre:'TLAQUILPA, VER',clave:'04285007',c_state_id:30)	
+    CMunicipality.create(nombre:'TLILAPÁN, VER',clave:'04286008',c_state_id:30)	
+    CMunicipality.create(nombre:'TOMATLÁN, VER',clave:'04287003',c_state_id:30)	
+    CMunicipality.create(nombre:'TONAYÁN, VER',clave:'04288001',c_state_id:30)	
+    CMunicipality.create(nombre:'TOTUTLA, VER',clave:'04289002',c_state_id:30)	
+    CMunicipality.create(nombre:'TÚXPAN, VER',clave:'04290006',c_state_id:30)	
+    CMunicipality.create(nombre:'TUXTILLA, VER',clave:'04291001',c_state_id:30)	
+    CMunicipality.create(nombre:'URSULO GALVÁN MUNICIPIO DE, VER',clave:'04292008',c_state_id:30)	
+    CMunicipality.create(nombre:'URSULO GALVÁN LOCALIDAD DE, VER',clave:'04292409',c_state_id:30)	
+    CMunicipality.create(nombre:'ZEMPOALA, VER',clave:'04292508',c_state_id:30)	
+    CMunicipality.create(nombre:'VEGA DE ALATORRE MUNICIPIO DE, VER',clave:'04293009',c_state_id:30)	
+    CMunicipality.create(nombre:'EMILIO CARRANZA, VER',clave:'04293204',c_state_id:30)	
+    CMunicipality.create(nombre:'VEGA DE ALATORRE LOCALIDAD DE, VER',clave:'04293406',c_state_id:30)	
+    CMunicipality.create(nombre:'VERACRUZ, VER',clave:'04294004',c_state_id:30)	
+    CMunicipality.create(nombre:'VILLA ALDAMA, VER',clave:'04295002',c_state_id:30)	
+    CMunicipality.create(nombre:'XOXOCOTLA, VER',clave:'04296003',c_state_id:30)	
+    CMunicipality.create(nombre:'YANGA, VER',clave:'04297007',c_state_id:30)	
+    CMunicipality.create(nombre:'YECUATLA, VER',clave:'04298005',c_state_id:30)	
+    CMunicipality.create(nombre:'ZACUALPAN, VER',clave:'04299006',c_state_id:30)	
+    CMunicipality.create(nombre:'ZARAGOZA, VER',clave:'04301005',c_state_id:30)	
+    CMunicipality.create(nombre:'ZENTLA, VER',clave:'04302009',c_state_id:30)	
+    CMunicipality.create(nombre:'COL MANUEL GONZÁLEZ, VER',clave:'04302057',c_state_id:30)	
+    CMunicipality.create(nombre:'ZONGOLICA, VER',clave:'04303007',c_state_id:30)	
+    CMunicipality.create(nombre:'ZONTECOMATLÁN DE LÓPEZ Y FUENTES, VER',clave:'04304008',c_state_id:30)	
+    CMunicipality.create(nombre:'ZOZOCOLCO DE HIDALGO, VER',clave:'04305003',c_state_id:30)	
+    CMunicipality.create(nombre:'TATAHUICAPÁN DE JUÁREZ, VER',clave:'04306001',c_state_id:30)	
+    CMunicipality.create(nombre:'UXPANAPA, VER',clave:'04307002',c_state_id:30)	
+    CMunicipality.create(nombre:'SANTIAGO SOCHIAPÁN, VER',clave:'04308006',c_state_id:30)	
+    CMunicipality.create(nombre:'VERACRUZ (OTROS)',clave:'04399004',c_state_id:30)	
+    CMunicipality.create(nombre:'ABALÁ, YUC',clave:'04401009',c_state_id:31)	
+    CMunicipality.create(nombre:'ACANCEH, YUC',clave:'04402001',c_state_id:31)	
+    CMunicipality.create(nombre:'AKIL, YUC',clave:'04403005',c_state_id:31)	
+    CMunicipality.create(nombre:'BACA, YUC',clave:'04404003',c_state_id:31)	
+    CMunicipality.create(nombre:'BOKOBÁ, YUC',clave:'04405004',c_state_id:31)	
+    CMunicipality.create(nombre:'BUCTZOTZ, YUC',clave:'04406008',c_state_id:31)	
+    CMunicipality.create(nombre:'CACALCHÉN, YUC',clave:'04407006',c_state_id:31)	
+    CMunicipality.create(nombre:'CALOTMUL, YUC',clave:'04408007',c_state_id:31)	
+    CMunicipality.create(nombre:'CANSAHCAB, YUC',clave:'04409002',c_state_id:31)	
+    CMunicipality.create(nombre:'CANTAMAYEC, YUC',clave:'04410009',c_state_id:31)	
+    CMunicipality.create(nombre:'CELESTÚN, YUC',clave:'04411007',c_state_id:31)	
+    CMunicipality.create(nombre:'CENOTILLO, YUC',clave:'04412008',c_state_id:31)	
+    CMunicipality.create(nombre:'CONKAL, YUC',clave:'04413003',c_state_id:31)	
+    CMunicipality.create(nombre:'CUNCUNUL, YUC',clave:'04414001',c_state_id:31)	
+    CMunicipality.create(nombre:'CUZAMÁ, YUC',clave:'04415002',c_state_id:31)	
+    CMunicipality.create(nombre:'CHACSINKÍN, YUC',clave:'04416006',c_state_id:31)	
+    CMunicipality.create(nombre:'CHANKOM, YUC',clave:'04417004',c_state_id:31)	
+    CMunicipality.create(nombre:'CHAPAB, YUC',clave:'04418005',c_state_id:31)	
+    CMunicipality.create(nombre:'CHEMAX, YUC',clave:'04419009',c_state_id:31)	
+    CMunicipality.create(nombre:'CHICXULUB PUEBLO, YUC',clave:'04420004',c_state_id:31)	
+    CMunicipality.create(nombre:'CHICHIMILÁ, YUC',clave:'04421002',c_state_id:31)	
+    CMunicipality.create(nombre:'CHIKINDZONOT, YUC',clave:'04422003',c_state_id:31)	
+    CMunicipality.create(nombre:'CHOCHOLÁ, YUC',clave:'04423007',c_state_id:31)	
+    CMunicipality.create(nombre:'CHUMAYEL, YUC',clave:'04424005',c_state_id:31)	
+    CMunicipality.create(nombre:'DZÁN, YUC',clave:'04425006',c_state_id:31)	
+    CMunicipality.create(nombre:'DZEMUL, YUC',clave:'04426001',c_state_id:31)	
+    CMunicipality.create(nombre:'DZIDZANTÚN, YUC',clave:'04427008',c_state_id:31)	
+    CMunicipality.create(nombre:'DZILAM DE BRAVO, YUC',clave:'04428009',c_state_id:31)	
+    CMunicipality.create(nombre:'DZILAM GONZÁLEZ, YUC',clave:'04429004',c_state_id:31)	
+    CMunicipality.create(nombre:'DZITÁS, YUC',clave:'04430005',c_state_id:31)	
+    CMunicipality.create(nombre:'DZONCAUICH, YUC',clave:'04431003',c_state_id:31)	
+    CMunicipality.create(nombre:'ESPITA, YUC',clave:'04432004',c_state_id:31)	
+    CMunicipality.create(nombre:'HALACHÓ, YUC',clave:'04433008',c_state_id:31)	
+    CMunicipality.create(nombre:'HOCABÁ, YUC',clave:'04434006',c_state_id:31)	
+    CMunicipality.create(nombre:'HOCTÚN, YUC',clave:'04435007',c_state_id:31)	
+    CMunicipality.create(nombre:'HOMÚN, YUC',clave:'04436002',c_state_id:31)	
+    CMunicipality.create(nombre:'HUHÍ, YUC',clave:'04437009',c_state_id:31)	
+    CMunicipality.create(nombre:'HUNUCMÁ, YUC',clave:'04438001',c_state_id:31)	
+    CMunicipality.create(nombre:'IXIL, YUC',clave:'04439005',c_state_id:31)	
+    CMunicipality.create(nombre:'IZAMAL, YUC',clave:'04440003',c_state_id:31)	
+    CMunicipality.create(nombre:'JACINTO CANEK, YUC',clave:'04440507',c_state_id:31)	
+    CMunicipality.create(nombre:'KANASÍN, YUC',clave:'04441001',c_state_id:31)	
+    CMunicipality.create(nombre:'KANTUNIL, YUC',clave:'04442002',c_state_id:31)	
+    CMunicipality.create(nombre:'KAUA, YUC',clave:'04443006',c_state_id:31)	
+    CMunicipality.create(nombre:'KINCHIL, YUC',clave:'04444004',c_state_id:31)	
+    CMunicipality.create(nombre:'KOPOMÁ, YUC',clave:'04445005',c_state_id:31)	
+    CMunicipality.create(nombre:'MAMA, YUC',clave:'04446009',c_state_id:31)	
+    CMunicipality.create(nombre:'MANÍ, YUC',clave:'04447007',c_state_id:31)	
+    CMunicipality.create(nombre:'MAXCANÚ, YUC',clave:'04448008',c_state_id:31)	
+    CMunicipality.create(nombre:'MAYAPÁN, YUC',clave:'04449003',c_state_id:31)	
+    CMunicipality.create(nombre:'MÉRIDA, YUC',clave:'04450007',c_state_id:31)	
+    CMunicipality.create(nombre:'MOCOCHA, YUC',clave:'04451005',c_state_id:31)	
+    CMunicipality.create(nombre:'MOTUL DE FELIPE CARRILLO PUERTO, YUC',clave:'04452006',c_state_id:31)	
+    CMunicipality.create(nombre:'MUNA, YUC',clave:'04453001',c_state_id:31)	
+    CMunicipality.create(nombre:'MUXUPIP, YUC',clave:'04454008',c_state_id:31)	
+    CMunicipality.create(nombre:'OPICHÉN, YUC',clave:'04455009',c_state_id:31)	
+    CMunicipality.create(nombre:'OXKUTZCAB, YUC',clave:'04456004',c_state_id:31)	
+    CMunicipality.create(nombre:'PANABÁ, YUC',clave:'04457002',c_state_id:31)	
+    CMunicipality.create(nombre:'PETO, YUC',clave:'04458003',c_state_id:31)	
+    CMunicipality.create(nombre:'PROGRESO MUNICIPIO DE, YUC',clave:'04459007',c_state_id:31)	
+    CMunicipality.create(nombre:'CHELEM, YUC',clave:'04459151',c_state_id:31)	
+    CMunicipality.create(nombre:'CHUBURNA, YUC',clave:'04459193',c_state_id:31)	
+    CMunicipality.create(nombre:'PROGRESO LOCALIDAD DE, YUC',clave:'04459833',c_state_id:31)	
+    CMunicipality.create(nombre:'QUINTANA ROO, YUC',clave:'04460008',c_state_id:31)	
+    CMunicipality.create(nombre:'RÍO LAGARTOS, YUC',clave:'04461006',c_state_id:31)	
+    CMunicipality.create(nombre:'SACALUM, YUC',clave:'04462007',c_state_id:31)	
+    CMunicipality.create(nombre:'SAMAHIL, YUC',clave:'04463002',c_state_id:31)	
+    CMunicipality.create(nombre:'SANAHCAT, YUC',clave:'04464009',c_state_id:31)	
+    CMunicipality.create(nombre:'SAN FELIPE, YUC',clave:'04465001',c_state_id:31)	
+    CMunicipality.create(nombre:'SANTA ELENA, YUC',clave:'04466005',c_state_id:31)	
+    CMunicipality.create(nombre:'SEYÉ, YUC',clave:'04467003',c_state_id:31)	
+    CMunicipality.create(nombre:'SINANCHÉ, YUC',clave:'04468004',c_state_id:31)	
+    CMunicipality.create(nombre:'SOTUTA, YUC',clave:'04469008',c_state_id:31)	
+    CMunicipality.create(nombre:'SUCILÁ, YUC',clave:'04470006',c_state_id:31)	
+    CMunicipality.create(nombre:'SUDZAL, YUC',clave:'04471004',c_state_id:31)	
+    CMunicipality.create(nombre:'SUMA, YUC',clave:'04472005',c_state_id:31)	
+    CMunicipality.create(nombre:'TAHDZIÚ, YUC',clave:'04473009',c_state_id:31)	
+    CMunicipality.create(nombre:'TAHMEK, YUC',clave:'04474007',c_state_id:31)	
+    CMunicipality.create(nombre:'TEABO, YUC',clave:'04475008',c_state_id:31)	
+    CMunicipality.create(nombre:'TECOH, YUC',clave:'04476003',c_state_id:31)	
+    CMunicipality.create(nombre:'TEKAL DE VENEGAS, YUC',clave:'04477001',c_state_id:31)	
+    CMunicipality.create(nombre:'TEKANTÓ, YUC',clave:'04478002',c_state_id:31)	
+    CMunicipality.create(nombre:'TEKAX, YUC',clave:'04479006',c_state_id:31)	
+    CMunicipality.create(nombre:'TEKIT, YUC',clave:'04480001',c_state_id:31)	
+    CMunicipality.create(nombre:'TEKOM, YUC',clave:'04481008',c_state_id:31)	
+    CMunicipality.create(nombre:'TELCHAC PUEBLO, YUC',clave:'04482009',c_state_id:31)	
+    CMunicipality.create(nombre:'TELCHAC PUERTO, YUC',clave:'04483004',c_state_id:31)	
+    CMunicipality.create(nombre:'TEMAX, YUC',clave:'04484002',c_state_id:31)	
+    CMunicipality.create(nombre:'TEMOZÓN, YUC',clave:'04485003',c_state_id:31)	
+    CMunicipality.create(nombre:'TEPAKÁN, YUC',clave:'04486007',c_state_id:31)	
+    CMunicipality.create(nombre:'TETIZ, YUC',clave:'04487005',c_state_id:31)	
+    CMunicipality.create(nombre:'TEYA, YUC',clave:'04488006',c_state_id:31)	
+    CMunicipality.create(nombre:'TICUL, YUC',clave:'04489001',c_state_id:31)	
+    CMunicipality.create(nombre:'TIMUCUY, YUC',clave:'04490002',c_state_id:31)	
+    CMunicipality.create(nombre:'TINUM MUNICIPIO DE, YUC',clave:'04491009',c_state_id:31)	
+    CMunicipality.create(nombre:'PISTE, YUC',clave:'04491439',c_state_id:31)	
+    CMunicipality.create(nombre:'TINUM LOCALIDAD DE, YUC',clave:'04491753',c_state_id:31)	
+    CMunicipality.create(nombre:'TIXCACALCUPUL, YUC',clave:'04492001',c_state_id:31)	
+    CMunicipality.create(nombre:'TIXKOKOB, YUC',clave:'04493005',c_state_id:31)	
+    CMunicipality.create(nombre:'TIXMÉHUAC, YUC',clave:'04494003',c_state_id:31)	
+    CMunicipality.create(nombre:'TIXPÉHUAL, YUC',clave:'04495004',c_state_id:31)	
+    CMunicipality.create(nombre:'TIZIMÍN, YUC',clave:'04496008',c_state_id:31)	
+    CMunicipality.create(nombre:'TUNKÁS, YUC',clave:'04497006',c_state_id:31)	
+    CMunicipality.create(nombre:'TZUCACAB, YUC',clave:'04498007',c_state_id:31)	
+    CMunicipality.create(nombre:'UAYMA, YUC',clave:'04499002',c_state_id:31)	
+    CMunicipality.create(nombre:'UCÚ, YUC',clave:'04501004',c_state_id:31)	
+    CMunicipality.create(nombre:'UMÁN, YUC',clave:'04502002',c_state_id:31)	
+    CMunicipality.create(nombre:'VALLADOLID, YUC',clave:'04503003',c_state_id:31)	
+    CMunicipality.create(nombre:'XOCCHEL, YUC',clave:'04504007',c_state_id:31)	
+    CMunicipality.create(nombre:'YAXCABÁ, YUC',clave:'04505005',c_state_id:31)	
+    CMunicipality.create(nombre:'YAXKUKUL, YUC',clave:'04506006',c_state_id:31)	
+    CMunicipality.create(nombre:'YOBAÍN, YUC',clave:'04507001',c_state_id:31)	
+    CMunicipality.create(nombre:'YUCATAN (OTROS)',clave:'04599009',c_state_id:31)	
+    CMunicipality.create(nombre:'APOZOL, ZAC',clave:'04601008',c_state_id:32)	
+    CMunicipality.create(nombre:'APULCO, ZAC',clave:'04602003',c_state_id:32)	
+    CMunicipality.create(nombre:'ATOLINGA, ZAC',clave:'04603001',c_state_id:32)	
+    CMunicipality.create(nombre:'BENITO JUÁREZ, ZAC',clave:'04604002',c_state_id:32)	
+    CMunicipality.create(nombre:'CALERA, ZAC',clave:'04605006',c_state_id:32)	
+    CMunicipality.create(nombre:'VICTOR ROSALES, ZAC',clave:'04605351',c_state_id:32)	
+    CMunicipality.create(nombre:'CA ITAS DE FELIPE PESCADOR, ZAC',clave:'04606004',c_state_id:32)	
+    CMunicipality.create(nombre:'CONCEPCIÓN DEL ORO, ZAC',clave:'04607005',c_state_id:32)	
+    CMunicipality.create(nombre:'CUAUHTÉMOC, ZAC',clave:'04608009',c_state_id:32)	
+    CMunicipality.create(nombre:'SAN PEDRO PIEDRA GORDA, ZAC',clave:'04608303',c_state_id:32)	
+    CMunicipality.create(nombre:'CHALCHIHUITES, ZAC',clave:'04609007',c_state_id:32)	
+    CMunicipality.create(nombre:'FRESNILLO, ZAC',clave:'04610002',c_state_id:32)	
+    CMunicipality.create(nombre:'TRINIDAD GARCÍA DE LA CADENA, ZAC',clave:'04611003',c_state_id:32)	
+    CMunicipality.create(nombre:'GENARO CODINA, ZAC',clave:'04612007',c_state_id:32)	
+    CMunicipality.create(nombre:'GENERAL ENRIQUE ESTRADA, ZAC',clave:'04613005',c_state_id:32)	
+    CMunicipality.create(nombre:'GENERAL FRANCISCO MURGUIA, ZAC',clave:'04614006',c_state_id:32)	
+    CMunicipality.create(nombre:'NIEVES, ZAC',clave:'04614207',c_state_id:32)	
+    CMunicipality.create(nombre:'EL PLATEADO DE JOAQUÍN AMARO, ZAC',clave:'04615001',c_state_id:32)	
+    CMunicipality.create(nombre:'GENERAL PÁNFILO NATERA, ZAC',clave:'04616008',c_state_id:32)	
+    CMunicipality.create(nombre:'GUADALUPE, ZAC',clave:'04617009',c_state_id:32)	
+    CMunicipality.create(nombre:'HUANUSCO, ZAC',clave:'04618004',c_state_id:32)	
+    CMunicipality.create(nombre:'JALPA, ZAC',clave:'04619002',c_state_id:32)	
+    CMunicipality.create(nombre:'JEREZ DE GARCÍA SALINAS, ZAC',clave:'04620003',c_state_id:32)	
+    CMunicipality.create(nombre:'JIMÉNEZ DEL TEUL, ZAC',clave:'04621004',c_state_id:32)	
+    CMunicipality.create(nombre:'JUAN ALDAMA, ZAC',clave:'04622008',c_state_id:32)	
+    CMunicipality.create(nombre:'JUCHIPILA, ZAC',clave:'04623006',c_state_id:32)	
+    CMunicipality.create(nombre:'LORETO, ZAC',clave:'04624007',c_state_id:32)	
+    CMunicipality.create(nombre:'LUIS MOYA, ZAC',clave:'04625002',c_state_id:32)	
+    CMunicipality.create(nombre:'MAZAPIL, ZAC',clave:'04626009',c_state_id:32)	
+    CMunicipality.create(nombre:'MELCHOR OCAMPO, ZAC',clave:'04627001',c_state_id:32)	
+    CMunicipality.create(nombre:'MEZQUITAL DEL ORO, ZAC',clave:'04628005',c_state_id:32)	
+    CMunicipality.create(nombre:'MIGUEL AUZA, ZAC',clave:'04629003',c_state_id:32)	
+    CMunicipality.create(nombre:'MOMAX, ZAC',clave:'04630001',c_state_id:32)	
+    CMunicipality.create(nombre:'MONTE ESCOBEDO, ZAC',clave:'04631002',c_state_id:32)	
+    CMunicipality.create(nombre:'MORELOS, ZAC',clave:'04632006',c_state_id:32)	
+    CMunicipality.create(nombre:'MOYAHUA DE ESTRADA, ZAC',clave:'04633004',c_state_id:32)	
+    CMunicipality.create(nombre:'NOCHISTLÁN DE MEJÍA, ZAC',clave:'04634005',c_state_id:32)	
+    CMunicipality.create(nombre:'NORIA DE ÁNGELES, ZAC',clave:'04635009',c_state_id:32)	
+    CMunicipality.create(nombre:'OJOCALIENTE, ZAC',clave:'04636007',c_state_id:32)	
+    CMunicipality.create(nombre:'PÁNUCO, ZAC',clave:'04637008',c_state_id:32)	
+    CMunicipality.create(nombre:'PINOS, ZAC',clave:'04638003',c_state_id:32)	
+    CMunicipality.create(nombre:'RÍO GRANDE, ZAC',clave:'04639001',c_state_id:32)	
+    CMunicipality.create(nombre:'SAIN ALTO, ZAC',clave:'04640005',c_state_id:32)	
+    CMunicipality.create(nombre:'SALVADOR EL, ZAC',clave:'04641006',c_state_id:32)	
+    CMunicipality.create(nombre:'SOMBRERETE, ZAC',clave:'04642001',c_state_id:32)	
+    CMunicipality.create(nombre:'SUSTICACÁN, ZAC',clave:'04643008',c_state_id:32)	
+    CMunicipality.create(nombre:'TABASCO, ZAC',clave:'04644009',c_state_id:32)	
+    CMunicipality.create(nombre:'TEPECHITLÁN, ZAC',clave:'04645004',c_state_id:32)	
+    CMunicipality.create(nombre:'TEPETONGO, ZAC',clave:'04646002',c_state_id:32)	
+    CMunicipality.create(nombre:'TEUL DE GONZALEZ ORTEGA, ZAC',clave:'04647003',c_state_id:32)	
+    CMunicipality.create(nombre:'TLALTENANGO DE SÁNCHEZ ROMÁN, ZAC',clave:'04648007',c_state_id:32)	
+    CMunicipality.create(nombre:'VALPARAÍSO, ZAC',clave:'04649005',c_state_id:32)	
+    CMunicipality.create(nombre:'VETAGRANDE, ZAC',clave:'04650006',c_state_id:32)	
+    CMunicipality.create(nombre:'VILLA DE COS, ZAC',clave:'04651007',c_state_id:32)	
+    CMunicipality.create(nombre:'VILLA GARCÍA, ZAC',clave:'04652002',c_state_id:32)	
+    CMunicipality.create(nombre:'VILLA GONZÁLEZ ORTEGA, ZAC',clave:'04653009',c_state_id:32)	
+    CMunicipality.create(nombre:'VILLA HIDALGO, ZAC',clave:'04654001',c_state_id:32)	
+    CMunicipality.create(nombre:'VILLANUEVA, ZAC',clave:'04655005',c_state_id:32)	
+    CMunicipality.create(nombre:'ZACATECAS, ZAC',clave:'04656003',c_state_id:32)	
+    CMunicipality.create(nombre:'TRANCOSO, ZAC',clave:'04657004',c_state_id:32)	
+    CMunicipality.create(nombre:'SANTA MARÍA DE LA PAZ, ZAC',clave:'04658008',c_state_id:32)	
+    CMunicipality.create(nombre:'ZACATECAS (OTROS)',clave:'04699007',c_state_id:32)	
+    CMunicipality.create(nombre:'NO DEFINIDA UIF',clave:'99999999',c_state_id:99)	
+end

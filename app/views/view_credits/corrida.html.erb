@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Periodo</th>
+      <th>Fecha de pago</th>
+      <th>Saldo inicial</th>
+      <th>Capital</th>
+      <th>Interés</th>
+      <th>Iva interés</th>
+      <th>Pago total</th>
+      <th>Saldo final</th>
+    </tr>
+  </thead>
+  <%fecha = @credit.fecha%>
+  <tbody>
+    <% @credit.product.numero_de_pagos_a_realizar.times do |n| %>
+      <tr>
+        <td><%= n+1 %></td>
+         <% unless (n%2==1)%>
+          <td><%=fecha=fecha.end_of_month%></td>
+        <%else%>
+          <td><%=fecha=fecha+15.day %></td>
+        <%end%>
+        <td><%= (@total-((n)*@pago)) %></td>
+        <td><%= @capital %></td>
+        <td><%= @interes %></td>
+        <td><%= @iva %></td>
+        <td><%= @pago %></td>
+        <td><%= (@total-((n)*@pago))-@pago %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+n, @credit.fecha, (total-((n-1)*pago)),capital,interes,iva,pago,"hola" 
+<br>

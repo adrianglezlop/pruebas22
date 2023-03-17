@@ -1,0 +1,1 @@
+Coman.create(c:"se ejecuto esta vaina #{Auxiliar.fecha_natural Time.now}")

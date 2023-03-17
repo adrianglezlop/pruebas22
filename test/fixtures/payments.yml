@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  folio: MyString
+  fecha_de_pago: 2017-01-02
+  recibo: MyString
+  estatus: 1
+  importe: 9.99
+  pago: 9.99
+  interes: 9.99
+
+two:
+  folio: MyString
+  fecha_de_pago: 2017-01-02
+  recibo: MyString
+  estatus: 1
+  importe: 9.99
+  pago: 9.99
+  interes: 9.99

@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clave: MyString
+  nombre_de_empresa: MyString
+  razon_social: MyString
+  calle: MyString
+  numero_exterior: 1
+  numero_interior: 1
+  colonia: MyString
+  codigo_postal: 1
+  municipio: MyString
+  estado: MyString
+  apellido_paterno: MyString
+  apellido_materno: MyString
+  nombre_1: MyString
+  nombre_2: MyString
+  telefono_de_oficina: MyString
+  telefono_celular: MyString
+  correo_electronico_1: MyString
+  correo_electronico_2: MyString
+  cuenta_bacaria: MyString
+  banco: MyString
+  comicion_por_cobranza: 9.99
+  comicion_por_colocacion: 9.99
+  monto_maximo_de_prestamo: 9.99
+  permitir_prestamo_multiple: false
+
+two:
+  clave: MyString
+  nombre_de_empresa: MyString
+  razon_social: MyString
+  calle: MyString
+  numero_exterior: 1
+  numero_interior: 1
+  colonia: MyString
+  codigo_postal: 1
+  municipio: MyString
+  estado: MyString
+  apellido_paterno: MyString
+  apellido_materno: MyString
+  nombre_1: MyString
+  nombre_2: MyString
+  telefono_de_oficina: MyString
+  telefono_celular: MyString
+  correo_electronico_1: MyString
+  correo_electronico_2: MyString
+  cuenta_bacaria: MyString
+  banco: MyString
+  comicion_por_cobranza: 9.99
+  comicion_por_colocacion: 9.99
+  monto_maximo_de_prestamo: 9.99
+  permitir_prestamo_multiple: false

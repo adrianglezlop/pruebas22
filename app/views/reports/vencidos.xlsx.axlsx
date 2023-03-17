@@ -1,0 +1,253 @@
+wb = xlsx_package.workbook
+
+    @linea = 0
+    @fecha="2019-04-15"
+def llenar_fila(cred)
+ 
+    #cred.payments.each do |tic|
+    #        
+    #        fecha_pago=tic.updated_at
+    #        fecha_debio_pagar=tic.created_at
+    #        return [cred.id
+    #        ]
+            
+    #end
+    
+ end
+
+wb.add_worksheet(name: "creditos vencidos") do |sheet|
+    wb.styles do |style|
+    highlight_cell = style.add_style(bg_color: "F4A460")
+    border = wb.styles.add_style({:border => { :style => :thin, :color => "000000" }}) 
+    
+    title = wb.styles.add_style(:bg_color => "F4A460",
+                           :fg_color=>"#FF000000",
+                           :border=>Axlsx::STYLE_THIN_BORDER,
+                           :alignment=>{:horizontal => :left})
+                           
+    
+                           
+    linea = wb.styles.add_style(:bg_color => "F4A460",
+                           :fg_color=>"#FF000000",
+                           :alignment=>{:horizontal => :left})
+
+    currency = wb.styles.add_style(:format_code=>"#,##0;[Red]-#,##0",
+                              :border=>Axlsx::STYLE_THIN_BORDER)
+    
+    sheet.add_row ["FINANCIERA MARJO, S.A. DE C.V., SOFOM, E.N.R."]
+    sheet.add_row ["CREDITOS VENCIDOS AL #{@fecha}"]
+    sheet.add_row [@fecha]
+    @linea = 5
+    sheet.add_row ["credito", 
+                        "cliente",
+                        "apellido_paterno",
+                        "apellido_materno",
+                        "nombre_1",
+                        "nombre_2",
+                        "como_se_entero",
+                        "familiar_con_prestamo",
+                        "nombre_completo_familiar_1",
+                        "parentesco_1",
+                        "RFC",
+                        "CURP",
+                        "seguro",
+                        "INE",
+                        "nacionalidad",
+                        "fecha_de_nacimiento",
+                        "ciudad_de_nacimiento",
+                        "estado_de_nacimiento",
+                        "sexo",
+                        "telefono_de_casa",
+                        "telefono_celular",
+                        "email_1",
+                        "email_2",
+                        "escolaridad",
+                        "numero_de_dependientes_economicos",
+                        "gasto_promedio_mensual",
+                        "estado_civil",
+                        "apellido_paterno_del_conyuge",
+                        "apellido_materno_del_conyuge",
+                        "nombre_1_del_conyuge",
+                        "nombre_2_del_conyuge",
+                        "telefono_celular_del_conyuge",
+                        "telefono_de_oficina_del_conyuge",
+                        "calle",
+                        "numero_interior",
+                        "numero_exterior",
+                        "tipo_de_domicilio",
+                        "codigo_postal",
+                        "colonia",
+                        "municipio",
+                        "empresa_donde_labora",
+                        "giro_de_la_empresa",
+                        "puesto",
+                        "telefono_empresa",
+                        "sueldo_mensual_neto",
+                        "dirreccion_empresa",
+                        "colonia_empresa",
+                        "municipio_empresa",
+                        "nombre_referencia_1",
+                        "domicilio_referencia_1",
+                        "telefono_fijo_referencia_1",
+                        "telefono_celular_referencia_1",
+                        "nombre_referencia_2",
+                        "domicilio_referencia_2",
+                        "telefono_fijo_referencia_2",
+                        "telefono_celular_referencia_2",
+                        "nombre_referencia_familiar",
+                        "domicilio_referencia_familiar",
+                        "telefono_fijo_referencia_familiar",
+                        "telefono_celular_referencia_familiar",
+                        "nombre_completo_familiar_2",
+                        "parentesco_2",
+                        "nombre_completo_1",
+                        "edad_1",
+                        "parentesco_del_dependiente_1",
+                        "nombre_completo_2",
+                        "edad_2",
+                        "parentesco_del_dependiente_2",
+                        "nombre_completo_3",
+                        "edad_3",
+                        "parentesco_del_dependiente_3",
+                        "status",
+                        "economical_activity_id",
+                        "nombre_completo_familiar_3",
+                        "parentesco_3",
+                        "nombre_completo_familiar_4",
+                        "parentesco_4",
+                        "nombre_completo_4",
+                        "edad_4",
+                        "parentesco_del_dependiente_4",
+                        "estado_actual",
+                        "localidad",
+                        "observaciones",
+                        "created_at",
+                        "updated_at",
+                        "fecha_de_nacimiento_conyuge",
+                        "country",
+                        "ocupation_id",
+                        "ocupacion_del_conyuge",
+                        "customer.empresa_donde_labora_el_conyuge",
+                        "profecion_id",
+                        "referencia_agente_empresa"
+    ]
+
+    #@sucursales.each do |sucursal|
+     
+        #sucursal.agents.each do |agente|
+        #   agente.credits.each do |cred|
+                #pagares=cred.payments.where("recibo='12/12' and estatus=1 or estatus=2 and fecha_de_pago<=payments.updated_at")
+                #sheet.add_row llenar_fila(cred.id,pagares,
+                #    (cred.nombre_1 + ' ' + cred.nombre_2 + ' '+ cred.apellido_paterno + ' ' +cred.apellido_materno),
+                # cred.customer_id
+                #)
+                #cred.payments.each do |pag|
+                #    pag=cred.payments.where("recibo='12/12' and estatus=1 or estatus=2 and fecha_de_pago<=payments.updated_at")
+                #    sheet.add_row [pag.where("pag.credit_id=cred.id").select("id")]
+                    
+                #end
+        #   end
+        #    @avance += 1
+        #end
+        
+        @customers.each do |customer|
+        
+        customer.credits.select(:id,:fecha_de_contrato).where("status = 1 or status = 3").order(:id).each do |credit|
+            
+                sheet.add_row [ credit.id,
+                        customer.id,
+                        customer.apellido_paterno,
+                        customer.apellido_materno,
+                        customer.nombre_1,
+                        customer.nombre_2,
+                        customer.como_se_entero,
+                        customer.familiar_con_prestamo,
+                        customer.nombre_completo_familiar_1,
+                        customer.parentesco_1,
+                        customer.RFC,
+                        customer.CURP,
+                        customer.seguro,
+                        customer.INE,
+                        customer.nacionalidad,
+                        customer.fecha_de_nacimiento,
+                        customer.ciudad_de_nacimiento,
+                        customer.estado_de_nacimiento,
+                        customer.sexo,
+                        customer.telefono_de_casa,
+                        customer.telefono_celular,
+                        customer.email_1,
+                        customer.email_2,
+                        customer.escolaridad,
+                        customer.numero_de_dependientes_economicos,
+                        customer.gasto_promedio_mensual,
+                        customer.estado_civil,
+                        customer.apellido_paterno_del_conyuge,
+                        customer.apellido_materno_del_conyuge,
+                        customer.nombre_1_del_conyuge,
+                        customer.nombre_2_del_conyuge,
+                        customer.telefono_celular_del_conyuge,
+                        customer.telefono_de_oficina_del_conyuge,
+                        customer.calle,
+                        customer.numero_interior,
+                        customer.numero_exterior,
+                        customer.tipo_de_domicilio,
+                        customer.codigo_postal,
+                        customer.colonia,
+                        customer.municipio,
+                        customer.empresa_donde_labora,
+                        customer.giro_de_la_empresa,
+                        customer.puesto,
+                        customer.telefono_empresa,
+                        customer.sueldo_mensual_neto,
+                        customer.dirreccion_empresa,
+                        customer.colonia_empresa,
+                        customer.municipio_empresa,
+                        customer.nombre_referencia_1,
+                        customer.domicilio_referencia_1,
+                        customer.telefono_fijo_referencia_1,
+                        customer.telefono_celular_referencia_1,
+                        customer.nombre_referencia_2,
+                        customer.domicilio_referencia_2,
+                        customer.telefono_fijo_referencia_2,
+                        customer.telefono_celular_referencia_2,
+                        customer.nombre_referencia_familiar,
+                        customer.domicilio_referencia_familiar,
+                        customer.telefono_fijo_referencia_familiar,
+                        customer.telefono_celular_referencia_familiar,
+                        customer.nombre_completo_familiar_2,
+                        customer.parentesco_2,
+                        customer.nombre_completo_1,
+                        customer.edad_1,
+                        customer.parentesco_del_dependiente_1,
+                        customer.nombre_completo_2,
+                        customer.edad_2,
+                        customer.parentesco_del_dependiente_2,
+                        customer.nombre_completo_3,
+                        customer.edad_3,
+                        customer.parentesco_del_dependiente_3,
+                        customer.status,
+                        customer.economical_activity_id,
+                        customer.nombre_completo_familiar_3,
+                        customer.parentesco_3,
+                        customer.nombre_completo_familiar_4,
+                        customer.parentesco_4,
+                        customer.nombre_completo_4,
+                        customer.edad_4,
+                        customer.parentesco_del_dependiente_4,
+                        customer.estado_actual,
+                        customer.localidad,
+                        customer.observaciones,
+                        customer.created_at,
+                        customer.updated_at,
+                        customer.fecha_de_nacimiento_conyuge,
+                        customer.country,
+                        customer.ocupation_id,
+                        customer.ocupacion_del_conyuge,
+                        customer.empresa_donde_labora_el_conyuge,
+                        customer.profecion_id,
+                        customer.referencia_agente_empresa
+                ]
+        end
+      end
+   end
+end

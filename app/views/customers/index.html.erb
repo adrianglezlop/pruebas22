@@ -1,0 +1,56 @@
+<div ng-controller="filtroClientes">
+  <p id="notice"><%= notice %></p>
+  <style>
+  td{
+    padding:5px 5px; 
+  }
+</style>
+  <h2 align="center">LISTA DE CLIENTES</h2>
+  <div class="row card-panel z-depth-4" style="font-size:12px;">
+    <div class="col s12 m6 l6">
+      NOMBRE: <input type="text" placeholder="INGRESE EL NOMBRE"ng-model="nombre1" >
+      PATERNO: <input type="text" placeholder="APELLIDO PATERNO"ng-model="paterno" >
+      MATERNO: <input type="text" placeholder="APELLIDO MATERNO"ng-model="materno" >
+    </div>
+    <div class="col s12 m6 l6">
+      SUCURSAL: <input type="text" placeholder="INGRESE SUCURSAL"ng-model="sucursal" >
+      EMPRESA: <input type="text" placeholder="INGRESE EMPRESA"ng-model="empresa" >
+    </div>
+    
+  </div>
+  <a ng-click="getClientes()" class="waves-effect waves-light btn">Buscar</a>
+  <table style="font-size:12px;">
+    <thead>
+      <tr>
+        <td>APELLIDO PATERNO</td>
+        <td>APELLIDO MATERNO</td>
+        <td>NOMBRES</td>
+        <td>SUCURSAL O EMPRESA</td>
+        <td># CREDITOS</td>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+        <tr ng-repeat="cliente in clientes">
+          <td>{{cliente.apellido_paterno}}</td>
+          <td>{{cliente.apellido_materno}}</td>
+          <td>{{cliente.nombres}}</td>
+          <td>{{cliente.agente_empresa_nombre}}</td>
+          <td>{{cliente.numero_de_creditos}}</td>
+          <td><a href="{{cliente.url}}" class="waves-effect waves-light btn">Ver</a></td>
+          <td><a href="{{cliente.edit}}" class="waves-effect waves-light btn">Editar</a></td>
+          <td><a href="{{cliente.historial}}" class="waves-effect waves-light btn">Historial</a></td>
+        </tr>
+    </tbody>
+  </table>
+  
+  <br>
+  <!--
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <%= link_to new_customer_path,class:"btn-floating btn-large red" do  %>    
+      <i class="large material-icons">add</i>
+    <%end%>
+  </div>
+  -->
+</div>

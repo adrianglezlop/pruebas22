@@ -1,0 +1,2 @@
+module VerVideoHelper
+end

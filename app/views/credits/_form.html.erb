@@ -1,0 +1,441 @@
+<div ng-app="solicitud">
+<div ng-controller="codigo">
+<div id="father" style='position:relative; background-image: url("<%=image_path("creditoback")%>"); 
+  background-size: 1200px 1800px; 
+  background-repeat: no-repeat;'>
+  <%= form_for @credit,class:"father" do |f| %>
+    <% if @credit.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@credit.errors.count, "error") %> Campos obligatorios para guardar solicitud:</h2>
+  
+        <ul>
+        <% @credit.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+      <div style="top:0px;left:925px;position:absolute;">
+        <p>
+          <%= f.radio_button  :agente_empresa,true,checked:true%> <%= f.label "#{:agente_empresa}_true", "Agente" %>
+          <%= f.radio_button  :agente_empresa,false %> <%= f.label "#{:agente_empresa}_false", "Empresa" %>
+        </p>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br> 
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class ="row">
+      <div class="input-field col s12 m3 l3 offset-s0 offset-m9 offset-l9" style="left:925px;top:57px;position:absolute;">
+        <%= f.collection_select(:referencia_agente_empresa, Agent.all, :id, :nombre_del_agente, :prompt => 'Agentes:') %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m3 l3 offset-s0 offset-m9 offset-l9">
+        <%= f.text_field :fecha, class:"datepicker",type:"date", autocomplete: "off",:style=>"left:930px;top:110px;position:absolute;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div style="position:absolute;top:127px;left:357px;">
+        <p>
+          <%= f.radio_button  :es_cliente,true,checked:true%> 
+          <%= f.radio_button  :es_cliente,false,:style=>"left:77px;top:16px;position:absolute;" %> 
+        </p>
+      </div>
+      <div>
+        <%= f.text_field :como_se_entero,:style=>"left:705px;top:138px;width:350px;position:absolute;"%>
+      </div>
+    </div>
+      <div  style="position:absolute;top:156px;left:645px;">
+        <p>
+          <%= f.radio_button  :familiar_con_prestamo,true,checked:true%> 
+          <%= f.radio_button  :familiar_con_prestamo,false,:style=>"position:absolute;top:17px;left:90px;" %> 
+        </p>
+      </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :nombre_completo_familiar_1,:style=>"position:absolute;top:222px;left:70px;width:700px;height:22px;" %>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :parentesco_1,:style=>"position:absolute;top:222px;left:815px;width:300px;height:22px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :nombre_completo_familiar_2,:style=>"position:absolute;top:252px;left:70px;width:700px;height:22px;"%>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :parentesco_2,:style=>"position:absolute;top:252px;left:815px;width:300px;height:22px;"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :nombre_completo_familiar_3,:style=>"position:absolute;top:282px;left:70px;width:700px;height:22px;"%>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :parentesco_3,:style=>"position:absolute;top:282px;left:815px;width:300px;height:22px;"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :nombre_completo_familiar_4,:style=>"position:absolute;top:310px;left:70px;width:700px;height:22px;"%>
+      </div>
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :parentesco_4,:style=>"position:absolute;top:310px;left:815px;width:300px;height:22px;"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :apellido_paterno,:style=>"position:absolute;top:393px;left:70px;width:150px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :apellido_materno,:style=>"position:absolute;top:393px;left:250px;width:180px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :nombre_1,:style=>"position:absolute;top:393px;left:465px;width:150px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :nombre_2,:style=>"position:absolute;top:393px;left:650px;width:200px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :RFC,:style=>"position:absolute;top:393px;left:870px;width:250px;height:18px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :CURP,:style=>"position:absolute;top:445px;left:70px;width:300px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.text_field :seguro,:style=>"position:absolute;top:445px;left:400px;width:220px;height:18px;"%>
+      </div>
+      <div>
+        <%= f.text_field :INE,:style=>"position:absolute;top:445px;left:650px;width:180px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.text_field :nacionalidad,:style=>"position:absolute;top:445px;left:900px;width:180px;height:18px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :fecha_de_nacimiento, class:"datepicker",type:"date", autocomplete: "off",:style=>"position:absolute;top:520px;left:70px;width:150px;height:22px;" %>
+      </div>
+      <div>
+        <label style="position:absolute;top:497px;left:250px;width:200px;height:22px;background-color: white;font-weight: bold;">PAIS DE NACIMIENTO*</label>
+        <div>
+          <%=f.text_field :country, :style=>"position:absolute;top:520px;left:250px;width:200px;height:22px;"%>
+        </div>
+      </div>
+      <div>
+        <%=f.text_field :estado_de_nacimiento,:style=>"position:absolute;top:520px;left:470px;width:285px;height:22px;" %>
+      </div>
+      <div>
+        <label style="position:absolute;top:497px;left:770px;width:150px;height:22px;background-color: white;font-weight: bold;">CIUDAD*</label>
+        <%= f.text_field :ciudad_de_nacimiento,:style=>"position:absolute;top:520px;left:770px;width:150px;height:22px;" %>
+      </div>
+      <div style="position:absolute;top:525px;left:950px;">
+          <%= f.radio_button  :sexo,false,checked:true%>
+          <%= f.radio_button  :sexo,true,:style=>"position:absolute;top:0px;left:100px;"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :telefono_de_casa,:style=>"position:absolute;top:600px;left:70px;width:150px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m2 l2">
+        <%= f.text_field :telefono_celular, :style=>"position:absolute;top:600px;left:245px;width:200px;height:18px;" %>
+      </div>
+      <div class="row col s12 m8 l8">
+        <div class="input-field col s12">
+          <%= f.text_field :email_1,:style=>"position:absolute;top:574px;left:500px;width:600px;height:18px;" %>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :email_2,:style=>"position:absolute;top:600px;left:500px;width:600px;height:18px;" %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <p>
+          <%= f.radio_button  :escolaridad,0,:style=>"position:absolute;top:628px;left:220px;"%>
+          <%= f.radio_button  :escolaridad,1,:style=>"position:absolute;top:628px;left:344px;"%>
+          <%= f.radio_button  :escolaridad,2,:style=>"position:absolute;top:628px;left:462px;"%>
+          <%= f.radio_button  :escolaridad,3,:style=>"position:absolute;top:628px;left:588px;"%>
+          <%= f.radio_button  :escolaridad,4,:style=>"position:absolute;top:628px;left:720px;"%>
+          <%= f.radio_button  :escolaridad,5,:style=>"position:absolute;top:628px;left:853px;"%>
+          <%= f.radio_button  :escolaridad,6,:style=>"position:absolute;top:628px;left:976px;"%>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <%=f.collection_select(:economical_activity_id,EconomicalActivity.all,:id,:descripcion,{:prompt => 'Actividad economica:'},{:style=>"position:absolute;top:655px;left:250px;width:800px;height:22px;"})%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m3 l3">
+        <%= f.number_field :numero_de_dependientes_economicos,:style=>"position:absolute;top:710px;left:70px;width:200px;height:18px;"%>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <%= f.text_field :gasto_promedio_mensual,:style=>"position:absolute;top:710px;left:300px;width:200px;height:18px;" %>
+      </div>
+      <div class="col s12 m6 l6">
+        <p>
+          <%= f.radio_button  :estado_civil,0,:style=>"position:absolute;top:713px;left:526px;"%>
+          <%= f.radio_button  :estado_civil,1,:style=>"position:absolute;top:713px;left:646px;"%>
+          <%= f.radio_button  :estado_civil,2,:style=>"position:absolute;top:713px;left:760px;"%>
+          <%= f.radio_button  :estado_civil,3,:style=>"position:absolute;top:713px;left:866px;"%>
+          <%= f.radio_button  :estado_civil,4,:style=>"position:absolute;top:713px;left:986px;"%>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :apellido_paterno_del_conyuge,:style=>"position:absolute;top:787px;left:70px;width:150px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.text_field :apellido_materno_del_conyuge,:style=>"position:absolute;top:787px;left:250px;width:180px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.text_field :nombre_1_del_conyuge,:style=>"position:absolute;top:787px;left:460px;width:150px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.text_field :nombre_2_del_conyuge,:style=>"position:absolute;top:787px;left:610px;width:150px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.text_field :telefono_celular_del_conyuge, :style=>"position:absolute;top:787px;left:770px;width:150px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.text_field :telefono_de_oficina_del_conyuge , :style=>"position:absolute;top:787px;left:940px;width:170px;height:18px;"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <%= f.text_field :fecha_de_nacimiento, class:"datepicker",type:"date", autocomplete: "off",:style=>"position:absolute;top:815px;left:235px;width:170px;height:22px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m6 l6">
+        <%= f.text_field :nombre_completo_1, :style=>"position:absolute;top:898px;left:70px;width:700px;height:22px;" %>
+      </div>
+      <div>
+        <%= f.number_field :edad_1, :style=>"position:absolute;top:898px;left:810px;width:80px;height:22px;" %>
+      </div>
+      <div>
+        <%= f.text_field :parentesco_del_dependiente_1, :style=>"position:absolute;top:898px;left:940px;width:170px;height:22px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :nombre_completo_2, :style=>"position:absolute;top:927px;left:70px;width:700px;height:22px;" %>
+      </div>
+      <div>
+        <%= f.number_field :edad_2, :style=>"position:absolute;top:927px;left:810px;width:80px;height:22px;" %>
+      </div>
+      <div>
+        <%= f.text_field :parentesco_del_dependiente_2, :style=>"position:absolute;top:927px;left:940px;width:170px;height:22px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :nombre_completo_3, :style=>"position:absolute;top:957px;left:70px;width:700px;height:22px;" %>
+      </div>
+      <div>
+        <%= f.number_field :edad_3, :style=>"position:absolute;top:957px;left:810px;width:80px;height:22px;" %>
+      </div>
+      <div>
+        <%= f.text_field :parentesco_del_dependiente_3, :style=>"position:absolute;top:957px;left:940px;width:170px;height:22px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :nombre_completo_4, :style=>"position:absolute;top:987px;left:70px;width:700px;height:22px;" %>
+      </div>
+      <div>
+        <%= f.number_field :edad_4, :style=>"position:absolute;top:987px;left:810px;width:80px;height:22px;" %>
+      </div>
+      <div>
+        <%= f.text_field :parentesco_del_dependiente_4, :style=>"position:absolute;top:987px;left:940px;width:170px;height:22px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <%= f.text_field :calle, :style=>"position:absolute;top:1068px;left:80px;width:700px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.number_field :numero_interior, :style=>"position:absolute;top:1068px;left:830px;width:140px;height:18px;" %>
+      </div>
+      <div>
+        <%= f.number_field :numero_exterior, :style=>"position:absolute;top:1068px;left:990px;width:140px;height:18px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <p>
+          <%= f.radio_button  :tipo_de_domicilio,0, :style=>"position:absolute;top:1125px;left:57px;"%>
+          <%= f.radio_button  :tipo_de_domicilio,1, :style=>"position:absolute;top:1125px;left:125px;"%>
+          <%= f.radio_button  :tipo_de_domicilio,2, :style=>"position:absolute;top:1125px;left:200px;"%>
+          <%= f.radio_button  :tipo_de_domicilio,3, :style=>"position:absolute;top:1125px;left:283px;"%>
+        </p>
+      </div>
+
+
+ <div class="input-field col s12 m3 l3">
+        <%= f.text_field :codigo_postal, :style=>"position:absolute;top:902px;left:390px;width:70px;height:18px;","ng-model":"codigo", "ng-blur":"type()","ng-model":"credito.codigo_postal","ng-disabled":"block"%>
+      </div>
+
+      <div class="input-field col s12 m3 l3">
+        <select id="credit_colonia" name="credit[colonia]"class="browser-default" ng-model="colonias" style="position:absolute;top:1120px;left:500px;width:340px;height:18px;">
+            <option value="" disabled selected>Colonia</option>
+            <option ng-repeat="option in colonias" value="{{option}}">{{option}}</option>
+        </select>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <select id="credit_localidad" name="credit[localidad]"class="browser-default" ng-model="localidades" style="position:absolute;top:1120px;left:870px;width:250px;height:18px;">
+            <option value="" disabled selected>Localidad</option>
+            <option ng-repeat="localidad in localidades" value="{{localidad}}">{{localidad}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m3 l3">
+        <%= f.text_field :municipio,:style=>"position:absolute;top:1170px;left:70px;width:290px;height:18px;","ng-model":"municipio" %>
+      </div>
+      <div class="input-field col s12 m3 l3">
+         <%=f.text_field :estado_actual, :style=>"position:absolute;top:1170px;left:390px;width:200px;height:18px;","ng-model":"estado"%>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <!--<%= f.text_field :antiguedad_en_el_domicilio_actual,:style=>"position:absolute;top:1170px;left:600px;width:250px;height:18px;" %>-->
+       <%= f.select :antiguedad_en_el_domicilio_actual_anos, ((0..80).map {|i| [i,i] }),{prompt:"años"},:style=>"position:absolute;top:1170px;left:600px;width:125px;height:18px;"  %>
+        <%= f.select :antiguedad_en_el_domicilio_actual_meses, ((0..11).map {|i| [i,i] }),{prompt:"meses"},:style=>"position:absolute;top:1170px;left:725px;width:125px;height:18px;"  %>
+      </div>
+      <div class="input-field col s12 m3 l3">
+        <!--<%= f.text_field :antiguedad_en_el_domicilio_anterior,:style=>"position:absolute;top:1170px;left:870px;width:260px;height:18px;" %>-->
+        <%= f.select :antiguedad_en_el_domicilio_anterior_anos, ((0..80).map {|i| [i,i] }),{prompt:"años"},:style=>"position:absolute;top:1170px;left:870px;width:130px;height:18px;"  %>
+        <%= f.select :antiguedad_en_el_domicilio_anterior_meses, ((0..11).map {|i| [i,i] }),{prompt:"meses"},:style=>"position:absolute;top:1170px;left:1000px;width:130px;height:18px;"  %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :empresa_donde_labora,:style=>"position:absolute;top:1252px;left:70px;width:370px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :giro_de_la_empresa,:style=>"position:absolute;top:1252px;left:470px;width:300px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :puesto,:style=>"position:absolute;top:1252px;left:810px;width:300px;height:18px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :telefono_empresa,:style=>"position:absolute;top:1300px;left:70px;width:370px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :antiguedad_laboral,:style=>"position:absolute;top:1300px;left:470px;width:300px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :sueldo_mensual_neto,:style=>"position:absolute;top:1300px;left:810px;width:300px;height:18px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :dirreccion_empresa,:style=>"position:absolute;top:1355px;left:70px;width:370px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :colonia_empresa,:style=>"position:absolute;top:1355px;left:470px;width:300px;height:18px;" %>
+      </div>
+      <div class="input-field col s12 m4 l4">
+        <%= f.text_field :municipio_empresa,:style=>"position:absolute;top:1355px;left:810px;width:300px;height:18px;" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m3 l3">
+        <%= f.text_field :monto_solicitud,:style=>"position:absolute;top:1440px;left:100px;width:150px;height:25px;" %>
+      </div>
+      <div class="col s12 m3 l3">
+        <p>
+          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,0,:style=>"position:absolute;top:1460px;left:280px;"%>
+          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,1,:style=>"position:absolute;top:1460px;left:380px;"%>
+          <%= f.radio_button  :cada_cuanto_se_realizara_el_pago,2,:style=>"position:absolute;top:1460px;left:450px;"%>
+        </p>
+      </div>
+      <div class="col s12 m6 l6">
+        <p>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,0,:style=>"position:absolute;top:1460px;left:550px;"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,1,:style=>"position:absolute;top:1460px;left:640px;"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,2,:style=>"position:absolute;top:1460px;left:720px;"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,3,:style=>"position:absolute;top:1460px;left:870px;"%>
+          <%= f.radio_button  :lugar_donde_se_realizara_el_pago,4,:style=>"position:absolute;top:1460px;left:980px;"%>
+        </p>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="row col s12 m8 l8">
+        <div>
+          <%= f.text_field :nombre_referencia_1,:style=>"position:absolute;top:1630px;left:150px;width:600px;height:25px;" %>
+        </div>
+        <div>
+          <%= f.text_field :domicilio_referencia_1,:style=>"position:absolute;top:1665px;left:150px;width:600px;height:25px;" %>
+        </div>
+      </div>
+      <div class="row col s12 m4 l4">
+        <div>
+          <%= f.text_field :telefono_fijo_referencia_1,:style=>"position:absolute;top:1665px;left:835px;width:110px;height:22px;" %>
+        </div>
+        <div>
+          <%= f.text_field :telefono_celular_referencia_1,:style=>"position:absolute;top:1665px;left:1000px;width:110px;height:22px;" %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row col s12 m8 l8">
+        <div class="input-field col s12">
+          <%= f.text_field :nombre_referencia_2,:style=>"position:absolute;top:1700px;left:150px;width:600px;height:25px;" %>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :domicilio_referencia_2,:style=>"position:absolute;top:1735px;left:150px;width:600px;height:25px;" %>
+        </div>
+      </div>
+      <div class="row col s12 m4 l4">
+        <div class="input-field col s12">
+          <%= f.text_field :telefono_fijo_referencia_2,:style=>"position:absolute;top:1735px;left:835px;width:110px;height:22px;" %>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :telefono_celular_referencia_2,:style=>"position:absolute;top:1735px;left:1000px;width:110px;height:22px;" %>
+        </div>
+      </div>
+    </div>
+     <div class="row">
+      <div class="row col s12 m8 l8">
+        <div class="input-field col s12">
+          <%= f.text_field :nombre_referencia_familiar,:style=>"position:absolute;top:1795px;left:150px;width:600px;height:25px;" %>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :domicilio_referencia_familiar,:style=>"position:absolute;top:1830px;left:150px;width:600px;height:25px;" %>
+        </div>
+      </div>
+      <div class="row col s12 m4 l4">
+        <div class="input-field col s12">
+          <%= f.text_field :telefono_fijo_referencia_familiar,:style=>"position:absolute;top:1830px;left:835px;width:110px;height:22px;" %>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_field :telefono_celular_referencia_familiar,:style=>"position:absolute;top:1830px;left:1000px;width:110px;height:22px;" %>
+        </div>
+        <div class="input-field col s12">
+          <%=f.label :observaciones%>: <br>
+          
+          <%= f.text_area(:observaciones, size: '80x5')%>
+          
+          <!--%= f.text_field :observaciones,:style=>"width:600px;height:100px;"%-->
+        </div>
+        <div class="input-field col s12">
+          <%= f.file_field  :croquis%>
+         </div>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit "Guardar" %>
+    </div>
+  <% end %>
+
+</div>  
+</div>

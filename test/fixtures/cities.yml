@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cve_estado: MyString
+  dc_estado: MyString
+  cve_localidad_inegi: MyString
+  dc_localidad_inegi: MyString
+  cve_municipio_siti_codigo_postal: MyString
+  dc_municipio_siti: MyString
+  cve_colonia_siti_colonia: MyString
+
+two:
+  cve_estado: MyString
+  dc_estado: MyString
+  cve_localidad_inegi: MyString
+  dc_localidad_inegi: MyString
+  cve_municipio_siti_codigo_postal: MyString
+  dc_municipio_siti: MyString
+  cve_colonia_siti_colonia: MyString

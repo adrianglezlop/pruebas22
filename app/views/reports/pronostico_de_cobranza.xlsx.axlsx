@@ -1,0 +1,58 @@
+wb = xlsx_package.workbook
+@linea = 0
+@avance = 0
+def llenar_fila(creditos,nombre)
+     payments =creditos.joins(:payments)
+        adeudo = payments.sum(:importe) - payments.joins(:payments=>:tickets).where("tickets.status = ?",0).sum(:cantidad)
+        importe = payments.where("payments.fecha_de_pago = ?",@fecha).sum(:importe)
+        atrasado = 0
+        adelantado = payments.joins(:payments=>:tickets).where("tickets.status = ? and  payments.fecha_de_pago > ?",0,@fecha).sum(:cantidad)
+        return [nombre,
+                adeudo,
+                importe,
+                atrasado,
+                "=C#{@linea+@avance}+D#{@linea+@avance}",
+                0,
+                0,
+                "=F#{@linea+@avance}+G#{@linea+@avance}",
+                "=E#{@linea+@avance}-H#{@linea+@avance}",
+                adelantado,
+                creditos.count
+                ]
+end
+
+
+
+wb.add_worksheet(name: "pronostico_de_cobranza") do |sheet|
+    sheet.add_row ["FINANCIERA MARJO, S.A. DE C.V., SOFOM, E.N.R."]
+    sheet.add_row ["PRONÓSTICO DE COBRANZA QUINCENAL AL #{@fecha} - SISTEMA"]
+    sheet.add_row [@fecha]
+    sheet.add_row ["EMPRESA","ADEUDO",@fecha,"ATRASADO","TOTAL",@fecha,"ATRASADO","TOTAL","DIFERENCIA","ADELANTADO","No. CRÉDITOS"]
+    @linea = 5
+    @sucursales.each do |sucursal|
+        @linea = @linea+@avance
+        @avance = 0
+        sucursal.agents.each do |agente|
+            creditos = agente.credits.where("credits.status = ?",1)
+            sheet.add_row llenar_fila(creditos,agente.nombre_completo)
+            @avance += 1
+        end
+        sucursal.companies.each do |empresa|
+            creditos = empresa.credits.where("credits.status = ?",1)
+            sheet.add_row llenar_fila(creditos,empresa.nombre_completo)
+            @avance += 1
+        end
+        sheet.add_row ["SUB-TOTAL #{sucursal.nombre}",
+        "=SUM(B#{@linea}:B#{@linea+@avance-1})",
+        "=SUM(C#{@linea}:C#{@linea+@avance-1})",
+        "=SUM(D#{@linea}:D#{@linea+@avance-1})",
+        "=SUM(E#{@linea}:E#{@linea+@avance-1})",
+        "=SUM(F#{@linea}:F#{@linea+@avance-1})",
+        "=SUM(G#{@linea}:G#{@linea+@avance-1})",
+        "=SUM(H#{@linea}:H#{@linea+@avance-1})",
+        "=SUM(I#{@linea}:I#{@linea+@avance-1})",
+        "=SUM(J#{@linea}:J#{@linea+@avance-1})",
+        "=SUM(K#{@linea}:K#{@linea+@avance-1})"
+        ]
+    end
+end

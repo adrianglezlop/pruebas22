@@ -1,0 +1,125 @@
+
+<div ng-controller="recibos">
+     <div class = "row">
+       <h1 align="center">SEGUIMIENTO QUINCENAL</h1>
+         <div class = "col s12 m6 l4">
+              <label>
+                Sucursales
+              </label>
+             <select class="browser-default" ng-model="sucursales.selected" ng-change="cargarHijos()">
+                 <option value="" selected>Sucursales</option>
+                <option ng-repeat="option in sucursales" value="{{option.id}}">{{option.nombre}}</option>
+            </select>
+              <label>
+                Seleciona...
+              </label>
+              </br>
+                   <p>
+                      <input name="group1" type="radio" id="test1" value =1 ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test1">Agente</label>
+                    </p>
+                    <p>
+                      <input name="group1" type="radio" id="test2"  value =0  ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test2">Empresa</label>
+                    </p>
+                 
+                 <label>
+                   Empresa o agente
+                 </label>
+                 <select  class="browser-default" ng-model="hijos.selected">
+                    <option value="" selected>{{tipo}}</option>
+                    <option ng-repeat="option in hijos" value="{{option.id}}">{{option.nombre_completo}}</option>
+                </select>
+                  </br>
+                  <label>
+                    Productos
+                  </label>
+                <select  class="browser-default" ng-model="productos.selected" ng-change = "obtenerFechas()" >
+                  <option value="" selected>Productos</option>
+                  <option ng-repeat="option in productos" value="{{option.id}}">{{option.nombre_del_producto}}</option>
+                </select>
+                </br>
+                <label>
+                  Fechas de impresion
+                </label>
+                <select  class="browser-default" ng-model="fechas_de_pago.selected" ng-change="fecha_encabezado_cambio(fechas_de_pago.selected)">
+                  <option value="" selected>Fechas</option>
+                  <option ng-repeat="option in fechas_de_pago" value="{{option.fecha_de_corte}}">{{option.fecha_de_pago}}</option>
+                </select>
+                <a class="waves-effect waves-light btn" ng-click="get_seguimiento_quincenal()">Cargar</a>
+            </div>
+            
+            <div class = "col s12">
+                {{seguimiento_datos.length}} filas
+                <table class="striped" style="font-size:12px;">
+                    <thead>
+                        <th>
+                            Nombre
+                        </th>
+                        <th>
+                            Fecha prestamo 
+                        </th>
+                        <th>
+                             Capital   
+                        </th>
+                        <th>
+                            Monto a cobrar
+                        </th>
+                        <th>
+                            Adeudo    
+                        </th>
+                        <th>
+                            A pagar {{fecha_encabezado}}
+                        </th>
+                        <th>
+                            Atrasado
+                        </th>
+                        <th>
+                            Interes moratorio
+                        </th>
+                        <th>
+                            Total a cobrar
+                        </th>
+                        <th>
+                            Cobrado
+                        </th>
+                        <th>
+                            Diferencia 
+                        </th>
+                        <th>
+                            Adelantado
+                        </th>
+                        <th>
+                            Empresa
+                        </th>
+                        <th>
+                            No. pago
+                        </th>
+                        <th>
+                            No. creditos
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat = "fila in seguimiento_datos">
+                            <td>|{{fila.tipo}}|-{{fila.nombre_completo}}</td>
+                            <td>{{fila.fecha}}</td>
+                            <td>{{fila.monto_solicitud | currency}}</td>
+                            <td>{{fila.monto_a_pagar | currency}}</td>
+                            <td>{{fila.adeudo | currency}}</td>
+                            <td>{{fila.pagar | currency}}</td>
+                            <td>{{fila.atrasado | currency}}</td>
+                            <td>{{fila.interes_moratorio | currency}}</td>
+                            <td>{{fila.total_a_cobrar | currency}}</td>
+                            <td>{{fila.cobrado | currency}}</td>
+                            <td>{{fila.diferencia | currency}}</td>
+                            <td>{{fila.adelantado | currency}}</td>
+                            <td>{{fila.empresa}}</td>
+                            <td>{{fila.numero_de_pago}}</td>
+                            <td>{{fila.numero_de_creditos}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="waves-effect waves-light btn" ng-click="descargar_excel_quincenal()">Descargar en Excel</a>                
+            </div>
+    </div>
+</div>

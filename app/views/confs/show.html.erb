@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @conf.telefono %>
+</p>
+
+<p>
+  <strong>Domicilio:</strong>
+  <%= @conf.domicilio %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @conf.correo %>
+</p>
+
+<p>
+ <strong>representante_legal:</strong>
+  <%= @conf.representante_legal %>
+</p>
+
+<p>
+ <strong>pagina:</strong>
+  <%= @conf.pagina %>
+</p>
+
+<p>
+ <strong>RFC del representante_legal:</strong>
+  <%= @conf.RFC %>
+</p>
+
+<%= link_to 'Editar', edit_conf_path(@conf),class:"crud-links" %> |

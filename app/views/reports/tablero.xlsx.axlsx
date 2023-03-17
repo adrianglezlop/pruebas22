@@ -1,0 +1,60 @@
+wb = xlsx_package.workbook
+
+def checa_status(creditos)
+     payments =creditos.joins(:payments)
+        estatus = payments.where("id= ?",id)
+   
+       
+        return [estatus
+          
+                ]
+end
+
+wb.add_worksheet(name: "Tablero") do |sheet|
+
+
+
+ sheet.add_row ["FINANCIERA MARJO"]
+      sheet.add_row ["TABLERO DE INFORMACION AL ",@fecha_encabezado]
+      sheet.add_row [""]
+      sheet.add_row ["EMPRESA:",@resp["nombre_empresa"]]
+      sheet.add_row ["AGENTE:","",""]
+      sheet.add_row [""]
+      sheet.add_row ["NOMBRE","FECHA", "MONTO", "A PAGAR","AL CORRIENTE","ATRASADOS","PAGADOS"]
+      xTotalCobrarCorriente=0
+      xTotalCobrarAtrasado=0
+      xTotAtra=0
+      venc_al_corriente=0
+      venc_atrasado=0
+      status=0
+
+      
+      @resp["datos"].each do |fila|
+        sheet.add_row [
+        fila["nombre_completo"],
+        fila["fecha"],
+        fila["monto_solicitud"],
+        fila["monto_a_pagar"],
+        fila["al_corriente"], 
+        fila["atrasados"],
+        fila["Pagados"]]
+
+        
+    
+          venc_atrasado=venc_atrasado+1
+          xTotalCobrarAtrasado=xTotalCobrarAtrasado+ fila["total_a_cobrar"].to_f
+      
+        
+
+        
+      end
+
+      
+
+
+
+  sheet.add_row ['AL CORRIENTE',xTotalCobrarCorriente.to_f,  venc_al_corriente]
+  sheet.add_row ['ATRASADO',xTotalCobrarAtrasado.to_f,  venc_atrasado]
+  sheet.add_row ['VENCIDO',xTotalCobrarCorriente, 0]
+
+end

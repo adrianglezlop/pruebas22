@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<h1>Lista de Agentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clave</th>
+      <th>Sucursal</th>
+      <th>Nombre</th>
+      <th>Telefono</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agents.each do |agent| %>
+      <tr>
+        <td><%= agent.clave %></td>
+        <td><%= agent.branch_office.nombre%></td>
+        <td><%= "#{agent.apellido_paterno} #{agent.apellido_materno} #{agent.nombre_1} #{agent.nombre_2}" %></td>
+        <td><%= agent.telefono_celular %></td>
+        <td><%= link_to 'Mostrar', agent,class:'crud-links' %></td>
+        <td><%= link_to 'Editar', edit_agent_path(agent),class:'crud-links' %></td>
+        <td><%= link_to 'Eliminar', agent, method: :delete, data: { confirm: 'Are you sure?' },class:'crud-links' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <%= link_to new_agent_path,class:"btn-floating btn-large red" do  %>    
+    <i class="large material-icons">add</i>
+  <%end%>
+</div>

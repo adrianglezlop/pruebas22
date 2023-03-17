@@ -1,0 +1,36 @@
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>correo1</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.nom1 %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Mostrar', user,class:"crud-links" %></td>
+        <td><%= link_to 'Editar', edit_user_path(user),class:"crud-links" %></td>
+        <td><%= link_to 'Eliminar', user, method: :delete, data: { confirm: 'Are you sure?' },class:"crud-links" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <%= link_to new_user_path,class:"btn-floating btn-large red" do  %>    
+    <i class="large material-icons">add</i>
+  <%end%>
+</div>

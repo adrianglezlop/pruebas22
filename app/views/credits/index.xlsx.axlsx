@@ -1,0 +1,31 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Products") do |sheet|
+  sheet.add_row ["CONSULTA DE CREDITOS ACEPTADOS"]
+  sheet.add_row ["PRODUCTO","CRED_ID","AGENTE/EMPRESA","FECHA_DE_CREDITO","FECHA_DE_CONTRATO","NOMBRE","RFC","MONTO"]
+  @credits.each do |credit|
+    sheet.add_row [
+
+      if credit.product_id=80
+        "MARJO VALE" 
+      else
+        if credit.product_id=81
+          "MARJO VALE6" 
+        else
+          if credit.product_id=82
+            "MARJO VALE8" 
+          end
+        end
+      end,
+      credit.id,
+      credit.padre.nombre_completo,
+      credit.fecha.strftime("%d/%m/%Y"),
+      credit.fecha_de_contrato_formato,
+      credit.nombre_completo_deudor,
+      credit.RFC,
+      Dinero.to_money(credit.monto_solicitud)
+    ]
+    end
+  
+
+end

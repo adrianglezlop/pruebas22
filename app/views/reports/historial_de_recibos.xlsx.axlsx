@@ -1,0 +1,56 @@
+wb = xlsx_package.workbook
+wb.styles do |style|
+    currency_light = style.add_style(:format_code=>"$#,##0.00;[Red]$-#,##0.00",:border=>Axlsx::STYLE_THIN_BORDER,bg_color: "FFFF00")
+    highlight_cell = style.add_style(bg_color: "FFFF00", :border=>Axlsx::STYLE_THIN_BORDER)
+    blanco = style.add_style(bg_color: "FFFFFF",:border=>Axlsx::STYLE_THIN_BORDER)
+    currency = style.add_style(:format_code=>"$#,##0.00;[Red]$-#,##0.00",:border=>Axlsx::STYLE_THIN_BORDER)
+    date_time = style.add_style(:format_code => 'dd/mm/yyyy', :border=>Axlsx::STYLE_THIN_BORDER)
+    wb.add_worksheet(name: "Historial de recibos") do |sheet|
+    unless @padre.nil? or @producto.nil?
+        sheet.add_row [@padre.nombre_completo,"","TIPO DE PRESTAMO",@producto.payout.periocidad]
+    else
+        sheet.add_row [""]
+    end
+    unless @fecha.nil?
+        sheet.add_row ["ABONO A PRESTAMO",@fecha]
+    else
+        sheet.add_row [""]
+    end
+    sheet.add_row [""]
+    sheet.add_row ["RECIBO","NOMBRE","FECHA PRESTAMO","A PAGAR","ATRASADO","EMPRESA","No. PAGO"], style: [ highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell]
+    
+    @tickets.each do |recibo|
+        atrasados= recibo.payment.credit.payments.where(" payments.estatus = ?",1)
+        at = 0
+        if recibo.status==1 
+            atrasados.each do |atrasado|
+                at = at + atrasado.deuda_con_interes
+            end
+        end
+        sheet.add_row [
+                        recibo.id,
+                        recibo.payment.credit.nombre_completo_deudor,
+                        recibo.payment.credit.fecha_de_contrato,
+                        recibo.cantidad,
+                        at,
+                        recibo.payment.credit.padre.nombre_completo,
+                        recibo.payment.recibo
+                    ], style: [
+                        blanco,
+                        blanco,
+                        date_time,
+                        currency,
+                        currency,
+                        blanco,
+                        blanco
+                    ]
+    end
+    sheet.add_row [
+        "",
+        "",
+        "TOTAL A PAGAR",
+        "=SUM(D5:D#{@tickets.count+4})",
+        "=SUM(E5:E#{@tickets.count+4})"
+    ], style: [blanco,blanco,highlight_cell,currency_light,currency_light]
+  end
+end

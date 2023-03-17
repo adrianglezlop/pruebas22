@@ -1,0 +1,1711 @@
+[33mcommit 0f5ce5db1044b3546a6466e84edff09691d91960[m
+Author: Your Name <you@example.com>
+Date:   Wed Jan 16 10:00:10 2019 -0500
+
+    cambiso
+
+[33mcommit dc9a070a9626806b3297c2a16a1e1beff5b2c434[m
+Merge: 4a90c8c 723a193
+Author: Your Name <you@example.com>
+Date:   Wed Jan 16 09:43:48 2019 -0500
+
+    Merge branch 'master' of https://github.com/Luisesh1/marjo
+
+[33mcommit 4a90c8c73024bac44bc21ff0126c784d469adb52[m
+Author: Your Name <you@example.com>
+Date:   Wed Jan 16 09:42:56 2019 -0500
+
+    no se
+
+[33mcommit 723a193ce24187deea94e2eac801aec9d6d30501[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Jan 16 07:35:46 2019 -0700
+
+    leyenda pdf
+
+[33mcommit eada8ed468a515db91d0f620b6a1d6c705209fa9[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Jan 16 06:58:01 2019 -0700
+
+    estado de cuenta
+
+[33mcommit ac3164d4b5028e617e6311ba9eab2e483e532e5c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Dec 26 14:08:55 2018 -0700
+
+    cambios
+
+[33mcommit ca09ac99a4dffc1c9b0e00abb4fb676b7ca91a37[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Nov 23 11:31:39 2018 -0700
+
+    cargar
+
+[33mcommit 3a291bc2acfb578dc19cd4cd6af6661e71ddb8b9[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Nov 20 22:25:49 2018 -0700
+
+    cambio en el estado de cuenta no excluyen los creditos rechazados
+
+[33mcommit d8c2f63ff066695a835f12b2706a363eb29affd9[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Nov 14 07:27:29 2018 -0700
+
+    combio en seguimineto
+
+[33mcommit 89da315ed4ef95bc2d9bd5408900cbbfd913aae2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Oct 26 02:59:08 2018 -0600
+
+    buscador de clientes por sucursal y empresa
+
+[33mcommit 4337d66fc2d0d120c9127062d8a9a54bc8711967[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Oct 26 02:55:38 2018 -0600
+
+    buscador de clientes por sucursal y empresa
+
+[33mcommit 8e0634c8f1c8906cdea6c4354a1886acc8622a85[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Oct 22 08:46:05 2018 -0600
+
+    cambiios
+
+[33mcommit 2d9ae9bec3d333f7b5bd060d6cd73c94137ccb6a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Sep 30 19:05:42 2018 -0600
+
+    llave devise
+
+[33mcommit bdb83ae97721efe266cdf6cd7672466a6feb478e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Sep 27 01:00:30 2018 -0600
+
+    correcion en el seguimiento
+
+[33mcommit ce307df47b4311e686df5d0c76fa95c4b531e93c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Sep 24 02:23:19 2018 -0600
+
+    correcion de bugs
+
+[33mcommit 5b5c87df863d180032bcbb8c13ed03f1ff442e7d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 30 11:39:35 2018 -0600
+
+    se quito el botn de vencer en no administradores
+
+[33mcommit f03c08f76e91d9ccc1d6e6c4315eb886603015b5[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 30 11:30:31 2018 -0600
+
+    correcion de pdf
+
+[33mcommit e6c9a2ed900743d448fe74b853ccdc91cf416938[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 29 09:57:17 2018 -0600
+
+    se aumento en tamaño permitido a 3 mb
+
+[33mcommit 15bda066a8b7fdbedd38b9b4301051d47b4b407a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 29 09:46:21 2018 -0600
+
+    se aumento en tamaño permitido a 2.5 mb
+
+[33mcommit 92443c8a13864e535c47f1960562bfcd8008a6c6[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 28 02:32:14 2018 -0600
+
+    d
+
+[33mcommit 8340b10c285c1351fb7cca7b45d17e96f02abfda[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 28 02:13:39 2018 -0600
+
+    d
+
+[33mcommit 778d1936c42f5225581edd91d7f86225db5f5f0c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 22 17:36:17 2018 -0600
+
+    adelantado en el seguimiento
+
+[33mcommit 14991a20d7a70f4b875f45810216ad3488cddb33[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 20 11:49:33 2018 -0600
+
+    33
+
+[33mcommit da161bcaa721f45d72089c131730611b9a023d28[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 20 07:49:20 2018 -0600
+
+    sss
+
+[33mcommit 2be2454c537c9eee5e0ecd10f8ee5b669040fa3c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 14 07:42:40 2018 -0600
+
+    d
+
+[33mcommit 36f18747ae8f9b1ecbe0dfe56c585fcf7c2511e1[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 13 02:46:18 2018 -0600
+
+    s
+
+[33mcommit 33424ba3a69a2acecaf54a64fc2916a712885118[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 9 03:28:31 2018 -0600
+
+    ss
+
+[33mcommit 37999e89a9e91d8b123d5794fabe2a5ede96293a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Aug 5 21:46:13 2018 -0600
+
+    d
+
+[33mcommit a8be531caf3c16658cecd129bdda8a774ad04d7c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Aug 5 05:07:01 2018 -0600
+
+    s
+
+[33mcommit c8d3737548ea6589ba7d16b831490acc77ddf6e0[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Aug 5 05:02:07 2018 -0600
+
+    s
+
+[33mcommit 7280f56baebd5a70d55d3dceb4b20e20a938cfeb[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Aug 5 04:17:55 2018 -0600
+
+    f
+
+[33mcommit b0729a798009922e3e7bff78e2e7281d0106e09d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 2 02:41:45 2018 -0600
+
+    corecion de no vencimiento semanal
+
+[33mcommit 34c5a52e132e3cf344015c146a4ededeb95699bf[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 1 09:10:36 2018 -0600
+
+    cambios en el seguimineto
+
+[33mcommit 1ed3d33d3b58bb2d83f3ce3186e909c0625d0854[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 12 00:45:57 2018 -0600
+
+    descongelar adelanto
+
+[33mcommit c8d6bade03375f844d3ab06157a9475eaffaf7e2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 12 00:36:31 2018 -0600
+
+    ajustes semanal
+
+[33mcommit 74a502e2c52accc7b2e9ac584a349d21395c13c1[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Jul 11 00:37:54 2018 -0600
+
+    se descongelo la diferencia en el seguimineto
+
+[33mcommit 56eb0af9161d4197f823bb5be6343a668383a13e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 9 00:14:53 2018 -0600
+
+    seguimento
+
+[33mcommit 1739c46fe0e61933006d69fa350afa08ae27164b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 8 19:03:46 2018 -0600
+
+    seguimiento
+
+[33mcommit 85b3b57bbda2d1be862123d7b5f734302d336bff[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 8 18:56:40 2018 -0600
+
+    seguimiento
+
+[33mcommit fcfcfa661f35bf80c2344a63e217141207a4f6da[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 5 19:57:52 2018 -0600
+
+    correcion a seguiminto
+
+[33mcommit bdec4fd022b692401facd7d6b870e4f9b7e70182[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 1 16:40:15 2018 -0600
+
+    x
+
+[33mcommit bb49544b1e007c89c653ae8c45b08f1f04762c1b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 1 16:37:30 2018 -0600
+
+    x
+
+[33mcommit aca54def958a3b87839fffacbd3d4192cf60d798[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 1 02:29:23 2018 -0600
+
+    g
+
+[33mcommit 075792ad783829f424fa33c044cebbd5c0ec4c2d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 1 02:04:56 2018 -0600
+
+    ajuste para semanales
+
+[33mcommit f542b3fde6f98a3cd975bdf52247a54d54dd4cf4[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jun 28 13:00:42 2018 -0600
+
+    false en el cambio de seguimineto
+
+[33mcommit a8749a4774fb681bc4c2cf661d8a7fd0e2c16ebc[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Jun 27 00:44:48 2018 -0600
+
+    ultima fecha de corte
+
+[33mcommit 54cd213a79de541f5f4d3e6872e8278fbf7e03cf[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Jun 27 00:39:42 2018 -0600
+
+    ajustes al seguimiento
+
+[33mcommit 5982841b7ff4b851d58b4688abf8bad20f40feb8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 25 05:09:59 2018 -0600
+
+    quitando rufus cron
+
+[33mcommit e00f4519dfda16a0ba378529a265359597aed986[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 25 04:56:23 2018 -0600
+
+    pruebas de cron
+
+[33mcommit 994052a6ddd3f06baf5f0e315c1990cdf8c47a32[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu May 31 05:00:45 2018 -0600
+
+    columnas de clientes
+
+[33mcommit e017beef3b66104ec7bceb525f5949a1e21471be[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue May 8 11:08:32 2018 -0600
+
+    soluc¡on seguimiento
+
+[33mcommit f13adba6ddaf0b18b109cdaea5754107dd03bd7e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue May 8 10:03:25 2018 -0600
+
+    gemas
+
+[33mcommit b47e6678e8faea803a0a81bb6c88bd2832accd6f[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue May 8 08:04:41 2018 -0600
+
+    captura de seguimineto
+
+[33mcommit 21dbb83cec4f503758ccbeb50ed681a2b51d2d11[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Apr 30 16:06:22 2018 -0600
+
+    cambio en el atrazo del recibo
+
+[33mcommit d639ee36a7a14d6f164b436af00a68ad471cdac0[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Apr 18 11:22:58 2018 -0600
+
+    Agregando banco a sucursales
+
+[33mcommit 4e6b20f93394bd71dba337f292ad020c0d0e2406[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Apr 12 14:36:23 2018 -0600
+
+    cambios final de whatsap monica
+
+[33mcommit 8fdabcfb58b3ea049f2eac6f4c9a75e6f6a9f472[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Apr 2 17:50:52 2018 -0600
+
+    formato en estado de cuenta y atraso  en el recibo en pogos parciales
+
+[33mcommit e345b30acccc2e09b6654c653121ac32d990128b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Mar 22 07:22:58 2018 -0700
+
+    saltos de paginas de contrato
+
+[33mcommit 1ca022b907cf6068da03eb3e4fe44f5e5eb6dbfe[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Mar 13 17:41:21 2018 -0700
+
+    guardar
+
+[33mcommit 38b497cc47f096682564e6a69d0cc8bb9478b89b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Mar 13 17:17:58 2018 -0700
+
+    cambios
+
+[33mcommit 72466dfc5cc772216f03a2081da1d3c0800c9c81[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Mar 2 01:41:17 2018 -0700
+
+    carrecion boton de cargar pdf
+
+[33mcommit f2b1a70ad85bc43ad76bafd59d5a4ceefc819b2c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Mar 1 14:32:42 2018 -0700
+
+    cambios
+
+[33mcommit 20e52b556fe90da0c8b6c50b9234418de73f2258[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Feb 8 17:41:03 2018 -0700
+
+    f
+
+[33mcommit b056d79c03c8d28c283b3c04410bdb8b56f29088[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Feb 8 17:13:23 2018 -0700
+
+    sexo entrevista
+
+[33mcommit fdb489804bec52837786b8a696969e442c2fee5e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Feb 8 16:56:19 2018 -0700
+
+    orden alfebetico en seguimieto
+
+[33mcommit 3c83a8b004309778d77fad89aad4a31e223b42ec[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Feb 8 16:47:44 2018 -0700
+
+    fecha
+
+[33mcommit 6da45cac5253f74556b33439407608e48e19baac[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Feb 5 14:45:13 2018 -0700
+
+    correccion de excel de seguimineto
+
+[33mcommit b470c3e0667f1576f707d7a7f47494a2bcf9973e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Feb 4 06:37:42 2018 -0700
+
+    ds
+
+[33mcommit a364bbf92f28a34679952f96f8d3252380e0a745[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Feb 4 06:23:30 2018 -0700
+
+    d
+
+[33mcommit 54afa89e39a33732b3bd993f2d756afeb59e669f[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Feb 4 06:12:39 2018 -0700
+
+    ven
+
+[33mcommit 3ff58242410fcece436afd8e8d809428c051a6be[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Feb 4 06:02:20 2018 -0700
+
+    pruebas de corte
+
+[33mcommit 58c1636d7d7f840e7aeb8d6901403cfeb6f4606f[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jan 30 17:46:09 2018 -0700
+
+    cambios
+
+[33mcommit 7e257238743abea2e5dcb3fc305ef9281224b3aa[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jan 30 16:59:28 2018 -0700
+
+    cambios
+
+[33mcommit 5d20f39d813ddbd3d235a266a662a056eb9dc6d8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jan 19 09:02:13 2018 -0700
+
+    problema current user
+
+[33mcommit 8944dd7c1111366cad7fde15179dd52577aaa86d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jan 18 17:39:14 2018 -0700
+
+    situacion codigo postal
+
+[33mcommit ff450b94e46d55541636a7cfcd742eed238e1925[m
+Merge: 4102bb6 5fbc46b
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jan 16 09:07:01 2018 -0700
+
+    Merge branch 'master' of https://github.com/Luisesh1/marjo
+
+[33mcommit 4102bb6bb8a573f84e10eb23c6a27448e72a4828[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jan 16 09:06:22 2018 -0700
+
+    cambios sin postgres bak
+
+[33mcommit 5fbc46bbfb64caee263026bf1b14a19ecb12ab11[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jan 16 08:59:41 2018 -0700
+
+    correciones de reportes monica
+
+[33mcommit 26bb355f36df26effae64e0678af99a8de2f8fcd[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jan 7 23:16:31 2018 -0700
+
+    ii
+
+[33mcommit f0b6a05b8a235cef3787ff97aa4c87926e1be475[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jan 7 20:23:18 2018 -0700
+
+    cambio de commit para pdf solucion
+
+[33mcommit e9d5766fd1a901c329a510e404cdd7ec9dee85c0[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Dec 26 08:19:15 2017 -0700
+
+    hola
+
+[33mcommit daa2622d7a2dfe0c5e1e4a7e2b955622be9820a7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Nov 28 14:08:15 2017 -0700
+
+    pdf solucion
+
+[33mcommit 93e4c921452c63bd9be75062ed28eaf6faeebaee[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Nov 26 04:15:15 2017 -0700
+
+    se cargo reporte de pagos por credito
+
+[33mcommit c15dd0672355d57fda9ec597518ec493164e0664[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Nov 21 17:31:17 2017 -0700
+
+    cambio a la estructura de recibos
+
+[33mcommit 9e5550454ba9b9a363074daaedd256bf06ad1335[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Nov 12 19:22:16 2017 -0700
+
+    optimazar consulta cobranza
+
+[33mcommit 2df2c77f781c06ede3630936f7ace2323b978188[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Nov 12 04:14:04 2017 -0700
+
+    prueba auto 2
+
+[33mcommit 5312a3e1bb7402a722101650419e3fb3d7f0d7e2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Nov 12 04:03:14 2017 -0700
+
+    prueba con automatizacion de vencimiento
+
+[33mcommit b5d5f92f6fa298ac7cba8deb76443bfeee9948a4[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Nov 9 16:53:48 2017 -0700
+
+    cambio en fecha de operacion
+
+[33mcommit 69cb97a5affe6af47f5be0549f426dd2fae48570[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Nov 9 16:29:58 2017 -0700
+
+    estado de cuenta
+
+[33mcommit 9317f4bd2d5a2e7c478c5e90e6cfc2d10f6f014d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Oct 26 09:10:17 2017 -0600
+
+    seguimiendo2
+
+[33mcommit 47f9a536332f658bb34bb979da89ffec6c076759[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Oct 26 09:00:25 2017 -0600
+
+    seguimiento
+
+[33mcommit d23e25c856f2c5309f163e804aa875edf7fe4abc[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Oct 22 23:22:21 2017 -0600
+
+    cambios
+
+[33mcommit d3163a07e2a730b389ce87b06558068bf5d45b10[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Oct 12 06:01:19 2017 -0600
+
+    se organiso reporte de clientes y se corrigio vencimiento
+
+[33mcommit b930c222bc4c8266b8f39b4feb8fbd9d4a83dbc2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Oct 6 06:12:50 2017 -0600
+
+    cosa
+
+[33mcommit a137765213d28b649ab1d8d34ef0836e4a896297[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Oct 5 08:36:35 2017 -0600
+
+    siwth de reporte clientes
+
+[33mcommit fe116d23ca2540d0c57e47179088f7be9113570e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Oct 5 07:46:40 2017 -0600
+
+    clientes
+
+[33mcommit a9cfb9c9a763918e1430a21f4a78ce4b692e654a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Oct 2 13:10:12 2017 -0600
+
+    cambio de fecha seguimiento
+
+[33mcommit 6e8f1d471909be349d15ae9c74e0ac81784d7a85[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Sep 28 17:26:53 2017 -0600
+
+    mostrar aceptadas
+
+[33mcommit 36dd45e06368985854c3bac1033ff46451d38429[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Sep 28 16:12:19 2017 -0600
+
+    mostrar por aceptar
+
+[33mcommit a62d9e1076844d3f6db1b15f70aa1ec439de4488[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 02:55:38 2017 -0600
+
+    rufus
+
+[33mcommit 1eb28349e419e92ec3d5552b7218c386defb7674[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 02:41:12 2017 -0600
+
+    rufus
+
+[33mcommit 0aee73caff2e8e8f0d0f4f15c7ee2f8085dfd5e3[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 02:24:40 2017 -0600
+
+    rufus
+
+[33mcommit 2df327f6f0954e5da4bfae17eb0a8f43ac997fbd[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 02:18:58 2017 -0600
+
+    rufus
+
+[33mcommit 3c46ed0e08421412ec3b67c67631767e450fa636[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 02:18:27 2017 -0600
+
+    rufus
+
+[33mcommit 07c8a79a3d5366d63a37068f3360f024ee4713a0[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 02:11:59 2017 -0600
+
+    rufus
+
+[33mcommit 230c988799ae5cdb922c8054baa8229ca1009669[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 02:05:03 2017 -0600
+
+    rufus
+
+[33mcommit 430ddef474275bf7527e7cf798e5abb4352b5225[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 02:02:22 2017 -0600
+
+    rufus
+
+[33mcommit 18351cad8db83fd24714386d53aa354bdf333429[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 27 01:39:49 2017 -0600
+
+    se cargo Xd
+
+[33mcommit 8bf23b3ef5559efa1c2b9ad52cbabe0e5be1f1f5[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Sep 25 04:31:06 2017 -0600
+
+    se arreglo el problema de las fecha con el teclado
+
+[33mcommit 6f5210abc8b2a61c11f2b2e3e29c12fa63fcda4f[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Sep 21 14:10:29 2017 -0600
+
+    se agusto  fecha de nacimineto y tambien se cargo un prueba de rufus
+
+[33mcommit 7a5a15b4e0987fd31406276d7cb5dea6ffdba996[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Sep 20 18:35:48 2017 -0600
+
+    cambios
+
+[33mcommit 4ee0d6c35044d45d846f52b3006742e961dc1c16[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Sep 17 19:49:02 2017 -0600
+
+    prueba tiempo 3
+
+[33mcommit 81e18ba8b4e2790126d71e4a61989b46ee893874[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Sep 17 19:41:10 2017 -0600
+
+    prueba tiempo 2
+
+[33mcommit d1d62156939a085131032af4037c9306c9fe07bd[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Sep 17 19:31:57 2017 -0600
+
+    prueba de tiempo,  se puso el boton de atras en pagos,
+
+[33mcommit 7aa1345a3f28122a45b5fa230cd2dd8bfc506bee[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Sep 12 08:45:19 2017 +0000
+
+    se agrego boton de cancelar
+
+[33mcommit a669e6c1451829d337d4f7ebac6f786103552099[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Sep 8 19:03:58 2017 +0000
+
+    vinculo del boton
+
+[33mcommit 2bb83d05032b368e1104be1e54059a827ad817c8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Sep 8 18:41:17 2017 +0000
+
+    vinculo del boton
+
+[33mcommit 36ca6c2a1e94f8073ed7d2ce1ae4ae60632d60b7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Sep 8 18:25:08 2017 +0000
+
+    mejoras de rendimiento
+
+[33mcommit 431a87cc71958a1ec9a61544d4506803df378424[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Sep 1 19:07:21 2017 +0000
+
+    se acoplo  el menu al reporte de cobranza
+
+[33mcommit 9124e94b4a1f9b6b6b7b32226f8678f4ea8ef5eb[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Sep 1 17:31:33 2017 +0000
+
+    se puede visualizar el  sexo de los clientes
+
+[33mcommit 90f6dee7fbc8e29bb1f14c2f4c6d7ea0ca71e794[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Sep 1 17:10:07 2017 +0000
+
+    se valido que la actividad economica se nula
+
+[33mcommit 73e9af7b5e64b468ef7c31d18df79c04a309f630[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Sep 1 15:59:05 2017 +0000
+
+    se regujo carga en  credits
+
+[33mcommit a08b11abd2f4498e4621a40210e8482b8d486b39[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 31 15:58:27 2017 +0000
+
+    solucionado problema de  generear recibos
+
+[33mcommit 15f24b69d40102f168095b901a57bd6c5b13273d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 31 01:43:29 2017 +0000
+
+    se configuro rufus para que se ejecute todos los dias
+
+[33mcommit d87b3e48b6292880893dc9dc8ae83317861a3a79[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 31 01:31:00 2017 +0000
+
+    cambio de semanal en el recibo se liga con periodicidad y se hace una prueba con rufus
+
+[33mcommit 5f10aa91519ea2527be6f9b2c905b09fc90bba3a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 30 23:58:11 2017 +0000
+
+    se cambiraon referecias en los statos
+
+[33mcommit 0cb4093b50cc45dbd8370374192e2bcf5b682c1c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 29 15:37:39 2017 +0000
+
+    reducion de cadena json
+
+[33mcommit 83e1edf86c70a7d983bfedc96a4122288a97ad35[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 28 20:58:35 2017 +0000
+
+    se quitaron fechas de la corrida
+
+[33mcommit f1ff4824699be1286374c6d53048bd8b098faa17[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 28 07:56:49 2017 +0000
+
+    se redujo el tamaño de la respuesta de credito
+
+[33mcommit dcbb0767ff64a64278189a648f87c4af21b1a1f7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Aug 25 22:30:33 2017 +0000
+
+    cambio en se seguimiento
+
+[33mcommit 73afc26dbddbc17603621af43e77399e032491c0[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Aug 25 17:32:48 2017 +0000
+
+    antes de modificar las partes de seguimiento
+
+[33mcommit 5f9fda8bccae9d9e05d767d3a605cc3102acb1c3[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 24 05:55:55 2017 +0000
+
+    retornando arreglo en ligar de  nil  en creditos
+
+[33mcommit 319845eceb1d5371c75ba9a496e979cccecc7bb7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 24 05:39:33 2017 +0000
+
+    retornando arreglo en ligar de  nil  en creditos
+
+[33mcommit 1e5ce31d36764a9a687baac8b6ca1d8cf79a5fcd[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 22 23:01:10 2017 +0000
+
+    cambio en sucursales
+
+[33mcommit ab616100ad754bfa52820e55651bc2c20d2deb9f[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 21 10:41:15 2017 +0000
+
+    sacanbio ass
+
+[33mcommit d630f126019ec5889b4efbbc3744207fceeeca12[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 21 09:10:04 2017 +0000
+
+    cambios en de generador de fechas , error al activvar ticket , 3er estatus en ticket
+
+[33mcommit 87f91373a460e06d17e322eb1bc8e227750b8fb3[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 17 15:47:01 2017 +0000
+
+    se quitaron  loa calendarios de materialicecss
+
+[33mcommit 681ba6edcb88cc489dbf0e780ba943b12204ef33[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 17 00:05:03 2017 +0000
+
+    se puso a
+
+[33mcommit 5f73ef0885e826050ab10f9673e289a3d48c92de[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 16 19:19:40 2017 +0000
+
+    se puso a
+
+[33mcommit b6fd8f727ef6ed943012dbd527508baa7ae2b9d5[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 16 19:16:37 2017 +0000
+
+    cambio de calendario
+
+[33mcommit fc8f6d8197ca408308d67686c8b749c442c56c8e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 16 00:39:18 2017 +0000
+
+    campos extra
+
+[33mcommit ed5169960eae96aa7d9e2648bfbba144e1a9d2ad[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 16 00:34:41 2017 +0000
+
+    campos extra
+
+[33mcommit 3a110ab4c33f4456c29ae573056171f35e8d4283[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 16 00:16:44 2017 +0000
+
+    se cambiaron las claves por nombres
+
+[33mcommit bbc7c2f75fb2ac22151a63b7a6c1efa74a170c55[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 15 19:36:15 2017 +0000
+
+    filtros
+
+[33mcommit 2eb0c93f3f3c095b3499112fb55930b737689532[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 15 16:22:54 2017 +0000
+
+    fechas en el filtrado de solicistudes aceptadas
+
+[33mcommit 73e03cdeda0f4489dee630d0b8a22726354b96e6[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 14 18:22:10 2017 +0000
+
+    cargar
+
+[33mcommit 4a3685bee3ac88cd3e8e3ae9ed6e6d7b5841b28f[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 14 18:19:54 2017 +0000
+
+    cargar
+
+[33mcommit 36f57bd8f8a5d78b8f22cdedb799c52bd9b988b6[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 14 16:40:32 2017 +0000
+
+    hool
+
+[33mcommit 5acb8cc7df1b32c8ec45db49487cdc858b356e04[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 14 15:08:43 2017 +0000
+
+    filtrado de pagos
+
+[33mcommit df4cd27acf7096b97d40b0523e3b73d0edd0c1bb[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Aug 11 19:56:11 2017 +0000
+
+    filtrado de sucursal
+
+[33mcommit b9abb7e07d0d90ba5e65edc974a8644de9c9fd0c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Aug 11 18:38:42 2017 +0000
+
+    filtrado de sucursal
+
+[33mcommit f58540e5db28adf0aaf7c6ad065817d489b88251[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Aug 11 14:13:28 2017 +0000
+
+    se restarecio oredenado  al lo normal
+
+[33mcommit 3bb9f5ef814778e8f3575cafb0ddc14bdf5db2ed[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Aug 11 14:06:58 2017 +0000
+
+    se cambio el codigo de ordenado
+
+[33mcommit d87c16b3ff9d92f3472ee263484e9827cb8aa04d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Aug 11 13:41:52 2017 +0000
+
+    se cambio el codigo de ordenado
+
+[33mcommit d5ab311d4ec1cc1c720abe6dd4f8edf3dfb58b60[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 8 01:32:12 2017 +0000
+
+    se puede cancelar pagos
+
+[33mcommit 54f5c14fb18e5f03fdb836924a6df9dc94b673fb[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 8 01:31:22 2017 +0000
+
+    se puede cancelar pagos
+
+[33mcommit 557f1286f0c6ce4287e92d1a11235fd787f4e9fa[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Aug 7 19:39:43 2017 +0000
+
+    ajuesta afechas semanales wday
+
+[33mcommit b0e26386aeb8c594f582d3e8976d0f69ea115071[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Aug 5 22:29:43 2017 +0000
+
+    se arreglo la generacion de pagos semanales
+
+[33mcommit f1afbaaa40f41b9e4f48159a86b910b7552f0a6c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 3 04:27:21 2017 +0000
+
+    cambien en le estatus del payment
+
+[33mcommit 680e9107ab0b1d4d2b09e8042a8bc67dadfa0e8f[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 3 04:24:01 2017 +0000
+
+    regresar a la normalidad
+
+[33mcommit f8c521e8edcac6693c5960ff2808a53d9d79ebf6[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 3 04:21:52 2017 +0000
+
+    truco de las fechas
+
+[33mcommit 83e03f0c9a6a1c16fda297d6769b712229a1011e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Aug 3 04:17:59 2017 +0000
+
+    truco de las fechas
+
+[33mcommit 3c12ce5374c6d43d51efde7edc4382421dc4a5d7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 2 22:39:29 2017 +0000
+
+    ajustes en fechas
+
+[33mcommit 4bf08247e932fa7dca3f07b108ac2c22a05c0c1b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 2 22:34:48 2017 +0000
+
+    ajustes en fechas
+
+[33mcommit 3d25c1f0b19880a73e54d985b70c1495708e8007[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 2 21:39:54 2017 +0000
+
+    ajustes en fechas
+
+[33mcommit 35a184ace513177498fdd51359a554a7cafb6f1d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 2 21:34:22 2017 +0000
+
+    ajustes en fechas
+
+[33mcommit 6b8b1a13c20ca583521315c1b82416c079623b46[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 2 21:28:50 2017 +0000
+
+    ajste en genereador de fechas
+
+[33mcommit b683c5f4cf8fe39a2ac3dce0876cccf2709083d4[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Aug 2 21:19:20 2017 +0000
+
+    cambio de algorimo de fechas
+
+[33mcommit 9e5c52978aac8e2857025899d747cd3e4a22d59e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 31 22:12:17 2017 +0000
+
+    cliente repetido
+
+[33mcommit 755047d2730cd37b6e503b757e2682f8eeab9ee4[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 31 21:11:56 2017 +0000
+
+    se quito logo
+
+[33mcommit 2bed126fc6e825c10ea7c580b018eb4690c47985[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 31 18:41:09 2017 +0000
+
+    cambio en formatos del pagos
+
+[33mcommit 1aaf97f75c4ac4f3dad8a0549246dd7f9e7e7ed6[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 31 18:40:12 2017 +0000
+
+    cambio en formatos del pagos
+
+[33mcommit 0e3a14e2e5dcdb86c914d462601a0f431e20b217[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 31 11:39:04 2017 +0000
+
+    cambios pollod
+
+[33mcommit 13e0c80b4f3d0571974647b54206c6e6809e526a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 31 02:12:45 2017 +0000
+
+    revertir  de fecha 18-07-2017
+
+[33mcommit de8246b003cf0f594d34aa744f12b3d076e1aad7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 31 02:09:04 2017 +0000
+
+    modificacion de fecha 18-07-2017
+
+[33mcommit d0df7b0c703d531e9a07b99ee2f982554474b0cd[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 31 01:35:13 2017 +0000
+
+    Ordenando fechas
+
+[33mcommit bba631764273dd06daa5cc8a6e5b196120fb1622[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 30 20:21:52 2017 +0000
+
+    ajustes en clientes
+
+[33mcommit 8370b024e85b2adfe0181694000b2b429c0fc523[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 30 18:13:23 2017 +0000
+
+    modificaciones a editar customer
+
+[33mcommit 8a5a286041f79714ddb3da00fba9de734c2dd4f1[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 30 10:02:00 2017 +0000
+
+    se corrigio padre en customer
+
+[33mcommit e06d40c588ac90173b7e8aadad3790cc538e4d8b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 30 09:45:13 2017 +0000
+
+    corregido error de referencia nula
+
+[33mcommit cbd1346fb8f44c2592659b4e6750dc879fabfbb6[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 30 09:40:55 2017 +0000
+
+    vinculado customers
+
+[33mcommit 80f4566e4207864163d2586870fca32aa53b603a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 30 03:26:06 2017 +0000
+
+    actualizacion de clientas
+
+[33mcommit ef932f6af842ebf41e9e4251451fc469fd4b798d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 30 02:36:06 2017 +0000
+
+    se referencia de agente empres en customer
+
+[33mcommit 75da2c0f46adcb1c04cfb41519f9c21debcba98a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jul 29 13:05:15 2017 +0000
+
+    se corrigio  seguimineto
+
+[33mcommit 8088f8f452c88597777d39c47548b82e66462f63[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 28 18:56:55 2017 +0000
+
+    que apacersca como  vencido
+
+[33mcommit 34a4b9d50a34d93c8bb9238310ea5d5d7cd91f23[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 28 18:21:27 2017 +0000
+
+    se agrega interes moratorio aplicable
+
+[33mcommit 52da09516d3d28efcfb1c0e03af6128a26ec55f1[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 28 00:57:12 2017 +0000
+
+    recuperacion de id en genereador de recivod
+
+[33mcommit b8d2613f6a97ede9b3d8b7ad42d7bc0a1b1e11af[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 27 20:57:44 2017 +0000
+
+    se restablecio corrida pdf
+
+[33mcommit c4655c7cb2c06894b5322c514d8c3ffa8fa2229d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 27 20:06:35 2017 +0000
+
+    SE QUITO LOGO
+
+[33mcommit aa8d89044e3bcf80f3a81986525c59d2ddd607f2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 27 19:53:30 2017 +0000
+
+    ordenar fechas
+
+[33mcommit 8da65b4b854aafcb8bde092463959d2e70441e60[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 24 21:33:17 2017 +0000
+
+    se configuro el usuario  de sucuersal
+
+[33mcommit a7aa0ba3407b21a803fb1c348c304e830655d54d[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jul 18 22:23:16 2017 +0000
+
+    ggg
+
+[33mcommit 52c47a0353559213e532ae17e4be97c42846e427[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jul 18 17:29:41 2017 +0000
+
+    validar 0
+
+[33mcommit c0c786a8a08de5074b546d816e6e042d2dece914[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jul 18 15:50:40 2017 +0000
+
+    formato de fecha entrevista y corrida
+
+[33mcommit 2c544442f182ba145721821b8001ec81f56791fd[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jul 18 15:41:59 2017 +0000
+
+    validacion de seguro social y rfc
+
+[33mcommit 1fb08c7a6dff0d517f4babafe508c1bcb3048981[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jul 18 06:13:40 2017 +0000
+
+    fecha falsa
+
+[33mcommit 51b5bf9179c22fe77b8602493c2ae8903a3ebf22[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jul 18 06:10:13 2017 +0000
+
+    fecha falsa
+
+[33mcommit 772d8cd96b8a75300437ce022043b2214b560080[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jul 18 06:07:29 2017 +0000
+
+    fecha falsa
+
+[33mcommit db3c8be3a1d5e80dca82ec195f245defca86d933[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 17 17:03:17 2017 +0000
+
+    pdf
+
+[33mcommit 35fe4ff11f6bf0579bcae7e439295669acf957c9[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 16 11:09:23 2017 +0000
+
+    arreglando telefonos
+
+[33mcommit 2dbf8af5773dbd7f670c4ea221e7badb615acbe1[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 16 10:19:51 2017 +0000
+
+    prueba de pdfs
+
+[33mcommit e1b11aa9032689cfe45e3129d91c447c4cc05a4e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 16 02:34:23 2017 +0000
+
+    revision de pdfs
+
+[33mcommit f5be031e2f2d0f48d92ed6b8989f1964608a3fac[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 14 23:59:54 2017 +0000
+
+    modificacion en poliza
+
+[33mcommit 2f98b9cb7d3496cec0e6da0f5c2e5ca2177bc391[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 14 16:31:13 2017 +0000
+
+    se agregaron ajustes de pdfs
+
+[33mcommit 26911710ca0819de62bcb580f84198a6d62dc556[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 14 15:52:35 2017 +0000
+
+    cambios del pollo
+
+[33mcommit 2b3adb1e16d8eba647475fc3ef6d05b38f079f74[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 14 00:02:01 2017 +0000
+
+    cargar de poliza
+
+[33mcommit d0b804e45be98564805f7a4be601f26e56dc1e2c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 23:50:48 2017 +0000
+
+    customers
+
+[33mcommit 1e6861b8dc5998ad0476b293db64c05c8e8881c4[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 23:08:07 2017 +0000
+
+    holap
+
+[33mcommit 3ed8f2a74673cee4111c59ceab1b248557471d9a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 22:57:20 2017 +0000
+
+    ajustes contrato
+
+[33mcommit 86c286456caea3db4dcabf7f0a13cd4da7e74384[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 22:26:47 2017 +0000
+
+    cambios en contrato
+
+[33mcommit 189426ae873f771dd96e3c271a9b741ad41dc60b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 21:51:14 2017 +0000
+
+    se solucionaron duplicados
+
+[33mcommit 225b374773db60436f1f385d33bdddc967f4dd00[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 20:24:05 2017 +0000
+
+    cambio en los combos
+
+[33mcommit 0bfb285dcfbcbf96c0f00bb4c4a619d305460ac2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 18:56:57 2017 +0000
+
+    se agrego ocupation en entrevista
+
+[33mcommit 66ff345d691688342d52310d2ddd8cc5a60d4662[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 18:38:50 2017 +0000
+
+    añadido plazo de prestamo
+
+[33mcommit 608ad99f37320dbe574fe62e190db27b0125a75a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 17:43:37 2017 +0000
+
+    cambios de clave en cmunicipality
+
+[33mcommit 589bd38524b9257d151e26224fd4325a06ed84be[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 15:16:10 2017 +0000
+
+    remedio temporar para los folios
+
+[33mcommit 96cd849134858aef7d9af89e0b6bc20f056386fc[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jul 13 14:06:17 2017 +0000
+
+    cambio en contrato
+
+[33mcommit 81ab4944c26aab0969c9ff1540c2f69628dd5d00[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jul 11 18:45:40 2017 +0000
+
+    ya no se borra la informacion de la solicitud y se abren los pageres
+
+[33mcommit 750d5a3308c6b43a1a3a7b766d23e05f220f85d5[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 3 18:47:28 2017 +0000
+
+    se agregaron se midificaciones en los doc
+
+[33mcommit 63af821efa58d15da4d6e277d7a9fe3f2ad75213[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 3 18:06:22 2017 +0000
+
+    se modifico la referencia de agente  en customer
+
+[33mcommit 3e71fd6447acfb07f3f826ed17200427c1ebbb23[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 3 17:48:41 2017 +0000
+
+    fix customer selection referencia_agenteEmpresa
+
+[33mcommit 0b83b8642f01a47cf8384bcde8e67e8ec1311a84[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 3 17:21:17 2017 +0000
+
+    se arreglo el renderizado del pdf
+
+[33mcommit c59a28dd5d33a22ad886c0d585ca7127cfec837e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jul 1 11:46:16 2017 +0000
+
+    se modifico un error de referencia
+
+[33mcommit 7b505f32f937d81f5b14634b63e7e718b2269b7f[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jul 1 11:05:41 2017 +0000
+
+    se modifico lo de base 64
+
+[33mcommit c8855a55a4aad415c28b951809bf56bf42bcc485[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Jun 21 09:00:09 2017 +0000
+
+    se implemeto la el interes moratorio
+
+[33mcommit bcd1926e0e09029ec69edc799ecd85c669fa1894[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 12 22:01:44 2017 +0000
+
+    se cabio el hiden de html por css en combos ciudades
+
+[33mcommit 92dfb830256a191a9af59d32dfa0622835aa58b3[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 12 20:10:38 2017 +0000
+
+    solucinada la carga de municipality 2
+
+[33mcommit 92829a31f452ec8ffba1040e3b1b0991e2623b56[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 12 20:07:21 2017 +0000
+
+    solucinada la carga de municipality
+
+[33mcommit 3140f66c8a9554feb3bf277765b4d98c05edc8ac[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 12 20:01:33 2017 +0000
+
+    se cargan los combos
+
+[33mcommit 6cae734babc82e62bf471e3e6d0b596e675b8d1b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 12 03:17:13 2017 +0000
+
+    tratando de poner la imagende fondo 2
+
+[33mcommit 8b984dfea71f04c21e469b66e043ba21edcfc86e[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 12 03:05:45 2017 +0000
+
+    tratando de poner la imagende fondo
+
+[33mcommit c5c8ee8949596a349e83b654c620eee09b4866cc[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jun 12 02:41:41 2017 +0000
+
+    hola que hace
+
+[33mcommit b8abaaacf622922abb3bf3fd0afc01dd17678b4b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jun 8 20:43:49 2017 +0000
+
+    compilado
+
+[33mcommit 2014e6105fce82096ddb4cd7a518ba3adbc9a50a[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Jun 8 20:40:25 2017 +0000
+
+    doble material
+
+[33mcommit 0e18d0ccfc7e7b89216e064566fe37f350c0b321[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jun 6 17:45:48 2017 +0000
+
+    cambios para pg
+
+[33mcommit 0537ebff238e8b1607fc44aa107e6279b91c2ee2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jun 2 08:07:15 2017 +0000
+
+    hola
+
+[33mcommit 94e37802651387a2eb2d372c89d51e7bfed4a865[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Mar 3 01:10:19 2017 +0000
+
+    cambio a mac
+
+[33mcommit d79ada9ab59c001bbae051c23b086a2f40954fb8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Feb 13 10:29:38 2017 +0000
+
+    se cambio la pantalla de categoria por un sistems de angular y se puso la campana
+
+[33mcommit ef73806917906ddb61c16fd6945f7e5cb966642b[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Dec 21 23:54:30 2016 +0000
+
+    ajustes en los documentos
+
+[33mcommit b423a8bd4294ba2fcd130f77148b93db45c187c7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed Nov 23 17:43:42 2016 +0000
+
+    modificando el formato del monto (90)
+
+[33mcommit f5e8bd7afb3d6e1755e2909eca444ed31cb2c1e8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Nov 19 06:51:21 2016 +0000
+
+    arreglando esquema de cretitos antes de borrar migraciones
+
+[33mcommit ab7931279c3f309e6ba25d3223a293beb0a837d2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Nov 6 09:07:35 2016 +0000
+
+    retomando
+
+[33mcommit 9635bb7b022584827296756512b7fc825b60c3f6[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Oct 4 00:12:04 2016 +0000
+
+    antes de moverle
+
+[33mcommit d0e4da9b2986732c190e9b2a9719c0c067ef1cd8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 16 23:26:45 2016 +0000
+
+    a heroku
+
+[33mcommit 0dd1476f71d0d64e9b0bb063b6ff14170e69eb32[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 16 23:25:13 2016 +0000
+
+    actualizacion 16/agosto heroku
+
+[33mcommit 7f0578c50d271f7c7fb59e5a789c19ce6837d592[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Aug 16 19:33:55 2016 +0000
+
+    casi sin modificar credito
+
+[33mcommit 6c4576cee17605923be855f8745fec6416c358f7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Aug 5 15:31:16 2016 +0000
+
+    cambios sin solicitud
+
+[33mcommit b9f1f2bea7079468c4cee59b2124e9f030ffe0b8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 18 20:49:21 2016 +0000
+
+    heroku
+
+[33mcommit 3b0e02dfec77afa5d89134cc9e6ef1a936789332[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 18 17:56:55 2016 +0000
+
+    heroku
+
+[33mcommit 3480f84ea3ca5fc8c5f9b3cb4cd879a492c8b363[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 18 17:49:10 2016 +0000
+
+    heroku
+
+[33mcommit e1955b665e53510e71aaa83c756cb94b05feb659[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 18 09:36:25 2016 +0000
+
+    update heroku
+
+[33mcommit 30cf423b2b84296ee8faab6e13bd80b1fa933365[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 18 09:31:44 2016 +0000
+
+    ooo
+
+[33mcommit 95033b554f6c38b8a4d33b08e1c03448a38a43c7[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Mon Jul 18 09:25:38 2016 +0000
+
+    ooo
+
+[33mcommit ea3e750ee2d13af6870bdbfd856b12ad1146a40c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 15 10:37:38 2016 +0000
+
+    cambios de monica casi completos
+
+[33mcommit 2bb076f0db8d0ce682bac18a6a42e52744b43864[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 10 12:43:28 2016 +0000
+
+    botenes en el area de producto
+
+[33mcommit 5225fb1b489ed16f6352d09c018a08d3f661ab67[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 10 11:49:07 2016 +0000
+
+    cambiando mayuculas de las migraciones
+
+[33mcommit 36ea9e7d76d164cea3af5029d15fded61c6fad36[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 10 10:55:18 2016 +0000
+
+    a herku
+
+[33mcommit ec69b997e65f14e7a74e29129b13ea39148224f8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 10 10:10:46 2016 +0000
+
+    ajustes a las migraciones para pg
+
+[33mcommit 5702ec9ecc216a2916c22028ae56de5b5144cee6[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun Jul 10 09:53:38 2016 +0000
+
+    ajustes de combo box  en  creditos
+
+[33mcommit 8a0a5a28f4682a285ee1e333869f5c531a4c52d2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jul 8 03:29:41 2016 +0000
+
+    add format to credits and information to db:seed
+
+[33mcommit 19a86fbd7f33b94cc8386556b04a57e380f4e2d1[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jun 25 08:13:32 2016 +0000
+
+    to heroku 2
+
+[33mcommit 6d9a8506977593ccafa736b50fc73e8acf56eddb[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jun 25 07:57:40 2016 +0000
+
+    to heroku 2
+
+[33mcommit ab50577b3c3aa808410c16f3b268d37fd2354850[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jun 25 07:56:42 2016 +0000
+
+    to heroku 2
+
+[33mcommit 3ba7a6d2c1354c78d0b899b52f3c6386a11846dc[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jun 25 07:55:38 2016 +0000
+
+    to heroku 2
+
+[33mcommit e7bc469b8be7af04e4cdc6acf6f90856d14d2390[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jun 25 07:41:32 2016 +0000
+
+    to heroku
+
+[33mcommit 8ed4bf2924edcdd0b5657578af7f2d0536a11dee[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jun 25 07:33:51 2016 +0000
+
+    agregar ngroute a angular
+
+[33mcommit 54bf11057f744a8360930d8c3d1578c72243aea4[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sat Jun 25 07:09:59 2016 +0000
+
+    implementacion de api de codigo postal
+
+[33mcommit 5f8e0ac77b8f008893dde13670e5cf14a2abab70[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Tue Jun 21 14:59:37 2016 +0000
+
+    ajuates de la segunda entrega
+
+[33mcommit 7c38d5f88c85a583000a32a32275083002e70ed2[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jun 17 10:35:43 2016 +0000
+
+    se soluciono el problema con el alias
+
+[33mcommit f058238b63bf9f86c108b57e00e00a614eac7761[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jun 17 10:32:13 2016 +0000
+
+    navbar esatica y se elimino productos id de branchoffice
+
+[33mcommit c6c38dbedbcda8c613cdd1b71ea4ab8827a929c0[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jun 10 09:16:01 2016 +0000
+
+    a heroku 5 solution
+
+[33mcommit 9aa373470cb8f88661c7627dc921ab707a165294[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jun 10 08:41:53 2016 +0000
+
+    a heroku 4
+
+[33mcommit b7b81f49e74d03351d8af98263ab883a268446bb[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jun 10 08:35:16 2016 +0000
+
+    a heroku 3
+
+[33mcommit fc4f94e53beefac04d75911248e81217fcb2a590[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jun 10 08:32:31 2016 +0000
+
+    a heroku 2
+
+[33mcommit 0645b9bed3f74849d3aa09278166fc6286be6b98[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri Jun 10 01:37:47 2016 +0000
+
+    a heroku
+
+[33mcommit 45658e1390fbfeb4e4aefc63cb38d9307e3b4e51[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Wed May 25 20:25:21 2016 +0000
+
+    mofificaciones exepto acentos y alias
+
+[33mcommit 23ff611cc3888fbfa7523a1fb3faef93d7e47837[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Fri May 20 08:20:15 2016 +0000
+
+    subir 4
+
+[33mcommit dbb3427dfa8b03dda59d21a6ffa004be783a5508[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu May 19 15:51:30 2016 +0000
+
+    subir 3
+
+[33mcommit 685f4dbc6fa03ccc042ec26b0040a6b278b89ccf[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu May 19 15:43:53 2016 +0000
+
+    subir a heroku 2
+
+[33mcommit fdaa77976f5286f48a8169c7e08ec156fe631d81[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu May 19 15:36:29 2016 +0000
+
+    subir a heroku
+
+[33mcommit 7e81f946560631a81802dcf2de1bc6c8067f017c[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu May 19 08:23:33 2016 +0000
+
+    actulizacion del primer spring 3
+
+[33mcommit 9958944af3c828315b981fecc0526470205f56dd[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu May 19 04:03:47 2016 +0000
+
+    actulizacion del primer spring 2
+
+[33mcommit 4ea74ea1f4d152646ab84e38244fb05fba0fd1b8[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu May 19 04:02:59 2016 +0000
+
+    actulizacion del primer spring
+
+[33mcommit 01f264f44c59f45ec703c5e3dda669e43b1159d3[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Sun May 8 20:47:11 2016 +0000
+
+    sucurales, empresas:sin, val agentes:sin val se creo controlador de usuarios
+
+[33mcommit 2984aeffe84f6d044a916b9d67270ce2484088c3[m
+Author: luisesh11 <luisesh1x10@hotmail.com>
+Date:   Thu Apr 28 16:20:50 2016 +0000
+
+    inicio devise user aceptando campos

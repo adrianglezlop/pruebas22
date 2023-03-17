@@ -1,0 +1,170 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <p>
+      <%= f.radio_button  :tipo,1 %> <%= f.label "#{:tipo}_1", "Administrador general" %>
+      <%= f.radio_button  :tipo,2 %> <%= f.label "#{:tipo}_2", "Asistente Marjor" %>
+      <%= f.radio_button  :tipo,3 %> <%= f.label "#{:tipo}_3", "Sucursal" %>
+      <%= f.radio_button  :tipo,4 %> <%= f.label "#{:tipo}_4", "Consultas" %>
+    </p>
+  </div>
+  
+  <div class="field">
+    <%= f.label :app %><br />
+    <%= f.text_field :app, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :apm %><br />
+    <%= f.text_field :apm, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nom1 %><br />
+    <%= f.text_field :nom1, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nom2 %><br />
+    <%= f.text_field :nom2, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :RFC %><br />
+    <%= f.text_field :RFC, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :CURP %><br />
+    <%= f.text_field :CURP, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :seguro %><br />
+    <%= f.text_field :seguro, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :INE %><br />
+    <%= f.text_field :INE, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nacionalidad %><br />
+    <%= f.text_field :nacionalidad, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :fecha_nacimiento %><br />
+    <%= f.text_field :fecha_nacimiento, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nac_ciudad %><br />
+    <%= f.text_field :nac_ciudad, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nac_estado %><br />
+    <%= f.text_field :nac_estado, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nac_pais %><br />
+    <%= f.text_field :nac_pais, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <p>
+      <%= f.radio_button  :sexo,true %> <%= f.label "#{:sexo}_true", "Hombre" %>
+      <%= f.radio_button  :sexo,false %> <%= f.label "#{:sexo}_false", "Mujer" %>
+    </p>
+  </div>
+  
+  <div class="field">
+    <%= f.label :telefono_casa %><br />
+    <%= f.text_field :telefono_casa, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :telefono_celular %><br />
+    <%= f.text_field :telefono_celular, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :correo1 %><br />
+    <%= f.text_field :correo1, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :correo2 %><br />
+    <%= f.text_field :correo2, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :calle %><br />
+    <%= f.text_field :calle, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :numero_ext %><br />
+    <%= f.number_field :numero_ext, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :numero_int %><br />
+    <%= f.number_field :numero_int, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :colonia %><br />
+    <%= f.text_field :colonia, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :codigo_postal %><br />
+    <%= f.number_field :codigo_postal, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :municipio %><br />
+    <%= f.text_field :municipio, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :estado %><br />
+    <%= f.text_field :estado, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :pais %><br />
+    <%= f.text_field :pais, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

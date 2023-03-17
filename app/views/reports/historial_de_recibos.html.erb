@@ -1,0 +1,53 @@
+
+<div ng-controller="recibos">
+     <div class = "row">
+       <h2 align="center">HISTORIAL DE RECIBOS</h2>
+         <div class = "col s12 m6 l4">
+              <label>
+                SUCURSALES
+              </label>
+             <select class="browser-default" ng-model="sucursales.selected" ng-change="cargarHijos()">
+                 <option value="" selected>Sucursales</option>
+                <option ng-repeat="option in sucursales" value="{{option.id}}">{{option.nombre}}</option>
+            </select>
+              <label>
+                Seleciona...
+              </label>
+              </br>
+                   <p>
+                      <input name="group1" type="radio" id="test1" value =1 ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test1">Agente</label>
+                    </p>
+                    <p>
+                      <input name="group1" type="radio" id="test2"  value =0  ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test2">Empresa</label>
+                    </p>
+                 
+                 <label>
+                   EMPRESA O AGENTE
+                 </label>
+                 <select  class="browser-default" ng-model="hijos.selected">
+                    <option value="" selected>{{tipo}}</option>
+                    <option ng-repeat="option in hijos" value="{{option}}">{{option.nombre_completo}}</option>
+                </select>
+                  </br>
+                  <label>
+                    PRODUCTOS
+                  </label>
+                <select  class="browser-default" ng-model="productos.selected" ng-change = "obtenerFechas()" >
+                  <option value="" selected>Productos</option>
+                  <option ng-repeat="option in productos" value="{{option.id}}">{{option.nombre_del_producto}}</option>
+                </select>
+                </br>
+                <label>
+                  FECHAS DE IMPRESION
+                </label>
+                <select  class="browser-default" ng-model="fechas.selected">
+                  <option value="" selected>Fechas</option>
+                  <option ng-repeat="option in fechas" value="{{option.fecha_de_impresion}}">{{option.fecha_de_impresion}}</option>
+                </select>
+              <br>
+              <a class="waves-effect waves-light btn" ng-click="historial_de_recibos()"> DESCARGAR HISTORIAL DE RECIBOS </a>
+         </div>
+    </div>
+</div>

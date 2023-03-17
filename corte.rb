@@ -1,0 +1,2 @@
+
+Coman.create(c:"hola")

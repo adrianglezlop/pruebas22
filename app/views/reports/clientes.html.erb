@@ -1,0 +1,16 @@
+
+<div ng-controller="recibos">
+     <div class = "row">
+       <h1 align="center">REPORTE DE CLIENTES</h1>
+         <div class = "col s12 m6 l4">
+              <label>
+                Sucursales
+              </label>
+             <select class="browser-default" ng-model="sucursales.selected" ng-change="cargarHijos()">
+                 <option value="" selected>Todas</option>
+                <option ng-repeat="option in sucursales" value="{{option.id}}">{{option.nombre}}</option>
+            </select>
+            <a class="waves-effect waves-light btn" ng-click="descargar_clientes()">Descargar</a>
+            </div>
+    </div>
+</div>

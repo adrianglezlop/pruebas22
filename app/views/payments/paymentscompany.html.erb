@@ -1,0 +1,108 @@
+
+<div ng-controller="recibos">
+     <div class = "row">
+       <h2 align="center">PAGO POR EMPRESA</h2>
+         <div class = "col s12 m6 l4">
+              <label>
+                SUCURSALES
+              </label>
+             <select class="browser-default" ng-model="sucursales.selected" ng-change="cargarHijos()">
+                 <option value="" selected>Sucursales</option>
+                <option ng-repeat="option in sucursales" value="{{option.id}}">{{option.nombre}}</option>
+            </select>
+              <label>
+                Seleciona...
+              </label>
+              </br>
+                   <p>
+                      <input name="group1" type="radio" id="test1" value =1 ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test1">Agente</label>
+                    </p>
+                    <p>
+                      <input name="group1" type="radio" id="test2"  value =0  ng-model= "agente_empresa" ng-change="cargarHijos()"/>
+                      <label for="test2">Empresa</label>
+                    </p>
+                 
+                 <label>
+                   EMPRESA O AGENTE
+                 </label>
+                 <select  class="browser-default" ng-model="hijos.selected">
+                    <option value="" selected>{{tipo}}</option>
+                    <option ng-repeat="option in hijos" value="{{option}}">{{option.nombre_completo}}</option>
+                </select>
+                  </br>
+                  <label>
+                    PRODUCTOS
+                  </label>
+                <select  class="browser-default" ng-model="productos.selected" ng-change = "obtenerFechas()" >
+                  <option value="" selected>Productos</option>
+                  <option ng-repeat="option in productos" value="{{option.id}}">{{option.nombre_del_producto}}</option>
+                </select>
+                </br>
+                <label>
+                  FECHAS DE IMPRESION
+                </label>
+                <select  class="browser-default" ng-model="fechas.selected">
+                  <option value="" selected>Fechas</option>
+                  <option ng-repeat="option in fechas" value="{{option.fecha_de_impresion}}">{{option.fecha_de_impresion}}</option>
+                </select>
+              <br>
+              <a class="waves-effect waves-light btn" ng-click="agregar(hijos.selected)">Agregar</a>
+         </div>
+         
+        <div class= "col s12">
+         
+             <table class="striped" >
+                <thead>
+                  <tr>
+                      <th data-field="Tipo">AGENTE O EMPRESA</th>
+                      <th data-field="price">CLAVE</th>
+                      <th data-field="price"></th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr ng-repeat = "ele in seleccionados">
+                    <td>{{ele.tipo==1 ?"Agente":"Empresa"}}</td>
+                    <td>{{ele.nombre_completo}}</td>
+                    <td><a class="waves-effect waves-light btn" ng-click="eliminar($index)">Eliminar</a></td>
+                  </tr>
+                </tbody>
+              </table>
+             <a class="waves-effect waves-light btn" ng-click="obtenerPaymentsPorEmpresa()">Mostrar</a>
+        </div>
+     
+     
+     
+      <div class= "col s12  ">
+             <table class="striped" >
+                <thead>
+                  <tr>
+                      <th>NO.</th>
+                      <th>FECHA CREDITOS</th>
+                      <th>AGENTE/EMPRESA</th>
+                      <th>NOMBRE</th>
+                      <th>FECHA PAGO</th>
+                      <th>FOLIO</th>
+                      <th>RECIBO</th>
+                      <th>IMPORTE</th>
+                      <th>ACCION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat = "pago in pagos">
+                    <td>{{$index+1}}</td>
+                    <td>{{pago.fecha_contrato}}</td>
+                    <td>{{pago.padre}}</td>
+                    <td>{{pago.credit_nombre}}</td>
+                    <td>{{pago.fecha_de_pago_formato}}</td>
+                    <td>2503616176B{{pago.f_ticket_id}}</td>
+                    <td>{{pago.recibo}}</td>
+                    <td>{{pago.importe_formato}}</td>
+                    <td><a class="waves-effect waves-light btn" ng-click="pagar_por_empresa(pago)">pagar</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+</div>

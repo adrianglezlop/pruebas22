@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col s12 ">
+        <h4>Historial de créditos </h4>
+    </div>
+    <style>
+      td{
+        padding:5px 5px; 
+      }
+    </style >
+    <div class="col s12">
+        <table style="font-size:12px;">
+              <thead>
+                <tr>
+                  <th>PRODUCTO</th>
+                  <th>PAGO</th>
+                  <th>FECHA PAGO</th>
+                  <th>FECHA CREDITO</th>
+                  <th>FOLIO</th>
+                  <th>FOLIO ANTERIOR</th>
+                  <th>MONTO</th>
+                  <th>ESTADO</th>
+                  <th>CALIFICACION</th>
+                  <th></th>
+                </tr>
+              </thead>
+            <tbody>
+            <% @credits.each do |credit| %>
+              <tr>
+                <% case credit.product_id %>
+                    <% when 1 %>
+                        <td><%= "MIPYMARJOQ" %></td>
+                    <% when 2 %>
+                        <td><%="MARJO26" %></td>
+                    <% when 3 %>
+                        <td><%="MARJO26" %></td>
+                    <% when 4 %>
+                        <td><%="MARJO5" %></td>
+                    <% when 5 %>
+                        <td><%="MIPYMARJOS" %></td>
+                    <% when 6 %> 
+                        <td><%="ANGMPO" %></td>
+                    <% when 7 %>
+                        <td><%="CDMXQ" %></td>
+                    <% when 8 %>
+                        <td><%="CDMXS" %></td>
+                    <% when 9 %>
+                        <td><%="MPO12" %></td>
+                    <% when 10 %>
+                        <td><%="MARJOV" %></td>
+                    <% when 11 %>
+                        <td><%="MARJOV6" %></td>
+                    <% when 12 %>
+                        <td><%="MARJOV8" %></td>
+                <% end %>
+                <td><%= credit.padre.nombre_completo unless credit.padre.nil? %></td>
+                <td><%= credit.fecha_de_contrato.strftime("%d/%m/%Y") unless credit.fecha_de_contrato.nil?  %></td>
+                <td></td>
+                <td><%= "#{credit.apellido_paterno} #{credit.apellido_materno} #{credit.nombre_1} #{credit.nombre_2}" %></td>
+                <td><%= credit.RFC %></td>
+                <td><%= Dinero.to_money(credit.monto_solicitud) %></td>
+                <td><%= credit.status==1?"ACTIVO":"FINALIZADO"%></td>
+                <td><%= credit.calificacion%></td>
+                <% if params[:op].to_i == 1%>
+                  <td><%= link_to 'Ver pagos',creditpagos_url(credit), class:'crud-links' %></td>
+                <%else%>
+                <% if current_user.tipo == 1%>
+                  <td><%= link_to 'pagos',"/payments/show?clave=#{credit.id}", class:'crud-links' %></td>
+                <%end%>
+                  <td><%= link_to 'Modificar PDF',editpdf_path(credit)%></td>
+                  <td><%= link_to 'Mostrar',"#{credit_path credit}?retorno=2",class:'crud-links' %></td>
+                  <% if current_user.tipo == 1%>
+                    <td><%= link_to 'Reimpresion',"/view_credits/documentos?clave=#{credit.id}",class:'crud-links' %></td>
+                    <td><%= link_to 'Cancelar', cancelar_credito_path(credit), method: :post, data: { confirm: 'Seguro?, se eliminara toda la informacion de fechas de pagos y abonos.' }%></td>
+                  <%end%>
+                <%end%>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+</div>

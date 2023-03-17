@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1 align="center">SOLICITUDES RECHAZADAS</h1>
+<style>
+  td{
+    padding:5px 5px; 
+  }
+  </style>
+<table style="font-size:12px;">
+  <thead>
+    <tr>
+      <th>AGENTE/EMPRESA</th>
+
+      <th>FECHA</th>
+      <th>NOMBRE</th>
+      <th>RFC</th>
+      <th>MONTO</th>
+      
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @credits.each do |credit| %>
+      <tr>
+        <td><%= credit.padre.nombre_completo %></td>
+        <td><%= credit.fecha.strftime("%d/%m/%Y") %></td>
+        <td><h10><%= "#{credit.apellido_paterno} #{credit.apellido_materno} #{credit.nombre_1} #{credit.nombre_2}" %></h10></td>
+        <td><h10><%= credit.RFC %></h10></td>
+        <td><h10><%= credit.monto_solicitud %></h10></td>
+        <td><h10><%= link_to 'Mostrar',credit,class:'crud-links' %></h10></td>
+      </tr>
+      
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva solicitud', new_credit_path, class:"crud-links" %>

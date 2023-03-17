@@ -1,0 +1,22 @@
+wb = xlsx_package.workbook
+wb.styles do |style|
+    highlight_cell = style.add_style(bg_color: "FFFF00")
+wb.add_worksheet(name: "Cobranza") do |sheet|
+  
+  sheet.add_row ["SUCURSAL","EMPRESA","NOMBRE","FECHA DE PRESTAMO","PRESTAMO + INTERES","YEAR PAGO" ,"MES" ,"FECHA","PAGO APLICADO"],style: [highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell]
+  @tickets.each do |fila|
+    sheet.add_row [
+    fila.payment.credit.padre.branch_office.nombre,
+    fila.payment.credit.padre.nombre_completo,
+    fila.payment.credit.nombre_completo_deudor,
+    fila.payment.credit.fecha_de_contrato,
+    fila.payment.credit.monto_solicitud* (1+(fila.payment.credit.product.taza_de_interes_ordinaria.to_f/100)),
+    fila.updated_at.year,
+    fila.updated_at.month,
+    "#{fila.updated_at.strftime("%F %T") }",
+    fila.cantidad.to_f
+    ]
+  end
+ 
+  end
+end

@@ -1,0 +1,18 @@
+wb = xlsx_package.workbook
+  wb.styles do |style|
+    highlight_cell = style.add_style(bg_color: "FFFF00")
+    wb.add_worksheet(name: "calificaciones") do |sheet|
+      sheet.add_row [@branch_office.nombre] unless @branch_office.nil?
+      sheet.add_row [@padre.nombre_completo] unless @padre.nil?
+      sheet.add_row [""]
+      sheet.add_row ["Sucursal","Empresa","NOMBRE ACREDITADO","Ultima Calif.","Prestamos","Lista de Prestamos"],style: [ highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell,highlight_cell]
+      @customers.each do |customer|
+        ultimo_credito = customer.credits.select(:id).where("status = 1 or status = 3").last
+        calificaciones = ""
+        customer.credits.select(:id,:fecha_de_contrato).where("status = 1 or status = 3").order(:fecha_de_contrato).each do |credit|
+            calificaciones = calificaciones + "#{credit.fecha_de_contrato.strftime("%m/%d/%Y")}(#{credit.calificacion}), " unless credit.fecha_de_contrato.nil?
+        end
+        sheet.add_row [customer.padre.branch_office.nombre,customer.padre.nombre_completo,customer.nombre_completo_deudor,(ultimo_credito.nil?)? "" : ultimo_credito.calificacion,customer.credits.where("status = 1 or status = 3").select(:id).count,calificaciones]
+      end
+    end
+  end

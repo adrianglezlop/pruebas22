@@ -1,0 +1,93 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <h5 class="card-panel #f4511e deep-orange darken-1 center-align">
+    <strong>Nombre:</strong>
+    <%= @branch_office.nombre %>
+  </h5>
+</div>
+<div class="show row">
+  <p>
+    <strong>Calle:</strong>
+    <%= @branch_office.calle %>
+  </p>
+  
+  <p>
+    <strong>No ext:</strong>
+    <%= @branch_office.no_ext %>
+  </p>
+  
+  <p>
+    <strong>No int:</strong>
+    <%= @branch_office.no_int %>
+  </p>
+  
+  <p>
+    <strong>Colonia:</strong>
+    <%= @branch_office.colonia %>
+  </p>
+  
+  <p>
+    <strong>Codigo postal:</strong>
+    <%= @branch_office.codigo_postal %>
+  </p>
+  
+  <p>
+    <strong>Municipio:</strong>
+    <%= @branch_office.municipio %>
+  </p>
+  
+  <p>
+    <strong>Estado:</strong>
+    <%= @branch_office.estado %>
+  </p>
+  
+  <p>
+    <strong>Telefono oficina:</strong>
+    <%= @branch_office.telefono_oficina %>
+  </p>
+  
+  <p>
+    <strong>Telefono celular:</strong>
+    <%= @branch_office.telefono_celular %>
+  </p>
+  
+  <p>
+    <strong>Correo1:</strong>
+    <%= @branch_office.correo1 %>
+  </p>
+  
+  <p>
+    <strong>Correo2:</strong>
+    <%= @branch_office.correo2 %>
+  </p>
+  
+  <p>
+    <strong>Comision por colocacion:</strong>
+    <%= @branch_office.comision_por_colocacion %> %
+  </p>
+  
+  <p>
+    <strong>Comision por cobranza:</strong>
+    <%= @branch_office.comision_por_cobranza %> %
+  </p>
+  
+  <p>
+    <strong>Monto maximo adeudo sucursal:</strong>
+    <%=Dinero.to_money( @branch_office.monto_maximo_adeudo_sucursal) %>
+  </p>
+  
+  <p>
+    <strong>Formato impresion:</strong>
+    <%= @branch_office.formato_impresion %>
+  </p>
+  <p> 
+  <strong>Banco:</strong>
+  <%= @branch_office.banco %>
+  </p>
+  <p> 
+  <strong>Cuenta:</strong>
+  <%= @branch_office.cuenta %>
+  </p>
+</div>
+<%= link_to 'Editar', edit_branch_office_path(@branch_office),class:'crud-links' %> |
+<%= link_to '<- Atras', branch_offices_path,class:'crud-links' %>

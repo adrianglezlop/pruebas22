@@ -1,0 +1,170 @@
+<%=form_for @user do |f|%>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <p>
+      <%= f.radio_button  :tipo,1 %> <%= f.label "#{:tipo}_1", "Administrador general" %>
+      <%= f.radio_button  :tipo,2 %> <%= f.label "#{:tipo}_2", "Asistente Marjo" %>
+      <%= f.radio_button  :tipo,3 %> <%= f.label "#{:tipo}_3", "Sucursal" %>
+      <%= f.radio_button  :tipo,4 %> <%= f.label "#{:tipo}_4", "Consultas" %>
+    </p>
+  </div>
+  
+  <div class="field">
+    <%= f.label :alias %><br />
+    <%= f.text_field :alias, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :app %><br />
+    <%= f.text_field :app, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :apm %><br />
+    <%= f.text_field :apm, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nom1 %><br />
+    <%= f.text_field :nom1, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nom2 %><br />
+    <%= f.text_field :nom2, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :RFC %><br />
+    <%= f.text_field :RFC, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :CURP %><br />
+    <%= f.text_field :CURP, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :seguro %><br />
+    <%= f.text_field :seguro, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :INE %><br />
+    <%= f.text_field :INE, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nacionalidad %><br />
+    <%= f.text_field :nacionalidad, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :fecha_nacimiento %><br />
+    <%= f.date_field :fecha_nacimiento, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nac_ciudad %><br />
+    <%= f.text_field :nac_ciudad, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nac_estado %><br />
+    <%= f.text_field :nac_estado, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nac_pais,"País natal" %><br />
+    <%= f.text_field :nac_pais, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <p>
+      <%= f.radio_button  :sexo,true %> <%= f.label "#{:sexo}_true", "Hombre" %>
+      <%= f.radio_button  :sexo,false %> <%= f.label "#{:sexo}_false", "Mujer" %>
+    </p>
+  </div>
+  
+  <div class="field">
+    <%= f.label :telefono_casa,'Teléfono de casa' %><br />
+    <%= f.text_field :telefono_casa, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :telefono_celular,'Teléfono celular' %><br />
+    <%= f.text_field :telefono_celular, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :correo1 %><br />
+    <%= f.text_field :correo1, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :correo2 %><br />
+    <%= f.text_field :correo2, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :calle %><br />
+    <%= f.text_field :calle, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :numero_ext,'Número exterior' %><br />
+    <%= f.number_field :numero_ext, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :numero_int,'Número interior' %><br />
+    <%= f.text_field :numero_int, autocomplete: "off" %>
+  </div>
+    <div ng-controller="cp">
+        <input type="hidden" ng-model="usuario" ng-init="usuario = '<%=@user.to_json%>'" id = "usuario">
+      <div class="field">
+        <%= f.label :codigo_postal,"Código postal" %>
+        <%= f.text_field :codigo_postal,"ng-model":"codigo","ng-change":"type()" %>
+      </div>
+        <div class="field">
+         
+        <div class="field" style="display: none;">
+            <tt>Colonias = {{data.zip_codes}}</tt><br/>
+          </div>
+         
+         <select id="user_colonia" name="user[colonia]"class="browser-default" ng-model="data.Colonias">
+             <option value="" disabled selected>Colonia</option>
+            <option ng-repeat="option in data.zip_codes" value="{{option.d_asenta}}">{{option.d_asenta}}</option>
+        </select>
+
+      </div>
+        <div class="field">
+          <%= f.label :municipio,class:"model" %>
+          <%= f.text_field :municipio,"ng-model":"data.zip_codes[0].d_mnpio" %>
+        </div>
+        <div class="field">
+          <%= f.label :estado,class:"model" %>
+          <%= f.text_field :estado,"ng-model":"data.zip_codes[0].d_estado" %>
+        </div>
+    </div>
+  
+  <div class="field">
+    <%= f.label :pais,'País' %><br />
+    <%= f.text_field :pais, autocomplete: "off" %>
+  </div>
+
+  <div class="submit">
+    <%= f.submit "Guardar" %>
+  </div>
+  
+<%end%>

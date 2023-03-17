@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Sucursales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre Sucursal</th>
+      <th>Responsable</th>
+      <th>Teléfono oficina</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @branch_offices.each do |branch_office| %>
+      <tr>
+        <td><%= branch_office.nombre %></td>
+        <td><%= "#{branch_office.user.app} #{branch_office.user.apm} #{branch_office.user.nom1} #{branch_office.user.nom2}" %></td>
+        <td><%= branch_office.telefono_oficina %></td>
+        <td><%= link_to 'Ver', branch_office,class:"crud-links" %></td>
+        <td><%= link_to 'Editar', edit_branch_office_path(branch_office),class:"crud-links" %></td>
+        <td><%= link_to 'Eliminar', branch_office,class:"crud-links", method: :delete, data: { confirm: 'Esta seguro que desea eliminar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <%= link_to new_branch_office_path,class:"btn-floating btn-large red" do  %>    
+    <i class="large material-icons">add</i>
+  <%end%>
+
+</div>
+
