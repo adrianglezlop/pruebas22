@@ -244,8 +244,13 @@ en:
               blank: "es requerido"
             estado_actual:
               blank: "es requerido"
+<<<<<<< HEAD
             localidad:
               blank: "es requerido"
+=======
+            #localidad:
+            #  blank: "es requerido"
+>>>>>>> f86b25b2159db982fe03f822c6f710dc1bac98f4
             observaciones:
               blank: "es requerido"
             croquis_file_name:

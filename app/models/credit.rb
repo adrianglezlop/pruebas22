@@ -56,7 +56,11 @@ class Credit < ActiveRecord::Base
     #:domicilio_referencia_familiar,
     #:economical_activity_id,
     :estado_actual,
+<<<<<<< HEAD
     :localidad,
+=======
+    #:localidad,
+>>>>>>> f86b25b2159db982fe03f822c6f710dc1bac98f4
     :product_id,
     #:destination_id,
     :customer_id,
